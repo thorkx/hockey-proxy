@@ -13,7 +13,7 @@ MAPPING = {
     "SN": "http://ton-serveur.com:8080/live/user/pass/ID_SN.ts",
     "SNE": "http://ton-serveur.com:8080/live/user/pass/ID_SN_EAST.ts",
     "CBC": "http://ton-serveur.com:8080/live/user/pass/ID_CBC.ts",
-    "DEFAULT": "http://ton-serveur.com:8080/live/user/pass/ID_RDS.ts" # Ton RDS par défaut
+    "DEFAULT": "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV/184813" # Ton RDS par défaut
 }
 
 FAVORITES = ["MTL", "COL", "PHI", "PIT", "TOR", "UTA"]
