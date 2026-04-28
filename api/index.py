@@ -109,62 +109,50 @@ def get_ranked_games():
                             'id': f"nhl_{g['id']}"
                         })
         except: continue        
-    # --- FETCH NBA (Version Scoreboard V2 - Blindée) ---
+    # --- FETCH NBA (Source ESPN - Beaucoup plus stable pour Vercel) ---
     try:
-        # On utilise une date formatée pour l'API
-        date_nba = now.strftime("%m/%d/%Y")
-        nba_url = f"https://stats.nba.com/stats/scoreboardv2?DayOffset=0&LeagueID=00&gameDate={date_nba}"
+        # ESPN fournit un endpoint public pour le scoreboard
+        nba_url = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard"
+        r = requests.get(nba_url, timeout=5)
         
-        # SANS CES HEADERS, LA NBA BLOQUE LA REQUÊTE
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-            "Referer": "https://www.nba.com/",
-            "Origin": "https://www.nba.com"
-        }
-
-        r = requests.get(nba_url, headers=headers, timeout=5)
         if r.status_code == 200:
             data = r.json()
-            # Dans ScoreboardV2, les matchs sont dans resultSets[0]
-            games_list = data['resultSets'][0]['rowSet']
-            headers_list = data['resultSets'][0]['headers']
-            
-            # On map les index pour être sûr de prendre les bonnes colonnes
-            idx_id = headers_list.index("GAME_ID")
-            idx_home = headers_list.index("HOME_TEAM_ID") # On utilisera une map pour les codes si besoin
-            idx_status = headers_list.index("GAME_STATUS_TEXT")
-            idx_date = headers_list.index("GAME_DATE_EST")
-            
-            # Pour V2, on a souvent besoin des abréviations qui sont dans le resultSet 1 ou 5
-            # Mais plus simple : on va utiliser le "GAMECODE" qui contient "20260428/BOSPHI"
-            idx_code = headers_list.index("GAMECODE")
-
-            for g in games_list:
-                game_code = g[idx_code] # Ex: "20260428/BOSPHI"
-                teams = game_code.split('/')[1]
-                away_code = teams[:3]
-                home_code = teams[3:]
+            for event in data.get('events', []):
+                # Extraction des équipes
+                competitors = event['competitions'][0]['competitors']
+                home = next(c for c in competitors if c['homeAway'] == 'home')
+                away = next(c for c in competitors if c['homeAway'] == 'away')
                 
+                home_code = home['team']['abbreviation'].upper()
+                away_code = away['team']['abbreviation'].upper()
+                
+                # Ranking
                 score = 5
-                if home_code in ULTRA_NBA or away_code in ULTRA_NBA: score = 1500
-                elif home_code in FAV_NBA or away_code in FAV_NBA: score = 800
+                if home_code in ULTRA_NBA or away_code in ULTRA_NBA: 
+                    score = 1500
+                elif home_code in FAV_NBA or away_code in FAV_NBA: 
+                    score = 800
                 
-                # Heure : ScoreboardV2 est en EST. On convertit pour notre logique UTC
-                # La NBA commence souvent ses matchs à 19:00 EST (00:00 UTC)
-                # Pour faire simple ici, on simule l'heure, mais l'API donne le status
-                dt = now.replace(hour=20, minute=0, second=0, microsecond=0).replace(tzinfo=pytz.utc)
+                # Date (Format: 2026-04-28T23:30Z)
+                dt_str = event['date'].replace('Z', '')
+                dt = datetime.strptime(dt_str, "%Y-%m-%dT%H:%M").replace(tzinfo=pytz.utc)
+                
+                # Réseaux (ESPN liste souvent les diffuseurs)
+                nets = []
+                for broadcast in event['competitions'][0].get('geoBroadcasts', []):
+                    nets.append(broadcast.get('media', {}).get('shortName', ''))
 
                 all_raw_games.append({
                     'sport': 'NBA',
                     'title': f"{away_code} @ {home_code}",
-                    'game': g,
+                    'game': event,
                     'start_dt': dt,
                     'score': score,
-                    'networks': [], 
-                    'id': f"nba_{g[idx_id]}"
+                    'networks': nets, 
+                    'id': f"nba_{event['id']}"
                 })
     except Exception as e:
-        print(f"Erreur NBA V2: {e}")
+        print(f"Erreur NBA ESPN: {e}")
         
     
     # --- RANKING ---
