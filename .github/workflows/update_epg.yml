@@ -9,13 +9,13 @@ jobs:
   update-epg:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write # Important pour autoriser l'écriture
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
@@ -23,27 +23,12 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Run EPG Extraction
+      - name: Run Extraction
         run: python extract_epg.py
 
       - name: Commit and Push
-        run: |
-          git config --global user.name 'EPG-Bot'
-          git config --global user.email 'bot@noreply.github.com'
-          
-          # On force la mise à jour par rapport au serveur pour éviter le "rejected"
-          git fetch origin main
-          git checkout main
-          git reset --hard origin/main
-          
-          # On ajoute notre fichier
-          git add filtered_epg.json
-          
-          # On commit et on force le push
-          if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "Update EPG data [skip ci]"
-            git push origin main --force
-          else
-            echo "Rien à mettre à jour."
-          fi
-          
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update EPG data [skip ci]"
+          file_pattern: 'filtered_epg.json'
+          status_options: '--untracked-files=no'
