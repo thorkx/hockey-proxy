@@ -190,24 +190,17 @@ def redirect_channel(ch_num):
 
 @app.route('/playlist.m3u')
 def generate_m3u():
-    ranked = get_ranked_games()
-    grid = assign_channels(ranked)
     m3u = ["#EXTM3U"]
     for i in range(1, 6):
-        now = datetime.utcnow().replace(tzinfo=pytz.utc)
-        current = next((item for item in grid[i] if now <= item['start_dt'] + timedelta(hours=3)), None)
+        # On change pour un nom générique mais pro
+        channel_name = f"MULTI SPORT {i}"
         
-        if current:
-            # On récupère le logo selon le sport
-            logo = "🏒" if current['sport'] == 'NHL' else "🏀"
-            label = f"{logo} {current['title']}"
-        else:
-            label = "(En attente)"
-            
-        m3u.append(f'#EXTINF:-1 tvg-id="NHL.Live.{i}" tvg-name="NHL LIVE {i}" group-title="Sports Multi", NHL LIVE {i} {label}')
+        # L'ID technique reste le même pour ne pas tout déconfigurer dans tes apps
+        # mais le nom affiché change.
+        m3u.append(f'#EXTINF:-1 tvg-id="NHL.Live.{i}" tvg-name="{channel_name}" group-title="LIVE SPORTS", {channel_name}')
         m3u.append(f"http://{request.host}/nhl-live/{i}")
     return Response("\n".join(m3u), mimetype='text/plain')
-
+    
 @app.route('/epg.xml')
 def generate_epg():
     try:
@@ -215,16 +208,15 @@ def generate_epg():
         grid = assign_channels(ranked)
         
         # En-tête XML strict
-        xml = ['<?xml version="1.0" encoding="UTF-8"?>', 
-               '<!DOCTYPE tv SYSTEM "xmltv.dtd">',
-               '<tv generator-info-name="CustomEPG">']
-        
-        # Définition des canaux
-        for i in range(1, 6): 
-            cid = f"NHL.Live.{i}"
-            xml.append(f'  <channel id="{cid}">')
-            xml.append(f'    <display-name>LIVE {i}</display-name>')
-            xml.append(f'  </channel>')
+       xml = ['<?xml version="1.0" encoding="UTF-8"?>', 
+           '<!DOCTYPE tv SYSTEM "xmltv.dtd">',
+           '<tv generator-info-name="CustomMultiSportEPG">']
+    
+    for i in range(1, 6): 
+        cid = f"NHL.Live.{i}"
+        xml.append(f'  <channel id="{cid}">')
+        xml.append(f'    <display-name>MULTI SPORT {i}</display-name>')
+        xml.append(f'  </channel>') 
         
         tz_mtl = pytz.timezone('America/Montreal')
         
