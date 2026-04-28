@@ -114,6 +114,17 @@ def get_ranked_games():
 # =================================================================
 # 3. LES ROUTES (INTERFACES POUR TIVIMATE)
 # =================================================================
+def get_custom_desc(g):
+    # On définit qui est prioritaire
+    ULTRA_PRIORITY = ["TOR", "EDM", "BOS"] # Ajoute tes équipes ici
+    home, away = g['homeTeam']['abbrev'], g['awayTeam']['abbrev']
+    
+    if home == "MTL" or away == "MTL": 
+        return "Diffusion prioritaire NHL pour MONTRÉAL"
+    if home in ULTRA_PRIORITY or away in ULTRA_PRIORITY:
+        team = home if home in ULTRA_PRIORITY else away
+        return f"Diffusion prioritaire NHL pour {team}"
+    return "Diffusion NHL"
 
 # LA VIDÉO
 @app.route('/nhl-live', defaults={'path': ''})
