@@ -114,13 +114,18 @@ def get_ranked_games():
                 best_tv_url = MAPPING[match_key]
 
         # ÉTAPE 4: AJOUT À LA LISTE (C'est ici que ça se joue)
-        # Si on a trouvé une URL, on ajoute le match à notre collection
-        if best_tv_url:
-            ranked_list.append({
-                'game': g,
-                'url': best_tv_url,
-                'total_score': base_score + best_tv_bonus
-            })
+        # Si on n'a pas trouvé de diffuseur officiel (match futur)
+        if not best_tv_url:
+            # On met une URL par défaut pour que le match apparaisse dans l'EPG
+            best_tv_url = MAPPING.get("DEFAULT", "https://votre-url-attente.com")
+            best_tv_bonus = 0 # Pas de bonus de diffuseur
+
+        # ON AJOUTE TOUJOURS LE MATCH MAINTENANT
+        ranked_list.append({
+            'game': g,
+            'url': best_tv_url,
+            'total_score': base_score + best_tv_bonus
+        })
 
     # ÉTAPE 5: TRI COMPLET
     # On trie par score (priorité), puis par heure pour les matchs futurs
