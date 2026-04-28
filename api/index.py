@@ -106,9 +106,12 @@ def get_ranked_games():
             'total_score': score + best_bonus
         })
 
-    # Tri chronologique pour que l'EPG soit dans le bon ordre
-    ranked_list.sort(key=lambda x: x['game']['startTimeUTC'])
+    # TRI DOUBLE : 
+    # 1. Par score (descendant : -x['total_score']) pour mettre MTL en haut
+    # 2. Par heure (ascendant) pour le reste
+    ranked_list.sort(key=lambda x: (-x['total_score'], x['game']['startTimeUTC']))l
     return ranked_list
+
     
 # =================================================================
 # 3. LES ROUTES (INTERFACES POUR TIVIMATE / CHILLIO)
