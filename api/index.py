@@ -47,48 +47,46 @@ SECONDARY_FAVORITES = ["COL", "BUF", "UTA"]
 
 def get_ranked_games():
     import requests
-    from datetime import datetime
+    from datetime import datetime, timedelta
     
-    # On force la date d'aujourd'hui
-    today = datetime.now().strftime("%Y-%m-%d")
-    url = f"https://api-web.nhle.com/v1/schedule/{today}"
+    # On définit la plage de dates : d'aujourd'hui à +4 jours
+    start_date = datetime.now()
+    combined_games = []
     
-    try:
-        r = requests.get(url)
-        data = r.json()
+    # On boucle sur 4 jours pour couvrir aujourd'hui et les 3 prochains
+    for i in range(4):
+        current_date_str = (start_date + timedelta(days=i)).strftime("%Y-%m-%d")
+        url = f"https://api-web.nhle.com/v1/schedule/{current_date_str}"
         
-        # CHANGEMENT CRUCIAL ICI :
-        # L'API Schedule structure les matchs par date dans 'gameWeek'
-        games_found = []
-        for day in data.get('gameWeek', []):
-            if day.get('date') == today:
-                games_found = day.get('games', [])
-                break
-        
-        # Si on ne trouve rien pour 'today', on prend le premier jour dispo
-        if not games_found and data.get('gameWeek'):
-            games_found = data['gameWeek'][0].get('games', [])
-            
-    except Exception as e:
-        print(f"Erreur : {e}")
-        return []
-
-    ranked_list = []
-    for g in games_found:
-        # On ignore les matchs terminés
-        if g.get('gameState') == "OFF": 
+        try:
+            r = requests.get(url, timeout=5)
+            data = r.json()
+            # L'API peut renvoyer plusieurs jours, on filtre celui qui nous intéresse
+            for day in data.get('gameWeek', []):
+                if day.get('date') == current_date_str:
+                    combined_games.extend(day.get('games', []))
+        except Exception as e:
+            print(f"Erreur pour la date {current_date_str}: {e}")
             continue
 
-        home = g['homeTeam']['abbrev']
-        away = g['awayTeam']['abbrev']
+    ranked_list = []
+    seen_game_ids = set()
+
+    for g in combined_games:
+        game_id = g.get('id')
+        if game_id in seen_game_ids or g.get('gameState') == "OFF":
+            continue
+        seen_game_ids.add(game_id)
+
+        home, away = g['homeTeam']['abbrev'], g['awayTeam']['abbrev']
         is_mtl = (home == "MTL" or away == "MTL")
         
-        # Calcul du score
+        # Scoring de priorité
         score = 1000 if is_mtl else 10
         if home in ULTRA_PRIORITY or away in ULTRA_PRIORITY:
             score += 100
 
-        # Diffuseurs
+        # Extraction et sélection du diffuseur
         tv_list = [tv['network'] for tv in g.get('tvBroadcasts', []) if tv['countryCode'] == 'CA']
         best_url = MAPPING.get("DEFAULT")
         best_bonus = -1
@@ -97,15 +95,10 @@ def get_ranked_games():
             match_key = next((k for k in MAPPING if k in net), None)
             if not match_key: continue
             
-            bonus = 0
-            if is_mtl and "RDS" in net: bonus = 500
-            elif "SN" in net: bonus = 300
-            elif "RDS" in net: bonus = 100
-            elif "TVAS" in net: bonus = 50
-            
+            # Ton échelle de priorité : RDS(MTL) > SN > RDS > TVAS
+            bonus = 500 if (is_mtl and "RDS" in net) else (300 if "SN" in net else (100 if "RDS" in net else 50))
             if bonus > best_bonus:
-                best_bonus = bonus
-                best_url = MAPPING[match_key]
+                best_bonus, best_url = bonus, MAPPING[match_key]
 
         ranked_list.append({
             'game': g,
@@ -113,10 +106,11 @@ def get_ranked_games():
             'total_score': score + best_bonus
         })
 
-    # TRI CHRONOLOGIQUE POUR L'EPG
+    # Tri chronologique pour que l'EPG soit dans le bon ordre
     ranked_list.sort(key=lambda x: x['game']['startTimeUTC'])
     return ranked_list
     
+
 # =================================================================
 # 3. LES ROUTES (INTERFACES POUR TIVIMATE)
 # =================================================================
