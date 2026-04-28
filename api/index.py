@@ -109,52 +109,51 @@ def get_ranked_games():
                             'id': f"nhl_{g['id']}"
                         })
         except: continue        
-    # --- FETCH NBA (Source ESPN - Beaucoup plus stable pour Vercel) ---
-    try:
-        # ESPN fournit un endpoint public pour le scoreboard
-        nba_url = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard"
-        r = requests.get(nba_url, timeout=5)
-        
-        if r.status_code == 200:
-            data = r.json()
-            for event in data.get('events', []):
-                # Extraction des équipes
-                competitors = event['competitions'][0]['competitors']
-                home = next(c for c in competitors if c['homeAway'] == 'home')
-                away = next(c for c in competitors if c['homeAway'] == 'away')
-                
-                home_code = home['team']['abbreviation'].upper()
-                away_code = away['team']['abbreviation'].upper()
-                
-                # Ranking
-                score = 5
-                if home_code in ULTRA_NBA or away_code in ULTRA_NBA: 
-                    score = 1500
-                elif home_code in FAV_NBA or away_code in FAV_NBA: 
-                    score = 800
-                
-                # Date (Format: 2026-04-28T23:30Z)
-                dt_str = event['date'].replace('Z', '')
-                dt = datetime.strptime(dt_str, "%Y-%m-%dT%H:%M").replace(tzinfo=pytz.utc)
-                
-                # Réseaux (ESPN liste souvent les diffuseurs)
-                nets = []
-                for broadcast in event['competitions'][0].get('geoBroadcasts', []):
-                    nets.append(broadcast.get('media', {}).get('shortName', ''))
+            
+    # --- FETCH NBA (ESPN - Multi-jours pour ne pas rater Toronto) ---
+    for i in range(3):
+        try:
+            # On génère la date au format YYYYMMDD pour l'API ESPN
+            date_str = (now + timedelta(days=i)).strftime("%Y%m%d")
+            nba_url = f"https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates={date_str}"
+            r = requests.get(nba_url, timeout=5)
+            
+            if r.status_code == 200:
+                data = r.json()
+                for event in data.get('events', []):
+                    competitors = event['competitions'][0]['competitors']
+                    home = next(c for c in competitors if c['homeAway'] == 'home')
+                    away = next(c for c in competitors if c['homeAway'] == 'away')
+                    
+                    home_code = home['team']['abbreviation'].upper()
+                    away_code = away['team']['abbreviation'].upper()
+                    
+                    # Ton système de points
+                    score = 5
+                    if home_code in ULTRA_NBA or away_code in ULTRA_NBA: 
+                        score = 2000 # On monte à 2000 pour Toronto comme pour MTL
+                    elif home_code in FAV_NBA or away_code in FAV_NBA: 
+                        score = 1000
+                    
+                    dt_str = event['date'].replace('Z', '')
+                    dt = datetime.strptime(dt_str, "%Y-%m-%dT%H:%M").replace(tzinfo=pytz.utc)
+                    
+                    # On évite les doublons si un match chevauche deux requêtes
+                    match_id = f"nba_{event['id']}"
+                    if any(x['id'] == match_id for x in all_raw_games): continue
 
-                all_raw_games.append({
-                    'sport': 'NBA',
-                    'title': f"{away_code} @ {home_code}",
-                    'game': event,
-                    'start_dt': dt,
-                    'score': score,
-                    'networks': nets, 
-                    'id': f"nba_{event['id']}"
-                })
-    except Exception as e:
-        print(f"Erreur NBA ESPN: {e}")
-        
-    
+                    all_raw_games.append({
+                        'sport': 'NBA',
+                        'title': f"{away_code} @ {home_code}",
+                        'game': event,
+                        'start_dt': dt,
+                        'score': score,
+                        'networks': [b.get('media', {}).get('shortName', '') for b in event['competitions'][0].get('geoBroadcasts', [])],
+                        'id': match_id
+                    })
+        except Exception as e:
+            print(f"Erreur NBA ESPN (Date {date_str}): {e}")
+            
     # --- RANKING ---
     ranked = []
     for item in all_raw_games:
@@ -197,11 +196,18 @@ def generate_m3u():
     for i in range(1, 6):
         now = datetime.utcnow().replace(tzinfo=pytz.utc)
         current = next((item for item in grid[i] if now <= item['start_dt'] + timedelta(hours=3)), None)
-        label = f"({current['title']})" if current else "(En attente)"
+        
+        if current:
+            # On récupère le logo selon le sport
+            logo = "🏒" if current['sport'] == 'NHL' else "🏀"
+            label = f"{logo} {current['title']}"
+        else:
+            label = "(En attente)"
+            
         m3u.append(f'#EXTINF:-1 tvg-id="NHL.Live.{i}" tvg-name="NHL LIVE {i}" group-title="Sports Multi", NHL LIVE {i} {label}')
         m3u.append(f"http://{request.host}/nhl-live/{i}")
     return Response("\n".join(m3u), mimetype='text/plain')
-@app.route('/epg.xml')
+    
 def generate_epg():
     ranked = get_ranked_games()
     grid = assign_channels(ranked)
