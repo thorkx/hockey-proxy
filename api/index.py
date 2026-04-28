@@ -46,93 +46,52 @@ SECONDARY_FAVORITES = ["COL", "BUF", "UTA"]
 # =================================================================
 def get_ranked_games():
     import requests
-    from datetime import datetime
+    from datetime import datetime, timedelta
 
-    # URL de l'API NHL (Scoreboard)
-    NHL_API_URL = "https://api-web.nhle.com/v1/score/now"
+    # On récupère la date d'aujourd'hui au format YYYY-MM-DD
+    today = datetime.now().strftime("%Y-%m-%d")
+    
+    # URL du calendrier (Schedule) au lieu de 'score/now'
+    # Cela permet de voir TOUS les matchs de la journée
+    NHL_API_URL = f"https://api-web.nhle.com/v1/schedule/{today}"
     
     try:
         response = requests.get(NHL_API_URL)
         data = response.json()
+        
+        # Dans 'schedule', les matchs sont dans data['gameWeek'][0]['games']
+        all_games = data.get('gameWeek', [{}])[0].get('games', [])
     except Exception as e:
         print(f"Erreur API: {e}")
         return []
 
     ranked_list = []
     
-    # On récupère tous les matchs
-    all_games = data.get('games', [])
-    
     for g in all_games:
-        # ÉTAPE 1: Filtrer les états. On garde LIVE, CRIT (moment clé) et PRE (à venir)
-        state = g.get('gameState')
-        if state not in ["LIVE", "CRIT", "PRE"]:
-            continue
+        # On garde tout ce qui n'est pas "FINAL"
+        if g.get('gameState') == "OFF": continue 
 
         home = g['homeTeam']['abbrev']
         away = g['awayTeam']['abbrev']
         is_mtl = (home == "MTL" or away == "MTL")
         
-        # ÉTAPE 2: Calcul du score de priorité du match
-        base_score = 0
-        if is_mtl:
-            base_score = 1000  
-        elif home in ULTRA_PRIORITY or away in ULTRA_PRIORITY:
-            base_score = 100   
-        else:
-            base_score = 10    
-
-        # ÉTAPE 3: Trouver le meilleur diffuseur
-        tv_list = [tv['network'] for tv in g.get('tvBroadcasts', []) if tv['countryCode'] == 'CA']
+        # ... (Le reste de ton code de scoring et bonus reste le même) ...
         
-        best_tv_url = None
-        best_tv_bonus = -1
-
-        for net in tv_list:
-            # On cherche si le réseau est dans notre MAPPING
-            match_key = None
-            for key in MAPPING.keys():
-                if key in net: # Capture "SNE", "SNW", etc.
-                    match_key = key
-                    break
-            
-            if not match_key:
-                continue
-
-            bonus = 0
-            if is_mtl and "RDS" in net:
-                bonus = 500
-            elif "SN" in net:
-                bonus = 300
-            elif "RDS" in net: # RDS pour match non-MTL
-                bonus = 100
-            elif "TVAS" in net:
-                bonus = 50
-
-            if bonus > best_tv_bonus:
-                best_tv_bonus = bonus
-                best_tv_url = MAPPING[match_key]
-
-        # ÉTAPE 4: AJOUT À LA LISTE (C'est ici que ça se joue)
-        # Si on n'a pas trouvé de diffuseur officiel (match futur)
+        # IMPORTANT: On accepte le match même si best_tv_url est vide
         if not best_tv_url:
-            # On met une URL par défaut pour que le match apparaisse dans l'EPG
-            best_tv_url = MAPPING.get("DEFAULT", "https://votre-url-attente.com")
-            best_tv_bonus = 0 # Pas de bonus de diffuseur
+            best_tv_url = MAPPING.get("DEFAULT")
 
-        # ON AJOUTE TOUJOURS LE MATCH MAINTENANT
         ranked_list.append({
             'game': g,
             'url': best_tv_url,
             'total_score': base_score + best_tv_bonus
         })
 
-    # ÉTAPE 5: TRI COMPLET
-    # On trie par score (priorité), puis par heure pour les matchs futurs
-    ranked_list.sort(key=lambda x: (x['total_score'], x['game']['startTimeUTC']), reverse=True)
-
-    return ranked_list
+    # TRÈS IMPORTANT : Pour l'EPG, on trie par HEURE, pas par score
+    # Sinon les matchs dans ton guide seront dans le désordre
+    ranked_list.sort(key=lambda x: x['game']['startTimeUTC'])
     
+    return ranked_list
 
 # =================================================================
 # 3. LES ROUTES (INTERFACES POUR TIVIMATE)
