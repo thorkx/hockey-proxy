@@ -164,78 +164,78 @@ def generate_m3u():
 def generate_epg():
     ranked = get_ranked_games()
     xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<tv>']
-    xml.append('<channel id="NHL.Live"><display-name>NHL LIVE</display-name></channel>')
+    
+    # Déclaration des 5 canaux
+    for i in range(1, 6):
+        xml.append(f'<channel id="NHL.Live.{i}"><display-name>NHL LIVE {i}</display-name></channel>')
     
     from datetime import datetime, timedelta
-    import pytz # Assure-toi que pytz est dans ton requirements.txt
-
-    # Configuration du fuseau horaire
+    import pytz
+    
+    # On utilise UTC pour la logique interne
+    now_utc = datetime.utcnow().replace(tzinfo=pytz.utc)
     tz_mtl = pytz.timezone('America/Montreal')
-    now_utc = datetime.now(pytz.utc)
-    now_mtl = now_utc.astimezone(tz_mtl)
 
     if ranked:
-        # 1. Remplissage AVANT le premier match
-        first_g = ranked[0]['game']
-        first_start_utc = datetime.strptime(first_g['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc)
-        
-        if first_start_utc > now_utc + timedelta(minutes=1):
-            f_start = now_utc.strftime("%Y%m%d%H%M%S") + " +0000"
-            f_stop = first_start_utc.strftime("%Y%m%d%H%M%S") + " +0000"
-            
-            # Heure locale pour la description
-            local_time = first_start_utc.astimezone(tz_mtl).strftime("%H:%M")
-            
-            xml.append(f'<programme start="{f_start}" stop="{f_stop}" channel="NHL.Live">')
-            xml.append(f'  <title lang="fr">➡️ PROCHAINEMENT : {first_g["awayTeam"]["abbrev"]} @ {first_g["homeTeam"]["abbrev"]}</title>')
-            xml.append(f'  <desc lang="fr">Début du match à {local_time} (Heure de Montréal).</desc>')
-            xml.append('</programme>')
-
+        # --- CANAL 1 (MASTER) ---
         for i in range(len(ranked)):
             item = ranked[i]
             g = item['game']
-            start_utc = datetime.strptime(g['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc)
-            stop_utc = start_utc + timedelta(hours=3)
             
-            # Format XMLTV (Toujours envoyer en UTC avec +0000, le lecteur IPTV fera la conversion locale)
+            # Conversion du début du match
+            start_utc = datetime.strptime(g['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc)
+            
+            # DURÉE CHANGÉE À 2H30
+            stop_utc = start_utc + timedelta(hours=2, minutes=30)
+            
+            # Formatage pour le XML
             start_fmt = start_utc.strftime("%Y%m%d%H%M%S") + " +0000"
             stop_fmt = stop_utc.strftime("%Y%m%d%H%M%S") + " +0000"
 
-            # Logique de description dynamique
-            home, away = g['homeTeam']['abbrev'], g['awayTeam']['abbrev']
-            is_mtl = (home == "MTL" or away == "MTL")
-            is_ultra = (home in ULTRA_PRIORITY or away in ULTRA_PRIORITY)
+            # 1. Logique du Pregame (30 min max)
+            pregame_start = start_utc - timedelta(minutes=30)
+            actual_pregame_start = pregame_start
             
-            if is_mtl:
-                desc_text = f"Diffusion prioritaire NHL pour MONTRÉAL"
-            elif is_ultra:
-                equipe = home if home in ULTRA_PRIORITY else away
-                desc_text = f"Diffusion prioritaire NHL pour {equipe}"
-            else:
-                desc_text = "Diffusion NHL"
+            # Si un match précédait celui-ci, on ne commence le pregame qu'après la fin du précédent
+            if i > 0:
+                prev_start = datetime.strptime(ranked[i-1]['game']['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc)
+                prev_stop = prev_start + timedelta(hours=2, minutes=30)
+                if prev_stop > pregame_start:
+                    actual_pregame_start = prev_stop
 
+            # Insertion du bloc Pregame si l'espace existe
+            if start_utc > actual_pregame_start:
+                p_start_fmt = actual_pregame_start.strftime("%Y%m%d%H%M%S") + " +0000"
+                xml.append(f'<programme start="{p_start_fmt}" stop="{start_fmt}" channel="NHL.Live.1">')
+                xml.append(f'  <title lang="fr">🏒 PREGAME : {g["awayTeam"]["abbrev"]} @ {g["homeTeam"]["abbrev"]}</title>')
+                xml.append(f'  <desc lang="fr">Préparation et analyses avant le début à {start_utc.astimezone(tz_mtl).strftime("%H:%M")}.</desc>')
+                xml.append('</programme>')
+
+            # 2. Insertion du Match
             status = "[LIVE]" if g['gameState'] in ["LIVE", "CRIT"] else "[PRE]"
-            xml.append(f'<programme start="{start_fmt}" stop="{stop_fmt}" channel="NHL.Live">')
-            xml.append(f'  <title lang="fr">{status} {away} @ {home}</title>')
-            xml.append(f'  <desc lang="fr">{desc_text}</desc>')
+            xml.append(f'<programme start="{start_fmt}" stop="{stop_fmt}" channel="NHL.Live.1">')
+            xml.append(f'  <title lang="fr">{status} {g["awayTeam"]["abbrev"]} @ {g["homeTeam"]["abbrev"]}</title>')
+            xml.append(f'  <desc lang="fr">{get_custom_desc(g)}</desc>')
             xml.append('</programme>')
 
-            # 2. Remplissage ENTRE les matchs
-            if i + 1 < len(ranked):
-                next_start_utc = datetime.strptime(ranked[i+1]['game']['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc)
-                if next_start_utc > stop_utc:
-                    f_start = stop_fmt
-                    f_stop = next_start_utc.strftime("%Y%m%d%H%M%S") + " +0000"
-                    next_time = next_start_utc.astimezone(tz_mtl).strftime("%H:%M")
-                    
-                    xml.append(f'<programme start="{f_start}" stop="{f_stop}" channel="NHL.Live">')
-                    xml.append(f'  <title lang="fr">➡️ PROCHAINEMENT : {ranked[i+1]["game"]["awayTeam"]["abbrev"]} @ {ranked[i+1]["game"]["homeTeam"]["abbrev"]}</title>')
-                    xml.append(f'  <desc lang="fr">Le stream basculera à {next_time}.</desc>')
-                    xml.append('</programme>')
+        # --- CANAUX 2 À 5 (DYNAMIQUES) ---
+        for i in range(1, min(len(ranked), 5)):
+            channel_id = f"NHL.Live.{i+1}"
+            g = ranked[i]['game']
+            s_utc = datetime.strptime(g['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc)
+            # Match + Pregame simple de 30min pour les canaux secondaires
+            p_start = (s_utc - timedelta(minutes=30)).strftime("%Y%m%d%H%M%S") + " +0000"
+            m_stop = (s_utc + timedelta(hours=2, minutes=30)).strftime("%Y%m%d%H%M%S") + " +0000"
+            
+            xml.append(f'<programme start="{p_start}" stop="{m_stop}" channel="{channel_id}">')
+            xml.append(f'  <title lang="fr">{g["awayTeam"]["abbrev"]} @ {g["homeTeam"]["abbrev"]}</title>')
+            xml.append(f'  <desc lang="fr">Match en direct sur le flux secondaire {i+1}.</desc>')
+            xml.append('</programme>')
 
     xml.append('</tv>')
     return Response("\n".join(xml), mimetype='text/xml')
     
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
