@@ -13,6 +13,9 @@ PASS = "2khBtbUZuV"
 BASE_DOMAIN = "omegatv.live:80"
 BASE_URL = "https://thorkx-hockey-proxy.vercel.app"
 
+ULTRA_PRIORITY = ["MTL"]
+SECONDARY_FAVORITES = ["COL", "BUF", "UTA", "EDM"]
+
 CH = {
     "RDS": "184813", "RDS2": "184814", "RDSInfo": "184815",
     "TVASports": "184811", "TVASports2": "184812",
