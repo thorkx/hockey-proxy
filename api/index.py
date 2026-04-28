@@ -45,62 +45,92 @@ SECONDARY_FAVORITES = ["COL", "BUF", "UTA"]
 # 2. LE CERVEAU (RANKING DES MATCHS)
 # =================================================================
 def get_ranked_games():
+    import requests
+    from datetime import datetime
+
+    # URL de l'API NHL (Scoreboard)
+    NHL_API_URL = "https://api-web.nhle.com/v1/score/now"
+    
     try:
-        url = "https://api-web.nhle.com/v1/score/now"
-        data = requests.get(url, timeout=5).json()
-        results = []
-        for game in data.get('games', []):
-            state = game.get('gameState')
-            if state not in ["PRE", "LIVE", "CRIT"]: continue
-
-            away = game['awayTeam']['abbrev']
-            home = game['homeTeam']['abbrev']
-            is_mtl = (away in ULTRA_PRIORITY or home in ULTRA_PRIORITY)
-            
-            # Score de base (Équipe + État du match + Période)
-            score = 0
-            if is_mtl: score += 1000
-            elif away in SECONDARY_FAVORITES or home in SECONDARY_FAVORITES: score += 100
-            
-            if state == "CRIT": score += 800
-            elif state == "LIVE": score += 50
-            period = game.get('periodDescriptor', {}).get('number', 1)
-            score += (period * 20)
-
-            # Choix du meilleur diffuseur selon tes nouvelles priorités
-            tv_list = [tv['network'] for tv in game.get('tvBroadcasts', []) if tv['countryCode'] == 'CA']
-            best_tv_url, best_tv_bonus = None, -1
-
-            for net in tv_list:
-                if net not in MAPPING: continue
-                bonus = 0
-                
-                # 1. Priorité Absolue : RDS pour les Canadiens
-                if is_mtl and "RDS" in net:
-                    bonus = 500
-                
-                # 2. Priorité secondaire : Sportsnet pour tout le reste
-                elif "SN" in net:
-                    bonus = 100
-                
-                # 3. Dernier choix : TVA Sports
-                elif "TVAS" in net:
-                    bonus = 10
-                
-                # 4. RDS pour un match non-MTL (si SN n'est pas dispo)
-                elif "RDS" in net:
-                    bonus = 50
-
-                if bonus > best_tv_bonus:
-                    best_tv_bonus = bonus
-                    best_tv_url = MAPPING[net]
-                    
-
-            if best_tv_url:
-                results.append({'game': game, 'url': best_tv_url, 'total_score': score + best_tv_bonus})
-        return sorted(results, key=lambda x: x['total_score'], reverse=True)
-    except:
+        response = requests.get(NHL_API_URL)
+        data = response.json()
+    except Exception as e:
+        print(f"Erreur API: {e}")
         return []
+
+    ranked_list = []
+    
+    # On boucle sur tous les matchs retournés par l'API
+    for g in data.get('games', []):
+        # On ne garde que les matchs en direct ou à venir
+        state = g.get('gameState')
+        if state not in ["LIVE", "CRIT", "PRE"]:
+            continue
+
+        home = g['homeTeam']['abbrev']
+        away = g['awayTeam']['abbrev']
+        is_mtl = (home == "MTL" or away == "MTL")
+        
+        # Calcul du score de priorité du match
+        base_score = 0
+        if is_mtl:
+            base_score = 1000  # Priorité absolue pour le Canadien
+        elif home in ULTRA_PRIORITY or away in ULTRA_PRIORITY:
+            base_score = 100   # Grosses équipes (Leafs, Rangers, etc.)
+        else:
+            base_score = 10    # Matchs standards
+
+        # Extraction des diffuseurs canadiens
+        tv_list = [tv['network'] for tv in g.get('tvBroadcasts', []) if tv['countryCode'] == 'CA']
+        
+        best_tv_url = None
+        best_tv_bonus = -1
+
+        # On cherche le meilleur diffuseur selon TES priorités
+        for net in tv_list:
+            # On vérifie si on a la chaîne dans notre MAPPING (via ton M3U)
+            # On utilise "in" pour attraper "SNE", "SNW", "TVAS2", etc.
+            match_key = None
+            for key in MAPPING.keys():
+                if key in net:
+                    match_key = key
+                    break
+            
+            if not match_key:
+                continue
+
+            bonus = 0
+            # 1. Priorité RDS si c'est Montréal
+            if is_mtl and "RDS" in net:
+                bonus = 500
+            # 2. Priorité Sportsnet pour tout le reste
+            elif "SN" in net:
+                bonus = 300
+            # 3. TVA Sports en dernier recours
+            elif "TVAS" in net:
+                bonus = 50
+            # 4. RDS pour un match non-MTL
+            elif "RDS" in net:
+                bonus = 100
+
+            if bonus > best_tv_bonus:
+                best_tv_bonus = bonus
+                best_tv_url = MAPPING[match_key]
+
+        # Si on a trouvé une chaîne pour ce match, on l'ajoute à la liste
+        if best_tv_url:
+            ranked_list.append({
+                'game': g,
+                'url': best_tv_url,
+                'total_score': base_score + best_tv_bonus
+            })
+
+    # Tri final : on met les plus gros scores en premier
+    # Si les scores sont égaux, on trie par heure de début
+    ranked_list.sort(key=lambda x: (x['total_score'], x['game']['startTimeUTC']), reverse=True)
+
+    return ranked_list
+    
 
 # =================================================================
 # 3. LES ROUTES (INTERFACES POUR TIVIMATE)
