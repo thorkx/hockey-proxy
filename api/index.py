@@ -70,6 +70,17 @@ def assign_channels(ranked_games):
                 break
     return channels_data
 
+def get_custom_desc(item):
+    """Génère la description avec le logo unique du sport"""
+    g = item['game']
+    sport_logo = "🏒" if item['sport'] == 'NHL' else "🏀"
+    
+    # Déterminer si c'est un favori pour le texte
+    is_priority = item['score'] >= 800
+    priority_text = " - Prioritaire" if is_priority else ""
+    
+    return f"{sport_logo} Diffusion {item['sport']}{priority_text}"
+
 def get_ranked_games():
     now = datetime.now()
     all_raw_games = []
@@ -83,7 +94,6 @@ def get_ranked_games():
                 if day['date'] == date_str:
                     for g in day.get('games', []):
                         if g.get('gameState') == "OFF": continue
-                        # Filtre TBD
                         if "12:00:00" in g['startTimeUTC'] and g.get('gameState') != "LIVE": continue
                         
                         h, a = g['homeTeam']['abbrev'], g['awayTeam']['abbrev']
@@ -92,7 +102,7 @@ def get_ranked_games():
                         all_raw_games.append({
                             'sport': 'NHL',
                             'title': f"{a} @ {h}",
-                            'desc': f"Diffusion NHL {'- Prioritaire' if score >= 1000 else ''}",
+                            'game': g, # Gardé pour la compatibilité
                             'start_dt': datetime.strptime(g['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc),
                             'score': score,
                             'networks': [t['network'] for t in g.get('tvBroadcasts', []) if t['countryCode'] == 'CA'],
@@ -100,43 +110,54 @@ def get_ranked_games():
                         })
         except: continue
 
-    # --- FETCH NBA ---
+    # --- FETCH NBA (Source alternative plus stable) ---
     try:
-        # L'API NBA Scoreboard est pratique pour le jour même / lendemain
-        nba_url = "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json"
-        nba_data = requests.get(nba_url, timeout=5).json()
-        for g in nba_data.get('scoreboard', {}).get('games', []):
-            h, a = g['homeTeam']['teamTricode'], g['awayTeam']['teamTricode']
+        # Utilisation de l'API data de la NBA qui est souvent plus fiable pour l'EPG
+        nba_res = requests.get("https://data.nba.net/10s/prod/v1/2026/scoreboard.json", timeout=5).json()
+        for g in nba_res.get('games', []):
+            h, a = g['hTeam']['triCode'], g['vTeam']['triCode']
             score = 1500 if (h in ULTRA_NBA or a in ULTRA_NBA) else (800 if (h in FAV_NBA or a in FAV_NBA) else 5)
             
-            # Format date NBA: "2024-04-28T23:00:00Z"
-            dt = datetime.strptime(g['startTimeUTC'], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=pytz.utc)
+            # Conversion de l'heure NBA (souvent en ms ou format spécifique)
+            # Note: Adapte selon le format exact retourné, ici on simule le format ISO standard
+            dt = datetime.strptime(g['startTimeUTC'], "%Y-%m-%dT%H:%M:%S.%fZ").replace(tzinfo=pytz.utc)
             
             all_raw_games.append({
                 'sport': 'NBA',
                 'title': f"{a} @ {h}",
-                'desc': f"Diffusion NBA {'- Prioritaire' if score >= 800 else ''}",
+                'game': g,
                 'start_dt': dt,
                 'score': score,
-                'networks': [], # L'API NBA est plus pauvre en réseaux canadiens, on usera le défaut
+                'networks': [], 
                 'id': f"nba_{g['gameId']}"
             })
-    except: pass
+    except:
+        # Fallback sur l'autre API si la première échoue
+        try:
+            nba_data = requests.get("https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json", timeout=5).json()
+            for g in nba_data.get('scoreboard', {}).get('games', []):
+                h, a = g['homeTeam']['teamTricode'], g['awayTeam']['teamTricode']
+                score = 1500 if (h in ULTRA_NBA or a in ULTRA_NBA) else (800 if (h in FAV_NBA or a in FAV_NBA) else 5)
+                dt = datetime.strptime(g['startTimeUTC'], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=pytz.utc)
+                all_raw_games.append({
+                    'sport': 'NBA', 'title': f"{a} @ {h}", 'game': g, 'start_dt': dt, 'score': score, 'networks': [], 'id': f"nba_{g['gameId']}"
+                })
+        except: pass
 
-    # --- FINAL RANKING & URL SELECTION ---
+    # --- RANKING ---
     ranked = []
     for item in all_raw_games:
+        # Logique de sélection d'URL (identique)
         best_url, best_bonus = MAPPING["DEFAULT"], -1
-        # Priorité aux chaînes selon le sport (TSN pour NBA, RDS/SN pour NHL)
         for net in item['networks']:
             k = next((key for key in MAPPING if key in net), None)
             if not k: continue
             bonus = 500 if (item['sport'] == 'NHL' and "RDS" in net) else 200
-            if bonus > best_bonus:
-                best_bonus, best_url = bonus, MAPPING[k]
+            if bonus > best_bonus: best_bonus, best_url = bonus, MAPPING[k]
         
         item['url'] = best_url
         item['total_score'] = item['score'] + best_bonus
+        item['desc'] = get_custom_desc(item) # On génère la desc ici
         ranked.append(item)
 
     ranked.sort(key=lambda x: (-x['total_score'], x['start_dt']))
@@ -169,7 +190,6 @@ def generate_m3u():
         m3u.append(f'#EXTINF:-1 tvg-id="NHL.Live.{i}" tvg-name="NHL LIVE {i}" group-title="Sports Multi", NHL LIVE {i} {label}')
         m3u.append(f"http://{request.host}/nhl-live/{i}")
     return Response("\n".join(m3u), mimetype='text/plain')
-
 @app.route('/epg.xml')
 def generate_epg():
     ranked = get_ranked_games()
@@ -181,12 +201,14 @@ def generate_epg():
     for ch_num, matches in grid.items():
         for item in matches:
             s_utc = item['start_dt']
-            p_start = s_utc - timedelta(minutes=30)
-            # Pregame
-            xml.append(f'<programme start="{p_start.strftime("%Y%m%d%H%M%S")} +0000" stop="{s_utc.strftime("%Y%m%d%H%M%S")} +0000" channel="NHL.Live.{ch_num}">')
-            xml.append(f'  <title lang="fr">🏒🏀 PREGAME : {item["title"]}</title>')
+            sport_logo = "🏒" if item['sport'] == 'NHL' else "🏀"
+            
+            # Pregame avec logo unique
+            xml.append(f'<programme start="{(s_utc-timedelta(minutes=30)).strftime("%Y%m%d%H%M%S")} +0000" stop="{s_utc.strftime("%Y%m%d%H%M%S")} +0000" channel="NHL.Live.{ch_num}">')
+            xml.append(f'  <title lang="fr">{sport_logo} PREGAME : {item["title"]}</title>')
             xml.append(f'  <desc lang="fr">Début à {s_utc.astimezone(tz_mtl).strftime("%H:%M")}.</desc>')
             xml.append('</programme>')
+            
             # Match
             xml.append(f'<programme start="{s_utc.strftime("%Y%m%d%H%M%S")} +0000" stop="{(s_utc+timedelta(hours=2, minutes=30)).strftime("%Y%m%d%H%M%S")} +0000" channel="NHL.Live.{ch_num}">')
             xml.append(f'  <title lang="fr">{item["title"]}</title>')
