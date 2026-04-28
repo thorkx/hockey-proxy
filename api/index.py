@@ -166,39 +166,30 @@ def get_ranked_games():
 # 3. ROUTES FLASK
 # =================================================================
 
-@app.route('/nhl-live/<int:ch_num>')
-def redirect_channel(ch_num):
+@app.route('/nhl-live/<ch_id>')
+def redirect_channel(ch_id):
     try:
+        # Convertir en entier proprement
+        ch_num = int(ch_id)
         now = datetime.now(pytz.utc)
-        # On récupère les matchs classés
-        ranked = get_ranked_games()
-        # On les assigne à la grille des 5 canaux
-        grid = assign_channels(ranked)
+        grid = assign_channels(get_ranked_games())
         
         match = None
-        # On cherche si un match est en cours sur ce numéro de canal
         if ch_num in grid:
             for m in grid[ch_num]:
-                # Fenêtre : 45 min avant à 4h après
                 start = m['start_dt'] - timedelta(minutes=45)
                 end = m['start_dt'] + timedelta(hours=4)
                 if start <= now <= end:
                     match = m
                     break
         
-        # Si un match est trouvé, on prend son URL, sinon RDS par défaut
-        target_url = match['url'] if match else MAPPING["DEFAULT"]
-        
-        # On crée la réponse de redirection
-        res = make_response(redirect(target_url, code=302))
+        target = match['url'] if match else MAPPING["DEFAULT"]
+        res = make_response(redirect(target, code=302))
         res.headers['User-Agent'] = 'IPTVSmarters/1.0.3'
         return res
-
-    except Exception as e:
-        # En cas d'erreur interne, on redirige vers RDS pour éviter le 404/500
-        print(f"Erreur redirection canal {ch_num}: {e}")
+    except Exception:
         return redirect(MAPPING["DEFAULT"], code=302)
-
+        
 @app.route('/playlist.m3u')
 def generate_m3u():
     m3u = ["#EXTM3U"]
