@@ -24,12 +24,18 @@ def get_url(cid):
 
 # Mapping pour faire le pont avec l'API de la NHL
 MAPPING = {
-    "RDS": get_url(CH["RDS"]), "RDS2": get_url(CH["RDS2"]),
-    "SNE": get_url(CH["SNEast"]), "SNW": get_url(CH["SNWest"]),
-    "SNP": get_url(CH["SNPacific"]), "SN1": get_url(CH["SN1"]),
-    "TVAS": get_url(CH["TVASports"]), "TVAS2": get_url(CH["TVASports2"]),
+    "RDS": get_url(CH["RDS"]),
+    "RDS2": get_url(CH["RDS2"]),
+    "SN": get_url(CH["SNEast"]), # L'API envoie souvent juste 'SN' ou 'SNE'
+    "SNE": get_url(CH["SNEast"]),
+    "SNW": get_url(CH["SNWest"]),
+    "SNP": get_url(CH["SNPacific"]),
+    "SN1": get_url(CH["SN1"]),
+    "TVAS": get_url(CH["TVASports"]),
+    "TVAS2": get_url(CH["TVASports2"]),
     "DEFAULT": get_url(CH["RDS"])
 }
+
 
 # Tes priorités
 ULTRA_PRIORITY = ["MTL"]
