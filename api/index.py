@@ -35,130 +35,154 @@ MAPPING = {
 }
 
 # =================================================================
-# 2. LOGIQUE MÉTIER
+# 2. LOGIQUE DE PLACEMENT (SLOT MAPPING)
 # =================================================================
+
+def assign_channels(ranked_games):
+    """
+    Répartit les matchs sur 5 canaux sans chevauchement.
+    Retourne un dict : { canal_num: [liste_de_matchs] }
+    """
+    channels_data = {i: [] for i in range(1, 6)}
+    # Slots d'occupation pour valider les collisions (start, end)
+    occupation_slots = {i: [] for i in range(1, 6)}
+    
+    for item in ranked_games:
+        g = item['game']
+        start_utc = datetime.strptime(g['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc)
+        # On réserve 3h15 pour laisser le temps au match de finir
+        stop_utc = start_utc + timedelta(hours=3, minutes=15)
+        collision_start = start_utc - timedelta(minutes=30)
+
+        for ch_num in range(1, 6):
+            has_collision = False
+            for occ_start, occ_stop in occupation_slots[ch_num]:
+                if not (stop_utc <= occ_start or collision_start >= occ_stop):
+                    has_collision = True
+                    break
+            
+            if not has_collision:
+                occupation_slots[ch_num].append((collision_start, stop_utc))
+                channels_data[ch_num].append(item)
+                break
+    return channels_data
 
 def get_custom_desc(g):
     home, away = g['homeTeam']['abbrev'], g['awayTeam']['abbrev']
-    if home == "MTL" or away == "MTL": 
-        return "Diffusion prioritaire NHL pour MONTRÉAL"
+    if home == "MTL" or away == "MTL": return "Diffusion prioritaire NHL pour MONTRÉAL"
     fav = next((team for team in [home, away] if team in SECONDARY_FAVORITES), None)
-    if fav:
-        return f"Diffusion NHL {fav}"
-    return "Diffusion NHL"
+    return f"Diffusion NHL {fav}" if fav else "Diffusion NHL"
 
 def get_ranked_games():
     start_date = datetime.now()
     combined_games = []
     for i in range(4):
-        current_date_str = (start_date + timedelta(days=i)).strftime("%Y-%m-%d")
-        url = f"https://api-web.nhle.com/v1/schedule/{current_date_str}"
+        date_str = (start_date + timedelta(days=i)).strftime("%Y-%m-%d")
+        url = f"https://api-web.nhle.com/v1/schedule/{date_str}"
         try:
             r = requests.get(url, timeout=5)
             data = r.json()
             for day in data.get('gameWeek', []):
-                if day.get('date') == current_date_str:
+                if day.get('date') == date_str:
                     combined_games.extend(day.get('games', []))
         except: continue
 
-    ranked_list = []
-    seen_game_ids = set()
+    ranked = []
+    seen = set()
     for g in combined_games:
-        game_id = g.get('id')
-        if game_id in seen_game_ids or g.get('gameState') == "OFF": continue
-        seen_game_ids.add(game_id)
-        home, away = g['homeTeam']['abbrev'], g['awayTeam']['abbrev']
-        score = 2000 if (home == "MTL" or away == "MTL") else (1000 if (home in SECONDARY_FAVORITES or away in SECONDARY_FAVORITES) else 10)
-        tv_list = [tv['network'] for tv in g.get('tvBroadcasts', []) if tv['countryCode'] == 'CA']
-        best_url, best_bonus = MAPPING.get("DEFAULT"), -1
-        for net in tv_list:
-            match_key = next((k for k in MAPPING if k in net), None)
-            if not match_key: continue
+        gid = g.get('id')
+        if gid in seen or g.get('gameState') == "OFF": continue
+        seen.add(gid)
+        h, a = g['homeTeam']['abbrev'], g['awayTeam']['abbrev']
+        score = 2000 if (h=="MTL" or a=="MTL") else (1000 if (h in SECONDARY_FAVORITES or a in SECONDARY_FAVORITES) else 10)
+        
+        tv = [t['network'] for t in g.get('tvBroadcasts', []) if t['countryCode'] == 'CA']
+        best_url, b_bonus = MAPPING["DEFAULT"], -1
+        for net in tv:
+            k = next((key for key in MAPPING if key in net), None)
+            if not k: continue
             bonus = 500 if (score == 2000 and "RDS" in net) else (300 if "SN" in net else 50)
-            if bonus > best_bonus: best_bonus, best_url = bonus, MAPPING[match_key]
-        ranked_list.append({'game': g, 'url': best_url, 'total_score': score + best_bonus})
+            if bonus > b_bonus: b_bonus, best_url = bonus, MAPPING[k]
+        
+        ranked.append({'game': g, 'url': best_url, 'total_score': score + b_bonus})
 
-    ranked_list.sort(key=lambda x: (-x['total_score'], x['game']['startTimeUTC']))
-    return ranked_list
+    ranked.sort(key=lambda x: (-x['total_score'], x['game']['startTimeUTC']))
+    return ranked
 
 # =================================================================
 # 3. ROUTES
 # =================================================================
 
-@app.route('/nhl-live')
-def redirect_to_nhl():
+@app.route('/nhl-live/<int:ch_num>')
+def redirect_channel(ch_num):
+    """Redirection dynamique vers le match ACTUELLEMENT diffusé sur le canal X"""
     ranked = get_ranked_games()
-    final_url = ranked[0]['url'] if ranked else MAPPING["DEFAULT"]
-    response = make_response(redirect(final_url, code=302))
-    response.headers['User-Agent'] = 'IPTVSmarters/1.0.3'
-    return response
+    grid = assign_channels(ranked)
+    
+    now = datetime.utcnow().replace(tzinfo=pytz.utc)
+    match_found = None
+    
+    for item in grid.get(ch_num, []):
+        g = item['game']
+        start_utc = datetime.strptime(g['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc)
+        # On active le stream 30 min avant et on le laisse 3h après
+        if (now >= start_utc - timedelta(minutes=30)) and (now <= start_utc + timedelta(hours=3, minutes=30)):
+            match_found = item
+            break
+            
+    url = match_found['url'] if match_found else MAPPING["DEFAULT"]
+    res = make_response(redirect(url, code=302))
+    res.headers['User-Agent'] = 'IPTVSmarters/1.0.3'
+    return res
 
 @app.route('/playlist.m3u')
 def generate_m3u():
     ranked = get_ranked_games()
+    grid = assign_channels(ranked)
     m3u = ["#EXTM3U"]
-    for i in range(5):
-        channel_num = i + 1
-        if i < len(ranked):
-            g = ranked[i]['game']
-            url = f"http://{request.host}/nhl-live" if channel_num == 1 else ranked[i]['url']
-            label = f"({g['awayTeam']['abbrev']} @ {g['homeTeam']['abbrev']})"
-        else:
-            url, label = MAPPING.get("DEFAULT"), "(En attente)"
-        m3u.append(f'#EXTINF:-1 tvg-id="NHL.Live.{channel_num}" tvg-name="NHL LIVE {channel_num}" group-title="Hockey", NHL LIVE {channel_num} {label}')
-        m3u.append(url)
+    
+    for i in range(1, 6):
+        # On cherche le match "courant" pour le label, sinon le prochain
+        now = datetime.utcnow().replace(tzinfo=pytz.utc)
+        current_game = None
+        for item in grid[i]:
+            start = datetime.strptime(item['game']['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc)
+            if now <= start + timedelta(hours=3):
+                current_game = item
+                break
+        
+        label = f"({current_game['game']['awayTeam']['abbrev']} @ {current_game['game']['homeTeam']['abbrev']})" if current_game else "(En attente)"
+        m3u.append(f'#EXTINF:-1 tvg-id="NHL.Live.{i}" tvg-name="NHL LIVE {i}" group-title="Hockey", NHL LIVE {i} {label}')
+        m3u.append(f"http://{request.host}/nhl-live/{i}")
+    
     return Response("\n".join(m3u), mimetype='text/plain')
 
 @app.route('/epg.xml')
 def generate_epg():
     ranked = get_ranked_games()
+    grid = assign_channels(ranked)
     xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<tv>']
     for i in range(1, 6): xml.append(f'<channel id="NHL.Live.{i}"><display-name>NHL LIVE {i}</display-name></channel>')
     
     tz_mtl = pytz.timezone('America/Montreal')
-    if ranked:
-        # --- CANAL 1 (MASTER) ---
-        # Affiche toute la programmation prioritaire bout à bout
-        for i, item in enumerate(ranked):
+    for ch_num, matches in grid.items():
+        for item in matches:
             g = item['game']
             start_utc = datetime.strptime(g['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc)
             stop_utc = start_utc + timedelta(hours=2, minutes=30)
-            
             p_start = start_utc - timedelta(minutes=30)
-            if i > 0:
-                prev_stop = datetime.strptime(ranked[i-1]['game']['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc) + timedelta(hours=2, minutes=30)
-                p_start = max(p_start, prev_stop)
-
-            if start_utc > p_start:
-                xml.append(f'<programme start="{p_start.strftime("%Y%m%d%H%M%S")} +0000" stop="{start_utc.strftime("%Y%m%d%H%M%S")} +0000" channel="NHL.Live.1">')
-                xml.append(f'  <title lang="fr">🏒 PREGAME : {g["awayTeam"]["abbrev"]} @ {g["homeTeam"]["abbrev"]}</title>')
-                xml.append(f'  <desc lang="fr">Début à {start_utc.astimezone(tz_mtl).strftime("%H:%M")}.</desc>')
-                xml.append('</programme>')
-
-            xml.append(f'<programme start="{start_utc.strftime("%Y%m%d%H%M%S")} +0000" stop="{stop_utc.strftime("%Y%m%d%H%M%S")} +0000" channel="NHL.Live.1">')
-            xml.append(f'  <title lang="fr">{"[LIVE]" if g["gameState"] in ["LIVE", "CRIT"] else "[PRE]"} {g["awayTeam"]["abbrev"]} @ {g["homeTeam"]["abbrev"]}</title>')
-            xml.append(f'  <desc lang="fr">{get_custom_desc(g)}</desc>')
+            
+            # Pregame
+            xml.append(f'<programme start="{p_start.strftime("%Y%m%d%H%M%S")} +0000" stop="{start_utc.strftime("%Y%m%d%H%M%S")} +0000" channel="NHL.Live.{ch_num}">')
+            xml.append(f'  <title lang="fr">🏒 PREGAME : {g["awayTeam"]["abbrev"]} @ {g["homeTeam"]["abbrev"]}</title>')
+            xml.append(f'  <desc lang="fr">Début à {start_utc.astimezone(tz_mtl).strftime("%H:%M")}.</desc>')
             xml.append('</programme>')
-
-        # --- CANAUX 2 À 5 (INDIVIDUELS) ---
-        # Chaque canal ne montre QUE son match assigné
-        for i in range(1, min(len(ranked), 5)):
-            channel_id = f"NHL.Live.{i+1}"
-            g = ranked[i]['game']
-            s_utc = datetime.strptime(g['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc)
-            
-            p_start = s_utc - timedelta(minutes=30)
-            m_stop = s_utc + timedelta(hours=2, minutes=30)
-            
-            # Un seul bloc de programme par canal pour éviter les répétitions
-            xml.append(f'<programme start="{p_start.strftime("%Y%m%d%H%M%S")} +0000" stop="{m_stop.strftime("%Y%m%d%H%M%S")} +0000" channel="{channel_id}">')
+            # Match
+            xml.append(f'<programme start="{start_utc.strftime("%Y%m%d%H%M%S")} +0000" stop="{stop_utc.strftime("%Y%m%d%H%M%S")} +0000" channel="NHL.Live.{ch_num}">')
             xml.append(f'  <title lang="fr">{g["awayTeam"]["abbrev"]} @ {g["homeTeam"]["abbrev"]}</title>')
             xml.append(f'  <desc lang="fr">{get_custom_desc(g)}</desc>')
             xml.append('</programme>')
 
     xml.append('</tv>')
     return Response("\n".join(xml), mimetype='text/xml')
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
-            
+    
