@@ -61,20 +61,34 @@ def get_ranked_games():
             period = game.get('periodDescriptor', {}).get('number', 1)
             score += (period * 20)
 
-            # Choix du meilleur diffuseur (RDS > SN > TVA)
+            # Choix du meilleur diffuseur selon tes nouvelles priorités
             tv_list = [tv['network'] for tv in game.get('tvBroadcasts', []) if tv['countryCode'] == 'CA']
             best_tv_url, best_tv_bonus = None, -1
 
             for net in tv_list:
                 if net not in MAPPING: continue
                 bonus = 0
-                if is_mtl and "RDS" in net: bonus = 100
-                elif not is_mtl and "SN" in net: bonus = 50
-                elif "TVAS" in net: bonus = 10
                 
+                # 1. Priorité Absolue : RDS pour les Canadiens
+                if is_mtl and "RDS" in net:
+                    bonus = 500
+                
+                # 2. Priorité secondaire : Sportsnet pour tout le reste
+                elif "SN" in net:
+                    bonus = 100
+                
+                # 3. Dernier choix : TVA Sports
+                elif "TVAS" in net:
+                    bonus = 10
+                
+                # 4. RDS pour un match non-MTL (si SN n'est pas dispo)
+                elif "RDS" in net:
+                    bonus = 50
+
                 if bonus > best_tv_bonus:
                     best_tv_bonus = bonus
                     best_tv_url = MAPPING[net]
+                    
 
             if best_tv_url:
                 results.append({'game': game, 'url': best_tv_url, 'total_score': score + best_tv_bonus})
