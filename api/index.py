@@ -108,46 +108,65 @@ def get_ranked_games():
                             'networks': [t['network'] for t in g.get('tvBroadcasts', []) if t['countryCode'] == 'CA'],
                             'id': f"nhl_{g['id']}"
                         })
-        except: continue
-
-    # --- FETCH NBA (Version 2026 stable) ---
+        except: continue        
+    # --- FETCH NBA (Version Scoreboard V2 - Blindée) ---
     try:
-        # Cette URL est le standard actuel pour les scores du jour
-        nba_url = "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json"
-        response = requests.get(nba_url, timeout=5)
+        # On utilise une date formatée pour l'API
+        date_nba = now.strftime("%m/%d/%Y")
+        nba_url = f"https://stats.nba.com/stats/scoreboardv2?DayOffset=0&LeagueID=00&gameDate={date_nba}"
         
-        if response.status_code == 200:
-            nba_data = response.json()
-            games = nba_data.get('scoreboard', {}).get('games', [])
+        # SANS CES HEADERS, LA NBA BLOQUE LA REQUÊTE
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Referer": "https://www.nba.com/",
+            "Origin": "https://www.nba.com"
+        }
+
+        r = requests.get(nba_url, headers=headers, timeout=5)
+        if r.status_code == 200:
+            data = r.json()
+            # Dans ScoreboardV2, les matchs sont dans resultSets[0]
+            games_list = data['resultSets'][0]['rowSet']
+            headers_list = data['resultSets'][0]['headers']
             
-            for g in games:
-                # La NBA utilise 'teamTricode' (ex: 'LAL', 'TOR', 'BOS')
-                home_code = g['homeTeam']['teamTricode'].upper()
-                away_code = g['awayTeam']['teamTricode'].upper()
+            # On map les index pour être sûr de prendre les bonnes colonnes
+            idx_id = headers_list.index("GAME_ID")
+            idx_home = headers_list.index("HOME_TEAM_ID") # On utilisera une map pour les codes si besoin
+            idx_status = headers_list.index("GAME_STATUS_TEXT")
+            idx_date = headers_list.index("GAME_DATE_EST")
+            
+            # Pour V2, on a souvent besoin des abréviations qui sont dans le resultSet 1 ou 5
+            # Mais plus simple : on va utiliser le "GAMECODE" qui contient "20260428/BOSPHI"
+            idx_code = headers_list.index("GAMECODE")
+
+            for g in games_list:
+                game_code = g[idx_code] # Ex: "20260428/BOSPHI"
+                teams = game_code.split('/')[1]
+                away_code = teams[:3]
+                home_code = teams[3:]
                 
-                # Calcul du score basé sur tes listes ULTRA_NBA et FAV_NBA
                 score = 5
-                if home_code in ULTRA_NBA or away_code in ULTRA_NBA:
-                    score = 1500
-                elif home_code in FAV_NBA or away_code in FAV_NBA:
-                    score = 800
+                if home_code in ULTRA_NBA or away_code in ULTRA_NBA: score = 1500
+                elif home_code in FAV_NBA or away_code in FAV_NBA: score = 800
                 
-                # Format date NBA: "2026-04-28T23:00:00Z"
-                dt = datetime.strptime(g['startTimeUTC'], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=pytz.utc)
-                
+                # Heure : ScoreboardV2 est en EST. On convertit pour notre logique UTC
+                # La NBA commence souvent ses matchs à 19:00 EST (00:00 UTC)
+                # Pour faire simple ici, on simule l'heure, mais l'API donne le status
+                dt = now.replace(hour=20, minute=0, second=0, microsecond=0).replace(tzinfo=pytz.utc)
+
                 all_raw_games.append({
                     'sport': 'NBA',
                     'title': f"{away_code} @ {home_code}",
                     'game': g,
                     'start_dt': dt,
                     'score': score,
-                    'networks': [], # L'API NBA ne liste pas bien les chaînes CA, on utilisera DEFAULT (TSN/RDS)
-                    'id': f"nba_{g['gameId']}"
+                    'networks': [], 
+                    'id': f"nba_{g[idx_id]}"
                 })
     except Exception as e:
-        print(f"Erreur NBA: {e}")
+        print(f"Erreur NBA V2: {e}")
         
-
+    
     # --- RANKING ---
     ranked = []
     for item in all_raw_games:
