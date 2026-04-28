@@ -123,15 +123,24 @@ def generate_m3u():
 def generate_epg():
     ranked = get_ranked_games()
     xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<tv>']
-    for i in range(1, 6): xml.append(f'<channel id="NHL.Live.{i}"><display-name>NHL LIVE {i}</display-name></channel>')
     
+    # 1. DÉCLARATION DES 5 CANAUX (L'ID doit être NHL.Live.X)
+    for i in range(1, 6):
+        xml.append(f'<channel id="NHL.Live.{i}"><display-name>NHL LIVE {i}</display-name></channel>')
+    
+    from datetime import datetime, timedelta
+    import pytz
     tz_mtl = pytz.timezone('America/Montreal')
+
     if ranked:
-        # CANAL 1 (MASTER) - Pas de doublon car on traite ranked[0] ici et ranked[1:] plus bas
+        # --- LOGIQUE CANAL 1 (MASTER) ---
+        # On remplit tout le calendrier sur l'ID NHL.Live.1
         for i, item in enumerate(ranked):
             g = item['game']
             start_utc = datetime.strptime(g['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc)
             stop_utc = start_utc + timedelta(hours=2, minutes=30)
+            
+            # Pregame pour le canal 1
             p_start = start_utc - timedelta(minutes=30)
             if i > 0:
                 prev_stop = datetime.strptime(ranked[i-1]['game']['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc) + timedelta(hours=2, minutes=30)
@@ -148,16 +157,22 @@ def generate_epg():
             xml.append(f'  <desc lang="fr">{get_custom_desc(g)}</desc>')
             xml.append('</programme>')
 
-        # CANAUX 2 À 5 (DYNAMIQUES) - STRICTEMENT ranked[1] à ranked[4]
+        # --- LOGIQUE CANAUX 2 À 5 (DYNAMIQUES) ---
+        # On distribue les matchs suivants sur leurs canaux respectifs
         for i in range(1, min(len(ranked), 5)):
             channel_id = f"NHL.Live.{i+1}"
             g = ranked[i]['game']
             s_utc = datetime.strptime(g['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc)
-            xml.append(f'<programme start="{(s_utc-timedelta(minutes=30)).strftime("%Y%m%d%H%M%S")} +0000" stop="{(s_utc+timedelta(hours=2, minutes=30)).strftime("%Y%m%d%H%M%S")} +0000" channel="{channel_id}">')
+            
+            # Pour les canaux secondaires, on met juste le bloc Pregame + Match
+            p_start = s_utc - timedelta(minutes=30)
+            m_stop = s_utc + timedelta(hours=2, minutes=30)
+            
+            xml.append(f'<programme start="{p_start.strftime("%Y%m%d%H%M%S")} +0000" stop="{m_stop.strftime("%Y%m%d%H%M%S")} +0000" channel="{channel_id}">')
             xml.append(f'  <title lang="fr">{g["awayTeam"]["abbrev"]} @ {g["homeTeam"]["abbrev"]}</title>')
             xml.append(f'  <desc lang="fr">{get_custom_desc(g)}</desc>')
             xml.append('</programme>')
 
     xml.append('</tv>')
     return Response("\n".join(xml), mimetype='text/xml')
-        
+    
