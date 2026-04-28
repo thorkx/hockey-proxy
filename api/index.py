@@ -44,55 +44,79 @@ SECONDARY_FAVORITES = ["COL", "BUF", "UTA"]
 # =================================================================
 # 2. LE CERVEAU (RANKING DES MATCHS)
 # =================================================================
+
 def get_ranked_games():
     import requests
-    from datetime import datetime, timedelta
-
-    # On récupère la date d'aujourd'hui au format YYYY-MM-DD
-    today = datetime.now().strftime("%Y-%m-%d")
+    from datetime import datetime
     
-    # URL du calendrier (Schedule) au lieu de 'score/now'
-    # Cela permet de voir TOUS les matchs de la journée
-    NHL_API_URL = f"https://api-web.nhle.com/v1/schedule/{today}"
+    # On force la date d'aujourd'hui
+    today = datetime.now().strftime("%Y-%m-%d")
+    url = f"https://api-web.nhle.com/v1/schedule/{today}"
     
     try:
-        response = requests.get(NHL_API_URL)
-        data = response.json()
+        r = requests.get(url)
+        data = r.json()
         
-        # Dans 'schedule', les matchs sont dans data['gameWeek'][0]['games']
-        all_games = data.get('gameWeek', [{}])[0].get('games', [])
+        # CHANGEMENT CRUCIAL ICI :
+        # L'API Schedule structure les matchs par date dans 'gameWeek'
+        games_found = []
+        for day in data.get('gameWeek', []):
+            if day.get('date') == today:
+                games_found = day.get('games', [])
+                break
+        
+        # Si on ne trouve rien pour 'today', on prend le premier jour dispo
+        if not games_found and data.get('gameWeek'):
+            games_found = data['gameWeek'][0].get('games', [])
+            
     except Exception as e:
-        print(f"Erreur API: {e}")
+        print(f"Erreur : {e}")
         return []
 
     ranked_list = []
-    
-    for g in all_games:
-        # On garde tout ce qui n'est pas "FINAL"
-        if g.get('gameState') == "OFF": continue 
+    for g in games_found:
+        # On ignore les matchs terminés
+        if g.get('gameState') == "OFF": 
+            continue
 
         home = g['homeTeam']['abbrev']
         away = g['awayTeam']['abbrev']
         is_mtl = (home == "MTL" or away == "MTL")
         
-        # ... (Le reste de ton code de scoring et bonus reste le même) ...
-        
-        # IMPORTANT: On accepte le match même si best_tv_url est vide
-        if not best_tv_url:
-            best_tv_url = MAPPING.get("DEFAULT")
+        # Calcul du score
+        score = 1000 if is_mtl else 10
+        if home in ULTRA_PRIORITY or away in ULTRA_PRIORITY:
+            score += 100
+
+        # Diffuseurs
+        tv_list = [tv['network'] for tv in g.get('tvBroadcasts', []) if tv['countryCode'] == 'CA']
+        best_url = MAPPING.get("DEFAULT")
+        best_bonus = -1
+
+        for net in tv_list:
+            match_key = next((k for k in MAPPING if k in net), None)
+            if not match_key: continue
+            
+            bonus = 0
+            if is_mtl and "RDS" in net: bonus = 500
+            elif "SN" in net: bonus = 300
+            elif "RDS" in net: bonus = 100
+            elif "TVAS" in net: bonus = 50
+            
+            if bonus > best_bonus:
+                best_bonus = bonus
+                best_url = MAPPING[match_key]
 
         ranked_list.append({
             'game': g,
-            'url': best_tv_url,
-            'total_score': base_score + best_tv_bonus
+            'url': best_url,
+            'total_score': score + best_bonus
         })
 
-    # TRÈS IMPORTANT : Pour l'EPG, on trie par HEURE, pas par score
-    # Sinon les matchs dans ton guide seront dans le désordre
+    # TRI CHRONOLOGIQUE POUR L'EPG
     ranked_list.sort(key=lambda x: x['game']['startTimeUTC'])
-    
     return ranked_list
-
+    
 # =================================================================
 # 3. LES ROUTES (INTERFACES POUR TIVIMATE)
 # =================================================================
