@@ -1,0 +1,32 @@
+name: Update Filtered EPG
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Toutes les 6 heures
+  workflow_dispatch: # Permet de cliquer sur "Run" manuellement pour tester
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Run Extraction
+        run: python extract_epg.py
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'EPG-Bot'
+          git config --global user.email 'bot@noreply.github.com'
+          git add filtered_epg.json
+          git commit -m "Update EPG data" || echo "No changes to commit"
+          git push
+          
