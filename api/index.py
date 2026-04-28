@@ -77,12 +77,11 @@ def assign_channels(ranked_games):
                 assigned_match_ids.add(item['id'])
                 break
     return grid
-
 def get_ranked_games():
     now = datetime.now(pytz.utc)
     all_games = []
     
-    # 2.1 NHL
+    # --- 2.1 NHL (API NHL) ---
     for i in range(3):
         d = (now + timedelta(days=i)).strftime("%Y-%m-%d")
         try:
@@ -91,6 +90,7 @@ def get_ranked_games():
                 for g in day.get('games', []):
                     if g.get('gameState') == "OFF": continue
                     h, a = g['homeTeam']['abbrev'], g['awayTeam']['abbrev']
+                    # Priorité Ultra pour le Canadien
                     score = P_ULTRA if (h in ULTRA_TEAMS or a in ULTRA_TEAMS) else (P_HIGH if (h in FAV_TEAMS or a in FAV_TEAMS) else 10)
                     all_games.append({
                         'sport': 'NHL', 'title': f"{a} @ {h}", 'score': score, 'id': f"nhl_{g['id']}",
@@ -99,7 +99,7 @@ def get_ranked_games():
                     })
         except: continue
 
-    # 2.2 ESPN (NBA, MLB, F1, SOCCER)
+    # --- 2.2 ESPN (NBA, MLB, F1, SOCCER) ---
     leagues = [('basketball/nba', 'NBA'), ('baseball/mlb', 'MLB'), ('racing/f1', 'F1'), 
                ('soccer/usa.1', 'FOOT'), ('soccer/can.1', 'FOOT'), ('soccer/uefa.champions', 'FOOT'), 
                ('soccer/eng.1', 'FOOT'), ('soccer/fra.1', 'FOOT'), ('soccer/esp.1', 'FOOT'), ('soccer/ita.1', 'FOOT')]
@@ -112,10 +112,15 @@ def get_ranked_games():
                 for e in r.get('events', []):
                     title_up = e['name'].upper()
                     teams = [c['team']['abbreviation'].upper() for c in e['competitions'][0]['competitors']]
+                    
+                    # Détection des favoris (City, PSG, Jays, Raptors, etc.)
                     score = P_STD
-                    if any(t in teams for t in ULTRA_TEAMS) or any(fav in title_up for fav in ULTRA_TEAMS): score = P_ULTRA
-                    elif sport_key == 'F1' or 'champions' in path: score = P_HIGH
-                    elif any(t in teams for t in FAV_TEAMS): score = P_HIGH
+                    if any(t in teams for t in ULTRA_TEAMS) or any(fav in title_up for fav in ULTRA_TEAMS):
+                        score = P_ULTRA
+                    elif sport_key == 'F1' or 'champions' in path: 
+                        score = P_HIGH
+                    elif any(t in teams for t in FAV_TEAMS): 
+                        score = P_HIGH
                     
                     all_games.append({
                         'sport': sport_key, 'title': e['name'], 'score': score, 'id': f"espn_{e['id']}",
@@ -124,31 +129,72 @@ def get_ranked_games():
                     })
             except: continue
 
-    # 2.3 MAPPING & BONUS
+    # --- 2.3 MAPPING, BONUS ET PRIORITÉ FRANÇAISE ---
     ranked = []
     for item in all_games:
         best_url, best_bonus = MAPPING["DEFAULT"], -1
+        
+        # Si aucun network n'est listé, on met au moins le mapping par défaut
+        if not item['networks']:
+            item['url'], item['total_score'] = best_url, item['score']
+            ranked.append(item)
+            continue
+
         for net in item['networks']:
             net_u = net.upper()
             mk = next((k for k in sorted(MAPPING.keys(), key=len, reverse=True) if k in net_u), None)
-            if not mk: continue
-            bonus = 300
-            if any(x in mk for x in ["SKY", "ONES", "CANAL"]): bonus = 900
-            elif any(x in mk for x in ["RDS", "TVAS"]): bonus = 800
-            elif "BEIN" in mk: bonus = 700 + (50 if "FR" in net_u else 0)
-            elif any(x in mk for x in ["DAZN", "MLS", "APPLE"]):
-                bonus = 600
-                num = re.search(r'\d+', net_u)
-                if num:
-                    prefix = "DAZN" if "DAZN" in net_u else "MLS"
-                    if f"{prefix}{num.group()}" in CH:
-                        best_url = get_url(CH[f"{prefix}{num.group()}"])
-                        bonus += 50
-            if bonus > best_bonus: best_bonus, best_url = bonus, (MAPPING[mk] if best_bonus < bonus else best_url)
+            
+            bonus = 0
+            current_url = MAPPING["DEFAULT"]
+
+            if mk:
+                # Priorité 1 : Langue française native ou OneSoccer (indispensable pour CPL)
+                if any(x in mk for x in ["CANAL", "RDS", "TVAS", "ONES"]):
+                    bonus = 950
+                    current_url = MAPPING[mk]
+                
+                # Priorité 2 : BeIN avec détection du flux FR
+                elif "BEIN" in mk:
+                    bonus = 750
+                    if "FR" in net_u or "FRANCAIS" in net_u:
+                        bonus += 150 # Total 900
+                        current_url = get_url(CH["BEIN1FR"]) # Force le canal français
+                    else:
+                        current_url = MAPPING[mk]
+
+                # Priorité 3 : Sky (Anglais de haute qualité pour F1/Foot)
+                elif "SKY" in mk:
+                    bonus = 850
+                    current_url = MAPPING[mk]
+
+                # Priorité 4 : DAZN / Apple / MLS (Beaucoup de canaux, souvent en anglais)
+                elif any(x in mk for x in ["DAZN", "MLS", "APPLE"]):
+                    bonus = 600
+                    current_url = MAPPING[mk]
+                    # Essayer de trouver le canal spécifique (ex: DAZN 4)
+                    num = re.search(r'\d+', net_u)
+                    if num:
+                        prefix = "DAZN" if "DAZN" in net_u else "MLS"
+                        if f"{prefix}{num.group()}" in CH:
+                            current_url = get_url(CH[f"{prefix}{num.group()}"])
+                            bonus += 50
+                
+                # Autres (TSN, Sportsnet)
+                else:
+                    bonus = 400
+                    current_url = MAPPING[mk]
+
+            # On garde le meilleur canal trouvé pour ce match
+            if bonus > best_bonus:
+                best_bonus = bonus
+                best_url = current_url
+        
         item['url'], item['total_score'] = best_url, item['score'] + best_bonus
         ranked.append(item)
 
+    # Tri final : Score d'importance + Bonus de qualité/langue
     return sorted(ranked, key=lambda x: (-x['total_score'], x['start_dt']))
+    
 
 # =================================================================
 # 3. ROUTES
