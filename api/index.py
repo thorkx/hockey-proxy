@@ -208,47 +208,49 @@ def generate_epg():
         grid = assign_channels(ranked)
         
         # En-tête XML strict
-       xml = ['<?xml version="1.0" encoding="UTF-8"?>', 
-           '<!DOCTYPE tv SYSTEM "xmltv.dtd">',
-           '<tv generator-info-name="CustomMultiSportEPG">']
-    
-    for i in range(1, 6): 
-        cid = f"NHL.Live.{i}"
-        xml.append(f'  <channel id="{cid}">')
-        xml.append(f'    <display-name>MULTI SPORT {i}</display-name>')
-        xml.append(f'  </channel>') 
+        xml = ['<?xml version="1.0" encoding="UTF-8"?>', 
+               '<!DOCTYPE tv SYSTEM "xmltv.dtd">',
+               '<tv generator-info-name="CustomMultiSportEPG">']
+        
+        # 1. DÉFINITION DES CANAUX (Fixe)
+        for i in range(1, 6): 
+            cid = f"NHL.Live.{i}"
+            xml.append(f'  <channel id="{cid}">')
+            xml.append(f'    <display-name>MULTI SPORT {i}</display-name>')
+            xml.append('  </channel>') 
         
         tz_mtl = pytz.timezone('America/Montreal')
         
+        # 2. GÉNÉRATION DES PROGRAMMES
         for ch_num, matches in grid.items():
-            cid = f"NHL.Live.{ch_num}" # L'ID doit matcher exactement
+            cid = f"NHL.Live.{ch_num}" 
             for item in matches:
                 s_utc = item['start_dt']
                 logo = "🏒" if item['sport'] == 'NHL' else "🏀"
                 
+                # Formatage des heures (XMLTV standard)
                 start_xml = s_utc.strftime("%Y%m%d%H%M%S") + " +0000"
                 pre_start_xml = (s_utc - timedelta(minutes=30)).strftime("%Y%m%d%H%M%S") + " +0000"
-                stop_xml = (s_utc + timedelta(hours=3)).strftime("%Y%m%d%H%M%S") + " +0000"
+                stop_xml = (s_utc + timedelta(hours=3, minutes=15)).strftime("%Y%m%d%H%M%S") + " +0000"
                 
-                # Pregame
+                # Bloc PREGAME
                 xml.append(f'  <programme start="{pre_start_xml}" stop="{start_xml}" channel="{cid}">')
                 xml.append(f'    <title lang="fr">{logo} PRE : {item["title"]}</title>')
                 xml.append(f'    <desc lang="fr">Début à {s_utc.astimezone(tz_mtl).strftime("%H:%M")}</desc>')
                 xml.append('  </programme>')
                 
-                # Match
+                # Bloc MATCH
                 xml.append(f'  <programme start="{start_xml}" stop="{stop_xml}" channel="{cid}">')
                 xml.append(f'    <title lang="fr">{logo} {item["title"]}</title>')
-                xml.append(f'    <desc lang="fr">Diffusion {item["sport"]}</desc>')
+                xml.append(f'    <desc lang="fr">Diffusion {item['sport']}</desc>')
                 xml.append('  </programme>')
 
         xml.append('</tv>')
         
-        # On utilise application/xml pour la compatibilité mobile
         return Response("\n".join(xml), mimetype='application/xml')
         
     except Exception as e:
-        return Response(f"Erreur: {str(e)}", status=500)
+        return Response(f"Erreur EPG: {str(e)}", status=500)
         
 
 if __name__ == '__main__':
