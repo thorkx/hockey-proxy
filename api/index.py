@@ -121,7 +121,7 @@ def get_ranked_games():
             # Conversion de l'heure NBA (souvent en ms ou format spécifique)
             # Note: Adapte selon le format exact retourné, ici on simule le format ISO standard
             dt = datetime.strptime(g['startTimeUTC'], "%Y-%m-%dT%H:%M:%S.%fZ").replace(tzinfo=pytz.utc)
-            
+            print(g['homeTeam']['teamTricode'])
             all_raw_games.append({
                 'sport': 'NBA',
                 'title': f"{a} @ {h}",
