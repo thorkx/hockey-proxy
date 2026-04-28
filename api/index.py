@@ -13,10 +13,6 @@ PASS = "2khBtbUZuV"
 BASE_DOMAIN = "omegatv.live:80"
 BASE_URL = "https://thorkx-hockey-proxy.vercel.app"
 
-# Tes listes d'équipes (utilisées pour le tri ET les descriptions)
-ULTRA_PRIORITY = ["MTL"]
-SECONDARY_FAVORITES = ["COL", "BUF", "UTA", "EDM"]
-
 CH = {
     "RDS": "184813", "RDS2": "184814", "RDSInfo": "184815",
     "TVASports": "184811", "TVASports2": "184812",
@@ -41,17 +37,11 @@ MAPPING = {
 
 def get_custom_desc(g):
     home, away = g['homeTeam']['abbrev'], g['awayTeam']['abbrev']
-    
-    # 1. Cas Montréal (Ultra)
     if home == "MTL" or away == "MTL": 
         return "Diffusion prioritaire NHL pour MONTRÉAL"
-    
-    # 2. Cas Favoris secondaires
     fav = next((team for team in [home, away] if team in SECONDARY_FAVORITES), None)
     if fav:
-        return f"Diffusion NHL {fav}" # Format demandé : Diffusion NHL (équipe)
-        
-    # 3. Cas Standard
+        return f"Diffusion NHL {fav}"
     return "Diffusion NHL"
 
 def get_ranked_games():
@@ -74,10 +64,8 @@ def get_ranked_games():
         game_id = g.get('id')
         if game_id in seen_game_ids or g.get('gameState') == "OFF": continue
         seen_game_ids.add(game_id)
-
         home, away = g['homeTeam']['abbrev'], g['awayTeam']['abbrev']
         score = 2000 if (home == "MTL" or away == "MTL") else (1000 if (home in SECONDARY_FAVORITES or away in SECONDARY_FAVORITES) else 10)
-
         tv_list = [tv['network'] for tv in g.get('tvBroadcasts', []) if tv['countryCode'] == 'CA']
         best_url, best_bonus = MAPPING.get("DEFAULT"), -1
         for net in tv_list:
@@ -85,7 +73,6 @@ def get_ranked_games():
             if not match_key: continue
             bonus = 500 if (score == 2000 and "RDS" in net) else (300 if "SN" in net else 50)
             if bonus > best_bonus: best_bonus, best_url = bonus, MAPPING[match_key]
-
         ranked_list.append({'game': g, 'url': best_url, 'total_score': score + best_bonus})
 
     ranked_list.sort(key=lambda x: (-x['total_score'], x['game']['startTimeUTC']))
@@ -123,24 +110,17 @@ def generate_m3u():
 def generate_epg():
     ranked = get_ranked_games()
     xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<tv>']
+    for i in range(1, 6): xml.append(f'<channel id="NHL.Live.{i}"><display-name>NHL LIVE {i}</display-name></channel>')
     
-    # 1. DÉCLARATION DES 5 CANAUX (L'ID doit être NHL.Live.X)
-    for i in range(1, 6):
-        xml.append(f'<channel id="NHL.Live.{i}"><display-name>NHL LIVE {i}</display-name></channel>')
-    
-    from datetime import datetime, timedelta
-    import pytz
     tz_mtl = pytz.timezone('America/Montreal')
-
     if ranked:
-        # --- LOGIQUE CANAL 1 (MASTER) ---
-        # On remplit tout le calendrier sur l'ID NHL.Live.1
+        # --- CANAL 1 (MASTER) ---
+        # Affiche toute la programmation prioritaire bout à bout
         for i, item in enumerate(ranked):
             g = item['game']
             start_utc = datetime.strptime(g['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc)
             stop_utc = start_utc + timedelta(hours=2, minutes=30)
             
-            # Pregame pour le canal 1
             p_start = start_utc - timedelta(minutes=30)
             if i > 0:
                 prev_stop = datetime.strptime(ranked[i-1]['game']['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc) + timedelta(hours=2, minutes=30)
@@ -157,17 +137,17 @@ def generate_epg():
             xml.append(f'  <desc lang="fr">{get_custom_desc(g)}</desc>')
             xml.append('</programme>')
 
-        # --- LOGIQUE CANAUX 2 À 5 (DYNAMIQUES) ---
-        # On distribue les matchs suivants sur leurs canaux respectifs
+        # --- CANAUX 2 À 5 (INDIVIDUELS) ---
+        # Chaque canal ne montre QUE son match assigné
         for i in range(1, min(len(ranked), 5)):
             channel_id = f"NHL.Live.{i+1}"
             g = ranked[i]['game']
             s_utc = datetime.strptime(g['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc)
             
-            # Pour les canaux secondaires, on met juste le bloc Pregame + Match
             p_start = s_utc - timedelta(minutes=30)
             m_stop = s_utc + timedelta(hours=2, minutes=30)
             
+            # Un seul bloc de programme par canal pour éviter les répétitions
             xml.append(f'<programme start="{p_start.strftime("%Y%m%d%H%M%S")} +0000" stop="{m_stop.strftime("%Y%m%d%H%M%S")} +0000" channel="{channel_id}">')
             xml.append(f'  <title lang="fr">{g["awayTeam"]["abbrev"]} @ {g["homeTeam"]["abbrev"]}</title>')
             xml.append(f'  <desc lang="fr">{get_custom_desc(g)}</desc>')
@@ -175,4 +155,7 @@ def generate_epg():
 
     xml.append('</tv>')
     return Response("\n".join(xml), mimetype='text/xml')
-    
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+            
