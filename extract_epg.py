@@ -2,15 +2,10 @@ import xml.etree.ElementTree as ET
 import requests
 import json
 
-# Liste exhaustive Canada + Europe
-CHANNELS_TO_KEEP = [
-    # CANADA
-    "RDS.ca", "RDS2.ca", "TSN1.ca", "TSN2.ca", "TSN3.ca", "TSN4.ca", "TSN5.ca",
-    "SN_East.ca", "SN_Ontario.ca", "SN_One.ca", "SN_360.ca",
-    "TVASports.ca", "TVASports2.ca", "OneSoccer.ca",
-    # FRANCE
-    "CanalPlus.fr", "CanalPlusSport.fr", "CanalPlusFoot.fr", "CanalPlusSport360.fr",
-    "BeINSports1.fr", "BeINSports2.fr", "BeINSports3.fr", "DAZN1.fr", "DAZN2.fr"
+# On définit des mots-clés simples à trouver dans les <display-name>
+KEYWORDS_TO_KEEP = [
+    "RDS", "TSN", "Sportsnet", "SN East", "SN One", "TVA Sports", 
+    "Canal+", "BeIN Sports", "DAZN", "Sky Sports", "TNT Sports"
 ]
 
 def run():
@@ -19,25 +14,32 @@ def run():
     
     try:
         r = requests.get(url, timeout=60)
-        if r.status_code != 200:
-            print("Erreur de téléchargement")
-            return
-
-        print("Parsing XML (cela peut prendre une minute)...")
         root = ET.fromstring(r.content)
         
+        # 1. On identifie d'abord les IDs de chaînes qui nous intéressent
+        target_ids = set()
+        for channel in root.findall('channel'):
+            ch_id = channel.get('id')
+            # On vérifie si un de nos mots-clés est dans les display-name
+            names = [dn.text.upper() for dn in channel.findall('display-name') if dn.text]
+            if any(any(kw.upper() in name for kw in KEYWORDS_TO_KEEP) for name in names):
+                target_ids.add(ch_id)
+        
+        print(f"Chaînes identifiées : {len(target_ids)}")
+
+        # 2. On extrait les programmes pour ces IDs
         filtered_data = []
         for prog in root.findall('programme'):
             ch_id = prog.get('channel')
-            if ch_id in CHANNELS_TO_KEEP:
+            if ch_id in target_ids:
+                title = prog.find('title').text if prog.find('title') is not None else "Match"
                 filtered_data.append({
-                    "ch": ch_id,
+                    "ch": ch_id, # Garde l'ID technique pour le mapping
                     "start": prog.get('start'),
-                    "stop": prog.get('stop'),
-                    "title": prog.find('title').text if prog.find('title') is not None else "Match"
+                    "title": title
                 })
         
-        print(f"Succès : {len(filtered_data)} programmes extraits.")
+        print(f"Programmes trouvés : {len(filtered_data)}")
         with open('filtered_epg.json', 'w', encoding='utf-8') as f:
             json.dump(filtered_data, f, ensure_ascii=False)
             
