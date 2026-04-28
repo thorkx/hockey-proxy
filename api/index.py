@@ -9,7 +9,7 @@ app = Flask(__name__)
 USER = "tDcJnv4jMM"
 PASS = "2khBtbUZuV"
 BASE_DOMAIN = "omegatv.live:80"
-BASE_URL = "https://hockey-proxy.vercel.app"
+BASE_URL = "https://thorkx-hockey-proxy.vercel.app"
 
 # IDs des chaînes chez ton fournisseur
 CH = {
