@@ -73,12 +73,11 @@ def assign_channels(ranked_games):
                 assigned_match_ids.add(item['id'])
                 break
     return grid
-
 def get_ranked_games():
     now = datetime.now(pytz.utc)
     all_games = []
     
-    # 2.1 NHL (Noms complets)
+    # 2.1 NHL (Harmonisation des noms)
     for i in range(3):
         d = (now + timedelta(days=i)).strftime("%Y-%m-%d")
         try:
@@ -86,24 +85,34 @@ def get_ranked_games():
             for day in r.get('gameWeek', []):
                 for g in day.get('games', []):
                     if g.get('gameState') == "OFF": continue
-                    h_full = f"{g['homeTeam']['placeName']['default']} {g['homeTeam']['commonName']['default']}".upper()
-                    a_full = f"{g['awayTeam']['placeName']['default']} {g['awayTeam']['commonName']['default']}".upper()
+                    
+                    # Noms pour l'affichage (Title Case)
+                    h_display = f"{g['homeTeam']['placeName']['default']} {g['homeTeam']['commonName']['default']}"
+                    a_display = f"{g['awayTeam']['placeName']['default']} {g['awayTeam']['commonName']['default']}"
+                    
+                    # Variables pour la détection (Majuscules)
+                    h_full_up = h_display.upper()
+                    a_full_up = a_display.upper()
                     h_abbr, a_abbr = g['homeTeam']['abbrev'].upper(), g['awayTeam']['abbrev'].upper()
                     
                     score = P_STD
-                    if any(x in [h_abbr, a_abbr] or x in h_full or x in a_full for x in ULTRA_TEAMS):
+                    if any(x in [h_abbr, a_abbr] or x in h_full_up or x in a_full_up for x in ULTRA_TEAMS):
                         score = P_ULTRA
                     elif any(x in [h_abbr, a_abbr] for x in FAV_TEAMS):
                         score = P_HIGH
                         
                     all_games.append({
-                        'sport': 'NHL', 'title': f"{a_full} @ {h_full}", 'score': score, 'id': f"nhl_{g['id']}",
+                        'sport': 'NHL', 
+                        'title': f"{a_display} @ {h_display}", # Plus de ALL CAPS ici
+                        'score': score, 
+                        'id': f"nhl_{g['id']}",
                         'start_dt': datetime.strptime(g['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S").replace(tzinfo=pytz.utc),
                         'networks': [t['network'] for t in g.get('tvBroadcasts', []) if t['countryCode'] == 'CA']
                     })
         except: continue
 
     # 2.2 ESPN (NBA, MLB, F1, SOCCER)
+    # On ajoute une petite passe de nettoyage sur les titres ESPN pour la consistance
     leagues = [('basketball/nba', 'NBA'), ('baseball/mlb', 'MLB'), ('racing/f1', 'F1'), 
                ('soccer/usa.1', 'FOOT'), ('soccer/can.1', 'FOOT'), ('soccer/uefa.champions', 'FOOT'), 
                ('soccer/eng.1', 'FOOT'), ('soccer/fra.1', 'FOOT'), ('soccer/esp.1', 'FOOT'), ('soccer/ita.1', 'FOOT')]
@@ -115,6 +124,9 @@ def get_ranked_games():
                 r = requests.get(f"https://site.api.espn.com/apis/site/v2/sports/{path}/scoreboard?dates={d}", timeout=5).json()
                 for e in r.get('events', []):
                     title_up = e['name'].upper()
+                    # On s'assure que le titre ESPN est aussi propre (souvent "Team A at Team B")
+                    clean_title = e['name'].replace(" at ", " @ ")
+                    
                     teams = [c['team']['abbreviation'].upper() for c in e['competitions'][0]['competitors']]
                     
                     score = P_STD
@@ -124,16 +136,20 @@ def get_ranked_games():
                     elif any(t in teams for t in FAV_TEAMS): score = P_HIGH
                     
                     all_games.append({
-                        'sport': sport_key, 'title': e['name'], 'score': score, 'id': f"espn_{e['id']}",
+                        'sport': sport_key, 
+                        'title': clean_title, 
+                        'score': score, 
+                        'id': f"espn_{e['id']}",
                         'start_dt': datetime.strptime(e['date'].replace('Z', ''), "%Y-%m-%dT%H:%M").replace(tzinfo=pytz.utc),
                         'networks': [b.get('media', {}).get('shortName', '') for b in e['competitions'][0].get('geoBroadcasts', [])]
                     })
             except: continue
 
-    # 2.3 MAPPING & BONUS (Priorité Langue Française)
+    # --- 2.3 MAPPING, BONUS ET PRIORITÉ FRANÇAISE ---
     ranked = []
     for item in all_games:
         best_url, best_bonus = MAPPING["DEFAULT"], -1
+        
         if not item['networks']:
             item['url'], item['total_score'] = best_url, item['score']
             ranked.append(item)
@@ -142,17 +158,21 @@ def get_ranked_games():
         for net in item['networks']:
             net_u = net.upper()
             mk = next((k for k in sorted(MAPPING.keys(), key=len, reverse=True) if k in net_u), None)
+            
             bonus, current_url = 0, MAPPING["DEFAULT"]
 
             if mk:
+                # Priorité absolue au français
                 if any(x in mk for x in ["CANAL", "RDS", "TVAS", "ONES"]):
                     bonus, current_url = 950, MAPPING[mk]
                 elif "BEIN" in mk:
                     bonus = 750
                     if "FR" in net_u or "FRANCAIS" in net_u:
                         bonus, current_url = 900, get_url(CH["BEIN1FR"])
-                    else: current_url = MAPPING[mk]
-                elif "SKY" in mk: bonus, current_url = 850, MAPPING[mk]
+                    else:
+                        current_url = MAPPING[mk]
+                elif "SKY" in mk:
+                    bonus, current_url = 850, MAPPING[mk]
                 elif any(x in mk for x in ["DAZN", "MLS", "APPLE"]):
                     bonus, current_url = 600, MAPPING[mk]
                     num = re.search(r'\d+', net_u)
@@ -160,14 +180,18 @@ def get_ranked_games():
                         prefix = "DAZN" if "DAZN" in net_u else "MLS"
                         if f"{prefix}{num.group()}" in CH:
                             current_url, bonus = get_url(CH[f"{prefix}{num.group()}"]), bonus + 50
-                else: bonus, current_url = 400, MAPPING[mk]
+                else:
+                    bonus, current_url = 400, MAPPING[mk]
 
-            if bonus > best_bonus: best_bonus, best_url = bonus, current_url
+            if bonus > best_bonus:
+                best_bonus = bonus
+                best_url = current_url
         
         item['url'], item['total_score'] = best_url, item['score'] + best_bonus
         ranked.append(item)
 
     return sorted(ranked, key=lambda x: (-x['total_score'], x['start_dt']))
+    
 
 # =================================================================
 # 3. ROUTES
