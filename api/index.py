@@ -208,32 +208,46 @@ def generate_m3u():
         m3u.append(f"http://{request.host}/nhl-live/{i}")
     return Response("\n".join(m3u), mimetype='text/plain')
     
+@app.route('/epg.xml')
 def generate_epg():
-    ranked = get_ranked_games()
-    grid = assign_channels(ranked)
-    xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<tv>']
-    for i in range(1, 6): xml.append(f'<channel id="NHL.Live.{i}"><display-name>LIVE {i}</display-name></channel>')
-    
-    tz_mtl = pytz.timezone('America/Montreal')
-    for ch_num, matches in grid.items():
-        for item in matches:
-            s_utc = item['start_dt']
-            sport_logo = "🏒" if item['sport'] == 'NHL' else "🏀"
-            
-            # Pregame avec logo unique
-            xml.append(f'<programme start="{(s_utc-timedelta(minutes=30)).strftime("%Y%m%d%H%M%S")} +0000" stop="{s_utc.strftime("%Y%m%d%H%M%S")} +0000" channel="NHL.Live.{ch_num}">')
-            xml.append(f'  <title lang="fr">{sport_logo} PREGAME : {item["title"]}</title>')
-            xml.append(f'  <desc lang="fr">Début à {s_utc.astimezone(tz_mtl).strftime("%H:%M")}.</desc>')
-            xml.append('</programme>')
-            
-            # Match
-            xml.append(f'<programme start="{s_utc.strftime("%Y%m%d%H%M%S")} +0000" stop="{(s_utc+timedelta(hours=2, minutes=30)).strftime("%Y%m%d%H%M%S")} +0000" channel="NHL.Live.{ch_num}">')
-            xml.append(f'  <title lang="fr">{item["title"]}</title>')
-            xml.append(f'  <desc lang="fr">{item["desc"]}</desc>')
-            xml.append('</programme>')
-    xml.append('</tv>')
-    return Response("\n".join(xml), mimetype='text/xml')
+    try:
+        ranked = get_ranked_games()
+        grid = assign_channels(ranked)
+        xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<tv>']
+        
+        for i in range(1, 6): 
+            xml.append(f'<channel id="NHL.Live.{i}"><display-name>LIVE {i}</display-name></channel>')
+        
+        tz_mtl = pytz.timezone('America/Montreal')
+        
+        for ch_num, matches in grid.items():
+            for item in matches:
+                s_utc = item['start_dt']
+                logo = "🏒" if item['sport'] == 'NHL' else "🏀"
+                
+                # Formatage des dates pour XMLTV
+                start_xml = s_utc.strftime("%Y%m%d%H%M%S") + " +0000"
+                pre_start_xml = (s_utc - timedelta(minutes=30)).strftime("%Y%m%d%H%M%S") + " +0000"
+                stop_xml = (s_utc + timedelta(hours=3)).strftime("%Y%m%d%H%M%S") + " +0000"
+                
+                # Pregame
+                xml.append(f'<programme start="{pre_start_xml}" stop="{start_xml}" channel="NHL.Live.{ch_num}">')
+                xml.append(f'  <title lang="fr">{logo} PRE : {item["title"]}</title>')
+                xml.append(f'  <desc lang="fr">Début à {s_utc.astimezone(tz_mtl).strftime("%H:%M")}</desc>')
+                xml.append('</programme>')
+                
+                # Match
+                xml.append(f'<programme start="{start_xml}" stop="{stop_xml}" channel="NHL.Live.{ch_num}">')
+                xml.append(f'  <title lang="fr">{logo} {item["title"]}</title>')
+                xml.append(f'  <desc lang="fr">Diffusion {item["sport"]}</desc>')
+                xml.append('</programme>')
 
+        xml.append('</tv>')
+        return Response("\n".join(xml), mimetype='text/xml')
+    except Exception as e:
+        # Si ça plante encore, ceci affichera l'erreur dans ton navigateur au lieu d'un 404
+        return Response(str(e), status=500)
+        
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
     
