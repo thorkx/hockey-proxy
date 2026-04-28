@@ -9,13 +9,16 @@ jobs:
   update-epg:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Important pour autoriser l'écriture
+      contents: write
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
@@ -23,12 +26,33 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Run Extraction
+      - name: Run EPG Extraction
         run: python extract_epg.py
 
-      - name: Commit and Push
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Update EPG data [skip ci]"
-          file_pattern: 'filtered_epg.json'
-          status_options: '--untracked-files=no'
+      - name: Force Push to Main
+        run: |
+          # 1. Nettoyage des verrous Git potentiels
+          rm -f .git/index.lock
+          
+          # 2. Configurer l'identité
+          git config --global user.name 'EPG-Bot'
+          git config --global user.email 'bot@noreply.github.com'
+          
+          # 3. S'assurer qu'on est sur la branche main et synchronisé
+          git checkout main
+          git fetch origin main
+          git reset --soft origin/main
+          
+          # 4. Ajouter et commit
+          git add filtered_epg.json
+          
+          # 5. Ne commit que s'il y a des changements pour éviter l'erreur "nothing to commit"
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "Update EPG data [skip ci]"
+            
+            # 6. La force brute : on pousse en ignorant les avertissements de version
+            git push --force origin main
+          else
+            echo "Aucun changement détecté, rien à pousser."
+          fi
+          
