@@ -149,28 +149,39 @@ def get_ranked_games():
 
 @app.route('/nhl-live/<int:ch_num>')
 def redirect_channel(ch_num):
-    # On recalcule les matchs à chaque appel
+    # On force le calcul en UTC pour éviter les erreurs de serveur
+    utc = pytz.UTC
+    now = datetime.now(utc)
+    
     ranked = get_ranked_games()
     grid = assign_channels(ranked)
-    now = datetime.now(pytz.utc)
     
-    # Trouver le match ACTUEL pour ce canal
     match = None
+    # On parcourt les matchs assignés à ce poste
     for m in grid.get(ch_num, []):
-        start = m['start_dt'] - timedelta(minutes=30)
-        end = m['start_dt'] + timedelta(hours=3, minutes=30)
-        if start <= now <= end:
+        # On s'assure que le temps du match est bien en UTC pour la comparaison
+        match_start = m['start_dt'].astimezone(utc)
+        
+        # Fenêtre : On commence 45 min avant et on finit 4h après le début
+        start_window = match_start - timedelta(minutes=45)
+        end_window = match_start + timedelta(hours=4)
+        
+        if start_window <= now <= end_window:
             match = m
             break
     
-    target_url = match['url'] if match else MAPPING["DEFAULT"]
-    
-    # LOG POUR VERCEL (Aide à débugger)
-    print(f"Redirecting Channel {ch_num} to: {target_url} (Match: {match['title'] if match else 'None'})")
+    if match:
+        target_url = match['url']
+        print(f"MATCH TROUVÉ : {match['title']} sur le poste {ch_num}")
+    else:
+        target_url = MAPPING["DEFAULT"]
+        print(f"AUCUN MATCH ACTIF sur le poste {ch_num}, redirection vers RDS.")
     
     res = make_response(redirect(target_url, code=302))
     res.headers['User-Agent'] = 'IPTVSmarters/1.0.3'
     return res
+    
+
 
 @app.route('/playlist.m3u')
 def generate_m3u():
