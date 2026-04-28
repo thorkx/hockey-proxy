@@ -60,9 +60,11 @@ def get_ranked_games():
 
     ranked_list = []
     
-    # On boucle sur tous les matchs retournés par l'API
-    for g in data.get('games', []):
-        # On ne garde que les matchs en direct ou à venir
+    # On récupère tous les matchs
+    all_games = data.get('games', [])
+    
+    for g in all_games:
+        # ÉTAPE 1: Filtrer les états. On garde LIVE, CRIT (moment clé) et PRE (à venir)
         state = g.get('gameState')
         if state not in ["LIVE", "CRIT", "PRE"]:
             continue
@@ -71,28 +73,26 @@ def get_ranked_games():
         away = g['awayTeam']['abbrev']
         is_mtl = (home == "MTL" or away == "MTL")
         
-        # Calcul du score de priorité du match
+        # ÉTAPE 2: Calcul du score de priorité du match
         base_score = 0
         if is_mtl:
-            base_score = 1000  # Priorité absolue pour le Canadien
+            base_score = 1000  
         elif home in ULTRA_PRIORITY or away in ULTRA_PRIORITY:
-            base_score = 100   # Grosses équipes (Leafs, Rangers, etc.)
+            base_score = 100   
         else:
-            base_score = 10    # Matchs standards
+            base_score = 10    
 
-        # Extraction des diffuseurs canadiens
+        # ÉTAPE 3: Trouver le meilleur diffuseur
         tv_list = [tv['network'] for tv in g.get('tvBroadcasts', []) if tv['countryCode'] == 'CA']
         
         best_tv_url = None
         best_tv_bonus = -1
 
-        # On cherche le meilleur diffuseur selon TES priorités
         for net in tv_list:
-            # On vérifie si on a la chaîne dans notre MAPPING (via ton M3U)
-            # On utilise "in" pour attraper "SNE", "SNW", "TVAS2", etc.
+            # On cherche si le réseau est dans notre MAPPING
             match_key = None
             for key in MAPPING.keys():
-                if key in net:
+                if key in net: # Capture "SNE", "SNW", etc.
                     match_key = key
                     break
             
@@ -100,24 +100,21 @@ def get_ranked_games():
                 continue
 
             bonus = 0
-            # 1. Priorité RDS si c'est Montréal
             if is_mtl and "RDS" in net:
                 bonus = 500
-            # 2. Priorité Sportsnet pour tout le reste
             elif "SN" in net:
                 bonus = 300
-            # 3. TVA Sports en dernier recours
+            elif "RDS" in net: # RDS pour match non-MTL
+                bonus = 100
             elif "TVAS" in net:
                 bonus = 50
-            # 4. RDS pour un match non-MTL
-            elif "RDS" in net:
-                bonus = 100
 
             if bonus > best_tv_bonus:
                 best_tv_bonus = bonus
                 best_tv_url = MAPPING[match_key]
 
-        # Si on a trouvé une chaîne pour ce match, on l'ajoute à la liste
+        # ÉTAPE 4: AJOUT À LA LISTE (C'est ici que ça se joue)
+        # Si on a trouvé une URL, on ajoute le match à notre collection
         if best_tv_url:
             ranked_list.append({
                 'game': g,
@@ -125,8 +122,8 @@ def get_ranked_games():
                 'total_score': base_score + best_tv_bonus
             })
 
-    # Tri final : on met les plus gros scores en premier
-    # Si les scores sont égaux, on trie par heure de début
+    # ÉTAPE 5: TRI COMPLET
+    # On trie par score (priorité), puis par heure pour les matchs futurs
     ranked_list.sort(key=lambda x: (x['total_score'], x['game']['startTimeUTC']), reverse=True)
 
     return ranked_list
