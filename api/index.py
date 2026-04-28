@@ -149,51 +149,54 @@ def generate_epg():
     
     from datetime import datetime, timedelta
 
-    for i in range(len(ranked)):
-        item = ranked[i]
-        g = item['game']
+    # Heure actuelle (UTC) pour comparer
+    now_dt = datetime.utcnow()
+
+    if ranked:
+        # --- AJOUT ICI : Remplissage avant le TOUT PREMIER match ---
+        first_g = ranked[0]['game']
+        first_start_dt = datetime.strptime(first_g['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S")
         
-        # 1. Infos du match actuel
-        raw_start = g['startTimeUTC'].replace('-', '').replace(':', '').replace('T', '').replace('Z', '')
-        if len(raw_start) == 12: raw_start += "00"
-        
-        start_dt = datetime.strptime(raw_start, "%Y%m%d%H%M%S")
-        # On estime la fin du match à +3h
-        stop_dt = start_dt + timedelta(hours=3)
-        
-        start_xmltv = start_dt.strftime("%Y%m%d%H%M%S") + " +0000"
-        stop_xmltv = stop_dt.strftime("%Y%m%d%H%M%S") + " +0000"
+        # Si le premier match est dans le futur (plus de 1 min d'écart)
+        if first_start_dt > now_dt + timedelta(minutes=1):
+            f_start = now_dt.strftime("%Y%m%d%H%M%S") + " +0000"
+            f_stop = first_start_dt.strftime("%Y%m%d%H%M%S") + " +0000"
+            
+            xml.append(f'<programme start="{f_start}" stop="{f_stop}" channel="NHL.Live">')
+            xml.append(f'  <title lang="fr">➡️ PROCHAINEMENT : {first_g["awayTeam"]["abbrev"]} @ {first_g["homeTeam"]["abbrev"]}</title>')
+            xml.append(f'  <desc lang="fr">Le guide débutera avec ce match à {first_start_dt.strftime("%H:%M")} UTC.</desc>')
+            xml.append('</programme>')
+        # -----------------------------------------------------------
 
-        status = "[LIVE]" if g['gameState'] in ["LIVE", "CRIT"] else "[PRE]"
-        title = f"{status} {g['awayTeam']['abbrev']} @ {g['homeTeam']['abbrev']}"
-        desc = f"Diffusion sur {item['url'].split('/')[-1]}."
+        for i in range(len(ranked)):
+            g = ranked[i]['game']
+            start_dt = datetime.strptime(g['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S")
+            stop_dt = start_dt + timedelta(hours=3)
+            
+            start_fmt = start_dt.strftime("%Y%m%d%H%M%S") + " +0000"
+            stop_fmt = stop_dt.strftime("%Y%m%d%H%M%S") + " +0000"
 
-        xml.append(f'<programme start="{start_xmltv}" stop="{stop_xmltv}" channel="NHL.Live">')
-        xml.append(f'  <title lang="fr">{title}</title>')
-        xml.append(f'  <desc lang="fr">{desc}</desc>')
-        xml.append('</programme>')
+            status = "[LIVE]" if g['gameState'] in ["LIVE", "CRIT"] else "[PRE]"
+            xml.append(f'<programme start="{start_fmt}" stop="{stop_fmt}" channel="NHL.Live">')
+            xml.append(f'  <title lang="fr">{status} {g["awayTeam"]["abbrev"]} @ {g["homeTeam"]["abbrev"]}</title>')
+            xml.append(f'  <desc lang="fr">Diffusion prioritaire NHL.</desc>')
+            xml.append('</programme>')
 
-        # 2. Logique "Prochain Match" (Filler)
-        # S'il y a un match après celui-ci, on remplit l'espace vide
-        if i + 1 < len(ranked):
-            next_g = ranked[i+1]['game']
-            next_start_raw = next_g['startTimeUTC'].replace('-', '').replace(':', '').replace('T', '').replace('Z', '')
-            if len(next_start_raw) == 12: next_start_raw += "00"
-            next_start_dt = datetime.strptime(next_start_raw, "%Y%m%d%H%M%S")
+            # Remplissage ENTRE les matchs
+            if i + 1 < len(ranked):
+                next_start_dt = datetime.strptime(ranked[i+1]['game']['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S")
+                if next_start_dt > stop_dt:
+                    filler_start = stop_fmt
+                    filler_stop = next_start_dt.strftime("%Y%m%d%H%M%S") + " +0000"
+                    xml.append(f'<programme start="{filler_start}" stop="{filler_stop}" channel="NHL.Live">')
+                    xml.append(f'  <title lang="fr">➡️ PROCHAINEMENT : {ranked[i+1]["game"]["awayTeam"]["abbrev"]} @ {ranked[i+1]["game"]["homeTeam"]["abbrev"]}</title>')
+                    xml.append(f'  <desc lang="fr">Le stream basculera automatiquement.</desc>')
+                    xml.append('</programme>')
 
-            # Si l'espace entre la fin du match actuel et le prochain est > 1 minute
-            if next_start_dt > stop_dt:
-                filler_start = stop_xmltv
-                filler_stop = next_start_dt.strftime("%Y%m%d%H%M%S") + " +0000"
-                
-                xml.append(f'<programme start="{filler_start}" stop="{filler_stop}" channel="NHL.Live">')
-                xml.append(f'  <title lang="fr">➡️ PROCHAINEMENT : {next_g["awayTeam"]["abbrev"]} @ {next_g["homeTeam"]["abbrev"]}</title>')
-                xml.append(f'  <desc lang="fr">Le stream basculera automatiquement au début du match.</desc>')
-                xml.append('</programme>')
-    
     xml.append('</tv>')
     return Response("\n".join(xml), mimetype='text/xml')
     
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
     
