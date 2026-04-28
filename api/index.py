@@ -116,18 +116,54 @@ def generate_m3u():
 def generate_epg():
     ranked = get_ranked_games()
     xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<tv>']
-    xml.append('<channel id="NHL.Live"><display-name>NHL LIVE</display-name></channel>')
+    
+    # Déclaration du canal (doit matcher tvg-id dans le M3U)
+    xml.append('<channel id="NHL.Live">')
+    xml.append('  <display-name>NHL LIVE</display-name>')
+    xml.append('</channel>')
+    
     if ranked:
-        g = ranked[0]['game']
+        game_data = ranked[0]
+        g = game_data['game']
+        
+        # 1. Nettoyage de la date (Format XMLTV : YYYYMMDDHHMMSS)
+        # On retire les tirets, les deux-points, le 'T' et le 'Z'
+        raw_start = g['startTimeUTC'].replace('-', '').replace(':', '').replace('T', '').replace('Z', '')
+        
+        # Sécurité : l'API peut parfois omettre les secondes
+        if len(raw_start) == 12:
+            raw_start += "00"
+            
+        start_xmltv = f"{raw_start} +0000"
+        
+        # 2. Calcul d'une heure de fin (stop) à +4 heures (approximation sécuritaire)
+        try:
+            from datetime import datetime, timedelta
+            start_dt = datetime.strptime(raw_start, "%Y%m%d%H%M%S")
+            stop_dt = start_dt + timedelta(hours=4)
+            stop_xmltv = stop_dt.strftime("%Y%m%d%H%M%S") + " +0000"
+        except:
+            # Repli si la conversion échoue
+            stop_xmltv = f"{raw_start[:8]}235959 +0000"
+
+        # 3. Construction du bloc programme
         prefix = "[P1]" if (g['awayTeam']['abbrev'] in ULTRA_PRIORITY or g['homeTeam']['abbrev'] in ULTRA_PRIORITY) else "[LIVE]"
-        next_info = f"\nÀ SUIVRE : {ranked[1]['game']['awayTeam']['abbrev']} @ {ranked[1]['game']['homeTeam']['abbrev']}" if len(ranked) > 1 else ""
-        start = g['startTimeUTC'].replace('-', '').replace(':', '').replace('Z', ' +0000')
-        xml.append(f'<programme start="{start}" channel="NHL.Live">')
+        
+        next_info = ""
+        if len(ranked) > 1:
+            n = ranked[1]['game']
+            next_info = f"\nSuivant : {n['awayTeam']['abbrev']} @ {n['homeTeam']['abbrev']}"
+
+        xml.append(f'<programme start="{start_xmltv}" stop="{stop_xmltv}" channel="NHL.Live">')
         xml.append(f'  <title lang="fr">{prefix} {g["awayTeam"]["abbrev"]} vs {g["homeTeam"]["abbrev"]}</title>')
-        xml.append(f'  <desc lang="fr">Diffusion prioritaire.{next_info}</desc>')
+        xml.append(f'  <desc lang="fr">Match en direct (Priorité NHL).{next_info}</desc>')
         xml.append('</programme>')
+    
     xml.append('</tv>')
+    
+    # On retourne le XML avec le bon type MIME pour le lecteur
     return Response("\n".join(xml), mimetype='text/xml')
+    
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
