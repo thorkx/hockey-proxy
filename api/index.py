@@ -129,17 +129,36 @@ def redirect_to_nhl(path):
 @app.route('/playlist.m3u')
 def generate_m3u():
     ranked = get_ranked_games()
-    name = "🏒 NHL LIVE"
-    if ranked:
-        g = ranked[0]['game']
-        if g['gameState'] in ["LIVE", "CRIT"]:
-            name = f"🏒 {g['awayTeam']['abbrev']} ({g['awayTeam'].get('score',0)}) @ {g['homeTeam']['abbrev']} ({g['homeTeam'].get('score',0)}) - P{g.get('periodDescriptor',{}).get('number',1)}"
-        else:
-            name = f"🏒 PRE: {g['awayTeam']['abbrev']} @ {g['homeTeam']['abbrev']}"
+    from datetime import datetime, timedelta
+    now = datetime.utcnow()
     
-    content = f"#EXTM3U\n#EXTINF:-1 tvg-id=\"NHL.Live\" tvg-name=\"NHL LIVE\" group-title=\"SPORTS\",{name}\n{BASE_URL}/nhl-live/.ts"
-    return Response(content, mimetype='text/plain')
+    m3u = ["#EXTM3U"]
+    
+    # On détermine quels matchs sont "actifs" (en cours ou pregame de 30 min débuté)
+    active_matches = []
+    for item in ranked:
+        start_dt = datetime.strptime(item['game']['startTimeUTC'].replace('Z', ''), "%Y-%m-%dT%H:%M:%S")
+        if item['game']['gameState'] in ["LIVE", "CRIT"] or now >= (start_dt - timedelta(minutes=30)):
+            active_matches.append(item)
 
+    # On s'assure d'avoir au moins un canal même si rien ne joue
+    display_count = max(1, len(active_matches))
+    
+    for i in range(display_count):
+        channel_num = i + 1
+        if i < len(active_matches):
+            g = active_matches[i]['game']
+            url = active_matches[i]['url']
+            label = f"({g['awayTeam']['abbrev']} @ {g['homeTeam']['abbrev']})"
+        else:
+            url = MAPPING.get("DEFAULT")
+            label = "(En attente)"
+            
+        m3u.append(f'#EXTINF:-1 tvg-id="NHL.Live.{channel_num}" tvg-name="NHL LIVE {channel_num}" group-title="Hockey", NHL LIVE {channel_num} {label}')
+        m3u.append(url)
+    
+    return Response("\n".join(m3u), mimetype='text/plain')
+    
 # LE GUIDE (EPG)
 @app.route('/epg.xml')
 def generate_epg():
