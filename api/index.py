@@ -162,48 +162,53 @@ def get_ranked_games():
         ranked.append(item)
 
     return sorted(ranked, key=lambda x: (-x['total_score'], x['start_dt']))
-
 # =================================================================
 # 3. ROUTES FLASK
 # =================================================================
 
 @app.route('/nhl-live/<int:ch_num>')
 def redirect_channel(ch_num):
-    now = datetime.now(pytz.utc)
-    grid = assign_channels(get_ranked_games())
-    match = None
-    for m in grid.get(ch_num, []):
-        if (m['start_dt'] - timedelta(minutes=45)) <= now <= (m['start_dt'] + timedelta(hours=4)):
-            match = m
-            break
-    
-    url = match['url'] if match else MAPPING["DEFAULT"]
-    res = make_response(redirect(url, code=302))
-    res.headers['User-Agent'] = 'IPTVSmarters/1.0.3'
-    return res
+    try:
+        now = datetime.now(pytz.utc)
+        # On récupère les matchs classés
+        ranked = get_ranked_games()
+        # On les assigne à la grille des 5 canaux
+        grid = assign_channels(ranked)
+        
+        match = None
+        # On cherche si un match est en cours sur ce numéro de canal
+        if ch_num in grid:
+            for m in grid[ch_num]:
+                # Fenêtre : 45 min avant à 4h après
+                start = m['start_dt'] - timedelta(minutes=45)
+                end = m['start_dt'] + timedelta(hours=4)
+                if start <= now <= end:
+                    match = m
+                    break
+        
+        # Si un match est trouvé, on prend son URL, sinon RDS par défaut
+        target_url = match['url'] if match else MAPPING["DEFAULT"]
+        
+        # On crée la réponse de redirection
+        res = make_response(redirect(target_url, code=302))
+        res.headers['User-Agent'] = 'IPTVSmarters/1.0.3'
+        return res
+
+    except Exception as e:
+        # En cas d'erreur interne, on redirige vers RDS pour éviter le 404/500
+        print(f"Erreur redirection canal {ch_num}: {e}")
+        return redirect(MAPPING["DEFAULT"], code=302)
 
 @app.route('/playlist.m3u')
 def generate_m3u():
     m3u = ["#EXTM3U"]
+    # On utilise request.host_url pour avoir l'URL complète avec http/https
+    base_url = request.host_url.rstrip('/')
     for i in range(1, 6):
         m3u.append(f'#EXTINF:-1 tvg-id="NHL.Live.{i}" group-title="LIVE SPORTS", MULTI SPORT {i}')
-        m3u.append(f"http://{request.host}/nhl-live/{i}")
+        m3u.append(f"{base_url}/nhl-live/{i}")
     return Response("\n".join(m3u), mimetype='text/plain')
-
-@app.route('/epg.xml')
-def generate_epg():
-    grid = assign_channels(get_ranked_games())
-    xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<tv>']
-    logos = {"NHL": "🏒", "NBA": "🏀", "MLB": "⚾", "F1": "🏎️", "UCL": "⚽", "MLS": "⚽", "EPL": "⚽", "L1": "⚽", "CPL": "⚽"}
-    for i in range(1, 6):
-        cid = f"NHL.Live.{i}"
-        xml.append(f'<channel id="{cid}"><display-name>MULTI SPORT {i}</display-name></channel>')
-        for item in sorted(grid[i], key=lambda x: x['start_dt']):
-            s, logo = item['start_dt'], logos.get(item['sport'], "📺")
-            xml.append(f'<programme start="{(s-timedelta(minutes=30)).strftime("%Y%m%d%H%M%S")} +0000" stop="{s.strftime("%Y%m%d%H%M%S")} +0000" channel="{cid}"><title lang="fr">{logo} PRE : {item["title"]}</title></programme>')
-            xml.append(f'<programme start="{s.strftime("%Y%m%d%H%M%S")} +0000" stop="{(s+timedelta(hours=3, minutes=15)).strftime("%Y%m%d%H%M%S")} +0000" channel="{cid}"><title lang="fr">{logo} {item["title"]}</title></programme>')
-    xml.append('</tv>')
-    return Response("\n".join(xml), mimetype='application/xml')
+    
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
