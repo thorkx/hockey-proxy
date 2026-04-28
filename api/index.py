@@ -110,39 +110,43 @@ def get_ranked_games():
                         })
         except: continue
 
-    # --- FETCH NBA (Source alternative plus stable) ---
+    # --- FETCH NBA (Version 2026 stable) ---
     try:
-        # Utilisation de l'API data de la NBA qui est souvent plus fiable pour l'EPG
-        nba_res = requests.get("https://data.nba.net/10s/prod/v1/2026/scoreboard.json", timeout=5).json()
-        for g in nba_res.get('games', []):
-            h, a = g['hTeam']['triCode'], g['vTeam']['triCode']
-            score = 1500 if (h in ULTRA_NBA or a in ULTRA_NBA) else (800 if (h in FAV_NBA or a in FAV_NBA) else 5)
+        # Cette URL est le standard actuel pour les scores du jour
+        nba_url = "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json"
+        response = requests.get(nba_url, timeout=5)
+        
+        if response.status_code == 200:
+            nba_data = response.json()
+            games = nba_data.get('scoreboard', {}).get('games', [])
             
-            # Conversion de l'heure NBA (souvent en ms ou format spécifique)
-            # Note: Adapte selon le format exact retourné, ici on simule le format ISO standard
-            dt = datetime.strptime(g['startTimeUTC'], "%Y-%m-%dT%H:%M:%S.%fZ").replace(tzinfo=pytz.utc)
-            print(g['homeTeam']['teamTricode'])
-            all_raw_games.append({
-                'sport': 'NBA',
-                'title': f"{a} @ {h}",
-                'game': g,
-                'start_dt': dt,
-                'score': score,
-                'networks': [], 
-                'id': f"nba_{g['gameId']}"
-            })
-    except:
-        # Fallback sur l'autre API si la première échoue
-        try:
-            nba_data = requests.get("https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json", timeout=5).json()
-            for g in nba_data.get('scoreboard', {}).get('games', []):
-                h, a = g['homeTeam']['teamTricode'], g['awayTeam']['teamTricode']
-                score = 1500 if (h in ULTRA_NBA or a in ULTRA_NBA) else (800 if (h in FAV_NBA or a in FAV_NBA) else 5)
+            for g in games:
+                # La NBA utilise 'teamTricode' (ex: 'LAL', 'TOR', 'BOS')
+                home_code = g['homeTeam']['teamTricode'].upper()
+                away_code = g['awayTeam']['teamTricode'].upper()
+                
+                # Calcul du score basé sur tes listes ULTRA_NBA et FAV_NBA
+                score = 5
+                if home_code in ULTRA_NBA or away_code in ULTRA_NBA:
+                    score = 1500
+                elif home_code in FAV_NBA or away_code in FAV_NBA:
+                    score = 800
+                
+                # Format date NBA: "2026-04-28T23:00:00Z"
                 dt = datetime.strptime(g['startTimeUTC'], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=pytz.utc)
+                
                 all_raw_games.append({
-                    'sport': 'NBA', 'title': f"{a} @ {h}", 'game': g, 'start_dt': dt, 'score': score, 'networks': [], 'id': f"nba_{g['gameId']}"
+                    'sport': 'NBA',
+                    'title': f"{away_code} @ {home_code}",
+                    'game': g,
+                    'start_dt': dt,
+                    'score': score,
+                    'networks': [], # L'API NBA ne liste pas bien les chaînes CA, on utilisera DEFAULT (TSN/RDS)
+                    'id': f"nba_{g['gameId']}"
                 })
-        except: pass
+    except Exception as e:
+        print(f"Erreur NBA: {e}")
+        
 
     # --- RANKING ---
     ranked = []
