@@ -9,14 +9,17 @@ from concurrent.futures import ThreadPoolExecutor
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
-# --- BASE DE DONNÉES COMPLÈTE (UK INCLUS) ---
+# --- BASE DE DONNÉES COMPLÈTE ---
 CH_DATABASE = {
+    # QUÉBEC / CANADA (FR)
     "I1000.49609.schedulesdirect.org": {"name": "RDS", "id": "184813", "country": "CA", "lang": "FR"},
     "I123.15676.schedulesdirect.org": {"name": "RDS", "id": "184813", "country": "CA", "lang": "FR"},
     "I124.15677.schedulesdirect.org": {"name": "RDS 2", "id": "184814", "country": "CA", "lang": "FR"},
     "I428.49882.gracenote.com": {"name": "TVA Sports", "id": "184811", "country": "CA", "lang": "FR"},
     "I154.58314.schedulesdirect.org": {"name": "TVA Sports", "id": "184811", "country": "CA", "lang": "FR"},
     "I155.58315.schedulesdirect.org": {"name": "TVA Sports 2", "id": "184812", "country": "CA", "lang": "FR"},
+    
+    # CANADA (EN)
     "I405.62111.schedulesdirect.org": {"name": "Sportsnet (4K)", "id": "157674", "country": "CA", "lang": "EN"},
     "SNEast": {"name": "SNEast", "id": "71518", "country": "CA", "lang": "EN"},
     "SNWest": {"name": "SNWest", "id": "71521", "country": "CA", "lang": "EN"},
@@ -31,24 +34,14 @@ CH_DATABASE = {
     "TSN4": {"name": "TSN4", "id": "71237", "country": "CA", "lang": "EN"},
     "TSN5": {"name": "TSN5", "id": "71238", "country": "CA", "lang": "EN"},
     "OneSoccer": {"name": "OneSoccer", "id": "19320", "country": "CA", "lang": "EN"},
+
+    # FRANCE / UK / USA
     "CanalPlus.fr": {"name": "Canal+", "id": "49943", "country": "FRA", "lang": "FR"},
     "CanalPlusSport.fr": {"name": "Canal+ Sport", "id": "49951", "country": "FRA", "lang": "FR"},
     "BeINSports1.fr": {"name": "beIN Sports 1", "id": "49895", "country": "FRA", "lang": "FR"},
-    "BeINSports2.fr": {"name": "beIN Sports 2", "id": "49896", "country": "FRA", "lang": "FR"},
-    "BeINSports3.fr": {"name": "beIN Sports 3", "id": "49897", "country": "FRA", "lang": "FR"},
-    "RMCSport1.fr": {"name": "RMC Sport 1", "id": "50145", "country": "FRA", "lang": "FR"},
-    "Eurosport1.fr": {"name": "Eurosport 1", "id": "49987", "country": "FRA", "lang": "FR"},
-    "Eurosport2.fr": {"name": "Eurosport 2", "id": "49988", "country": "FRA", "lang": "FR"},
     "TNT_Sports_1": {"name": "TNT Sports 1", "id": "71151", "country": "UK", "lang": "EN"},
-    "TNT_Sports_2": {"name": "TNT Sports 2", "id": "71152", "country": "UK", "lang": "EN"},
-    "TNT_Sports_3": {"name": "TNT Sports 3", "id": "71153", "country": "UK", "lang": "EN"},
-    "TNT_Sports_4": {"name": "TNT Sports 4", "id": "71154", "country": "UK", "lang": "EN"},
-    "Sky_Sports_Main_Event": {"name": "Sky Sports Main Event", "id": "74310", "country": "UK", "lang": "EN"},
-    "Sky_Sports_Premier_League": {"name": "Sky Sports Premier League", "id": "74311", "country": "UK", "lang": "EN"},
-    "Sky_Sports_Football": {"name": "Sky Sports Football", "id": "74312", "country": "UK", "lang": "EN"},
     "Sky_Sports_F1": {"name": "Sky Sports F1", "id": "74316", "country": "UK", "lang": "EN"},
-    "ESPN": {"name": "ESPN", "id": "18345", "country": "US", "lang": "EN"},
-    "FoxSports1": {"name": "FoxSports1", "id": "18242", "country": "US", "lang": "EN"}
+    "ESPN": {"name": "ESPN", "id": "18345", "country": "US", "lang": "EN"}
 }
 
 RULES = [
@@ -56,10 +49,7 @@ RULES = [
     ({"league": "usa.1", "keywords": ["CF MONTREAL", "MONTREAL"]}, 900),
     ({"league": "mlb", "keywords": ["BLUE JAYS", "TORONTO"]}, 800),
     ({"league": "nba", "keywords": ["RAPTORS"]}, 700),
-    ({"league": "nhl", "keywords": ["MAPLE LEAFS"]}, -500),
-    ({"league": "nhl", "keywords": []}, 500),
-    ({"league": "mlb", "keywords": []}, 300),
-    ({"league": "usa.1", "keywords": []}, 150)
+    ({"league": "nhl", "keywords": []}, 500)
 ]
 
 def fetch_espn(url):
@@ -75,15 +65,14 @@ class handler(BaseHTTPRequestHandler):
         urls = []
         leagues = [("hockey", "nhl"), ("baseball", "mlb"), ("basketball", "nba"), ("soccer", "usa.1")]
         
-        # On réduit à 2 jours (Auj/Demain) pour la vitesse
         for day in range(2):
             d_str = (now_utc + timedelta(days=day)).strftime("%Y%m%d")
             for sport, league in leagues:
                 urls.append((f"https://site.api.espn.com/apis/site/v2/sports/{sport}/{league}/scoreboard?dates={d_str}", league))
 
-        # REQUÊTES EN PARALLÈLE (Gain de temps énorme)
         events_to_stack = []
         seen_matches = set()
+        
         with ThreadPoolExecutor(max_workers=8) as executor:
             future_to_url = {executor.submit(fetch_espn, url): league for url, league in urls}
             for future in future_to_url:
@@ -95,12 +84,18 @@ class handler(BaseHTTPRequestHandler):
                     
                     start_dt = datetime.strptime(ev['date'], "%Y-%m-%dT%H:%MZ")
                     ch_key = ""
-                    kw = [t for t in ev_name.replace(' AT ',' ').replace(' @ ',' ').split(' ') if len(t) >= 3]
+                    
+                    # LOGIQUE : UN SEUL KEYWORD NÉCESSAIRE (>3 lettres)
+                    # ex: "CANADIENS" ou "MONTREAL"
+                    espn_keywords = [k for k in ev_name.replace('@',' ').replace('AT',' ').split() if len(k) > 3]
                     
                     for p in bible:
-                        p_start = datetime.strptime(p['start'].split(' ')[0][:14], "%Y%m%d%H%M%S")
-                        if abs((start_dt - p_start).total_seconds()) < 10800: # 3h window
-                            if any(k in p['title'].upper() for k in kw):
+                        p_title = p['title'].upper()
+                        # Si l'un des mots de l'affiche ESPN est dans le titre EPG
+                        if any(k in p_title for k in espn_keywords):
+                            p_start = datetime.strptime(p['start'].split(' ')[0][:14], "%Y%m%d%H%M%S")
+                            # Fenêtre de 4h pour être safe
+                            if abs((start_dt - p_start).total_seconds()) < 14400:
                                 ch_key = p['ch']
                                 break
                     
@@ -134,17 +129,22 @@ class handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         if "/stream/" in self.path:
-            idx = int(self.path.split('/')[-1])
-            chans = self.get_organized_events()
-            now = datetime.utcnow()
-            sid = "184813"
-            for m in chans.get(idx, []):
-                if m['start'] <= now <= m['stop']:
-                    sid = CH_DATABASE.get(m['ch_key'], {}).get("id", "184813")
-                    break
-            self.send_response(302)
-            self.send_header('Location', f"{STREAM_BASE}/{sid}")
-            self.end_headers()
+            try:
+                idx = int(self.path.split('/')[-1])
+                chans = self.get_organized_events()
+                now = datetime.utcnow()
+                sid = "184813" # Fallback RDS
+                for m in chans.get(idx, []):
+                    if m['start'] <= now <= m['stop']:
+                        sid = CH_DATABASE.get(m['ch_key'], {}).get("id", "184813")
+                        break
+                self.send_response(302)
+                self.send_header('Location', f"{STREAM_BASE}/{sid}")
+                self.end_headers()
+            except:
+                self.send_response(302)
+                self.send_header('Location', f"{STREAM_BASE}/184813")
+                self.end_headers()
         elif self.path.endswith('.m3u'):
             host = self.headers.get('Host')
             self.send_response(200)
