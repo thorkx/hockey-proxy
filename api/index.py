@@ -1,22 +1,23 @@
 from http.server import BaseHTTPRequestHandler
 import requests
-from datetime import datetime
 import json
 import re
 
-JSON_URL = "[https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json](https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json)"
-STREAM_BASE = "[http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV](http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV)"
+# Ton URL GitHub (vérifie bien qu'elle est publique)
+JSON_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
+STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
-TEAMS = ["CANADIENS", "CF MONTRÉAL", "BLUE JAYS", "RAPTORS", "PSG", "MANCHESTER CITY", "F1", "INTER MIAMI"]
+TEAMS = ["CANADIENS", "MONTRÉAL", "BLUE JAYS", "RAPTORS", "CITY", "PSG", "F1", "MIAMI"]
 
-CH_LINKS = {
-    "I123.15676.schedulesdirect.org": "184813", "I124.39080.schedulesdirect.org": "184814",
-    "I125.15678.schedulesdirect.org": "70935", "I154.58314.schedulesdirect.org": "184821",
-    "I155.58315.schedulesdirect.org": "184822", "I111.15670.schedulesdirect.org": "184816",
-    "I112.15671.schedulesdirect.org": "184817", "I113.15672.schedulesdirect.org": "184818",
-    "I114.15673.schedulesdirect.org": "184819", "I115.15674.schedulesdirect.org": "184820",
-    "I428.49882.gracenote.com": "71518", "I1000.49609.schedulesdirect.org": "176800",
-    "I1001.104327.schedulesdirect.org": "176801", "I392.76942.gracenote.com": "157279"
+# Mapping simplifié mais complet pour tester
+CHANNELS = {
+    "I123.15676.schedulesdirect.org": ("RDS FHD", "184813"),
+    "I124.39080.schedulesdirect.org": ("RDS 2 FHD", "184814"),
+    "I154.58314.schedulesdirect.org": ("TVA SPORTS FHD", "184821"),
+    "I111.15670.schedulesdirect.org": ("TSN 1 FHD", "184816"),
+    "I428.49882.gracenote.com": ("Sportsnet East", "71518"),
+    "I1000.49609.schedulesdirect.org": ("Sky Main Event", "176800"),
+    "I1001.104327.schedulesdirect.org": ("Sky Football", "176801")
 }
 
 class handler(BaseHTTPRequestHandler):
@@ -26,44 +27,46 @@ class handler(BaseHTTPRequestHandler):
         self.end_headers()
 
         epg_data = []
-        debug_msg = ""
-        
+        error_log = ""
+
+        # 1. RÉCUPÉRATION DU JSON AVEC NETTOYAGE AGRESSIF
         try:
-            r = requests.get(JSON_URL, timeout=10)
-            raw_text = r.text.strip()
-            # Nettoyage agressif : on extrait tout ce qui est entre le premier [ et le dernier ]
-            match = re.search(r'(\[.*\])', raw_text, re.DOTALL)
+            r = requests.get(JSON_URL, timeout=5)
+            text = r.text
+            # On cherche uniquement ce qui est entre [ et ]
+            match = re.search(r'\[.*\]', text, re.DOTALL)
             if match:
-                epg_data = json.loads(match.group(1))
+                epg_data = json.loads(match.group(0))
             else:
-                debug_msg = "Format JSON invalide (pas de crochets)"
+                error_log = "Format JSON invalide"
         except Exception as e:
-            debug_msg = f"Erreur: {str(e)}"
+            error_log = f"Erreur: {str(e)}"
 
         playlist = "#EXTM3U\n"
         
-        # Affichage du message d'erreur directement dans la playlist si besoin
-        if debug_msg:
-            playlist += f'#EXTINF:-1, !!! {debug_msg} !!!\n[http://0.0.0.0](http://0.0.0.0)\n'
+        # 2. LOG D'ERREUR DANS LA PLAYLIST (si ça arrive)
+        if error_log:
+            playlist += f"#EXTINF:-1, !!! {error_log} !!!\nhttp://0.0.0.0\n"
 
         added = set()
         priority_lines = ""
         normal_lines = ""
 
-        # 1. Détection des matchs prioritaires
+        # 3. FILTRAGE DES MATCHS (On compare avec le JSON)
         for prog in epg_data:
-            title = prog.get('title', '').upper()
             ch_id = prog.get('ch')
-            if ch_id in CH_LINKS and any(team in title for team in TEAMS):
-                if ch_id not in added:
-                    priority_lines += f'#EXTINF:-1, ⭐ {title}\n{STREAM_BASE}/{CH_LINKS[ch_id]}\n'
+            title = prog.get('title', '').upper()
+            
+            if ch_id in CHANNELS:
+                name, s_id = CHANNELS[ch_id]
+                if any(t in title for t in TEAMS) and ch_id not in added:
+                    priority_lines += f"#EXTINF:-1, ⭐ LIVE: {title} ({name})\n{STREAM_BASE}/{s_id}\n"
                     added.add(ch_id)
 
-        # 2. Reste des chaînes
-        for ch_id, stream_id in CH_LINKS.items():
+        # 4. AJOUT DU RESTE (Fallback pour toujours avoir des postes)
+        for ch_id, (name, s_id) in CHANNELS.items():
             if ch_id not in added:
-                name = next((p['name'] for p in epg_data if p['ch'] == ch_id), ch_id)
-                normal_lines += f'#EXTINF:-1, {name}\n{STREAM_BASE}/{stream_id}\n'
+                normal_lines += f"#EXTINF:-1, {name}\n{STREAM_BASE}/{s_id}\n"
 
         output = playlist + priority_lines + normal_lines
         self.wfile.write(output.encode('utf-8'))
