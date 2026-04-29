@@ -29,29 +29,28 @@ CH_NAMES = {
     "I900.00001.schedulesdirect.org": "Apple TV MLS"
 }
 
-# MAPPING DES FLUX (Extraits de ta playlist)
+# MAPPING DES FLUX
 STREAM_MAP = {
-    "I123.15676.schedulesdirect.org": "71151", # RDS HD
-    "I124.15677.schedulesdirect.org": "71152", # RDS 2 HD
-    "I154.58314.schedulesdirect.org": "71165", # TVA SPORTS HD
-    "I155.58315.schedulesdirect.org": "71166", # TVA SPORTS 2 HD
-    "I410.18802.schedulesdirect.org": "71236", # SN Ontario
-    "I409.18801.schedulesdirect.org": "71234", # SN East
-    "I408.18800.schedulesdirect.org": "71237", # SN West
-    "I411.18803.schedulesdirect.org": "71235", # SN Pacific
-    "I412.18804.schedulesdirect.org": "71233", # SN One
-    "I413.18805.schedulesdirect.org": "71232", # SN 360
-    "I111.15670.schedulesdirect.org": "71243", # TSN 1
-    "I112.15671.schedulesdirect.org": "71244", # TSN 2
-    "I113.15672.schedulesdirect.org": "71245", # TSN 3
-    "I114.15673.schedulesdirect.org": "71246", # TSN 4
-    "I115.15674.schedulesdirect.org": "71247", # TSN 5
-    "I446.52300.schedulesdirect.org": "71239", # SN World
+    "I123.15676.schedulesdirect.org": "71151",
+    "I124.15677.schedulesdirect.org": "71152",
+    "I154.58314.schedulesdirect.org": "71165",
+    "I155.58315.schedulesdirect.org": "71166",
+    "I410.18802.schedulesdirect.org": "71236",
+    "I409.18801.schedulesdirect.org": "71234",
+    "I408.18800.schedulesdirect.org": "71237",
+    "I411.18803.schedulesdirect.org": "71235",
+    "I412.18804.schedulesdirect.org": "71233",
+    "I413.18805.schedulesdirect.org": "71232",
+    "I111.15670.schedulesdirect.org": "71243",
+    "I112.15671.schedulesdirect.org": "71244",
+    "I113.15672.schedulesdirect.org": "71245",
+    "I114.15673.schedulesdirect.org": "71246",
+    "I115.15674.schedulesdirect.org": "71247",
+    "I446.52300.schedulesdirect.org": "71239",
     "I212.12345.schedulesdirect.org": "71261",
     "I900.00001.schedulesdirect.org": "71270"
 }
 
-# SYSTÈME DE RANKING STRICT
 def get_match_score(name, sport, league):
     n = name.upper()
     if any(k in n for k in ["CANADIENS", "MONTREAL CANADIENS", "HABS"]): return 1000
@@ -120,11 +119,8 @@ class handler(BaseHTTPRequestHandler):
                         if matching_progs:
                             primary = next((p for p in matching_progs if p['ch'] in STREAM_MAP), matching_progs[0])
                             sid = STREAM_MAP.get(primary['ch'], "71151")
-                            u_channels = []
-                            for p in matching_progs:
-                                nm = CH_NAMES.get(p['ch'], p['name'])
-                                if nm not in u_channels: u_channels.append(nm)
-                            title = f"{icon} {event.get('name')} [{' | '.join(u_channels[:4])}]"
+                            u_channels = [CH_NAMES.get(p['ch'], p['name']) for p in matching_progs]
+                            title = f"{icon} {event.get('name')} [{' | '.join(list(dict.fromkeys(u_channels))[:4])}]"
                             start, stop = primary['start'][:14], primary['stop'][:14]
                         else:
                             sid, start, stop = "71151", espn_time.strftime("%Y%m%d%H%M%S"), (espn_time + timedelta(hours=3)).strftime("%Y%m%d%H%M%S")
@@ -156,8 +152,8 @@ class handler(BaseHTTPRequestHandler):
         self.end_headers()
         m3u = "#EXTM3U\n"
         for i in range(1, 6):
-            # Paramètre unique ?ch= pour éviter que l'app ne fusionne les chaînes
+            # Le paramètre t= assure que Chili TV voit 5 URLs uniques
             m3u += f'#EXTINF:-1 tvg-id="CHOIX.{i}" tvg-name="CHOIX {i}" group-title="REGIE SPORT",CHOIX {i}\n'
-            m3u += f'{STREAM_BASE}/71151?ch=CHOIX.{i}\n'
+            m3u += f'{STREAM_BASE}/71151?ch=CHOIX.{i}&t={i}\n'
         self.wfile.write(m3u.encode('utf-8'))
         
