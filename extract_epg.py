@@ -33,19 +33,24 @@ URL_FRANCE = "https://xmltvfr.fr/xmltv/xmltv_fr.xml.gz"
 # ==========================================
 
 def is_within_3_days(date_str):
-    """Vérifie si la date du programme est entre (Maintenant - 6h) et (Maintenant + 3 jours)"""
+    """Vérifie si la date du programme est pertinente (Fenêtre assouplie)"""
     if not date_str:
         return False
     try:
-        # Format XMLTV typique : 20240520143000 +0000
+        # Format XMLTV : 20240520143000 +0000
         clean_date = date_str.split(' ')[0]
         prog_date = datetime.strptime(clean_date, "%Y%m%d%H%M%S")
         
-        now = datetime.now()
-        limit = now + timedelta(days=3)
+        # Utilisation de UTC pour la compatibilité avec les sources XMLTV
+        now = datetime.utcnow()
         
-        # On garde une marge de 6h dans le passé pour les matchs en cours
-        return (now - timedelta(hours=6)) <= prog_date <= limit
+        # LIMITE PASSÉE : 24h avant pour ne rien louper des matchs de nuit ou en cours
+        start_limit = now - timedelta(hours=24)
+        
+        # LIMITE FUTURE : 3 jours complets
+        end_limit = now + timedelta(days=3)
+        
+        return start_limit <= prog_date <= end_limit
     except:
         return False
 
@@ -55,8 +60,7 @@ def is_within_3_days(date_str):
 
 def run():
     filtered_data = []
-    print(f"--- DÉMARRAGE DE L'EXTRACTION ({datetime.now().strftime('%H:%M:%S')}) ---")
-    print(f"Fenêtre temporelle : 3 jours.")
+    print(f"--- DÉMARRAGE DE L'EXTRACTION ({datetime.utcnow().strftime('%H:%M:%S')} UTC) ---")
 
     # --- PARTIE 1 : QUÉBEC / USA (AcidJesuz) ---
     try:
@@ -66,7 +70,7 @@ def run():
         xml_data = BytesIO(r.content)
         
         target_ids = {}
-        # Passage 1 : Identification des chaînes sportives
+        # Passage 1 : Identification
         context = ET.iterparse(xml_data, events=('end',))
         for _, elem in context:
             if elem.tag == 'channel':
@@ -76,7 +80,7 @@ def run():
                     target_ids[ch_id] = names[0]
                 elem.clear()
         
-        # Passage 2 : Extraction des programmes
+        # Passage 2 : Programmes
         xml_data.seek(0)
         context = ET.iterparse(xml_data, events=('end',))
         for _, elem in context:
@@ -93,7 +97,7 @@ def run():
                         "desc": elem.findtext('desc', ''),
                     })
                 elem.clear()
-        print(f"AcidJesuz : OK ({len(filtered_data)} programmes).")
+        print(f"AcidJesuz : Terminé ({len(filtered_data)} programmes).")
     except Exception as e:
         print(f"Erreur source Québec: {e}")
 
@@ -106,7 +110,6 @@ def run():
         with gzip.GzipFile(fileobj=BytesIO(r_fr.content)) as decompressor:
             fr_target_ids = {}
             count_fr = 0
-            # Traitement en un seul passage pour économiser la RAM
             context = ET.iterparse(decompressor, events=('end',))
             for _, elem in context:
                 if elem.tag == 'channel':
@@ -130,19 +133,18 @@ def run():
                         })
                         count_fr += 1
                     elem.clear()
-            print(f"France : OK ({count_fr} programmes ajoutés).")
+            print(f"France : Terminé ({count_fr} programmes ajoutés).")
     except Exception as e:
         print(f"Erreur source France: {e}")
 
-    # --- SAUVEGARDE ---
-    # Tri par temps pour une recherche plus rapide dans index.py
+    # --- SAUVEGARDE FINALE ---
     filtered_data.sort(key=lambda x: x['start'] if x['start'] else "")
 
     with open("filtered_epg.json", "w", encoding="utf-8") as f:
         json.dump(filtered_data, f, indent=2, ensure_ascii=False)
             
-    print(f"--- TERMINÉ : {len(filtered_data)} programmes au total dans filtered_epg.json ---")
+    print(f"--- TOTAL : {len(filtered_data)} programmes dans filtered_epg.json ---")
 
 if __name__ == "__main__":
     run()
-            
+    
