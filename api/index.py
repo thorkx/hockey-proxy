@@ -29,7 +29,7 @@ CH_NAMES = {
     "I900.00001.schedulesdirect.org": "Apple TV MLS"
 }
 
-# MAPPING DES FLUX (Extraits de ta playlist playlist_tDcJnv4jMM_plus.txt)
+# MAPPING DES FLUX (Extraits de ta playlist)
 STREAM_MAP = {
     "I123.15676.schedulesdirect.org": "71151", # RDS HD
     "I124.15677.schedulesdirect.org": "71152", # RDS 2 HD
@@ -46,9 +46,9 @@ STREAM_MAP = {
     "I113.15672.schedulesdirect.org": "71245", # TSN 3
     "I114.15673.schedulesdirect.org": "71246", # TSN 4
     "I115.15674.schedulesdirect.org": "71247", # TSN 5
-    "I446.52300.schedulesdirect.org": "71239", # SN World (Foot)
-    "I212.12345.schedulesdirect.org": "71261", # DAZN (SID estimé)
-    "I900.00001.schedulesdirect.org": "71270"  # Apple MLS (SID estimé)
+    "I446.52300.schedulesdirect.org": "71239", # SN World
+    "I212.12345.schedulesdirect.org": "71261",
+    "I900.00001.schedulesdirect.org": "71270"
 }
 
 # SYSTÈME DE RANKING STRICT
@@ -77,7 +77,6 @@ def get_match_score(name, sport, league):
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        # Détection du type de requête (M3U ou XML)
         if self.path.endswith('.m3u'):
             self.generate_m3u()
         else:
@@ -157,9 +156,8 @@ class handler(BaseHTTPRequestHandler):
         self.end_headers()
         m3u = "#EXTM3U\n"
         for i in range(1, 6):
+            # Paramètre unique ?ch= pour éviter que l'app ne fusionne les chaînes
             m3u += f'#EXTINF:-1 tvg-id="CHOIX.{i}" tvg-name="CHOIX {i}" group-title="REGIE SPORT",CHOIX {i}\n'
-            # Note: Le SID ici sera injecté dynamiquement par Chili TV via l'EPG, 
-            # mais on met un lien vers l'API pour que l'app sache quoi appeler.
-            m3u += f'{STREAM_BASE}/71151\n' # RDS par défaut, l'app changera le flux selon l'EPG
+            m3u += f'{STREAM_BASE}/71151?ch=CHOIX.{i}\n'
         self.wfile.write(m3u.encode('utf-8'))
         
