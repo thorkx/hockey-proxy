@@ -27,18 +27,21 @@ def run():
         for event, elem in context:
             if event == 'end' and elem.tag == 'channel':
                 ch_id = elem.get('id')
-                # On récupère tous les noms possibles pour cette chaîne
                 names = [dn.text for dn in elem.findall('display-name') if dn.text]
                 
-                # Si un des noms contient un de nos mots-clés
+                # On filtre pour trouver si un de nos mots-clés est présent
                 if any(any(kw.upper() in name.upper() for kw in KEYWORDS) for name in names):
-                    # On stocke le nom le plus court (souvent le plus propre comme "RDS")
-                    target_ids[ch_id] = min(names, key=len)
+                    # LOGIQUE DE SÉLECTION DU NOM :
+                    # On évite les noms qui ne sont que des chiffres. 
+                    # On prend le nom le plus long parmi ceux qui contiennent des lettres.
+                    clean_names = [n for n in names if any(c.isalpha() for c in n)]
+                    if clean_names:
+                        target_ids[ch_id] = max(clean_names, key=len)
+                    else:
+                        target_ids[ch_id] = names[0] # Fallback sur le premier si vraiment rien d'autre
                 
-                elem.clear() # Nettoyage mémoire
-
-        print(f"Chaînes trouvées : {len(target_ids)}")
-
+                elem.clear()
+                
         # PASSAGE 2 : Extraire les programmes pour ces chaînes
         xml_data.seek(0) # On rembobine le fichier en mémoire
         print("Filtrage des programmes...")
