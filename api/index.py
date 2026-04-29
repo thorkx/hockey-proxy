@@ -148,10 +148,10 @@ class handler(BaseHTTPRequestHandler):
 
     def generate_m3u(self):
         self.send_response(200)
-        self.send_header('Content-type', 'audio/x-mpegurl')
+        # CHANGEMENT ICI : text/plain pour forcer l'affichage dans le navigateur
+        self.send_header('Content-type', 'text/plain; charset=utf-8')
         self.end_headers()
         m3u = "#EXTM3U\n"
-        # On crée des IDs et des noms radicalement différents pour forcer l'affichage
         for i in range(1, 6):
             m3u += f'#EXTINF:-1 tvg-id="CHOIX_{i}" tvg-name="CHOIX_{i}" group-title="REGIE SPORT",CHOIX {i}\n'
             m3u += f'{STREAM_BASE}/71151?canal=ch{i}\n'
