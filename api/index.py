@@ -33,9 +33,6 @@ PREMIUM_IDS = [
     "TSN1", "TSN2", "TSN3", "TSN4", "TSN5"
 ]
 
-# ==========================================
-#              BASE DE DONNÉES
-# ==========================================
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
@@ -49,11 +46,8 @@ CH_DATABASE = {
 SPORT_ICONS = {"nhl": "🏒", "nba": "🏀", "mlb": "⚾", "soccer": "⚽", "default": "🏆"}
 
 def escape_xml(text):
-    """Transforme TOUT caractère spécial en entité numérique pour une compatibilité 100%"""
     if not text: return ""
-    # On convertit d'abord les & < > " ' standard
     text = html.escape(text)
-    # Puis on transforme tout le reste (emojis, accents) en codes numériques
     return text.encode('ascii', 'xmlcharrefreplace').decode()
 
 def clean_name(t):
@@ -69,7 +63,6 @@ def find_match_in_bible(ev_name, bible_data, ev_date_str):
     matches = []
     for prog in bible_data:
         try:
-            # Nettoyage de la date de la bible (enlève le +0000 si présent pour le parse)
             raw_start = prog['start'].split(' ')[0]
             p_start = datetime.strptime(raw_start, "%Y%m%d%H%M%S")
             if abs((ev_time - p_start).total_seconds()) < 14400:
@@ -160,44 +153,34 @@ class handler(BaseHTTPRequestHandler):
     def generate_xml_output(self):
         chans = self.get_organized_events()
         now = datetime.utcnow()
-        self.send_response(200)
-        self.send_header('Content-type', 'application/xml; charset=utf-8')
-        self.end_headers()
         
         xml_out = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>'
-        
         for i in range(1, 6):
             xml_out += f'\n<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
             cursor = now - timedelta(hours=6)
-            
             for p in sorted(chans[i], key=lambda x: x['start']):
-                # Formatage de date XMLTV strict : YYYYMMDDHHMMSS +0000
                 st = p['start'].strftime("%Y%m%d%H%M%S") + " +0000"
                 en = p['stop'].strftime("%Y%m%d%H%M%S") + " +0000"
-                
                 info = CH_DATABASE.get(p['ch_key'], {})
                 ch_name = info.get('name', p['ch_key'] if p['ch_key'] else "A CONFIRMER")
-                
                 lg_type = "soccer" if any(x in p['league'] for x in ["eng", "uefa", "usa"]) else p['league']
                 icon_emoji = SPORT_ICONS.get(lg_type, SPORT_ICONS['default'])
-                
-                # Titre et description ultra-sécurisés
-                title_str = f"{icon_emoji} {p['title']} ({info.get('lang', '??')}) | {ch_name}"
-                safe_title = escape_xml(title_str)
-                safe_desc = escape_xml(f"Diffuseur: {ch_name}")
-                
-                # Ajout des programmes
+                safe_title = escape_xml(f"{icon_emoji} {p['title']} ({info.get('lang', '??')}) | {ch_name}")
                 if p['start'] > cursor:
                     c_str = cursor.strftime("%Y%m%d%H%M%S") + " +0000"
                     xml_out += f'\n<programme start="{c_str}" stop="{st}" channel="CHOIX.{i}"><title>Suivant: {safe_title}</title></programme>'
-                
                 xml_out += f'\n<programme start="{st}" stop="{en}" channel="CHOIX.{i}">'
-                xml_out += f'\n  <title>{safe_title}</title>'
-                xml_out += f'\n  <desc>{safe_desc}</desc>'
-                xml_out += '\n</programme>'
-                
+                xml_out += f'\n  <title>{safe_title}</title>\n  <desc>Diffuseur: {escape_xml(ch_name)}</desc>\n</programme>'
                 cursor = p['stop']
-        
         xml_out += '\n</tv>'
-        self.wfile.write(xml_out.encode('utf-8'))
         
+        # --- ENVOI AVEC HEADERS DE NETTOYAGE ---
+        encoded_xml = xml_out.encode('utf-8')
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/xml; charset=utf-8')
+        self.send_header('Content-Length', str(len(encoded_xml)))
+        self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
+        self.send_header('Pragma', 'no-cache')
+        self.send_header('Expires', '0')
+        self.end_headers()
+        self.wfile.write(encoded_xml)
