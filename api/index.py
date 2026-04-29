@@ -17,6 +17,7 @@ RULES = [
     ({"league": "usa.1", "keywords": []}, 150)
 ]
 
+# DURÉES ET ICÔNES PAR SPORT
 SPORT_DATA = {
     "hockey": {"min": 165, "icon": "🏒"},
     "baseball": {"min": 180, "icon": "⚾"},
@@ -28,17 +29,17 @@ SPORT_DATA = {
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
-# VERIFIE BIEN QUE CES IDS SONT EXACTEMENT LES MÊMES DANS TON JSON
+# --- TA DICTIONNAIRE DE MAINTENANCE ---
+# Ajoute ici les nouveaux IDs que tu vois apparaître dans ton guide
 CH_NAMES = {
+    "I428.49882.gracenote.com": "TVA Sports",
+    "I405.62111.schedulesdirect.org": "Sportsnet",
     "I123.15676.schedulesdirect.org": "RDS", 
     "I124.15677.schedulesdirect.org": "RDS 2",
     "I154.58314.schedulesdirect.org": "TVA Sports", 
     "I155.58315.schedulesdirect.org": "TVA Sports 2",
     "I111.15670.schedulesdirect.org": "TSN 1",
-    "I112.15671.schedulesdirect.org": "TSN 2",
-    "I113.15672.schedulesdirect.org": "TSN 3",
-    "I114.15673.schedulesdirect.org": "TSN 4",
-    "I115.15674.schedulesdirect.org": "TSN 5"
+    "I112.15671.schedulesdirect.org": "TSN 2"
 }
 
 def calculate_score(ev_name, league_key):
@@ -92,7 +93,6 @@ class handler(BaseHTTPRequestHandler):
                         
                         espn_keywords = [t for t in ev_name.replace(' AT ',' ').replace(' @ ',' ').split(' ') if len(t) >= 3]
                         
-                        # --- DETERMINATION DE LA CHAINE ---
                         display_ch = "À CONFIRMER"
                         for p in bible:
                             p_title = p['title'].upper()
@@ -102,9 +102,9 @@ class handler(BaseHTTPRequestHandler):
                                 if any(k in p_title for k in espn_keywords) or \
                                    (("MONTREAL" in ev_name or "CANADIENS" in ev_name) and ("HOCKEY" in p_title or "CANADIENS" in p_title)):
                                     
-                                    # Correction ici : on cherche l'ID dans CH_NAMES
-                                    raw_ch_id = p.get('ch', '')
-                                    display_ch = CH_NAMES.get(raw_ch_id, raw_ch_id if raw_ch_id else "SOURCE")
+                                    raw_id = p.get('ch', '')
+                                    # LOGIQUE FIABLE : Dictionnaire ou ID brut
+                                    display_ch = CH_NAMES.get(raw_id, raw_id)
                                     break
                         
                         events_to_stack.append({
