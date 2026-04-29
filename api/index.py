@@ -8,36 +8,31 @@ from datetime import datetime, timedelta
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
-# Mapping exact pour rediriger vers le bon flux selon ce qui est trouvé dans l'EPG
-STREAM_MAP = {
-    "I123.15676.schedulesdirect.org": "71151", "I124.15677.schedulesdirect.org": "71152",
-    "I154.58314.schedulesdirect.org": "71165", "I155.58315.schedulesdirect.org": "71166",
-    "I111.15670.schedulesdirect.org": "71243", "I112.15671.schedulesdirect.org": "71244",
-    "I113.15672.schedulesdirect.org": "71245", "I114.15673.schedulesdirect.org": "71246",
-    "I115.15674.schedulesdirect.org": "71247", "I410.18802.schedulesdirect.org": "71236",
-    "I409.18801.schedulesdirect.org": "71234", "I446.52300.schedulesdirect.org": "71239"
+# DURÉES PAR SPORT (en minutes)
+SPORT_DURATIONS = {
+    "hockey": 165,    # 2h45
+    "baseball": 180,  # 3h
+    "basketball": 150,# 2h30
+    "soccer": 120,    # 2h
+    "f1": 135         # 2h15
 }
 
 CH_NAMES = {
     "I123.15676.schedulesdirect.org": "RDS", "I124.15677.schedulesdirect.org": "RDS 2",
     "I154.58314.schedulesdirect.org": "TVA Sports", "I155.58315.schedulesdirect.org": "TVA Sports 2",
-    "I111.15670.schedulesdirect.org": "TSN 1"
+    "I111.15670.schedulesdirect.org": "TSN 1", "I112.15671.schedulesdirect.org": "TSN 2"
 }
 
 def get_match_score(name):
     n = name.upper()
-    if "CANADIENS" in n or "MONTREAL" in n or "HABS" in n: return 1000
-    if "BLUE JAYS" in n or "TORONTO" in n: return 800
+    if "CANADIENS" in n or "MONTREAL" in n: return 1000
+    if "BLUE JAYS" in n: return 800
     if "F1" in n or "GRAND PRIX" in n: return 750
     return 100
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         if "/stream/" in self.path:
-            # Récupération de l'index du canal (1-5)
-            try: channel_idx = int(self.path.split("/")[-1])
-            except: channel_idx = 1
-            # Redirection simplifiée vers RDS par défaut pour le moment
             self.send_response(302)
             self.send_header('Location', f"{STREAM_BASE}/71151")
             self.end_headers()
@@ -52,11 +47,18 @@ class handler(BaseHTTPRequestHandler):
         except: bible = []
 
         now_utc = datetime.utcnow()
-        events_found = []
+        events_to_stack = []
         seen_matches = set()
         
-        # 1. ANALYSE DU FEED ESPN
-        leagues = [("hockey","nhl"), ("baseball","mlb"), ("soccer","usa.1")]
+        # Liste des sports à surveiller
+        leagues = [
+            ("hockey", "nhl"), 
+            ("baseball", "mlb"), 
+            ("basketball", "nba"), 
+            ("soccer", "usa.1"),
+            ("soccer", "eng.1")
+        ]
+        
         for day in range(3):
             d_str = (now_utc + timedelta(days=day)).strftime("%Y%m%d")
             for sport, league in leagues:
@@ -66,52 +68,49 @@ class handler(BaseHTTPRequestHandler):
                         ev_name = ev.get('name', '').upper()
                         if ev_name in seen_matches: continue
                         
-                        ev_time = datetime.strptime(ev.get('date'), "%Y-%m-%dT%H:%MZ")
+                        # --- DÉTERMINATION DE LA DURÉE ---
+                        duration_mins = SPORT_DURATIONS.get(sport, 150) # 2h30 par défaut
+                        espn_start_dt = datetime.strptime(ev.get('date'), "%Y-%m-%dT%H:%MZ")
+                        espn_stop_dt = espn_start_dt + timedelta(minutes=duration_mins)
                         
-                        # Recherche ultra-permissive dans la bible
-                        # On prend les mots de plus de 4 lettres du match ESPN
+                        # CONCORDANCE BIBLE
                         keywords = [t for t in ev_name.replace(' AT ',' ').replace(' @ ',' ').split(' ') if len(t) > 4]
+                        confirmed_on_ch = None
                         
-                        best_match = None
                         for p in bible:
-                            # Parsing robuste du temps (ignore tout après le premier espace)
-                            p_start_str = p['start'].split(' ')[0][:14]
-                            p_start = datetime.strptime(p_start_str, "%Y%m%d%H%M%S")
-                            
-                            # Si le match est le même jour (fenêtre de 6h pour couvrir les avant-matchs)
-                            if abs((ev_time - p_start).total_seconds()) < 21600:
-                                # Si un des mots clés ESPN est dans le titre de l'EPG
+                            p_start_dt = datetime.strptime(p['start'].split(' ')[0][:14], "%Y%m%d%H%M%S")
+                            if abs((espn_start_dt - p_start_dt).total_seconds()) < 14400: # Fenêtre 4h
                                 if any(k in p['title'].upper() or k in p['desc'].upper() for k in keywords):
-                                    best_match = p
+                                    confirmed_on_ch = CH_NAMES.get(p['ch'], "TV")
                                     break
                         
-                        if best_match:
-                            events_found.append({
+                        if confirmed_on_ch:
+                            events_to_stack.append({
                                 "title": ev_name,
                                 "score": get_match_score(ev_name),
-                                "start": best_match['start'].split(' ')[0][:14],
-                                "stop": best_match['stop'].split(' ')[0][:14],
-                                "ch_name": CH_NAMES.get(best_match['ch'], "TV")
+                                "start": espn_start_dt.strftime("%Y%m%d%H%M%S"),
+                                "stop": espn_stop_dt.strftime("%Y%m%d%H%M%S"),
+                                "ch_name": confirmed_on_ch
                             })
                             seen_matches.add(ev_name)
                 except: continue
 
-        # 2. ALGORITHME D'EMPILAGE (Priorité 1 -> Canal 1)
-        events_found.sort(key=lambda x: x['score'], reverse=True)
+        # --- ALGORITHME D'EMPILAGE ---
+        events_to_stack.sort(key=lambda x: x['score'], reverse=True)
         channels = {i: [] for i in range(1, 6)}
         
-        for ev in events_found:
+        for ev in events_to_stack:
             for i in range(1, 6):
-                has_collision = False
+                collision = False
                 for existing in channels[i]:
                     if not (ev['stop'] <= existing['start'] or ev['start'] >= existing['stop']):
-                        has_collision = True
+                        collision = True
                         break
-                if not has_collision:
+                if not collision:
                     channels[i].append(ev)
                     break
 
-        # 3. GÉNÉRATION DU XML
+        # --- GÉNÉRATION XML ---
         self.send_response(200)
         self.send_header('Content-type', 'application/xml; charset=utf-8')
         self.end_headers()
@@ -119,23 +118,20 @@ class handler(BaseHTTPRequestHandler):
         xml = '<?xml version="1.0" encoding="UTF-8"?><tv>'
         for i in range(1, 6):
             xml += f'<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
-            # Tri chronologique pour l'affichage
             progs = sorted(channels[i], key=lambda x: x['start'])
             cursor = (now_utc - timedelta(hours=6)).strftime("%Y%m%d%H%M%S")
             
             for p in progs:
-                # Remplissage des trous
                 if p['start'] > cursor:
-                    xml += f'<programme start="{cursor} +0000" stop="{p["start"]} +0000" channel="CHOIX.{i}"><title>Prochainement: {p["title"].replace("&", "&amp;")}</title></programme>'
+                    xml += f'<programme start="{cursor} +0000" stop="{p["start"]} +0000" channel="CHOIX.{i}"><title>Prochainement: {p["title"]}</title></programme>'
                 
                 xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}">'
-                xml += f'<title>{p["title"].replace("&", "&amp;")} [{p["ch_name"]}]</title></programme>'
+                xml += f'<title>{p["title"]} [{p["ch_name"]}]</title></programme>'
                 cursor = p['stop']
             
-            # Fin de grille
             end = (now_utc + timedelta(days=2)).strftime("%Y%m%d%H%M%S")
             if cursor < end:
-                xml += f'<programme start="{cursor} +0000" stop="{end} +0000" channel="CHOIX.{i}"><title>🌙 Fin des émissions</title></programme>'
+                xml += f'<programme start="{cursor} +0000" stop="{end} +0000" channel="CHOIX.{i}"><title>🌙 Fin des événements</title></programme>'
 
         self.wfile.write((xml + '</tv>').encode('utf-8'))
 
@@ -144,8 +140,7 @@ class handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type', 'text/plain; charset=utf-8')
         self.end_headers()
-        m3u = "#EXTM3U\n"
+        m3u = f"#EXTM3U\n"
         for i in range(1, 6):
             m3u += f'#EXTINF:-1 tvg-id="CHOIX.{i}" group-title="REGIE",CHOIX {i}\nhttp://{host}/api/stream/{i}\n'
         self.wfile.write(m3u.encode('utf-8'))
-        
