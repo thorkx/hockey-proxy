@@ -89,21 +89,20 @@ class handler(BaseHTTPRequestHandler):
                         
                         espn_keywords = [t for t in ev_name.replace(' AT ',' ').replace(' @ ',' ').split(' ') if len(t) >= 3]
                         
-                        # RECHERCHE DE CONCORDANCE
-                        confirmed_ch = None
+                        # --- DÉTERMINATION DE LA CHAÎNE ---
+                        display_ch = "À CONFIRMER"
                         for p in bible:
                             p_title = p['title'].upper()
                             p_start = datetime.strptime(p['start'].split(' ')[0][:14], "%Y%m%d%H%M%S")
                             
+                            # Concordance temporelle (4h)
                             if abs((start_dt - p_start).total_seconds()) < 14400:
+                                # Concordance textuelle
                                 if any(k in p_title for k in espn_keywords) or \
                                    (("MONTREAL" in ev_name or "CANADIENS" in ev_name) and ("HOCKEY" in p_title or "CANADIENS" in p_title)):
-                                    confirmed_ch = CH_NAMES.get(p['ch'], "TV")
+                                    # On récupère le nom propre du dictionnaire
+                                    display_ch = CH_NAMES.get(p['ch'], "TV SOURCE")
                                     break
-                        
-                        # AJOUT À L'HORAIRE (Même sans concordance pour J+1 à J+3)
-                        # Si on a une concordance, on l'affiche. Sinon on met "À CONFIRMER"
-                        display_ch = confirmed_ch if confirmed_ch else "À CONFIRMER"
                         
                         events_to_stack.append({
                             "title": ev_name,
@@ -116,6 +115,7 @@ class handler(BaseHTTPRequestHandler):
                         seen_matches.add(ev_name)
                 except: continue
 
+        # --- ALGORITHME D'EMPILAGE ---
         events_to_stack.sort(key=lambda x: x['score'], reverse=True)
         channels = {i: [] for i in range(1, 6)}
         for ev in events_to_stack:
@@ -127,6 +127,7 @@ class handler(BaseHTTPRequestHandler):
                 if not collision:
                     channels[i].append(ev); break
 
+        # --- GÉNÉRATION XML ---
         self.send_response(200)
         self.send_header('Content-type', 'application/xml; charset=utf-8')
         self.end_headers()
@@ -138,12 +139,14 @@ class handler(BaseHTTPRequestHandler):
             cursor = (now_utc - timedelta(hours=6)).strftime("%Y%m%d%H%M%S")
             for p in progs:
                 icon = p.get('icon', '📺')
-                # Formatage du titre pour inclure la source
-                full_title = f"{p['title']} [{p['ch_name']}]"
+                source = p.get('ch_name', 'À CONFIRMER')
+                full_title = f"{p['title']} [{source}]"
                 
+                # Bloc PRE (Prochainement)
                 if p['start'] > cursor:
                     xml += f'<programme start="{cursor} +0000" stop="{p["start"]} +0000" channel="CHOIX.{i}"><title>➡️{icon} Prochainement: {full_title}</title></programme>'
                 
+                # Bloc MATCH
                 xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}"><title>{icon} {full_title}</title></programme>'
                 cursor = p['stop']
             
