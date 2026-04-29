@@ -74,7 +74,8 @@ class handler(BaseHTTPRequestHandler):
         
         leagues_to_track = [("hockey", "nhl"), ("baseball", "mlb"), ("basketball", "nba"), ("soccer", "usa.1")]
         
-        for day in range(3):
+        # --- ÉLARGISSEMENT À 4 JOURS ---
+        for day in range(4):
             d_str = (now_utc + timedelta(days=day)).strftime("%Y%m%d")
             for sport, league in leagues_to_track:
                 try:
@@ -139,7 +140,8 @@ class handler(BaseHTTPRequestHandler):
                 xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}"><title>{icon} {p["title"]} [{p["ch_name"]}]</title></programme>'
                 cursor = p['stop']
             
-            limit = (now_utc + timedelta(days=2)).strftime("%Y%m%d%H%M%S")
+            # Ajustement de la limite de fin à 4 jours également
+            limit = (now_utc + timedelta(days=4)).strftime("%Y%m%d%H%M%S")
             if cursor < limit:
                 xml += f'<programme start="{cursor} +0000" stop="{limit} +0000" channel="CHOIX.{i}"><title>🌙 Fin des émissions</title></programme>'
         self.wfile.write((xml + '</tv>').encode('utf-8'))
