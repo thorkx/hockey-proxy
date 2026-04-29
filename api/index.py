@@ -12,9 +12,11 @@ LEAGUES = [
     ("baseball", "mlb"),
     ("soccer", "eng.1"),
     ("soccer", "fra.1"),
-    ("basketball", "nba") # Ajouté pour remplir
+    ("basketball", "nba")
 ]
 
+# SIDs par défaut
+DEFAULT_SID = "184813" # RDS
 STREAM_MAP = {
     "I408.18800.schedulesdirect.org": "71520",
     "I123.15676.schedulesdirect.org": "184813",
@@ -41,41 +43,46 @@ class handler(BaseHTTPRequestHandler):
                     res = requests.get(url, timeout=5).json()
                     for event in res.get('events', []):
                         name = event.get('name', '').upper()
-                        # ESPN Date: 2026-04-29T23:00Z -> Objet Datetime
                         espn_time = datetime.strptime(event.get('date'), "%Y-%m-%dT%H:%MZ")
                         
+                        # --- TENTATIVE DE MATCHING AVEC LA BIBLE ---
                         found_ch = None
                         teams = name.replace(' AT ', ' ').replace(' @ ', ' ').split(' ')
-                        # On ne garde que les noms significatifs (ex: "Canadiens", pas "at")
                         clean_teams = [t for t in teams if len(t) > 3]
 
                         for prog in bible:
-                            # Parse le start du bot (format: 20260429030000)
                             try:
-                                prog_start_str = prog.get('start', '').replace(" ", "")[:14]
-                                prog_time = datetime.strptime(prog_start_str, "%Y%m%d%H%M%S")
+                                p_start = datetime.strptime(prog.get('start', '')[:14], "%Y%m%d%H%M%S")
+                                if abs((espn_time - p_start).total_seconds()) / 3600 <= 2.0:
+                                    if any(t in prog.get('title', '').upper() or t in prog.get('desc', '').upper() for t in clean_teams):
+                                        found_ch = prog
+                                        break
                             except: continue
 
-                            # FLEXIBILITÉ : On accepte si le match commence à +/- 2 heures de l'heure ESPN
-                            diff = abs((espn_time - prog_time).total_seconds()) / 3600
-                            
-                            if diff <= 2.0:
-                                prog_text = (prog.get('title', '') + " " + prog.get('desc', '')).upper()
-                                if any(t in prog_text for t in clean_teams):
-                                    found_ch = prog
-                                    break
-                        
+                        # --- CONSTRUCTION DE L'ITEM (HYBRIDE) ---
                         if found_ch:
-                            final_selection.append({
-                                "title": event.get('name'),
-                                "sid": STREAM_MAP.get(found_ch.get('ch'), "184813"),
-                                "start": found_ch.get('start').replace(" ", "")[:14],
-                                "stop": found_ch.get('stop').replace(" ", "")[:14],
-                                "priority": 100 if any(fav in name for fav in ["CANADIENS", "JAYS", "CITY"]) else 10
-                            })
+                            # On a l'info complète
+                            sid = STREAM_MAP.get(found_ch.get('ch'), DEFAULT_SID)
+                            start = found_ch.get('start')[:14]
+                            stop = found_ch.get('stop')[:14]
+                            title = f"LIVE: {event.get('name')}"
+                        else:
+                            # Mode PRÉVISIONNEL (Pas dans la bible encore)
+                            sid = DEFAULT_SID
+                            start = espn_time.strftime("%Y%m%d%H%M%S")
+                            stop = (espn_time + timedelta(hours=3)).strftime("%Y%m%d%H%M%S")
+                            title = f"PRÉVU: {event.get('name')} (Canal à confirmer)"
+
+                        final_selection.append({
+                            "title": title,
+                            "sid": sid,
+                            "start": start,
+                            "stop": stop,
+                            "priority": 100 if any(f in name for f in ["CANADIENS", "JAYS", "CITY", "MTL"]) else 10
+                        })
                 except: continue
 
-        # Tri et Distribution (Inchangé)
+        # Tri et Distribution sur 5 canaux
         final_selection.sort(key=lambda x: x['priority'], reverse=True)
         channels = {i: [] for i in range(1, 6)}
         for m in final_selection:
