@@ -2,24 +2,6 @@
   {
     "ch": "I446.52300.schedulesdirect.org",
     "name": "La Liga TV",
-    "start": "20260428160000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "La Liga Sky Sports Mexico",
-    "desc": "",
-    "cat": "Entertainment"
-  },
-  {
-    "ch": "I446.52300.schedulesdirect.org",
-    "name": "La Liga TV",
-    "start": "20260428200000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "La Liga Sky Sports Mexico",
-    "desc": "",
-    "cat": "Entertainment"
-  },
-  {
-    "ch": "I446.52300.schedulesdirect.org",
-    "name": "La Liga TV",
     "start": "20260429000000 +0000",
     "stop": "20260429040000 +0000",
     "title": "La Liga Sky Sports Mexico",
@@ -63,40 +45,22 @@
     "cat": "Entertainment"
   },
   {
-    "ch": "I1000.49609.schedulesdirect.org",
-    "name": "Sky Sports Main Event",
-    "start": "20260428180000 +0000",
-    "stop": "20260428213000 +0000",
-    "title": "Live: EFL [NEW]",
-    "desc": "Out to keep the race for automatic promotion alive, Southampton welcome fellow top-two hopefuls Ipswich, who know victory here would all but secure an immediate top-flight return.",
-    "cat": "Soccer"
+    "ch": "I446.52300.schedulesdirect.org",
+    "name": "La Liga TV",
+    "start": "20260429200000 +0000",
+    "stop": "20260430000000 +0000",
+    "title": "La Liga Sky Sports Mexico",
+    "desc": "",
+    "cat": "Entertainment"
   },
   {
-    "ch": "I1000.49609.schedulesdirect.org",
-    "name": "Sky Sports Main Event",
-    "start": "20260428213000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Back Pages Tonight [NEW]",
-    "desc": "A look at the big stories dominating the news headlines, with discussion and analysis of sport's major topics.",
-    "cat": "News"
-  },
-  {
-    "ch": "I1000.49609.schedulesdirect.org",
-    "name": "Sky Sports Main Event",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "Sky Sports News [NEW]",
-    "desc": "Round-up of the sports news with live analysis and comment plus extended interviews with the headline makers.",
-    "cat": "Sports talk"
-  },
-  {
-    "ch": "I1000.49609.schedulesdirect.org",
-    "name": "Sky Sports Main Event",
-    "start": "20260428230000 +0000",
-    "stop": "20260429033000 +0000",
-    "title": "Live: NBA Basketball [NEW]",
-    "desc": "A match-up from the NBA playoffs.",
-    "cat": "Basketball"
+    "ch": "I446.52300.schedulesdirect.org",
+    "name": "La Liga TV",
+    "start": "20260430000000 +0000",
+    "stop": "20260430040000 +0000",
+    "title": "La Liga Sky Sports Mexico",
+    "desc": "",
+    "cat": "Entertainment"
   },
   {
     "ch": "I1000.49609.schedulesdirect.org",
@@ -180,76 +144,49 @@
     "cat": "Soccer"
   },
   {
-    "ch": "I1001.104327.schedulesdirect.org",
-    "name": "Sky Sports Football",
-    "start": "20260428180000 +0000",
-    "stop": "20260428213000 +0000",
-    "title": "Live: EFL [NEW]",
-    "desc": "Out to keep the race for automatic promotion alive, Southampton welcome fellow top-two hopefuls Ipswich, who know victory here would all but secure an immediate top-flight return.",
-    "cat": "Soccer"
+    "ch": "I1000.49609.schedulesdirect.org",
+    "name": "Sky Sports Main Event",
+    "start": "20260429203000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "Live Tennis: ATP & WTA Madrid Open 2026 [NEW]",
+    "desc": "Enjoy live action from the ATP and WTA Tours.",
+    "cat": "Tennis"
   },
   {
-    "ch": "I1001.104327.schedulesdirect.org",
-    "name": "Sky Sports Football",
-    "start": "20260428213000 +0000",
-    "stop": "20260428214500 +0000",
-    "title": "SPFL Round-Up",
-    "desc": "A round-up of the goals from a weekend of Scottish Premiership action during the 2025-26 season.",
-    "cat": "Soccer"
+    "ch": "I1000.49609.schedulesdirect.org",
+    "name": "Sky Sports Main Event",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Sky Sports News [NEW]",
+    "desc": "Round-up of the sports news with live analysis and comment plus extended interviews with the headline makers.",
+    "cat": "Sports talk"
   },
   {
-    "ch": "I1001.104327.schedulesdirect.org",
-    "name": "Sky Sports Football",
-    "start": "20260428214500 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Scottish Premiership Football",
-    "desc": "Hearts' post-split Scottish Premiership campaign kicks off with an away Edinburgh derby trip to Hibs' Easter Road. Hearts are chasing their first top-flight title since 1960.",
-    "cat": "Soccer"
+    "ch": "I1000.49609.schedulesdirect.org",
+    "name": "Sky Sports Main Event",
+    "start": "20260429230000 +0000",
+    "stop": "20260430000000 +0000",
+    "title": "Sky Sports News [NEW]",
+    "desc": "Round-up of the sports news with live analysis and comment plus extended interviews with the headline makers.",
+    "cat": "Sports talk"
   },
   {
-    "ch": "I1001.104327.schedulesdirect.org",
-    "name": "Sky Sports Football",
-    "start": "20260428220000 +0000",
-    "stop": "20260428221500 +0000",
-    "title": "EFL",
-    "desc": "Action from the Sky Bet Championship.",
-    "cat": "Classic sport event"
+    "ch": "I1000.49609.schedulesdirect.org",
+    "name": "Sky Sports Main Event",
+    "start": "20260430000000 +0000",
+    "stop": "20260430010000 +0000",
+    "title": "Sky Sports News [NEW]",
+    "desc": "Round-up of the sports news with live analysis and comment plus extended interviews with the headline makers.",
+    "cat": "Sports talk"
   },
   {
-    "ch": "I1001.104327.schedulesdirect.org",
-    "name": "Sky Sports Football",
-    "start": "20260428221500 +0000",
-    "stop": "20260428223000 +0000",
-    "title": "EFL",
-    "desc": "Action from the Sky Bet Championship.",
-    "cat": "Classic sport event"
-  },
-  {
-    "ch": "I1001.104327.schedulesdirect.org",
-    "name": "Sky Sports Football",
-    "start": "20260428223000 +0000",
-    "stop": "20260428224500 +0000",
-    "title": "EFL Greatest",
-    "desc": "Middlesbrough host Wolves at the Riverside in 2018 in a game that saw the visitors reduced to nine men.",
-    "cat": "Soccer"
-  },
-  {
-    "ch": "I1001.104327.schedulesdirect.org",
-    "name": "Sky Sports Football",
-    "start": "20260428224500 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "EFL Greatest",
-    "desc": "Cardiff City host Wolves at the Cardiff City Stadium in 2018 in a match that had a dramatic ending.",
-    "cat": "Soccer"
-  },
-  {
-    "ch": "I1001.104327.schedulesdirect.org",
-    "name": "Sky Sports Football",
-    "start": "20260428230000 +0000",
-    "stop": "20260429014500 +0000",
-    "title": "Championship Retro",
-    "desc": "Relive a classic encounter from the play-offs over the years - here, Charlton Athletic and Sunderland meet in the 1997-98 Championship play-off final in a goal-filled encounter.",
-    "cat": "Soccer"
+    "ch": "I1000.49609.schedulesdirect.org",
+    "name": "Sky Sports Main Event",
+    "start": "20260430010000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "Sky Sports News [NEW]",
+    "desc": "Round-up of the sports news with live analysis and comment plus extended interviews with the headline makers.",
+    "cat": "Sports talk"
   },
   {
     "ch": "I1001.104327.schedulesdirect.org",
@@ -594,84 +531,93 @@
     "cat": "Soccer"
   },
   {
-    "ch": "I1074.104322.schedulesdirect.org",
-    "name": "Sky Sports Arena",
-    "start": "20260428180000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Live Tennis: ATP & WTA Madrid Open 2026 [NEW]",
-    "desc": "Enjoy live action from the ATP and WTA Tours.",
-    "cat": "Tennis"
-  },
-  {
-    "ch": "I1074.104322.schedulesdirect.org",
-    "name": "Sky Sports Arena",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "Sky Sports News [NEW]",
-    "desc": "Round-up of the sports news with live analysis and comment plus extended interviews with the headline makers.",
-    "cat": "Sports talk"
-  },
-  {
-    "ch": "I1074.104322.schedulesdirect.org",
-    "name": "Sky Sports Arena",
-    "start": "20260428230000 +0000",
-    "stop": "20260428231500 +0000",
-    "title": "EFL Greatest",
-    "desc": "A chance to relive some classic action from the EFL. Here, Hull City take on Reading at the KC Stadium in December 2015 in a thrilling clash that saw a late winner.",
+    "ch": "I1001.104327.schedulesdirect.org",
+    "name": "Sky Sports Football",
+    "start": "20260429200000 +0000",
+    "stop": "20260429201500 +0000",
+    "title": "SPFL Round-Up",
+    "desc": "A round-up of the goals from a weekend of Scottish Premiership action during the 2025-26 season.",
     "cat": "Soccer"
   },
   {
-    "ch": "I1074.104322.schedulesdirect.org",
-    "name": "Sky Sports Arena",
-    "start": "20260428231500 +0000",
-    "stop": "20260428233000 +0000",
-    "title": "EFL Greatest",
-    "desc": "A chance to relive some classic action from the English Football League. Here, QPR host Middlesbrough in a five-goal thriller at Loftus Road in the 2015-16 season.",
+    "ch": "I1001.104327.schedulesdirect.org",
+    "name": "Sky Sports Football",
+    "start": "20260429201500 +0000",
+    "stop": "20260429203000 +0000",
+    "title": "Scottish Premiership Football",
+    "desc": "Hearts' post-split Scottish Premiership campaign kicks off with an away Edinburgh derby trip to Hibs' Easter Road. Hearts are chasing their first top-flight title since 1960.",
     "cat": "Soccer"
   },
   {
-    "ch": "I1074.104322.schedulesdirect.org",
-    "name": "Sky Sports Arena",
-    "start": "20260428233000 +0000",
-    "stop": "20260428234500 +0000",
-    "title": "EFL Greatest",
-    "desc": "Relive some classic action from the English Football League. Here, Birmingham City take on Middlesbrough at St Andrew's in a four-goal thriller in the 2015-16 season.",
+    "ch": "I1001.104327.schedulesdirect.org",
+    "name": "Sky Sports Football",
+    "start": "20260429203000 +0000",
+    "stop": "20260429213000 +0000",
+    "title": "Bundesliga Highlights",
+    "desc": "Matchday highlights from the latest round of fixtures from the 2025-2026 Bundesliga season.",
+    "cat": "Classic sport event"
+  },
+  {
+    "ch": "I1001.104327.schedulesdirect.org",
+    "name": "Sky Sports Football",
+    "start": "20260429213000 +0000",
+    "stop": "20260429214500 +0000",
+    "title": "EFL",
+    "desc": "Action from the Sky Bet Championship.",
+    "cat": "Classic sport event"
+  },
+  {
+    "ch": "I1001.104327.schedulesdirect.org",
+    "name": "Sky Sports Football",
+    "start": "20260429214500 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "EFL",
+    "desc": "Action from the Sky Bet Championship.",
+    "cat": "Classic sport event"
+  },
+  {
+    "ch": "I1001.104327.schedulesdirect.org",
+    "name": "Sky Sports Football",
+    "start": "20260429220000 +0000",
+    "stop": "20260429221500 +0000",
+    "title": "EFL",
+    "desc": "Action from the Sky Bet Championship.",
+    "cat": "Classic sport event"
+  },
+  {
+    "ch": "I1001.104327.schedulesdirect.org",
+    "name": "Sky Sports Football",
+    "start": "20260429221500 +0000",
+    "stop": "20260429223000 +0000",
+    "title": "EFL",
+    "desc": "Action from the Sky Bet Championship.",
+    "cat": "Classic sport event"
+  },
+  {
+    "ch": "I1001.104327.schedulesdirect.org",
+    "name": "Sky Sports Football",
+    "start": "20260429223000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "WSL",
+    "desc": "In the Barclays WSL, Arsenal face Leicester City.",
+    "cat": "Classic sport event"
+  },
+  {
+    "ch": "I1001.104327.schedulesdirect.org",
+    "name": "Sky Sports Football",
+    "start": "20260429230000 +0000",
+    "stop": "20260430014500 +0000",
+    "title": "Retro League One",
+    "desc": "Relive a classic encounter from the play-offs over the years - here, Gillingham and Manchester City meet in the Second Divison play-off final in the 1998-99 season.",
     "cat": "Soccer"
   },
   {
-    "ch": "I1074.104322.schedulesdirect.org",
-    "name": "Sky Sports Arena",
-    "start": "20260428234500 +0000",
-    "stop": "20260429000000 +0000",
+    "ch": "I1001.104327.schedulesdirect.org",
+    "name": "Sky Sports Football",
+    "start": "20260430014500 +0000",
+    "stop": "20260430020000 +0000",
     "title": "EFL Greatest",
-    "desc": "A look back at some classic matches from the English Football League. Here, Middlesbrough take on Brighton and Hove Albion in a tense Championship promotion decider in May 2016.",
-    "cat": "Soccer"
-  },
-  {
-    "ch": "I1074.104322.schedulesdirect.org",
-    "name": "Sky Sports Arena",
-    "start": "20260429000000 +0000",
-    "stop": "20260429001500 +0000",
-    "title": "EFL Greatest",
-    "desc": "A look back at some classic matches from the English Football League. Here, Aston Villa play Nottingham Forest in a thrilling draw in September 2016 in the Sky Bet Championship.",
-    "cat": "Soccer"
-  },
-  {
-    "ch": "I1074.104322.schedulesdirect.org",
-    "name": "Sky Sports Arena",
-    "start": "20260429001500 +0000",
-    "stop": "20260429003000 +0000",
-    "title": "EFL Greatest",
-    "desc": "Relive some classic matches in English football. Here, Cardiff City face Bristol City in a Severnside derby in the Sky Bet Championship, in what was Neil Warnock's first game at Cardiff.",
-    "cat": "Soccer"
-  },
-  {
-    "ch": "I1074.104322.schedulesdirect.org",
-    "name": "Sky Sports Arena",
-    "start": "20260429003000 +0000",
-    "stop": "20260429004500 +0000",
-    "title": "EFL Greatest",
-    "desc": "Relive some classic matches in English football. Here, Burton Albion face Birmingham City in 2016 in the Sky Bet Championship, in what was the sides' first competitive meeting.",
+    "desc": "Relive a classic match from the English Football League. Here, remember the thrilling 1998-99 Second Division play-off final between Gillingham and Manchester City at Wembley.",
     "cat": "Soccer"
   },
   {
@@ -900,76 +846,139 @@
     "cat": "Multi-sport event"
   },
   {
-    "ch": "I1079.51204.schedulesdirect.org",
-    "name": "Sky Sports Cricket",
-    "start": "20260428184500 +0000",
-    "stop": "20260428190000 +0000",
-    "title": "ICC T20 World Cup",
-    "desc": "Over the years, the ICC Men's T20 World Cup has thrown up a host of classic encounters. Here, revisit England's 2014 contest with Sri Lanka.",
-    "cat": "Cricket"
+    "ch": "I1074.104322.schedulesdirect.org",
+    "name": "Sky Sports Arena",
+    "start": "20260429210000 +0000",
+    "stop": "20260429213000 +0000",
+    "title": "Sky Sports News [NEW]",
+    "desc": "Round-up of the sports news with live analysis and comment plus extended interviews with the headline makers.",
+    "cat": "Sports talk"
   },
   {
-    "ch": "I1079.51204.schedulesdirect.org",
-    "name": "Sky Sports Cricket",
-    "start": "20260428190000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "IPL",
-    "desc": "Mumbai Indians meet Chennai Super Kings in the IPL.",
-    "cat": "Cricket"
+    "ch": "I1074.104322.schedulesdirect.org",
+    "name": "Sky Sports Arena",
+    "start": "20260429213000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "Back Pages Tonight [NEW]",
+    "desc": "A look at the big stories dominating the news headlines, with discussion and analysis of sport's major topics.",
+    "cat": "News"
   },
   {
-    "ch": "I1079.51204.schedulesdirect.org",
-    "name": "Sky Sports Cricket",
-    "start": "20260428200000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "IPL",
-    "desc": "Punjab Kings face Rajasthan Royals in the IPL.",
-    "cat": "Cricket"
+    "ch": "I1074.104322.schedulesdirect.org",
+    "name": "Sky Sports Arena",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Sky Sports News [NEW]",
+    "desc": "Round-up of the sports news with live analysis and comment plus extended interviews with the headline makers.",
+    "cat": "Sports talk"
   },
   {
-    "ch": "I1079.51204.schedulesdirect.org",
-    "name": "Sky Sports Cricket",
-    "start": "20260428210000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "IPL",
-    "desc": "The Delhi Capitals face the Royal Challengers Bengaluru in the Indian Premier League. Coming up against his former side here, DC's KL Rahul enters this clash in fine nick, having hit 152 against Punjab.",
-    "cat": "Cricket"
+    "ch": "I1074.104322.schedulesdirect.org",
+    "name": "Sky Sports Arena",
+    "start": "20260429230000 +0000",
+    "stop": "20260429231500 +0000",
+    "title": "EFL Greatest",
+    "desc": "A chance to relive a classic match from the EFL Cup. Here, Bristol City host Premier League Man United at Ashton Gate in the 2017/18 competition's quarter-finals.",
+    "cat": "Soccer"
   },
   {
-    "ch": "I1079.51204.schedulesdirect.org",
-    "name": "Sky Sports Cricket",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "IPL",
-    "desc": "Punjab Kings face Rajasthan Royals in the IPL.",
-    "cat": "Cricket"
+    "ch": "I1074.104322.schedulesdirect.org",
+    "name": "Sky Sports Arena",
+    "start": "20260429231500 +0000",
+    "stop": "20260429233000 +0000",
+    "title": "EFL Greatest",
+    "desc": "A chance to relive a classic match from the EFL. Here, Leeds United host Bristol City at Elland Road in the Sky Bet Championship in a match that saw a dramatic comeback.",
+    "cat": "Soccer"
   },
   {
-    "ch": "I1079.51204.schedulesdirect.org",
-    "name": "Sky Sports Cricket",
-    "start": "20260428230000 +0000",
-    "stop": "20260428231500 +0000",
-    "title": "ICC T20 World Cup",
-    "desc": "Over the years, the ICC Men's T20 World Cup has thrown up a host of classic encounters. Here, revisit England's victorious 2010 final against old rivals Australia.",
-    "cat": "Cricket"
+    "ch": "I1074.104322.schedulesdirect.org",
+    "name": "Sky Sports Arena",
+    "start": "20260429233000 +0000",
+    "stop": "20260429234500 +0000",
+    "title": "EFL Greatest",
+    "desc": "A chance to relive a classic match from the EFL Cup. Here, Arsenal and Man City go head-to-head in the final of the 2017-18 competition at Wembley.",
+    "cat": "Soccer"
   },
   {
-    "ch": "I1079.51204.schedulesdirect.org",
-    "name": "Sky Sports Cricket",
-    "start": "20260428231500 +0000",
-    "stop": "20260428233000 +0000",
-    "title": "ICC T20 World Cup",
-    "desc": "Over the years, the ICC Men's T20 World Cup has thrown up a host of classic encounters. Here, revisit the 2014 final between India and Sri Lanka.",
-    "cat": "Cricket"
+    "ch": "I1074.104322.schedulesdirect.org",
+    "name": "Sky Sports Arena",
+    "start": "20260429234500 +0000",
+    "stop": "20260430000000 +0000",
+    "title": "EFL Greatest",
+    "desc": "A chance to relive a classic match from the EFL. Here, Aston Villa host Wolves at Villa Park in a memorable Midlands derby in the 2017/18 campaign.",
+    "cat": "Soccer"
   },
   {
-    "ch": "I1079.51204.schedulesdirect.org",
-    "name": "Sky Sports Cricket",
-    "start": "20260428233000 +0000",
-    "stop": "20260429034500 +0000",
-    "title": "IPL",
-    "desc": "Coverage of a Twenty20 cricket match from the Indian Premier League.",
-    "cat": "Cricket"
+    "ch": "I1074.104322.schedulesdirect.org",
+    "name": "Sky Sports Arena",
+    "start": "20260430000000 +0000",
+    "stop": "20260430001500 +0000",
+    "title": "EFL Greatest",
+    "desc": "A chance to relive a classic match from the EFL. Here, promotion-chasing Fulham host QPR at Craven Cottage in a west London derby that saw a memorable comeback.",
+    "cat": "Soccer"
+  },
+  {
+    "ch": "I1074.104322.schedulesdirect.org",
+    "name": "Sky Sports Arena",
+    "start": "20260430001500 +0000",
+    "stop": "20260430003000 +0000",
+    "title": "EFL Greatest",
+    "desc": "Middlesbrough host Wolves at the Riverside in 2018 in a game that saw the visitors reduced to nine men.",
+    "cat": "Soccer"
+  },
+  {
+    "ch": "I1074.104322.schedulesdirect.org",
+    "name": "Sky Sports Arena",
+    "start": "20260430003000 +0000",
+    "stop": "20260430004500 +0000",
+    "title": "EFL Greatest",
+    "desc": "Cardiff City host Wolves at the Cardiff City Stadium in 2018 in a match that had a dramatic ending.",
+    "cat": "Soccer"
+  },
+  {
+    "ch": "I1074.104322.schedulesdirect.org",
+    "name": "Sky Sports Arena",
+    "start": "20260430004500 +0000",
+    "stop": "20260430010000 +0000",
+    "title": "EFL Greatest",
+    "desc": "A chance to relive a classic match from the EFL. Here, Derby County take on Cardiff City at Pride Park in the 2017/18 campaign in a match with implications in the play-off race.",
+    "cat": "Soccer"
+  },
+  {
+    "ch": "I1074.104322.schedulesdirect.org",
+    "name": "Sky Sports Arena",
+    "start": "20260430010000 +0000",
+    "stop": "20260430011500 +0000",
+    "title": "EFL Greatest",
+    "desc": "A chance to relive a classic match from the EFL. Here, Derby County take on Marcelo Bielsa's Leeds United at Pride Park in a Championship match that saw five goals.",
+    "cat": "Soccer"
+  },
+  {
+    "ch": "I1074.104322.schedulesdirect.org",
+    "name": "Sky Sports Arena",
+    "start": "20260430011500 +0000",
+    "stop": "20260430013000 +0000",
+    "title": "EFL Greatest",
+    "desc": "A chance to relive a classic match from the EFL. Here, West Brom take on Leeds United at The Hawthorns in a high-scoring Championship match that saw one side dominate.",
+    "cat": "Soccer"
+  },
+  {
+    "ch": "I1074.104322.schedulesdirect.org",
+    "name": "Sky Sports Arena",
+    "start": "20260430013000 +0000",
+    "stop": "20260430014500 +0000",
+    "title": "EFL Greatest",
+    "desc": "A chance to relive a classic match from the EFL. Here, Aston Villa host Birmingham City at Villa Park in a high-scoring Second City derby.",
+    "cat": "Soccer"
+  },
+  {
+    "ch": "I1074.104322.schedulesdirect.org",
+    "name": "Sky Sports Arena",
+    "start": "20260430014500 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "EFL Greatest",
+    "desc": "A chance to relive a classic match from the EFL. Here, Aston Villa host Nottingham Forest at Villa Park in an enthralling, end-to-end encounter that saw 10 goals.",
+    "cat": "Soccer"
   },
   {
     "ch": "I1079.51204.schedulesdirect.org",
@@ -1143,67 +1152,58 @@
     "cat": "Cricket"
   },
   {
-    "ch": "I1081.87578.schedulesdirect.org",
-    "name": "SKY Sports F1",
-    "start": "20260428180000 +0000",
-    "stop": "20260428190000 +0000",
-    "title": "Formula 1",
-    "desc": "It's lights out at Shanghai International Circuit for the 2026 Chinese Grand Prix. Oscar Piastri converted from pole here last season, beating Lando Norris and George Russell to P1.",
-    "cat": "Motorsports"
+    "ch": "I1079.51204.schedulesdirect.org",
+    "name": "Sky Sports Cricket",
+    "start": "20260429200000 +0000",
+    "stop": "20260429210000 +0000",
+    "title": "IPL",
+    "desc": "Mumbai Indians face Sunrisers Hyderabad in the IPL.",
+    "cat": "Cricket"
   },
   {
-    "ch": "I1081.87578.schedulesdirect.org",
-    "name": "SKY Sports F1",
-    "start": "20260428190000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "Formula 1",
-    "desc": "It's lights out at Suzuka. Back-to-back poleman Kimi Antonelli leads a third consecutive Mercedes one-two as Oscar Piastri starts P3. Lando Norris separates the Ferraris in fifth.",
-    "cat": "Classic sport event"
+    "ch": "I1079.51204.schedulesdirect.org",
+    "name": "Sky Sports Cricket",
+    "start": "20260429210000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "IPL",
+    "desc": "Punjab Kings face Rajasthan Royals in the IPL.",
+    "cat": "Cricket"
   },
   {
-    "ch": "I1081.87578.schedulesdirect.org",
-    "name": "SKY Sports F1",
-    "start": "20260428200000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "British Kart Championships",
-    "desc": "Opening-round highlights from the 2026 British Kart Championship, taking place at Warden Law circuit in Sunderland.",
-    "cat": "Motorsports"
+    "ch": "I1079.51204.schedulesdirect.org",
+    "name": "Sky Sports Cricket",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "IPL",
+    "desc": "Mumbai Indians face Sunrisers Hyderabad in the IPL.",
+    "cat": "Cricket"
   },
   {
-    "ch": "I1081.87578.schedulesdirect.org",
-    "name": "SKY Sports F1",
-    "start": "20260428210000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Formula 1",
-    "desc": "Kimi Antonelli starts in P1 with Oscar Piastri and Lando Norris behind. 18-year-old Antonelli is the youngest polesitter across any Formula 1 format in the history of the sport.",
-    "cat": "Classic sport event"
+    "ch": "I1079.51204.schedulesdirect.org",
+    "name": "Sky Sports Cricket",
+    "start": "20260429230000 +0000",
+    "stop": "20260429231500 +0000",
+    "title": "ICC T20 World Cup",
+    "desc": "Over the years, the ICC Men's T20 World Cup has thrown up a host of classic encounters. Here, revisit England's victorious 2010 final against old rivals Australia.",
+    "cat": "Cricket"
   },
   {
-    "ch": "I1081.87578.schedulesdirect.org",
-    "name": "SKY Sports F1",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "Formula 1",
-    "desc": "Polesitter Max Verstappen is joined by Lando Norris and Kimi Antonelli heading into turn one, while Lewis Hamilton tries to fight through the field from P12.",
-    "cat": "Classic sport event"
+    "ch": "I1079.51204.schedulesdirect.org",
+    "name": "Sky Sports Cricket",
+    "start": "20260429231500 +0000",
+    "stop": "20260429233000 +0000",
+    "title": "ICC T20 World Cup",
+    "desc": "Over the years, the ICC Men's T20 World Cup has thrown up a host of classic encounters. Here, revisit the 2014 final between India and Sri Lanka.",
+    "cat": "Cricket"
   },
   {
-    "ch": "I1081.87578.schedulesdirect.org",
-    "name": "SKY Sports F1",
-    "start": "20260428230000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "Formula 1",
-    "desc": "It's lights out at Suzuka. Back-to-back poleman Kimi Antonelli leads a third consecutive Mercedes one-two as Oscar Piastri starts P3. Lando Norris separates the Ferraris in fifth.",
-    "cat": "Classic sport event"
-  },
-  {
-    "ch": "I1081.87578.schedulesdirect.org",
-    "name": "SKY Sports F1",
-    "start": "20260429000000 +0000",
-    "stop": "20260429002500 +0000",
-    "title": "Formula 1",
-    "desc": "Featuring all of the action and highlight from Formula 1 racing.",
-    "cat": "Classic sport event"
+    "ch": "I1079.51204.schedulesdirect.org",
+    "name": "Sky Sports Cricket",
+    "start": "20260429233000 +0000",
+    "stop": "20260430034500 +0000",
+    "title": "IPL",
+    "desc": "Coverage of a Twenty20 cricket match from the Indian Premier League.",
+    "cat": "Cricket"
   },
   {
     "ch": "I1081.87578.schedulesdirect.org",
@@ -1395,40 +1395,49 @@
     "cat": "Auto racing"
   },
   {
-    "ch": "I1093.100265.schedulesdirect.org",
-    "name": "SKY Sports Mix",
-    "start": "20260428170000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "Premier League Darts",
-    "desc": "As the 2026 BetMGM Premier League enters the home stretch, night 12 comes from Liverpool as Luke Littler and Luke Humphries collide, while Stephen Bunting faces Jonny Clayton.",
-    "cat": "Darts"
+    "ch": "I1081.87578.schedulesdirect.org",
+    "name": "SKY Sports F1",
+    "start": "20260429211500 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "F1 Classic Races",
+    "desc": "A chance to relive some of the most significant and spectacular moments from the 1983 Formula 1 season. Here's a look at the United States Grand Prix West from Long Beach, California.",
+    "cat": "Auto racing"
   },
   {
-    "ch": "I1093.100265.schedulesdirect.org",
-    "name": "SKY Sports Mix",
-    "start": "20260428210000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "IPL",
-    "desc": "Delhi Capitals play Mumbai Indians in the IPL. Both teams began the campaign with victory, as Delhi overcame Lucknow, while the visitors got past the Knight Riders.",
-    "cat": "Cricket"
+    "ch": "I1081.87578.schedulesdirect.org",
+    "name": "SKY Sports F1",
+    "start": "20260429220000 +0000",
+    "stop": "20260430000000 +0000",
+    "title": "F1 Classic Races",
+    "desc": "A chance to relive the 2007 United States Grand Prix from the Indianapolis Motor Speedway. Lewis Hamilton was looking for his second successive race victory.",
+    "cat": "Auto racing"
   },
   {
-    "ch": "I1093.100265.schedulesdirect.org",
-    "name": "SKY Sports Mix",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "South African Women's Open Golf",
-    "desc": "Tournament highlights from South Africa Women's Open - a Ladies European Tour event at Royal Cape Golf Club. French golfer Perrine Delacour scooped victory at this event last season.",
+    "ch": "I1081.87578.schedulesdirect.org",
+    "name": "SKY Sports F1",
+    "start": "20260430000000 +0000",
+    "stop": "20260430010000 +0000",
+    "title": "F1 Explained",
+    "desc": "A round-up of the F1 Explained series, as Sky F1's leading voices unpack the intricacies of the sport.",
+    "cat": "Auto racing"
+  },
+  {
+    "ch": "I1081.87578.schedulesdirect.org",
+    "name": "SKY Sports F1",
+    "start": "20260430010000 +0000",
+    "stop": "20260430012500 +0000",
+    "title": "Formula 1",
+    "desc": "Featuring all of the action and highlight from Formula 1 racing.",
     "cat": "Classic sport event"
   },
   {
-    "ch": "I1093.100265.schedulesdirect.org",
-    "name": "SKY Sports Mix",
-    "start": "20260428230000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "The Insiders [NEW]",
-    "desc": "Real-time, breaking National Football League news covering all 32 teams as it happens with the most connected sources in the sport.",
-    "cat": "Football"
+    "ch": "I1081.87578.schedulesdirect.org",
+    "name": "SKY Sports F1",
+    "start": "20260430012500 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "Formula 1",
+    "desc": "Featuring all of the action and highlight from Formula 1 racing.",
+    "cat": "Classic sport event"
   },
   {
     "ch": "I1093.100265.schedulesdirect.org",
@@ -1683,67 +1692,67 @@
     "cat": "Soccer"
   },
   {
-    "ch": "I1096.68347.schedulesdirect.org",
-    "name": "SKY Sports News",
-    "start": "20260428180000 +0000",
-    "stop": "20260428190000 +0000",
-    "title": "Sports Centre [NEW]",
-    "desc": "Round-up of the sports news with live analysis and comments, plus extended interviews with the headline makers.",
-    "cat": "Multi-sport event"
+    "ch": "I1093.100265.schedulesdirect.org",
+    "name": "SKY Sports Mix",
+    "start": "20260429203000 +0000",
+    "stop": "20260429213000 +0000",
+    "title": "South African Women's Open Golf",
+    "desc": "Tournament highlights from South Africa Women's Open - a Ladies European Tour event at Royal Cape Golf Club. French golfer Perrine Delacour scooped victory at this event last season.",
+    "cat": "Classic sport event"
   },
   {
-    "ch": "I1096.68347.schedulesdirect.org",
-    "name": "SKY Sports News",
-    "start": "20260428190000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "Sports Centre [NEW]",
-    "desc": "Round-up of the sports news with live analysis and comments, plus extended interviews with the headline makers.",
-    "cat": "Multi-sport event"
+    "ch": "I1093.100265.schedulesdirect.org",
+    "name": "SKY Sports Mix",
+    "start": "20260429213000 +0000",
+    "stop": "20260429223000 +0000",
+    "title": "IPL",
+    "desc": "A depleted Kolkata Knight Riders, looking to get their campaign off the ground, meet Prince Yadav and Lucknow Super Giants, who are coming off a victory over Sunrisers Hyderabad.",
+    "cat": "Cricket"
   },
   {
-    "ch": "I1096.68347.schedulesdirect.org",
-    "name": "SKY Sports News",
-    "start": "20260428200000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "Sports Centre [NEW]",
-    "desc": "Round-up of the sports news with live analysis and comments, plus extended interviews with the headline makers.",
-    "cat": "Multi-sport event"
+    "ch": "I1093.100265.schedulesdirect.org",
+    "name": "SKY Sports Mix",
+    "start": "20260429223000 +0000",
+    "stop": "20260429233000 +0000",
+    "title": "Mitsubishi Electric Classic, Champions Tour Golf",
+    "desc": "Tournament highlights from the Mitsubishi Electric Classic - a PGA Tour Champions event held at TPC Sugarloaf. Jerry Kelly claimed the win a year ago.",
+    "cat": "Golf"
   },
   {
-    "ch": "I1096.68347.schedulesdirect.org",
-    "name": "SKY Sports News",
-    "start": "20260428210000 +0000",
-    "stop": "20260428213000 +0000",
-    "title": "Sky Sports News [NEW]",
-    "desc": "Round-up of the sports news with live analysis and comment plus extended interviews with the headline makers.",
-    "cat": "Sports talk"
+    "ch": "I1093.100265.schedulesdirect.org",
+    "name": "SKY Sports Mix",
+    "start": "20260429233000 +0000",
+    "stop": "20260429234500 +0000",
+    "title": "The Premier League's Greatest Games",
+    "desc": "A chance to relive a classic Premier League match. Here, a look back to 2017 and a clash between Tottenham Hotspur and Manchester United in Spurs' final game at White Hart Lane.",
+    "cat": "Soccer"
   },
   {
-    "ch": "I1096.68347.schedulesdirect.org",
-    "name": "SKY Sports News",
-    "start": "20260428213000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Back Pages Tonight [NEW]",
-    "desc": "A look at the big stories dominating the news headlines, with discussion and analysis of sport's major topics.",
-    "cat": "News"
+    "ch": "I1093.100265.schedulesdirect.org",
+    "name": "SKY Sports Mix",
+    "start": "20260429234500 +0000",
+    "stop": "20260430000000 +0000",
+    "title": "The Premier League's Greatest Games",
+    "desc": "Relive a Premier League classic, as Man City face Liverpool back in 2013. City needed three points to close the gap at the top to Man United, while the Reds were chasing a top four spot.",
+    "cat": "Soccer"
   },
   {
-    "ch": "I1096.68347.schedulesdirect.org",
-    "name": "SKY Sports News",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "Sky Sports News [NEW]",
-    "desc": "Round-up of the sports news with live analysis and comment plus extended interviews with the headline makers.",
-    "cat": "Sports talk"
+    "ch": "I1093.100265.schedulesdirect.org",
+    "name": "SKY Sports Mix",
+    "start": "20260430000000 +0000",
+    "stop": "20260430010000 +0000",
+    "title": "Tennis: WTA Transylvania Open 2026",
+    "desc": "Emma Raducanu's first final since 2021 US Open glory comes at the Transylvania Open in Cluj as the British number one takes on Romania's own Sorana Cirstea for the WTA 250 title.",
+    "cat": "Tennis"
   },
   {
-    "ch": "I1096.68347.schedulesdirect.org",
-    "name": "SKY Sports News",
-    "start": "20260428230000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "Sky Sports News",
-    "desc": "Round-up of the sports news with live analysis and comment plus extended interviews with the headline makers.",
-    "cat": "Sports talk"
+    "ch": "I1093.100265.schedulesdirect.org",
+    "name": "SKY Sports Mix",
+    "start": "20260430010000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "Tennis: WTA ATX Open 2026",
+    "desc": "A women's singles champion is crowned in the final of WTA Austin.",
+    "cat": "Tennis"
   },
   {
     "ch": "I1096.68347.schedulesdirect.org",
@@ -1935,67 +1944,67 @@
     "cat": "Multi-sport event"
   },
   {
-    "ch": "I1099.116645.schedulesdirect.org",
-    "name": "Sky Sports Premier League",
-    "start": "20260428180000 +0000",
-    "stop": "20260428190000 +0000",
-    "title": "Premier League Review",
-    "desc": "A look back at the weekend's action in the Premier League, featuring all the goals, news and major talking points from around the top flight.",
-    "cat": "Soccer"
+    "ch": "I1096.68347.schedulesdirect.org",
+    "name": "SKY Sports News",
+    "start": "20260429200000 +0000",
+    "stop": "20260429210000 +0000",
+    "title": "Sports Centre [NEW]",
+    "desc": "Round-up of the sports news with live analysis and comments, plus extended interviews with the headline makers.",
+    "cat": "Multi-sport event"
   },
   {
-    "ch": "I1099.116645.schedulesdirect.org",
-    "name": "Sky Sports Premier League",
-    "start": "20260428190000 +0000",
-    "stop": "20260428193000 +0000",
-    "title": "Netbusters",
-    "desc": "Relive the action from the Premier League in a unique way with fast-paced highlights using alternative angles, featuring every goal from every game.",
-    "cat": "Soccer"
+    "ch": "I1096.68347.schedulesdirect.org",
+    "name": "SKY Sports News",
+    "start": "20260429210000 +0000",
+    "stop": "20260429213000 +0000",
+    "title": "Sky Sports News [NEW]",
+    "desc": "Round-up of the sports news with live analysis and comment plus extended interviews with the headline makers.",
+    "cat": "Sports talk"
   },
   {
-    "ch": "I1099.116645.schedulesdirect.org",
-    "name": "Sky Sports Premier League",
-    "start": "20260428193000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "The Big Interview",
-    "desc": "Diego Gómez sits down to reflect on his journey so far, the challenges of adapting to the Premier League, life at Brighton, and his ambitions with Paraguay as he looks ahead to the future.",
-    "cat": "Interview"
+    "ch": "I1096.68347.schedulesdirect.org",
+    "name": "SKY Sports News",
+    "start": "20260429213000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "Back Pages Tonight [NEW]",
+    "desc": "A look at the big stories dominating the news headlines, with discussion and analysis of sport's major topics.",
+    "cat": "News"
   },
   {
-    "ch": "I1099.116645.schedulesdirect.org",
-    "name": "Sky Sports Premier League",
-    "start": "20260428200000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "Premier League Review",
-    "desc": "A look back at the weekend's action in the Premier League, featuring all the goals, news and major talking points from around the top flight.",
-    "cat": "Soccer"
+    "ch": "I1096.68347.schedulesdirect.org",
+    "name": "SKY Sports News",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Sky Sports News [NEW]",
+    "desc": "Round-up of the sports news with live analysis and comment plus extended interviews with the headline makers.",
+    "cat": "Sports talk"
   },
   {
-    "ch": "I1099.116645.schedulesdirect.org",
-    "name": "Sky Sports Premier League",
-    "start": "20260428210000 +0000",
-    "stop": "20260428213000 +0000",
-    "title": "Netbusters",
-    "desc": "Relive the action from the Premier League in a unique way with fast-paced highlights using alternative angles, featuring every goal from every game.",
-    "cat": "Soccer"
+    "ch": "I1096.68347.schedulesdirect.org",
+    "name": "SKY Sports News",
+    "start": "20260429230000 +0000",
+    "stop": "20260430000000 +0000",
+    "title": "Sky Sports News",
+    "desc": "Round-up of the sports news with live analysis and comment plus extended interviews with the headline makers.",
+    "cat": "Sports talk"
   },
   {
-    "ch": "I1099.116645.schedulesdirect.org",
-    "name": "Sky Sports Premier League",
-    "start": "20260428213000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "The Big Interview",
-    "desc": "Diego Gómez sits down to reflect on his journey so far, the challenges of adapting to the Premier League, life at Brighton, and his ambitions with Paraguay as he looks ahead to the future.",
-    "cat": "Interview"
+    "ch": "I1096.68347.schedulesdirect.org",
+    "name": "SKY Sports News",
+    "start": "20260430000000 +0000",
+    "stop": "20260430010000 +0000",
+    "title": "Sky Sports News",
+    "desc": "Round-up of the sports news with live analysis and comment plus extended interviews with the headline makers.",
+    "cat": "Sports talk"
   },
   {
-    "ch": "I1099.116645.schedulesdirect.org",
-    "name": "Sky Sports Premier League",
-    "start": "20260428220000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "Premier League Years",
-    "desc": "Enjoy a look back at all of the most memorable moments from the 2008/2009 Premier League season. West Brom, Stoke and Hull were the league's newly promoted sides.",
-    "cat": "Soccer"
+    "ch": "I1096.68347.schedulesdirect.org",
+    "name": "SKY Sports News",
+    "start": "20260430010000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "Sky Sports News",
+    "desc": "Round-up of the sports news with live analysis and comment plus extended interviews with the headline makers.",
+    "cat": "Sports talk"
   },
   {
     "ch": "I1099.116645.schedulesdirect.org",
@@ -2232,31 +2241,49 @@
     "cat": "Soccer"
   },
   {
-    "ch": "I1103.147889.schedulesdirect.org",
-    "name": "Sky Sports Tennis",
-    "start": "20260428180000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Live Tennis: ATP & WTA Madrid Open 2026 [NEW]",
-    "desc": "Reigning Madrid champion Aryna Sabalenka meets Hailey Baptiste once again in the last eight of a WTA 1000 event. Two-time winner Alexander Zverev plays 20-year-old Czech star Jakub Mensik.",
-    "cat": "Tennis"
+    "ch": "I1099.116645.schedulesdirect.org",
+    "name": "Sky Sports Premier League",
+    "start": "20260429203000 +0000",
+    "stop": "20260429210000 +0000",
+    "title": "Gary Neville's Soccer Box",
+    "desc": "Gary Neville is joined by one of England's greatest-ever goalscorers, Alan Shearer, to look back on the most memorable matches from his career.",
+    "cat": "Soccer"
   },
   {
-    "ch": "I1103.147889.schedulesdirect.org",
-    "name": "Sky Sports Tennis",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "Tennis: ATP Monte Carlo Masters 2026",
-    "desc": "An in-depth review of all the action from the 2026 Rolex Monte-Carlo Masters, an ATP Masters 1000 clay-court event held in the Principality of Monaco.",
-    "cat": "Tennis"
+    "ch": "I1099.116645.schedulesdirect.org",
+    "name": "Sky Sports Premier League",
+    "start": "20260429210000 +0000",
+    "stop": "20260429213000 +0000",
+    "title": "Premier League Stories",
+    "desc": "We speak to Dimitar Berbatov, a player whose elegance and composure left a lasting imprint on English football. Focusing on his Premier League years, we follow his rise at Tottenham Hotspur, where his effortless style first captivated fans, through to his trophy-laden spell at Manchester United, where moments of brilliance were often matched by intense scrutiny.",
+    "cat": "Documentary"
   },
   {
-    "ch": "I1103.147889.schedulesdirect.org",
-    "name": "Sky Sports Tennis",
-    "start": "20260428230000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "ATP & WTA Classic Matches",
-    "desc": "Saving four match points in the process, Roger Federer was pushed to the limit in his 2014 ATP Finals semi-final meeting with fellow Swiss superstar Stan Wawrinka.",
-    "cat": "Tennis"
+    "ch": "I1099.116645.schedulesdirect.org",
+    "name": "Sky Sports Premier League",
+    "start": "20260429213000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "Netbusters",
+    "desc": "Relive the action from the Premier League in a unique way with fast-paced highlights using alternative angles, featuring every goal from every game.",
+    "cat": "Soccer"
+  },
+  {
+    "ch": "I1099.116645.schedulesdirect.org",
+    "name": "Sky Sports Premier League",
+    "start": "20260429220000 +0000",
+    "stop": "20260430000000 +0000",
+    "title": "Premier League Years",
+    "desc": "Take a look back at all of the memorable moments from the 2012/2013 season. Manchester United secured Sir Alex Ferguson's final title as he bowed out of the game in style.",
+    "cat": "Soccer"
+  },
+  {
+    "ch": "I1099.116645.schedulesdirect.org",
+    "name": "Sky Sports Premier League",
+    "start": "20260430000000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "Prem Classics",
+    "desc": "A chance to relive a classic clash. Here, Liverpool host Manchester City back in January 2018 at Anfield in a twisting, turning thriller. Would City maintain their unbeaten record?",
+    "cat": "Soccer"
   },
   {
     "ch": "I1103.147889.schedulesdirect.org",
@@ -2376,58 +2403,76 @@
     "cat": "Tennis"
   },
   {
-    "ch": "I1241.82450.schedulesdirect.org",
-    "name": "TNT Sports 1",
-    "start": "20260428180000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "Live: World Championship Snooker [NEW]",
-    "desc": "Snooker action from the World Championship.",
-    "cat": "Snooker"
+    "ch": "I1103.147889.schedulesdirect.org",
+    "name": "Sky Sports Tennis",
+    "start": "20260429220000 +0000",
+    "stop": "20260429223000 +0000",
+    "title": "ATP Tour: This Week",
+    "desc": "Step behind the scenes of men's professional tennis throughout the 2026 season on the ATP Tour with special features, interviews and much more.",
+    "cat": "Tennis"
   },
   {
-    "ch": "I1241.82450.schedulesdirect.org",
-    "name": "TNT Sports 1",
-    "start": "20260428210000 +0000",
-    "stop": "20260428211500 +0000",
-    "title": "Premier League Reload",
-    "desc": "A whirlwind catch-up from matchday 34 of the Premier League, including Fulham v Aston Villa, Arsenal v Newcastle, Man United v Brentford, and Brighton v Chelsea.",
-    "cat": "Soccer"
+    "ch": "I1103.147889.schedulesdirect.org",
+    "name": "Sky Sports Tennis",
+    "start": "20260429223000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Tennis: WTA Qatar Open 2026",
+    "desc": "Review of the 2026 WTA Qatar Open, a professional tennis tournament.",
+    "cat": "Tennis"
   },
   {
-    "ch": "I1241.82450.schedulesdirect.org",
-    "name": "TNT Sports 1",
-    "start": "20260428211500 +0000",
-    "stop": "20260428213000 +0000",
-    "title": "MotoGP Rewind",
-    "desc": "A look back at the best action from the 2026 MotoGP Grand Prix of Spain at Circuito de Jerez.",
-    "cat": "Auto racing"
+    "ch": "I1103.147889.schedulesdirect.org",
+    "name": "Sky Sports Tennis",
+    "start": "20260429230000 +0000",
+    "stop": "20260430000000 +0000",
+    "title": "ATP & WTA Classic Matches",
+    "desc": "In a match that would decide the 2016 year-end world number one, Andy Murray - looking to cap a storybook season at the O2 in London - met rival Novak Djokovic at the ATP Finals.",
+    "cat": "Tennis"
   },
   {
-    "ch": "I1241.82450.schedulesdirect.org",
-    "name": "TNT Sports 1",
-    "start": "20260428213000 +0000",
-    "stop": "20260428223000 +0000",
-    "title": "Major League Baseball",
-    "desc": "Highlights from Major League Baseball.",
-    "cat": "Classic sport event"
+    "ch": "I1103.147889.schedulesdirect.org",
+    "name": "Sky Sports Tennis",
+    "start": "20260430000000 +0000",
+    "stop": "20260430010000 +0000",
+    "title": "US Open Tennis Classic Matches",
+    "desc": "Having defeated a three-time US Open champion in the second round, Great Britain's Laura Robson came up against China's Li Na in the third round of the women's singles at the 2012 US Open.",
+    "cat": "Tennis"
   },
   {
-    "ch": "I1241.82450.schedulesdirect.org",
-    "name": "TNT Sports 1",
-    "start": "20260428223000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "MLB Lead Off [NEW]",
-    "desc": "A look at the upcoming MLB action.",
-    "cat": "Baseball"
+    "ch": "I1103.147889.schedulesdirect.org",
+    "name": "Sky Sports Tennis",
+    "start": "20260430010000 +0000",
+    "stop": "20260430011500 +0000",
+    "title": "Tennis: ATP & WTA Madrid Open 2025",
+    "desc": "Britain's Jack Draper steps on court for the Madrid Open final aiming to lift his second Masters 1000 crown, as the 23-year-old faces 14th seed Casper Ruud for the first time.",
+    "cat": "Tennis"
   },
   {
-    "ch": "I1241.82450.schedulesdirect.org",
-    "name": "TNT Sports 1",
-    "start": "20260428230000 +0000",
-    "stop": "20260429020000 +0000",
-    "title": "Live: Major League Baseball [NEW]",
-    "desc": "Action from Major League Baseball as Atlanta Braves begin a three-game set against AL Central leaders Detroit Tigers at Truist Park.",
-    "cat": "Baseball"
+    "ch": "I1103.147889.schedulesdirect.org",
+    "name": "Sky Sports Tennis",
+    "start": "20260430011500 +0000",
+    "stop": "20260430013000 +0000",
+    "title": "Tennis: ATP & WTA China Open 2025",
+    "desc": "Bitesize highlights as a women's singles champion is crowned in the final of the China Open - a WTA 1000 event.",
+    "cat": "Tennis"
+  },
+  {
+    "ch": "I1103.147889.schedulesdirect.org",
+    "name": "Sky Sports Tennis",
+    "start": "20260430013000 +0000",
+    "stop": "20260430014500 +0000",
+    "title": "Tennis: ATP & WTA Rome Open 2025",
+    "desc": "World number one Jannik Sinner takes on soon-to-be world number two Carlos Alcaraz in a blockbuster Italian Open final. Between them, the pair have won the last five majors.",
+    "cat": "Tennis"
+  },
+  {
+    "ch": "I1103.147889.schedulesdirect.org",
+    "name": "Sky Sports Tennis",
+    "start": "20260430014500 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "Tennis: WTA Wuhan Open 2025",
+    "desc": "Bitesize highlights as a women's singles champion is crowned in the final of the Wuhan Open.",
+    "cat": "Tennis"
   },
   {
     "ch": "I1241.82450.schedulesdirect.org",
@@ -2610,67 +2655,22 @@
     "cat": "Soccer"
   },
   {
-    "ch": "I1246.82451.schedulesdirect.org",
-    "name": "TNT Sports 2",
-    "start": "20260428183000 +0000",
-    "stop": "20260428193000 +0000",
-    "title": "Premier League Review",
-    "desc": "A look back at the best action from matchday 34 of the Premier League, including Fulham v Aston Villa, Arsenal v Newcastle, and Liverpool v Crystal Palace.",
-    "cat": "Soccer"
+    "ch": "I1241.82450.schedulesdirect.org",
+    "name": "TNT Sports 1",
+    "start": "20260429214500 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "TNT Sports Original",
+    "desc": "Charting George Dowell's determination to transform his childhood club Worthing FC into a National League team after saving it from financial ruin.",
+    "cat": "Documentary"
   },
   {
-    "ch": "I1246.82451.schedulesdirect.org",
-    "name": "TNT Sports 2",
-    "start": "20260428193000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "The Cycling Show",
-    "desc": "The latest of The Cycling Show.",
-    "cat": "Road cycling"
-  },
-  {
-    "ch": "I1246.82451.schedulesdirect.org",
-    "name": "TNT Sports 2",
-    "start": "20260428200000 +0000",
-    "stop": "20260428203000 +0000",
-    "title": "Race Bikes",
-    "desc": "Ric McLaughlin explores one of the most mysterious bikes to grace the WHOOP UCI Mountain Bike World Series, Loïc Bruni's Specialised Project Black.",
-    "cat": "Mountain biking"
-  },
-  {
-    "ch": "I1246.82451.schedulesdirect.org",
-    "name": "TNT Sports 2",
-    "start": "20260428203000 +0000",
-    "stop": "20260428213000 +0000",
-    "title": "Roll The Tape",
-    "desc": "The latest episode of Roll The Tape.",
-    "cat": "Snooker"
-  },
-  {
-    "ch": "I1246.82451.schedulesdirect.org",
-    "name": "TNT Sports 2",
-    "start": "20260428213000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "UEFA Champions League Football",
-    "desc": "Action from the UEFA Champions League semi-final first leg showdown between reigning champions Paris Saint-Germain and Vincent Kompany's Bayern Munich at Parc des Princes.",
-    "cat": "Classic sport event"
-  },
-  {
-    "ch": "I1246.82451.schedulesdirect.org",
-    "name": "TNT Sports 2",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "World Marathon Majors",
-    "desc": "Coverage of the TCS London Marathon 2026, with a course that passes by the city's biggest landmarks before a finish on The Mall directly in front of Buckingham Palace.",
-    "cat": "Marathon"
-  },
-  {
-    "ch": "I1246.82451.schedulesdirect.org",
-    "name": "TNT Sports 2",
-    "start": "20260428230000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "Australia Championship Supercars",
-    "desc": "Highlights from day one of the ITM Christchurch 440 and the 2026 Repco Supercars Championship.",
-    "cat": "Auto"
+    "ch": "I1241.82450.schedulesdirect.org",
+    "name": "TNT Sports 1",
+    "start": "20260429230000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "Live: Major League Baseball [NEW]",
+    "desc": "MLB action as Detroit Tigers face Atlanta Braves.",
+    "cat": "Baseball"
   },
   {
     "ch": "I1246.82451.schedulesdirect.org",
@@ -2835,40 +2835,76 @@
     "cat": "Baseball"
   },
   {
-    "ch": "I1248.95772.schedulesdirect.org",
-    "name": "TNT Sports 3",
-    "start": "20260428173000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "Live: World Championship Snooker [NEW]",
-    "desc": "Snooker action from the World Championship.",
-    "cat": "Snooker"
+    "ch": "I1246.82451.schedulesdirect.org",
+    "name": "TNT Sports 2",
+    "start": "20260429200000 +0000",
+    "stop": "20260429203000 +0000",
+    "title": "MLB Plays of the Week",
+    "desc": "This weekly MLB highlights show showcases the most exciting plays from the past week's matches.",
+    "cat": "Baseball"
   },
   {
-    "ch": "I1248.95772.schedulesdirect.org",
-    "name": "TNT Sports 3",
-    "start": "20260428210000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Tour of Türkiye",
-    "desc": "Cycling action from the Men's UCI ProSeries.",
-    "cat": "Cycling"
+    "ch": "I1246.82451.schedulesdirect.org",
+    "name": "TNT Sports 2",
+    "start": "20260429203000 +0000",
+    "stop": "20260429213000 +0000",
+    "title": "MotoGP",
+    "desc": "Highlights from MotoGP.",
+    "cat": "Motorcycle racing"
   },
   {
-    "ch": "I1248.95772.schedulesdirect.org",
-    "name": "TNT Sports 3",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "Tour de Romandie",
-    "desc": "Coverage of the Men's UCI Cycling World Tour.",
-    "cat": "Cycling"
+    "ch": "I1246.82451.schedulesdirect.org",
+    "name": "TNT Sports 2",
+    "start": "20260429213000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "UFC Connected",
+    "desc": "UFC Connected brings fans a unique look inside the UFC with exclusive access to fighters, teams and events from around the globe.",
+    "cat": "Mixed martial arts"
   },
   {
-    "ch": "I1248.95772.schedulesdirect.org",
-    "name": "TNT Sports 3",
-    "start": "20260428230000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "Fishing: On the Bank",
-    "desc": "Angling magazine show presented by Rob Hughes and Andy Ford.",
-    "cat": "Fishing"
+    "ch": "I1246.82451.schedulesdirect.org",
+    "name": "TNT Sports 2",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "International T20 Cricket",
+    "desc": "T20 international cricket action from Bangladesh.",
+    "cat": "Cricket"
+  },
+  {
+    "ch": "I1246.82451.schedulesdirect.org",
+    "name": "TNT Sports 2",
+    "start": "20260429230000 +0000",
+    "stop": "20260429233000 +0000",
+    "title": "Premier League Netbusters",
+    "desc": "A unique and fast-paced look at all the best action from the Premier League, including Fulham v Aston Villa, Arsenal v Newcastle. And Liverpool v Crystal Palace.",
+    "cat": "Soccer"
+  },
+  {
+    "ch": "I1246.82451.schedulesdirect.org",
+    "name": "TNT Sports 2",
+    "start": "20260429233000 +0000",
+    "stop": "20260430000000 +0000",
+    "title": "UEFA Champions League Football",
+    "desc": "Action from the UEFA Champions League semi-final first leg showdown between reigning champions Paris Saint-Germain and Vincent Kompany's Bayern Munich at Parc des Princes.",
+    "cat": "Classic sport event"
+  },
+  {
+    "ch": "I1246.82451.schedulesdirect.org",
+    "name": "TNT Sports 2",
+    "start": "20260430000000 +0000",
+    "stop": "20260430010000 +0000",
+    "title": "UEFA Champions League Football",
+    "desc": "Action from the UEFA Champions League.",
+    "cat": "Classic sport event"
+  },
+  {
+    "ch": "I1246.82451.schedulesdirect.org",
+    "name": "TNT Sports 2",
+    "start": "20260430010000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "UEFA Europa and Conference League Magazine",
+    "desc": "A round-up of all the latest action and stories from the UEFA Europa League and Conference League.",
+    "cat": "Soccer"
   },
   {
     "ch": "I1248.95772.schedulesdirect.org",
@@ -2997,40 +3033,49 @@
     "cat": "Snooker"
   },
   {
-    "ch": "I1250.64572.schedulesdirect.org",
-    "name": "TNT Sports 4",
-    "start": "20260428183000 +0000",
-    "stop": "20260428193000 +0000",
-    "title": "Major League Baseball",
-    "desc": "Highlights from Major League Baseball.",
+    "ch": "I1248.95772.schedulesdirect.org",
+    "name": "TNT Sports 3",
+    "start": "20260429210000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "Tour of Türkiye",
+    "desc": "Cycling action from the Men's UCI ProSeries.",
+    "cat": "Cycling"
+  },
+  {
+    "ch": "I1248.95772.schedulesdirect.org",
+    "name": "TNT Sports 3",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Tour de Romandie",
+    "desc": "Coverage of the Men's UCI Cycling World Tour.",
+    "cat": "Cycling"
+  },
+  {
+    "ch": "I1248.95772.schedulesdirect.org",
+    "name": "TNT Sports 3",
+    "start": "20260429230000 +0000",
+    "stop": "20260429233000 +0000",
+    "title": "The Cycling Show",
+    "desc": "The latest of The Cycling Show.",
+    "cat": "Road cycling"
+  },
+  {
+    "ch": "I1248.95772.schedulesdirect.org",
+    "name": "TNT Sports 3",
+    "start": "20260429233000 +0000",
+    "stop": "20260430000000 +0000",
+    "title": "Race Bikes",
+    "desc": "Ric McLaughlin explores one of the most mysterious bikes to grace the WHOOP UCI Mountain Bike World Series, Loïc Bruni's Specialised Project Black.",
+    "cat": "Mountain biking"
+  },
+  {
+    "ch": "I1248.95772.schedulesdirect.org",
+    "name": "TNT Sports 3",
+    "start": "20260430000000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "World Championship Snooker",
+    "desc": "Highlights from the quarter-finals of the 2026 Snooker World Championship.",
     "cat": "Classic sport event"
-  },
-  {
-    "ch": "I1250.64572.schedulesdirect.org",
-    "name": "TNT Sports 4",
-    "start": "20260428193000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "MLB: Epic Moments",
-    "desc": "Pedro Martinez defies injury to pitch in Game 5 of the 1999 ALDS and lead the Boston Red Sox to an inspired victory over the Cleveland Indians.",
-    "cat": "Baseball"
-  },
-  {
-    "ch": "I1250.64572.schedulesdirect.org",
-    "name": "TNT Sports 4",
-    "start": "20260428200000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "The Ultimate Fighting Championship",
-    "desc": "Action from UFC Fight Night in Las Vegas, featuring the featherweight clash between Aljamain Sterling and Youssef Zalal. Plus, England's Davey Grant faces Juan Martinetti.",
-    "cat": "Classic sport event"
-  },
-  {
-    "ch": "I1250.64572.schedulesdirect.org",
-    "name": "TNT Sports 4",
-    "start": "20260428230000 +0000",
-    "stop": "20260429003000 +0000",
-    "title": "Australian Rules",
-    "desc": "Action from the Australian Football League as Western Bulldogs face Sydney Swans.",
-    "cat": "Australian rules football"
   },
   {
     "ch": "I1250.64572.schedulesdirect.org",
@@ -3204,22 +3249,49 @@
     "cat": "Road cycling"
   },
   {
-    "ch": "I1266.116570.schedulesdirect.org",
-    "name": "UKs: TNT Sport Box Office",
-    "start": "20260428170000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "Welcome to TNT Sports Box Office 1",
-    "desc": "Welcome to TNT Sports Box Office 1, the home of exclusive world-class live sport that you won't find anywhere else. Visit tntsports.co.uk/boxoffice for more information.",
-    "cat": "Special"
+    "ch": "I1250.64572.schedulesdirect.org",
+    "name": "TNT Sports 4",
+    "start": "20260429200000 +0000",
+    "stop": "20260429203000 +0000",
+    "title": "Discovery Golf",
+    "desc": "A weekly show featuring the latest news from the world of golf.",
+    "cat": "Golf"
   },
   {
-    "ch": "I1266.116570.schedulesdirect.org",
-    "name": "UKs: TNT Sport Box Office",
-    "start": "20260428210000 +0000",
-    "stop": "20260429010000 +0000",
-    "title": "Welcome to TNT Sports Box Office 1",
-    "desc": "Welcome to TNT Sports Box Office 1, the home of exclusive world-class live sport that you won't find anywhere else. Visit tntsports.co.uk/boxoffice for more information.",
-    "cat": "Special"
+    "ch": "I1250.64572.schedulesdirect.org",
+    "name": "TNT Sports 4",
+    "start": "20260429203000 +0000",
+    "stop": "20260429213000 +0000",
+    "title": "World Marathon Majors",
+    "desc": "Coverage of the TCS London Marathon 2026, with a course that passes by the city's biggest landmarks before a finish on The Mall directly in front of Buckingham Palace.",
+    "cat": "Marathon"
+  },
+  {
+    "ch": "I1250.64572.schedulesdirect.org",
+    "name": "TNT Sports 4",
+    "start": "20260429213000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Ultimate Pool Pairs Cup",
+    "desc": "The Ultimate Pool 36 Vegas Pairs Cup continues, with this week's group being headlined by former world champion Carl Morris, who teams with Disability Pool player Richie Bates.",
+    "cat": "Pool"
+  },
+  {
+    "ch": "I1250.64572.schedulesdirect.org",
+    "name": "TNT Sports 4",
+    "start": "20260429230000 +0000",
+    "stop": "20260430003000 +0000",
+    "title": "Australian Rules",
+    "desc": "Action from the Australian Football League as Port Adelaide meet Geelong Cats at the Adelaide Oval. The Cats were 153-65 winners when these sides last went head-to-head.",
+    "cat": "Australian rules football"
+  },
+  {
+    "ch": "I1250.64572.schedulesdirect.org",
+    "name": "TNT Sports 4",
+    "start": "20260430003000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "Australian Rules",
+    "desc": "Action from the AFL as Fremantle take on Carlton at the Optus Stadium. The Dockers have won 13 of their past 16 matches at this venue.",
+    "cat": "Australian rules football"
   },
   {
     "ch": "I1266.116570.schedulesdirect.org",
@@ -3267,49 +3339,22 @@
     "cat": "Special"
   },
   {
-    "ch": "I392.76942.gracenote.com",
-    "name": "Bein Sports US",
-    "start": "20260428215000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "Copa Libertadores Soccer [NEW]",
-    "desc": "Group G.",
-    "cat": "Sports"
+    "ch": "I1266.116570.schedulesdirect.org",
+    "name": "UKs: TNT Sport Box Office",
+    "start": "20260429210000 +0000",
+    "stop": "20260430010000 +0000",
+    "title": "Welcome to TNT Sports Box Office 1",
+    "desc": "Welcome to TNT Sports Box Office 1, the home of exclusive world-class live sport that you won't find anywhere else. Visit tntsports.co.uk/boxoffice for more information.",
+    "cat": "Special"
   },
   {
-    "ch": "I392.76942.gracenote.com",
-    "name": "Bein Sports US",
-    "start": "20260429000000 +0000",
-    "stop": "20260429002000 +0000",
-    "title": "The Express [NEW]",
-    "desc": "Coverage of all soccer action before the match including special reporting and analysis.",
-    "cat": "Series"
-  },
-  {
-    "ch": "I392.76942.gracenote.com",
-    "name": "Bein Sports US",
-    "start": "20260429002000 +0000",
-    "stop": "20260429023000 +0000",
-    "title": "Copa Libertadores Soccer [NEW]",
-    "desc": "Group D.",
-    "cat": "Sports"
-  },
-  {
-    "ch": "I392.76942.gracenote.com",
-    "name": "Bein Sports US",
-    "start": "20260429023000 +0000",
-    "stop": "20260429040000 +0000",
-    "title": "Copa Libertadores Soccer [NEW]",
-    "desc": "Group F.",
-    "cat": "Sports"
-  },
-  {
-    "ch": "I392.76942.gracenote.com",
-    "name": "Bein Sports US",
-    "start": "20260429040000 +0000",
-    "stop": "20260429043000 +0000",
-    "title": "The Knockout Room",
-    "desc": "",
-    "cat": "Series"
+    "ch": "I1266.116570.schedulesdirect.org",
+    "name": "UKs: TNT Sport Box Office",
+    "start": "20260430010000 +0000",
+    "stop": "20260430050000 +0000",
+    "title": "Welcome to TNT Sports Box Office 1",
+    "desc": "Welcome to TNT Sports Box Office 1, the home of exclusive world-class live sport that you won't find anywhere else. Visit tntsports.co.uk/boxoffice for more information.",
+    "cat": "Special"
   },
   {
     "ch": "I392.76942.gracenote.com",
@@ -3591,57 +3636,48 @@
     "cat": "Sports"
   },
   {
-    "ch": "I428.49882.gracenote.com",
-    "name": "Sportsnet Pittsburgh",
-    "start": "20260428223000 +0000",
-    "stop": "20260429013000 +0000",
-    "title": "MLB Baseball [NEW]",
-    "desc": "From PNC Park in Pittsburgh.",
+    "ch": "I392.76942.gracenote.com",
+    "name": "Bein Sports US",
+    "start": "20260430000000 +0000",
+    "stop": "20260430002000 +0000",
+    "title": "The Express [NEW]",
+    "desc": "Coverage of all soccer action before the match including special reporting and analysis.",
+    "cat": "Series"
+  },
+  {
+    "ch": "I392.76942.gracenote.com",
+    "name": "Bein Sports US",
+    "start": "20260430002000 +0000",
+    "stop": "20260430023000 +0000",
+    "title": "Copa Libertadores Soccer [NEW]",
+    "desc": "Group A.",
     "cat": "Sports"
   },
   {
-    "ch": "I428.49882.gracenote.com",
-    "name": "Sportsnet Pittsburgh",
-    "start": "20260429013000 +0000",
-    "stop": "20260429020000 +0000",
-    "title": "Pirates Extra Innings Live [NEW]",
+    "ch": "I392.76942.gracenote.com",
+    "name": "Bein Sports US",
+    "start": "20260430023000 +0000",
+    "stop": "20260430040000 +0000",
+    "title": "Copa Libertadores Soccer [NEW]",
+    "desc": "Group B.",
+    "cat": "Sports"
+  },
+  {
+    "ch": "I392.76942.gracenote.com",
+    "name": "Bein Sports US",
+    "start": "20260430040000 +0000",
+    "stop": "20260430043000 +0000",
+    "title": "The Knockout Room",
     "desc": "",
     "cat": "Series"
   },
   {
-    "ch": "I428.49882.gracenote.com",
-    "name": "Sportsnet Pittsburgh",
-    "start": "20260429020000 +0000",
-    "stop": "20260429023000 +0000",
-    "title": "Pirates Final Live [NEW]",
-    "desc": "",
-    "cat": "Series"
-  },
-  {
-    "ch": "I428.49882.gracenote.com",
-    "name": "Sportsnet Pittsburgh",
-    "start": "20260429023000 +0000",
-    "stop": "20260429030000 +0000",
-    "title": "Steel City Chronicles",
-    "desc": "",
-    "cat": "Series"
-  },
-  {
-    "ch": "I428.49882.gracenote.com",
-    "name": "Sportsnet Pittsburgh",
-    "start": "20260429030000 +0000",
-    "stop": "20260429033000 +0000",
-    "title": "Get Me the Brandy [NEW]",
-    "desc": "",
-    "cat": "Series"
-  },
-  {
-    "ch": "I428.49882.gracenote.com",
-    "name": "Sportsnet Pittsburgh",
-    "start": "20260429033000 +0000",
-    "stop": "20260429040000 +0000",
-    "title": "Pro Football Weekly [NEW]",
-    "desc": "NFL news and highlights plus a preview of the week's top match-ups.",
+    "ch": "I392.76942.gracenote.com",
+    "name": "Bein Sports US",
+    "start": "20260430043000 +0000",
+    "stop": "20260430063000 +0000",
+    "title": "Bare Knuckle Boxing",
+    "desc": "Boxing in its purest form, with no gloves and hands are wrapped only.",
     "cat": "Series"
   },
   {
@@ -3866,62 +3902,53 @@
     "start": "20260429233000 +0000",
     "stop": "20260430020000 +0000",
     "title": "NHL Hockey [NEW]",
-    "desc": "The Penguins play the Flyers in Game 6 of the East first round at Xfinity Mobile Arena. The Flyers lead 3-2, but the Penguins won Game 5. Sidney Crosby had two assists despite a brief injury. Kris Letang scored the winner in the second period.",
+    "desc": "Pittsburgh plays Philadelphia in Game 6 of the East first round at Xfinity Mobile Arena. Philadelphia currently leads the series 3-2. Sidney Crosby had two assists despite a brief injury. Kris Letang scored the winner in the second period.",
     "cat": "Sports"
   },
   {
-    "ch": "I70.62077.schedulesdirect.org",
-    "name": "HSN",
-    "start": "20260428180000 +0000",
-    "stop": "20260428190000 +0000",
-    "title": "Chaco Canyon Southwest Jewelry - All On Sale [NEW]",
+    "ch": "I428.49882.gracenote.com",
+    "name": "Sportsnet Pittsburgh",
+    "start": "20260430020000 +0000",
+    "stop": "20260430023000 +0000",
+    "title": "Penguins Overtime Live [NEW]",
     "desc": "",
-    "cat": "Shopping"
+    "cat": "Series"
   },
   {
-    "ch": "I70.62077.schedulesdirect.org",
-    "name": "HSN",
-    "start": "20260428190000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "Skechers Footwear Premiere [NEW]",
-    "desc": "An affordable footwear line that is sporty, casual, trendy and perfect for every lifestyle.",
-    "cat": "Shopping"
-  },
-  {
-    "ch": "I70.62077.schedulesdirect.org",
-    "name": "HSN",
-    "start": "20260428200000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "Customer Appreciation's Most-Loved [NEW]",
+    "ch": "I428.49882.gracenote.com",
+    "name": "Sportsnet Pittsburgh",
+    "start": "20260430023000 +0000",
+    "stop": "20260430030000 +0000",
+    "title": "Penguins Postgame Final [NEW]",
     "desc": "",
-    "cat": ""
+    "cat": "Series"
   },
   {
-    "ch": "I70.62077.schedulesdirect.org",
-    "name": "HSN",
-    "start": "20260428210000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Now That's Creative Cooking! with Suzanne - Mesa Mia by Jenny Martinez [NEW]",
+    "ch": "I428.49882.gracenote.com",
+    "name": "Sportsnet Pittsburgh",
+    "start": "20260430030000 +0000",
+    "stop": "20260430050000 +0000",
+    "title": "MLB Baseball [NEW]",
+    "desc": "From PNC Park in Pittsburgh.",
+    "cat": "Sports"
+  },
+  {
+    "ch": "I428.49882.gracenote.com",
+    "name": "Sportsnet Pittsburgh",
+    "start": "20260430050000 +0000",
+    "stop": "20260430053000 +0000",
+    "title": "Pirates Extra Innings Live",
     "desc": "",
-    "cat": ""
+    "cat": "Series"
   },
   {
-    "ch": "I70.62077.schedulesdirect.org",
-    "name": "HSN",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "Spring Style Essentials - Skechers Footwear Premiere [NEW]",
+    "ch": "I428.49882.gracenote.com",
+    "name": "Sportsnet Pittsburgh",
+    "start": "20260430053000 +0000",
+    "stop": "20260430060000 +0000",
+    "title": "Pirates Final Live",
     "desc": "",
-    "cat": ""
-  },
-  {
-    "ch": "I70.62077.schedulesdirect.org",
-    "name": "HSN",
-    "start": "20260428230000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "Perlier Beauty 30th Anniversary [NEW]",
-    "desc": "Celebrate 30 iconic years of luxurious bath and body products and innovative skincare by Perlier.",
-    "cat": ""
+    "cat": "Series"
   },
   {
     "ch": "I70.62077.schedulesdirect.org",
@@ -4104,57 +4131,57 @@
     "cat": "Shopping"
   },
   {
-    "ch": "I240.62077.schedulesdirect.org",
+    "ch": "I70.62077.schedulesdirect.org",
     "name": "HSN",
-    "start": "20260428180000 +0000",
-    "stop": "20260428190000 +0000",
-    "title": "Chaco Canyon Southwest Jewelry - All On Sale [NEW]",
+    "start": "20260429200000 +0000",
+    "stop": "20260429210000 +0000",
+    "title": "Keranique Hair Care [NEW]",
     "desc": "",
     "cat": "Shopping"
   },
   {
-    "ch": "I240.62077.schedulesdirect.org",
+    "ch": "I70.62077.schedulesdirect.org",
     "name": "HSN",
-    "start": "20260428190000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "Skechers Footwear Premiere [NEW]",
-    "desc": "An affordable footwear line that is sporty, casual, trendy and perfect for every lifestyle.",
+    "start": "20260429210000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "Jaclyn Smith Fashions [NEW]",
+    "desc": "Jaclyn Smith's effortlessly fabulous fashions with an amazing fit and style.",
     "cat": "Shopping"
   },
   {
-    "ch": "I240.62077.schedulesdirect.org",
+    "ch": "I70.62077.schedulesdirect.org",
     "name": "HSN",
-    "start": "20260428200000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "Customer Appreciation's Most-Loved [NEW]",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Keranique Hair Care [NEW]",
     "desc": "",
+    "cat": "Shopping"
+  },
+  {
+    "ch": "I70.62077.schedulesdirect.org",
+    "name": "HSN",
+    "start": "20260429230000 +0000",
+    "stop": "20260430000000 +0000",
+    "title": "Charles David Shoes [NEW]",
+    "desc": "Designer footwear.",
     "cat": ""
   },
   {
-    "ch": "I240.62077.schedulesdirect.org",
+    "ch": "I70.62077.schedulesdirect.org",
     "name": "HSN",
-    "start": "20260428210000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Now That's Creative Cooking! with Suzanne - Mesa Mia by Jenny Martinez [NEW]",
+    "start": "20260430000000 +0000",
+    "stop": "20260430010000 +0000",
+    "title": "Rhonda Shear Intimates Collection [NEW]",
     "desc": "",
-    "cat": ""
+    "cat": "Shopping"
   },
   {
-    "ch": "I240.62077.schedulesdirect.org",
+    "ch": "I70.62077.schedulesdirect.org",
     "name": "HSN",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "Spring Style Essentials - Skechers Footwear Premiere [NEW]",
-    "desc": "",
-    "cat": ""
-  },
-  {
-    "ch": "I240.62077.schedulesdirect.org",
-    "name": "HSN",
-    "start": "20260428230000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "Perlier Beauty 30th Anniversary [NEW]",
-    "desc": "Celebrate 30 iconic years of luxurious bath and body products and innovative skincare by Perlier.",
+    "start": "20260430010000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "Beauty Report with Sarah - Customer Appreciation Month [NEW]",
+    "desc": "Get gorgeous with Sarah Anderson as she fact-checks what's next & best in beauty so you don't have to!",
     "cat": ""
   },
   {
@@ -4338,58 +4365,58 @@
     "cat": "Shopping"
   },
   {
-    "ch": "I123.15676.schedulesdirect.org",
-    "name": "CA: RDS",
-    "start": "20260428170000 +0000",
-    "stop": "20260428193000 +0000",
-    "title": "Golf PGA",
-    "desc": "En provenance du TPC Louisiana, à Avondale, en Louisiane.",
-    "cat": "Golf"
+    "ch": "I240.62077.schedulesdirect.org",
+    "name": "HSN",
+    "start": "20260429200000 +0000",
+    "stop": "20260429210000 +0000",
+    "title": "Keranique Hair Care [NEW]",
+    "desc": "",
+    "cat": "Shopping"
   },
   {
-    "ch": "I123.15676.schedulesdirect.org",
-    "name": "CA: RDS",
-    "start": "20260428193000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "Le sport en toute liberté",
-    "desc": "Un regard sur le monde des performances extrêmes : saut extrême, snowboard et plus.",
-    "cat": "Action sports"
+    "ch": "I240.62077.schedulesdirect.org",
+    "name": "HSN",
+    "start": "20260429210000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "Jaclyn Smith Fashions [NEW]",
+    "desc": "Jaclyn Smith's effortlessly fabulous fashions with an amazing fit and style.",
+    "cat": "Shopping"
   },
   {
-    "ch": "I123.15676.schedulesdirect.org",
-    "name": "CA: RDS",
-    "start": "20260428200000 +0000",
-    "stop": "20260428203000 +0000",
-    "title": "Magazine golf: au 19e",
-    "desc": "Voyez les dessous de l'industrie du golf via des entrevues et de chroniques conseils.",
-    "cat": "Golf"
+    "ch": "I240.62077.schedulesdirect.org",
+    "name": "HSN",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Keranique Hair Care [NEW]",
+    "desc": "",
+    "cat": "Shopping"
   },
   {
-    "ch": "I123.15676.schedulesdirect.org",
-    "name": "CA: RDS",
-    "start": "20260428203000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "Derrière le volant",
-    "desc": "Une émission informative sur les nouveautés de l'industrie, des essais routiers, de l'actualité, des conseils pratiques sur l'entretien, préparation saisonnière, vieilles voitures et collectionneurs, le monde insolite et des matchs comparatifs.",
-    "cat": "Auto"
+    "ch": "I240.62077.schedulesdirect.org",
+    "name": "HSN",
+    "start": "20260429230000 +0000",
+    "stop": "20260430000000 +0000",
+    "title": "Charles David Shoes [NEW]",
+    "desc": "Designer footwear.",
+    "cat": ""
   },
   {
-    "ch": "I123.15676.schedulesdirect.org",
-    "name": "CA: RDS",
-    "start": "20260428210000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "Le 5 à 7 [NEW]",
-    "desc": "Frédéric Plante et Yanick Bouchard donnent vie à cette version magazine de Sports 30.",
-    "cat": "Sports talk"
+    "ch": "I240.62077.schedulesdirect.org",
+    "name": "HSN",
+    "start": "20260430000000 +0000",
+    "stop": "20260430010000 +0000",
+    "title": "Rhonda Shear Intimates Collection [NEW]",
+    "desc": "",
+    "cat": "Shopping"
   },
   {
-    "ch": "I123.15676.schedulesdirect.org",
-    "name": "CA: RDS",
-    "start": "20260428230000 +0000",
-    "stop": "20260429013000 +0000",
-    "title": "Championnat mondial masculin des M18 de l'IIHF 2026",
-    "desc": "En provenance du stade de hockey Pavol Demitra à Trencin, en Slovaquie.",
-    "cat": "Hockey"
+    "ch": "I240.62077.schedulesdirect.org",
+    "name": "HSN",
+    "start": "20260430010000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "Beauty Report with Sarah - Customer Appreciation Month [NEW]",
+    "desc": "Get gorgeous with Sarah Anderson as she fact-checks what's next & best in beauty so you don't have to!",
+    "cat": ""
   },
   {
     "ch": "I123.15676.schedulesdirect.org",
@@ -4653,84 +4680,48 @@
     "cat": "Playoff sports"
   },
   {
-    "ch": "I124.39080.schedulesdirect.org",
-    "name": "CA: RDS Info",
-    "start": "20260428170000 +0000",
-    "stop": "20260428190000 +0000",
-    "title": "Le 5 à 7",
-    "desc": "Frédéric Plante et Yanick Bouchard donnent vie à cette version magazine de Sports 30.",
-    "cat": "Sports talk"
-  },
-  {
-    "ch": "I124.39080.schedulesdirect.org",
-    "name": "CA: RDS Info",
-    "start": "20260428190000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "L'antichambre [NEW]",
-    "desc": "On propose des débats sur les sujets les plus chauds de l'actualité sportive.",
-    "cat": "Sports talk"
-  },
-  {
-    "ch": "I124.39080.schedulesdirect.org",
-    "name": "CA: RDS Info",
-    "start": "20260428200000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "On jase",
-    "desc": "On jase de la nouvelle édition du Canadien.",
-    "cat": "Talk"
-  },
-  {
-    "ch": "I124.39080.schedulesdirect.org",
-    "name": "CA: RDS Info",
-    "start": "20260428210000 +0000",
-    "stop": "20260428213000 +0000",
-    "title": "Dans une classe à part",
-    "desc": "L'éternel débat dans le sport: qui est le \"GOAT?\" Un épisode pour chaque sport, examinant les candidats pour le titre de \"meilleur.\"",
-    "cat": "Sports talk"
-  },
-  {
-    "ch": "I124.39080.schedulesdirect.org",
-    "name": "CA: RDS Info",
-    "start": "20260428213000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Dans une classe à part",
-    "desc": "L'éternel débat dans le sport: qui est le \"GOAT?\" Un épisode pour chaque sport, examinant les candidats pour le titre de \"meilleur.\"",
-    "cat": "Sports talk"
-  },
-  {
-    "ch": "I124.39080.schedulesdirect.org",
-    "name": "CA: RDS Info",
-    "start": "20260428220000 +0000",
-    "stop": "20260428223000 +0000",
-    "title": "On jase [NEW]",
-    "desc": "On jase de la nouvelle édition du Canadien.",
-    "cat": "Talk"
-  },
-  {
-    "ch": "I124.39080.schedulesdirect.org",
-    "name": "CA: RDS Info",
-    "start": "20260428223000 +0000",
-    "stop": "20260428224500 +0000",
-    "title": "Sports 30 [NEW]",
-    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
-    "cat": "Sports talk"
-  },
-  {
-    "ch": "I124.39080.schedulesdirect.org",
-    "name": "CA: RDS Info",
-    "start": "20260428224500 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "Sports 30",
-    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
-    "cat": "Sports talk"
-  },
-  {
-    "ch": "I124.39080.schedulesdirect.org",
-    "name": "CA: RDS Info",
-    "start": "20260428230000 +0000",
-    "stop": "20260429010000 +0000",
+    "ch": "I123.15676.schedulesdirect.org",
+    "name": "CA: RDS",
+    "start": "20260429210000 +0000",
+    "stop": "20260429224500 +0000",
     "title": "Le 5 à 7 [NEW]",
     "desc": "Frédéric Plante et Yanick Bouchard donnent vie à cette version magazine de Sports 30.",
+    "cat": "Sports talk"
+  },
+  {
+    "ch": "I123.15676.schedulesdirect.org",
+    "name": "CA: RDS",
+    "start": "20260429224500 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "L'avant-match: Rocket de Laval [NEW]",
+    "desc": "",
+    "cat": "Hockey"
+  },
+  {
+    "ch": "I123.15676.schedulesdirect.org",
+    "name": "CA: RDS",
+    "start": "20260429230000 +0000",
+    "stop": "20260430013000 +0000",
+    "title": "Hockey AHL [NEW]",
+    "desc": "En provenance de la Place Bell, à Laval, au Québec.",
+    "cat": "Playoff sports"
+  },
+  {
+    "ch": "I123.15676.schedulesdirect.org",
+    "name": "CA: RDS",
+    "start": "20260430013000 +0000",
+    "stop": "20260430014500 +0000",
+    "title": "30 images/seconde",
+    "desc": "Des palmarès percutants réunissant les moments forts du monde du sport.",
+    "cat": "News"
+  },
+  {
+    "ch": "I123.15676.schedulesdirect.org",
+    "name": "CA: RDS",
+    "start": "20260430014500 +0000",
+    "stop": "20260430024500 +0000",
+    "title": "L'antichambre [NEW]",
+    "desc": "On propose des débats sur les sujets les plus chauds de l'actualité sportive.",
     "cat": "Sports talk"
   },
   {
@@ -5031,67 +5022,67 @@
     "cat": "Sports talk"
   },
   {
-    "ch": "I192.73271.schedulesdirect.org",
-    "name": "CA: RDS 2",
-    "start": "20260428110000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Tennis: Mutua Madrid Open 2026 [NEW]",
-    "desc": "En provenance de la Caja Mágica, à Madrid, en Espagne.",
-    "cat": "Tennis"
+    "ch": "I124.39080.schedulesdirect.org",
+    "name": "CA: RDS Info",
+    "start": "20260429200000 +0000",
+    "stop": "20260429210000 +0000",
+    "title": "On jase",
+    "desc": "On jase de la nouvelle édition du Canadien.",
+    "cat": "Talk"
   },
   {
-    "ch": "I192.73271.schedulesdirect.org",
-    "name": "CA: RDS 2",
-    "start": "20260428220000 +0000",
-    "stop": "20260428223000 +0000",
+    "ch": "I124.39080.schedulesdirect.org",
+    "name": "CA: RDS Info",
+    "start": "20260429210000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "25 ans d'émotions",
+    "desc": "Un retour sur les histoires humaines et les événements sportifs marquants des 25 dernières années.",
+    "cat": "Documentary"
+  },
+  {
+    "ch": "I124.39080.schedulesdirect.org",
+    "name": "CA: RDS Info",
+    "start": "20260429220000 +0000",
+    "stop": "20260429223000 +0000",
     "title": "On jase [NEW]",
     "desc": "On jase de la nouvelle édition du Canadien.",
     "cat": "Talk"
   },
   {
-    "ch": "I192.73271.schedulesdirect.org",
-    "name": "CA: RDS 2",
-    "start": "20260428223000 +0000",
-    "stop": "20260428224500 +0000",
+    "ch": "I124.39080.schedulesdirect.org",
+    "name": "CA: RDS Info",
+    "start": "20260429223000 +0000",
+    "stop": "20260429224500 +0000",
     "title": "Sports 30 [NEW]",
     "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I192.73271.schedulesdirect.org",
-    "name": "CA: RDS 2",
-    "start": "20260428224500 +0000",
-    "stop": "20260428230000 +0000",
+    "ch": "I124.39080.schedulesdirect.org",
+    "name": "CA: RDS Info",
+    "start": "20260429224500 +0000",
+    "stop": "20260429230000 +0000",
     "title": "Sports 30",
     "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I192.73271.schedulesdirect.org",
-    "name": "CA: RDS 2",
-    "start": "20260428230000 +0000",
-    "stop": "20260428233000 +0000",
-    "title": "3-2-1 régates",
-    "desc": "",
+    "ch": "I124.39080.schedulesdirect.org",
+    "name": "CA: RDS Info",
+    "start": "20260429230000 +0000",
+    "stop": "20260430014500 +0000",
+    "title": "Baseball MLB [NEW]",
+    "desc": "En provenance du Truist Park, à Atlanta, en Géorgie.",
+    "cat": "Baseball"
+  },
+  {
+    "ch": "I124.39080.schedulesdirect.org",
+    "name": "CA: RDS Info",
+    "start": "20260430014500 +0000",
+    "stop": "20260430024500 +0000",
+    "title": "L'antichambre [NEW]",
+    "desc": "On propose des débats sur les sujets les plus chauds de l'actualité sportive.",
     "cat": "Sports talk"
-  },
-  {
-    "ch": "I192.73271.schedulesdirect.org",
-    "name": "CA: RDS 2",
-    "start": "20260428233000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "Chicks and machines: autour du monde [NEW]",
-    "desc": "À la rencontre de femmes d'exception qui font changer et évoluer les choses dans le domaine des sports motorisés et dans certains métiers traditionnellement masculins.",
-    "cat": "Motorsports"
-  },
-  {
-    "ch": "I192.73271.schedulesdirect.org",
-    "name": "CA: RDS 2",
-    "start": "20260429000000 +0000",
-    "stop": "20260429003000 +0000",
-    "title": "Jeter l'ancre [NEW]",
-    "desc": "On découvre le monde de vie des plaisanciers par le biais d'entrevues.",
-    "cat": "Watersports"
   },
   {
     "ch": "I192.73271.schedulesdirect.org",
@@ -5292,57 +5283,57 @@
     "cat": "Tennis"
   },
   {
-    "ch": "I193.73142.schedulesdirect.org",
-    "name": "CA: TVA Sports FHD",
-    "start": "20260428180000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "Tennis: Tournoi de Madrid 2026 [NEW]",
-    "desc": "En provenance de la Caja Mágica, à Madrid, en Espagne.",
-    "cat": "Tennis"
+    "ch": "I192.73271.schedulesdirect.org",
+    "name": "CA: RDS 2",
+    "start": "20260429220000 +0000",
+    "stop": "20260429223000 +0000",
+    "title": "On jase [NEW]",
+    "desc": "On jase de la nouvelle édition du Canadien.",
+    "cat": "Talk"
   },
   {
-    "ch": "I193.73142.schedulesdirect.org",
-    "name": "CA: TVA Sports FHD",
-    "start": "20260428200000 +0000",
-    "stop": "20260428203000 +0000",
-    "title": "Héroïnes",
-    "desc": "Heureusement, les conversations entre athlètes autour de la santé mentale et du soutien sont plus présentes que jamais dans les esprits.",
-    "cat": "Documentary"
-  },
-  {
-    "ch": "I193.73142.schedulesdirect.org",
-    "name": "CA: TVA Sports FHD",
-    "start": "20260428203000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "Jeux de la semaine MLB",
-    "desc": "Une présentation des matchs de la Ligue majeure de baseball.",
-    "cat": "Baseball"
-  },
-  {
-    "ch": "I193.73142.schedulesdirect.org",
-    "name": "CA: TVA Sports FHD",
-    "start": "20260428210000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "JiC [NEW]",
-    "desc": "Avec une liste impressionnante de collaborateurs, Jean-Charles Lajoie aborde le sport sous tous ses angles à sa manière, dans un univers télévisuel éclaté.",
+    "ch": "I192.73271.schedulesdirect.org",
+    "name": "CA: RDS 2",
+    "start": "20260429223000 +0000",
+    "stop": "20260429224500 +0000",
+    "title": "Sports 30 [NEW]",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I193.73142.schedulesdirect.org",
-    "name": "CA: TVA Sports FHD",
-    "start": "20260428230000 +0000",
-    "stop": "20260428233000 +0000",
-    "title": "Avant-match LNH [NEW]",
-    "desc": "Présentation des points à surveiller avant la présentation du match de hockey.",
+    "ch": "I192.73271.schedulesdirect.org",
+    "name": "CA: RDS 2",
+    "start": "20260429224500 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Sports 30",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I193.73142.schedulesdirect.org",
-    "name": "CA: TVA Sports FHD",
-    "start": "20260428233000 +0000",
-    "stop": "20260429020000 +0000",
-    "title": "Hockey LNH [NEW]",
-    "desc": "Les Sabres de Buffalo accueillent les Bruins de Boston pour le cinquième match du premier tour de l'Association de l'Est.",
+    "ch": "I192.73271.schedulesdirect.org",
+    "name": "CA: RDS 2",
+    "start": "20260429230000 +0000",
+    "stop": "20260429231500 +0000",
+    "title": "Sports 30",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
+    "cat": "Sports talk"
+  },
+  {
+    "ch": "I192.73271.schedulesdirect.org",
+    "name": "CA: RDS 2",
+    "start": "20260429231500 +0000",
+    "stop": "20260429233000 +0000",
+    "title": "Sports 30",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
+    "cat": "Sports talk"
+  },
+  {
+    "ch": "I192.73271.schedulesdirect.org",
+    "name": "CA: RDS 2",
+    "start": "20260429233000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "Basketball NBA [NEW]",
+    "desc": "Les Raptors de Toronto affrontent les Cavaliers de Cleveland lors du cinquième match de leur série éliminatoire à la Rocket Arena.",
     "cat": "Playoff sports"
   },
   {
@@ -5436,67 +5427,58 @@
     "cat": "Tennis"
   },
   {
-    "ch": "I400.11182.schedulesdirect.org",
-    "name": "TSN 1",
-    "start": "20260428183000 +0000",
-    "stop": "20260428190000 +0000",
-    "title": "Game and Glory [NEW]",
-    "desc": "Diving into the passion, noise and unmatched energy of football fandom.",
-    "cat": "Soccer"
+    "ch": "I193.73142.schedulesdirect.org",
+    "name": "CA: TVA Sports FHD",
+    "start": "20260429200000 +0000",
+    "stop": "20260429203000 +0000",
+    "title": "50 ans de sports",
+    "desc": "On nous fait revivre les plus grands moments du sport de chaque année.",
+    "cat": "Documentary"
   },
   {
-    "ch": "I400.11182.schedulesdirect.org",
-    "name": "TSN 1",
-    "start": "20260428190000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "NBA Today [NEW]",
-    "desc": "In-depth, comprehensive daily coverage of all aspects of the NBA from expert analysts.",
+    "ch": "I193.73142.schedulesdirect.org",
+    "name": "CA: TVA Sports FHD",
+    "start": "20260429203000 +0000",
+    "stop": "20260429210000 +0000",
+    "title": "L'académie du guide de l'auto",
+    "desc": "La très grande drag queen Rita Baga aura-t-elle besoin d'un toit ouvrant pour rivaliser avec la colorée Natalie Choquette à bord de la Mercedes EQB, présentée par Antoine Joubert; puis dernière étape de l'escapade routière d'Anaïs Favron en Norvège.",
+    "cat": "Auto"
+  },
+  {
+    "ch": "I193.73142.schedulesdirect.org",
+    "name": "CA: TVA Sports FHD",
+    "start": "20260429210000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "JiC [NEW]",
+    "desc": "Avec une liste impressionnante de collaborateurs, Jean-Charles Lajoie aborde le sport sous tous ses angles à sa manière, dans un univers télévisuel éclaté.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I400.11182.schedulesdirect.org",
-    "name": "TSN 1",
-    "start": "20260428200000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "NFL Live [NEW]",
-    "desc": "Host Laura Rutledge takes the helm of this weekday show featuring the likes of Marcus Spears, Dan Orlovsky, Mina Kimes, and Adam Schefter. The \"NFL Live\" crew entertains fans while offering all the latest news and analysis from across the NFL.",
-    "cat": "Football"
-  },
-  {
-    "ch": "I400.11182.schedulesdirect.org",
-    "name": "TSN 1",
-    "start": "20260428210000 +0000",
-    "stop": "20260428213000 +0000",
-    "title": "SC",
-    "desc": "Top plays from the 2025-26 NFL season.",
-    "cat": "Anthology"
-  },
-  {
-    "ch": "I400.11182.schedulesdirect.org",
-    "name": "TSN 1",
-    "start": "20260428213000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Pardon the Interruption [NEW]",
-    "desc": "The debate is the story in this fast-paced, half-hour series hosted by former Washington Post sportswriters Tony Kornheiser and Michael Wilbon. The pair engage in high-energy discussions, conduct interviews and often argue over topics not even related to sports. Other sports reporters appear as guests and offer opinions on the top stories of the day.",
+    "ch": "I193.73142.schedulesdirect.org",
+    "name": "CA: TVA Sports FHD",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Avant-match LNH [NEW]",
+    "desc": "Présentation des points à surveiller avant la présentation du match de hockey.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I400.11182.schedulesdirect.org",
-    "name": "TSN 1",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "SportsCentre [NEW]",
-    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
-    "cat": "News"
+    "ch": "I193.73142.schedulesdirect.org",
+    "name": "CA: TVA Sports FHD",
+    "start": "20260429230000 +0000",
+    "stop": "20260430014500 +0000",
+    "title": "Hockey LNH [NEW]",
+    "desc": "Le Lightning de Tampa Bay accueille les Canadiens de Montréal pour le cinquième match du premier tour de l'Association de l'Est.",
+    "cat": "Playoff sports"
   },
   {
-    "ch": "I400.11182.schedulesdirect.org",
-    "name": "TSN 1",
-    "start": "20260428230000 +0000",
-    "stop": "20260429010000 +0000",
-    "title": "2026 CFL Draft [NEW]",
-    "desc": "Canadian Football League teams look to improve their rosters in the 2026 Draft.",
-    "cat": "Special"
+    "ch": "I193.73142.schedulesdirect.org",
+    "name": "CA: TVA Sports FHD",
+    "start": "20260430014500 +0000",
+    "stop": "20260430024500 +0000",
+    "title": "L'après-match LNH [NEW]",
+    "desc": "Dave Morissette et ses collaborateurs propulsent les amateurs de hockey au coeur de l'action de la LNH avec des analyses, faits saillants et opinions des matchs de la soirée.",
+    "cat": "Sports talk"
   },
   {
     "ch": "I400.11182.schedulesdirect.org",
@@ -5583,7 +5565,7 @@
     "ch": "I400.11182.schedulesdirect.org",
     "name": "TSN 1",
     "start": "20260429083000 +0000",
-    "stop": "20260429090000 +0000",
+    "stop": "20260429093000 +0000",
     "title": "SportsCentre",
     "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
     "cat": "News"
@@ -5591,8 +5573,8 @@
   {
     "ch": "I400.11182.schedulesdirect.org",
     "name": "TSN 1",
-    "start": "20260429090000 +0000",
-    "stop": "20260429100000 +0000",
+    "start": "20260429093000 +0000",
+    "stop": "20260429103000 +0000",
     "title": "SportsCentre",
     "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
     "cat": "News"
@@ -5600,11 +5582,20 @@
   {
     "ch": "I400.11182.schedulesdirect.org",
     "name": "TSN 1",
-    "start": "20260429100000 +0000",
+    "start": "20260429103000 +0000",
+    "stop": "20260429113000 +0000",
+    "title": "SportsCentre",
+    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
+    "cat": "News"
+  },
+  {
+    "ch": "I400.11182.schedulesdirect.org",
+    "name": "TSN 1",
+    "start": "20260429113000 +0000",
     "stop": "20260429123000 +0000",
-    "title": "2026 IIHF U-18 World Championship [NEW]",
-    "desc": "Relegation Game.",
-    "cat": "Playoff sports"
+    "title": "SportsCentre",
+    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
+    "cat": "News"
   },
   {
     "ch": "I400.11182.schedulesdirect.org",
@@ -5670,58 +5661,58 @@
     "cat": "Sports talk"
   },
   {
-    "ch": "I401.18990.schedulesdirect.org",
-    "name": "TSN 2",
-    "start": "20260428170000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "2026 Mutua Madrid Open Tennis [NEW]",
-    "desc": "From Caja Magica in Madrid, Spain.",
-    "cat": "Tennis"
+    "ch": "I400.11182.schedulesdirect.org",
+    "name": "TSN 1",
+    "start": "20260429200000 +0000",
+    "stop": "20260429210000 +0000",
+    "title": "NFL Live [NEW]",
+    "desc": "Host Laura Rutledge takes the helm of this weekday show featuring the likes of Marcus Spears, Dan Orlovsky, Mina Kimes, and Adam Schefter. The \"NFL Live\" crew entertains fans while offering all the latest news and analysis from across the NFL.",
+    "cat": "Football"
   },
   {
-    "ch": "I401.18990.schedulesdirect.org",
-    "name": "TSN 2",
-    "start": "20260428220000 +0000",
-    "stop": "20260428223000 +0000",
+    "ch": "I400.11182.schedulesdirect.org",
+    "name": "TSN 1",
+    "start": "20260429210000 +0000",
+    "stop": "20260429213000 +0000",
     "title": "SC",
     "desc": "The best and worst from the world of sports.",
     "cat": "Anthology"
   },
   {
-    "ch": "I401.18990.schedulesdirect.org",
-    "name": "TSN 2",
-    "start": "20260428223000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "SC",
-    "desc": "The best and worst from the world of sports.",
-    "cat": "Anthology"
+    "ch": "I400.11182.schedulesdirect.org",
+    "name": "TSN 1",
+    "start": "20260429213000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "Pardon the Interruption [NEW]",
+    "desc": "The debate is the story in this fast-paced, half-hour series hosted by former Washington Post sportswriters Tony Kornheiser and Michael Wilbon. The pair engage in high-energy discussions, conduct interviews and often argue over topics not even related to sports. Other sports reporters appear as guests and offer opinions on the top stories of the day.",
+    "cat": "Sports talk"
   },
   {
-    "ch": "I401.18990.schedulesdirect.org",
-    "name": "TSN 2",
-    "start": "20260428230000 +0000",
-    "stop": "20260428233000 +0000",
-    "title": "SC",
-    "desc": "The best and worst from the world of sports.",
-    "cat": "Anthology"
+    "ch": "I400.11182.schedulesdirect.org",
+    "name": "TSN 1",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "SportsCentre [NEW]",
+    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
+    "cat": "News"
   },
   {
-    "ch": "I401.18990.schedulesdirect.org",
-    "name": "TSN 2",
-    "start": "20260428233000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "SC",
-    "desc": "The best and worst from the world of sports.",
-    "cat": "Anthology"
+    "ch": "I400.11182.schedulesdirect.org",
+    "name": "TSN 1",
+    "start": "20260429230000 +0000",
+    "stop": "20260430013000 +0000",
+    "title": "NBA Basketball [NEW]",
+    "desc": "The Magic face the Pistons at Little Caesars Arena for Game 5 of the East first round. The Magic lead the series 3-1 after winning Game 4. Desmond Bane led the Magic with 22 points and five 3-pointers. Cade Cunningham scored a game-high 25 points.",
+    "cat": "Playoff sports"
   },
   {
-    "ch": "I401.18990.schedulesdirect.org",
-    "name": "TSN 2",
-    "start": "20260429000000 +0000",
-    "stop": "20260429003000 +0000",
-    "title": "SC",
-    "desc": "The best and worst from the world of sports.",
-    "cat": "Anthology"
+    "ch": "I400.11182.schedulesdirect.org",
+    "name": "TSN 1",
+    "start": "20260430013000 +0000",
+    "stop": "20260430023000 +0000",
+    "title": "SportsCentre [NEW]",
+    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
+    "cat": "News"
   },
   {
     "ch": "I401.18990.schedulesdirect.org",
@@ -6021,67 +6012,67 @@
     "cat": "Golf"
   },
   {
-    "ch": "I402.90118.schedulesdirect.org",
-    "name": "TSN 3",
-    "start": "20260428183000 +0000",
-    "stop": "20260428190000 +0000",
-    "title": "Game and Glory [NEW]",
-    "desc": "Diving into the passion, noise and unmatched energy of football fandom.",
-    "cat": "Soccer"
+    "ch": "I401.18990.schedulesdirect.org",
+    "name": "TSN 2",
+    "start": "20260429200000 +0000",
+    "stop": "20260429203000 +0000",
+    "title": "PGA TOUR: The CUT [NEW]",
+    "desc": "Highlighting the lives and interests of the players that make up the world of golf while offering fans a new and modern look at the PGA Tour and its players.",
+    "cat": "Golf"
   },
   {
-    "ch": "I402.90118.schedulesdirect.org",
-    "name": "TSN 3",
-    "start": "20260428190000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "NBA Today [NEW]",
-    "desc": "In-depth, comprehensive daily coverage of all aspects of the NBA from expert analysts.",
-    "cat": "Sports talk"
+    "ch": "I401.18990.schedulesdirect.org",
+    "name": "TSN 2",
+    "start": "20260429203000 +0000",
+    "stop": "20260429213000 +0000",
+    "title": "Golf Talk Canada",
+    "desc": "TSN's Mark Zecchino and Bob Weeks discuss the latest news in the world of golf.",
+    "cat": "Golf"
   },
   {
-    "ch": "I402.90118.schedulesdirect.org",
-    "name": "TSN 3",
-    "start": "20260428200000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "NFL Live [NEW]",
-    "desc": "Host Laura Rutledge takes the helm of this weekday show featuring the likes of Marcus Spears, Dan Orlovsky, Mina Kimes, and Adam Schefter. The \"NFL Live\" crew entertains fans while offering all the latest news and analysis from across the NFL.",
-    "cat": "Football"
+    "ch": "I401.18990.schedulesdirect.org",
+    "name": "TSN 2",
+    "start": "20260429213000 +0000",
+    "stop": "20260429223000 +0000",
+    "title": "PBR Bull Riding",
+    "desc": "Coverage of classic bull riding events from around the United States.",
+    "cat": "Bull riding"
   },
   {
-    "ch": "I402.90118.schedulesdirect.org",
-    "name": "TSN 3",
-    "start": "20260428210000 +0000",
-    "stop": "20260428213000 +0000",
+    "ch": "I401.18990.schedulesdirect.org",
+    "name": "TSN 2",
+    "start": "20260429223000 +0000",
+    "stop": "20260429230000 +0000",
     "title": "SC",
-    "desc": "Top plays from the 2025-26 NFL season.",
+    "desc": "The best and worst from the world of sports.",
     "cat": "Anthology"
   },
   {
-    "ch": "I402.90118.schedulesdirect.org",
-    "name": "TSN 3",
-    "start": "20260428213000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Pardon the Interruption [NEW]",
-    "desc": "The debate is the story in this fast-paced, half-hour series hosted by former Washington Post sportswriters Tony Kornheiser and Michael Wilbon. The pair engage in high-energy discussions, conduct interviews and often argue over topics not even related to sports. Other sports reporters appear as guests and offer opinions on the top stories of the day.",
-    "cat": "Sports talk"
+    "ch": "I401.18990.schedulesdirect.org",
+    "name": "TSN 2",
+    "start": "20260429230000 +0000",
+    "stop": "20260429233000 +0000",
+    "title": "SC",
+    "desc": "The best and worst from the world of sports.",
+    "cat": "Anthology"
   },
   {
-    "ch": "I402.90118.schedulesdirect.org",
-    "name": "TSN 3",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "SportsCentre [NEW]",
-    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
-    "cat": "News"
+    "ch": "I401.18990.schedulesdirect.org",
+    "name": "TSN 2",
+    "start": "20260429233000 +0000",
+    "stop": "20260430000000 +0000",
+    "title": "SC",
+    "desc": "The best and worst from the world of sports.",
+    "cat": "Anthology"
   },
   {
-    "ch": "I402.90118.schedulesdirect.org",
-    "name": "TSN 3",
-    "start": "20260428230000 +0000",
-    "stop": "20260429010000 +0000",
-    "title": "2026 CFL Draft [NEW]",
-    "desc": "Canadian Football League teams look to improve their rosters in the 2026 Draft.",
-    "cat": "Special"
+    "ch": "I401.18990.schedulesdirect.org",
+    "name": "TSN 2",
+    "start": "20260430000000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "All Elite Wrestling: Dynamite [NEW]",
+    "desc": "All Elite Wrestling continues to inject new spirit, freshness and energy into mainstream wrestling featuring a world-class roster of diverse male and female wrestlers.",
+    "cat": "Pro wrestling"
   },
   {
     "ch": "I402.90118.schedulesdirect.org",
@@ -6255,49 +6246,40 @@
     "cat": "Tennis"
   },
   {
-    "ch": "I403.90122.schedulesdirect.org",
-    "name": "TSN 4",
-    "start": "20260428180000 +0000",
-    "stop": "20260428190000 +0000",
-    "title": "SC",
-    "desc": "Features the top 100 catches of all-time.",
-    "cat": "Anthology"
+    "ch": "I402.90118.schedulesdirect.org",
+    "name": "TSN 3",
+    "start": "20260429200000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "2026 Mutua Madrid Open Tennis [NEW]",
+    "desc": "From Caja Magica in Madrid, Spain.",
+    "cat": "Tennis"
   },
   {
-    "ch": "I403.90122.schedulesdirect.org",
-    "name": "TSN 4",
-    "start": "20260428190000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "NBA Today [NEW]",
-    "desc": "In-depth, comprehensive daily coverage of all aspects of the NBA from expert analysts.",
-    "cat": "Sports talk"
-  },
-  {
-    "ch": "I403.90122.schedulesdirect.org",
-    "name": "TSN 4",
-    "start": "20260428200000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Overdrive [NEW]",
-    "desc": "Expert analysis on the day's biggest sports stories.",
-    "cat": "Sports talk"
-  },
-  {
-    "ch": "I403.90122.schedulesdirect.org",
-    "name": "TSN 4",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
+    "ch": "I402.90118.schedulesdirect.org",
+    "name": "TSN 3",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
     "title": "SportsCentre [NEW]",
     "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
     "cat": "News"
   },
   {
-    "ch": "I403.90122.schedulesdirect.org",
-    "name": "TSN 4",
-    "start": "20260428230000 +0000",
-    "stop": "20260429013000 +0000",
+    "ch": "I402.90118.schedulesdirect.org",
+    "name": "TSN 3",
+    "start": "20260429230000 +0000",
+    "stop": "20260430013000 +0000",
     "title": "NBA Basketball [NEW]",
-    "desc": "Philadelphia 76ers battle Boston Celtics in Game 5 of their playoff series at TD Garden. Boston holds a 3-1 advantage in the best-of-seven series following a dominant 128-96 victory over Philadelphia in Game 4 of the crucial postseason matchup.",
+    "desc": "The Magic face the Pistons at Little Caesars Arena for Game 5 of the East first round. The Magic lead the series 3-1 after winning Game 4. Desmond Bane led the Magic with 22 points and five 3-pointers. Cade Cunningham scored a game-high 25 points.",
     "cat": "Playoff sports"
+  },
+  {
+    "ch": "I402.90118.schedulesdirect.org",
+    "name": "TSN 3",
+    "start": "20260430013000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "SportsCentre [NEW]",
+    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
+    "cat": "News"
   },
   {
     "ch": "I403.90122.schedulesdirect.org",
@@ -6393,28 +6375,37 @@
     "ch": "I403.90122.schedulesdirect.org",
     "name": "TSN 4",
     "start": "20260429143000 +0000",
-    "stop": "20260429150000 +0000",
-    "title": "SC With Jay Onrait",
-    "desc": "The latest scores and highlights, with host Jay Onrait.",
-    "cat": "Sports talk"
-  },
-  {
-    "ch": "I403.90122.schedulesdirect.org",
-    "name": "TSN 4",
-    "start": "20260429150000 +0000",
-    "stop": "20260429160000 +0000",
-    "title": "SC With Jay Onrait",
-    "desc": "The latest scores and highlights, with host Jay Onrait.",
-    "cat": "Sports talk"
-  },
-  {
-    "ch": "I403.90122.schedulesdirect.org",
-    "name": "TSN 4",
-    "start": "20260429160000 +0000",
-    "stop": "20260429183000 +0000",
+    "stop": "20260429163000 +0000",
     "title": "2026 IIHF U-18 World Championship [NEW]",
     "desc": "Fourth Quarterfinal.",
-    "cat": "Hockey"
+    "cat": "Playoff sports"
+  },
+  {
+    "ch": "I403.90122.schedulesdirect.org",
+    "name": "TSN 4",
+    "start": "20260429163000 +0000",
+    "stop": "20260429173000 +0000",
+    "title": "SC",
+    "desc": "Features the top 100 catches of all-time.",
+    "cat": "Anthology"
+  },
+  {
+    "ch": "I403.90122.schedulesdirect.org",
+    "name": "TSN 4",
+    "start": "20260429173000 +0000",
+    "stop": "20260429180000 +0000",
+    "title": "SC",
+    "desc": "The best and worst from the world of sports.",
+    "cat": "Anthology"
+  },
+  {
+    "ch": "I403.90122.schedulesdirect.org",
+    "name": "TSN 4",
+    "start": "20260429180000 +0000",
+    "stop": "20260429183000 +0000",
+    "title": "SC",
+    "desc": "The best and worst from the world of sports.",
+    "cat": "Anthology"
   },
   {
     "ch": "I403.90122.schedulesdirect.org",
@@ -6435,40 +6426,40 @@
     "cat": "Sports talk"
   },
   {
-    "ch": "I404.90124.schedulesdirect.org",
-    "name": "TSN 5",
-    "start": "20260428180000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "2026 Mutua Madrid Open Tennis [NEW]",
-    "desc": "From Caja Magica in Madrid, Spain.",
-    "cat": "Tennis"
-  },
-  {
-    "ch": "I404.90124.schedulesdirect.org",
-    "name": "TSN 5",
-    "start": "20260428200000 +0000",
-    "stop": "20260428220000 +0000",
+    "ch": "I403.90122.schedulesdirect.org",
+    "name": "TSN 4",
+    "start": "20260429200000 +0000",
+    "stop": "20260429220000 +0000",
     "title": "Overdrive [NEW]",
     "desc": "Expert analysis on the day's biggest sports stories.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I404.90124.schedulesdirect.org",
-    "name": "TSN 5",
-    "start": "20260428220000 +0000",
-    "stop": "20260428233000 +0000",
+    "ch": "I403.90122.schedulesdirect.org",
+    "name": "TSN 4",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
     "title": "SportsCentre [NEW]",
     "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
     "cat": "News"
   },
   {
-    "ch": "I404.90124.schedulesdirect.org",
-    "name": "TSN 5",
-    "start": "20260428233000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "SC",
-    "desc": "2024 SC Top 10-SC: Coaches Gone Wild.",
-    "cat": "Anthology"
+    "ch": "I403.90122.schedulesdirect.org",
+    "name": "TSN 4",
+    "start": "20260429230000 +0000",
+    "stop": "20260430013000 +0000",
+    "title": "NBA Basketball [NEW]",
+    "desc": "The Magic face the Pistons at Little Caesars Arena for Game 5 of the East first round. The Magic lead the series 3-1 after winning Game 4. Desmond Bane led the Magic with 22 points and five 3-pointers. Cade Cunningham scored a game-high 25 points.",
+    "cat": "Playoff sports"
+  },
+  {
+    "ch": "I403.90122.schedulesdirect.org",
+    "name": "TSN 4",
+    "start": "20260430013000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "SportsCentre [NEW]",
+    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
+    "cat": "News"
   },
   {
     "ch": "I404.90124.schedulesdirect.org",
@@ -6642,49 +6633,40 @@
     "cat": "Sports talk"
   },
   {
-    "ch": "I405.62111.schedulesdirect.org",
-    "name": "Sportsnet Ontario",
-    "start": "20260428180000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "MLB Baseball",
-    "desc": "Toronto Blue Jays host Boston Red Sox in a Major League Baseball game at Rogers Centre. This is game two of their regular season head-to-head series. Starting pitcher Eric Lauer takes the mound for the hosts against the visiting Red Sox.",
-    "cat": "Baseball"
-  },
-  {
-    "ch": "I405.62111.schedulesdirect.org",
-    "name": "Sportsnet Ontario",
-    "start": "20260428210000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Real Kyper & Bourne [NEW]",
-    "desc": "Nick Kypreos and Justin Bourne talk all things in the NHL.",
-    "cat": "Hockey"
-  },
-  {
-    "ch": "I405.62111.schedulesdirect.org",
-    "name": "Sportsnet Ontario",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "The FAN Pregame [NEW]",
-    "desc": "Ailish Forfar and Justin Cuthbert discuss the stories that matter most to sports fans.",
+    "ch": "I404.90124.schedulesdirect.org",
+    "name": "TSN 5",
+    "start": "20260429200000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "Overdrive [NEW]",
+    "desc": "Expert analysis on the day's biggest sports stories.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I405.62111.schedulesdirect.org",
-    "name": "Sportsnet Ontario",
-    "start": "20260428230000 +0000",
-    "stop": "20260428233000 +0000",
-    "title": "NHL in 30",
-    "desc": "Game 5, from April 27, 2026.",
-    "cat": "Hockey"
+    "ch": "I404.90124.schedulesdirect.org",
+    "name": "TSN 5",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "SportsCentre [NEW]",
+    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
+    "cat": "News"
   },
   {
-    "ch": "I405.62111.schedulesdirect.org",
-    "name": "Sportsnet Ontario",
-    "start": "20260428233000 +0000",
-    "stop": "20260429020000 +0000",
-    "title": "NHL Hockey [NEW]",
-    "desc": "Boston Bruins battle Buffalo Sabres in Game 5 of their playoff series at KeyBank Center. Buffalo holds a commanding 3-1 advantage in the best-of-seven series following a dominant 6-1 victory over Boston in Game 4 of the crucial postseason matchup.",
-    "cat": "Playoff sports"
+    "ch": "I404.90124.schedulesdirect.org",
+    "name": "TSN 5",
+    "start": "20260429230000 +0000",
+    "stop": "20260430013000 +0000",
+    "title": "MLB Baseball [NEW]",
+    "desc": "The Tigers and Braves continue their three-game set at Truist Park. While NL East leading Atlanta looks to improve its 10-5 home mark, Detroit looks to bounce back from their 12-loss road mark. The Braves swept the Tigers in Atlanta in 2025.",
+    "cat": "Baseball"
+  },
+  {
+    "ch": "I404.90124.schedulesdirect.org",
+    "name": "TSN 5",
+    "start": "20260430013000 +0000",
+    "stop": "20260430023000 +0000",
+    "title": "SportsCentre [NEW]",
+    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
+    "cat": "News"
   },
   {
     "ch": "I405.62111.schedulesdirect.org",
@@ -6867,48 +6849,30 @@
     "cat": "Baseball"
   },
   {
-    "ch": "I406.18798.schedulesdirect.org",
-    "name": "Sportsnet East",
-    "start": "20260428180000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "MLB Baseball",
-    "desc": "Toronto Blue Jays host Boston Red Sox in a Major League Baseball game at Rogers Centre. This is game two of their regular season head-to-head series. Starting pitcher Eric Lauer takes the mound for the hosts against the visiting Red Sox.",
-    "cat": "Baseball"
-  },
-  {
-    "ch": "I406.18798.schedulesdirect.org",
-    "name": "Sportsnet East",
-    "start": "20260428210000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Real Kyper & Bourne [NEW]",
-    "desc": "Nick Kypreos and Justin Bourne talk all things in the NHL.",
-    "cat": "Hockey"
-  },
-  {
-    "ch": "I406.18798.schedulesdirect.org",
-    "name": "Sportsnet East",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
+    "ch": "I405.62111.schedulesdirect.org",
+    "name": "Sportsnet Ontario",
+    "start": "20260429220000 +0000",
+    "stop": "20260429223000 +0000",
     "title": "The FAN Pregame [NEW]",
     "desc": "Ailish Forfar and Justin Cuthbert discuss the stories that matter most to sports fans.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I406.18798.schedulesdirect.org",
-    "name": "Sportsnet East",
-    "start": "20260428230000 +0000",
-    "stop": "20260428233000 +0000",
-    "title": "NHL in 30",
-    "desc": "Game 5, from April 27, 2026.",
+    "ch": "I405.62111.schedulesdirect.org",
+    "name": "Sportsnet Ontario",
+    "start": "20260429223000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Hockey Central [NEW]",
+    "desc": "Breaking news, analysis and debate from around the NHL.",
     "cat": "Hockey"
   },
   {
-    "ch": "I406.18798.schedulesdirect.org",
-    "name": "Sportsnet East",
-    "start": "20260428233000 +0000",
-    "stop": "20260429020000 +0000",
+    "ch": "I405.62111.schedulesdirect.org",
+    "name": "Sportsnet Ontario",
+    "start": "20260429230000 +0000",
+    "stop": "20260430020000 +0000",
     "title": "NHL Hockey [NEW]",
-    "desc": "Boston Bruins battle Buffalo Sabres in Game 5 of their playoff series at KeyBank Center. Buffalo holds a commanding 3-1 advantage in the best-of-seven series following a dominant 6-1 victory over Boston in Game 4 of the crucial postseason matchup.",
+    "desc": "Montreal faces Tampa Bay in Game 5 of the East First Round at Benchmark International Arena. The series remains tied 2-2 after the Lightning won Game 4. Zachary Bolduc and Cole Caufield staked Montreal to an early 2-0 lead before Tampa Bay rallied.",
     "cat": "Playoff sports"
   },
   {
@@ -7092,48 +7056,30 @@
     "cat": "Baseball"
   },
   {
-    "ch": "I407.18801.schedulesdirect.org",
-    "name": "Sportsnet Pacific",
-    "start": "20260428180000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "MLB Baseball",
-    "desc": "Toronto Blue Jays host Boston Red Sox in a Major League Baseball game at Rogers Centre. This is game two of their regular season head-to-head series. Starting pitcher Eric Lauer takes the mound for the hosts against the visiting Red Sox.",
-    "cat": "Baseball"
-  },
-  {
-    "ch": "I407.18801.schedulesdirect.org",
-    "name": "Sportsnet Pacific",
-    "start": "20260428210000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Real Kyper & Bourne [NEW]",
-    "desc": "Nick Kypreos and Justin Bourne talk all things in the NHL.",
-    "cat": "Hockey"
-  },
-  {
-    "ch": "I407.18801.schedulesdirect.org",
-    "name": "Sportsnet Pacific",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
+    "ch": "I406.18798.schedulesdirect.org",
+    "name": "Sportsnet East",
+    "start": "20260429220000 +0000",
+    "stop": "20260429223000 +0000",
     "title": "The FAN Pregame [NEW]",
     "desc": "Ailish Forfar and Justin Cuthbert discuss the stories that matter most to sports fans.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I407.18801.schedulesdirect.org",
-    "name": "Sportsnet Pacific",
-    "start": "20260428230000 +0000",
-    "stop": "20260428233000 +0000",
-    "title": "NHL in 30",
-    "desc": "Game 5, from April 27, 2026.",
+    "ch": "I406.18798.schedulesdirect.org",
+    "name": "Sportsnet East",
+    "start": "20260429223000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Hockey Central [NEW]",
+    "desc": "Breaking news, analysis and debate from around the NHL.",
     "cat": "Hockey"
   },
   {
-    "ch": "I407.18801.schedulesdirect.org",
-    "name": "Sportsnet Pacific",
-    "start": "20260428233000 +0000",
-    "stop": "20260429020000 +0000",
+    "ch": "I406.18798.schedulesdirect.org",
+    "name": "Sportsnet East",
+    "start": "20260429230000 +0000",
+    "stop": "20260430020000 +0000",
     "title": "NHL Hockey [NEW]",
-    "desc": "Boston Bruins battle Buffalo Sabres in Game 5 of their playoff series at KeyBank Center. Buffalo holds a commanding 3-1 advantage in the best-of-seven series following a dominant 6-1 victory over Boston in Game 4 of the crucial postseason matchup.",
+    "desc": "Montreal faces Tampa Bay in Game 5 of the East First Round at Benchmark International Arena. The series remains tied 2-2 after the Lightning won Game 4. Zachary Bolduc and Cole Caufield staked Montreal to an early 2-0 lead before Tampa Bay rallied.",
     "cat": "Playoff sports"
   },
   {
@@ -7317,58 +7263,31 @@
     "cat": "Baseball"
   },
   {
-    "ch": "I408.18800.schedulesdirect.org",
-    "name": "Sportsnet West",
-    "start": "20260428180000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "MLB Baseball",
-    "desc": "Toronto Blue Jays host Boston Red Sox in a Major League Baseball game at Rogers Centre. This is game two of their regular season head-to-head series. Starting pitcher Eric Lauer takes the mound for the hosts against the visiting Red Sox.",
-    "cat": "Baseball"
-  },
-  {
-    "ch": "I408.18800.schedulesdirect.org",
-    "name": "Sportsnet West",
-    "start": "20260428210000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Real Kyper & Bourne [NEW]",
-    "desc": "Nick Kypreos and Justin Bourne talk all things in the NHL.",
-    "cat": "Hockey"
-  },
-  {
-    "ch": "I408.18800.schedulesdirect.org",
-    "name": "Sportsnet West",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
+    "ch": "I407.18801.schedulesdirect.org",
+    "name": "Sportsnet Pacific",
+    "start": "20260429220000 +0000",
+    "stop": "20260429223000 +0000",
     "title": "The FAN Pregame [NEW]",
     "desc": "Ailish Forfar and Justin Cuthbert discuss the stories that matter most to sports fans.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I408.18800.schedulesdirect.org",
-    "name": "Sportsnet West",
-    "start": "20260428230000 +0000",
-    "stop": "20260428233000 +0000",
-    "title": "NHL in 30",
-    "desc": "Game 5, from April 27, 2026.",
+    "ch": "I407.18801.schedulesdirect.org",
+    "name": "Sportsnet Pacific",
+    "start": "20260429223000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Hockey Central [NEW]",
+    "desc": "Breaking news, analysis and debate from around the NHL.",
     "cat": "Hockey"
   },
   {
-    "ch": "I408.18800.schedulesdirect.org",
-    "name": "Sportsnet West",
-    "start": "20260428233000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "NHL in 30",
-    "desc": "Game 1 from April 20, 2026.",
-    "cat": "Hockey"
-  },
-  {
-    "ch": "I408.18800.schedulesdirect.org",
-    "name": "Sportsnet West",
-    "start": "20260429000000 +0000",
-    "stop": "20260429003000 +0000",
-    "title": "NHL in 30",
-    "desc": "Game 2 from April 22, 2026.",
-    "cat": "Hockey"
+    "ch": "I407.18801.schedulesdirect.org",
+    "name": "Sportsnet Pacific",
+    "start": "20260429230000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "NHL Hockey [NEW]",
+    "desc": "Montreal faces Tampa Bay in Game 5 of the East First Round at Benchmark International Arena. The series remains tied 2-2 after the Lightning won Game 4. Zachary Bolduc and Cole Caufield staked Montreal to an early 2-0 lead before Tampa Bay rallied.",
+    "cat": "Playoff sports"
   },
   {
     "ch": "I408.18800.schedulesdirect.org",
@@ -7578,67 +7497,31 @@
     "cat": "Baseball"
   },
   {
-    "ch": "I409.68858.schedulesdirect.org",
-    "name": "Sportsnet One",
-    "start": "20260428180000 +0000",
-    "stop": "20260428190000 +0000",
-    "title": "World Poker Tour",
-    "desc": "Professional poker action from a series of international tournaments.",
-    "cat": "Poker"
+    "ch": "I408.18800.schedulesdirect.org",
+    "name": "Sportsnet West",
+    "start": "20260429220000 +0000",
+    "stop": "20260429223000 +0000",
+    "title": "The FAN Pregame [NEW]",
+    "desc": "Ailish Forfar and Justin Cuthbert discuss the stories that matter most to sports fans.",
+    "cat": "Sports talk"
   },
   {
-    "ch": "I409.68858.schedulesdirect.org",
-    "name": "Sportsnet One",
-    "start": "20260428190000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "World Poker Tour",
-    "desc": "Professional poker action from a series of international tournaments.",
-    "cat": "Poker"
-  },
-  {
-    "ch": "I409.68858.schedulesdirect.org",
-    "name": "Sportsnet One",
-    "start": "20260428200000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "NHL Tonight: First Shift [NEW]",
-    "desc": "A conversational style show featuring hard-hitting opinions and analysis on the news of the day, the daily program will be co-hosted by longtime NHL Network broadcaster EJ Hradek and a rotating group of NHL Network analysts.",
-    "cat": ""
-  },
-  {
-    "ch": "I409.68858.schedulesdirect.org",
-    "name": "Sportsnet One",
-    "start": "20260428210000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "NHL Now [NEW]",
-    "desc": "Gear up for the night's hockey action with expert pregame analysis, exclusive insight from morning skates, and reporting from correspondents around the league.",
+    "ch": "I408.18800.schedulesdirect.org",
+    "name": "Sportsnet West",
+    "start": "20260429223000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Hockey Central [NEW]",
+    "desc": "Breaking news, analysis and debate from around the NHL.",
     "cat": "Hockey"
   },
   {
-    "ch": "I409.68858.schedulesdirect.org",
-    "name": "Sportsnet One",
-    "start": "20260428220000 +0000",
-    "stop": "20260428223000 +0000",
-    "title": "Blue Jays in 30",
-    "desc": "From April 27, 2026.",
-    "cat": "Classic sport event"
-  },
-  {
-    "ch": "I409.68858.schedulesdirect.org",
-    "name": "Sportsnet One",
-    "start": "20260428223000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "Blue Jays Central [NEW]",
-    "desc": "Toronto Blue Jays pregame show hosted by Jamie Campbell.",
-    "cat": "Baseball"
-  },
-  {
-    "ch": "I409.68858.schedulesdirect.org",
-    "name": "Sportsnet One",
-    "start": "20260428230000 +0000",
-    "stop": "20260429020000 +0000",
-    "title": "MLB Baseball [NEW]",
-    "desc": "Toronto Blue Jays host Boston Red Sox in a Major League Baseball game at Rogers Centre. This is game two of their regular season head-to-head series. Starting pitcher Eric Lauer takes the mound for the hosts against the visiting Red Sox.",
-    "cat": "Baseball"
+    "ch": "I408.18800.schedulesdirect.org",
+    "name": "Sportsnet West",
+    "start": "20260429230000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "NHL Hockey [NEW]",
+    "desc": "Montreal faces Tampa Bay in Game 5 of the East First Round at Benchmark International Arena. The series remains tied 2-2 after the Lightning won Game 4. Zachary Bolduc and Cole Caufield staked Montreal to an early 2-0 lead before Tampa Bay rallied.",
+    "cat": "Playoff sports"
   },
   {
     "ch": "I409.68858.schedulesdirect.org",
@@ -7929,40 +7812,49 @@
     "cat": "Poker"
   },
   {
-    "ch": "I410.49952.schedulesdirect.org",
-    "name": "Sportsnet 360",
-    "start": "20260428180000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "Blair & Barker [NEW]",
-    "desc": "Jeff Blair and Kevin Barker talk all things Blue Jays, and Major League Baseball.",
-    "cat": "Sports talk"
+    "ch": "I409.68858.schedulesdirect.org",
+    "name": "Sportsnet One",
+    "start": "20260429200000 +0000",
+    "stop": "20260429210000 +0000",
+    "title": "NHL Tonight: First Shift [NEW]",
+    "desc": "A conversational style show featuring hard-hitting opinions and analysis on the news of the day, the daily program will be co-hosted by longtime NHL Network broadcaster EJ Hradek and a rotating group of NHL Network analysts.",
+    "cat": ""
   },
   {
-    "ch": "I410.49952.schedulesdirect.org",
-    "name": "Sportsnet 360",
-    "start": "20260428200000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Real Kyper & Bourne [NEW]",
-    "desc": "Nick Kypreos and Justin Bourne talk all things in the NHL.",
+    "ch": "I409.68858.schedulesdirect.org",
+    "name": "Sportsnet One",
+    "start": "20260429210000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "NHL Now [NEW]",
+    "desc": "Gear up for the night's hockey action with expert pregame analysis, exclusive insight from morning skates, and reporting from correspondents around the league.",
     "cat": "Hockey"
   },
   {
-    "ch": "I410.49952.schedulesdirect.org",
-    "name": "Sportsnet 360",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "The FAN Pregame [NEW]",
-    "desc": "Ailish Forfar and Justin Cuthbert discuss the stories that matter most to sports fans.",
+    "ch": "I409.68858.schedulesdirect.org",
+    "name": "Sportsnet One",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "World Poker Tour",
+    "desc": "Professional poker action from a series of international tournaments.",
+    "cat": "Poker"
+  },
+  {
+    "ch": "I409.68858.schedulesdirect.org",
+    "name": "Sportsnet One",
+    "start": "20260429230000 +0000",
+    "stop": "20260429233000 +0000",
+    "title": "Toronto Raptors Pre-Game [NEW]",
+    "desc": "Coverage and analysis of Raptors basketball.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I410.49952.schedulesdirect.org",
-    "name": "Sportsnet 360",
-    "start": "20260428230000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "TNA Xplosion",
-    "desc": "Highlights, matches and interviews with TNA superstars.",
-    "cat": "Pro wrestling"
+    "ch": "I409.68858.schedulesdirect.org",
+    "name": "Sportsnet One",
+    "start": "20260429233000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "NBA Basketball [NEW]",
+    "desc": "Toronto Raptors battle Cleveland Cavaliers in Game 5 of their playoff series at Rocket Arena. The best-of-seven series is tied 2-2 following Toronto's hard-fought 93-89 victory over Cleveland in Game 4 to even up the crucial postseason matchup.",
+    "cat": "Playoff sports"
   },
   {
     "ch": "I410.49952.schedulesdirect.org",
@@ -8136,49 +8028,40 @@
     "cat": "Hockey"
   },
   {
-    "ch": "I420.57735.schedulesdirect.org",
-    "name": "Sportsnet World",
-    "start": "20260428180000 +0000",
-    "stop": "20260428190000 +0000",
-    "title": "Eredivisie Matchweek Highlights",
-    "desc": "Highlights of all the action from recent Eredivisie matches, where elite teams compete against each other to win the title.",
-    "cat": "Soccer"
+    "ch": "I410.49952.schedulesdirect.org",
+    "name": "Sportsnet 360",
+    "start": "20260429200000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "Real Kyper & Bourne [NEW]",
+    "desc": "Nick Kypreos and Justin Bourne talk all things in the NHL.",
+    "cat": "Hockey"
   },
   {
-    "ch": "I420.57735.schedulesdirect.org",
-    "name": "Sportsnet World",
-    "start": "20260428190000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "NRL Rugby",
-    "desc": "From AAMI Park in Melbourne City, Victoria, Australia.",
-    "cat": "Rugby league"
+    "ch": "I410.49952.schedulesdirect.org",
+    "name": "Sportsnet 360",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "The FAN Pregame [NEW]",
+    "desc": "Ailish Forfar and Justin Cuthbert discuss the stories that matter most to sports fans.",
+    "cat": "Sports talk"
   },
   {
-    "ch": "I420.57735.schedulesdirect.org",
-    "name": "Sportsnet World",
-    "start": "20260428210000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "Rugby Super League",
-    "desc": "From The Halliwell Jones Stadium in Warrington, England, England.",
-    "cat": "Rugby league"
+    "ch": "I410.49952.schedulesdirect.org",
+    "name": "Sportsnet 360",
+    "start": "20260429230000 +0000",
+    "stop": "20260429233000 +0000",
+    "title": "NHL in 30",
+    "desc": "Game 5, from April 27, 2026.",
+    "cat": "Hockey"
   },
   {
-    "ch": "I420.57735.schedulesdirect.org",
-    "name": "Sportsnet World",
-    "start": "20260428230000 +0000",
-    "stop": "20260428233000 +0000",
-    "title": "FA Cup Classics",
-    "desc": "Semifinal from April 22, 2006.",
-    "cat": "Soccer"
-  },
-  {
-    "ch": "I420.57735.schedulesdirect.org",
-    "name": "Sportsnet World",
-    "start": "20260428233000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "FA Cup Classics",
-    "desc": "Another vintage batch of footage from the FA Cup.",
-    "cat": "Soccer"
+    "ch": "I410.49952.schedulesdirect.org",
+    "name": "Sportsnet 360",
+    "start": "20260429233000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "NHL Hockey [NEW]",
+    "desc": "Pittsburgh plays Philadelphia in Game 6 of the East first round at Xfinity Mobile Arena. Philadelphia currently leads the series 3-2. Sidney Crosby had two assists despite a brief injury. Kris Letang scored the winner in the second period.",
+    "cat": "Playoff sports"
   },
   {
     "ch": "I420.57735.schedulesdirect.org",
@@ -8316,40 +8199,49 @@
     "cat": "Soccer"
   },
   {
-    "ch": "I845.49952.schedulesdirect.org",
-    "name": "Sportsnet 360",
-    "start": "20260428180000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "Blair & Barker [NEW]",
-    "desc": "Jeff Blair and Kevin Barker talk all things Blue Jays, and Major League Baseball.",
-    "cat": "Sports talk"
+    "ch": "I420.57735.schedulesdirect.org",
+    "name": "Sportsnet World",
+    "start": "20260429200000 +0000",
+    "stop": "20260429210000 +0000",
+    "title": "MotoGP",
+    "desc": "Racing coverage of various classes from the Motorcycle Grand Prix Championship Series.",
+    "cat": "Motorcycle racing"
   },
   {
-    "ch": "I845.49952.schedulesdirect.org",
-    "name": "Sportsnet 360",
-    "start": "20260428200000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Real Kyper & Bourne [NEW]",
-    "desc": "Nick Kypreos and Justin Bourne talk all things in the NHL.",
-    "cat": "Hockey"
+    "ch": "I420.57735.schedulesdirect.org",
+    "name": "Sportsnet World",
+    "start": "20260429210000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Rugby Super League",
+    "desc": "From The OneBore Stadium in Castleford, England, United Kingdom.",
+    "cat": "Rugby league"
   },
   {
-    "ch": "I845.49952.schedulesdirect.org",
-    "name": "Sportsnet 360",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "The FAN Pregame [NEW]",
-    "desc": "Ailish Forfar and Justin Cuthbert discuss the stories that matter most to sports fans.",
-    "cat": "Sports talk"
+    "ch": "I420.57735.schedulesdirect.org",
+    "name": "Sportsnet World",
+    "start": "20260429230000 +0000",
+    "stop": "20260429233000 +0000",
+    "title": "FA Cup Classics",
+    "desc": "Third round.",
+    "cat": "Soccer"
   },
   {
-    "ch": "I845.49952.schedulesdirect.org",
-    "name": "Sportsnet 360",
-    "start": "20260428230000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "TNA Xplosion",
-    "desc": "Highlights, matches and interviews with TNA superstars.",
-    "cat": "Pro wrestling"
+    "ch": "I420.57735.schedulesdirect.org",
+    "name": "Sportsnet World",
+    "start": "20260429233000 +0000",
+    "stop": "20260430000000 +0000",
+    "title": "FA Cup Classics",
+    "desc": "2007 FA Cup.",
+    "cat": "Soccer"
+  },
+  {
+    "ch": "I420.57735.schedulesdirect.org",
+    "name": "Sportsnet World",
+    "start": "20260430000000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "MotoGP Racing",
+    "desc": "From Circuito de Jerez – Ángel Nieto in Jerez de la Frontera, Andalusia, Spain.",
+    "cat": "Motorcycle racing"
   },
   {
     "ch": "I845.49952.schedulesdirect.org",
@@ -8523,48 +8415,39 @@
     "cat": "Hockey"
   },
   {
-    "ch": "I846.62111.schedulesdirect.org",
-    "name": "Sportsnet Ontario",
-    "start": "20260428180000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "MLB Baseball",
-    "desc": "Toronto Blue Jays host Boston Red Sox in a Major League Baseball game at Rogers Centre. This is game two of their regular season head-to-head series. Starting pitcher Eric Lauer takes the mound for the hosts against the visiting Red Sox.",
-    "cat": "Baseball"
-  },
-  {
-    "ch": "I846.62111.schedulesdirect.org",
-    "name": "Sportsnet Ontario",
-    "start": "20260428210000 +0000",
-    "stop": "20260428220000 +0000",
+    "ch": "I845.49952.schedulesdirect.org",
+    "name": "Sportsnet 360",
+    "start": "20260429200000 +0000",
+    "stop": "20260429220000 +0000",
     "title": "Real Kyper & Bourne [NEW]",
     "desc": "Nick Kypreos and Justin Bourne talk all things in the NHL.",
     "cat": "Hockey"
   },
   {
-    "ch": "I846.62111.schedulesdirect.org",
-    "name": "Sportsnet Ontario",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
+    "ch": "I845.49952.schedulesdirect.org",
+    "name": "Sportsnet 360",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
     "title": "The FAN Pregame [NEW]",
     "desc": "Ailish Forfar and Justin Cuthbert discuss the stories that matter most to sports fans.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I846.62111.schedulesdirect.org",
-    "name": "Sportsnet Ontario",
-    "start": "20260428230000 +0000",
-    "stop": "20260428233000 +0000",
+    "ch": "I845.49952.schedulesdirect.org",
+    "name": "Sportsnet 360",
+    "start": "20260429230000 +0000",
+    "stop": "20260429233000 +0000",
     "title": "NHL in 30",
     "desc": "Game 5, from April 27, 2026.",
     "cat": "Hockey"
   },
   {
-    "ch": "I846.62111.schedulesdirect.org",
-    "name": "Sportsnet Ontario",
-    "start": "20260428233000 +0000",
-    "stop": "20260429020000 +0000",
+    "ch": "I845.49952.schedulesdirect.org",
+    "name": "Sportsnet 360",
+    "start": "20260429233000 +0000",
+    "stop": "20260430020000 +0000",
     "title": "NHL Hockey [NEW]",
-    "desc": "Boston Bruins battle Buffalo Sabres in Game 5 of their playoff series at KeyBank Center. Buffalo holds a commanding 3-1 advantage in the best-of-seven series following a dominant 6-1 victory over Boston in Game 4 of the crucial postseason matchup.",
+    "desc": "Pittsburgh plays Philadelphia in Game 6 of the East first round at Xfinity Mobile Arena. Philadelphia currently leads the series 3-2. Sidney Crosby had two assists despite a brief injury. Kris Letang scored the winner in the second period.",
     "cat": "Playoff sports"
   },
   {
@@ -8748,48 +8631,30 @@
     "cat": "Baseball"
   },
   {
-    "ch": "I1405.62111.schedulesdirect.org",
+    "ch": "I846.62111.schedulesdirect.org",
     "name": "Sportsnet Ontario",
-    "start": "20260428180000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "MLB Baseball",
-    "desc": "Toronto Blue Jays host Boston Red Sox in a Major League Baseball game at Rogers Centre. This is game two of their regular season head-to-head series. Starting pitcher Eric Lauer takes the mound for the hosts against the visiting Red Sox.",
-    "cat": "Baseball"
-  },
-  {
-    "ch": "I1405.62111.schedulesdirect.org",
-    "name": "Sportsnet Ontario",
-    "start": "20260428210000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Real Kyper & Bourne [NEW]",
-    "desc": "Nick Kypreos and Justin Bourne talk all things in the NHL.",
-    "cat": "Hockey"
-  },
-  {
-    "ch": "I1405.62111.schedulesdirect.org",
-    "name": "Sportsnet Ontario",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
+    "start": "20260429220000 +0000",
+    "stop": "20260429223000 +0000",
     "title": "The FAN Pregame [NEW]",
     "desc": "Ailish Forfar and Justin Cuthbert discuss the stories that matter most to sports fans.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I1405.62111.schedulesdirect.org",
+    "ch": "I846.62111.schedulesdirect.org",
     "name": "Sportsnet Ontario",
-    "start": "20260428230000 +0000",
-    "stop": "20260428233000 +0000",
-    "title": "NHL in 30",
-    "desc": "Game 5, from April 27, 2026.",
+    "start": "20260429223000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Hockey Central [NEW]",
+    "desc": "Breaking news, analysis and debate from around the NHL.",
     "cat": "Hockey"
   },
   {
-    "ch": "I1405.62111.schedulesdirect.org",
+    "ch": "I846.62111.schedulesdirect.org",
     "name": "Sportsnet Ontario",
-    "start": "20260428233000 +0000",
-    "stop": "20260429020000 +0000",
+    "start": "20260429230000 +0000",
+    "stop": "20260430020000 +0000",
     "title": "NHL Hockey [NEW]",
-    "desc": "Boston Bruins battle Buffalo Sabres in Game 5 of their playoff series at KeyBank Center. Buffalo holds a commanding 3-1 advantage in the best-of-seven series following a dominant 6-1 victory over Boston in Game 4 of the crucial postseason matchup.",
+    "desc": "Montreal faces Tampa Bay in Game 5 of the East First Round at Benchmark International Arena. The series remains tied 2-2 after the Lightning won Game 4. Zachary Bolduc and Cole Caufield staked Montreal to an early 2-0 lead before Tampa Bay rallied.",
     "cat": "Playoff sports"
   },
   {
@@ -8973,40 +8838,31 @@
     "cat": "Baseball"
   },
   {
-    "ch": "I1410.49952.schedulesdirect.org",
-    "name": "Sportsnet 360",
-    "start": "20260428180000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "Blair & Barker [NEW]",
-    "desc": "Jeff Blair and Kevin Barker talk all things Blue Jays, and Major League Baseball.",
-    "cat": "Sports talk"
-  },
-  {
-    "ch": "I1410.49952.schedulesdirect.org",
-    "name": "Sportsnet 360",
-    "start": "20260428200000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Real Kyper & Bourne [NEW]",
-    "desc": "Nick Kypreos and Justin Bourne talk all things in the NHL.",
-    "cat": "Hockey"
-  },
-  {
-    "ch": "I1410.49952.schedulesdirect.org",
-    "name": "Sportsnet 360",
-    "start": "20260428220000 +0000",
-    "stop": "20260428230000 +0000",
+    "ch": "I1405.62111.schedulesdirect.org",
+    "name": "Sportsnet Ontario",
+    "start": "20260429220000 +0000",
+    "stop": "20260429223000 +0000",
     "title": "The FAN Pregame [NEW]",
     "desc": "Ailish Forfar and Justin Cuthbert discuss the stories that matter most to sports fans.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I1410.49952.schedulesdirect.org",
-    "name": "Sportsnet 360",
-    "start": "20260428230000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "TNA Xplosion",
-    "desc": "Highlights, matches and interviews with TNA superstars.",
-    "cat": "Pro wrestling"
+    "ch": "I1405.62111.schedulesdirect.org",
+    "name": "Sportsnet Ontario",
+    "start": "20260429223000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Hockey Central [NEW]",
+    "desc": "Breaking news, analysis and debate from around the NHL.",
+    "cat": "Hockey"
+  },
+  {
+    "ch": "I1405.62111.schedulesdirect.org",
+    "name": "Sportsnet Ontario",
+    "start": "20260429230000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "NHL Hockey [NEW]",
+    "desc": "Montreal faces Tampa Bay in Game 5 of the East First Round at Benchmark International Arena. The series remains tied 2-2 after the Lightning won Game 4. Zachary Bolduc and Cole Caufield staked Montreal to an early 2-0 lead before Tampa Bay rallied.",
+    "cat": "Playoff sports"
   },
   {
     "ch": "I1410.49952.schedulesdirect.org",
@@ -9180,85 +9036,40 @@
     "cat": "Hockey"
   },
   {
-    "ch": "I1412.91308.schedulesdirect.org",
-    "name": "beIN Sports",
-    "start": "20260428183000 +0000",
-    "stop": "20260428190000 +0000",
-    "title": "ABSA Cape Epic",
-    "desc": "The Absa Cape Epic is an annual multi-stage mountain bike race held in South Africa.",
-    "cat": "Mountain biking"
+    "ch": "I1410.49952.schedulesdirect.org",
+    "name": "Sportsnet 360",
+    "start": "20260429200000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "Real Kyper & Bourne [NEW]",
+    "desc": "Nick Kypreos and Justin Bourne talk all things in the NHL.",
+    "cat": "Hockey"
   },
   {
-    "ch": "I1412.91308.schedulesdirect.org",
-    "name": "beIN Sports",
-    "start": "20260428190000 +0000",
-    "stop": "20260428193000 +0000",
-    "title": "FIBA 3x3 Asia Cup 2026",
-    "desc": "From Singapore.",
-    "cat": "3x3 basketball"
-  },
-  {
-    "ch": "I1412.91308.schedulesdirect.org",
-    "name": "beIN Sports",
-    "start": "20260428193000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "FIBA 3x3 Asia Cup 2026",
-    "desc": "From Singapore.",
-    "cat": "3x3 basketball"
-  },
-  {
-    "ch": "I1412.91308.schedulesdirect.org",
-    "name": "beIN Sports",
-    "start": "20260428200000 +0000",
-    "stop": "20260428203000 +0000",
-    "title": "Rowing Highlights",
-    "desc": "Highlights from rowing competitions around the world.",
-    "cat": "Rowing"
-  },
-  {
-    "ch": "I1412.91308.schedulesdirect.org",
-    "name": "beIN Sports",
-    "start": "20260428203000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "T100 Triathlon World Tour",
-    "desc": "Top-performing athletes compete against each other to emerge victorious in the T100 Triathlon World Tour, a series of professional and amateur events.",
-    "cat": "Triathlon"
-  },
-  {
-    "ch": "I1412.91308.schedulesdirect.org",
-    "name": "beIN Sports",
-    "start": "20260428210000 +0000",
-    "stop": "20260428213000 +0000",
-    "title": "Ligue 1 Show [NEW]",
-    "desc": "All the greatest moments from a weekend full of action in Ligue 1, with reviews of table and results. Also discusses players of the week, the best play, best save, worst blooper, who is in the hot seat, and who was the revelation of the round.",
+    "ch": "I1410.49952.schedulesdirect.org",
+    "name": "Sportsnet 360",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "The FAN Pregame [NEW]",
+    "desc": "Ailish Forfar and Justin Cuthbert discuss the stories that matter most to sports fans.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I1412.91308.schedulesdirect.org",
-    "name": "beIN Sports",
-    "start": "20260428213000 +0000",
-    "stop": "20260428215000 +0000",
-    "title": "Best of beIN Sports [NEW]",
-    "desc": "The best sports from beIN Sports.",
-    "cat": "Soccer"
+    "ch": "I1410.49952.schedulesdirect.org",
+    "name": "Sportsnet 360",
+    "start": "20260429230000 +0000",
+    "stop": "20260429233000 +0000",
+    "title": "NHL in 30",
+    "desc": "Game 5, from April 27, 2026.",
+    "cat": "Hockey"
   },
   {
-    "ch": "I1412.91308.schedulesdirect.org",
-    "name": "beIN Sports",
-    "start": "20260428215000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "Copa Libertadores Soccer [NEW]",
-    "desc": "Group G.",
-    "cat": "Soccer"
-  },
-  {
-    "ch": "I1412.91308.schedulesdirect.org",
-    "name": "beIN Sports",
-    "start": "20260429000000 +0000",
-    "stop": "20260429002000 +0000",
-    "title": "The Express [NEW]",
-    "desc": "Coverage of all soccer action before the match including special reporting and analysis.",
-    "cat": "Sports talk"
+    "ch": "I1410.49952.schedulesdirect.org",
+    "name": "Sportsnet 360",
+    "start": "20260429233000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "NHL Hockey [NEW]",
+    "desc": "Pittsburgh plays Philadelphia in Game 6 of the East first round at Xfinity Mobile Arena. Philadelphia currently leads the series 3-2. Sidney Crosby had two assists despite a brief injury. Kris Letang scored the winner in the second period.",
+    "cat": "Playoff sports"
   },
   {
     "ch": "I1412.91308.schedulesdirect.org",
@@ -9459,67 +9270,67 @@
     "cat": "3x3 basketball"
   },
   {
-    "ch": "I1881.73275.schedulesdirect.org",
-    "name": "CA: RDS 2 HD",
-    "start": "20260428110000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Tennis: Mutua Madrid Open 2026 [NEW]",
-    "desc": "En provenance de la Caja Mágica, à Madrid, en Espagne.",
-    "cat": "Tennis"
+    "ch": "I1412.91308.schedulesdirect.org",
+    "name": "beIN Sports",
+    "start": "20260429200000 +0000",
+    "stop": "20260429203000 +0000",
+    "title": "ABSA Cape Epic",
+    "desc": "The Absa Cape Epic is an annual multi-stage mountain bike race held in South Africa.",
+    "cat": "Mountain biking"
   },
   {
-    "ch": "I1881.73275.schedulesdirect.org",
-    "name": "CA: RDS 2 HD",
-    "start": "20260428220000 +0000",
-    "stop": "20260428223000 +0000",
-    "title": "On jase [NEW]",
-    "desc": "On jase de la nouvelle édition du Canadien.",
-    "cat": "Talk"
+    "ch": "I1412.91308.schedulesdirect.org",
+    "name": "beIN Sports",
+    "start": "20260429203000 +0000",
+    "stop": "20260429210000 +0000",
+    "title": "ABSA Cape Epic",
+    "desc": "The Absa Cape Epic is an annual multi-stage mountain bike race held in South Africa.",
+    "cat": "Mountain biking"
   },
   {
-    "ch": "I1881.73275.schedulesdirect.org",
-    "name": "CA: RDS 2 HD",
-    "start": "20260428223000 +0000",
-    "stop": "20260428224500 +0000",
-    "title": "Sports 30 [NEW]",
-    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
+    "ch": "I1412.91308.schedulesdirect.org",
+    "name": "beIN Sports",
+    "start": "20260429210000 +0000",
+    "stop": "20260429213000 +0000",
+    "title": "This is Paris",
+    "desc": "All the information related to the Paris Saint-Germain team. Learn about the training, international players, future stars of this prestigious club and all the locker room gossip.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I1881.73275.schedulesdirect.org",
-    "name": "CA: RDS 2 HD",
-    "start": "20260428224500 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "Sports 30",
-    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
+    "ch": "I1412.91308.schedulesdirect.org",
+    "name": "beIN Sports",
+    "start": "20260429213000 +0000",
+    "stop": "20260429215000 +0000",
+    "title": "Best of beIN Sports [NEW]",
+    "desc": "The best sports from beIN Sports.",
+    "cat": "Soccer"
+  },
+  {
+    "ch": "I1412.91308.schedulesdirect.org",
+    "name": "beIN Sports",
+    "start": "20260429215000 +0000",
+    "stop": "20260430000000 +0000",
+    "title": "Copa Libertadores Soccer [NEW]",
+    "desc": "Group E.",
+    "cat": "Soccer"
+  },
+  {
+    "ch": "I1412.91308.schedulesdirect.org",
+    "name": "beIN Sports",
+    "start": "20260430000000 +0000",
+    "stop": "20260430002000 +0000",
+    "title": "The Express [NEW]",
+    "desc": "Coverage of all soccer action before the match including special reporting and analysis.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I1881.73275.schedulesdirect.org",
-    "name": "CA: RDS 2 HD",
-    "start": "20260428230000 +0000",
-    "stop": "20260428233000 +0000",
-    "title": "3-2-1 régates",
-    "desc": "",
-    "cat": "Sports talk"
-  },
-  {
-    "ch": "I1881.73275.schedulesdirect.org",
-    "name": "CA: RDS 2 HD",
-    "start": "20260428233000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "Chicks and machines: autour du monde [NEW]",
-    "desc": "À la rencontre de femmes d'exception qui font changer et évoluer les choses dans le domaine des sports motorisés et dans certains métiers traditionnellement masculins.",
-    "cat": "Motorsports"
-  },
-  {
-    "ch": "I1881.73275.schedulesdirect.org",
-    "name": "CA: RDS 2 HD",
-    "start": "20260429000000 +0000",
-    "stop": "20260429003000 +0000",
-    "title": "Jeter l'ancre [NEW]",
-    "desc": "On découvre le monde de vie des plaisanciers par le biais d'entrevues.",
-    "cat": "Watersports"
+    "ch": "I1412.91308.schedulesdirect.org",
+    "name": "beIN Sports",
+    "start": "20260430002000 +0000",
+    "stop": "20260430023000 +0000",
+    "title": "Copa Libertadores Soccer [NEW]",
+    "desc": "Group A.",
+    "cat": "Soccer"
   },
   {
     "ch": "I1881.73275.schedulesdirect.org",
@@ -9720,57 +9531,57 @@
     "cat": "Tennis"
   },
   {
-    "ch": "I1883.73142.schedulesdirect.org",
-    "name": "CA: TVA Sports FHD",
-    "start": "20260428180000 +0000",
-    "stop": "20260428200000 +0000",
-    "title": "Tennis: Tournoi de Madrid 2026 [NEW]",
-    "desc": "En provenance de la Caja Mágica, à Madrid, en Espagne.",
-    "cat": "Tennis"
+    "ch": "I1881.73275.schedulesdirect.org",
+    "name": "CA: RDS 2 HD",
+    "start": "20260429220000 +0000",
+    "stop": "20260429223000 +0000",
+    "title": "On jase [NEW]",
+    "desc": "On jase de la nouvelle édition du Canadien.",
+    "cat": "Talk"
   },
   {
-    "ch": "I1883.73142.schedulesdirect.org",
-    "name": "CA: TVA Sports FHD",
-    "start": "20260428200000 +0000",
-    "stop": "20260428203000 +0000",
-    "title": "Héroïnes",
-    "desc": "Heureusement, les conversations entre athlètes autour de la santé mentale et du soutien sont plus présentes que jamais dans les esprits.",
-    "cat": "Documentary"
-  },
-  {
-    "ch": "I1883.73142.schedulesdirect.org",
-    "name": "CA: TVA Sports FHD",
-    "start": "20260428203000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "Jeux de la semaine MLB",
-    "desc": "Une présentation des matchs de la Ligue majeure de baseball.",
-    "cat": "Baseball"
-  },
-  {
-    "ch": "I1883.73142.schedulesdirect.org",
-    "name": "CA: TVA Sports FHD",
-    "start": "20260428210000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "JiC [NEW]",
-    "desc": "Avec une liste impressionnante de collaborateurs, Jean-Charles Lajoie aborde le sport sous tous ses angles à sa manière, dans un univers télévisuel éclaté.",
+    "ch": "I1881.73275.schedulesdirect.org",
+    "name": "CA: RDS 2 HD",
+    "start": "20260429223000 +0000",
+    "stop": "20260429224500 +0000",
+    "title": "Sports 30 [NEW]",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I1883.73142.schedulesdirect.org",
-    "name": "CA: TVA Sports FHD",
-    "start": "20260428230000 +0000",
-    "stop": "20260428233000 +0000",
-    "title": "Avant-match LNH [NEW]",
-    "desc": "Présentation des points à surveiller avant la présentation du match de hockey.",
+    "ch": "I1881.73275.schedulesdirect.org",
+    "name": "CA: RDS 2 HD",
+    "start": "20260429224500 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Sports 30",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
     "cat": "Sports talk"
   },
   {
-    "ch": "I1883.73142.schedulesdirect.org",
-    "name": "CA: TVA Sports FHD",
-    "start": "20260428233000 +0000",
-    "stop": "20260429020000 +0000",
-    "title": "Hockey LNH [NEW]",
-    "desc": "Les Sabres de Buffalo accueillent les Bruins de Boston pour le cinquième match du premier tour de l'Association de l'Est.",
+    "ch": "I1881.73275.schedulesdirect.org",
+    "name": "CA: RDS 2 HD",
+    "start": "20260429230000 +0000",
+    "stop": "20260429231500 +0000",
+    "title": "Sports 30",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
+    "cat": "Sports talk"
+  },
+  {
+    "ch": "I1881.73275.schedulesdirect.org",
+    "name": "CA: RDS 2 HD",
+    "start": "20260429231500 +0000",
+    "stop": "20260429233000 +0000",
+    "title": "Sports 30",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
+    "cat": "Sports talk"
+  },
+  {
+    "ch": "I1881.73275.schedulesdirect.org",
+    "name": "CA: RDS 2 HD",
+    "start": "20260429233000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "Basketball NBA [NEW]",
+    "desc": "Les Raptors de Toronto affrontent les Cavaliers de Cleveland lors du cinquième match de leur série éliminatoire à la Rocket Arena.",
     "cat": "Playoff sports"
   },
   {
@@ -9864,40 +9675,58 @@
     "cat": "Tennis"
   },
   {
-    "ch": "I1884.90206.schedulesdirect.org",
-    "name": "CA: TVA Sports 2 HD",
-    "start": "20260428183000 +0000",
-    "stop": "20260428210000 +0000",
-    "title": "Hockey LNH",
-    "desc": "Le Mammoth de l'Utah accueille les Golden Knights de Vegas pour le quatrième match du premier tour de l'Association de l'Ouest.",
-    "cat": "Playoff sports"
-  },
-  {
-    "ch": "I1884.90206.schedulesdirect.org",
-    "name": "CA: TVA Sports 2 HD",
-    "start": "20260428210000 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "Tennis: Tournoi de Madrid 2026",
-    "desc": "En provenance de la Caja Mágica, à Madrid, en Espagne.",
-    "cat": "Tennis"
-  },
-  {
-    "ch": "I1884.90206.schedulesdirect.org",
-    "name": "CA: TVA Sports 2 HD",
-    "start": "20260428230000 +0000",
-    "stop": "20260428233000 +0000",
+    "ch": "I1883.73142.schedulesdirect.org",
+    "name": "CA: TVA Sports FHD",
+    "start": "20260429200000 +0000",
+    "stop": "20260429203000 +0000",
     "title": "50 ans de sports",
     "desc": "On nous fait revivre les plus grands moments du sport de chaque année.",
     "cat": "Documentary"
   },
   {
-    "ch": "I1884.90206.schedulesdirect.org",
-    "name": "CA: TVA Sports 2 HD",
-    "start": "20260428233000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "Le top LNH",
-    "desc": "Les plus beaux jeux du mois dans la LNH.",
-    "cat": "Hockey"
+    "ch": "I1883.73142.schedulesdirect.org",
+    "name": "CA: TVA Sports FHD",
+    "start": "20260429203000 +0000",
+    "stop": "20260429210000 +0000",
+    "title": "L'académie du guide de l'auto",
+    "desc": "La très grande drag queen Rita Baga aura-t-elle besoin d'un toit ouvrant pour rivaliser avec la colorée Natalie Choquette à bord de la Mercedes EQB, présentée par Antoine Joubert; puis dernière étape de l'escapade routière d'Anaïs Favron en Norvège.",
+    "cat": "Auto"
+  },
+  {
+    "ch": "I1883.73142.schedulesdirect.org",
+    "name": "CA: TVA Sports FHD",
+    "start": "20260429210000 +0000",
+    "stop": "20260429220000 +0000",
+    "title": "JiC [NEW]",
+    "desc": "Avec une liste impressionnante de collaborateurs, Jean-Charles Lajoie aborde le sport sous tous ses angles à sa manière, dans un univers télévisuel éclaté.",
+    "cat": "Sports talk"
+  },
+  {
+    "ch": "I1883.73142.schedulesdirect.org",
+    "name": "CA: TVA Sports FHD",
+    "start": "20260429220000 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Avant-match LNH [NEW]",
+    "desc": "Présentation des points à surveiller avant la présentation du match de hockey.",
+    "cat": "Sports talk"
+  },
+  {
+    "ch": "I1883.73142.schedulesdirect.org",
+    "name": "CA: TVA Sports FHD",
+    "start": "20260429230000 +0000",
+    "stop": "20260430014500 +0000",
+    "title": "Hockey LNH [NEW]",
+    "desc": "Le Lightning de Tampa Bay accueille les Canadiens de Montréal pour le cinquième match du premier tour de l'Association de l'Est.",
+    "cat": "Playoff sports"
+  },
+  {
+    "ch": "I1883.73142.schedulesdirect.org",
+    "name": "CA: TVA Sports FHD",
+    "start": "20260430014500 +0000",
+    "stop": "20260430024500 +0000",
+    "title": "L'après-match LNH [NEW]",
+    "desc": "Dave Morissette et ses collaborateurs propulsent les amateurs de hockey au coeur de l'action de la LNH avec des analyses, faits saillants et opinions des matchs de la soirée.",
+    "cat": "Sports talk"
   },
   {
     "ch": "I1884.90206.schedulesdirect.org",
@@ -10035,67 +9864,49 @@
     "cat": "Hunting"
   },
   {
-    "ch": "I1899.73275.schedulesdirect.org",
-    "name": "CA: RDS 2 HD",
-    "start": "20260428110000 +0000",
-    "stop": "20260428220000 +0000",
-    "title": "Tennis: Mutua Madrid Open 2026 [NEW]",
+    "ch": "I1884.90206.schedulesdirect.org",
+    "name": "CA: TVA Sports 2 HD",
+    "start": "20260429200000 +0000",
+    "stop": "20260429203000 +0000",
+    "title": "Expédition faune",
+    "desc": "La pêche, la chasse, ses destinations, le tout accompagné d'une personnalité du domaine sportif.",
+    "cat": "Fishing"
+  },
+  {
+    "ch": "I1884.90206.schedulesdirect.org",
+    "name": "CA: TVA Sports 2 HD",
+    "start": "20260429203000 +0000",
+    "stop": "20260429210000 +0000",
+    "title": "L'académie du guide de l'auto",
+    "desc": "La très grande drag queen Rita Baga aura-t-elle besoin d'un toit ouvrant pour rivaliser avec la colorée Natalie Choquette à bord de la Mercedes EQB, présentée par Antoine Joubert; puis dernière étape de l'escapade routière d'Anaïs Favron en Norvège.",
+    "cat": "Auto"
+  },
+  {
+    "ch": "I1884.90206.schedulesdirect.org",
+    "name": "CA: TVA Sports 2 HD",
+    "start": "20260429210000 +0000",
+    "stop": "20260429213000 +0000",
+    "title": "Le top LNH",
+    "desc": "Les plus beaux jeux du mois dans la LNH.",
+    "cat": "Hockey"
+  },
+  {
+    "ch": "I1884.90206.schedulesdirect.org",
+    "name": "CA: TVA Sports 2 HD",
+    "start": "20260429213000 +0000",
+    "stop": "20260429233000 +0000",
+    "title": "Tennis: Tournoi de Madrid 2026",
     "desc": "En provenance de la Caja Mágica, à Madrid, en Espagne.",
     "cat": "Tennis"
   },
   {
-    "ch": "I1899.73275.schedulesdirect.org",
-    "name": "CA: RDS 2 HD",
-    "start": "20260428220000 +0000",
-    "stop": "20260428223000 +0000",
-    "title": "On jase [NEW]",
-    "desc": "On jase de la nouvelle édition du Canadien.",
-    "cat": "Talk"
-  },
-  {
-    "ch": "I1899.73275.schedulesdirect.org",
-    "name": "CA: RDS 2 HD",
-    "start": "20260428223000 +0000",
-    "stop": "20260428224500 +0000",
-    "title": "Sports 30 [NEW]",
-    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
-    "cat": "Sports talk"
-  },
-  {
-    "ch": "I1899.73275.schedulesdirect.org",
-    "name": "CA: RDS 2 HD",
-    "start": "20260428224500 +0000",
-    "stop": "20260428230000 +0000",
-    "title": "Sports 30",
-    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
-    "cat": "Sports talk"
-  },
-  {
-    "ch": "I1899.73275.schedulesdirect.org",
-    "name": "CA: RDS 2 HD",
-    "start": "20260428230000 +0000",
-    "stop": "20260428233000 +0000",
-    "title": "3-2-1 régates",
-    "desc": "",
-    "cat": "Sports talk"
-  },
-  {
-    "ch": "I1899.73275.schedulesdirect.org",
-    "name": "CA: RDS 2 HD",
-    "start": "20260428233000 +0000",
-    "stop": "20260429000000 +0000",
-    "title": "Chicks and machines: autour du monde [NEW]",
-    "desc": "À la rencontre de femmes d'exception qui font changer et évoluer les choses dans le domaine des sports motorisés et dans certains métiers traditionnellement masculins.",
-    "cat": "Motorsports"
-  },
-  {
-    "ch": "I1899.73275.schedulesdirect.org",
-    "name": "CA: RDS 2 HD",
-    "start": "20260429000000 +0000",
-    "stop": "20260429003000 +0000",
-    "title": "Jeter l'ancre [NEW]",
-    "desc": "On découvre le monde de vie des plaisanciers par le biais d'entrevues.",
-    "cat": "Watersports"
+    "ch": "I1884.90206.schedulesdirect.org",
+    "name": "CA: TVA Sports 2 HD",
+    "start": "20260429233000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "Hockey LNH [NEW]",
+    "desc": "Les Flyers de Philadelphie accueillent les Penguins de Pittsburgh pour le sixième match du premier tour de l'Association de l'Est.",
+    "cat": "Playoff sports"
   },
   {
     "ch": "I1899.73275.schedulesdirect.org",
@@ -10294,5 +10105,59 @@
     "title": "Tennis: Mutua Madrid Open 2026 [NEW]",
     "desc": "En provenance de la Caja Mágica, à Madrid, en Espagne.",
     "cat": "Tennis"
+  },
+  {
+    "ch": "I1899.73275.schedulesdirect.org",
+    "name": "CA: RDS 2 HD",
+    "start": "20260429220000 +0000",
+    "stop": "20260429223000 +0000",
+    "title": "On jase [NEW]",
+    "desc": "On jase de la nouvelle édition du Canadien.",
+    "cat": "Talk"
+  },
+  {
+    "ch": "I1899.73275.schedulesdirect.org",
+    "name": "CA: RDS 2 HD",
+    "start": "20260429223000 +0000",
+    "stop": "20260429224500 +0000",
+    "title": "Sports 30 [NEW]",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
+    "cat": "Sports talk"
+  },
+  {
+    "ch": "I1899.73275.schedulesdirect.org",
+    "name": "CA: RDS 2 HD",
+    "start": "20260429224500 +0000",
+    "stop": "20260429230000 +0000",
+    "title": "Sports 30",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
+    "cat": "Sports talk"
+  },
+  {
+    "ch": "I1899.73275.schedulesdirect.org",
+    "name": "CA: RDS 2 HD",
+    "start": "20260429230000 +0000",
+    "stop": "20260429231500 +0000",
+    "title": "Sports 30",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
+    "cat": "Sports talk"
+  },
+  {
+    "ch": "I1899.73275.schedulesdirect.org",
+    "name": "CA: RDS 2 HD",
+    "start": "20260429231500 +0000",
+    "stop": "20260429233000 +0000",
+    "title": "Sports 30",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
+    "cat": "Sports talk"
+  },
+  {
+    "ch": "I1899.73275.schedulesdirect.org",
+    "name": "CA: RDS 2 HD",
+    "start": "20260429233000 +0000",
+    "stop": "20260430020000 +0000",
+    "title": "Basketball NBA [NEW]",
+    "desc": "Les Raptors de Toronto affrontent les Cavaliers de Cleveland lors du cinquième match de leur série éliminatoire à la Rocket Arena.",
+    "cat": "Playoff sports"
   }
 ]
