@@ -151,9 +151,9 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'audio/x-mpegurl')
         self.end_headers()
         m3u = "#EXTM3U\n"
+        # On crée des IDs et des noms radicalement différents pour forcer l'affichage
         for i in range(1, 6):
-            # Le paramètre t= assure que Chili TV voit 5 URLs uniques
-            m3u += f'#EXTINF:-1 tvg-id="CHOIX.{i}" tvg-name="CHOIX {i}" group-title="REGIE SPORT",CHOIX {i}\n'
-            m3u += f'{STREAM_BASE}/71151?ch=CHOIX.{i}&t={i}\n'
+            m3u += f'#EXTINF:-1 tvg-id="CHOIX_{i}" tvg-name="CHOIX_{i}" group-title="REGIE SPORT",CHOIX {i}\n'
+            m3u += f'{STREAM_BASE}/71151?canal=ch{i}\n'
         self.wfile.write(m3u.encode('utf-8'))
         
