@@ -2,6 +2,7 @@ from http.server import BaseHTTPRequestHandler
 import requests
 import json
 import re
+import html
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor
 
@@ -10,37 +11,26 @@ from concurrent.futures import ThreadPoolExecutor
 # ==========================================
 PRIORITY_CONFIG = {
     "LEAGUES": {
-        "nhl": 500,           # Hockey
-        "nba": 400,           # Basketball
-        "eng.1": 350,         # Premier League (Angleterre)
-        "fra.1": 350,         # Ligue 1 (France)
-        "ita.1": 350,         # Serie A (Italie)
-        "esp.1": 350,         # LaLiga (Espagne)
-        "uefa.champions": 375, # Champions League (Un peu plus haut)
-        "uefa.europa": 350,   # Europa League
-        "mlb": 300,           # Baseball (Maintenant sous le foot européen)
-        "usa.1": 250          # MLS
+        "nhl": 500, "nba": 400, "eng.1": 350, "fra.1": 350,
+        "uefa.champions": 375, "mlb": 300, "usa.1": 250
     },
     "TEAMS": {
-        "CANADIENS": 1000, 
-        "RAPTORS": 1000, 
-        "BLUE JAYS": 1000, 
-        "CF MONTREAL": 1000,
-        "REAL MADRID": 200,   # Exemple d'ajout d'équipe spécifique
-        "LIVERPOOL": 200
+        "CANADIENS": 1000, "RAPTORS": 1000, "BLUE JAYS": 1000, 
+        "CF MONTREAL": 1000, "WREXHAM": 1200
     },
     "CHANNELS": {
-        "BONUS_ENGLISH_PREMIUM": 500,
-        "BONUS_FRENCH": 150,
-        "PENALTY_TVA": -800,
+        "BONUS_ENGLISH_PREMIUM": 500, "BONUS_FRENCH": 150, "PENALTY_TVA": -800
     }
 }
 
-# IDs pour Sportsnet, TSN et beIN (souvent utilisé pour le foot européen)
+SPECIAL_TEAMS_SCAN = {
+    "WREXHAM": ("soccer", "eng.3") 
+}
+
 PREMIUM_IDS = [
     "I405.62111.schedulesdirect.org", "I409.68858.schedulesdirect.org", 
     "SNEast", "SNWest", "SNPacific", "SNOntario", "SNOne", "SN360",
-    "TSN1", "TSN2", "TSN3", "TSN4", "TSN5", "beINSPORTSMAX4.fr"
+    "TSN1", "TSN2", "TSN3", "TSN4", "TSN5"
 ]
 
 # ==========================================
@@ -49,14 +39,11 @@ PREMIUM_IDS = [
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
-# Dictionnaire étendu pour inclure les chaînes européennes de ta bible
 CH_DATABASE = {
     "I405.62111.schedulesdirect.org": {"name": "Sportsnet 4K", "id": "157674", "lang": "EN"},
     "I409.68858.schedulesdirect.org": {"name": "TSN/SN (EPG)", "id": "71234", "lang": "EN"},
     "I1000.49609.schedulesdirect.org": {"name": "RDS", "id": "184813", "lang": "FR"},
-    "I193.73142.schedulesdirect.org": {"name": "TVA Sports", "id": "184811", "lang": "FR"},
-    "beINSPORTSMAX4.fr": {"name": "beIN MAX 4", "id": "49898", "lang": "FR"},
-    "CanalPlus.fr": {"name": "Canal+", "id": "49943", "lang": "FR"}
+    "I193.73142.schedulesdirect.org": {"name": "TVA Sports", "id": "184811", "lang": "FR"}
 }
 
 LOGOS = {
@@ -66,27 +53,23 @@ LOGOS = {
     "soccer": "https://a.espncdn.com/i/teamlogos/leagues/500/soccer.png",
     "default": "https://a.espncdn.com/i/espn/misc_logos/espn_white.png"
 }
+SPORT_ICONS = {"nhl": "🏒", "nba": "🏀", "mlb": "⚾", "soccer": "⚽", "default": "🏆"}
 
-SPORT_ICONS = {
-    "nhl": "🏒", "nba": "🏀", "mlb": "⚾", 
-    "eng.1": "⚽", "fra.1": "⚽", "ita.1": "⚽", "esp.1": "⚽", 
-    "uefa.champions": "🇪🇺", "uefa.europa": "🇪🇺", "usa.1": "⚽", "default": "🏆"
-}
+def escape_xml(text):
+    """Convertit les caractères spéciaux et les emojis en entités numériques XML sûres"""
+    if not text: return ""
+    return text.encode('ascii', 'xmlcharrefreplace').decode()
 
-# ==========================================
-#                LOGIQUE CORE
-# ==========================================
 def clean_name(t):
     if not t: return ""
     t = t.upper()
-    t = re.sub(r'HOCKEY|LNH|NBA|BASKETBALL|BASEBALL|MLB|SOCCER|FOOTBALL| AT | VS |CONTRE', ' ', t)
+    t = re.sub(r'HOCKEY|LNH|NBA|SOCCER|FOOTBALL| AT | VS |CONTRE', ' ', t)
     t = re.sub(r'[ÉÈÊË]', 'E', t); t = re.sub(r'[ÀÂÄ]', 'A', t)
     return re.sub(r'[^\w\s]', ' ', t)
 
 def find_match_in_bible(ev_name, bible_data, ev_date_str):
     ev_time = datetime.strptime(ev_date_str, "%Y-%m-%dT%H:%MZ")
-    keywords = [w for w in clean_name(ev_name).split() if len(w) > 3 and w not in ["MONTREAL", "TORONTO", "CITY", "UNITED"]]
-    
+    keywords = [w for w in clean_name(ev_name).split() if len(w) > 3 and w not in ["MONTREAL", "TORONTO"]]
     matches = []
     for prog in bible_data:
         try:
@@ -96,7 +79,6 @@ def find_match_in_bible(ev_name, bible_data, ev_date_str):
                 if any(kw in full_text for kw in keywords):
                     matches.append(prog['ch'])
         except: continue
-    
     if matches:
         for m in matches:
             if m in PREMIUM_IDS: return m
@@ -111,19 +93,13 @@ class handler(BaseHTTPRequestHandler):
     def get_organized_events(self):
         try: bible = requests.get(BIBLE_URL, timeout=5).json()
         except: bible = []
-        
         now = datetime.utcnow()
-        events = []
-        seen = set()
+        events, seen = [], set()
         
-        # Liste exhaustive des ligues demandées
-        leagues_to_fetch = [
-            ("hockey","nhl"), ("basketball","nba"), ("baseball","mlb"),
-            ("soccer","eng.1"), ("soccer","fra.1"), ("soccer","ita.1"), 
-            ("soccer","esp.1"), ("soccer","usa.1"), ("soccer","uefa.champions"), 
-            ("soccer","uefa.europa")
-        ]
-        
+        leagues_to_fetch = [("hockey","nhl"), ("basketball","nba"), ("baseball","mlb"), ("soccer","eng.1"), ("soccer","usa.1")]
+        for team_name, league_info in SPECIAL_TEAMS_SCAN.items():
+            if league_info not in leagues_to_fetch: leagues_to_fetch.append(league_info)
+
         urls = []
         for day in range(2):
             ds = (now + timedelta(days=day)).strftime("%Y%m%d")
@@ -137,19 +113,15 @@ class handler(BaseHTTPRequestHandler):
                 for ev in f.result().get('events', []):
                     name = ev['name'].upper()
                     if name in seen: continue
-                    
                     ch_key = find_match_in_bible(name, bible, ev['date'])
                     score = PRIORITY_CONFIG["LEAGUES"].get(lg, 100)
-                    
                     for team, bonus in PRIORITY_CONFIG["TEAMS"].items():
                         if team in name: score += bonus
-                    
                     info = CH_DATABASE.get(ch_key, {})
                     if ch_key in PREMIUM_IDS: score += PRIORITY_CONFIG["CHANNELS"]["BONUS_ENGLISH_PREMIUM"]
                     if info.get("lang") == "FR": score += PRIORITY_CONFIG["CHANNELS"]["BONUS_FRENCH"]
                     if ch_key and ("TVA" in str(ch_key).upper() or "184811" in str(ch_key)):
                         score += PRIORITY_CONFIG["CHANNELS"]["PENALTY_TVA"]
-
                     events.append({
                         "title": name, "score": score, "league": lg,
                         "start": datetime.strptime(ev['date'], "%Y-%m-%dT%H:%MZ"), 
@@ -168,18 +140,15 @@ class handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         if "/stream/" in self.path:
-            try:
-                idx = int(self.path.split('/')[-1])
-                chans = self.get_organized_events()
-                now = datetime.utcnow()
-                sid = "184813"
-                for m in chans.get(idx, []):
-                    if m['start'] <= now <= m['stop']:
-                        sid = CH_DATABASE.get(m['ch_key'], {}).get("id", "184813")
-                        break
-                self.send_response(302); self.send_header('Location', f"{STREAM_BASE}/{sid}"); self.end_headers()
-            except:
-                self.send_response(302); self.send_header('Location', f"{STREAM_BASE}/184813"); self.end_headers()
+            idx = int(self.path.split('/')[-1])
+            chans = self.get_organized_events()
+            now = datetime.utcnow()
+            sid = "184813"
+            for m in chans.get(idx, []):
+                if m['start'] <= now <= m['stop']:
+                    sid = CH_DATABASE.get(m['ch_key'], {}).get("id", "184813")
+                    break
+            self.send_response(302); self.send_header('Location', f"{STREAM_BASE}/{sid}"); self.end_headers()
         elif self.path.endswith('.m3u'):
             self.send_response(200); self.send_header('Content-type', 'text/plain'); self.end_headers()
             host = self.headers.get('Host')
@@ -194,26 +163,40 @@ class handler(BaseHTTPRequestHandler):
         chans = self.get_organized_events()
         now = datetime.utcnow()
         self.send_response(200); self.send_header('Content-type', 'application/xml; charset=utf-8'); self.end_headers()
-        xml = '<?xml version="1.0" encoding="UTF-8"?><tv>'
+        
+        # Début du XML
+        output = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>'
+        
         for i in range(1, 6):
-            xml += f'<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
+            output += f'\n<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
             cursor = now - timedelta(hours=6)
+            
             for p in sorted(chans[i], key=lambda x: x['start']):
                 st, en = p['start'].strftime("%Y%m%d%H%M%S"), p['stop'].strftime("%Y%m%d%H%M%S")
                 info = CH_DATABASE.get(p['ch_key'], {})
-                ch_n = info.get('name', p['ch_key'] if p['ch_key'] else "À CONFIRMER")
+                ch_n = info.get('name', p['ch_key'] if p['ch_key'] else "A CONFIRMER")
                 
-                # Gestion logo soccer générique si logo ligue absent
-                current_lg = p['league']
-                lg_key = "soccer" if current_lg in ["eng.1", "fra.1", "ita.1", "esp.1", "usa.1", "uefa.champions", "uefa.europa"] else current_lg
+                lg_type = "soccer" if any(x in p['league'] for x in ["eng", "uefa", "usa"]) else p['league']
+                icon = SPORT_ICONS.get(lg_type, SPORT_ICONS['default'])
+                logo_url = LOGOS.get(lg_type, LOGOS['default'])
                 
-                title = f"{SPORT_ICONS.get(current_lg, '🏆')} {p['title']} ({info.get('lang', '??')}) | {ch_n}"
+                # On prépare le titre et la source de manière sécurisée
+                safe_title = escape_xml(f"{icon} {p['title']} ({info.get('lang', '??')}) | {ch_n}")
+                safe_ch_name = escape_xml(ch_n)
                 
                 if p['start'] > cursor:
-                    xml += f'<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{st} +0000" channel="CHOIX.{i}"><title>➡️ Suivant: {title}</title></programme>'
+                    output += f'\n<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{st} +0000" channel="CHOIX.{i}"><title>Suivant: {safe_title}</title></programme>'
                 
-                xml += f'<programme start="{st} +0000" stop="{en} +0000" channel="CHOIX.{i}">'
-                xml += f'<title>{title}</title><desc>Source: {ch_n}</desc><icon src="{LOGOS.get(lg_key, LOGOS["default"])}" /></programme>'
+                # Bloc programme avec icon src
+                output += f'\n<programme start="{st} +0000" stop="{en} +0000" channel="CHOIX.{i}">'
+                output += f'\n  <title>{safe_title}</title>'
+                output += f'\n  <desc>Source: {safe_ch_name}</desc>'
+                output += f'\n  <icon src="{logo_url}"/>'
+                output += '\n</programme>'
+                
                 cursor = p['stop']
-        self.wfile.write((xml + '</tv>').encode('utf-8'))
+        
+        output += '\n</tv>'
+        # On encode tout en UTF-8 pour être certain
+        self.wfile.write(output.encode('utf-8'))
         
