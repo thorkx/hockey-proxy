@@ -1,16 +1,14 @@
 from http.server import BaseHTTPRequestHandler
 import requests
 from datetime import datetime
+import json
+import re
 
-# URL brute de ton JSON sur GitHub
-JSON_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
-# Ta base de serveur extraite de ta playlist
-STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
+JSON_URL = "[https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json](https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json)"
+STREAM_BASE = "[http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV](http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV)"
 
-# Tes équipes prioritaires
-TEAMS = ["CANADIENS", "CF MONTRÉAL", "BLUE JAYS", "RAPTORS", "PSG", "MANCHESTER CITY", "F1"]
+TEAMS = ["CANADIENS", "CF MONTRÉAL", "BLUE JAYS", "RAPTORS", "PSG", "MANCHESTER CITY", "F1", "INTER MIAMI"]
 
-# Le mapping strict entre EPG et ton IPTV
 CHANNELS = {
     "I123.15676.schedulesdirect.org": ("RDS FHD", "184813"),
     "I124.39080.schedulesdirect.org": ("RDS 2 FHD", "184814"),
@@ -18,32 +16,36 @@ CHANNELS = {
     "I112.15671.schedulesdirect.org": ("TSN 2 FHD", "184817"),
     "I154.58314.schedulesdirect.org": ("TVA SPORTS FHD", "184821"),
     "I155.58315.schedulesdirect.org": ("TVA SPORTS 2 FHD", "184822"),
-    "I1000.49609.schedulesdirect.org": ("SKY MAIN EVENT", "176800"),
-    "I1001.104327.schedulesdirect.org": ("SKY FOOTBALL", "176801")
 }
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
-        self.send_header('Content-type', 'text/plain; charset=utf-8') # On force le texte pour débugger
+        # On remet le type mpegurl pour ton app IPTV
+        self.send_header('Content-type', 'audio/x-mpegurl; charset=utf-8')
         self.end_headers()
 
-        # 1. On tente de lire le JSON
         epg_data = []
         try:
             r = requests.get(JSON_URL, timeout=5)
-            epg_data = r.json()
+            content = r.text.strip()
+            
+            # NETTOYAGE : On enlève tout ce qui n'est pas entre les crochets [ ]
+            # Ça règle l'erreur "Extra data" si ton bot a écrit du texte autour du JSON
+            json_match = re.search(r'\[.*\]', content, re.DOTALL)
+            if json_match:
+                epg_data = json.loads(json_match.group(0))
+            else:
+                epg_data = json.loads(content)
         except Exception as e:
-            self.wfile.write(f"# ERREUR CHARGEMENT JSON: {e}\n".encode())
+            self.wfile.write(f"# ERREUR JSON: {str(e)}\n".encode())
+            return
 
-        now = datetime.utcnow().strftime("%Y%m%d%H%M%S")
-        
-        output = "#EXTM3U\n"
+        playlist = "#EXTM3U\n"
         priority_lines = ""
         all_lines = ""
         added = set()
 
-        # 2. On scanne le JSON pour les matchs
         for prog in epg_data:
             title = prog.get('title', '').upper()
             ch_id = prog.get('ch')
@@ -52,17 +54,15 @@ class handler(BaseHTTPRequestHandler):
                 name, stream_id = CHANNELS[ch_id]
                 link = f"{STREAM_BASE}/{stream_id}"
                 
-                # Si une équipe joue
-                if any(t in title for t in TEAMS):
-                    if ch_id not in added:
-                        priority_lines += f'#EXTINF:-1, ⭐ LIVE: {title}\n{link}\n'
-                        added.add(ch_id)
-                else:
-                    # Sinon on l'ajoute à la liste normale (si pas déjà ajoutée)
-                    if ch_id not in added:
-                        all_lines += f'#EXTINF:-1, {name}\n{link}\n'
-                        added.add(ch_id)
+                if any(t in title for t in TEAMS) and ch_id not in added:
+                    priority_lines += f'#EXTINF:-1, ⭐ {title} ({name})\n{link}\n'
+                    added.add(ch_id)
 
-        output += priority_lines + all_lines
+        # Ajout du reste des chaînes mappées
+        for ch_id, (name, stream_id) in CHANNELS.items():
+            if ch_id not in added:
+                all_lines += f'#EXTINF:-1, {name}\n{STREAM_BASE}/{stream_id}\n'
+
+        output = playlist + priority_lines + all_lines
         self.wfile.write(output.encode('utf-8'))
         
