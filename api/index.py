@@ -3,41 +3,84 @@ import requests
 import json
 from datetime import datetime
 
+# CONFIGURATION
+GITHUB_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
+STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
+
+# Tes priorités (plus le chiffre est haut, plus ça va sur CHOIX 1)
+PRIORITIES = {
+    "CANADIENS": 1000, "MONTREAL": 900, "JAYS": 800, 
+    "CITY": 700, "PSG": 600, "F1": 500
+}
+
+# Mapping des IDs du Bot vers tes IDs de Stream
+STREAM_MAP = {
+    "I408.18800.schedulesdirect.org": "71520", # SN West
+    "I123.15676.schedulesdirect.org": "184813", # RDS
+    "I111.15670.schedulesdirect.org": "184816", # TSN
+    "I154.58314.schedulesdirect.org": "184821"  # TVA Sports
+}
+
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        # Configuration
-        GITHUB_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
-        
-        # 1. Essayer de charger le JSON, sinon créer une liste de secours
+        # 1. RÉCUPÉRATION
         try:
-            r = requests.get(GITHUB_URL, timeout=5)
-            data = r.json()
+            r = requests.get(GITHUB_URL, timeout=10)
+            all_data = r.json()
         except:
-            # Match de secours si GitHub crash (23h MTL = 03h00 UTC le 29 avril)
-            data = [{
-                "title": "MATCH TEST 23H00 (BACKUP)",
-                "start": "20260429030000 +0000",
-                "stop": "20260429060000 +0000"
-            }]
+            all_data = []
 
-        # 2. Préparer le XML
-        self.send_response(200)
-        self.send_header('Content-type', 'application/xml; charset=utf-8')
-        self.end_headers()
+        # 2. SCORING & NETTOYAGE
+        scored_matches = []
+        for e in all_data:
+            full_text = (e.get('title', '') + " " + e.get('desc', '')).upper()
+            score = 10
+            for key, val in PRIORITIES.items():
+                if key in full_text:
+                    score = val
+                    break
+            
+            scored_matches.append({
+                "title": e.get('title', 'Sport'),
+                "sid": STREAM_MAP.get(e.get('ch'), "184813"),
+                "start": e.get('start', '').replace(" ", "")[:14],
+                "stop": e.get('stop', '').replace(" ", "")[:14],
+                "score": score
+            })
 
-        xml = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>\n'
-        xml += '  <channel id="CHOIX.1"><display-name>CHOIX 1</display-name></channel>\n'
-
-        for item in data:
-            # Nettoyage des dates (on enlève les espaces pour le format start/stop)
-            s = item.get('start', '20260429030000').replace(" ", "")[:14]
-            t = item.get('stop', '20260429060000').replace(" ", "")[:14]
-            title = item.get('title', 'Match')
-
-            xml += f'  <programme start="{s} +0000" stop="{t} +0000" channel="CHOIX.1">\n'
-            xml += f'    <title lang="fr">{title}</title>\n'
-            xml += '  </programme>\n'
-
-        xml += '</tv>'
-        self.wfile.write(xml.encode('utf-8'))
+        # 3. RÉGIE (Tri et distribution sur 5 canaux)
+        scored_matches.sort(key=lambda x: x['score'], reverse=True)
+        channels = {i: [] for i in range(1, 6)}
         
+        for m in scored_matches:
+            for i in range(1, 6):
+                collision = any(not (m['stop'] <= ex['start'] or m['start'] >= ex['stop']) for ex in channels[i])
+                if not collision:
+                    channels[i].append(m)
+                    break
+
+        # 4. GÉNÉRATION DE LA RÉPONSE
+        self.send_response(200)
+        if "type=xml" in self.path:
+            self.send_header('Content-type', 'application/xml; charset=utf-8')
+            self.end_headers()
+            xml = '<?xml version="1.0" encoding="UTF-8"?><tv>'
+            for i in range(1, 6):
+                xml += f'<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
+                for p in channels[i]:
+                    xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}"><title>{p["title"]}</title></programme>'
+            self.wfile.write((xml + '</tv>').encode('utf-8'))
+        else:
+            self.send_header('Content-type', 'audio/x-mpegurl')
+            self.end_headers()
+            now = datetime.utcnow().strftime("%Y%m%d%H%M%S")
+            m3u = f'#EXTM3U x-tvg-url="https://{self.headers.get("Host")}/api?type=xml"\n'
+            for i in range(1, 6):
+                stream, title = "http://0.0.0.0", "Aucun match"
+                for m in channels[i]:
+                    if m['start'] <= now <= m['stop']:
+                        stream, title = f"{STREAM_BASE}/{m['sid']}", m['title']
+                        break
+                m3u += f'#EXTINF:-1 tvg-id="CHOIX.{i}", CHOIX {i} : {title}\n{stream}\n'
+            self.wfile.write(m3u.encode('utf-8'))
+            
