@@ -9,13 +9,21 @@ from concurrent.futures import ThreadPoolExecutor
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
-# --- LOGOS DES LIGUES ---
+# --- LOGOS & ICÔNES ---
 LOGOS = {
     "nhl": "https://a.espncdn.com/i/teamlogos/leagues/500/nhl.png",
     "mlb": "https://a.espncdn.com/i/teamlogos/leagues/500/mlb.png",
     "nba": "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png",
     "usa.1": "https://a.espncdn.com/i/teamlogos/leagues/500/mls.png",
     "default": "https://a.espncdn.com/i/espn/misc_logos/espn_white.png"
+}
+
+SPORT_ICONS = {
+    "nhl": "🏒",
+    "nba": "🏀",
+    "mlb": "⚾",
+    "usa.1": "⚽",
+    "default": "🏆"
 }
 
 # --- LISTE DES IDS PRIORITAIRES (Sportsnet & TSN) ---
@@ -154,9 +162,14 @@ class handler(BaseHTTPRequestHandler):
                 info = CH_DATABASE.get(p['ch_key'], {})
                 ch_n = info.get('name', p['ch_key'] if p['ch_key'] else "À CONFIRMER")
                 lang = info.get('lang', "??")
+                
+                # Récupération de l'icône et du logo
+                sport_icon = SPORT_ICONS.get(p['league'], SPORT_ICONS['default'])
                 logo_url = LOGOS.get(p['league'], LOGOS['default'])
                 
-                title = f"{p['title']} ({lang}) | {ch_n}"
+                # Construction du titre avec l'icône au début
+                title = f"{sport_icon} {p['title']} ({lang}) | {ch_n}"
+                
                 if p['start'] > cursor:
                     xml += f'<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{st} +0000" channel="CHOIX.{i}"><title>➡️ Suivant: {title}</title></programme>'
                 
