@@ -7,16 +7,22 @@ from datetime import datetime, timedelta
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
-LEAGUES = [
-    ("hockey", "nhl"),
-    ("baseball", "mlb"),
-    ("soccer", "eng.1"),
-    ("soccer", "fra.1"),
-    ("basketball", "nba")
-]
+LEAGUES = {
+    "hockey": "🏒",
+    "baseball": "⚾",
+    "soccer": "⚽",
+    "basketball": "🏀"
+}
 
-# SIDs par défaut
-DEFAULT_SID = "184813" # RDS
+# Pour l'affichage propre dans le titre
+CH_NAMES = {
+    "I408.18800.schedulesdirect.org": "SN West",
+    "I123.15676.schedulesdirect.org": "RDS",
+    "I111.15670.schedulesdirect.org": "TSN",
+    "I154.58314.schedulesdirect.org": "TVA Sports",
+    "I446.52300.schedulesdirect.org": "Sky MX"
+}
+
 STREAM_MAP = {
     "I408.18800.schedulesdirect.org": "71520",
     "I123.15676.schedulesdirect.org": "184813",
@@ -37,16 +43,18 @@ class handler(BaseHTTPRequestHandler):
         for day_offset in range(4):
             target_date = (now_utc + timedelta(days=day_offset)).strftime("%Y%m%d")
             
-            for sport, league in LEAGUES:
-                url = f"https://site.api.espn.com/apis/site/v2/sports/{sport}/{league}/scoreboard?dates={target_date}"
+            for sport, icon in LEAGUES.items():
+                league_id = "nhl" if sport == "hockey" else "mlb" if sport == "baseball" else "eng.1" if sport == "soccer" else "nba"
+                url = f"https://site.api.espn.com/apis/site/v2/sports/{sport}/{league_id}/scoreboard?dates={target_date}"
+                
                 try:
                     res = requests.get(url, timeout=5).json()
                     for event in res.get('events', []):
                         name = event.get('name', '').upper()
                         espn_time = datetime.strptime(event.get('date'), "%Y-%m-%dT%H:%MZ")
                         
-                        # --- TENTATIVE DE MATCHING AVEC LA BIBLE ---
-                        found_ch = None
+                        # --- MATCHMAKING & RECHERCHE DE MULTI-DIFFUSION ---
+                        matching_progs = []
                         teams = name.replace(' AT ', ' ').replace(' @ ', ' ').split(' ')
                         clean_teams = [t for t in teams if len(t) > 3]
 
@@ -54,35 +62,40 @@ class handler(BaseHTTPRequestHandler):
                             try:
                                 p_start = datetime.strptime(prog.get('start', '')[:14], "%Y%m%d%H%M%S")
                                 if abs((espn_time - p_start).total_seconds()) / 3600 <= 2.0:
-                                    if any(t in prog.get('title', '').upper() or t in prog.get('desc', '').upper() for t in clean_teams):
-                                        found_ch = prog
-                                        break
+                                    prog_text = (prog.get('title', '') + " " + prog.get('desc', '')).upper()
+                                    if any(t in prog_text for t in clean_teams):
+                                        matching_progs.append(prog)
                             except: continue
 
-                        # --- CONSTRUCTION DE L'ITEM (HYBRIDE) ---
-                        if found_ch:
-                            # On a l'info complète
-                            sid = STREAM_MAP.get(found_ch.get('ch'), DEFAULT_SID)
-                            start = found_ch.get('start')[:14]
-                            stop = found_ch.get('stop')[:14]
-                            title = f"LIVE: {event.get('name')}"
+                        # --- CONSTRUCTION DU TITRE ENRICHI ---
+                        if matching_progs:
+                            # Canal utilisé pour le stream (le premier trouvé qui est dans notre STREAM_MAP)
+                            primary = next((p for p in matching_progs if p['ch'] in STREAM_MAP), matching_progs[0])
+                            sid = STREAM_MAP.get(primary['ch'], "184813")
+                            
+                            # Liste de tous les canaux qui diffusent
+                            all_channels = [CH_NAMES.get(p['ch'], p['name']) for p in matching_progs]
+                            ch_info = f"[{' | '.join(all_channels)}]"
+                            
+                            title = f"{icon} {event.get('name')} {ch_info}"
+                            start, stop = primary['start'][:14], primary['stop'][:14]
                         else:
-                            # Mode PRÉVISIONNEL (Pas dans la bible encore)
-                            sid = DEFAULT_SID
+                            # Mode PRÉVU
+                            sid = "184813"
                             start = espn_time.strftime("%Y%m%d%H%M%S")
                             stop = (espn_time + timedelta(hours=3)).strftime("%Y%m%d%H%M%S")
-                            title = f"PRÉVU: {event.get('name')} (Canal à confirmer)"
+                            title = f"{icon} {event.get('name')} [À CONFIRMER]"
 
                         final_selection.append({
                             "title": title,
                             "sid": sid,
                             "start": start,
                             "stop": stop,
-                            "priority": 100 if any(f in name for f in ["CANADIENS", "JAYS", "CITY", "MTL"]) else 10
+                            "priority": 100 if any(f in name for f in ["CANADIENS", "JAYS", "MTL"]) else 10
                         })
                 except: continue
 
-        # Tri et Distribution sur 5 canaux
+        # Tri et Distribution
         final_selection.sort(key=lambda x: x['priority'], reverse=True)
         channels = {i: [] for i in range(1, 6)}
         for m in final_selection:
@@ -92,7 +105,7 @@ class handler(BaseHTTPRequestHandler):
                     channels[i].append(m)
                     break
 
-        # Génération XML
+        # Sortie XML
         self.send_response(200)
         self.send_header('Content-type', 'application/xml; charset=utf-8')
         self.end_headers()
@@ -103,6 +116,5 @@ class handler(BaseHTTPRequestHandler):
                 t = p['title'].replace('&', '&amp;')
                 xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}">'
                 xml += f'<title lang="fr">{t}</title></programme>'
-        xml += '</tv>'
-        self.wfile.write(xml.encode('utf-8'))
+        self.wfile.write((xml + '</tv>').encode('utf-8'))
         
