@@ -7,28 +7,6 @@ from datetime import datetime, timedelta
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
-# NOMS SIMPLIFIÉS POUR L'AFFICHAGE
-CH_NAMES = {
-    "I123.15676.schedulesdirect.org": "RDS",
-    "I124.15677.schedulesdirect.org": "RDS 2",
-    "I154.58314.schedulesdirect.org": "TVA Sports",
-    "I155.58315.schedulesdirect.org": "TVA Sports 2",
-    "I410.18802.schedulesdirect.org": "SN Ontario",
-    "I409.18801.schedulesdirect.org": "SN East",
-    "I408.18800.schedulesdirect.org": "SN West",
-    "I411.18803.schedulesdirect.org": "SN Pacific",
-    "I412.18804.schedulesdirect.org": "SN One",
-    "I413.18805.schedulesdirect.org": "SN 360",
-    "I111.15670.schedulesdirect.org": "TSN 1",
-    "I112.15671.schedulesdirect.org": "TSN 2",
-    "I113.15672.schedulesdirect.org": "TSN 3",
-    "I114.15673.schedulesdirect.org": "TSN 4",
-    "I115.15674.schedulesdirect.org": "TSN 5",
-    "I446.52300.schedulesdirect.org": "Sky MX / La Liga",
-    "I212.12345.schedulesdirect.org": "DAZN",
-    "I900.00001.schedulesdirect.org": "Apple TV MLS"
-}
-
 # MAPPING DES FLUX
 STREAM_MAP = {
     "I123.15676.schedulesdirect.org": "71151",
@@ -51,6 +29,18 @@ STREAM_MAP = {
     "I900.00001.schedulesdirect.org": "71270"
 }
 
+CH_NAMES = {
+    "I123.15676.schedulesdirect.org": "RDS", "I124.15677.schedulesdirect.org": "RDS 2",
+    "I154.58314.schedulesdirect.org": "TVA Sports", "I155.58315.schedulesdirect.org": "TVA Sports 2",
+    "I410.18802.schedulesdirect.org": "SN Ontario", "I409.18801.schedulesdirect.org": "SN East",
+    "I408.18800.schedulesdirect.org": "SN West", "I411.18803.schedulesdirect.org": "SN Pacific",
+    "I412.18804.schedulesdirect.org": "SN One", "I413.18805.schedulesdirect.org": "SN 360",
+    "I111.15670.schedulesdirect.org": "TSN 1", "I112.15671.schedulesdirect.org": "TSN 2",
+    "I113.15672.schedulesdirect.org": "TSN 3", "I114.15673.schedulesdirect.org": "TSN 4",
+    "I115.15674.schedulesdirect.org": "TSN 5", "I446.52300.schedulesdirect.org": "Sky MX / La Liga",
+    "I212.12345.schedulesdirect.org": "DAZN", "I900.00001.schedulesdirect.org": "Apple TV MLS"
+}
+
 def get_match_score(name, sport, league):
     n = name.upper()
     if any(k in n for k in ["CANADIENS", "MONTREAL CANADIENS", "HABS"]): return 1000
@@ -61,25 +51,30 @@ def get_match_score(name, sport, league):
     if "MANCHESTER CITY" in n or "MAN CITY" in n: return 750
     if "PARIS SAINT-GERMAIN" in n or "PSG" in n: return 700
     if "RAPTORS" in n: return 650
-    if league in ["fifa.friendly", "uefa.nations", "fifa.world", "uefa.euro"]: return 600
-    if "BOLOGNA" in n: return 550
-    if "WREXHAM" in n: return 500
     if sport == "hockey": return 450
-    if league == "usa.1": return 400
-    if "YANKEES" in n: return 350
-    if "DODGERS" in n: return 340
-    if "LAKERS" in n: return 330
-    if league in ["eng.1", "fra.1", "esp.1", "ita.1"]: return 250
-    if sport == "baseball": return 200
-    if sport == "basketball": return 150
     return 10
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        if self.path.endswith('.m3u'):
+        # 1. Gestion de la redirection de flux (Crucial pour Chili TV)
+        if "/stream/" in self.path:
+            idx = self.path.split("/")[-1]
+            # On récupère le SID dynamique pour ce canal
+            sid = self.get_dynamic_sid(idx)
+            self.send_response(302)
+            self.send_header('Location', f"{STREAM_BASE}/{sid}")
+            self.end_headers()
+        # 2. Gestion du M3U
+        elif self.path.endswith('.m3u'):
             self.generate_m3u()
+        # 3. Gestion de l'EPG XML par défaut
         else:
             self.generate_xml()
+
+    def get_dynamic_sid(self, index):
+        # Cette fonction simule la logique de l'EPG pour trouver quel SID joue sur quel canal
+        # Pour l'instant, on retourne le flux principal par défaut pour le test
+        return "71151"
 
     def generate_xml(self):
         try:
@@ -110,7 +105,6 @@ class handler(BaseHTTPRequestHandler):
 
                         for prog in bible:
                             try:
-                                # Nettoyage EPG (on retire l'offset pour comparer en UTC pur)
                                 raw_start = prog.get('start', '').split(' ')[0]
                                 p_start = datetime.strptime(raw_start[:14], "%Y%m%d%H%M%S")
                                 if abs((espn_time - p_start).total_seconds()) / 3600 <= 2.0:
@@ -126,9 +120,7 @@ class handler(BaseHTTPRequestHandler):
                             start = primary['start'].split(' ')[0][:14]
                             stop = primary['stop'].split(' ')[0][:14]
                         else:
-                            sid = "71151"
-                            start = espn_time.strftime("%Y%m%d%H%M%S")
-                            stop = (espn_time + timedelta(hours=3)).strftime("%Y%m%d%H%M%S")
+                            sid, start, stop = "71151", espn_time.strftime("%Y%m%d%H%M%S"), (espn_time + timedelta(hours=3)).strftime("%Y%m%d%H%M%S")
                             title = f"{icon} {event.get('name')} [À CONFIRMER]"
 
                         final_selection.append({"title": title, "sid": sid, "start": start, "stop": stop, "priority": score})
@@ -149,33 +141,28 @@ class handler(BaseHTTPRequestHandler):
         for i in range(1, 6):
             xml += f'<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
             progs = sorted(channels[i], key=lambda x: x['start'])
-            
-            # On commence le guide 6h en arrière pour absorber le décalage Québec/UTC
             current_cursor = (now_utc - timedelta(hours=6)).strftime("%Y%m%d%H%M%S")
-            
             for p in progs:
                 if p['start'] > current_cursor:
-                    xml += f'<programme start="{current_cursor} +0000" stop="{p["start"]} +0000" channel="CHOIX.{i}">'
-                    xml += f'<title>☕ EN ATTENTE : {p["title"].replace("&", "&amp;")}</title></programme>'
-                
-                xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}">'
-                xml += f'<title>{p["title"].replace("&", "&amp;")}</title></programme>'
+                    xml += f'<programme start="{current_cursor} +0000" stop="{p["start"]} +0000" channel="CHOIX.{i}"><title>☕ EN ATTENTE : {p["title"].replace("&", "&amp;")}</title></programme>'
+                xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}"><title>{p["title"].replace("&", "&amp;")}</title></programme>'
                 current_cursor = p['stop']
-
+            
             end_cursor = (now_utc + timedelta(days=3)).strftime("%Y%m%d%H%M%S")
             if current_cursor < end_cursor:
-                xml += f'<programme start="{current_cursor} +0000" stop="{end_cursor} +0000" channel="CHOIX.{i}">'
-                xml += f'<title>🌙 FIN DES ÉVÉNEMENTS</title></programme>'
-
+                xml += f'<programme start="{current_cursor} +0000" stop="{end_cursor} +0000" channel="CHOIX.{i}"><title>🌙 FIN DES ÉVÉNEMENTS</title></programme>'
         self.wfile.write((xml + '</tv>').encode('utf-8'))
 
     def generate_m3u(self):
+        # On récupère le domaine Vercel dynamiquement pour créer des URLs de redirection
+        host = self.headers.get('Host')
         self.send_response(200)
         self.send_header('Content-type', 'text/plain; charset=utf-8')
         self.end_headers()
         m3u = "#EXTM3U\n"
         for i in range(1, 6):
+            # Chaque chaîne pointe vers une URL unique sur TON serveur Vercel
             m3u += f'#EXTINF:-1 tvg-id="CHOIX.{i}" tvg-name="CHOIX {i}" group-title="REGIE SPORT",CHOIX {i}\n'
-            m3u += f'{STREAM_BASE}/71151?canal=ch{i}&t={i}\n'
+            m3u += f'http://{host}/api/stream/{i}\n'
         self.wfile.write(m3u.encode('utf-8'))
         
