@@ -29,30 +29,28 @@ jobs:
       - name: Run EPG Extraction
         run: python extract_epg.py
 
-      - name: Force Push to Main
+      - name: Atomic Sync and Push
         run: |
-          # 1. Nettoyage des verrous Git potentiels
-          rm -f .git/index.lock
-          
-          # 2. Configurer l'identité
           git config --global user.name 'EPG-Bot'
           git config --global user.email 'bot@noreply.github.com'
           
-          # 3. S'assurer qu'on est sur la branche main et synchronisé
-          git checkout main
+          # 1. On récupère l'état du serveur
           git fetch origin main
-          git reset --soft origin/main
           
-          # 4. Ajouter et commit
+          # 2. On "staged" notre nouveau fichier
           git add filtered_epg.json
           
-          # 5. Ne commit que s'il y a des changements pour éviter l'erreur "nothing to commit"
+          # 3. S'il y a des changements, on commit
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m "Update EPG data [skip ci]"
             
-            # 6. La force brute : on pousse en ignorant les avertissements de version
-            git push --force origin main
+            # 4. LA CLÉ : On pull avec rebase. 
+            # S'il y a un conflit sur le JSON, on dit à Git de prendre NOTRE version (-X theirs)
+            git pull --rebase -X theirs origin main
+            
+            # 5. On pousse normalement
+            git push origin main
           else
-            echo "Aucun changement détecté, rien à pousser."
+            echo "Rien à mettre à jour."
           fi
           
