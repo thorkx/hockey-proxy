@@ -1,146 +1,97 @@
-from flask import Flask, Response, request, redirect, make_response
+from http.server import BaseHTTPRequestHandler
 import requests
-from datetime import datetime, timedelta
-import pytz
+from datetime import datetime
+import json
 
-app = Flask(__name__)
+# --- CONFIGURATION ---
+JSON_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
+STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
-# =================================================================
-# 1. CONFIGURATION & MAPPING
-# =================================================================
-USER, PASS, BASE_DOMAIN = "tDcJnv4jMM", "2khBtbUZuV", "omegatv.live:80"
+# --- TES PRIORITÉS ---
+TOP_TEAMS = ["CANADIENS", "CF MONTRÉAL", "BLUE JAYS", "RAPTORS", "MANCHESTER CITY", "PSG", "BOLOGNE", "WREXHAM", "F1", "LEWIS HAMILTON"]
+SECONDARY_TEAMS = ["AVALANCHE", "SABRES", "UTAH HOCKEY", "OILERS", "LAKERS", "WARRIORS", "CELTICS", "YANKEES", "DODGERS", "INTER MIAMI"]
 
-# Remplace par ton URL GitHub réelle pour le fichier JSON
-JSON_URL = "https://raw.githubusercontent.com/ton-username/ton-repo/main/filtered_epg.json"
-
-P_ULTRA, P_HIGH, P_STD = 2500, 1200, 50
-ULTRA_TEAMS = ["MTL", "CANADIENS", "PSG", "MCI", "F1", "BOLOGNA", "WREXHAM", "CF MONTRÉAL"]
-
-# Mapping entre les IDs du JSON (EPG) et tes liens IPTV
+# --- DICTIONNAIRE DE CORRESPONDANCE GLOBAL ---
 CH_LINKS = {
-    "RDS.ca": "184813", "RDS2.ca": "184814", "TSN1.ca": "71234", 
-    "TSN2.ca": "71235", "SN_East.ca": "71518", "SN_One.ca": "71519",
-    "TVASports.ca": "184811", "CanalPlus.fr": "49943", "BeINSports1.fr": "157279",
-    "DAZN1.fr": "176642", "SkySportsPL.uk": "71300" 
+    # --- QUÉBEC & CANADA ---
+    "I123.15676.schedulesdirect.org": "184813",  # RDS FHD
+    "I124.39080.schedulesdirect.org": "184814",  # RDS 2 FHD
+    "I125.15678.schedulesdirect.org": "70935",   # RDS INFO
+    "I154.58314.schedulesdirect.org": "184821",  # TVA SPORTS FHD
+    "I155.58315.schedulesdirect.org": "184822",  # TVA SPORTS 2 FHD
+    "I111.15670.schedulesdirect.org": "184816",  # TSN 1
+    "I112.15671.schedulesdirect.org": "184817",  # TSN 2
+    "I113.15672.schedulesdirect.org": "184818",  # TSN 3
+    "I114.15673.schedulesdirect.org": "184819",  # TSN 4
+    "I115.15674.schedulesdirect.org": "184820",  # TSN 5
+
+    # --- DAZN (FULL PACK) ---
+    "DAZN1": "176814", "DAZN2": "176815", "DAZN3": "176816", 
+    "DAZN4": "176817", "DAZN5": "176818", "DAZN6": "176819",
+    "DAZN7": "176820", "DAZN8": "176821", "DAZN9": "176822", 
+    "DAZN10": "176823",
+
+    # --- APPLE MLS SEASON PASS (FULL FEEDS) ---
+    # Mappés sur les flux événementiels de ta playlist
+    "MLS1": "176901", "MLS2": "176902", "MLS3": "176903", "MLS4": "176904",
+    "MLS5": "176905", "MLS6": "176906", "MLS7": "176907", "MLS8": "176908",
+    "MLS9": "176909", "MLS10": "176910", "MLS11": "176911", "MLS12": "176912",
+    "MLS13": "176913", "MLS14": "176914", "MLS15": "176915",
+
+    # --- FOOT EUROPÉEN ---
+    "I1000.49609.schedulesdirect.org": "176800", # Sky Main Event
+    "I1001.104327.schedulesdirect.org": "176801",# Sky Football
+    "I50001.schedulesdirect.org": "50001",       # CANAL+
+    "I50003.schedulesdirect.org": "50003",       # CANAL+ FOOT
+    "I392.76942.gracenote.com": "157279",        # beIN 1
 }
 
-def get_url(cid): return f"http://{BASE_DOMAIN}/{USER}/{PASS}/{cid}.ts"
-MAPPING_DEFAULT = get_url(CH_LINKS["RDS.ca"])
+class handler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header('Content-type', 'audio/x-mpegurl')
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.end_headers()
 
-# =================================================================
-# 2. LE CERVEAU : RECHERCHE & CLASSEMENT
-# =================================================================
-
-def get_ranked_games():
-    now = datetime.now(pytz.utc)
-    all_games = []
-    
-    # Étape A: Charger ton petit JSON filtré (NBA, MLB, Foot Europe)
-    epg_data = []
-    try:
-        r = requests.get(JSON_URL, timeout=5)
-        if r.status_code == 200: epg_data = r.json()
-    except: pass
-
-    # Étape B: Scanner ESPN pour les horaires officiels
-    leagues = [
-        ('soccer/uefa.champions', 'UCL'), ('hockey/nhl', 'NHL'),
-        ('basketball/nba', 'NBA'), ('baseball/mlb', 'MLB'),
-        ('racing/f1', 'F1'), ('soccer/eng.1', 'EPL'), ('soccer/fra.1', 'L1')
-    ]
-
-    for path, sport_key in leagues:
         try:
-            res = requests.get(f"https://site.api.espn.com/apis/site/v2/sports/{path}/scoreboard", timeout=5).json()
-            for e in res.get('events', []):
-                title = e['name'].replace(" at ", " @ ")
-                start_dt = datetime.strptime(e['date'].replace('Z', ''), "%Y-%m-%dT%H:%M").replace(tzinfo=pytz.utc)
+            r = requests.get(JSON_URL, timeout=10)
+            epg_data = r.json()
+        except:
+            epg_data = []
+
+        playlist = "#EXTM3U\n"
+        added_ids = set()
+
+        # 1. SECTION FAVORIS : Scan intelligent
+        playlist += "\n# --- MATCHS PRIORITAIRES ---\n"
+        for team in TOP_TEAMS + SECONDARY_TEAMS:
+            for prog in epg_data:
+                title = prog.get('title', '').upper()
+                name = prog.get('name', '').upper()
+                ch_id = prog.get('ch')
                 
-                # --- LOGIQUE DE VALIDATION VIA JSON ---
-                found_ch_id = None
-                day_str = start_dt.strftime("%Y%m%d")
+                # Détection automatique : si le titre contient l'équipe OU 
+                # si c'est un flux MLS/DAZN et que l'équipe joue
+                is_match = team in title
+                is_special_feed = any(x in name for x in ["MLS", "DAZN", "APPLE"]) and team in title
                 
-                # On cherche si une de nos chaînes diffuse ce match dans le JSON
-                for entry in epg_data:
-                    if entry['start'].startswith(day_str):
-                        # On simplifie le match (ex: "Lakers" au lieu de "Los Angeles Lakers")
-                        if any(word.lower() in entry['title'].lower() for word in title.split()):
-                            found_ch_id = entry['ch']
-                            break
-                
-                # --- CALCUL DU SCORE ---
-                score = P_STD
-                if any(x in title.upper() for x in ULTRA_TEAMS): score = P_ULTRA
-                elif sport_key in ['UCL', 'F1']: score = P_HIGH
+                if (is_match or is_special_feed) and ch_id in CH_LINKS:
+                    if ch_id not in added_ids:
+                        prefix = "⭐" if team in TOP_TEAMS else "✅"
+                        playlist += f'#EXTINF:-1, [{prefix}] {prog["name"]} - {prog["title"]}\n'
+                        playlist += f'{STREAM_BASE}/{CH_LINKS[ch_id]}\n'
+                        added_ids.add(ch_id)
 
-                # --- DÉTERMINATION DE L'URL ---
-                # 1. Si trouvé dans le JSON -> On prend le lien IPTV correspondant
-                # 2. Si UCL -> DAZN1 par défaut
-                # 3. Sinon -> RDS par défaut
-                final_link = get_url(CH_LINKS.get(found_ch_id, CH_LINKS["RDS.ca"]))
-                if sport_key == 'UCL' and not found_ch_id: final_link = get_url(CH_LINKS["DAZN1.fr"])
+        # 2. SECTION COMPLÈTE : Tous les feeds sportifs
+        playlist += "\n# --- TOUTES LES CHAÎNES SPORT ---\n"
+        # On trie pour avoir une liste propre
+        for ch_key in sorted(CH_LINKS.keys()):
+            stream_id = CH_LINKS[ch_key]
+            if ch_key not in added_ids:
+                # Cherche le nom propre dans l'EPG, sinon utilise la clé
+                ch_display_name = next((p['name'] for p in epg_data if p['ch'] == ch_key), ch_key)
+                playlist += f'#EXTINF:-1, {ch_display_name}\n'
+                playlist += f'{STREAM_BASE}/{stream_id}\n'
 
-                all_games.append({
-                    'sport': sport_key, 'title': title, 'score': score, 'id': e['id'],
-                    'start_dt': start_dt, 'url': final_link, 'ch_name': found_ch_id or "RDS/Default"
-                })
-        except: continue
-
-    return sorted(all_games, key=lambda x: (-x['score'], x['start_dt']))
-
-def assign_grid():
-    ranked = get_ranked_games()
-    grid = {i: [] for i in range(1, 6)}
-    slots = {i: [] for i in range(1, 6)}
-    assigned = set()
-    for g in ranked:
-        if g['id'] in assigned: continue
-        s, e = g['start_dt'] - timedelta(minutes=45), g['start_dt'] + timedelta(hours=4)
-        for i in range(1, 6):
-            if not any(not (e <= os or s >= oe) for os, oe in slots[i]):
-                slots[i].append((s, e))
-                grid[i].append(g)
-                assigned.add(g['id'])
-                break
-    return grid
-
-# =================================================================
-# 3. ROUTES FLASK
-# =================================================================
-
-@app.route('/')
-def home(): return "Multi-Sport Smart API Active"
-
-@app.route('/nhl-live/<ch>')
-def live(ch):
-    try:
-        now = datetime.now(pytz.utc)
-        matches = assign_grid().get(int(ch), [])
-        m = next((m for m in matches if (m['start_dt'] - timedelta(minutes=45)) <= now <= (m['start_dt'] + timedelta(hours=4))), None)
-        return redirect(m['url'] if m else MAPPING_DEFAULT, code=302)
-    except: return redirect(MAPPING_DEFAULT)
-
-@app.route('/playlist.m3u')
-def playlist():
-    h = request.host_url.rstrip('/')
-    m3u = ["#EXTM3U"]
-    for i in range(1, 6):
-        m3u.append(f'#EXTINF:-1 tvg-id="MULTI{i}", MULTI {i}\n{h}/nhl-live/{i}')
-    return Response("\n".join(m3u), mimetype='text/plain')
-
-@app.route('/epg.xml')
-def epg():
-    grid = assign_grid()
-    xml = ['<?xml version="1.0" encoding="UTF-8"?><tv>']
-    for i in range(1, 6):
-        cid = f"MULTI{i}"
-        xml.append(f'<channel id="{cid}"><display-name>MULTI {i}</display-name></channel>')
-        for m in sorted(grid[i], key=lambda x: x['start_dt']):
-            s = m['start_dt']
-            xml.append(f'<programme start="{s.strftime("%Y%m%d%H%M%S")} +0000" stop="{(s+timedelta(hours=3, minutes=30)).strftime("%Y%m%d%H%M%S")} +0000" channel="{cid}"><title lang="fr">{m["title"]} ({m["ch_name"]})</title></programme>')
-    xml.append('</tv>')
-    return Response("\n".join(xml), mimetype='application/xml')
-
-if __name__ == '__main__':
-    app.run()
+        self.wfile.write(playlist.encode('utf-8'))
         
