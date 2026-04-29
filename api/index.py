@@ -1,6 +1,7 @@
 from http.server import BaseHTTPRequestHandler
 import requests
 import json
+import time
 from datetime import datetime, timedelta
 
 # CONFIGURATION
@@ -28,14 +29,17 @@ CH_NAMES = {
 
 def get_match_score(name):
     n = name.upper()
-    if any(k in n for k in ["CANADIENS", "MONTREAL", "HABS"]): return 1000
+    if any(k in n for k in ["CANADIENS", "MONTREAL CANADIENS", "HABS"]): return 1000
     if "CF MONTREAL" in n: return 900
     if "BLUE JAYS" in n: return 800
+    if "F1" in n or "GRAND PRIX" in n: return 750
     return 100
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         if "/stream/" in self.path:
+            # Pour l'instant on redirige vers le flux RDS par défaut
+            # On pourra dynamiser cela plus tard si nécessaire
             self.send_response(302)
             self.send_header('Location', f"{STREAM_BASE}/71151")
             self.end_headers()
@@ -46,15 +50,14 @@ class handler(BaseHTTPRequestHandler):
 
     def generate_xml(self):
         try:
-            # On force le no-cache pour être sûr d'avoir les dernières modifs
-            bible = requests.get(BIBLE_URL, headers={'Cache-Control': 'no-cache'}, timeout=10).json()
+            bible = requests.get(f"{BIBLE_URL}?t={int(time.time())}", timeout=10).json()
         except: bible = []
 
         now_utc = datetime.utcnow()
         events_found = []
+        seen_events = set() # Pour éviter les doublons de matchs identiques
         
-        # On élargit les ligues pour être sûr d'avoir du contenu
-        leagues = [("hockey","nhl"), ("baseball","mlb"), ("soccer","usa.1"), ("soccer","eng.1"), ("basketball","nba")]
+        leagues = [("hockey","nhl"), ("baseball","mlb"), ("soccer","usa.1"), ("basketball","nba")]
         
         for day in range(3):
             d_str = (now_utc + timedelta(days=day)).strftime("%Y%m%d")
@@ -62,18 +65,17 @@ class handler(BaseHTTPRequestHandler):
                 try:
                     res = requests.get(f"https://site.api.espn.com/apis/site/v2/sports/{sport}/{league}/scoreboard?dates={d_str}", timeout=5).json()
                     for ev in res.get('events', []):
-                        ev_name = ev.get('name', '')
-                        ev_time_str = ev.get('date')
-                        ev_time = datetime.strptime(ev_time_str, "%Y-%m-%dT%H:%MZ")
+                        ev_name = ev.get('name', '').upper()
+                        # Si on a déjà traité ce match (ex: trouvé sur 2 chaînes), on passe
+                        if ev_name in seen_events: continue
                         
-                        # Matcher avec la bible
+                        ev_time = datetime.strptime(ev.get('date'), "%Y-%m-%dT%H:%MZ")
                         best_prog = None
-                        teams = [t for t in ev_name.upper().replace(' AT ',' ').replace(' @ ',' ').split(' ') if len(t) > 3]
-                        
+                        teams = [t for t in ev_name.replace(' AT ',' ').replace(' @ ',' ').split(' ') if len(t) > 3]
+
                         for p in bible:
                             p_start = datetime.strptime(p['start'].split(' ')[0][:14], "%Y%m%d%H%M%S")
-                            # Si le match ESPN et l'EPG sont à moins de 3h d'intervalle
-                            if abs((ev_time - p_start).total_seconds()) < 10800:
+                            if abs((ev_time - p_start).total_seconds()) < 10800: # 3h
                                 if any(t in p['title'].upper() for t in teams):
                                     best_prog = p
                                     break
@@ -86,24 +88,31 @@ class handler(BaseHTTPRequestHandler):
                                 "stop": best_prog['stop'].split(' ')[0][:14],
                                 "ch_display": CH_NAMES.get(best_prog['ch'], "TV")
                             })
+                            seen_events.add(ev_name)
                 except: continue
 
-        # Attribution
+        # --- LOGIQUE DE PRIORITÉ PAR EMPILAGE ---
+        # 1. Trier tous les matchs par importance
         events_found.sort(key=lambda x: x['score'], reverse=True)
+        
         channels = {i: [] for i in range(1, 6)}
         
+        # 2. Pour chaque match (du plus important au moins important)
         for ev in events_found:
+            # 3. Essayer de le placer sur le canal le plus prioritaire (1 à 5)
             for i in range(1, 6):
                 collision = False
                 for existing in channels[i]:
+                    # Vérifier le chevauchement
                     if not (ev['stop'] <= existing['start'] or ev['start'] >= existing['stop']):
                         collision = True
                         break
+                
                 if not collision:
                     channels[i].append(ev)
-                    break
+                    break # Match placé, on passe au suivant dans events_found
 
-        # Génération XML
+        # Génération du XML
         self.send_response(200)
         self.send_header('Content-type', 'application/xml; charset=utf-8')
         self.end_headers()
@@ -111,22 +120,22 @@ class handler(BaseHTTPRequestHandler):
         xml = '<?xml version="1.0" encoding="UTF-8"?><tv>'
         for i in range(1, 6):
             xml += f'<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
-            
-            # On trie et on remplit les trous avec un curseur qui commence loin derrière
             progs = sorted(channels[i], key=lambda x: x['start'])
-            cursor = (now_utc - timedelta(hours=12)).strftime("%Y%m%d%H%M%S")
+            
+            # On commence le remplissage 6h avant l'heure actuelle
+            cursor = (now_utc - timedelta(hours=6)).strftime("%Y%m%d%H%M%S")
             
             for p in progs:
                 if p['start'] > cursor:
-                    xml += f'<programme start="{cursor} +0000" stop="{p["start"]} +0000" channel="CHOIX.{i}"><title>☕ EN ATTENTE : {p["title"].replace("&", "&amp;")}</title></programme>'
+                    xml += f'<programme start="{cursor} +0000" stop="{p["start"]} +0000" channel="CHOIX.{i}"><title>☕ Prochainement: {p["title"].replace("&", "&amp;")}</title></programme>'
                 
                 xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}"><title>{p["title"].replace("&", "&amp;")} [{p["ch_display"]}]</title></programme>'
                 cursor = p['stop']
             
-            # Bloc de fin
+            # Fin de journée
             end_cursor = (now_utc + timedelta(days=2)).strftime("%Y%m%d%H%M%S")
             if cursor < end_cursor:
-                xml += f'<programme start="{cursor} +0000" stop="{end_cursor} +0000" channel="CHOIX.{i}"><title>🌙 FIN DES ÉVÉNEMENTS</title></programme>'
+                xml += f'<programme start="{cursor} +0000" stop="{end_cursor} +0000" channel="CHOIX.{i}"><title>🌙 Fin des événements</title></programme>'
 
         self.wfile.write((xml + '</tv>').encode('utf-8'))
 
