@@ -88,11 +88,11 @@ class handler(BaseHTTPRequestHandler):
 
         final_selection = []
         now_utc = datetime.utcnow()
-        soccer_leagues = ["eng.1", "fra.1", "esp.1", "ita.1", "usa.1", "uefa.champions"]
         
         for day_offset in range(4):
             target_date = (now_utc + timedelta(days=day_offset)).strftime("%Y%m%d")
             urls = [("hockey", "nhl", "🏒"), ("baseball", "mlb", "⚾"), ("basketball", "nba", "🏀")]
+            soccer_leagues = ["eng.1", "fra.1", "esp.1", "ita.1", "usa.1", "uefa.champions"]
             for sl in soccer_leagues: urls.append(("soccer", sl, "⚽"))
             
             for sport, league, icon in urls:
@@ -110,7 +110,9 @@ class handler(BaseHTTPRequestHandler):
 
                         for prog in bible:
                             try:
-                                p_start = datetime.strptime(prog.get('start', '')[:14], "%Y%m%d%H%M%S")
+                                # Nettoyage EPG (on retire l'offset pour comparer en UTC pur)
+                                raw_start = prog.get('start', '').split(' ')[0]
+                                p_start = datetime.strptime(raw_start[:14], "%Y%m%d%H%M%S")
                                 if abs((espn_time - p_start).total_seconds()) / 3600 <= 2.0:
                                     if any(t in prog.get('title', '').upper() or t in prog.get('desc', '').upper() for t in clean_teams):
                                         matching_progs.append(prog)
@@ -121,17 +123,18 @@ class handler(BaseHTTPRequestHandler):
                             sid = STREAM_MAP.get(primary['ch'], "71151")
                             u_channels = [CH_NAMES.get(p['ch'], p['name']) for p in matching_progs]
                             title = f"{icon} {event.get('name')} [{' | '.join(list(dict.fromkeys(u_channels))[:4])}]"
-                            start, stop = primary['start'][:14], primary['stop'][:14]
+                            start = primary['start'].split(' ')[0][:14]
+                            stop = primary['stop'].split(' ')[0][:14]
                         else:
-                            sid, start, stop = "71151", espn_time.strftime("%Y%m%d%H%M%S"), (espn_time + timedelta(hours=3)).strftime("%Y%m%d%H%M%S")
+                            sid = "71151"
+                            start = espn_time.strftime("%Y%m%d%H%M%S")
+                            stop = (espn_time + timedelta(hours=3)).strftime("%Y%m%d%H%M%S")
                             title = f"{icon} {event.get('name')} [À CONFIRMER]"
 
                         final_selection.append({"title": title, "sid": sid, "start": start, "stop": stop, "priority": score})
                 except: continue
 
         final_selection.sort(key=lambda x: x['priority'], reverse=True)
-        
-        # Attribution aux canaux avec remplissage (Filler)
         channels = {i: [] for i in range(1, 6)}
         for m in final_selection:
             for i in range(1, 6):
@@ -145,30 +148,24 @@ class handler(BaseHTTPRequestHandler):
         xml = '<?xml version="1.0" encoding="UTF-8"?><tv>'
         for i in range(1, 6):
             xml += f'<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
-            
-            # Trier les programmes par heure pour calculer les trous
             progs = sorted(channels[i], key=lambda x: x['start'])
             
-            # Temps de départ du premier bloc de remplissage (il y a 2 heures)
-            current_cursor = (now_utc - timedelta(hours=2)).strftime("%Y%m%d%H%M%S")
+            # On commence le guide 6h en arrière pour absorber le décalage Québec/UTC
+            current_cursor = (now_utc - timedelta(hours=6)).strftime("%Y%m%d%H%M%S")
             
-            for idx, p in enumerate(progs):
-                # Si il y a un trou avant le match actuel, on le remplit
+            for p in progs:
                 if p['start'] > current_cursor:
                     xml += f'<programme start="{current_cursor} +0000" stop="{p["start"]} +0000" channel="CHOIX.{i}">'
-                    xml += f'<title>☕ EN ATTENTE : {p["title"].replace("&", "&amp;")}</title>'
-                    xml += f'<desc>Le prochain événement débute à {p["start"][8:10]}h{p["start"][10:12]}.</desc></programme>'
+                    xml += f'<title>☕ EN ATTENTE : {p["title"].replace("&", "&amp;")}</title></programme>'
                 
-                # Le match lui-même
                 xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}">'
                 xml += f'<title>{p["title"].replace("&", "&amp;")}</title></programme>'
                 current_cursor = p['stop']
 
-            # Si après le dernier match il n'y a plus rien, on met un bloc de fin
             end_cursor = (now_utc + timedelta(days=3)).strftime("%Y%m%d%H%M%S")
             if current_cursor < end_cursor:
                 xml += f'<programme start="{current_cursor} +0000" stop="{end_cursor} +0000" channel="CHOIX.{i}">'
-                xml += f'<title>🌙 FIN DES ÉVÉNEMENTS</title><desc>Revenez plus tard pour la suite de la programmation.</desc></programme>'
+                xml += f'<title>🌙 FIN DES ÉVÉNEMENTS</title></programme>'
 
         self.wfile.write((xml + '</tv>').encode('utf-8'))
 
