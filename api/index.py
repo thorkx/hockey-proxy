@@ -17,8 +17,13 @@ RULES = [
     ({"league": "usa.1", "keywords": []}, 150)
 ]
 
-SPORT_DURATIONS = {
-    "hockey": 165, "baseball": 180, "basketball": 150, "soccer": 120, "f1": 135
+# DURÉES ET ICÔNES PAR SPORT
+SPORT_DATA = {
+    "hockey": {"min": 165, "icon": "🏒"},
+    "baseball": {"min": 180, "icon": "⚾"},
+    "basketball": {"min": 150, "icon": "🏀"},
+    "soccer": {"min": 120, "icon": "⚽"},
+    "f1": {"min": 135, "icon": "🏎️"}
 }
 
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
@@ -79,12 +84,9 @@ class handler(BaseHTTPRequestHandler):
                         if ev_name in seen_matches: continue
                         
                         start_dt = datetime.strptime(ev.get('date'), "%Y-%m-%dT%H:%MZ")
-                        duration = SPORT_DURATIONS.get(sport, 150)
-                        stop_dt = start_dt + timedelta(minutes=duration)
+                        s_info = SPORT_DATA.get(sport, {"min": 150, "icon": "📺"})
+                        stop_dt = start_dt + timedelta(minutes=s_info["min"])
                         
-                        # --- MATCHING RENFORCÉ ---
-                        # On cherche les mots-clés de l'événement
-                        # Si c'est Montréal, on force aussi "HOCKEY" ou "CANADIENS" dans la bible
                         espn_keywords = [t for t in ev_name.replace(' AT ',' ').replace(' @ ',' ').split(' ') if len(t) >= 3]
                         
                         confirmed_ch = None
@@ -92,14 +94,9 @@ class handler(BaseHTTPRequestHandler):
                             p_title = p['title'].upper()
                             p_start = datetime.strptime(p['start'].split(' ')[0][:14], "%Y%m%d%H%M%S")
                             
-                            # Même fenêtre de temps (4h)
                             if abs((start_dt - p_start).total_seconds()) < 14400:
-                                # 1. Test direct par mots-clés ESPN
-                                if any(k in p_title for k in espn_keywords):
-                                    confirmed_ch = CH_NAMES.get(p['ch'], "TV")
-                                    break
-                                # 2. Fallback spécial pour les Canadiens (Si ESPN dit Montreal, et Bible dit Hockey/RDS)
-                                if ("MONTREAL" in ev_name or "CANADIENS" in ev_name) and ("HOCKEY" in p_title or "CANADIENS" in p_title):
+                                if any(k in p_title for k in espn_keywords) or \
+                                   (("MONTREAL" in ev_name or "CANADIENS" in ev_name) and ("HOCKEY" in p_title or "CANADIENS" in p_title)):
                                     confirmed_ch = CH_NAMES.get(p['ch'], "TV")
                                     break
                         
@@ -109,12 +106,12 @@ class handler(BaseHTTPRequestHandler):
                                 "score": calculate_score(ev_name, league),
                                 "start": start_dt.strftime("%Y%m%d%H%M%S"),
                                 "stop": stop_dt.strftime("%Y%m%d%H%M%S"),
-                                "ch_name": confirmed_ch
+                                "ch_name": confirmed_ch,
+                                "icon": s_info["icon"]
                             })
                             seen_matches.add(ev_name)
                 except: continue
 
-        # --- ALGORITHME D'EMPILAGE ---
         events_to_stack.sort(key=lambda x: x['score'], reverse=True)
         channels = {i: [] for i in range(1, 6)}
         for ev in events_to_stack:
@@ -122,13 +119,10 @@ class handler(BaseHTTPRequestHandler):
                 collision = False
                 for existing in channels[i]:
                     if not (ev['stop'] <= existing['start'] or ev['start'] >= existing['stop']):
-                        collision = True
-                        break
+                        collision = True; break
                 if not collision:
-                    channels[i].append(ev)
-                    break
+                    channels[i].append(ev); break
 
-        # --- GÉNÉRATION XML ---
         self.send_response(200)
         self.send_header('Content-type', 'application/xml; charset=utf-8')
         self.end_headers()
@@ -139,13 +133,15 @@ class handler(BaseHTTPRequestHandler):
             progs = sorted(channels[i], key=lambda x: x['start'])
             cursor = (now_utc - timedelta(hours=6)).strftime("%Y%m%d%H%M%S")
             for p in progs:
+                icon = p.get('icon', '📺')
                 if p['start'] > cursor:
-                    xml += f'<programme start="{cursor} +0000" stop="{p["start"]} +0000" channel="CHOIX.{i}"><title>Prochainement: {p["title"]}</title></programme>'
-                xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}"><title>{p["title"]} [{p["ch_name"]}]</title></programme>'
+                    xml += f'<programme start="{cursor} +0000" stop="{p["start"]} +0000" channel="CHOIX.{i}"><title>➡️{icon} Prochainement: {p["title"]}</title></programme>'
+                xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}"><title>{icon} {p["title"]} [{p["ch_name"]}]</title></programme>'
                 cursor = p['stop']
-            end_limit = (now_utc + timedelta(days=2)).strftime("%Y%m%d%H%M%S")
-            if cursor < end_limit:
-                xml += f'<programme start="{cursor} +0000" stop="{end_limit} +0000" channel="CHOIX.{i}"><title>🌙 Fin des émissions</title></programme>'
+            
+            limit = (now_utc + timedelta(days=2)).strftime("%Y%m%d%H%M%S")
+            if cursor < limit:
+                xml += f'<programme start="{cursor} +0000" stop="{limit} +0000" channel="CHOIX.{i}"><title>🌙 Fin des émissions</title></programme>'
         self.wfile.write((xml + '</tv>').encode('utf-8'))
 
     def generate_m3u(self):
