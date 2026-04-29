@@ -1,7 +1,6 @@
 from http.server import BaseHTTPRequestHandler
 import requests
 import json
-import time
 import re
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor
@@ -10,57 +9,54 @@ from concurrent.futures import ThreadPoolExecutor
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
-# --- MAPPAGE DE LA BIBLE (FR + EN) ---
+# --- LISTE DES IDS PRIORITAIRES (Sportsnet & TSN) ---
+PRIORITY_IDS = [
+    "I405.62111.schedulesdirect.org", "I409.68858.schedulesdirect.org", 
+    "SNEast", "SNWest", "SNPacific", "SNOntario", "SNOne", "SN360",
+    "TSN1", "TSN2", "TSN3", "TSN4", "TSN5"
+]
+
+# --- MAPPAGE POUR LE XML ---
 CH_DATABASE = {
-    # FR - CANADA
+    "I405.62111.schedulesdirect.org": {"name": "Sportsnet 4K", "id": "157674", "lang": "EN"},
+    "I409.68858.schedulesdirect.org": {"name": "TSN/SN (EPG)", "id": "71234", "lang": "EN"},
     "I1000.49609.schedulesdirect.org": {"name": "RDS", "id": "184813", "lang": "FR"},
     "I123.15676.schedulesdirect.org": {"name": "RDS", "id": "184813", "lang": "FR"},
-    "I124.15677.schedulesdirect.org": {"name": "RDS 2", "id": "184814", "lang": "FR"},
-    "I1881.73275.schedulesdirect.org": {"name": "RDS 2", "id": "184814", "lang": "FR"},
-    "I428.49882.gracenote.com": {"name": "TVA Sports", "id": "184811", "lang": "FR"},
-    "I154.58314.schedulesdirect.org": {"name": "TVA Sports", "id": "184811", "lang": "FR"},
     "I193.73142.schedulesdirect.org": {"name": "TVA Sports", "id": "184811", "lang": "FR"},
-    "I155.58315.schedulesdirect.org": {"name": "TVA Sports 2", "id": "184812", "lang": "FR"},
-    
-    # EN - CANADA (Priorité Sportsnet/TSN)
-    "I405.62111.schedulesdirect.org": {"name": "Sportsnet 4K", "id": "157674", "lang": "EN"},
-    "I409.68858.schedulesdirect.org": {"name": "TSN / Sportsnet", "id": "71234", "lang": "EN"},
-    "SNEast": {"name": "Sportsnet East", "id": "71518", "lang": "EN"},
-    "SNWest": {"name": "Sportsnet West", "id": "71521", "lang": "EN"},
-    "SNPacific": {"name": "Sportsnet Pacific", "id": "71520", "lang": "EN"},
-    "SNOntario": {"name": "Sportsnet Ontario", "id": "71519", "lang": "EN"},
-    "SNOne": {"name": "Sportsnet One", "id": "157675", "lang": "EN"},
-    "SN360": {"name": "Sportsnet 360", "id": "71517", "lang": "EN"},
-    "TSN1": {"name": "TSN 1", "id": "71234", "lang": "EN"},
-    "TSN2": {"name": "TSN 2", "id": "71235", "lang": "EN"},
-    "TSN3": {"name": "TSN 3", "id": "71236", "lang": "EN"},
-    "TSN4": {"name": "TSN 4", "id": "71237", "lang": "EN"},
-    "TSN5": {"name": "TSN 5", "id": "71238", "lang": "EN"},
-    
-    # EUROPE / AUTRES
-    "CanalPlus.fr": {"name": "Canal+", "id": "49943", "lang": "FR"},
-    "beINSPORTSMAX4.fr": {"name": "beIN MAX 4", "id": "49898", "lang": "FR"},
-    "Sky_Sports_F1": {"name": "Sky F1", "id": "74316", "lang": "EN"}
+    "I154.58314.schedulesdirect.org": {"name": "TVA Sports", "id": "184811", "lang": "FR"},
+    "SNEast": {"name": "SN East", "id": "71518", "lang": "EN"},
+    "TSN1": {"name": "TSN 1", "id": "71234", "lang": "EN"}
 }
 
-def clean_text(t):
+def clean_name(t):
     if not t: return ""
-    t = re.sub(r'[ÉÈÊË]', 'E', t.upper())
+    # Retire "HOCKEY", "LNH", "NBA", "VS", "AT" pour ne garder que les noms d'équipes
+    t = t.upper()
+    t = re.sub(r'HOCKEY|LNH|NBA|BASKETBALL|BASEBALL|MLB| AT | VS |CONTRE', ' ', t)
+    t = re.sub(r'[ÉÈÊË]', 'E', t)
     t = re.sub(r'[ÀÂÄ]', 'A', t)
     return re.sub(r'[^\w\s]', ' ', t)
 
 def find_match_in_bible(ev_name, bible_data, ev_date_str):
     ev_time = datetime.strptime(ev_date_str, "%Y-%m-%dT%H:%MZ")
-    teams = [w for w in clean_text(ev_name).split() if len(w) > 3 and w not in ["MONTREAL", "TORONTO", "BOSTON"]]
+    # On prend les mots de plus de 3 lettres (ex: "CANADIENS", "BRUINS")
+    keywords = [w for w in clean_name(ev_name).split() if len(w) > 3 and w not in ["MONTREAL", "TORONTO"]]
     
+    matches = []
     for prog in bible_data:
         try:
             p_start = datetime.strptime(prog['start'].split(' ')[0], "%Y%m%d%H%M%S")
-            if abs((ev_time - p_start).total_seconds()) < 14400: # 4h window
-                search_zone = clean_text(prog.get('title', '')) + " " + clean_text(prog.get('desc', ''))
-                if any(team in search_zone for team in teams):
-                    return prog['ch']
+            if abs((ev_time - p_start).total_seconds()) < 14400: # Fenêtre 4h
+                full_text = clean_name(prog.get('title', '')) + " " + clean_name(prog.get('desc', ''))
+                if any(kw in full_text for kw in keywords):
+                    matches.append(prog['ch'])
         except: continue
+    
+    # SI PLUSIEURS MATCHES (ex: TVA et SN), on priorise SN
+    if matches:
+        for m in matches:
+            if m in PRIORITY_IDS: return m # On prend Sportsnet/TSN direct
+        return matches[0] # Sinon le premier trouvé
     return None
 
 def fetch_espn(url):
@@ -75,12 +71,11 @@ class handler(BaseHTTPRequestHandler):
         now = datetime.utcnow()
         events = []
         seen = set()
-        leagues = [("hockey","nhl"), ("basketball","nba"), ("baseball","mlb"), ("soccer","usa.1")]
         
         urls = []
         for day in range(2):
             ds = (now + timedelta(days=day)).strftime("%Y%m%d")
-            for sp, lg in leagues:
+            for sp, lg in [("hockey","nhl"), ("basketball","nba"), ("baseball","mlb")]:
                 urls.append((f"https://site.api.espn.com/apis/site/v2/sports/{sp}/{lg}/scoreboard?dates={ds}", lg))
 
         with ThreadPoolExecutor(max_workers=8) as exe:
@@ -94,25 +89,17 @@ class handler(BaseHTTPRequestHandler):
                     ch_key = find_match_in_bible(name, bible, ev['date'])
                     start_t = datetime.strptime(ev['date'], "%Y-%m-%dT%H:%MZ")
                     
-                    # --- SYSTÈME DE SCORING ---
-                    score = 0
-                    if lg == "nhl": score = 500
-                    elif lg == "nba": score = 400
-                    else: score = 300
-
-                    if any(k in name for k in ["CANADIENS", "RAPTORS", "BLUE JAYS", "CF MONTREAL"]):
-                        score += 1000
+                    score = 100
+                    if lg == "nhl": score += 500
+                    if any(k in name for k in ["CANADIENS", "RAPTORS", "BLUE JAYS"]): score += 1000
                     
-                    info = CH_DATABASE.get(ch_key, {})
-                    ch_name = info.get("name", "").upper()
-
-                    # Priorité Sportsnet/TSN sur TVA
-                    if "SPORTSNET" in ch_name or "TSN" in ch_name:
-                        score += 400
-                    if info.get("lang") == "FR":
-                        score += 100
-                    if "TVA" in ch_name or "TVA" in str(ch_key).upper():
-                        score -= 800 
+                    # BONUS FORCE POUR SPORTSNET/TSN
+                    if ch_key in PRIORITY_IDS:
+                        score += 500
+                    
+                    # PENALITE TVA SPORTS
+                    if ch_key and ("TVA" in ch_key.upper() or "184811" in str(ch_key)):
+                        score -= 600
 
                     events.append({
                         "title": name, "score": score, "start": start_t, 
@@ -130,18 +117,15 @@ class handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         if "/stream/" in self.path:
-            try:
-                idx = int(self.path.split('/')[-1])
-                chans = self.get_organized_events()
-                now = datetime.utcnow()
-                sid = "184813" # RDS Fallback
-                for m in chans.get(idx, []):
-                    if m['start'] <= now <= m['stop']:
-                        sid = CH_DATABASE.get(m['ch_key'], {}).get("id", "184813")
-                        break
-                self.send_response(302); self.send_header('Location', f"{STREAM_BASE}/{sid}"); self.end_headers()
-            except:
-                self.send_response(302); self.send_header('Location', f"{STREAM_BASE}/184813"); self.end_headers()
+            idx = int(self.path.split('/')[-1])
+            chans = self.get_organized_events()
+            now = datetime.utcnow()
+            sid = "184813" # RDS Fallback
+            for m in chans.get(idx, []):
+                if m['start'] <= now <= m['stop']:
+                    sid = CH_DATABASE.get(m['ch_key'], {}).get("id", "184813")
+                    break
+            self.send_response(302); self.send_header('Location', f"{STREAM_BASE}/{sid}"); self.end_headers()
         elif self.path.endswith('.m3u'):
             self.send_response(200); self.send_header('Content-type', 'text/plain'); self.end_headers()
             host = self.headers.get('Host')
@@ -166,7 +150,7 @@ class handler(BaseHTTPRequestHandler):
                 title = f"{p['title']} ({lang}) | {ch_n}"
                 if p['start'] > cursor:
                     xml += f'<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{st} +0000" channel="CHOIX.{i}"><title>➡️ Suivant: {title}</title></programme>'
-                xml += f'<programme start="{st} +0000" stop="{en} +0000" channel="CHOIX.{i}"><title>{title}</title><desc>Source: {ch_n} ({lang})</desc></programme>'
+                xml += f'<programme start="{st} +0000" stop="{en} +0000" channel="CHOIX.{i}"><title>{title}</title><desc>Source: {ch_n}</desc></programme>'
                 cursor = p['stop']
         self.wfile.write((xml + '</tv>').encode('utf-8'))
         
