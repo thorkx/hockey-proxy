@@ -3,18 +3,61 @@ import requests
 import json
 import gzip
 from io import BytesIO
+from datetime import datetime, timedelta
 
-# Liste élargie pour inclure les variantes françaises
-KEYWORDS = ["RDS", "TSN", "SPORTSNET", "SN ", "TVA SPORTS", "CANAL+", "BEIN", "DAZN", "SKY SPORTS", "TNT SPORTS", "EUROSPORT", "RMC SPORT"]
+# ==========================================
+#                CONFIGURATION
+# ==========================================
+
+# Liste élargie pour couvrir Canada, USA, UK et France
+KEYWORDS = [
+    # Canada
+    "RDS", "TSN", "TVA SPORTS", "SN ", "SPORTSNET", "ONESOCCER",
+    
+    # USA
+    "ESPN", "CBS SPORTS", "FOX SPORTS", "FS1", "FS2", "GOLAZO", 
+    "MARQUEE SPORTS", "MSG ", "YES NETWORK", "NBC SPORTS",
+    
+    # UK / Europe
+    "SKY SPORT", "TNT SPORT", "EUROSPORT", "VIAPLAY", "PREMIER SPORT",
+    
+    # France
+    "CANAL+", "CANAL +", "BEIN", "RMC SPORT", "L'EQUIPE", "DAZN"
+]
+
+URL_QUEBEC = "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/guide.xml"
+URL_FRANCE = "https://xmltvfr.fr/xmltv/xmltv_fr.xml.gz"
+
+# ==========================================
+#                UTILITAIRES
+# ==========================================
+
+def is_within_3_days(date_str):
+    """Vérifie si la date du programme est entre (Maintenant - 6h) et (Maintenant + 3 jours)"""
+    if not date_str:
+        return False
+    try:
+        # Format XMLTV typique : 20240520143000 +0000
+        clean_date = date_str.split(' ')[0]
+        prog_date = datetime.strptime(clean_date, "%Y%m%d%H%M%S")
+        
+        now = datetime.now()
+        limit = now + timedelta(days=3)
+        
+        # On garde une marge de 6h dans le passé pour les matchs en cours
+        return (now - timedelta(hours=6)) <= prog_date <= limit
+    except:
+        return False
+
+# ==========================================
+#                LOGIQUE PRINCIPALE
+# ==========================================
 
 def run():
-    # Sources
-    URL_QUEBEC = "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/guide.xml"
-    URL_FRANCE = "https://xmltvfr.fr/xmltv/xmltv_fr.xml.gz"
-    
     filtered_data = []
-    print("--- DÉMARRAGE DE L'EXTRACTION MULTI-SOURCES ---")
-    
+    print(f"--- DÉMARRAGE DE L'EXTRACTION ({datetime.now().strftime('%H:%M:%S')}) ---")
+    print(f"Fenêtre temporelle : 3 jours.")
+
     # --- PARTIE 1 : QUÉBEC / USA (AcidJesuz) ---
     try:
         print("Récupération source AcidJesuz...")
@@ -23,7 +66,7 @@ def run():
         xml_data = BytesIO(r.content)
         
         target_ids = {}
-        # Passage 1 : Identification
+        # Passage 1 : Identification des chaînes sportives
         context = ET.iterparse(xml_data, events=('end',))
         for _, elem in context:
             if elem.tag == 'channel':
@@ -33,80 +76,73 @@ def run():
                     target_ids[ch_id] = names[0]
                 elem.clear()
         
-        # Passage 2 : Programmes
+        # Passage 2 : Extraction des programmes
         xml_data.seek(0)
         context = ET.iterparse(xml_data, events=('end',))
         for _, elem in context:
             if elem.tag == 'programme':
                 ch_id = elem.get('channel')
-                if ch_id in target_ids:
+                start_time = elem.get('start')
+                if ch_id in target_ids and is_within_3_days(start_time):
                     filtered_data.append({
                         "ch": ch_id,
-                        "name": target_ids[ch_id],
-                        "start": elem.get('start'),
-                        "stop": elem.get('stop'),
-                        "title": elem.findtext('title', 'Événement Sportif'),
-                        "desc": elem.findtext('desc', ''),
-                        "cat": elem.findtext('category', '')
-                    })
-                elem.clear()
-        print(f"AcidJesuz: {len(filtered_data)} programmes ajoutés.")
-    except Exception as e:
-        print(f"Erreur source Québec: {e}")
-
-    # --- PARTIE 2 : FRANCE (Racacax / xmltvfr) ---
-    try:
-        print("Récupération source France (Racacax)...")
-        r_fr = requests.get(URL_FRANCE, timeout=60)
-        r_fr.raise_for_status()
-        
-        # Décompression du .gz en mémoire
-        with gzip.GzipFile(fileobj=BytesIO(r_fr.content)) as decompressor:
-            xml_france = decompressor.read()
-        
-        fr_data = BytesIO(xml_france)
-        fr_target_ids = {}
-
-        # Passage 1 : Identification des chaînes sportives FR
-        context = ET.iterparse(fr_data, events=('end',))
-        for _, elem in context:
-            if elem.tag == 'channel':
-                ch_id = elem.get('id')
-                names = [dn.text for dn in elem.findall('display-name') if dn.text]
-                # On filtre par nos KEYWORDS sportifs
-                if any(any(kw.upper() in name.upper() for kw in KEYWORDS) for name in names):
-                    fr_target_ids[ch_id] = names[0]
-                elem.clear()
-        
-        # Passage 2 : Programmes FR
-        fr_data.seek(0)
-        count_fr = 0
-        context = ET.iterparse(fr_data, events=('end',))
-        for _, elem in context:
-            if elem.tag == 'programme':
-                ch_id = elem.get('channel')
-                if ch_id in fr_target_ids:
-                    filtered_data.append({
-                        "ch": ch_id, # Ex: CanalPlus.fr
-                        "name": fr_target_ids[ch_id],
-                        "start": elem.get('start'),
+                        "display_name": target_ids[ch_id],
+                        "start": start_time,
                         "stop": elem.get('stop'),
                         "title": elem.findtext('title', 'Sport'),
                         "desc": elem.findtext('desc', ''),
-                        "cat": elem.findtext('category', 'Sport')
                     })
-                    count_fr += 1
                 elem.clear()
-        print(f"France: {count_fr} programmes ajoutés.")
+        print(f"AcidJesuz : OK ({len(filtered_data)} programmes).")
+    except Exception as e:
+        print(f"Erreur source Québec: {e}")
+
+    # --- PARTIE 2 : FRANCE (xmltvfr - Stream compressé) ---
+    try:
+        print("Récupération source France (xmltvfr)...")
+        r_fr = requests.get(URL_FRANCE, timeout=60, stream=True)
+        r_fr.raise_for_status()
+        
+        with gzip.GzipFile(fileobj=BytesIO(r_fr.content)) as decompressor:
+            fr_target_ids = {}
+            count_fr = 0
+            # Traitement en un seul passage pour économiser la RAM
+            context = ET.iterparse(decompressor, events=('end',))
+            for _, elem in context:
+                if elem.tag == 'channel':
+                    ch_id = elem.get('id')
+                    names = [dn.text for dn in elem.findall('display-name') if dn.text]
+                    if any(any(kw.upper() in name.upper() for kw in KEYWORDS) for name in names):
+                        fr_target_ids[ch_id] = names[0]
+                    elem.clear()
+                
+                elif elem.tag == 'programme':
+                    ch_id = elem.get('channel')
+                    start_time = elem.get('start')
+                    if ch_id in fr_target_ids and is_within_3_days(start_time):
+                        filtered_data.append({
+                            "ch": ch_id,
+                            "display_name": fr_target_ids[ch_id],
+                            "start": start_time,
+                            "stop": elem.get('stop'),
+                            "title": elem.findtext('title', 'Sport'),
+                            "desc": elem.findtext('desc', ''),
+                        })
+                        count_fr += 1
+                    elem.clear()
+            print(f"France : OK ({count_fr} programmes ajoutés).")
     except Exception as e:
         print(f"Erreur source France: {e}")
 
-    # --- SAUVEGARDE FINALE ---
+    # --- SAUVEGARDE ---
+    # Tri par temps pour une recherche plus rapide dans index.py
+    filtered_data.sort(key=lambda x: x['start'] if x['start'] else "")
+
     with open("filtered_epg.json", "w", encoding="utf-8") as f:
         json.dump(filtered_data, f, indent=2, ensure_ascii=False)
             
-    print(f"TOTAL : {len(filtered_data)} programmes dans le JSON final.")
+    print(f"--- TERMINÉ : {len(filtered_data)} programmes au total dans filtered_epg.json ---")
 
 if __name__ == "__main__":
     run()
-    
+            
