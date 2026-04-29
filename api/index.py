@@ -41,13 +41,6 @@ SPECIAL_TEAMS_SCAN = {
     "WREXHAM": ("soccer", "eng.3") 
 }
 
-# Chaînes prioritaires (Sportsnet, TSN)
-PREMIUM_IDS = [
-    "I405.62111.schedulesdirect.org", "I409.68858.schedulesdirect.org", 
-    "SNEast", "SNWest", "SNPacific", "SNOntario", "SNOne", "SN360",
-    "TSN1", "TSN2", "TSN3", "TSN4", "TSN5"
-]
-
 # ==========================================
 #              BASE DE DONNÉES
 # ==========================================
@@ -55,11 +48,77 @@ BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
 CH_DATABASE = {
-    "I405.62111.schedulesdirect.org": {"name": "Sportsnet 4K", "id": "157674", "lang": "EN"},
-    "I409.68858.schedulesdirect.org": {"name": "TSN/SN (EPG)", "id": "71234", "lang": "EN"},
     "I1000.49609.schedulesdirect.org": {"name": "RDS", "id": "184813", "lang": "FR"},
-    "I193.73142.schedulesdirect.org": {"name": "TVA Sports", "id": "184811", "lang": "FR"}
+    "RDS2": {"name": "RDS2", "id": "184814", "lang": "FR"},
+    "RDSInfo": {"name": "RDS Info", "id": "184815", "lang": "FR"},
+    "I193.73142.schedulesdirect.org": {"name": "TVA Sports", "id": "184811", "lang": "FR"},
+    "TVASports2": {"name": "TVA Sports 2", "id": "184812", "lang": "EN"},
+    "I405.62111.schedulesdirect.org": {"name": "Sportsnet 4K", "id": "157674", "lang": "EN"},
+    "SNOne": {"name": "SN One", "id": "157675", "lang": "EN"},
+    "SN360": {"name": "SN 360", "id": "71517", "lang": "EN"},
+    "SNEast": {"name": "SN East", "id": "71518", "lang": "EN"},
+    "SNOntario": {"name": "SN Ontario", "id": "71519", "lang": "EN"},
+    "SNWest": {"name": "SN West", "id": "71521", "lang": "EN"},
+    "SNPacific": {"name": "SN Pacific", "id": "71520", "lang": "EN"},
+    "SNWorld": {"name": "SN World", "id": "71526", "lang": "EN"},
+    "I409.68858.schedulesdirect.org": {"name": "TSN 1", "id": "71234", "lang": "EN"},
+    "TSN2": {"name": "TSN 2", "id": "71235", "lang": "EN"},
+    "TSN3": {"name": "TSN 3", "id": "71236", "lang": "EN"},
+    "TSN4": {"name": "TSN 4", "id": "71237", "lang": "EN"},
+    "TSN5": {"name": "TSN 5", "id": "71238", "lang": "EN"},
+    "OneSoccer": {"name": "OneSoccer", "id": "19320", "lang": "EN"},
+    "ESPN": {"name": "ESPN", "id": "18345", "lang": "EN"},
+    "ESPN2": {"name": "ESPN 2", "id": "18346", "lang": "EN"},
+    "ESPNDeportes": {"name": "ESPN Deportes", "id": "18356", "lang": "ES"},
+    "BeInSports": {"name": "BeIn Sports", "id": "71320", "lang": "EN"},
+    "BeInSports USA": {"name": "BeIn Sports USA", "id": "18312", "lang": "EN"},
+    "BeInSports Xtra": {"name": "BeIn Sports Xtra", "id": "19489", "lang": "EN"},
+    "CBS Sports": {"name": "CBS Sports", "id": "18335", "lang": "EN"},
+    "FoxSports1": {"name": "Fox Sports 1", "id": "18242", "lang": "EN"},
+    "FoxSports2": {"name": "Fox Sports 2", "id": "18366", "lang": "EN"},
+    "Golazo Sports": {"name": "Golazo Sports", "id": "18333", "lang": "EN"},
+    "Marquee Sports": {"name": "Marquee Sports", "id": "18355", "lang": "EN"},
+    "MSG": {"name": "MSG", "id": "18351", "lang": "EN"},
+    "MSG Plus": {"name": "MSG Plus", "id": "18352", "lang": "EN"},
+    "YES Network": {"name": "YES Network", "id": "18354", "lang": "EN"},
+    "Sky Eurosport 1": {"name": "Sky Eurosport 1", "id": "74248", "lang": "EN"},
+    "Sky Eurosport 2": {"name": "Sky Eurosport 2", "id": "74251", "lang": "EN"},
+    "Sky Premier Sport 1": {"name": "Sky Premier Sport 1", "id": "74272", "lang": "EN"},
+    "Sky Sport F1": {"name": "Sky Sport F1", "id": "74316", "lang": "EN"},
+    "Sky Sport Golf": {"name": "Sky Sport Golf", "id": "74319", "lang": "EN"},
+    "Sky Sport Main Event": {"name": "Sky Sport Main Event", "id": "74322", "lang": "EN"},
+    "Sky Sport Mix": {"name": "Sky Sport Mix", "id": "74325", "lang": "EN"},
+    "Sky Sport News": {"name": "Sky Sport News", "id": "74328", "lang": "EN"},
+    "Sky Sport Premier League": {"name": "Sky Sport Premier League", "id": "74331", "lang": "EN"},
+    "TNT Sports 1": {"name": "TNT Sports 1", "id": "74357", "lang": "EN"},
+    "TNT Sports 2": {"name": "TNT Sports 2", "id": "74360", "lang": "EN"},
+    "TNT Sports 3": {"name": "TNT Sports 3", "id": "74363", "lang": "EN"},
+    "TNT Sports 4": {"name": "TNT Sports 4", "id": "74366", "lang": "EN"},
+    "Viaplay Sports 1": {"name": "Viaplay Sports 1", "id": "74378", "lang": "EN"},
+    "Viaplay Sports 2": {"name": "Viaplay Sports 2", "id": "74381", "lang": "EN"},
+    "BeInSports 1": {"name": "BeIn Sports 1", "id": "49895", "lang": "FR"},
+    "BeInSports 2": {"name": "BeIn Sports 2", "id": "49896", "lang": "FR"},
+    "BeInSports 3": {"name": "BeIn Sports 3", "id": "49897", "lang": "FR"},
+    "Canal+": {"name": "Canal+", "id": "49943", "lang": "FR"},
+    "Canal+ Foot": {"name": "Canal+ Foot", "id": "49945", "lang": "FR"},
+    "Canal+ Sport": {"name": "Canal+ Sport", "id": "49951", "lang": "FR"},
+    "Canal+ Sport 360": {"name": "Canal+ Sport 360", "id": "49953", "lang": "FR"},
+    "EuroSport 1": {"name": "EuroSport 1", "id": "50016", "lang": "FR"},
+    "EuroSport 2": {"name": "EuroSport 2", "id": "50017", "lang": "FR"},
+    "L'Equipe": {"name": "L'Equipe", "id": "50058", "lang": "FR"},
+    "RMCSports 1": {"name": "RMC Sports 1", "id": "50145", "lang": "FR"},
+    "RMCSports 2": {"name": "RMC Sports 2", "id": "50147", "lang": "FR"},
+    "DAZN 1": {"name": "DAZN 1", "id": "44265", "lang": "ES"},
+    "DAZN 2": {"name": "DAZN 2", "id": "44266", "lang": "ES"},
+    "DAZN LaLiga": {"name": "DAZN LaLiga", "id": "44268", "lang": "ES"},
+    "LaLiga TV": {"name": "LaLiga TV", "id": "44321", "lang": "ES"}
 }
+
+# Mise à jour des IDs prioritaires pour inclure les nouveaux réseaux
+PREMIUM_IDS = [
+    "Sportsnet (4K)", "SNOne", "SN360", "SNEast", "SNOntario", "SNWest", "SNPacific", "SNWorld",
+    "TSN1", "TSN2", "TSN3", "TSN4", "TSN5", "ESPN", "ESPN2", "Canal+", "Canal+ Sport", "Sky Sport Premier League"
+]
 
 SPORT_ICONS = {
     "nhl": "🏒", "nba": "🏀", "mlb": "⚾", 
