@@ -1,39 +1,43 @@
 from http.server import BaseHTTPRequestHandler
 import requests
 import json
-
-GITHUB_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
+from datetime import datetime
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
+        # Configuration
+        GITHUB_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
+        
+        # 1. Essayer de charger le JSON, sinon créer une liste de secours
         try:
-            # Récupération brute
-            r = requests.get(GITHUB_URL, timeout=10)
+            r = requests.get(GITHUB_URL, timeout=5)
             data = r.json()
-            
-            # On prend le premier item pour le test
-            item = data[0] if data else {"title": "JSON VIDE", "start": "20260430030000", "stop": "20260430060000"}
-            
-            self.send_response(200)
-            self.send_header('Content-type', 'application/xml; charset=utf-8')
-            self.end_headers()
+        except:
+            # Match de secours si GitHub crash (23h MTL = 03h00 UTC le 29 avril)
+            data = [{
+                "title": "MATCH TEST 23H00 (BACKUP)",
+                "start": "20260429030000 +0000",
+                "stop": "20260429060000 +0000"
+            }]
 
-            # Construction manuelle du XML minimal
-            xml = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>\n'
-            xml += '  <channel id="CHOIX.1"><display-name>TEST CANAL</display-name></channel>\n'
-            
-            # Nettoyage rapide des dates pour le format XMLTV
-            s = item.get('start', '').replace(" ", "")[:14]
-            t = item.get('stop', '').replace(" ", "")[:14]
-            
+        # 2. Préparer le XML
+        self.send_response(200)
+        self.send_header('Content-type', 'application/xml; charset=utf-8')
+        self.end_headers()
+
+        xml = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>\n'
+        xml += '  <channel id="CHOIX.1"><display-name>CHOIX 1</display-name></channel>\n'
+
+        for item in data:
+            # Nettoyage des dates (on enlève les espaces pour le format start/stop)
+            s = item.get('start', '20260429030000').replace(" ", "")[:14]
+            t = item.get('stop', '20260429060000').replace(" ", "")[:14]
+            title = item.get('title', 'Match')
+
             xml += f'  <programme start="{s} +0000" stop="{t} +0000" channel="CHOIX.1">\n'
-            xml += f'    <title lang="fr">{item.get("title")}</title>\n'
-            xml += f'  </programme>\n'
-            xml += '</tv>'
-            
-            self.wfile.write(xml.encode('utf-8'))
-            
-        except Exception as e:
-            self.send_response(500)
-            self.wfile.write(f"Erreur de parsing: {str(e)}".encode())
-            
+            xml += f'    <title lang="fr">{title}</title>\n'
+            xml += '  </programme>\n'
+
+        xml += '</tv>'
+        self.wfile.write(xml.encode('utf-8'))
+        
