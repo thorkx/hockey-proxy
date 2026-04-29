@@ -130,6 +130,8 @@ class handler(BaseHTTPRequestHandler):
                 except: continue
 
         final_selection.sort(key=lambda x: x['priority'], reverse=True)
+        
+        # Attribution aux canaux avec remplissage (Filler)
         channels = {i: [] for i in range(1, 6)}
         for m in final_selection:
             for i in range(1, 6):
@@ -139,21 +141,44 @@ class handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type', 'application/xml; charset=utf-8')
         self.end_headers()
+        
         xml = '<?xml version="1.0" encoding="UTF-8"?><tv>'
         for i in range(1, 6):
             xml += f'<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
-            for p in channels[i]:
-                xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}"><title>{p["title"].replace("&", "&amp;")}</title></programme>'
+            
+            # Trier les programmes par heure pour calculer les trous
+            progs = sorted(channels[i], key=lambda x: x['start'])
+            
+            # Temps de départ du premier bloc de remplissage (il y a 2 heures)
+            current_cursor = (now_utc - timedelta(hours=2)).strftime("%Y%m%d%H%M%S")
+            
+            for idx, p in enumerate(progs):
+                # Si il y a un trou avant le match actuel, on le remplit
+                if p['start'] > current_cursor:
+                    xml += f'<programme start="{current_cursor} +0000" stop="{p["start"]} +0000" channel="CHOIX.{i}">'
+                    xml += f'<title>☕ EN ATTENTE : {p["title"].replace("&", "&amp;")}</title>'
+                    xml += f'<desc>Le prochain événement débute à {p["start"][8:10]}h{p["start"][10:12]}.</desc></programme>'
+                
+                # Le match lui-même
+                xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}">'
+                xml += f'<title>{p["title"].replace("&", "&amp;")}</title></programme>'
+                current_cursor = p['stop']
+
+            # Si après le dernier match il n'y a plus rien, on met un bloc de fin
+            end_cursor = (now_utc + timedelta(days=3)).strftime("%Y%m%d%H%M%S")
+            if current_cursor < end_cursor:
+                xml += f'<programme start="{current_cursor} +0000" stop="{end_cursor} +0000" channel="CHOIX.{i}">'
+                xml += f'<title>🌙 FIN DES ÉVÉNEMENTS</title><desc>Revenez plus tard pour la suite de la programmation.</desc></programme>'
+
         self.wfile.write((xml + '</tv>').encode('utf-8'))
 
     def generate_m3u(self):
         self.send_response(200)
-        # CHANGEMENT ICI : text/plain pour forcer l'affichage dans le navigateur
         self.send_header('Content-type', 'text/plain; charset=utf-8')
         self.end_headers()
         m3u = "#EXTM3U\n"
         for i in range(1, 6):
-            m3u += f'#EXTINF:-1 tvg-id="CHOIX_{i}" tvg-name="CHOIX_{i}" group-title="REGIE SPORT",CHOIX {i}\n'
-            m3u += f'{STREAM_BASE}/71151?canal=ch{i}\n'
+            m3u += f'#EXTINF:-1 tvg-id="CHOIX.{i}" tvg-name="CHOIX {i}" group-title="REGIE SPORT",CHOIX {i}\n'
+            m3u += f'{STREAM_BASE}/71151?canal=ch{i}&t={i}\n'
         self.wfile.write(m3u.encode('utf-8'))
         
