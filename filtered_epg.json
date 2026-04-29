@@ -1,0 +1,20 @@
+[
+  {
+    "ch": "I408.18800.schedulesdirect.org",
+    "name": "Sportsnet West",
+    "start": "20260429030000 +0000",
+    "stop": "20260429060000 +0000",
+    "title": "MATCH TEST 23H00",
+    "desc": "Match de test pour valider la connexion Vercel. Heure locale MTL: 23h00.",
+    "cat": "Baseball"
+  },
+  {
+    "ch": "I123.15676.schedulesdirect.org",
+    "name": "RDS",
+    "start": "20260429033000 +0000",
+    "stop": "20260429063000 +0000",
+    "title": "HOCKEY TEST CONFLIT",
+    "desc": "Deuxième match pour tester la répartition sur CHOIX 2.",
+    "cat": "Hockey"
+  }
+]
