@@ -45,7 +45,7 @@ CH_DATABASE = {
 
 RULES = [
     ({"league": "nhl", "keywords": ["CANADIENS", "MONTREAL", "HABS"]}, 1000),
-    ({"league": "usa.1", "keywords": ["MONTREAL", "IMPACT"]}, 900),
+    ({"league": "usa.1", "keywords": ["MONTREAL", "IMPACT", "CF MONTREAL"]}, 900),
     ({"league": "mlb", "keywords": ["BLUE JAYS", "TORONTO"]}, 800),
     ({"league": "nba", "keywords": ["RAPTORS"]}, 700),
     ({"league": "nhl", "keywords": ["MAPLE LEAFS", "TORONTO"]}, -500),
