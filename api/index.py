@@ -1,72 +1,72 @@
+from http.server import BaseHTTPRequestHandler
 import requests
 import json
 import re
-from http.server import BaseHTTPRequestHandler
+from datetime import datetime
 
 # --- CONFIGURATION ---
-# Ton JSON qui contient les matchs (provenant d'ESPN / EPG Talk)
-EPG_DATA_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
+JSON_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
-# Tes équipes à surveiller absolument
-MY_TEAMS = ["CANADIENS", "MONTRÉAL", "BLUE JAYS", "RAPTORS", "CITY", "PSG", "F1", "MIAMI"]
+# Ordre d'importance des équipes/mots-clés
+PRIORITY_LIST = ["CANADIENS", "MONTRÉAL", "PSG", "CITY", "F1", "BLUE JAYS", "RAPTORS", "NFL", "LIVE"]
 
-# Ton dictionnaire de traduction (ID EPG -> Ton ID de Stream)
-# C'est ici que la magie opère pour faire le lien
-STREAM_MAP = {
+# Mapping ID EPG -> ID Stream IPTV
+CH_MAP = {
     "I123.15676.schedulesdirect.org": "184813",  # RDS 1
     "I124.39080.schedulesdirect.org": "184814",  # RDS 2
     "I111.15670.schedulesdirect.org": "184816",  # TSN 1
     "I154.58314.schedulesdirect.org": "184821",  # TVA Sports
     "I1000.49609.schedulesdirect.org": "176800", # Sky Main Event
+    "I1001.104327.schedulesdirect.org": "176801",# Sky Football
     "I446.52300.schedulesdirect.org": "157280",  # Sky Mexico
 }
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
+        # On récupère les données de match
+        r = requests.get(JSON_URL, timeout=5)
+        content = r.text
+        match = re.search(r'\[.*\]', content, re.DOTALL)
+        events = json.loads(match.group(0)) if match else []
+
+        # 1. ANALYSE ET TRI PAR PRIORITÉ
+        # On crée une liste de matchs "Actifs" qui sont dans notre CH_MAP
+        active_matches = []
+        for ev in events:
+            title = ev.get('title', '').upper()
+            ch_id = ev.get('ch', '')
+            if ch_id in CH_MAP:
+                # On calcule le score de priorité
+                score = 999
+                for i, team in enumerate(PRIORITY_LIST):
+                    if team in title:
+                        score = i
+                        break
+                active_matches.append({'title': ev.get('title'), 'ch': ch_id, 'score': score})
+
+        # On trie par score (le plus bas en premier)
+        active_matches.sort(key=lambda x: x['score'])
+
+        # 2. GÉNÉRATION DE LA PLAYLIST DYNAMIQUE
         self.send_response(200)
         self.send_header('Content-type', 'audio/x-mpegurl; charset=utf-8')
         self.end_headers()
 
-        # 1. Récupérer les événements sportifs (L'horaire ESPN/EPG)
-        events = []
-        try:
-            r = requests.get(EPG_DATA_URL, timeout=5)
-            # Nettoyage pour extraire le JSON pur
-            match = re.search(r'\[.*\]', r.text, re.DOTALL)
-            if match:
-                events = json.loads(match.group(0))
-        except:
-            pass
-
         playlist = "#EXTM3U\n"
-        added_streams = set()
-
-        # 2. GÉNÉRATION DES POSTES CUSTOMS (Le matching)
-        playlist += "\n# --- MATCHS EN DIRECT (CUSTOM) ---\n"
         
-        for event in events:
-            title = event.get('title', '')
-            ch_id = event.get('ch', '')
-            
-            # Si l'événement contient une de tes équipes OU est un "Live" important
-            is_priority = any(team in title.upper() for team in MY_TEAMS) or "LIVE" in title.upper()
-            
-            # Si on a cet ID de chaîne dans notre dictionnaire de streams
-            if is_priority and ch_id in STREAM_MAP:
-                stream_id = STREAM_MAP[ch_id]
-                playlist += f'#EXTINF:-1, ⭐ {title}\n'
+        # On génère les 3 meilleurs choix possibles
+        for i in range(3):
+            if i < len(active_matches):
+                match = active_matches[i]
+                stream_id = CH_MAP[match['ch']]
+                playlist += f'#EXTINF:-1, [CHOIX {i+1}] ⭐ {match["title"]}\n'
                 playlist += f'{STREAM_BASE}/{stream_id}\n'
-                added_streams.add(ch_id)
-
-        # 3. SECTION DE SECOURS (Tes chaînes habituelles si rien ne match)
-        playlist += "\n# --- TES CHAÎNES FIXES ---\n"
-        for ch_id, stream_id in STREAM_MAP.items():
-            if ch_id not in added_streams:
-                # On essaie de mettre le nom de ce qui joue, sinon juste le nom de la chaîne
-                current_prog = next((e['title'] for e in events if e['ch'] == ch_id), "Sport")
-                playlist += f'#EXTINF:-1, [{ch_id.split(".")[0]}] {current_prog}\n'
-                playlist += f'{STREAM_BASE}/{stream_id}\n'
+            else:
+                # Si rien ne joue, on met un poste par défaut (ex: RDS pour Choix 1)
+                default_ids = ["184813", "184816", "176800"]
+                playlist += f'#EXTINF:-1, [CHOIX {i+1}] (Rien en direct)\n'
+                playlist += f'{STREAM_BASE}/{default_ids[i]}\n'
 
         self.wfile.write(playlist.encode('utf-8'))
         
