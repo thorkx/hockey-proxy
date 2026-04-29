@@ -11,35 +11,28 @@ from concurrent.futures import ThreadPoolExecutor
 # ==========================================
 PRIORITY_CONFIG = {
     "LEAGUES": {
-        "nhl": 500, 
-        "nba": 400, 
-        "uefa.champions": 375,
-        "eng.1": 350,  # Premier League
-        "fra.1": 350,  # Ligue 1
-        "ita.1": 350,  # Serie A
-        "esp.1": 350,  # LaLiga
-        "uefa.europa": 350,
-        "mlb": 300,    # Sous le foot européen comme demandé
-        "usa.1": 250
+        "nhl": 500, "nba": 400, "uefa.champions": 375,
+        "eng.1": 350, "fra.1": 350, "ita.1": 350, "esp.1": 350,
+        "uefa.europa": 350, "mlb": 300, "usa.1": 250
     },
     "TEAMS": {
-        "CANADIENS": 1000, 
-        "RAPTORS": 1000, 
-        "BLUE JAYS": 1000, 
-        "CF MONTREAL": 1000, 
-        "WREXHAM": 1200  # Priorité absolue pour ton équipe spécifique
+        "CANADIENS": 1000, "RAPTORS": 1000, "BLUE JAYS": 1000, 
+        "CF MONTREAL": 1000, "WREXHAM": 1200
     },
     "CHANNELS": {
-        "BONUS_ENGLISH_PREMIUM": 500,
-        "BONUS_FRENCH": 150,
-        "PENALTY_TVA": -800
+        "BONUS_ENGLISH_PREMIUM": 500, "BONUS_FRENCH": 150, "PENALTY_TVA": -800
     }
 }
 
-# Équipes spécifiques à chercher dans des ligues non-standards
-SPECIAL_TEAMS_SCAN = {
-    "WREXHAM": ("soccer", "eng.3") 
-}
+SPECIAL_TEAMS_SCAN = {"WREXHAM": ("soccer", "eng.3")}
+
+# Liste des chaînes prioritaires pour le bonus de score
+PREMIUM_IDS = [
+    "I405.62111.schedulesdirect.org", "I409.68858.schedulesdirect.org", # SN4K et TSN1
+    "SNOne", "SN360", "SNEast", "SNOntario", "SNWest", "SNPacific", "SNWorld",
+    "TSN2", "TSN3", "TSN4", "TSN5", "ESPN", "ESPN2", 
+    "CanalPlus.fr", "Canal+ Sport", "Sky Sport Premier League"
+]
 
 # ==========================================
 #              BASE DE DONNÉES
@@ -114,22 +107,12 @@ CH_DATABASE = {
     "LaLiga TV": {"name": "LaLiga TV", "id": "44321", "lang": "ES"}
 }
 
-# Mise à jour des IDs prioritaires pour inclure les nouveaux réseaux
-PREMIUM_IDS = [
-    "Sportsnet (4K)", "SNOne", "SN360", "SNEast", "SNOntario", "SNWest", "SNPacific", "SNWorld",
-    "TSN1", "TSN2", "TSN3", "TSN4", "TSN5", "ESPN", "ESPN2", "Canal+", "Canal+ Sport", "Sky Sport Premier League"
-]
-
-SPORT_ICONS = {
-    "nhl": "🏒", "nba": "🏀", "mlb": "⚾", 
-    "soccer": "⚽", "uefa.champions": "🇪🇺", "default": "🏆"
-}
+SPORT_ICONS = {"nhl": "🏒", "nba": "🏀", "mlb": "⚾", "soccer": "⚽", "uefa.champions": "🇪🇺", "default": "🏆"}
 
 # ==========================================
 #                UTILITAIRES
 # ==========================================
 def escape_xml(text):
-    """Encodage numérique total pour compatibilité Chillio maximale"""
     if not text: return ""
     text = html.escape(text)
     return text.encode('ascii', 'xmlcharrefreplace').decode()
@@ -143,21 +126,29 @@ def clean_name(t):
 
 def find_match_in_bible(ev_name, bible_data, ev_date_str):
     ev_time = datetime.strptime(ev_date_str, "%Y-%m-%dT%H:%MZ")
-    keywords = [w for w in clean_name(ev_name).split() if len(w) > 3 and w not in ["MONTREAL", "TORONTO", "UNITED", "CITY"]]
-    matches = []
+    current_teams = [w for w in clean_name(ev_name).split() if len(w) > 3 and w not in ["MONTREAL", "TORONTO", "UNITED", "CITY"]]
+    
+    potential_matches = []
     for prog in bible_data:
         try:
-            raw_start = prog['start'].split(' ')[0]
-            p_start = datetime.strptime(raw_start, "%Y%m%d%H%M%S")
+            p_start = datetime.strptime(prog['start'].split(' ')[0], "%Y%m%d%H%M%S")
             if abs((ev_time - p_start).total_seconds()) < 14400:
-                full_text = clean_name(prog.get('title', '')) + " " + clean_name(prog.get('desc', ''))
-                if any(kw in full_text for kw in keywords):
-                    matches.append(prog['ch'])
+                title = clean_name(prog.get('title', ''))
+                desc = clean_name(prog.get('desc', ''))
+                
+                # Match dans le TITRE : Très forte probabilité (+500)
+                if any(team in title for team in current_teams):
+                    potential_matches.append((prog['ch'], 500))
+                # Match dans la DESCRIPTION : Probabilité moyenne (+50)
+                elif any(team in desc for team in current_teams):
+                    # Filtre talk-show pour éviter les faux positifs en description
+                    if not any(ex in title for ex in ["NOUVELLES", "SPORTS 30", "5 A 7", "ANTICHAMBRE"]):
+                        potential_matches.append((prog['ch'], 50))
         except: continue
-    if matches:
-        for m in matches:
-            if m in PREMIUM_IDS: return m
-        return matches[0]
+    
+    if potential_matches:
+        potential_matches.sort(key=lambda x: x[1], reverse=True)
+        return potential_matches[0][0]
     return None
 
 def fetch_espn(url):
@@ -174,7 +165,6 @@ class handler(BaseHTTPRequestHandler):
         now = datetime.utcnow()
         events, seen = [], set()
         
-        # Liste des ligues à scanner
         leagues = [
             ("hockey","nhl"), ("basketball","nba"), ("baseball","mlb"),
             ("soccer","eng.1"), ("soccer","fra.1"), ("soccer","ita.1"),
@@ -182,7 +172,6 @@ class handler(BaseHTTPRequestHandler):
             ("soccer","uefa.europa")
         ]
         
-        # Ajout des ligues pour équipes spéciales (Wrexham)
         for t_name, l_info in SPECIAL_TEAMS_SCAN.items():
             if l_info not in leagues: leagues.append(l_info)
 
@@ -200,11 +189,10 @@ class handler(BaseHTTPRequestHandler):
                     name = ev['name'].upper()
                     if name in seen: continue
                     
-                    # Filtre spécial pour les ligues de bas niveau (ne garder que l'équipe voulue)
+                    # Filtre ligues de bas niveau
                     is_low_league = lg in [info[1] for info in SPECIAL_TEAMS_SCAN.values() if info[1] not in ["eng.1", "usa.1"]]
-                    if is_low_league:
-                        if not any(team in name for team in SPECIAL_TEAMS_SCAN.keys()):
-                            continue
+                    if is_low_league and not any(team in name for team in SPECIAL_TEAMS_SCAN.keys()):
+                        continue
 
                     ch_key = find_match_in_bible(name, bible, ev['date'])
                     score = PRIORITY_CONFIG["LEAGUES"].get(lg, 100)
@@ -239,23 +227,17 @@ class handler(BaseHTTPRequestHandler):
                 idx = int(self.path.split('/')[-1])
                 chans = self.get_organized_events()
                 now = datetime.utcnow()
-                sid = "184813" # Défaut RDS
-                
+                sid = "184813" 
                 for m in chans.get(idx, []):
                     if m['start'] <= now <= m['stop']:
                         sid = CH_DATABASE.get(m['ch_key'], {}).get("id", "184813")
                         break
-                
-                # Redirection avec forçage de non-cache pour permettre le switch de source
                 self.send_response(302)
                 self.send_header('Location', f"{STREAM_BASE}/{sid}")
                 self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
-                self.send_header('Pragma', 'no-cache')
-                self.send_header('Expires', '0')
                 self.end_headers()
             except:
                 self.send_response(302); self.send_header('Location', f"{STREAM_BASE}/184813"); self.end_headers()
-
         elif self.path.endswith('.m3u'):
             self.send_response(200); self.send_header('Content-type', 'text/plain'); self.end_headers()
             host = self.headers.get('Host')
@@ -269,40 +251,23 @@ class handler(BaseHTTPRequestHandler):
     def generate_xml_output(self):
         chans = self.get_organized_events()
         now = datetime.utcnow()
-        
         xml_out = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>'
         for i in range(1, 6):
             xml_out += f'\n<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
             cursor = now - timedelta(hours=6)
             for p in sorted(chans[i], key=lambda x: x['start']):
-                st = p['start'].strftime("%Y%m%d%H%M%S") + " +0000"
-                en = p['stop'].strftime("%Y%m%d%H%M%S") + " +0000"
-                
+                st, en = p['start'].strftime("%Y%m%d%H%M%S") + " +0000", p['stop'].strftime("%Y%m%d%H%M%S") + " +0000"
                 info = CH_DATABASE.get(p['ch_key'], {})
                 ch_name = info.get('name', p['ch_key'] if p['ch_key'] else "A CONFIRMER")
-                
                 lg_type = "soccer" if any(x in p['league'] for x in ["eng", "uefa", "usa", "fra", "ita", "esp"]) else p['league']
-                icon_emoji = SPORT_ICONS.get(lg_type, SPORT_ICONS['default'])
-                
-                safe_title = escape_xml(f"{icon_emoji} {p['title']} ({info.get('lang', '??')}) | {ch_name}")
-                
+                icon = SPORT_ICONS.get(lg_type, SPORT_ICONS['default'])
+                safe_title = escape_xml(f"{icon} {p['title']} ({info.get('lang', '??')}) | {ch_name}")
                 if p['start'] > cursor:
-                    c_str = cursor.strftime("%Y%m%d%H%M%S") + " +0000"
-                    xml_out += f'\n<programme start="{c_str}" stop="{st}" channel="CHOIX.{i}"><title>Suivant: {safe_title}</title></programme>'
-                
-                xml_out += f'\n<programme start="{st}" stop="{en}" channel="CHOIX.{i}">'
-                xml_out += f'\n  <title>{safe_title}</title>'
-                xml_out += f'\n  <desc>Diffuseur: {escape_xml(ch_name)}</desc>'
-                xml_out += '\n</programme>'
+                    xml_out += f'\n<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{st}" channel="CHOIX.{i}"><title>Suivant: {safe_title}</title></programme>'
+                xml_out += f'\n<programme start="{st}" stop="{en}" channel="CHOIX.{i}"><title>{safe_title}</title><desc>Diffuseur: {escape_xml(ch_name)}</desc></programme>'
                 cursor = p['stop']
-        
         xml_out += '\n</tv>'
         encoded_xml = xml_out.encode('utf-8')
-        
-        self.send_response(200)
-        self.send_header('Content-Type', 'application/xml; charset=utf-8')
-        self.send_header('Content-Length', str(len(encoded_xml)))
-        self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
-        self.end_headers()
+        self.send_response(200); self.send_header('Content-Type', 'application/xml; charset=utf-8'); self.send_header('Content-Length', str(len(encoded_xml))); self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate'); self.end_headers()
         self.wfile.write(encoded_xml)
-        
+                    
