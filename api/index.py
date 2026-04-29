@@ -17,7 +17,6 @@ RULES = [
     ({"league": "usa.1", "keywords": []}, 150)
 ]
 
-# DURÉES ET ICÔNES PAR SPORT
 SPORT_DATA = {
     "hockey": {"min": 165, "icon": "🏒"},
     "baseball": {"min": 180, "icon": "⚾"},
@@ -29,13 +28,17 @@ SPORT_DATA = {
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
+# VERIFIE BIEN QUE CES IDS SONT EXACTEMENT LES MÊMES DANS TON JSON
 CH_NAMES = {
     "I123.15676.schedulesdirect.org": "RDS", 
     "I124.15677.schedulesdirect.org": "RDS 2",
     "I154.58314.schedulesdirect.org": "TVA Sports", 
     "I155.58315.schedulesdirect.org": "TVA Sports 2",
     "I111.15670.schedulesdirect.org": "TSN 1",
-    "I112.15671.schedulesdirect.org": "TSN 2"
+    "I112.15671.schedulesdirect.org": "TSN 2",
+    "I113.15672.schedulesdirect.org": "TSN 3",
+    "I114.15673.schedulesdirect.org": "TSN 4",
+    "I115.15674.schedulesdirect.org": "TSN 5"
 }
 
 def calculate_score(ev_name, league_key):
@@ -89,19 +92,19 @@ class handler(BaseHTTPRequestHandler):
                         
                         espn_keywords = [t for t in ev_name.replace(' AT ',' ').replace(' @ ',' ').split(' ') if len(t) >= 3]
                         
-                        # --- DÉTERMINATION DE LA CHAÎNE ---
+                        # --- DETERMINATION DE LA CHAINE ---
                         display_ch = "À CONFIRMER"
                         for p in bible:
                             p_title = p['title'].upper()
                             p_start = datetime.strptime(p['start'].split(' ')[0][:14], "%Y%m%d%H%M%S")
                             
-                            # Concordance temporelle (4h)
                             if abs((start_dt - p_start).total_seconds()) < 14400:
-                                # Concordance textuelle
                                 if any(k in p_title for k in espn_keywords) or \
                                    (("MONTREAL" in ev_name or "CANADIENS" in ev_name) and ("HOCKEY" in p_title or "CANADIENS" in p_title)):
-                                    # On récupère le nom propre du dictionnaire
-                                    display_ch = CH_NAMES.get(p['ch'], "TV SOURCE")
+                                    
+                                    # Correction ici : on cherche l'ID dans CH_NAMES
+                                    raw_ch_id = p.get('ch', '')
+                                    display_ch = CH_NAMES.get(raw_ch_id, raw_ch_id if raw_ch_id else "SOURCE")
                                     break
                         
                         events_to_stack.append({
@@ -115,7 +118,6 @@ class handler(BaseHTTPRequestHandler):
                         seen_matches.add(ev_name)
                 except: continue
 
-        # --- ALGORITHME D'EMPILAGE ---
         events_to_stack.sort(key=lambda x: x['score'], reverse=True)
         channels = {i: [] for i in range(1, 6)}
         for ev in events_to_stack:
@@ -127,7 +129,6 @@ class handler(BaseHTTPRequestHandler):
                 if not collision:
                     channels[i].append(ev); break
 
-        # --- GÉNÉRATION XML ---
         self.send_response(200)
         self.send_header('Content-type', 'application/xml; charset=utf-8')
         self.end_headers()
@@ -142,11 +143,9 @@ class handler(BaseHTTPRequestHandler):
                 source = p.get('ch_name', 'À CONFIRMER')
                 full_title = f"{p['title']} [{source}]"
                 
-                # Bloc PRE (Prochainement)
                 if p['start'] > cursor:
                     xml += f'<programme start="{cursor} +0000" stop="{p["start"]} +0000" channel="CHOIX.{i}"><title>➡️{icon} Prochainement: {full_title}</title></programme>'
                 
-                # Bloc MATCH
                 xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}"><title>{icon} {full_title}</title></programme>'
                 cursor = p['stop']
             
