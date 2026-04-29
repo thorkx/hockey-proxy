@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 
 # CONFIGURATION
-GITHUB_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
+GITHUB_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/refs/heads/main/filtered_epg.json?token=GHSAT0AAAAAAD3TMY7D3JQ2OT6UOVNYPT5K2PRQXTA"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
 # Tes priorités (plus le chiffre est haut, plus ça va sur CHOIX 1)
