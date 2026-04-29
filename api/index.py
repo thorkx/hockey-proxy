@@ -46,17 +46,10 @@ CH_DATABASE = {
     "I193.73142.schedulesdirect.org": {"name": "TVA Sports", "id": "184811", "lang": "FR"}
 }
 
-LOGOS = {
-    "nhl": "https://a.espncdn.com/i/teamlogos/leagues/500/nhl.png",
-    "mlb": "https://a.espncdn.com/i/teamlogos/leagues/500/mlb.png",
-    "nba": "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png",
-    "soccer": "https://a.espncdn.com/i/teamlogos/leagues/500/soccer.png",
-    "default": "https://a.espncdn.com/i/espn/misc_logos/espn_white.png"
-}
+# On garde SPORT_ICONS pour le titre, mais on n'utilise plus LOGOS pour la balise icon
 SPORT_ICONS = {"nhl": "🏒", "nba": "🏀", "mlb": "⚾", "soccer": "⚽", "default": "🏆"}
 
 def escape_xml(text):
-    """Convertit les caractères spéciaux et les emojis en entités numériques XML sûres"""
     if not text: return ""
     return text.encode('ascii', 'xmlcharrefreplace').decode()
 
@@ -154,7 +147,7 @@ class handler(BaseHTTPRequestHandler):
             host = self.headers.get('Host')
             m3u = "#EXTM3U\n"
             for i in range(1,6):
-                m3u += f'#EXTINF:-1 tvg-id="CHOIX.{i}" tvg-logo="{LOGOS["default"]}",CHOIX {i}\nhttp://{host}/api/stream/{i}\n'
+                m3u += f'#EXTINF:-1 tvg-id="CHOIX.{i}",CHOIX {i}\nhttp://{host}/api/stream/{i}\n'
             self.wfile.write(m3u.encode('utf-8'))
         else:
             self.generate_xml_output()
@@ -164,7 +157,6 @@ class handler(BaseHTTPRequestHandler):
         now = datetime.utcnow()
         self.send_response(200); self.send_header('Content-type', 'application/xml; charset=utf-8'); self.end_headers()
         
-        # Début du XML
         output = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>'
         
         for i in range(1, 6):
@@ -176,27 +168,24 @@ class handler(BaseHTTPRequestHandler):
                 info = CH_DATABASE.get(p['ch_key'], {})
                 ch_n = info.get('name', p['ch_key'] if p['ch_key'] else "A CONFIRMER")
                 
+                # Sélection de l'icône sport pour le titre
                 lg_type = "soccer" if any(x in p['league'] for x in ["eng", "uefa", "usa"]) else p['league']
                 icon = SPORT_ICONS.get(lg_type, SPORT_ICONS['default'])
-                logo_url = LOGOS.get(lg_type, LOGOS['default'])
                 
-                # On prépare le titre et la source de manière sécurisée
+                # Titre sécurisé
                 safe_title = escape_xml(f"{icon} {p['title']} ({info.get('lang', '??')}) | {ch_n}")
                 safe_ch_name = escape_xml(ch_n)
                 
                 if p['start'] > cursor:
                     output += f'\n<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{st} +0000" channel="CHOIX.{i}"><title>Suivant: {safe_title}</title></programme>'
                 
-                # Bloc programme avec icon src
                 output += f'\n<programme start="{st} +0000" stop="{en} +0000" channel="CHOIX.{i}">'
                 output += f'\n  <title>{safe_title}</title>'
                 output += f'\n  <desc>Source: {safe_ch_name}</desc>'
-                output += f'\n  <icon src="{logo_url}"/>'
+                # BALISE ICON SRC SUPPRIMÉE ICI
                 output += '\n</programme>'
                 
                 cursor = p['stop']
         
         output += '\n</tv>'
-        # On encode tout en UTF-8 pour être certain
         self.wfile.write(output.encode('utf-8'))
-        
