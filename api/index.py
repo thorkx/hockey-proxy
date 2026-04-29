@@ -74,7 +74,6 @@ class handler(BaseHTTPRequestHandler):
         
         leagues_to_track = [("hockey", "nhl"), ("baseball", "mlb"), ("basketball", "nba"), ("soccer", "usa.1")]
         
-        # --- ÉLARGISSEMENT À 4 JOURS ---
         for day in range(4):
             d_str = (now_utc + timedelta(days=day)).strftime("%Y%m%d")
             for sport, league in leagues_to_track:
@@ -90,6 +89,7 @@ class handler(BaseHTTPRequestHandler):
                         
                         espn_keywords = [t for t in ev_name.replace(' AT ',' ').replace(' @ ',' ').split(' ') if len(t) >= 3]
                         
+                        # RECHERCHE DE CONCORDANCE
                         confirmed_ch = None
                         for p in bible:
                             p_title = p['title'].upper()
@@ -101,16 +101,19 @@ class handler(BaseHTTPRequestHandler):
                                     confirmed_ch = CH_NAMES.get(p['ch'], "TV")
                                     break
                         
-                        if confirmed_ch:
-                            events_to_stack.append({
-                                "title": ev_name,
-                                "score": calculate_score(ev_name, league),
-                                "start": start_dt.strftime("%Y%m%d%H%M%S"),
-                                "stop": stop_dt.strftime("%Y%m%d%H%M%S"),
-                                "ch_name": confirmed_ch,
-                                "icon": s_info["icon"]
-                            })
-                            seen_matches.add(ev_name)
+                        # AJOUT À L'HORAIRE (Même sans concordance pour J+1 à J+3)
+                        # Si on a une concordance, on l'affiche. Sinon on met "À CONFIRMER"
+                        display_ch = confirmed_ch if confirmed_ch else "À CONFIRMER"
+                        
+                        events_to_stack.append({
+                            "title": ev_name,
+                            "score": calculate_score(ev_name, league),
+                            "start": start_dt.strftime("%Y%m%d%H%M%S"),
+                            "stop": stop_dt.strftime("%Y%m%d%H%M%S"),
+                            "ch_name": display_ch,
+                            "icon": s_info["icon"]
+                        })
+                        seen_matches.add(ev_name)
                 except: continue
 
         events_to_stack.sort(key=lambda x: x['score'], reverse=True)
@@ -135,12 +138,15 @@ class handler(BaseHTTPRequestHandler):
             cursor = (now_utc - timedelta(hours=6)).strftime("%Y%m%d%H%M%S")
             for p in progs:
                 icon = p.get('icon', '📺')
+                # Formatage du titre pour inclure la source
+                full_title = f"{p['title']} [{p['ch_name']}]"
+                
                 if p['start'] > cursor:
-                    xml += f'<programme start="{cursor} +0000" stop="{p["start"]} +0000" channel="CHOIX.{i}"><title>➡️{icon} Prochainement: {p["title"]}</title></programme>'
-                xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}"><title>{icon} {p["title"]} [{p["ch_name"]}]</title></programme>'
+                    xml += f'<programme start="{cursor} +0000" stop="{p["start"]} +0000" channel="CHOIX.{i}"><title>➡️{icon} Prochainement: {full_title}</title></programme>'
+                
+                xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}"><title>{icon} {full_title}</title></programme>'
                 cursor = p['stop']
             
-            # Ajustement de la limite de fin à 4 jours également
             limit = (now_utc + timedelta(days=4)).strftime("%Y%m%d%H%M%S")
             if cursor < limit:
                 xml += f'<programme start="{cursor} +0000" stop="{limit} +0000" channel="CHOIX.{i}"><title>🌙 Fin des émissions</title></programme>'
@@ -153,6 +159,6 @@ class handler(BaseHTTPRequestHandler):
         self.end_headers()
         m3u = "#EXTM3U\n"
         for i in range(1, 6):
-            m3u += f'#EXTINF:-1 tvg-id="CHOIX.{i}" group-title="REGIE",CHOIX {i}\nhttp://{host}/api/stream/{i}\n'
+            m3u += f'#EXTINF:-1 tvg-id="CHOIX.{i}",CHOIX {i}\nhttp://{host}/api/stream/{i}\n'
         self.wfile.write(m3u.encode('utf-8'))
         
