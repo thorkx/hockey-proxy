@@ -49,10 +49,10 @@ STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
 CH_DATABASE = {
     "I1000.49609.schedulesdirect.org": {"name": "RDS", "id": "184813", "lang": "FR"},
-    "RDS2": {"name": "RDS2", "id": "184814", "lang": "FR"},
-    "RDSInfo": {"name": "RDS Info", "id": "184815", "lang": "FR"},
+    "I192.73271.schedulesdirect.org": {"name": "RDS2", "id": "184814", "lang": "FR"},
+    "I124.39080.schedulesdirect.org": {"name": "RDS Info", "id": "184815", "lang": "FR"},
     "I193.73142.schedulesdirect.org": {"name": "TVA Sports", "id": "184811", "lang": "FR"},
-    "TVASports2": {"name": "TVA Sports 2", "id": "184812", "lang": "EN"},
+    "I1884.90206.schedulesdirect.org": {"name": "TVA Sports 2", "id": "184812", "lang": "EN"},
     "I405.62111.schedulesdirect.org": {"name": "Sportsnet 4K", "id": "157674", "lang": "EN"},
     "SNOne": {"name": "SN One", "id": "157675", "lang": "EN"},
     "SN360": {"name": "SN 360", "id": "71517", "lang": "EN"},
@@ -99,7 +99,7 @@ CH_DATABASE = {
     "BeInSports 1": {"name": "BeIn Sports 1", "id": "49895", "lang": "FR"},
     "BeInSports 2": {"name": "BeIn Sports 2", "id": "49896", "lang": "FR"},
     "BeInSports 3": {"name": "BeIn Sports 3", "id": "49897", "lang": "FR"},
-    "Canal+": {"name": "Canal+", "id": "49943", "lang": "FR"},
+    "CanalPlus.fr": {"name": "Canal+", "id": "49943", "lang": "FR"},
     "Canal+ Foot": {"name": "Canal+ Foot", "id": "49945", "lang": "FR"},
     "Canal+ Sport": {"name": "Canal+ Sport", "id": "49951", "lang": "FR"},
     "Canal+ Sport 360": {"name": "Canal+ Sport 360", "id": "49953", "lang": "FR"},
