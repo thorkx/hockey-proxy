@@ -18,7 +18,7 @@ PRIORITY_CONFIG = {
         "mlb": 300
     },
     "TEAMS": {
-        "CANADIENS": 3000,       # Priorité absolue
+        "CANADIENS": 3000,       # Priorité absolue pour le CH
         "SENATORS": 1500,
         "MAPLE LEAFS": 1500,
         "RAPTORS": 1000, 
@@ -29,13 +29,13 @@ PRIORITY_CONFIG = {
         "BONUS_HOCKEY_CANADA": 1000,     # RDS, TSN, SN
         "BONUS_FRENCH": 300,             
         "BONUS_ENGLISH_PREMIUM": 200,    
-        "PENALTY_TVA": -150              # Départage vs RDS
+        "PENALTY_TVA": -150              # Juste assez pour préférer RDS
     }
 }
 
-# IDs pour le bonus Hockey Canada
+# IDs pour le bonus Hockey Canada (RDS, TSN, SN)
 CANADA_HOCKEY_IDS = [
-    "I1000.49609.schedulesdirect.org", "I192.73271.schedulesdirect.org", # RDS
+    "I1000.49609.schedulesdirect.org", "I192.73271.schedulesdirect.org", # RDS 1-2
     "I409.68858.schedulesdirect.org", "TSN2", "TSN3", "TSN4", "TSN5",    # TSN
     "I157674.schedulesdirect.org", "SNOne", "SN360", "SNEast", "SNOntario" # SN
 ]
@@ -46,58 +46,67 @@ TVA_SPORTS_IDS = ["I184811.schedulesdirect.org", "I193.73142.schedulesdirect.org
 #           LOGIQUE DE SCORING
 # ==========================================
 
-def calculate_score(event_name, league, ch_key, lang):
+def calculate_score(event_name, league, ch_key):
     score = PRIORITY_CONFIG["LEAGUES"].get(league, 100)
     
-    # Bonus Équipes
+    # 1. Bonus Équipes (Canadiens, etc.)
     for team, bonus in PRIORITY_CONFIG["TEAMS"].items():
         if team.upper() in event_name.upper():
             score += bonus
             
-    # Bonus Hockey Canada
+    # 2. Bonus Hockey Canada
     if league == "nhl" and ch_key in CANADA_HOCKEY_IDS:
         score += PRIORITY_CONFIG["CHANNELS"]["BONUS_HOCKEY_CANADA"]
         
-    # Bonus Langue
-    if lang == "FR":
+    # 3. Bonus Langue (Détection par ID ou nom)
+    # Si l'ID contient .fr ou si c'est RDS/TVA
+    if any(x in str(ch_key).lower() for x in ["rds", "tva", ".fr"]):
         score += PRIORITY_CONFIG["CHANNELS"]["BONUS_FRENCH"]
+    elif ch_key in CANADA_HOCKEY_IDS or "sky" in str(ch_key).lower():
+        score += PRIORITY_CONFIG["CHANNELS"]["BONUS_ENGLISH_PREMIUM"]
         
-    # Pénalité TVA
+    # 4. Pénalité TVA Sports
     if ch_key in TVA_SPORTS_IDS:
         score += PRIORITY_CONFIG["CHANNELS"]["PENALTY_TVA"]
         
     return score
 
 # ==========================================
-#                ROUTES FLASK
+#                ROUTE API
 # ==========================================
 
 @app.route('/')
 def get_events():
     try:
-        # 1. Chargement des données
-        if not os.path.exists('events.json') or not os.path.exists('filtered_epg.json'):
-            return jsonify({"error": "Fichiers de données manquants"}), 500
+        # Détermination des chemins absolus
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        events_path = os.path.join(base_dir, 'events.json')
+        epg_path = os.path.join(base_dir, 'filtered_epg.json')
 
-        with open('events.json', 'r', encoding='utf-8') as f:
+        # Vérification de l'existence des fichiers
+        if not os.path.exists(events_path):
+            return jsonify({"error": f"Fichier {events_path} introuvable"}), 500
+        if not os.path.exists(epg_path):
+            return jsonify({"error": f"Fichier {epg_path} introuvable"}), 500
+
+        # Chargement des données
+        with open(events_path, 'r', encoding='utf-8') as f:
             events = json.load(f)
         
         scored_list = []
 
-        # 2. Attribution des scores et tri
+        # Attribution des scores
         for ev in events:
-            name = ev.get('name', 'Inconnu')
+            name = ev.get('name', 'Événement')
             league = ev.get('league', 'autre')
             ch_key = ev.get('channel_id', 'Unknown')
-            
-            # Détection simple de la langue pour le score
-            lang = "FR" if any(x in str(ch_key) for x in ["RDS", "TVA", ".fr"]) else "EN"
 
-            ev['score'] = calculate_score(name, league, ch_key, lang)
+            # Calcul du score basé sur tes nouvelles priorités
+            ev['priority_score'] = calculate_score(name, league, ch_key)
             scored_list.append(ev)
 
-        # 3. Tri par score décroissant
-        final_output = sorted(scored_list, key=lambda x: x.get('score', 0), reverse=True)
+        # Tri par score décroissant (les plus gros scores en premier)
+        final_output = sorted(scored_list, key=lambda x: x.get('priority_score', 0), reverse=True)
 
         return jsonify(final_output)
 
@@ -105,10 +114,10 @@ def get_events():
         return jsonify({"error": str(e)}), 500
 
 # ==========================================
-#            LANCEMENT DU SERVEUR
+#            LANCEMENT SERVEUR
 # ==========================================
 
 if __name__ == "__main__":
-    # Écoute sur toutes les interfaces (0.0.0.0) sur le port 5000
+    # Écoute sur le port 5000
+    # host='0.0.0.0' permet l'accès depuis d'autres appareils sur ton réseau
     app.run(host='0.0.0.0', port=5000, debug=True)
-    
