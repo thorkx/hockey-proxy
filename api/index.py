@@ -4,85 +4,105 @@ import json
 import re
 from datetime import datetime
 
+# --- CONFIG ---
 JSON_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
-PRIORITY_LIST = ["CANADIENS", "MONTRÉAL", "PSG", "CITY", "F1", "BLUE JAYS", "RAPTORS", "NFL", "LIVE", "EFL"]
-CH_MAP = {
-    "I123.15676.schedulesdirect.org": "184813",
-    "I124.39080.schedulesdirect.org": "184814",
-    "I111.15670.schedulesdirect.org": "184816",
-    "I154.58314.schedulesdirect.org": "184821",
-    "I1000.49609.schedulesdirect.org": "176800",
+# Équivalence : ID de l'horaire (ESPN/EPG) -> ID du flux IPTV
+EQUIVALENCE = {
+    # RDS & TSN
+    "I123.15676.schedulesdirect.org": "184813", # RDS 1
+    "I124.39080.schedulesdirect.org": "184814", # RDS 2
+    "I111.15670.schedulesdirect.org": "184816", # TSN 1
+    "I154.58314.schedulesdirect.org": "184821", # TVA Sports
+    
+    # SPORTSNET (Ajoutés)
+    "I155.58434.schedulesdirect.org": "184817", # Sportsnet East
+    "I156.58435.schedulesdirect.org": "184818", # Sportsnet West
+    "I157.58436.schedulesdirect.org": "184819", # Sportsnet Ontario
+    "I158.58437.schedulesdirect.org": "184820", # Sportsnet Pacific
+    "I159.58438.schedulesdirect.org": "184825", # Sportsnet One
+    "I160.58439.schedulesdirect.org": "184826", # Sportsnet 360
+    
+    # INTERNATIONAUX
+    "I1000.49609.schedulesdirect.org": "176800",# Sky Main Event
+    "I1001.104327.schedulesdirect.org": "176801",# Sky Football
 }
+
+# Tes priorités d'équipes
+PRIORITIES = ["CANADIENS", "MONTRÉAL", "PSG", "CITY", "F1", "EFL", "LIVE"]
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        # 1. Récupération et nettoyage des données
+        # 1. Récupération de l'horaire filtré sur GitHub
+        events = []
         try:
             r = requests.get(JSON_URL, timeout=5)
+            # On nettoie le texte pour ne garder que le JSON si nécessaire
             match = re.search(r'\[.*\]', r.text, re.DOTALL)
-            events = json.loads(match.group(0)) if match else []
-        except:
-            events = []
+            if match:
+                events = json.loads(match.group(0))
+        except Exception:
+            pass
 
-        # 2. On trie les événements par priorité
-        matches = []
+        # 2. Filtrage par disponibilité et Priorisation
+        found_matches = []
         for ev in events:
             title = ev.get('title', '').upper()
-            ch_id = ev.get('ch')
-            if ch_id in CH_MAP:
+            ch_id = ev.get('ch', '')
+            
+            # On ne garde que ce qu'on peut réellement diffuser
+            if ch_id in EQUIVALENCE:
                 score = 99
-                for i, team in enumerate(PRIORITY_LIST):
+                for i, team in enumerate(PRIORITIES):
                     if team in title:
                         score = i
                         break
-                matches.append({'ev': ev, 'score': score})
-        
-        matches.sort(key=lambda x: x['score'])
+                
+                found_matches.append({
+                    'title': ev.get('title'),
+                    'stream_id': EQUIVALENCE[ch_id],
+                    'start': ev.get('start'),
+                    'score': score
+                })
 
-        # --- GENERATION XMLTV (Le Guide) ---
+        # Tri par score (0 = top priorité)
+        found_matches.sort(key=lambda x: x['score'])
+
+        # 3. Génération de la réponse
         if "type=xml" in self.path:
+            # --- MODE EPG (Pour le guide horaire) ---
             self.send_response(200)
-            self.send_header('Content-type', 'application/xml; charset=utf-8')
+            self.send_header('Content-type', 'application/xml')
             self.end_headers()
             
-            xml = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>'
+            xml = '<?xml version="1.0" encoding="UTF-8"?><tv>'
             for i in range(1, 6):
-                xml += f'<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>\n'
-                
-            for i, m in enumerate(matches[:5]):
-                ch_num = i + 1
-                ev = m['ev']
-                # Formatage du temps XMLTV: YYYYMMDDHHMMSS +0000
-                start = ev['start'].replace(" ", "").replace("+0000", " +0000")
-                # On estime une fin à +3h si manquante
-                xml += f'<programme start="{start}" channel="CHOIX.{ch_num}">\n'
-                xml += f'  <title lang="fr">{ev["title"]}</title>\n'
-                xml += f'  <desc lang="fr">Diffusé sur {ev["name"]}</desc>\n'
-                xml += f'</programme>\n'
+                xml += f'<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
+                if (i-1) < len(found_matches):
+                    m = found_matches[i-1]
+                    # Formatage date ESPN vers standard XMLTV
+                    start_fix = m['start'].replace(" ", "").replace("+0000", " +0000")
+                    xml += f'<programme start="{start_fix}" channel="CHOIX.{i}"><title>{m["title"]}</title></programme>'
             xml += '</tv>'
             self.wfile.write(xml.encode('utf-8'))
 
-        # --- GENERATION M3U (La Playlist) ---
         else:
+            # --- MODE M3U (Le Stream Direct) ---
             self.send_response(200)
-            self.send_header('Content-type', 'audio/x-mpegurl; charset=utf-8')
+            self.send_header('Content-type', 'audio/x-mpegurl')
             self.end_headers()
             
-            # On construit l'URL de l'EPG dynamiquement
             host = self.headers.get('Host')
-            epg_url = f"http://{host}/api?type=xml"
+            playlist = f'#EXTM3U x-tvg-url="http://{host}/api?type=xml"\n'
             
-            playlist = f'#EXTM3U x-tvg-url="{epg_url}"\n'
             for i in range(1, 6):
-                if (i-1) < len(matches):
-                    m = matches[i-1]['ev']
-                    s_id = CH_MAP[m['ch']]
-                    playlist += f'#EXTINF:-1 tvg-id="CHOIX.{i}" tvg-name="CHOIX {i}", CHOIX {i}\n'
-                    playlist += f'{STREAM_BASE}/{s_id}\n'
+                if (i-1) < len(found_matches):
+                    m = found_matches[i-1]
+                    playlist += f'#EXTINF:-1 tvg-id="CHOIX.{i}", CHOIX {i} : {m["title"]}\n'
+                    playlist += f'{STREAM_BASE}/{m["stream_id"]}\n'
                 else:
-                    playlist += f'#EXTINF:-1 tvg-id="CHOIX.{i}", CHOIX {i} (Vide)\n'
+                    playlist += f'#EXTINF:-1 tvg-id="CHOIX.{i}", CHOIX {i} (Aucun match)\n'
                     playlist += f'http://0.0.0.0\n'
             
             self.wfile.write(playlist.encode('utf-8'))
