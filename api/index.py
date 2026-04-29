@@ -5,11 +5,16 @@ from datetime import datetime, timedelta
 
 # CONFIGURATION
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
-ESPN_NHL = "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard"
-ESPN_MLB = "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
-# Tes SIDs prioritaires
+# Les ligues à surveiller
+LEAGUES = [
+    ("hockey", "nhl"),
+    ("baseball", "mlb"),
+    ("soccer", "eng.1"), # Premier League
+    ("soccer", "fra.1")  # Ligue 1
+]
+
 STREAM_MAP = {
     "I408.18800.schedulesdirect.org": "71520",
     "I123.15676.schedulesdirect.org": "184813",
@@ -19,55 +24,60 @@ STREAM_MAP = {
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        # 1. RÉCUPÉRER LA BIBLE (EPG DU BOT)
+        # 1. CHARGER LA BIBLE (Une seule fois)
         try:
-            bible = requests.get(BIBLE_URL, timeout=5).json()
+            bible = requests.get(BIBLE_URL, timeout=10).json()
         except:
             bible = []
 
-        # 2. RÉCUPÉRER LES MATCHS DEPUIS ESPN
-        espn_events = []
-        for url in [ESPN_NHL, ESPN_MLB]:
-            try:
-                res = requests.get(url, timeout=5).json()
-                espn_events.extend(res.get('events', []))
-            except: continue
-
-        # 3. MATCHING CHIRURGICAL
         final_selection = []
-        for event in espn_events:
-            name = event.get('name', '').upper() # Ex: "Montreal Canadiens at Boston Bruins"
-            short_name = event.get('shortName', '').upper() # Ex: "MTL @ BOS"
-            
-            # Heure ESPN est en ISO UTC (ex: 2026-04-29T23:00Z)
-            # On simplifie pour matcher le format 20260429...
-            date_str = event.get('date', '').replace('-', '').replace(':', '').replace('T', '')[:12]
+        now = datetime.utcnow()
 
-            # On cherche dans la bible un programme qui contient une des équipes à la même heure
-            found_stream = None
-            for prog in bible:
-                prog_title = prog.get('title', '').upper()
-                prog_desc = prog.get('desc', '').upper()
-                
-                # Si le nom de l'équipe est dans le titre ou la desc de la bible
-                # On vérifie aussi si l'heure concorde (à 1h près)
-                if any(team in prog_title or team in prog_desc for team in name.split(' ')):
-                    if prog.get('start', '')[:10] == date_str[:10]: # Même jour
-                        found_stream = prog
-                        break
+        # 2. BOUCLER SUR LES 4 PROCHAINS JOURS
+        for day_offset in range(4):
+            target_date = (now + timedelta(days=day_offset)).strftime("%Y%m%d")
             
-            if found_stream:
-                final_selection.append({
-                    "title": event.get('name'),
-                    "sid": STREAM_MAP.get(found_stream.get('ch'), "184813"),
-                    "start": found_stream.get('start', '').replace(" ", "")[:14],
-                    "stop": found_stream.get('stop', '').replace(" ", "")[:14],
-                    "priority": 100 if "CANADIENS" in name or "BLUE JAYS" in name else 10
-                })
+            for sport, league in LEAGUES:
+                # API ESPN Schedule pour une date précise
+                url = f"https://site.api.espn.com/apis/site/v2/sports/{sport}/{league}/scoreboard?dates={target_date}"
+                try:
+                    res = requests.get(url, timeout=5).json()
+                    events = res.get('events', [])
+                    
+                    for event in events:
+                        name = event.get('name', '').upper()
+                        # Date de début ESPN (format ISO)
+                        start_iso = event.get('date', '') 
+                        # On simplifie pour comparer avec la bible (YYYYMMDDHH)
+                        match_time_key = start_iso.replace('-', '').replace(':', '').replace('T', '')[:10]
 
-        # 4. DISTRIBUTION SUR 5 CANAUX
+                        # 3. TROUVER LE FLUX DANS LA BIBLE
+                        # On cherche un programme qui contient une équipe du match à la même heure
+                        found_ch = None
+                        teams = name.replace(' AT ', ' ').replace(' @ ', ' ').split(' ')
+                        
+                        for prog in bible:
+                            prog_start = prog.get('start', '').replace(" ", "")[:10]
+                            if prog_start == match_time_key:
+                                prog_text = (prog.get('title', '') + " " + prog.get('desc', '')).upper()
+                                if any(len(t) > 3 and t in prog_text for t in teams):
+                                    found_ch = prog
+                                    break
+                        
+                        if found_ch:
+                            final_selection.append({
+                                "title": event.get('name'),
+                                "sid": STREAM_MAP.get(found_ch.get('ch'), "184813"),
+                                "start": found_ch.get('start').replace(" ", "")[:14],
+                                "stop": found_ch.get('stop').replace(" ", "")[:14],
+                                "priority": 100 if "CANADIENS" in name or "BLUE JAYS" in name else 10
+                            })
+                except: continue
+
+        # 4. RÉGIE ET DISTRIBUTION SUR 5 CANAUX
         final_selection.sort(key=lambda x: x['priority'], reverse=True)
         channels = {i: [] for i in range(1, 6)}
+        
         for m in final_selection:
             for i in range(1, 6):
                 collision = any(not (m['stop'] <= ex['start'] or m['start'] >= ex['stop']) for ex in channels[i])
@@ -75,7 +85,7 @@ class handler(BaseHTTPRequestHandler):
                     channels[i].append(m)
                     break
 
-        # 5. GÉNÉRATION XMLTV
+        # 5. GÉNÉRATION XML
         self.send_response(200)
         self.send_header('Content-type', 'application/xml; charset=utf-8')
         self.end_headers()
@@ -84,8 +94,10 @@ class handler(BaseHTTPRequestHandler):
         for i in range(1, 6):
             xml += f'<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
             for p in channels[i]:
+                # Nettoyage rapide pour le XML
+                t = p['title'].replace('&', '&amp;')
                 xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}">'
-                xml += f'<title lang="fr">{p["title"]}</title></programme>'
+                xml += f'<title lang="fr">{t}</title></programme>'
         xml += '</tv>'
         self.wfile.write(xml.encode('utf-8'))
         
