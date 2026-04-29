@@ -1,100 +1,91 @@
 from http.server import BaseHTTPRequestHandler
 import requests
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # CONFIGURATION
-URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
+BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
+ESPN_NHL = "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard"
+ESPN_MLB = "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
-# PRIORITÉS : Plus le score est haut, plus le match monte vers CHOIX 1
-PRIORITIES = {
-    "CANADIENS": 1000, "MONTREAL": 900, "JAYS": 800, "BLUE JAYS": 800,
-    "CITY": 700, "PSG": 650, "F1": 600, "GRAND PRIX": 600
-}
-
-# MAPPING : ID du Bot -> ID de ton flux IPTV
+# Tes SIDs prioritaires
 STREAM_MAP = {
-    "I408.18800.schedulesdirect.org": "71520", # Sportsnet West
-    "I123.15676.schedulesdirect.org": "184813", # RDS
-    "I111.15670.schedulesdirect.org": "184816", # TSN
-    "I154.58314.schedulesdirect.org": "184821", # TVA Sports
-    "I446.52300.schedulesdirect.org": "157280"  # Sky Mexico
+    "I408.18800.schedulesdirect.org": "71520",
+    "I123.15676.schedulesdirect.org": "184813",
+    "I111.15670.schedulesdirect.org": "184816",
+    "I154.58314.schedulesdirect.org": "184821"
 }
-
-def clean_xml(text):
-    """Empêche le crash du XML en nettoyant les caractères spéciaux comme &"""
-    if not text: return ""
-    return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;").replace("'", "&apos;")
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        # 1. RÉCUPÉRATION DU JSON DEPUIS GITHUB
+        # 1. RÉCUPÉRER LA BIBLE (EPG DU BOT)
         try:
-            r = requests.get(URL, headers={'Cache-Control': 'no-cache'}, timeout=10)
-            data = r.json()
+            bible = requests.get(BIBLE_URL, timeout=5).json()
         except:
-            data = []
+            bible = []
 
-        # 2. SCORING & NETTOYAGE DES DONNÉES
-        scored = []
-        for e in data:
-            title_desc = (e.get('title', '') + " " + e.get('desc', '')).upper()
-            score = 10
-            for key, val in PRIORITIES.items():
-                if key in title_desc:
-                    score = val
-                    break
+        # 2. RÉCUPÉRER LES MATCHS DEPUIS ESPN
+        espn_events = []
+        for url in [ESPN_NHL, ESPN_MLB]:
+            try:
+                res = requests.get(url, timeout=5).json()
+                espn_events.extend(res.get('events', []))
+            except: continue
+
+        # 3. MATCHING CHIRURGICAL
+        final_selection = []
+        for event in espn_events:
+            name = event.get('name', '').upper() # Ex: "Montreal Canadiens at Boston Bruins"
+            short_name = event.get('shortName', '').upper() # Ex: "MTL @ BOS"
             
-            scored.append({
-                "title": e.get('title', 'Sport'),
-                "sid": STREAM_MAP.get(e.get('ch'), "184813"), # RDS par défaut si non mappé
-                "start": e.get('start', '').replace(" ", "")[:14],
-                "stop": e.get('stop', '').replace(" ", "")[:14],
-                "score": score
-            })
+            # Heure ESPN est en ISO UTC (ex: 2026-04-29T23:00Z)
+            # On simplifie pour matcher le format 20260429...
+            date_str = event.get('date', '').replace('-', '').replace(':', '').replace('T', '')[:12]
 
-        # 3. RÉGIE : DISTRIBUTION SUR 5 CANAUX (Tri par priorité)
-        scored.sort(key=lambda x: x['score'], reverse=True)
+            # On cherche dans la bible un programme qui contient une des équipes à la même heure
+            found_stream = None
+            for prog in bible:
+                prog_title = prog.get('title', '').upper()
+                prog_desc = prog.get('desc', '').upper()
+                
+                # Si le nom de l'équipe est dans le titre ou la desc de la bible
+                # On vérifie aussi si l'heure concorde (à 1h près)
+                if any(team in prog_title or team in prog_desc for team in name.split(' ')):
+                    if prog.get('start', '')[:10] == date_str[:10]: # Même jour
+                        found_stream = prog
+                        break
+            
+            if found_stream:
+                final_selection.append({
+                    "title": event.get('name'),
+                    "sid": STREAM_MAP.get(found_stream.get('ch'), "184813"),
+                    "start": found_stream.get('start', '').replace(" ", "")[:14],
+                    "stop": found_stream.get('stop', '').replace(" ", "")[:14],
+                    "priority": 100 if "CANADIENS" in name or "BLUE JAYS" in name else 10
+                })
+
+        # 4. DISTRIBUTION SUR 5 CANAUX
+        final_selection.sort(key=lambda x: x['priority'], reverse=True)
         channels = {i: [] for i in range(1, 6)}
-        
-        for m in scored:
-            if len(m['start']) < 14: continue # Skip si date invalide
+        for m in final_selection:
             for i in range(1, 6):
                 collision = any(not (m['stop'] <= ex['start'] or m['start'] >= ex['stop']) for ex in channels[i])
                 if not collision:
                     channels[i].append(m)
                     break
 
-        # 4. GÉNÉRATION DE LA SORTIE
+        # 5. GÉNÉRATION XMLTV
         self.send_response(200)
+        self.send_header('Content-type', 'application/xml; charset=utf-8')
+        self.end_headers()
         
-        # MODE XML (EPG)
-        if "type=xml" in self.path:
-            self.send_header('Content-type', 'application/xml; charset=utf-8')
-            self.end_headers()
-            xml = '<?xml version="1.0" encoding="UTF-8"?><tv>'
-            for i in range(1, 6):
-                xml += f'<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
-                for p in channels[i]:
-                    safe_title = clean_xml(p["title"])
-                    xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}">'
-                    xml += f'<title lang="fr">{safe_title}</title></programme>'
-            self.wfile.write((xml + '</tv>').encode('utf-8'))
+        xml = '<?xml version="1.0" encoding="UTF-8"?><tv>'
+        for i in range(1, 6):
+            xml += f'<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
+            for p in channels[i]:
+                xml += f'<programme start="{p["start"]} +0000" stop="{p["stop"]} +0000" channel="CHOIX.{i}">'
+                xml += f'<title lang="fr">{p["title"]}</title></programme>'
+        xml += '</tv>'
+        self.wfile.write(xml.encode('utf-8'))
         
-        # MODE M3U (Playlist)
-        else:
-            self.send_header('Content-type', 'audio/x-mpegurl')
-            self.end_headers()
-            now = datetime.utcnow().strftime("%Y%m%d%H%M%S")
-            host = self.headers.get('Host', 'localhost')
-            m3u = f'#EXTM3U x-tvg-url="https://{host}/api?type=xml"\n'
-            for i in range(1, 6):
-                stream_url, current_title = "http://0.0.0.0", "Aucun match"
-                for m in channels[i]:
-                    if m['start'] <= now <= m['stop']:
-                        stream_url, current_title = f"{STREAM_BASE}/{m['sid']}", m['title']
-                        break
-                m3u += f'#EXTINF:-1 tvg-id="CHOIX.{i}", CHOIX {i} : {current_title}\n{stream_url}\n'
-            self.wfile.write(m3u.encode('utf-8'))
-            
