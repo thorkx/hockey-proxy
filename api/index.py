@@ -46,11 +46,14 @@ CH_DATABASE = {
     "I193.73142.schedulesdirect.org": {"name": "TVA Sports", "id": "184811", "lang": "FR"}
 }
 
-# On garde SPORT_ICONS pour le titre, mais on n'utilise plus LOGOS pour la balise icon
 SPORT_ICONS = {"nhl": "🏒", "nba": "🏀", "mlb": "⚾", "soccer": "⚽", "default": "🏆"}
 
 def escape_xml(text):
+    """Transforme TOUT caractère spécial en entité numérique pour une compatibilité 100%"""
     if not text: return ""
+    # On convertit d'abord les & < > " ' standard
+    text = html.escape(text)
+    # Puis on transforme tout le reste (emojis, accents) en codes numériques
     return text.encode('ascii', 'xmlcharrefreplace').decode()
 
 def clean_name(t):
@@ -66,7 +69,9 @@ def find_match_in_bible(ev_name, bible_data, ev_date_str):
     matches = []
     for prog in bible_data:
         try:
-            p_start = datetime.strptime(prog['start'].split(' ')[0], "%Y%m%d%H%M%S")
+            # Nettoyage de la date de la bible (enlève le +0000 si présent pour le parse)
+            raw_start = prog['start'].split(' ')[0]
+            p_start = datetime.strptime(raw_start, "%Y%m%d%H%M%S")
             if abs((ev_time - p_start).total_seconds()) < 14400:
                 full_text = clean_name(prog.get('title', '')) + " " + clean_name(prog.get('desc', ''))
                 if any(kw in full_text for kw in keywords):
@@ -89,14 +94,14 @@ class handler(BaseHTTPRequestHandler):
         now = datetime.utcnow()
         events, seen = [], set()
         
-        leagues_to_fetch = [("hockey","nhl"), ("basketball","nba"), ("baseball","mlb"), ("soccer","eng.1"), ("soccer","usa.1")]
-        for team_name, league_info in SPECIAL_TEAMS_SCAN.items():
-            if league_info not in leagues_to_fetch: leagues_to_fetch.append(league_info)
+        leagues = [("hockey","nhl"), ("basketball","nba"), ("baseball","mlb"), ("soccer","eng.1"), ("soccer","usa.1")]
+        for t_name, l_info in SPECIAL_TEAMS_SCAN.items():
+            if l_info not in leagues: leagues.append(l_info)
 
         urls = []
         for day in range(2):
             ds = (now + timedelta(days=day)).strftime("%Y%m%d")
-            for sp, lg in leagues_to_fetch:
+            for sp, lg in leagues:
                 urls.append((f"https://site.api.espn.com/apis/site/v2/sports/{sp}/{lg}/scoreboard?dates={ds}", lg))
 
         with ThreadPoolExecutor(max_workers=10) as exe:
@@ -155,37 +160,44 @@ class handler(BaseHTTPRequestHandler):
     def generate_xml_output(self):
         chans = self.get_organized_events()
         now = datetime.utcnow()
-        self.send_response(200); self.send_header('Content-type', 'application/xml; charset=utf-8'); self.end_headers()
+        self.send_response(200)
+        self.send_header('Content-type', 'application/xml; charset=utf-8')
+        self.end_headers()
         
-        output = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>'
+        xml_out = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>'
         
         for i in range(1, 6):
-            output += f'\n<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
+            xml_out += f'\n<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
             cursor = now - timedelta(hours=6)
             
             for p in sorted(chans[i], key=lambda x: x['start']):
-                st, en = p['start'].strftime("%Y%m%d%H%M%S"), p['stop'].strftime("%Y%m%d%H%M%S")
+                # Formatage de date XMLTV strict : YYYYMMDDHHMMSS +0000
+                st = p['start'].strftime("%Y%m%d%H%M%S") + " +0000"
+                en = p['stop'].strftime("%Y%m%d%H%M%S") + " +0000"
+                
                 info = CH_DATABASE.get(p['ch_key'], {})
-                ch_n = info.get('name', p['ch_key'] if p['ch_key'] else "A CONFIRMER")
+                ch_name = info.get('name', p['ch_key'] if p['ch_key'] else "A CONFIRMER")
                 
-                # Sélection de l'icône sport pour le titre
                 lg_type = "soccer" if any(x in p['league'] for x in ["eng", "uefa", "usa"]) else p['league']
-                icon = SPORT_ICONS.get(lg_type, SPORT_ICONS['default'])
+                icon_emoji = SPORT_ICONS.get(lg_type, SPORT_ICONS['default'])
                 
-                # Titre sécurisé
-                safe_title = escape_xml(f"{icon} {p['title']} ({info.get('lang', '??')}) | {ch_n}")
-                safe_ch_name = escape_xml(ch_n)
+                # Titre et description ultra-sécurisés
+                title_str = f"{icon_emoji} {p['title']} ({info.get('lang', '??')}) | {ch_name}"
+                safe_title = escape_xml(title_str)
+                safe_desc = escape_xml(f"Diffuseur: {ch_name}")
                 
+                # Ajout des programmes
                 if p['start'] > cursor:
-                    output += f'\n<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{st} +0000" channel="CHOIX.{i}"><title>Suivant: {safe_title}</title></programme>'
+                    c_str = cursor.strftime("%Y%m%d%H%M%S") + " +0000"
+                    xml_out += f'\n<programme start="{c_str}" stop="{st}" channel="CHOIX.{i}"><title>Suivant: {safe_title}</title></programme>'
                 
-                output += f'\n<programme start="{st} +0000" stop="{en} +0000" channel="CHOIX.{i}">'
-                output += f'\n  <title>{safe_title}</title>'
-                output += f'\n  <desc>Source: {safe_ch_name}</desc>'
-                # BALISE ICON SRC SUPPRIMÉE ICI
-                output += '\n</programme>'
+                xml_out += f'\n<programme start="{st}" stop="{en}" channel="CHOIX.{i}">'
+                xml_out += f'\n  <title>{safe_title}</title>'
+                xml_out += f'\n  <desc>{safe_desc}</desc>'
+                xml_out += '\n</programme>'
                 
                 cursor = p['stop']
         
-        output += '\n</tv>'
-        self.wfile.write(output.encode('utf-8'))
+        xml_out += '\n</tv>'
+        self.wfile.write(xml_out.encode('utf-8'))
+        
