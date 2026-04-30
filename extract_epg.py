@@ -9,20 +9,26 @@ from datetime import datetime, timedelta
 #                CONFIGURATION
 # ==========================================
 
-# Liste élargie pour couvrir Canada, USA, UK et France
-KEYWORDS = [
-    # Canada
-    "RDS", "TSN", "TVA SPORTS", "SN ", "SPORTSNET", "ONESOCCER",
-    
-    # USA
-    "ESPN", "CBS SPORTS", "FOX SPORTS", "FS1", "FS2", "GOLAZO", 
-    "MARQUEE SPORTS", "MSG ", "YES NETWORK", "NBC SPORTS",
-    
-    # UK / Europe
-    "SKY SPORT", "TNT SPORT", "EUROSPORT", "VIAPLAY", "PREMIER SPORT",
-    
-    # France
-    "CANAL+", "CANAL +", "BEIN", "RMC SPORT", "L'EQUIPE", "DAZN"
+# On utilise les IDs de ton dictionnaire pour filtrer strictement
+# Note : On garde les clés (ex: I123.15676.schedulesdirect.org) car c'est ce qui est dans le XML
+ALLOWED_CHANNELS = [
+    "I123.15676.schedulesdirect.org", "I192.73271.schedulesdirect.org",
+    "I124.39080.schedulesdirect.org", "I193.73142.schedulesdirect.org",
+    "I1884.90206.schedulesdirect.org", "I405.62111.schedulesdirect.org",
+    "I409.68858.schedulesdirect.org", "I410.49952.schedulesdirect.org",
+    "I406.18798.schedulesdirect.org", "I408.18800.schedulesdirect.org",
+    "I407.18801.schedulesdirect.org", "I401.18990.schedulesdirect.org",
+    "I402.90118.schedulesdirect.org", "I403.90122.schedulesdirect.org",
+    "I404.90124.schedulesdirect.org", "OneSoccer", "SNWorld",
+    "CanalPlus.fr", "CanalPlusSport.fr", "CanalPlusSport360.fr",
+    "beINSPORTS1.fr", "BeInSports2.fr", "BeInSports3.fr",
+    "BeInSportsMax4.fr", "BeInSportsMax5.fr", "BeInSportsMax6.fr",
+    "BeInSportsMax7.fr", "BeInSportsMax8.fr", "BeInSportsMax9.fr",
+    "BeInSportsMax10.fr", "Eurosport1.fr", "Eurosport2.fr",
+    "RMCSport1.fr", "RMCSport2.fr", "L'Equipe", "TNTSports1",
+    "TNTSports2", "TNTSports3", "SkySportsPremierLeague",
+    "SkySportsF1", "PremierSports1", "PremierSports2",
+    "FoxSports1", "CBSSportsNetwork", "BeInSportsUS", "ESPN", "ESPN2"
 ]
 
 URL_QUEBEC = "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/guide.xml"
@@ -33,24 +39,13 @@ URL_FRANCE = "https://xmltvfr.fr/xmltv/xmltv_fr.xml.gz"
 # ==========================================
 
 def is_within_3_days(date_str):
-    """Vérifie si la date du programme est pertinente (Fenêtre assouplie)"""
-    if not date_str:
-        return False
+    if not date_str: return False
     try:
-        # Format XMLTV : 20240520143000 +0000
         clean_date = date_str.split(' ')[0]
         prog_date = datetime.strptime(clean_date, "%Y%m%d%H%M%S")
-        
-        # Utilisation de UTC pour la compatibilité avec les sources XMLTV
         now = datetime.utcnow()
-        
-        # LIMITE PASSÉE : 24h avant pour ne rien louper des matchs de nuit ou en cours
-        start_limit = now - timedelta(hours=24)
-        
-        # LIMITE FUTURE : 3 jours complets
-        end_limit = now + timedelta(days=3)
-        
-        return start_limit <= prog_date <= end_limit
+        # Fenêtre : 24h dans le passé à 3 jours dans le futur
+        return (now - timedelta(hours=24)) <= prog_date <= (now + timedelta(days=3))
     except:
         return False
 
@@ -60,82 +55,50 @@ def is_within_3_days(date_str):
 
 def run():
     filtered_data = []
-    print(f"--- DÉMARRAGE DE L'EXTRACTION ({datetime.utcnow().strftime('%H:%M:%S')} UTC) ---")
+    # On transforme en set pour une recherche ultra rapide (O(1))
+    allowed_set = set(ALLOWED_CHANNELS)
+    
+    print(f"--- DÉMARRAGE DE L'EXTRACTION STRICTE ({datetime.utcnow().strftime('%H:%M:%S')} UTC) ---")
 
-    # --- PARTIE 1 : QUÉBEC / USA (AcidJesuz) ---
-    try:
-        print("Récupération source AcidJesuz...")
-        r = requests.get(URL_QUEBEC, timeout=60)
-        r.raise_for_status()
-        xml_data = BytesIO(r.content)
-        
-        target_ids = {}
-        # Passage 1 : Identification
-        context = ET.iterparse(xml_data, events=('end',))
-        for _, elem in context:
-            if elem.tag == 'channel':
-                ch_id = elem.get('id')
-                names = [dn.text for dn in elem.findall('display-name') if dn.text]
-                if any(any(kw.upper() in name.upper() for kw in KEYWORDS) for name in names):
-                    target_ids[ch_id] = names[0]
-                elem.clear()
-        
-        # Passage 2 : Programmes
-        xml_data.seek(0)
-        context = ET.iterparse(xml_data, events=('end',))
-        for _, elem in context:
-            if elem.tag == 'programme':
-                ch_id = elem.get('channel')
-                start_time = elem.get('start')
-                if ch_id in target_ids and is_within_3_days(start_time):
-                    filtered_data.append({
-                        "ch": ch_id,
-                        "display_name": target_ids[ch_id],
-                        "start": start_time,
-                        "stop": elem.get('stop'),
-                        "title": elem.findtext('title', 'Sport'),
-                        "desc": elem.findtext('desc', ''),
-                    })
-                elem.clear()
-        print(f"AcidJesuz : Terminé ({len(filtered_data)} programmes).")
-    except Exception as e:
-        print(f"Erreur source Québec: {e}")
+    # --- SOURCES (Quebec & France) ---
+    sources = [("Québec/USA", URL_QUEBEC, False), ("France", URL_FRANCE, True)]
 
-    # --- PARTIE 2 : FRANCE (xmltvfr - Stream compressé) ---
-    try:
-        print("Récupération source France (xmltvfr)...")
-        r_fr = requests.get(URL_FRANCE, timeout=60, stream=True)
-        r_fr.raise_for_status()
-        
-        with gzip.GzipFile(fileobj=BytesIO(r_fr.content)) as decompressor:
-            fr_target_ids = {}
-            count_fr = 0
-            context = ET.iterparse(decompressor, events=('end',))
+    for name, url, is_zipped in sources:
+        try:
+            print(f"Traitement source {name}...")
+            r = requests.get(url, timeout=60)
+            r.raise_for_status()
+            
+            if is_zipped:
+                input_data = gzip.GzipFile(fileobj=BytesIO(r.content))
+            else:
+                input_data = BytesIO(r.content)
+
+            count = 0
+            # On utilise iterparse pour ne pas charger tout le XML en RAM
+            context = ET.iterparse(input_data, events=('end',))
             for _, elem in context:
-                if elem.tag == 'channel':
-                    ch_id = elem.get('id')
-                    names = [dn.text for dn in elem.findall('display-name') if dn.text]
-                    if any(any(kw.upper() in name.upper() for kw in KEYWORDS) for name in names):
-                        fr_target_ids[ch_id] = names[0]
-                    elem.clear()
-                
-                elif elem.tag == 'programme':
+                if elem.tag == 'programme':
                     ch_id = elem.get('channel')
                     start_time = elem.get('start')
-                    if ch_id in fr_target_ids and is_within_3_days(start_time):
+                    
+                    # FILTRE STRICT : ID présent dans la liste ET date valide
+                    if ch_id in allowed_set and is_within_3_days(start_time):
                         filtered_data.append({
                             "ch": ch_id,
-                            "display_name": fr_target_ids[ch_id],
                             "start": start_time,
                             "stop": elem.get('stop'),
                             "title": elem.findtext('title', 'Sport'),
                             "desc": elem.findtext('desc', ''),
                         })
-                        count_fr += 1
+                        count += 1
+                    
+                    # Nettoyage de la mémoire
                     elem.clear()
-            print(f"France : Terminé ({count_fr} programmes ajoutés).")
-    except Exception as e:
-        print(f"Erreur source France: {e}")
+            print(f"-> {name} : {count} programmes retenus.")
+            
+        except Exception as e:
+            print(f"Erreur source {name}: {e}")
 
     # --- SAUVEGARDE FINALE ---
     filtered_data.sort(key=lambda x: x['start'] if x['start'] else "")
@@ -143,7 +106,7 @@ def run():
     with open("filtered_epg.json", "w", encoding="utf-8") as f:
         json.dump(filtered_data, f, indent=2, ensure_ascii=False)
             
-    print(f"--- TOTAL : {len(filtered_data)} programmes dans filtered_epg.json ---")
+    print(f"--- TOTAL FINAL : {len(filtered_data)} programmes ---")
 
 if __name__ == "__main__":
     run()
