@@ -86,20 +86,34 @@ def clean_name(t):
 
 def find_match_in_bible(ev_name, bible_data, ev_date_str):
     try:
+        # 1. On parse l'heure ESPN (UTC)
         ev_time = datetime.strptime(ev_date_str, "%Y-%m-%dT%H:%MZ")
+        
         current_teams = [w for w in clean_name(ev_name).split() if len(w) > 3 and w not in ["MONTREAL", "TORONTO", "UNITED", "CITY"]]
+        
         potential_matches = []
         for prog in bible_data:
-            p_start = datetime.strptime(prog['start'][:14], "%Y%m%d%H%M%S")
-            # Fenêtre élargie à 6h (21600 sec) pour éviter les sauts en cours de match
-            if abs((ev_time - p_start).total_seconds()) < 21600:
+            # 2. FIX: On prend strictement les 14 premiers caractères pour la date (YYYYMMDDHHMMSS)
+            # et on ignore le reste (fuseau horaire) pour la comparaison
+            raw_start = prog['start'].replace(" ", "").replace("+", "")[:14]
+            p_start = datetime.strptime(raw_start, "%Y%m%d%H%M%S")
+            
+            # 3. FIX: Fenêtre élargie à 8h (28800 sec) pour absorber les décalages UTC/Local 
+            # fréquents dans les fichiers EPG générés au Québec
+            if abs((ev_time - p_start).total_seconds()) < 28800:
                 title = clean_name(prog.get('title', ''))
-                if any(team in title for team in current_teams):
+                # On check aussi la description car souvent les noms d'équipes y sont
+                desc = clean_name(prog.get('desc', ''))
+                
+                if any(team in title for team in current_teams) or any(team in desc for team in current_teams):
                     potential_matches.append((prog['ch'], 500))
+        
         if potential_matches:
             potential_matches.sort(key=lambda x: x[1], reverse=True)
             return potential_matches[0][0]
-    except: pass
+    except Exception as e:
+        # print(f"Erreur date: {e}") # Debug optionnel
+        pass
     return None
 
 def fetch_espn(url):
