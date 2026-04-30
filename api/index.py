@@ -3,7 +3,7 @@ import requests
 import json
 import re
 import html
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from concurrent.futures import ThreadPoolExecutor
 
 # ==========================================
@@ -111,9 +111,8 @@ def clean_name(t):
 def find_all_matches_in_bible(ev_name, bible_data, ev_date_str):
     found_keys = set()
     try:
-        ev_date_clean = ev_date_str.split('T')
-        ev_time = datetime.strptime(ev_date_clean[0] + ev_date_clean[1][:5], "%Y-%m-%d%H:%M")
-        
+        ev_time = datetime.fromisoformat(ev_date_str.replace('Z', '+00:00')).astimezone(timezone.utc).replace(tzinfo=None)
+
         # On prépare les mots-clés des équipes
         current_teams = [w for w in clean_name(ev_name).split() if len(w) > 3 and w not in ["MONTREAL", "TORONTO", "UNITED", "CITY"]]
         if "CANADIENS" in ev_name.upper() and "CANADIENS" not in current_teams:
@@ -122,7 +121,15 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str):
         for prog in bible_data:
             raw_start = re.sub(r'\D', '', prog['start'])[:12]
             p_start = datetime.strptime(raw_start, "%Y%m%d%H%M")
-            
+
+            tz_match = re.search(r'([+-]\d{4})$', prog['start'].strip())
+            if tz_match:
+                offset = tz_match.group(1)
+                sign = 1 if offset[0] == '+' else -1
+                hours = int(offset[1:3])
+                minutes = int(offset[3:5])
+                p_start = p_start - sign * timedelta(hours=hours, minutes=minutes)
+
             # --- FENÊTRE ÉLARGIE À 90 MIN (5400s) ---
             if abs((ev_time - p_start).total_seconds()) <= 5400:
                 # RECHERCHE MULTI-CHAMPS (Titre + Sous-titre + Desc + Catégorie)
@@ -132,10 +139,10 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str):
                     clean_name(prog.get('desc', '')) + " " + 
                     clean_name(prog.get('category', ''))
                 )
-                
+
                 if any(team in full_text for team in current_teams):
                     found_keys.add(prog['ch'])
-    except Exception as e:
+    except Exception:
         pass
     return list(found_keys)
     
