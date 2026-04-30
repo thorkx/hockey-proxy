@@ -58,7 +58,7 @@ CH_DATABASE = {
     "I402.90118.schedulesdirect.org": {"name": "TSN 3", "id": "71236", "lang": "EN"},
     "I403.90122.schedulesdirect.org": {"name": "TSN 4", "id": "71237", "lang": "EN"},
     "I404.90124.schedulesdirect.org": {"name": "TSN 5", "id": "71238", "lang": "EN"},
-    "OneSoccer": {"name": "OneSoccer", "id": "19320", "lang": "EN"},
+    "One.Soccer.ca2": {"name": "OneSoccer", "id": "19320", "lang": "EN"},
     "I420.57735.schedulesdirect.org": {"name": "SN World", "id": "71526", "lang": "EN"},
 
     # --- France ---
