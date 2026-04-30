@@ -30,10 +30,11 @@ PRIORITY_CONFIG = {
 }
 
 CANADA_HOCKEY_IDS = [
-    "Réseau.des.Sports.(RDS).HD.ca2", "RDS2.HD.ca2",
-    "I409.68858.schedulesdirect.org", "TSN2", "TSN3", "TSN4", "TSN5",
-    "I405.62111.schedulesdirect.org", "I406.18798.schedulesdirect.org",
-    "SNOne", "SN360", "SNOntario", "SNWest", "SNPacific"
+    "Réseau.des.Sports.(RDS).HD.ca2", "RDS2.HD.ca2", "Réseau.des.Sports.Info.HD.ca2"
+    "TVA.Sports.HD.ca2", "TVA.Sports.2.HD.ca2",
+    "TSN.4K.ca2"", "TSN2", "TSN3", "TSN4", "TSN5",
+    "Sportsnet.4K.ca2", "Sportsnet.One.HD.ca2", "Sportsnet.360.HD.ca2", 
+    "Sportsnet.East.HD.ca2", "Sportsnet.West.HD.ca2", "One.Soccer.ca2", "Sportsnet.World.HD.ca2"
 ]
 
 # ==========================================
@@ -278,11 +279,12 @@ class handler(BaseHTTPRequestHandler):
                 info = CH_DATABASE.get(p['ch_key'], {})
                 ch_name = info.get('name', "SOURCE")
                 icon = SPORT_ICONS.get(p['league'], SPORT_ICONS['default'])
+                title = f'{p["title"]} | {ch_name}'
                 if p['display_start'] > cursor:
-                    xml_out += f'\n<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{disp_st}" channel="CHOIX.{i}"><title>À venir: {p["title"]}</title></programme>'
+                    xml_out += f'\n<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{disp_st}" channel="CHOIX.{i}"><title>À venir: {title}</title></programme>'
                 if p['display_start'] < p['start']:
-                    xml_out += f'\n<programme start="{disp_st}" stop="{live_st}" channel="CHOIX.{i}"><title>⏳ PRE-MATCH: {icon} {p["title"]}</title><desc>Source: {ch_name}</desc></programme>'
-                xml_out += f'\n<programme start="{live_st}" stop="{live_en}" channel="CHOIX.{i}"><title>🔴 LIVE: {icon} {p["title"]}</title><desc>Diffuseur: {ch_name} | Score: {p["score"]}</desc></programme>'
+                    xml_out += f'\n<programme start="{disp_st}" stop="{live_st}" channel="CHOIX.{i}"><title>⏳ PRE-MATCH: {icon} {title}</title><desc>Source: {ch_name}</desc></programme>'
+                xml_out += f'\n<programme start="{live_st}" stop="{live_en}" channel="CHOIX.{i}"><title>🔴 LIVE: {icon} {title}</title><desc>Diffuseur: {ch_name} | Score: {p["score"]}</desc></programme>'
                 cursor = p['stop']
         xml_out += '\n</tv>'
         self.send_response(200); self.send_header('Content-Type', 'application/xml; charset=utf-8'); self.end_headers()
