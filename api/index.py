@@ -59,36 +59,33 @@ CH_DATABASE = {
     "I403.90122.schedulesdirect.org": {"name": "TSN 4", "id": "71237", "lang": "EN"},
     "I404.90124.schedulesdirect.org": {"name": "TSN 5", "id": "71238", "lang": "EN"},
     "OneSoccer": {"name": "OneSoccer", "id": "19320", "lang": "EN"},
-    "SNWorld": {"name": "SN World", "id": "71526", "lang": "EN"},
+    "I420.57735.schedulesdirect.org": {"name": "SN World", "id": "71526", "lang": "EN"},
 
     # --- France ---
     "CanalPlus.fr": {"name": "Canal+", "id": "49943", "lang": "FR"},
     "CanalPlusSport.fr": {"name": "Canal+ Sport", "id": "49951", "lang": "FR"},
     "CanalPlusSport360.fr": {"name": "Canal+ Sport 360", "id": "83038", "lang": "FR"},
     "beINSPORTS1.fr": {"name": "BeIn Sports 1", "id": "49895", "lang": "FR"},
-    "BeInSports2.fr": {"name": "BeIn Sports 2", "id": "49896", "lang": "FR"},
-    "BeInSports3.fr": {"name": "BeIn Sports 3", "id": "49897", "lang": "FR"},
-    "BeInSportsMax4.fr": {"name": "BeIn Max 4", "id": "49903", "lang": "FR"},
-    "BeInSportsMax5.fr": {"name": "BeIn Max 5", "id": "83080", "lang": "FR"},
-    "BeInSportsMax6.fr": {"name": "BeIn Max 6", "id": "83081", "lang": "FR"},
-    "BeInSportsMax7.fr": {"name": "BeIn Max 7", "id": "83082", "lang": "FR"},
-    "BeInSportsMax8.fr": {"name": "BeIn Max 8", "id": "49904", "lang": "FR"},
-    "BeInSportsMax9.fr": {"name": "BeIn Max 9", "id": "49905", "lang": "FR"},
-    "BeInSportsMax10.fr": {"name": "BeIn Max 10", "id": "49906", "lang": "FR"},
+    "beINSPORTS2.fr": {"name": "BeIn Sports 2", "id": "49896", "lang": "FR"},
+    "beINSPORTS3.fr": {"name": "BeIn Sports 3", "id": "49897", "lang": "FR"},
+    "beINSPORTSMAX4.fr": {"name": "BeIn Max 4", "id": "49903", "lang": "FR"},
+    "beINSPORTSMAX5.fr": {"name": "BeIn Max 5", "id": "83080", "lang": "FR"},
+    "beINSPORTSMAX6.fr": {"name": "BeIn Max 6", "id": "83081", "lang": "FR"},
+    "beINSPORTSMAX7.fr": {"name": "BeIn Max 7", "id": "83082", "lang": "FR"},
+    "beINSPORTSMAX8.fr": {"name": "BeIn Max 8", "id": "49904", "lang": "FR"},
+    "beINSPORTSMAX9.fr": {"name": "BeIn Max 9", "id": "49905", "lang": "FR"},
+    "beINSPORTSMAX10.fr": {"name": "BeIn Max 10", "id": "49906", "lang": "FR"},
     "Eurosport1.fr": {"name": "Eurosport 1", "id": "50009", "lang": "FR"},
     "Eurosport2.fr": {"name": "Eurosport 2", "id": "50010", "lang": "FR"},
     "RMCSport1.fr": {"name": "RMC Sport 1", "id": "50145", "lang": "FR"},
     "RMCSport2.fr": {"name": "RMC Sport 2", "id": "50147", "lang": "FR"},
-    "L'Equipe": {"name": "L'Equipe", "id": "50058", "lang": "FR"},
 
     # --- UK ---
-    "TNTSports1": {"name": "TNT Sports 1", "id": "74357", "lang": "EN"},
-    "TNTSports2": {"name": "TNT Sports 2", "id": "74360", "lang": "EN"},
-    "TNTSports3": {"name": "TNT Sports 3", "id": "74363", "lang": "EN"},
-    "SkySportsPremierLeague": {"name": "Sky PL", "id": "74322", "lang": "EN"},
-    "SkySportsF1": {"name": "Sky F1", "id": "74316", "lang": "EN"},
-    "PremierSports1": {"name": "Premier Sports 1", "id": "74272", "lang": "EN"},
-    "PremierSports2": {"name": "Premier Sports 2", "id": "74275", "lang": "EN"},
+    "I1241.82450.schedulesdirect.org": {"name": "TNT Sports 1", "id": "74357", "lang": "EN"},
+    "I1246.82451.schedulesdirect.org": {"name": "TNT Sports 2", "id": "74360", "lang": "EN"},
+    "I1248.95772.schedulesdirect.org": {"name": "TNT Sports 3", "id": "74363", "lang": "EN"},
+    "I1099.116645.schedulesdirect.org": {"name": "Sky PL", "id": "74322", "lang": "EN"},
+    "I1081.87578.schedulesdirect.org": {"name": "Sky F1", "id": "74316", "lang": "EN"},
 
     # --- USA ---
     "ESPN": {"name": "ESPN", "id": "18345", "lang": "EN"},
@@ -96,7 +93,7 @@ CH_DATABASE = {
     "ESPNDeportes": {"name": "ESPN Deportes", "id": "18356", "lang": "ES"},
     "FoxSports1": {"name": "FS1", "id": "18242", "lang": "EN"},
     "CBSSportsNetwork": {"name": "CBS Sports", "id": "18335", "lang": "EN"},
-    "BeInSportsUS": {"name": "BeIn USA", "id": "18312", "lang": "EN"}
+    "I392.76942.gracenote.com": {"name": "BeIn USA", "id": "18312", "lang": "EN"}
 }
 
 
