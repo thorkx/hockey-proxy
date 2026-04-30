@@ -104,23 +104,21 @@ def get_bible():
     now = datetime.utcnow()
     if not BIBLE_CACHE["data"] or not BIBLE_CACHE["timestamp"] or (now - BIBLE_CACHE["timestamp"]).total_seconds() > 1800:
         try:
-            print("Fetching Bible EPG...")
             r = requests.get(BIBLE_URL, timeout=10)
             BIBLE_CACHE["data"] = r.json()
             BIBLE_CACHE["timestamp"] = now
-            print(f"Bible Loaded: {len(BIBLE_CACHE['data'])} entries")
-        except Exception as e:
-            print(f"Bible Error: {e}")
+        except: pass
     return BIBLE_CACHE["data"]
 
 def clean_name(t):
     if not t: return ""
     t = str(t).upper()
-    t = re.sub(r'HOCKEY|LNH|NBA|SOCCER|FOOTBALL| AT | VS |CONTRE', ' ', t)
+    # On garde AT et VS ici pour la lisibilité finale
+    t = re.sub(r'HOCKEY|LNH|NBA|SOCCER|FOOTBALL|CONTRE', ' ', t)
     t = re.sub(r'[ÉÈÊË]', 'E', t); t = re.sub(r'[ÀÂÄ]', 'A', t)
     t = re.sub(r'[^\w\s]', ' ', t)
     t = re.sub(r'\b(\w+)( \1\b)+', r'\1', t, flags=re.IGNORECASE)
-    return t
+    return t.strip()
 
 def quick_ratio(s1, s2):
     return SequenceMatcher(None, s1, s2).ratio()
@@ -129,7 +127,9 @@ def parse_event_time(ev_date_str):
     return datetime.fromisoformat(ev_date_str.replace('Z', '+00:00')).astimezone(timezone.utc).replace(tzinfo=None)
 
 def prepare_team_keywords(ev_name):
-    return [w for w in clean_name(ev_name).split() if len(w) > 3]
+    # Pour le matching, on ignore VS et AT
+    clean_for_match = re.sub(r'\b(VS|AT)\b', '', clean_name(ev_name))
+    return [w for w in clean_for_match.split() if len(w) > 3]
 
 def parse_program_start(prog_start_str):
     raw_start = re.sub(r'\D', '', prog_start_str)[:12]
@@ -149,31 +149,20 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str):
     try:
         ev_time = parse_event_time(ev_date_str)
         current_teams = prepare_team_keywords(ev_name)
-
         for prog in bible_data:
-            # Filtre temporel robuste (fenêtre de 2 heures)
             p_start = parse_program_start(prog['start'])
-            diff = abs((ev_time - p_start).total_seconds())
-            
-            if diff <= 7200: # On élargit un peu à 2h pour être sûr
+            if abs((ev_time - p_start).total_seconds()) <= 7200:
                 full_text = build_search_text(prog)
-                
-                # Verification si au moins une partie d'un nom d'équipe est présente
-                match_found = False
                 max_ratio = 0
                 for team in current_teams:
-                    if team[:4] in full_text: # Check rapide
+                    if team[:4] in full_text:
                         for word in full_text.split():
                             if len(word) < 3: continue
                             r = quick_ratio(team, word)
                             if r > max_ratio: max_ratio = r
-                        if max_ratio > 0.60: # Seuil légèrement plus bas pour plus de sécurité
-                            match_found = True
-                
-                if match_found:
+                if max_ratio > 0.60:
                     found_hits.append({"ch": prog['ch'], "confidence": max_ratio, "prog_ref": prog})
-    except Exception as e:
-        pass
+    except: pass
     return found_hits
     
 def fetch_espn(url):
@@ -194,65 +183,58 @@ class handler(BaseHTTPRequestHandler):
         for day in range(2):
             ds = (now + timedelta(days=day)).strftime("%Y%m%d")
             for sp, lg in leagues:
-                urls.append((f"https://site.api.espn.com/apis/site/v2/sports/{sp}/{lg}/scoreboard?dates={ds}", lg))
+                urls.append((f"https://site.api.espn.com/apis/site/v2/sports/{sp}/{lg}/scoreboard?dates={ds}", lg, day))
 
         with ThreadPoolExecutor(max_workers=10) as exe:
-            futures = {exe.submit(fetch_espn, u): lg for u, lg in urls}
+            futures = {exe.submit(fetch_espn, u): (lg, is_tomorrow) for u, lg, is_tomorrow in urls}
             for f in futures:
-                lg = futures[f]
+                lg, is_tomorrow = futures[f]
                 data = f.result()
                 if not data: continue
                 
                 for ev in data.get('events', []):
-                    name = clean_name(ev['name'])
-                    if name in seen: continue
+                    # On garde VS/AT dans le titre pour l'affichage
+                    display_title = str(ev['name']).upper()
+                    if display_title in seen: continue
                     
-                    hits = find_all_matches_in_bible(name, bible, ev['date'])
-                    if not hits: continue
-
-                    potential_channel_hits = []
-                    for hit in hits:
-                        ch_key = hit['ch']
-                        temp_score = PRIORITY_CONFIG["LEAGUES"].get(lg, 100) + (hit['confidence'] * 400)
-
-                        # Filtre de sport strict
-                        full_text_epg = build_search_text(hit['prog_ref'])
-                        sport_keywords = {"nhl": ["HOCKEY", "LNH"], "mlb": ["BASEBALL", "MLB"], "nba": ["BASKETBALL", "NBA"], "soccer": ["SOCCER", "FOOT", "UEFA"]}
-                        
-                        if any(k in full_text_epg for k in sport_keywords.get(lg, [])):
-                            temp_score += 300 
+                    hits = find_all_matches_in_bible(display_title, bible, ev['date'])
+                    
+                    # LOGIQUE SOURCE : Si pas trouvé aujourd'hui -> on ignore. Si demain -> A confirmer.
+                    if not hits:
+                        if is_tomorrow:
+                            best_ch_key = "A_CONFIRMER"
+                            final_score = 0
                         else:
-                            temp_score -= 400
+                            continue
+                    else:
+                        potential_channel_hits = []
+                        for hit in hits:
+                            ch_key = hit['ch']
+                            temp_score = PRIORITY_CONFIG["LEAGUES"].get(lg, 100) + (hit['confidence'] * 400)
+                            full_text_epg = build_search_text(hit['prog_ref'])
+                            sport_keywords = {"nhl": ["HOCKEY", "LNH"], "mlb": ["BASEBALL", "MLB"], "nba": ["BASKETBALL", "NBA"], "soccer": ["SOCCER", "FOOT", "UEFA"]}
+                            if any(k in full_text_epg for k in sport_keywords.get(lg, [])): temp_score += 300 
+                            else: temp_score -= 400
+                            for tk, bonus in PRIORITY_CONFIG["TEAMS"].items():
+                                if tk in display_title: temp_score += bonus
+                            if lg == "nhl" and ch_key in CANADA_HOCKEY_IDS: temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_HOCKEY_CANADA"]
+                            info = CH_DATABASE.get(ch_key, {})
+                            if info.get("lang") == "FR" and any(x in lg for x in ["soccer", "eng.1", "fra.1"]): temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_FRENCH"]
+                            if ch_key in CANADA_HOCKEY_IDS or "Sky" in info.get("name", ""): temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_ENGLISH_PREMIUM"]
+                            if ch_key and ("TVA" in str(ch_key).upper() or "184811" in str(ch_key)): temp_score += PRIORITY_CONFIG["CHANNELS"]["PENALTY_TVA"]
+                            potential_channel_hits.append({"ch_key": ch_key, "score": temp_score})
 
-                        for team_key, bonus in PRIORITY_CONFIG["TEAMS"].items():
-                            if team_key in name: temp_score += bonus
-                        
-                        if lg == "nhl" and ch_key in CANADA_HOCKEY_IDS:
-                            temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_HOCKEY_CANADA"]
-                        
-                        info = CH_DATABASE.get(ch_key, {})
-                        if info.get("lang") == "FR" and any(x in lg for x in ["soccer", "eng.1", "fra.1"]):
-                            temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_FRENCH"]
-                        
-                        if ch_key in CANADA_HOCKEY_IDS or "Sky" in info.get("name", ""):
-                            temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_ENGLISH_PREMIUM"]
-
-                        if ch_key and ("TVA" in str(ch_key).upper() or "184811" in str(ch_key)):
-                            temp_score += PRIORITY_CONFIG["CHANNELS"]["PENALTY_TVA"]
-                        
-                        potential_channel_hits.append({"ch_key": ch_key, "score": temp_score})
-
-                    if not potential_channel_hits: continue
-                    potential_channel_hits.sort(key=lambda x: x['score'], reverse=True)
-                    best_hit = potential_channel_hits[0]
+                        potential_channel_hits.sort(key=lambda x: x['score'], reverse=True)
+                        best_ch_key = potential_channel_hits[0]['ch_key']
+                        final_score = potential_channel_hits[0]['score']
 
                     events.append({
-                        "title": name, "score": best_hit['score'], "league": lg,
+                        "title": display_title, "score": final_score, "league": lg,
                         "start": datetime.strptime(ev['date'], "%Y-%m-%dT%H:%MZ"), 
                         "stop": datetime.strptime(ev['date'], "%Y-%m-%dT%H:%MZ") + timedelta(hours=3), 
-                        "ch_key": best_hit['ch_key']
+                        "ch_key": best_ch_key
                     })
-                    seen.add(name)
+                    seen.add(display_title)
 
         events.sort(key=lambda x: x['score'], reverse=True)
         chans = {i: [] for i in range(1, 6)}
@@ -299,7 +281,13 @@ class handler(BaseHTTPRequestHandler):
             cursor = now - timedelta(hours=12)
             for p in sorted(chans[i], key=lambda x: x['display_start']):
                 disp_st, live_st, live_en = p['display_start'].strftime("%Y%m%d%H%M%S") + " +0000", p['start'].strftime("%Y%m%d%H%M%S") + " +0000", p['stop'].strftime("%Y%m%d%H%M%S") + " +0000"
-                ch_name = CH_DATABASE.get(p['ch_key'], {}).get('name', "SOURCE")
+                
+                # Gestion du nom de la source
+                if p['ch_key'] == "A_CONFIRMER":
+                    ch_name = "À CONFIRMER"
+                else:
+                    ch_name = CH_DATABASE.get(p['ch_key'], {}).get('name', "SOURCE")
+                
                 icon = SPORT_ICONS.get(p['league'], SPORT_ICONS['default'])
                 title = f'{p["title"]} | {ch_name}'
                 if p['display_start'] > cursor: xml_out += f'\n<programme start=\"{cursor.strftime("%Y%m%d%H%M%S")} +0000\" stop=\"{disp_st}\" channel=\"CHOIX.{i}\"><title>À venir: {title}</title></programme>'
