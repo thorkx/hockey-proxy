@@ -9,7 +9,6 @@ from datetime import datetime, timedelta
 #                CONFIGURATION
 # ==========================================
 
-# Liste synchronisée avec ton dictionnaire CH_DATABASE
 ALLOWED_CHANNELS = [
     # Canada
     "I123.15676.schedulesdirect.org", "I192.73271.schedulesdirect.org",
@@ -20,7 +19,6 @@ ALLOWED_CHANNELS = [
     "I407.18801.schedulesdirect.org", "I401.18990.schedulesdirect.org",
     "I402.90118.schedulesdirect.org", "I403.90122.schedulesdirect.org",
     "I404.90124.schedulesdirect.org", "I420.57735.schedulesdirect.org",
-    
     # France
     "CanalPlus.fr", "CanalPlusSport.fr", "CanalPlusSport360.fr",
     "beINSPORTS1.fr", "beINSPORTS2.fr", "beINSPORTS3.fr",
@@ -28,35 +26,45 @@ ALLOWED_CHANNELS = [
     "beINSPORTSMAX7.fr", "beINSPORTSMAX8.fr", "beINSPORTSMAX9.fr",
     "beINSPORTSMAX10.fr", "Eurosport1.fr", "Eurosport2.fr",
     "RMCSport1.fr", "RMCSport2.fr",
-    
     # UK
     "I1241.82450.schedulesdirect.org", "I1246.82451.schedulesdirect.org",
     "I1248.95772.schedulesdirect.org", "I1099.116645.schedulesdirect.org",
     "I1081.87578.schedulesdirect.org",
-    
     # USA
     "I206.32645.schedulesdirect.org", "I209.45507.schedulesdirect.org",
     "I301.25595.schedulesdirect.org", "I219.82541.schedulesdirect.org",
     "I221.16365.schedulesdirect.org", "I392.76942.gracenote.com"
 ]
 
-# Sources EPG
 URL_QUEBEC = "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/guide.xml"
 URL_FRANCE = "https://xmltvfr.fr/xmltv/xmltv_fr.xml.gz"
 URL_CA2 = "https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz"
-
-# ID spécifique pour One Soccer sur la source CA2
 ID_ONESOCCER_CA2 = "One.Soccer.ca2"
+
+HL_KEYWORDS = ["RÉSUMÉ", "HIGHLIGHTS", "REPRISE", "CLASSIC", "REVUE", "TOP 10", "MAGAZINE", "DEBRIEF"]
+
+# --- NOUVELLE CONFIGURATION DE FILTRAGE ---
+MIN_DURATION_MINUTES = 60
+EXCEPTIONS_TITLES = ["SC"] # Liste des titres à garder même si < 60 min
 
 # ==========================================
 #                UTILITAIRES
 # ==========================================
 
+def get_duration_minutes(start_str, stop_str):
+    """Calcule la durée entre start et stop en minutes"""
+    try:
+        fmt = "%Y%m%d%H%M%S" if len(start_str.split()[0]) > 12 else "%Y%m%d%H%M"
+        t1 = datetime.strptime(start_str.split()[0], fmt)
+        t2 = datetime.strptime(stop_str.split()[0], fmt)
+        return (t2 - t1).total_seconds() / 60
+    except:
+        return 0
+
 def is_within_3_days(date_str):
     if not date_str: return False
     try:
         clean_date = date_str.split(' ')[0]
-        # Support pour formats YYYYMMDDHHMMSS ou YYYYMMDDHHMM
         fmt = "%Y%m%d%H%M%S" if len(clean_date) > 12 else "%Y%m%d%H%M"
         prog_date = datetime.strptime(clean_date, fmt)
         now = datetime.utcnow()
@@ -71,10 +79,10 @@ def is_within_3_days(date_str):
 def run():
     filtered_data = []
     allowed_set = set(ALLOWED_CHANNELS)
+    exceptions_set = set(EXCEPTIONS_TITLES)
     
     print(f"--- DÉMARRAGE DE L'EXTRACTION ({datetime.utcnow().strftime('%H:%M:%S')} UTC) ---")
 
-    # (Nom, URL, Zippé?, Filtre)
     sources_config = [
         ("Québec/USA", URL_QUEBEC, False, allowed_set),
         ("France", URL_FRANCE, True, allowed_set),
@@ -95,19 +103,29 @@ def run():
                 if elem.tag == 'programme':
                     ch_id = elem.get('channel')
                     start_time = elem.get('start')
+                    stop_time = elem.get('stop')
                     
                     if ch_id in current_filter and is_within_3_days(start_time):
-                        # Normalisation de l'ID One Soccer pour matcher ton CH_DATABASE
-                        final_id = ch_id # Garde l'id tel quel pour matcher ton dictionnaire
+                        title = elem.findtext('title', 'Sport')
                         
-                        filtered_data.append({
-                            "ch": final_id,
-                            "start": start_time,
-                            "stop": elem.get('stop'),
-                            "title": elem.findtext('title', 'Sport'),
-                            "desc": elem.findtext('desc', ''),
-                        })
-                        count += 1
+                        # --- LOGIQUE DE FILTRAGE DURÉE ET EXCEPTIONS ---
+                        duration = get_duration_minutes(start_time, stop_time)
+                        
+                        # On garde si : Durée >= 60 MIN OU le titre est dans la liste SC
+                        if duration >= MIN_DURATION_MINUTES or title in exceptions_set:
+                            desc = elem.findtext('desc', '')
+                            content_upper = (title + " " + desc).upper()
+                            is_hl = any(kw in content_upper for kw in HL_KEYWORDS)
+                            
+                            filtered_data.append({
+                                "ch": ch_id,
+                                "start": start_time,
+                                "stop": stop_time,
+                                "title": title,
+                                "desc": desc,
+                                "is_highlight": is_hl
+                            })
+                            count += 1
                     
                     elem.clear()
             print(f"-> {name} : {count} programmes retenus.")
@@ -115,7 +133,6 @@ def run():
         except Exception as e:
             print(f"Erreur source {name}: {e}")
 
-    # Tri final par date
     filtered_data.sort(key=lambda x: x['start'] if x['start'] else "")
 
     with open("filtered_epg.json", "w", encoding="utf-8") as f:
