@@ -104,15 +104,18 @@ def get_bible():
     now = datetime.utcnow()
     if not BIBLE_CACHE["data"] or not BIBLE_CACHE["timestamp"] or (now - BIBLE_CACHE["timestamp"]).total_seconds() > 1800:
         try:
-            r = requests.get(BIBLE_URL, timeout=5)
+            print("Fetching Bible EPG...")
+            r = requests.get(BIBLE_URL, timeout=10)
             BIBLE_CACHE["data"] = r.json()
             BIBLE_CACHE["timestamp"] = now
-        except: pass
+            print(f"Bible Loaded: {len(BIBLE_CACHE['data'])} entries")
+        except Exception as e:
+            print(f"Bible Error: {e}")
     return BIBLE_CACHE["data"]
 
 def clean_name(t):
     if not t: return ""
-    t = t.upper()
+    t = str(t).upper()
     t = re.sub(r'HOCKEY|LNH|NBA|SOCCER|FOOTBALL| AT | VS |CONTRE', ' ', t)
     t = re.sub(r'[ÉÈÊË]', 'E', t); t = re.sub(r'[ÀÂÄ]', 'A', t)
     t = re.sub(r'[^\w\s]', ' ', t)
@@ -126,7 +129,7 @@ def parse_event_time(ev_date_str):
     return datetime.fromisoformat(ev_date_str.replace('Z', '+00:00')).astimezone(timezone.utc).replace(tzinfo=None)
 
 def prepare_team_keywords(ev_name):
-    return [w for w in clean_name(ev_name).split() if len(w) > 3 ]
+    return [w for w in clean_name(ev_name).split() if len(w) > 3]
 
 def parse_program_start(prog_start_str):
     raw_start = re.sub(r'\D', '', prog_start_str)[:12]
@@ -146,28 +149,31 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str):
     try:
         ev_time = parse_event_time(ev_date_str)
         current_teams = prepare_team_keywords(ev_name)
-        date_prefix = ev_date_str[:8] # YYYYMMDD
 
         for prog in bible_data:
-            if not prog['start'].startswith(date_prefix): continue
-                
+            # Filtre temporel robuste (fenêtre de 2 heures)
             p_start = parse_program_start(prog['start'])
-            if abs((ev_time - p_start).total_seconds()) <= 5400:
+            diff = abs((ev_time - p_start).total_seconds())
+            
+            if diff <= 7200: # On élargit un peu à 2h pour être sûr
                 full_text = build_search_text(prog)
                 
-                # Check rapide pour éviter le fuzzy inutile
-                if not any(team[:4] in full_text for team in current_teams): continue
-
+                # Verification si au moins une partie d'un nom d'équipe est présente
+                match_found = False
                 max_ratio = 0
                 for team in current_teams:
-                    for word in full_text.split():
-                        if len(word) < 3: continue
-                        r = quick_ratio(team, word)
-                        if r > max_ratio: max_ratio = r
+                    if team[:4] in full_text: # Check rapide
+                        for word in full_text.split():
+                            if len(word) < 3: continue
+                            r = quick_ratio(team, word)
+                            if r > max_ratio: max_ratio = r
+                        if max_ratio > 0.60: # Seuil légèrement plus bas pour plus de sécurité
+                            match_found = True
                 
-                if max_ratio > 0.65:
+                if match_found:
                     found_hits.append({"ch": prog['ch'], "confidence": max_ratio, "prog_ref": prog})
-    except: pass
+    except Exception as e:
+        pass
     return found_hits
     
 def fetch_espn(url):
@@ -194,7 +200,10 @@ class handler(BaseHTTPRequestHandler):
             futures = {exe.submit(fetch_espn, u): lg for u, lg in urls}
             for f in futures:
                 lg = futures[f]
-                for ev in f.result().get('events', []):
+                data = f.result()
+                if not data: continue
+                
+                for ev in data.get('events', []):
                     name = clean_name(ev['name'])
                     if name in seen: continue
                     
@@ -206,21 +215,30 @@ class handler(BaseHTTPRequestHandler):
                         ch_key = hit['ch']
                         temp_score = PRIORITY_CONFIG["LEAGUES"].get(lg, 100) + (hit['confidence'] * 400)
 
-                        # Filtre de sport
+                        # Filtre de sport strict
                         full_text_epg = build_search_text(hit['prog_ref'])
                         sport_keywords = {"nhl": ["HOCKEY", "LNH"], "mlb": ["BASEBALL", "MLB"], "nba": ["BASKETBALL", "NBA"], "soccer": ["SOCCER", "FOOT", "UEFA"]}
-                        if any(k in full_text_epg for k in sport_keywords.get(lg, [])): temp_score += 300 
-                        else: temp_score -= 400
-
-                        for team, bonus in PRIORITY_CONFIG["TEAMS"].items():
-                            if team in name: temp_score += bonus
                         
-                        if lg == "nhl" and ch_key in CANADA_HOCKEY_IDS: temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_HOCKEY_CANADA"]
+                        if any(k in full_text_epg for k in sport_keywords.get(lg, [])):
+                            temp_score += 300 
+                        else:
+                            temp_score -= 400
+
+                        for team_key, bonus in PRIORITY_CONFIG["TEAMS"].items():
+                            if team_key in name: temp_score += bonus
+                        
+                        if lg == "nhl" and ch_key in CANADA_HOCKEY_IDS:
+                            temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_HOCKEY_CANADA"]
                         
                         info = CH_DATABASE.get(ch_key, {})
-                        if info.get("lang") == "FR" and any(x in lg for x in ["soccer", "eng.1", "fra.1", "uefa", "usa.1"]): temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_FRENCH"]
-                        if ch_key in CANADA_HOCKEY_IDS or "Sky" in info.get("name", ""): temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_ENGLISH_PREMIUM"]
-                        if ch_key and ("TVA" in str(ch_key).upper() or "184811" in str(ch_key)): temp_score += PRIORITY_CONFIG["CHANNELS"]["PENALTY_TVA"]
+                        if info.get("lang") == "FR" and any(x in lg for x in ["soccer", "eng.1", "fra.1"]):
+                            temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_FRENCH"]
+                        
+                        if ch_key in CANADA_HOCKEY_IDS or "Sky" in info.get("name", ""):
+                            temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_ENGLISH_PREMIUM"]
+
+                        if ch_key and ("TVA" in str(ch_key).upper() or "184811" in str(ch_key)):
+                            temp_score += PRIORITY_CONFIG["CHANNELS"]["PENALTY_TVA"]
                         
                         potential_channel_hits.append({"ch_key": ch_key, "score": temp_score})
 
