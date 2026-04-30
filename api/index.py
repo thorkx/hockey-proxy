@@ -109,37 +109,51 @@ def clean_name(t):
     t = re.sub(r'[ÉÈÊË]', 'E', t); t = re.sub(r'[ÀÂÄ]', 'A', t)
     return re.sub(r'[^\w\s]', ' ', t)
     
+def parse_event_time(ev_date_str):
+    """Parse ESPN event date string to UTC datetime."""
+    return datetime.fromisoformat(ev_date_str.replace('Z', '+00:00')).astimezone(timezone.utc).replace(tzinfo=None)
+
+def prepare_team_keywords(ev_name):
+    """Extract team keywords from event name."""
+    current_teams = [w for w in clean_name(ev_name).split() if len(w) > 3 ]
+    return current_teams
+
+def parse_program_start(prog_start_str):
+    """Parse program start time string with timezone offset."""
+    raw_start = re.sub(r'\D', '', prog_start_str)[:12]
+    p_start = datetime.strptime(raw_start, "%Y%m%d%H%M")
+
+    tz_match = re.search(r'([+-]\d{4})$', prog_start_str.strip())
+    if tz_match:
+        offset = tz_match.group(1)
+        sign = 1 if offset[0] == '+' else -1
+        hours = int(offset[1:3])
+        minutes = int(offset[3:5])
+        p_start = p_start - sign * timedelta(hours=hours, minutes=minutes)
+    return p_start
+
+def build_search_text(prog):
+    """Build searchable text from program fields."""
+    return (
+        clean_name(prog.get('title', '')) + " " +
+        clean_name(prog.get('sub-title', '')) + " " +
+        clean_name(prog.get('desc', '')) + " " +
+        clean_name(prog.get('category', ''))
+    )
+
 def find_all_matches_in_bible(ev_name, bible_data, ev_date_str):
+    """Find matching channels in bible data for an ESPN event."""
     found_keys = set()
     try:
-        ev_time = datetime.fromisoformat(ev_date_str.replace('Z', '+00:00')).astimezone(timezone.utc).replace(tzinfo=None)
-
-        # On prépare les mots-clés des équipes
-        current_teams = [w for w in clean_name(ev_name).split() if len(w) > 3 and w not in ["MONTREAL", "TORONTO", "UNITED", "CITY"]]
-        if "CANADIENS" in ev_name.upper() and "CANADIENS" not in current_teams:
-            current_teams.append("CANADIENS")
+        ev_time = parse_event_time(ev_date_str)
+        current_teams = prepare_team_keywords(ev_name)
 
         for prog in bible_data:
-            raw_start = re.sub(r'\D', '', prog['start'])[:12]
-            p_start = datetime.strptime(raw_start, "%Y%m%d%H%M")
+            p_start = parse_program_start(prog['start'])
 
-            tz_match = re.search(r'([+-]\d{4})$', prog['start'].strip())
-            if tz_match:
-                offset = tz_match.group(1)
-                sign = 1 if offset[0] == '+' else -1
-                hours = int(offset[1:3])
-                minutes = int(offset[3:5])
-                p_start = p_start - sign * timedelta(hours=hours, minutes=minutes)
-
-            # --- FENÊTRE ÉLARGIE À 90 MIN (5400s) ---
+            # Check if within 90-minute window
             if abs((ev_time - p_start).total_seconds()) <= 5400:
-                # RECHERCHE MULTI-CHAMPS (Titre + Sous-titre + Desc + Catégorie)
-                full_text = (
-                    clean_name(prog.get('title', '')) + " " + 
-                    clean_name(prog.get('sub-title', '')) + " " + 
-                    clean_name(prog.get('desc', '')) + " " + 
-                    clean_name(prog.get('category', ''))
-                )
+                full_text = build_search_text(prog)
 
                 if any(team in full_text for team in current_teams):
                     found_keys.add(prog['ch'])
@@ -247,7 +261,7 @@ class handler(BaseHTTPRequestHandler):
                 idx = int(self.path.split('/')[-1])
                 chans = self.get_organized_events()
                 now = datetime.utcnow()
-                sid = "184813" 
+                sid = "184813"      # Default fallback (RDS)
                 for m in chans.get(idx, []):
                     if m['display_start'] <= now <= m['stop']:
                         sid = CH_DATABASE.get(m['ch_key'], {}).get("id", "184813")
