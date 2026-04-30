@@ -9,8 +9,7 @@ from datetime import datetime, timedelta
 #                CONFIGURATION
 # ==========================================
 
-# On utilise les IDs de ton dictionnaire pour filtrer strictement
-# Note : On garde les clés (ex: I123.15676.schedulesdirect.org) car c'est ce qui est dans le XML
+# IDs autorisés pour les sources standards
 ALLOWED_CHANNELS = [
     "I123.15676.schedulesdirect.org", "I192.73271.schedulesdirect.org",
     "I124.39080.schedulesdirect.org", "I193.73142.schedulesdirect.org",
@@ -19,7 +18,7 @@ ALLOWED_CHANNELS = [
     "I406.18798.schedulesdirect.org", "I408.18800.schedulesdirect.org",
     "I407.18801.schedulesdirect.org", "I401.18990.schedulesdirect.org",
     "I402.90118.schedulesdirect.org", "I403.90122.schedulesdirect.org",
-    "I404.90124.schedulesdirect.org", "OneSoccer", "SNWorld",
+    "I404.90124.schedulesdirect.org", "SNWorld",
     "CanalPlus.fr", "CanalPlusSport.fr", "CanalPlusSport360.fr",
     "beINSPORTS1.fr", "BeInSports2.fr", "BeInSports3.fr",
     "BeInSportsMax4.fr", "BeInSportsMax5.fr", "BeInSportsMax6.fr",
@@ -31,8 +30,13 @@ ALLOWED_CHANNELS = [
     "FoxSports1", "CBSSportsNetwork", "BeInSportsUS", "ESPN", "ESPN2"
 ]
 
+# Sources EPG
 URL_QUEBEC = "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/guide.xml"
 URL_FRANCE = "https://xmltvfr.fr/xmltv/xmltv_fr.xml.gz"
+URL_CA2 = "https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz"
+
+# ID spécifique pour One Soccer sur la nouvelle source
+ID_ONESOCCER_CA2 = "One.Soccer.ca2"
 
 # ==========================================
 #                UTILITAIRES
@@ -41,10 +45,12 @@ URL_FRANCE = "https://xmltvfr.fr/xmltv/xmltv_fr.xml.gz"
 def is_within_3_days(date_str):
     if not date_str: return False
     try:
+        # Nettoyage pour supporter les formats YYYYMMDDHHMMSS ou YYYYMMDDHHMM
         clean_date = date_str.split(' ')[0]
-        prog_date = datetime.strptime(clean_date, "%Y%m%d%H%M%S")
+        fmt = "%Y%m%d%H%M%S" if len(clean_date) > 12 else "%Y%m%d%H%M"
+        
+        prog_date = datetime.strptime(clean_date, fmt)
         now = datetime.utcnow()
-        # Fenêtre : 24h dans le passé à 3 jours dans le futur
         return (now - timedelta(hours=24)) <= prog_date <= (now + timedelta(days=3))
     except:
         return False
@@ -55,37 +61,39 @@ def is_within_3_days(date_str):
 
 def run():
     filtered_data = []
-    # On transforme en set pour une recherche ultra rapide (O(1))
     allowed_set = set(ALLOWED_CHANNELS)
     
-    print(f"--- DÉMARRAGE DE L'EXTRACTION STRICTE ({datetime.utcnow().strftime('%H:%M:%S')} UTC) ---")
+    print(f"--- DÉMARRAGE DE L'EXTRACTION ({datetime.utcnow().strftime('%H:%M:%S')} UTC) ---")
 
-    # --- SOURCES (Quebec & France) ---
-    sources = [("Québec/USA", URL_QUEBEC, False), ("France", URL_FRANCE, True)]
+    # Configuration des sources : (Nom, URL, Zippé?, Filtre Spécifique)
+    # Si le filtre est None, on utilise la liste ALLOWED_CHANNELS
+    sources_config = [
+        ("Québec/USA", URL_QUEBEC, False, allowed_set),
+        ("France", URL_FRANCE, True, allowed_set),
+        ("One Soccer CA2", URL_CA2, True, {ID_ONESOCCER_CA2})
+    ]
 
-    for name, url, is_zipped in sources:
+    for name, url, is_zipped, current_filter in sources_config:
         try:
             print(f"Traitement source {name}...")
             r = requests.get(url, timeout=60)
             r.raise_for_status()
             
-            if is_zipped:
-                input_data = gzip.GzipFile(fileobj=BytesIO(r.content))
-            else:
-                input_data = BytesIO(r.content)
+            input_data = gzip.GzipFile(fileobj=BytesIO(r.content)) if is_zipped else BytesIO(r.content)
 
             count = 0
-            # On utilise iterparse pour ne pas charger tout le XML en RAM
             context = ET.iterparse(input_data, events=('end',))
             for _, elem in context:
                 if elem.tag == 'programme':
                     ch_id = elem.get('channel')
                     start_time = elem.get('start')
                     
-                    # FILTRE STRICT : ID présent dans la liste ET date valide
-                    if ch_id in allowed_set and is_within_3_days(start_time):
+                    if ch_id in current_filter and is_within_3_days(start_time):
+                        # On normalise l'ID de One Soccer pour le dictionnaire du proxy
+                        final_id = "OneSoccer" if ch_id == ID_ONESOCCER_CA2 else ch_id
+                        
                         filtered_data.append({
-                            "ch": ch_id,
+                            "ch": final_id,
                             "start": start_time,
                             "stop": elem.get('stop'),
                             "title": elem.findtext('title', 'Sport'),
@@ -93,8 +101,7 @@ def run():
                         })
                         count += 1
                     
-                    # Nettoyage de la mémoire
-                    elem.clear()
+                    elem.clear() # Libère la mémoire
             print(f"-> {name} : {count} programmes retenus.")
             
         except Exception as e:
