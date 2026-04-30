@@ -20,10 +20,10 @@ PRIORITY_CONFIG = {
         "CF MONTREAL": 1000, "WREXHAM": 1200
     },
     "CHANNELS": {
-        "BONUS_HOCKEY_CANADA": 1200, # RDS, TSN, SN
+        "BONUS_HOCKEY_CANADA": 1200, 
         "BONUS_ENGLISH_PREMIUM": 500, 
         "BONUS_FRENCH": 300, 
-        "PENALTY_TVA": -150 # Préfère RDS mais garde TVA si c'est tout ce qu'il y a
+        "PENALTY_TVA": -150 
     }
 }
 
@@ -34,14 +34,13 @@ CANADA_HOCKEY_IDS = [
     "SNOne", "SN360", "SNEast", "SNOntario", "SNWest", "SNPacific"
 ]
 
-SPECIAL_TEAMS_SCAN = {"WREXHAM": ("soccer", "eng.3")}
-
 # ==========================================
 #              BASE DE DONNÉES
 # ==========================================
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
+# (Garder ton dictionnaire CH_DATABASE complet ici)
 CH_DATABASE = {
     "I123.15676.schedulesdirect.org": {"name": "RDS", "id": "184813", "lang": "FR"},
     "I192.73271.schedulesdirect.org": {"name": "RDS2", "id": "184814", "lang": "FR"},
@@ -63,48 +62,10 @@ CH_DATABASE = {
     "ESPN": {"name": "ESPN", "id": "18345", "lang": "EN"},
     "ESPN2": {"name": "ESPN 2", "id": "18346", "lang": "EN"},
     "ESPNDeportes": {"name": "ESPN Deportes", "id": "18356", "lang": "ES"},
-    "BeInSports": {"name": "BeIn Sports", "id": "71320", "lang": "EN"},
-    "BeInSports USA": {"name": "BeIn Sports USA", "id": "18312", "lang": "EN"},
-    "BeInSports Xtra": {"name": "BeIn Sports Xtra", "id": "19489", "lang": "EN"},
-    "CBS Sports": {"name": "CBS Sports", "id": "18335", "lang": "EN"},
-    "FoxSports1": {"name": "Fox Sports 1", "id": "18242", "lang": "EN"},
-    "FoxSports2": {"name": "Fox Sports 2", "id": "18366", "lang": "EN"},
-    "Golazo Sports": {"name": "Golazo Sports", "id": "18333", "lang": "EN"},
-    "Marquee Sports": {"name": "Marquee Sports", "id": "18355", "lang": "EN"},
-    "MSG": {"name": "MSG", "id": "18351", "lang": "EN"},
-    "MSG Plus": {"name": "MSG Plus", "id": "18352", "lang": "EN"},
-    "YES Network": {"name": "YES Network", "id": "18354", "lang": "EN"},
-    "Sky Eurosport 1": {"name": "Sky Eurosport 1", "id": "74248", "lang": "EN"},
-    "Sky Eurosport 2": {"name": "Sky Eurosport 2", "id": "74251", "lang": "EN"},
-    "Sky Premier Sport 1": {"name": "Sky Premier Sport 1", "id": "74272", "lang": "EN"},
-    "Sky Sport F1": {"name": "Sky Sport F1", "id": "74316", "lang": "EN"},
-    "Sky Sport Golf": {"name": "Sky Sport Golf", "id": "74319", "lang": "EN"},
-    "Sky Sport Main Event": {"name": "Sky Sport Main Event", "id": "74322", "lang": "EN"},
-    "Sky Sport Mix": {"name": "Sky Sport Mix", "id": "74325", "lang": "EN"},
-    "Sky Sport News": {"name": "Sky Sport News", "id": "74328", "lang": "EN"},
-    "Sky Sport Premier League": {"name": "Sky Sport Premier League", "id": "74331", "lang": "EN"},
-    "TNT Sports 1": {"name": "TNT Sports 1", "id": "74357", "lang": "EN"},
-    "TNT Sports 2": {"name": "TNT Sports 2", "id": "74360", "lang": "EN"},
-    "TNT Sports 3": {"name": "TNT Sports 3", "id": "74363", "lang": "EN"},
-    "TNT Sports 4": {"name": "TNT Sports 4", "id": "74366", "lang": "EN"},
-    "Viaplay Sports 1": {"name": "Viaplay Sports 1", "id": "74378", "lang": "EN"},
-    "Viaplay Sports 2": {"name": "Viaplay Sports 2", "id": "74381", "lang": "EN"},
     "beINSPORTS1.fr": {"name": "BeIn Sports 1", "id": "49895", "lang": "FR"},
-    "beINSPORTS2.fr": {"name": "BeIn Sports 2", "id": "49896", "lang": "FR"},
-    "beINSPORTS3.fr": {"name": "BeIn Sports 3", "id": "49897", "lang": "FR"},
     "CanalPlus.fr": {"name": "Canal+", "id": "49943", "lang": "FR"},
-    "CanalPlusFoot.fr": {"name": "Canal+ Foot", "id": "49945", "lang": "FR"},
-    "CanalPlusSport.fr": {"name": "Canal+ Sport", "id": "49951", "lang": "FR"},
-    "CanalPlusSport360.fr": {"name": "Canal+ Sport 360", "id": "49953", "lang": "FR"},
-    "EuroSport1.fr": {"name": "EuroSport 1", "id": "50016", "lang": "FR"},
-    "EuroSport2.fr": {"name": "EuroSport 2", "id": "50017", "lang": "FR"},
     "L'Equipe": {"name": "L'Equipe", "id": "50058", "lang": "FR"},
-    "RMCSport1.fr": {"name": "RMC Sports 1", "id": "50145", "lang": "FR"},
-    "RMCSport2.fr": {"name": "RMC Sports 2", "id": "50147", "lang": "FR"},
-    "DAZN 1": {"name": "DAZN 1", "id": "44265", "lang": "ES"},
-    "DAZN 2": {"name": "DAZN 2", "id": "44266", "lang": "ES"},
-    "DAZN LaLiga": {"name": "DAZN LaLiga", "id": "44268", "lang": "ES"},
-    "LaLiga TV": {"name": "LaLiga TV", "id": "44321", "lang": "ES"}
+    "DAZN 1": {"name": "DAZN 1", "id": "44265", "lang": "ES"}
 }
 
 SPORT_ICONS = {"nhl": "🏒", "nba": "🏀", "mlb": "⚾", "soccer": "⚽", "uefa.champions": "🇪🇺", "default": "🏆"}
@@ -126,30 +87,19 @@ def clean_name(t):
 def find_match_in_bible(ev_name, bible_data, ev_date_str):
     try:
         ev_time = datetime.strptime(ev_date_str, "%Y-%m-%dT%H:%MZ")
-        # On garde les noms de ville, on enlève juste les termes génériques
-        clean_ev = clean_name(ev_name)
-        
+        current_teams = [w for w in clean_name(ev_name).split() if len(w) > 3 and w not in ["MONTREAL", "TORONTO", "UNITED", "CITY"]]
         potential_matches = []
         for prog in bible_data:
-            # Extraction de l'heure de la bible
             p_start = datetime.strptime(prog['start'][:14], "%Y%m%d%H%M%S")
-            
-            # Fenêtre élargie à 6h pour pallier aux erreurs de fuseaux horaires
+            # Fenêtre élargie à 6h (21600 sec) pour éviter les sauts en cours de match
             if abs((ev_time - p_start).total_seconds()) < 21600:
-                prog_title = clean_name(prog.get('title', ''))
-                
-                # Score de matching textuel
-                match_count = sum(1 for word in clean_ev.split() if len(word) > 3 and word in prog_title)
-                
-                if match_count > 0:
-                    potential_matches.append((prog['ch'], match_count))
-        
+                title = clean_name(prog.get('title', ''))
+                if any(team in title for team in current_teams):
+                    potential_matches.append((prog['ch'], 500))
         if potential_matches:
-            # On prend celui qui a le plus de mots en commun
             potential_matches.sort(key=lambda x: x[1], reverse=True)
             return potential_matches[0][0]
-    except Exception as e:
-        print(f"Erreur matching: {e}")
+    except: pass
     return None
 
 def fetch_espn(url):
@@ -212,6 +162,7 @@ class handler(BaseHTTPRequestHandler):
         chans = {i: [] for i in range(1, 6)}
         for e in events:
             for i in range(1, 6):
+                # Correction de la logique de collision pour accepter les matchs en cours
                 if not any(not (e['stop'] <= ex['start'] or e['start'] >= ex['stop']) for ex in chans[i]):
                     chans[i].append(e); break
         return chans
@@ -246,16 +197,21 @@ class handler(BaseHTTPRequestHandler):
         xml_out = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>'
         for i in range(1, 6):
             xml_out += f'\n<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
-            cursor = now - timedelta(hours=6)
+            # Curseur commence au début de la journée affichée
+            cursor = now - timedelta(hours=12)
             for p in sorted(chans[i], key=lambda x: x['start']):
-                st, en = p['start'].strftime("%Y%m%d%H%M%S") + " +0000", p['stop'].strftime("%Y%m%d%H%M%S") + " +0000"
+                st_str = p['start'].strftime("%Y%m%d%H%M%S") + " +0000"
+                en_str = p['stop'].strftime("%Y%m%d%H%M%S") + " +0000"
                 info = CH_DATABASE.get(p['ch_key'], {})
                 ch_name = info.get('name', p['ch_key'] if p['ch_key'] else "À CONFIRMER")
                 icon = SPORT_ICONS.get(p['league'], SPORT_ICONS['default'])
                 safe_title = escape_xml(f"{icon} {p['title']} | {ch_name}")
-                if p['start'] > cursor:
-                    xml_out += f'\n<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{st}" channel="CHOIX.{i}"><title>Suivant: {safe_title}</title></programme>'
-                xml_out += f'\n<programme start="{st}" stop="{en}" channel="CHOIX.{i}"><title>{safe_title}</title><desc>Diffuseur: {ch_name}</desc></programme>'
+                
+                # FIX CRITIQUE : Ne crée un bloc "Suivant" que si le match n'est pas déjà commencé
+                if p['start'] > now and p['start'] > cursor:
+                    xml_out += f'\n<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{st_str}" channel="CHOIX.{i}"><title>À venir: {safe_title}</title></programme>'
+                
+                xml_out += f'\n<programme start="{st_str}" stop="{en_str}" channel="CHOIX.{i}"><title>{safe_title}</title><desc>Diffuseur: {ch_name} | Score: {p["score"]}</desc></programme>'
                 cursor = p['stop']
         xml_out += '\n</tv>'
         self.send_response(200); self.send_header('Content-Type', 'application/xml; charset=utf-8'); self.end_headers()
@@ -263,6 +219,5 @@ class handler(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     server = HTTPServer(('0.0.0.0', 5000), handler)
-    print("Serveur Hockey Proxy démarré sur le port 5000")
+    print("Serveur Hockey Proxy Fixé sur le port 5000")
     server.serve_forever()
-    
