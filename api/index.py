@@ -5,6 +5,7 @@ import re
 import html
 from datetime import datetime, timedelta, timezone
 from concurrent.futures import ThreadPoolExecutor
+from difflib import SequenceMatcher  # <--- Ajout pour le fuzzy match
 
 # ==========================================
 #        CONFIGURATION DES PRIORITÉS
@@ -30,7 +31,7 @@ PRIORITY_CONFIG = {
 }
 
 CANADA_HOCKEY_IDS = [
-    "Réseau.des.Sports.(RDS).HD.ca2", "RDS2.HD.ca2", "Réseau.des.Sports.Info.HD.ca2"
+    "Réseau.des.Sports.(RDS).HD.ca2", "RDS2.HD.ca2", "Réseau.des.Sports.Info.HD.ca2", # <--- Virgule corrigée
     "TVA.Sports.HD.ca2", "TVA.Sports.2.HD.ca2",
     "TSN.4K.ca2", "TSN2", "TSN3", "TSN4", "TSN5",
     "Sportsnet.4K.ca2", "Sportsnet.One.HD.ca2", "Sportsnet.360.HD.ca2", 
@@ -40,7 +41,6 @@ CANADA_HOCKEY_IDS = [
 # ==========================================
 #              BASE DE DONNÉES
 # ==========================================
-# Assure-toi que cette URL pointe bien vers ton fichier généré par le nouveau bot
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
@@ -108,21 +108,20 @@ def clean_name(t):
     t = re.sub(r'HOCKEY|LNH|NBA|SOCCER|FOOTBALL| AT | VS |CONTRE', ' ', t)
     t = re.sub(r'[ÉÈÊË]', 'E', t); t = re.sub(r'[ÀÂÄ]', 'A', t)
     return re.sub(r'[^\w\s]', ' ', t)
+
+def quick_ratio(s1, s2):
+    """Calcul de similarité fuzzy entre deux chaînes."""
+    return SequenceMatcher(None, s1, s2).ratio()
     
 def parse_event_time(ev_date_str):
-    """Parse ESPN event date string to UTC datetime."""
     return datetime.fromisoformat(ev_date_str.replace('Z', '+00:00')).astimezone(timezone.utc).replace(tzinfo=None)
 
 def prepare_team_keywords(ev_name):
-    """Extract team keywords from event name."""
-    current_teams = [w for w in clean_name(ev_name).split() if len(w) > 3 ]
-    return current_teams
+    return [w for w in clean_name(ev_name).split() if len(w) > 3 ]
 
 def parse_program_start(prog_start_str):
-    """Parse program start time string with timezone offset."""
     raw_start = re.sub(r'\D', '', prog_start_str)[:12]
     p_start = datetime.strptime(raw_start, "%Y%m%d%H%M")
-
     tz_match = re.search(r'([+-]\d{4})$', prog_start_str.strip())
     if tz_match:
         offset = tz_match.group(1)
@@ -133,7 +132,6 @@ def parse_program_start(prog_start_str):
     return p_start
 
 def build_search_text(prog):
-    """Build searchable text from program fields."""
     return (
         clean_name(prog.get('title', '')) + " " +
         clean_name(prog.get('sub-title', '')) + " " +
@@ -142,24 +140,31 @@ def build_search_text(prog):
     )
 
 def find_all_matches_in_bible(ev_name, bible_data, ev_date_str):
-    """Find matching channels in bible data for an ESPN event."""
-    found_keys = set()
+    """Trouve les chaînes avec score de confiance fuzzy."""
+    found_hits = []
     try:
         ev_time = parse_event_time(ev_date_str)
         current_teams = prepare_team_keywords(ev_name)
 
         for prog in bible_data:
             p_start = parse_program_start(prog['start'])
-
-            # Check if within 90-minute window
             if abs((ev_time - p_start).total_seconds()) <= 5400:
                 full_text = build_search_text(prog)
-
-                if any(team in full_text for team in current_teams):
-                    found_keys.add(prog['ch'])
+                
+                max_ratio = 0
+                for team in current_teams:
+                    # On compare chaque mot clé de l'événement avec les mots du guide
+                    for word in full_text.split():
+                        if len(word) < 3: continue
+                        r = quick_ratio(team, word)
+                        if r > max_ratio: max_ratio = r
+                
+                # Seuil de tolérance fuzzy (0.65 est un bon compromis)
+                if max_ratio > 0.65:
+                    found_hits.append({"ch": prog['ch'], "confidence": max_ratio})
     except Exception:
         pass
-    return list(found_keys)
+    return found_hits
     
 def fetch_espn(url):
     try: return requests.get(url, timeout=5).json()
@@ -183,7 +188,6 @@ class handler(BaseHTTPRequestHandler):
         ]
 
         urls = []
-        # On regarde aujourd'hui et demain
         for day in range(2):
             ds = (now + timedelta(days=day)).strftime("%Y%m%d")
             for sp, lg in leagues:
@@ -197,12 +201,16 @@ class handler(BaseHTTPRequestHandler):
                     name = ev['name'].upper()
                     if name in seen: continue
                     
-                    all_possible_keys = find_all_matches_in_bible(name, bible, ev['date'])
-                    if not all_possible_keys: continue
+                    hits = find_all_matches_in_bible(name, bible, ev['date'])
+                    if not hits: continue
 
                     potential_channel_hits = []
-                    for ch_key in all_possible_keys:
+                    for hit in hits:
+                        ch_key = hit['ch']
+                        # Base Score + Bonus de confiance fuzzy
                         temp_score = PRIORITY_CONFIG["LEAGUES"].get(lg, 100)
+                        temp_score += (hit['confidence'] * 400) # Bonus jusqu'à 400 pts si match parfait
+
                         for team, bonus in PRIORITY_CONFIG["TEAMS"].items():
                             if team in name: temp_score += bonus
                         
@@ -261,7 +269,7 @@ class handler(BaseHTTPRequestHandler):
                 idx = int(self.path.split('/')[-1])
                 chans = self.get_organized_events()
                 now = datetime.utcnow()
-                sid = "184813"      # Default fallback (RDS)
+                sid = "184813"
                 for m in chans.get(idx, []):
                     if m['display_start'] <= now <= m['stop']:
                         sid = CH_DATABASE.get(m['ch_key'], {}).get("id", "184813")
@@ -308,4 +316,4 @@ if __name__ == "__main__":
     server = HTTPServer(('0.0.0.0', 5000), handler)
     print("Serveur Hockey Proxy Actif (Port 5000)")
     server.serve_forever()
-    
+        
