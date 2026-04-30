@@ -102,19 +102,13 @@ BIBLE_CACHE = {"data": [], "timestamp": None}
 
 def get_bible():
     now = datetime.utcnow()
-    # Rafraîchir la bible seulement toutes les 30 minutes
     if not BIBLE_CACHE["data"] or not BIBLE_CACHE["timestamp"] or (now - BIBLE_CACHE["timestamp"]).total_seconds() > 1800:
         try:
             r = requests.get(BIBLE_URL, timeout=5)
             BIBLE_CACHE["data"] = r.json()
             BIBLE_CACHE["timestamp"] = now
-        except:
-            pass
+        except: pass
     return BIBLE_CACHE["data"]
-
-def escape_xml(text):
-    if not text: return ""
-    return html.escape(text).encode('ascii', 'xmlcharrefreplace').decode()
 
 def clean_name(t):
     if not t: return ""
@@ -122,7 +116,6 @@ def clean_name(t):
     t = re.sub(r'HOCKEY|LNH|NBA|SOCCER|FOOTBALL| AT | VS |CONTRE', ' ', t)
     t = re.sub(r'[ÉÈÊË]', 'E', t); t = re.sub(r'[ÀÂÄ]', 'A', t)
     t = re.sub(r'[^\w\s]', ' ', t)
-    # Suppression des mots doublons (ex: ATHLETICS ATHLETICS -> ATHLETICS)
     t = re.sub(r'\b(\w+)( \1\b)+', r'\1', t, flags=re.IGNORECASE)
     return t
 
@@ -142,54 +135,39 @@ def parse_program_start(prog_start_str):
     if tz_match:
         offset = tz_match.group(1)
         sign = 1 if offset[0] == '+' else -1
-        hours = int(offset[1:3])
-        minutes = int(offset[3:5])
-        p_start = p_start - sign * timedelta(hours=hours, minutes=minutes)
+        p_start = p_start - sign * timedelta(hours=int(offset[1:3]), minutes=int(offset[3:5]))
     return p_start
 
 def build_search_text(prog):
-    return (
-        clean_name(prog.get('title', '')) + " " +
-        clean_name(prog.get('sub-title', '')) + " " +
-        clean_name(prog.get('desc', '')) + " " +
-        clean_name(prog.get('category', ''))
-    )
+    return f"{clean_name(prog.get('title', ''))} {clean_name(prog.get('sub-title', ''))} {clean_name(prog.get('desc', ''))} {clean_name(prog.get('category', ''))}"
 
 def find_all_matches_in_bible(ev_name, bible_data, ev_date_str):
     found_hits = []
     try:
         ev_time = parse_event_time(ev_date_str)
         current_teams = prepare_team_keywords(ev_name)
+        date_prefix = ev_date_str[:8] # YYYYMMDD
 
         for prog in bible_data:
-            # OPTIMISATION 1 : Filtrage temporel ultra-rapide d'abord
-            # On ne parse l'heure complète que si les premiers chiffres concordent (YmdH)
-            if not prog['start'].startswith(ev_date_str[:8]): 
-                continue
+            if not prog['start'].startswith(date_prefix): continue
                 
             p_start = parse_program_start(prog['start'])
             if abs((ev_time - p_start).total_seconds()) <= 5400:
                 full_text = build_search_text(prog)
                 
-                # OPTIMISATION 2 : Check rapide "in" avant le "Fuzzy"
-                # Si aucune équipe n'est même partiellement dans le texte, on saute le fuzzy
-                if not any(team[:4] in full_text for team in current_teams):
-                    continue
+                # Check rapide pour éviter le fuzzy inutile
+                if not any(team[:4] in full_text for team in current_teams): continue
 
                 max_ratio = 0
                 for team in current_teams:
                     for word in full_text.split():
                         if len(word) < 3: continue
-                        # On ne calcule le ratio que si les mots commencent par la même lettre
-                        if team[0] != word[0]: continue 
-                        
                         r = quick_ratio(team, word)
                         if r > max_ratio: max_ratio = r
                 
                 if max_ratio > 0.65:
-                    found_hits.append({"ch": prog['ch'], "confidence": max_ratio, "full_text": full_text})
-    except Exception:
-        pass
+                    found_hits.append({"ch": prog['ch'], "confidence": max_ratio, "prog_ref": prog})
+    except: pass
     return found_hits
     
 def fetch_espn(url):
@@ -204,13 +182,7 @@ class handler(BaseHTTPRequestHandler):
         bible = get_bible()
         now = datetime.utcnow()
         events, seen = [], set()
-        
-        leagues = [
-            ("hockey","nhl"), ("basketball","nba"), ("baseball","mlb"),
-            ("soccer","eng.1"), ("soccer","fra.1"), ("soccer","ita.1"),
-            ("soccer","esp.1"), ("soccer","usa.1"), ("soccer","uefa.champions"),
-            ("soccer","concacaf.nations")
-        ]
+        leagues = [("hockey","nhl"), ("basketball","nba"), ("baseball","mlb"), ("soccer","eng.1"), ("soccer","fra.1"), ("soccer","ita.1"), ("soccer","esp.1"), ("soccer","usa.1"), ("soccer","uefa.champions"), ("soccer","concacaf.nations")]
 
         urls = []
         for day in range(2):
@@ -232,38 +204,23 @@ class handler(BaseHTTPRequestHandler):
                     potential_channel_hits = []
                     for hit in hits:
                         ch_key = hit['ch']
-                        temp_score = PRIORITY_CONFIG["LEAGUES"].get(lg, 100)
-                        temp_score += (hit['confidence'] * 400)
+                        temp_score = PRIORITY_CONFIG["LEAGUES"].get(lg, 100) + (hit['confidence'] * 400)
 
-                        # --- FILTRE DE SPORT STRICT ---
-                        full_text_epg = build_search_text(next(p for p in bible if p['ch'] == ch_key))
-                        sport_keywords = {
-                            "nhl": ["HOCKEY", "LNH"], "mlb": ["BASEBALL", "MLB"],
-                            "nba": ["BASKETBALL", "NBA"], "soccer": ["SOCCER", "FOOT", "UEFA"]
-                        }
-                        current_lg_keywords = sport_keywords.get(lg, [])
-                        if any(k in full_text_epg for k in current_lg_keywords):
-                            temp_score += 300 
-                        else:
-                            temp_score -= 500 # Pénalité si le sport ne semble pas correspondre
+                        # Filtre de sport
+                        full_text_epg = build_search_text(hit['prog_ref'])
+                        sport_keywords = {"nhl": ["HOCKEY", "LNH"], "mlb": ["BASEBALL", "MLB"], "nba": ["BASKETBALL", "NBA"], "soccer": ["SOCCER", "FOOT", "UEFA"]}
+                        if any(k in full_text_epg for k in sport_keywords.get(lg, [])): temp_score += 300 
+                        else: temp_score -= 400
 
                         for team, bonus in PRIORITY_CONFIG["TEAMS"].items():
                             if team in name: temp_score += bonus
                         
-                        if lg == "nhl" and ch_key in CANADA_HOCKEY_IDS:
-                            temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_HOCKEY_CANADA"]
+                        if lg == "nhl" and ch_key in CANADA_HOCKEY_IDS: temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_HOCKEY_CANADA"]
                         
                         info = CH_DATABASE.get(ch_key, {})
-                        is_soccer = any(x in lg for x in ["soccer", "eng.1", "fra.1", "uefa", "usa.1", "concacaf"])
-                        
-                        if info.get("lang") == "FR" and is_soccer:
-                            temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_FRENCH"]
-                        
-                        if ch_key in CANADA_HOCKEY_IDS or "Sky" in info.get("name", ""):
-                            temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_ENGLISH_PREMIUM"]
-
-                        if ch_key and ("TVA" in str(ch_key).upper() or "184811" in str(ch_key)):
-                            temp_score += PRIORITY_CONFIG["CHANNELS"]["PENALTY_TVA"]
+                        if info.get("lang") == "FR" and any(x in lg for x in ["soccer", "eng.1", "fra.1", "uefa", "usa.1"]): temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_FRENCH"]
+                        if ch_key in CANADA_HOCKEY_IDS or "Sky" in info.get("name", ""): temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_ENGLISH_PREMIUM"]
+                        if ch_key and ("TVA" in str(ch_key).upper() or "184811" in str(ch_key)): temp_score += PRIORITY_CONFIG["CHANNELS"]["PENALTY_TVA"]
                         
                         potential_channel_hits.append({"ch_key": ch_key, "score": temp_score})
 
@@ -281,19 +238,15 @@ class handler(BaseHTTPRequestHandler):
 
         events.sort(key=lambda x: x['score'], reverse=True)
         chans = {i: [] for i in range(1, 6)}
-        
         for e in events:
             buffered_start = e['start'] - timedelta(minutes=30)
             for i in range(1, 6):
                 can_fit = True
                 final_start = buffered_start
-                for existing in chans[i]:
-                    if not (e['stop'] <= existing['display_start'] or buffered_start >= existing['stop']):
-                        if existing['stop'] <= e['start']:
-                            final_start = existing['stop']
-                        else:
-                            can_fit = False
-                            break
+                for ex in chans[i]:
+                    if not (e['stop'] <= ex['display_start'] or buffered_start >= ex['stop']):
+                        if ex['stop'] <= e['start']: final_start = ex['stop']
+                        else: can_fit = False; break
                 if can_fit:
                     e['display_start'] = final_start
                     chans[i].append(e)
@@ -309,20 +262,15 @@ class handler(BaseHTTPRequestHandler):
                 sid = "184813"
                 for m in chans.get(idx, []):
                     if m['display_start'] <= now <= m['stop']:
-                        sid = CH_DATABASE.get(m['ch_key'], {}).get("id", "184813")
-                        break
+                        sid = CH_DATABASE.get(m['ch_key'], {}).get("id", "184813"); break
                 self.send_response(302); self.send_header('Location', f"{STREAM_BASE}/{sid}"); self.end_headers()
-            except:
-                self.send_response(302); self.send_header('Location', f"{STREAM_BASE}/184813"); self.end_headers()
+            except: self.send_response(302); self.send_header('Location', f"{STREAM_BASE}/184813"); self.end_headers()
         elif self.path.endswith('.m3u'):
             self.send_response(200); self.send_header('Content-type', 'text/plain'); self.end_headers()
-            host = self.headers.get('Host')
             m3u = "#EXTM3U\n"
-            for i in range(1,6):
-                m3u += f'#EXTINF:-1 tvg-id=\"CHOIX.{i}\",CHOIX {i}\nhttp://{host}/stream/{i}\n'
+            for i in range(1,6): m3u += f'#EXTINF:-1 tvg-id=\"CHOIX.{i}\",CHOIX {i}\nhttp://{self.headers.get("Host")}/stream/{i}\n'
             self.wfile.write(m3u.encode('utf-8'))
-        else:
-            self.generate_xml_output()
+        else: self.generate_xml_output()
 
     def generate_xml_output(self):
         chans = self.get_organized_events()
@@ -332,18 +280,12 @@ class handler(BaseHTTPRequestHandler):
             xml_out += f'\n<channel id=\"CHOIX.{i}\"><display-name>CHOIX {i}</display-name></channel>'
             cursor = now - timedelta(hours=12)
             for p in sorted(chans[i], key=lambda x: x['display_start']):
-                disp_st = p['display_start'].strftime("%Y%m%d%H%M%S") + " +0000"
-                live_st = p['start'].strftime("%Y%m%d%H%M%S") + " +0000"
-                live_en = p['stop'].strftime("%Y%m%d%H%M%S") + " +0000"
-                info = CH_DATABASE.get(p['ch_key'], {})
-                ch_name = info.get('name', "SOURCE")
+                disp_st, live_st, live_en = p['display_start'].strftime("%Y%m%d%H%M%S") + " +0000", p['start'].strftime("%Y%m%d%H%M%S") + " +0000", p['stop'].strftime("%Y%m%d%H%M%S") + " +0000"
+                ch_name = CH_DATABASE.get(p['ch_key'], {}).get('name', "SOURCE")
                 icon = SPORT_ICONS.get(p['league'], SPORT_ICONS['default'])
                 title = f'{p["title"]} | {ch_name}'
-                if p['display_start'] > cursor:
-                    xml_out += f'\n<programme start=\"{cursor.strftime("%Y%m%d%H%M%S")} +0000\" stop=\"{disp_st}\" channel=\"CHOIX.{i}\"><title>À venir: {title}</title></programme>'
-                if p['display_start'] < p['start']:
-                    xml_out += f'\n<programme start=\"{disp_st}\" stop=\"{live_st}\" channel=\"CHOIX.{i}\"><title>⏳ PRE-MATCH: {icon} {title}</title><desc>Source: {ch_name}</desc></programme>'
-                # Score arrondi pour plus de propreté
+                if p['display_start'] > cursor: xml_out += f'\n<programme start=\"{cursor.strftime("%Y%m%d%H%M%S")} +0000\" stop=\"{disp_st}\" channel=\"CHOIX.{i}\"><title>À venir: {title}</title></programme>'
+                if p['display_start'] < p['start']: xml_out += f'\n<programme start=\"{disp_st}\" stop=\"{live_st}\" channel=\"CHOIX.{i}\"><title>⏳ PRE-MATCH: {icon} {title}</title><desc>Source: {ch_name}</desc></programme>'
                 xml_out += f'\n<programme start=\"{live_st}\" stop=\"{live_en}\" channel=\"CHOIX.{i}\"><title>🔴 LIVE: {icon} {title}</title><desc>Diffuseur: {ch_name} | Score: {round(p["score"])}</desc></programme>'
                 cursor = p['stop']
         xml_out += '\n</tv>'
