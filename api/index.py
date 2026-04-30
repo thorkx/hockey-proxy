@@ -98,6 +98,20 @@ SPORT_ICONS = {"nhl": "🏒", "nba": "🏀", "mlb": "⚾", "soccer": "⚽", "uef
 # ==========================================
 #                UTILITAIRES
 # ==========================================
+BIBLE_CACHE = {"data": [], "timestamp": None}
+
+def get_bible():
+    now = datetime.utcnow()
+    # Rafraîchir la bible seulement toutes les 30 minutes
+    if not BIBLE_CACHE["data"] or not BIBLE_CACHE["timestamp"] or (now - BIBLE_CACHE["timestamp"]).total_seconds() > 1800:
+        try:
+            r = requests.get(BIBLE_URL, timeout=5)
+            BIBLE_CACHE["data"] = r.json()
+            BIBLE_CACHE["timestamp"] = now
+        except:
+            pass
+    return BIBLE_CACHE["data"]
+
 def escape_xml(text):
     if not text: return ""
     return html.escape(text).encode('ascii', 'xmlcharrefreplace').decode()
@@ -148,19 +162,32 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str):
         current_teams = prepare_team_keywords(ev_name)
 
         for prog in bible_data:
+            # OPTIMISATION 1 : Filtrage temporel ultra-rapide d'abord
+            # On ne parse l'heure complète que si les premiers chiffres concordent (YmdH)
+            if not prog['start'].startswith(ev_date_str[:8]): 
+                continue
+                
             p_start = parse_program_start(prog['start'])
             if abs((ev_time - p_start).total_seconds()) <= 5400:
                 full_text = build_search_text(prog)
                 
+                # OPTIMISATION 2 : Check rapide "in" avant le "Fuzzy"
+                # Si aucune équipe n'est même partiellement dans le texte, on saute le fuzzy
+                if not any(team[:4] in full_text for team in current_teams):
+                    continue
+
                 max_ratio = 0
                 for team in current_teams:
                     for word in full_text.split():
                         if len(word) < 3: continue
+                        # On ne calcule le ratio que si les mots commencent par la même lettre
+                        if team[0] != word[0]: continue 
+                        
                         r = quick_ratio(team, word)
                         if r > max_ratio: max_ratio = r
                 
                 if max_ratio > 0.65:
-                    found_hits.append({"ch": prog['ch'], "confidence": max_ratio})
+                    found_hits.append({"ch": prog['ch'], "confidence": max_ratio, "full_text": full_text})
     except Exception:
         pass
     return found_hits
@@ -174,8 +201,7 @@ def fetch_espn(url):
 # ==========================================
 class handler(BaseHTTPRequestHandler):
     def get_organized_events(self):
-        try: bible = requests.get(BIBLE_URL, timeout=5).json()
-        except: bible = []
+        bible = get_bible()
         now = datetime.utcnow()
         events, seen = [], set()
         
