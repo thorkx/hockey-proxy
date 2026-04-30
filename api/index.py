@@ -32,7 +32,7 @@ PRIORITY_CONFIG = {
 CANADA_HOCKEY_IDS = [
     "Réseau.des.Sports.(RDS).HD.ca2", "RDS2.HD.ca2", "Réseau.des.Sports.Info.HD.ca2"
     "TVA.Sports.HD.ca2", "TVA.Sports.2.HD.ca2",
-    "TSN.4K.ca2"", "TSN2", "TSN3", "TSN4", "TSN5",
+    "TSN.4K.ca2", "TSN2", "TSN3", "TSN4", "TSN5",
     "Sportsnet.4K.ca2", "Sportsnet.One.HD.ca2", "Sportsnet.360.HD.ca2", 
     "Sportsnet.East.HD.ca2", "Sportsnet.West.HD.ca2", "One.Soccer.ca2", "Sportsnet.World.HD.ca2"
 ]
