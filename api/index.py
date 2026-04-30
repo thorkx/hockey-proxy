@@ -119,7 +119,7 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str):
             raw_start = re.sub(r'\D', '', prog['start'])[:12]
             p_start = datetime.strptime(raw_start, "%Y%m%d%H%M")
             # --- ÉTAPE : STRICT MATCH (MAX 30 MIN DE DIFFÉRENCE) ---
-            if abs((ev_time - p_start).total_seconds()) <= 1800:
+            if abs((ev_time - p_start).total_seconds()) <= 3600:
                 title = clean_name(prog.get('title', ''))
                 desc = clean_name(prog.get('desc', ''))
                 if any(team in title for team in current_teams) or any(team in desc for team in current_teams):
