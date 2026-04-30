@@ -88,11 +88,11 @@ CH_DATABASE = {
     "I1081.87578.schedulesdirect.org": {"name": "Sky F1", "id": "74316", "lang": "EN"},
 
     # --- USA ---
-    "ESPN": {"name": "ESPN", "id": "18345", "lang": "EN"},
-    "ESPN2": {"name": "ESPN 2", "id": "18346", "lang": "EN"},
-    "ESPNDeportes": {"name": "ESPN Deportes", "id": "18356", "lang": "ES"},
-    "FoxSports1": {"name": "FS1", "id": "18242", "lang": "EN"},
-    "CBSSportsNetwork": {"name": "CBS Sports", "id": "18335", "lang": "EN"},
+    "I206.32645.schedulesdirect.org": {"name": "ESPN", "id": "18345", "lang": "EN"},
+    "I209.45507.schedulesdirect.org": {"name": "ESPN 2", "id": "18346", "lang": "EN"},
+    "I301.25595.schedulesdirect.org": {"name": "ESPN Deportes", "id": "18356", "lang": "ES"},
+    "I219.82541.schedulesdirect.org": {"name": "FS1", "id": "18242", "lang": "EN"},
+    "I221.16365.schedulesdirect.org": {"name": "CBS Sports", "id": "18335", "lang": "EN"},
     "I392.76942.gracenote.com": {"name": "BeIn USA", "id": "18312", "lang": "EN"}
 }
 
