@@ -40,32 +40,65 @@ CANADA_HOCKEY_IDS = [
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
+
 CH_DATABASE = {
+    # --- Canada ---
     "I123.15676.schedulesdirect.org": {"name": "RDS", "id": "184813", "lang": "FR"},
-    "I192.73271.schedulesdirect.org": {"name": "RDS2", "id": "184814", "lang": "FR"},
+    "I192.73271.schedulesdirect.org": {"name": "RDS 2", "id": "184814", "lang": "FR"},
     "I124.39080.schedulesdirect.org": {"name": "RDS Info", "id": "184815", "lang": "FR"},
     "I193.73142.schedulesdirect.org": {"name": "TVA Sports", "id": "184811", "lang": "FR"},
     "I1884.90206.schedulesdirect.org": {"name": "TVA Sports 2", "id": "184812", "lang": "EN"},
     "I405.62111.schedulesdirect.org": {"name": "Sportsnet 4K", "id": "157674", "lang": "EN"},
-    "I409.68858.schedulesdirect.org": {"name": "Sportsnet One", "id": "157675", "lang": "EN"},
-    "I410.49952.schedulesdirect.org": {"name": "Sportsnet 360", "id": "71517", "lang": "EN"},
-    "I406.18798.schedulesdirect.org": {"name": "Sportsnet East", "id": "71518", "lang": "EN"},
-    "I408.18800.schedulesdirect.org": {"name": "Sportsnet West", "id": "71521", "lang": "EN"},
-    "I407.18801.schedulesdirect.org": {"name": "Sportsnet Pacific", "id": "71520", "lang": "EN"},
-    "I420.57735.schedulesdirect.org": {"name": "Sportsnet World", "id": "71526", "lang": "EN"},
+    "I409.68858.schedulesdirect.org": {"name": "SN One", "id": "157675", "lang": "EN"},
+    "I410.49952.schedulesdirect.org": {"name": "SN 360", "id": "71517", "lang": "EN"},
+    "I406.18798.schedulesdirect.org": {"name": "SN East", "id": "71518", "lang": "EN"},
+    "I408.18800.schedulesdirect.org": {"name": "SN West", "id": "71521", "lang": "EN"},
+    "I407.18801.schedulesdirect.org": {"name": "SN Pacific", "id": "71520", "lang": "EN"},
     "I401.18990.schedulesdirect.org": {"name": "TSN 2", "id": "71235", "lang": "EN"},
     "I402.90118.schedulesdirect.org": {"name": "TSN 3", "id": "71236", "lang": "EN"},
     "I403.90122.schedulesdirect.org": {"name": "TSN 4", "id": "71237", "lang": "EN"},
     "I404.90124.schedulesdirect.org": {"name": "TSN 5", "id": "71238", "lang": "EN"},
     "OneSoccer": {"name": "OneSoccer", "id": "19320", "lang": "EN"},
+    "SNWorld": {"name": "SN World", "id": "71526", "lang": "EN"},
+
+    # --- France ---
+    "CanalPlus.fr": {"name": "Canal+", "id": "49943", "lang": "FR"},
+    "CanalPlusSport.fr": {"name": "Canal+ Sport", "id": "49951", "lang": "FR"},
+    "CanalPlusSport360.fr": {"name": "Canal+ Sport 360", "id": "83038", "lang": "FR"},
+    "beINSPORTS1.fr": {"name": "BeIn Sports 1", "id": "49895", "lang": "FR"},
+    "BeInSports2.fr": {"name": "BeIn Sports 2", "id": "49896", "lang": "FR"},
+    "BeInSports3.fr": {"name": "BeIn Sports 3", "id": "49897", "lang": "FR"},
+    "BeInSportsMax4.fr": {"name": "BeIn Max 4", "id": "49903", "lang": "FR"},
+    "BeInSportsMax5.fr": {"name": "BeIn Max 5", "id": "83080", "lang": "FR"},
+    "BeInSportsMax6.fr": {"name": "BeIn Max 6", "id": "83081", "lang": "FR"},
+    "BeInSportsMax7.fr": {"name": "BeIn Max 7", "id": "83082", "lang": "FR"},
+    "BeInSportsMax8.fr": {"name": "BeIn Max 8", "id": "49904", "lang": "FR"},
+    "BeInSportsMax9.fr": {"name": "BeIn Max 9", "id": "49905", "lang": "FR"},
+    "BeInSportsMax10.fr": {"name": "BeIn Max 10", "id": "49906", "lang": "FR"},
+    "Eurosport1.fr": {"name": "Eurosport 1", "id": "50009", "lang": "FR"},
+    "Eurosport2.fr": {"name": "Eurosport 2", "id": "50010", "lang": "FR"},
+    "RMCSport1.fr": {"name": "RMC Sport 1", "id": "50145", "lang": "FR"},
+    "RMCSport2.fr": {"name": "RMC Sport 2", "id": "50147", "lang": "FR"},
+    "L'Equipe": {"name": "L'Equipe", "id": "50058", "lang": "FR"},
+
+    # --- UK ---
+    "TNTSports1": {"name": "TNT Sports 1", "id": "74357", "lang": "EN"},
+    "TNTSports2": {"name": "TNT Sports 2", "id": "74360", "lang": "EN"},
+    "TNTSports3": {"name": "TNT Sports 3", "id": "74363", "lang": "EN"},
+    "SkySportsPremierLeague": {"name": "Sky PL", "id": "74322", "lang": "EN"},
+    "SkySportsF1": {"name": "Sky F1", "id": "74316", "lang": "EN"},
+    "PremierSports1": {"name": "Premier Sports 1", "id": "74272", "lang": "EN"},
+    "PremierSports2": {"name": "Premier Sports 2", "id": "74275", "lang": "EN"},
+
+    # --- USA ---
     "ESPN": {"name": "ESPN", "id": "18345", "lang": "EN"},
     "ESPN2": {"name": "ESPN 2", "id": "18346", "lang": "EN"},
     "ESPNDeportes": {"name": "ESPN Deportes", "id": "18356", "lang": "ES"},
-    "beINSPORTS1.fr": {"name": "BeIn Sports 1", "id": "49895", "lang": "FR"},
-    "CanalPlus.fr": {"name": "Canal+", "id": "49943", "lang": "FR"},
-    "L'Equipe": {"name": "L'Equipe", "id": "50058", "lang": "FR"},
-    "DAZN 1": {"name": "DAZN 1", "id": "44265", "lang": "ES"}
+    "FoxSports1": {"name": "FS1", "id": "18242", "lang": "EN"},
+    "CBSSportsNetwork": {"name": "CBS Sports", "id": "18335", "lang": "EN"},
+    "BeInSportsUS": {"name": "BeIn USA", "id": "18312", "lang": "EN"}
 }
+
 
 SPORT_ICONS = {"nhl": "🏒", "nba": "🏀", "mlb": "⚾", "soccer": "⚽", "uefa.champions": "🇪🇺", "default": "🏆"}
 
