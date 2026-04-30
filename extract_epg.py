@@ -68,7 +68,8 @@ def is_within_3_days(date_str):
         fmt = "%Y%m%d%H%M%S" if len(clean_date) > 12 else "%Y%m%d%H%M"
         prog_date = datetime.strptime(clean_date, fmt)
         now = datetime.utcnow()
-        return (now - timedelta(hours=24)) <= prog_date <= (now + timedelta(days=3))
+        # Fenêtre élargie pour couvrir le weekend (48h passé, 4 jours futur)
+        return (now - timedelta(hours=48)) <= prog_date <= (now + timedelta(days=4))
     except:
         return False
 
@@ -111,10 +112,13 @@ def run():
                         # --- LOGIQUE DE FILTRAGE DURÉE ET EXCEPTIONS ---
                         duration = get_duration_minutes(start_time, stop_time)
                         
-                        # On garde si : Durée >= 60 MIN OU le titre est dans la liste SC
                         if duration >= MIN_DURATION_MINUTES or title in exceptions_set:
                             desc = elem.findtext('desc', '')
-                            content_upper = (title + " " + desc).upper()
+                            # Récupération enrichie des sous-titres et catégories
+                            subtitle = elem.findtext('sub-title', '')
+                            category = elem.findtext('category', '')
+                            
+                            content_upper = (title + " " + subtitle + " " + desc).upper()
                             is_hl = any(kw in content_upper for kw in HL_KEYWORDS)
                             
                             filtered_data.append({
@@ -122,7 +126,9 @@ def run():
                                 "start": start_time,
                                 "stop": stop_time,
                                 "title": title,
+                                "sub-title": subtitle,
                                 "desc": desc,
+                                "category": category,
                                 "is_highlight": is_hl
                             })
                             count += 1
@@ -142,4 +148,4 @@ def run():
 
 if __name__ == "__main__":
     run()
-    
+            
