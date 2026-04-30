@@ -9,8 +9,9 @@ from datetime import datetime, timedelta
 #                CONFIGURATION
 # ==========================================
 
-# IDs autorisés pour les sources standards
+# Liste synchronisée avec ton dictionnaire CH_DATABASE
 ALLOWED_CHANNELS = [
+    # Canada
     "I123.15676.schedulesdirect.org", "I192.73271.schedulesdirect.org",
     "I124.39080.schedulesdirect.org", "I193.73142.schedulesdirect.org",
     "I1884.90206.schedulesdirect.org", "I405.62111.schedulesdirect.org",
@@ -18,16 +19,25 @@ ALLOWED_CHANNELS = [
     "I406.18798.schedulesdirect.org", "I408.18800.schedulesdirect.org",
     "I407.18801.schedulesdirect.org", "I401.18990.schedulesdirect.org",
     "I402.90118.schedulesdirect.org", "I403.90122.schedulesdirect.org",
-    "I404.90124.schedulesdirect.org", "SNWorld",
+    "I404.90124.schedulesdirect.org", "I420.57735.schedulesdirect.org",
+    
+    # France
     "CanalPlus.fr", "CanalPlusSport.fr", "CanalPlusSport360.fr",
-    "beINSPORTS1.fr", "BeInSports2.fr", "BeInSports3.fr",
-    "BeInSportsMax4.fr", "BeInSportsMax5.fr", "BeInSportsMax6.fr",
-    "BeInSportsMax7.fr", "BeInSportsMax8.fr", "BeInSportsMax9.fr",
-    "BeInSportsMax10.fr", "Eurosport1.fr", "Eurosport2.fr",
-    "RMCSport1.fr", "RMCSport2.fr", "L'Equipe", "TNTSports1",
-    "TNTSports2", "TNTSports3", "SkySportsPremierLeague",
-    "SkySportsF1", "PremierSports1", "PremierSports2",
-    "FoxSports1", "CBSSportsNetwork", "BeInSportsUS", "ESPN", "ESPN2"
+    "beINSPORTS1.fr", "beINSPORTS2.fr", "beINSPORTS3.fr",
+    "beINSPORTSMAX4.fr", "beINSPORTSMAX5.fr", "beINSPORTSMAX6.fr",
+    "beINSPORTSMAX7.fr", "beINSPORTSMAX8.fr", "beINSPORTSMAX9.fr",
+    "beINSPORTSMAX10.fr", "Eurosport1.fr", "Eurosport2.fr",
+    "RMCSport1.fr", "RMCSport2.fr",
+    
+    # UK
+    "I1241.82450.schedulesdirect.org", "I1246.82451.schedulesdirect.org",
+    "I1248.95772.schedulesdirect.org", "I1099.116645.schedulesdirect.org",
+    "I1081.87578.schedulesdirect.org",
+    
+    # USA
+    "I206.32645.schedulesdirect.org", "I209.45507.schedulesdirect.org",
+    "I301.25595.schedulesdirect.org", "I219.82541.schedulesdirect.org",
+    "I221.16365.schedulesdirect.org", "I392.76942.gracenote.com"
 ]
 
 # Sources EPG
@@ -35,7 +45,7 @@ URL_QUEBEC = "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/guide.x
 URL_FRANCE = "https://xmltvfr.fr/xmltv/xmltv_fr.xml.gz"
 URL_CA2 = "https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz"
 
-# ID spécifique pour One Soccer sur la nouvelle source
+# ID spécifique pour One Soccer sur la source CA2
 ID_ONESOCCER_CA2 = "One.Soccer.ca2"
 
 # ==========================================
@@ -45,10 +55,9 @@ ID_ONESOCCER_CA2 = "One.Soccer.ca2"
 def is_within_3_days(date_str):
     if not date_str: return False
     try:
-        # Nettoyage pour supporter les formats YYYYMMDDHHMMSS ou YYYYMMDDHHMM
         clean_date = date_str.split(' ')[0]
+        # Support pour formats YYYYMMDDHHMMSS ou YYYYMMDDHHMM
         fmt = "%Y%m%d%H%M%S" if len(clean_date) > 12 else "%Y%m%d%H%M"
-        
         prog_date = datetime.strptime(clean_date, fmt)
         now = datetime.utcnow()
         return (now - timedelta(hours=24)) <= prog_date <= (now + timedelta(days=3))
@@ -65,8 +74,7 @@ def run():
     
     print(f"--- DÉMARRAGE DE L'EXTRACTION ({datetime.utcnow().strftime('%H:%M:%S')} UTC) ---")
 
-    # Configuration des sources : (Nom, URL, Zippé?, Filtre Spécifique)
-    # Si le filtre est None, on utilise la liste ALLOWED_CHANNELS
+    # (Nom, URL, Zippé?, Filtre)
     sources_config = [
         ("Québec/USA", URL_QUEBEC, False, allowed_set),
         ("France", URL_FRANCE, True, allowed_set),
@@ -89,8 +97,8 @@ def run():
                     start_time = elem.get('start')
                     
                     if ch_id in current_filter and is_within_3_days(start_time):
-                        # On normalise l'ID de One Soccer pour le dictionnaire du proxy
-                        final_id = "OneSoccer" if ch_id == ID_ONESOCCER_CA2 else ch_id
+                        # Normalisation de l'ID One Soccer pour matcher ton CH_DATABASE
+                        final_id = ch_id # Garde l'id tel quel pour matcher ton dictionnaire
                         
                         filtered_data.append({
                             "ch": final_id,
@@ -101,13 +109,13 @@ def run():
                         })
                         count += 1
                     
-                    elem.clear() # Libère la mémoire
+                    elem.clear()
             print(f"-> {name} : {count} programmes retenus.")
             
         except Exception as e:
             print(f"Erreur source {name}: {e}")
 
-    # --- SAUVEGARDE FINALE ---
+    # Tri final par date
     filtered_data.sort(key=lambda x: x['start'] if x['start'] else "")
 
     with open("filtered_epg.json", "w", encoding="utf-8") as f:
