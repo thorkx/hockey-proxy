@@ -5,7 +5,7 @@ import re
 import html
 from datetime import datetime, timedelta, timezone
 from concurrent.futures import ThreadPoolExecutor
-from difflib import SequenceMatcher  # <--- Ajout pour le fuzzy match
+from difflib import SequenceMatcher
 
 # ==========================================
 #        CONFIGURATION DES PRIORITÉS
@@ -31,7 +31,7 @@ PRIORITY_CONFIG = {
 }
 
 CANADA_HOCKEY_IDS = [
-    "Réseau.des.Sports.(RDS).HD.ca2", "RDS2.HD.ca2", "Réseau.des.Sports.Info.HD.ca2", # <--- Virgule corrigée
+    "Réseau.des.Sports.(RDS).HD.ca2", "RDS2.HD.ca2", "Réseau.des.Sports.Info.HD.ca2",
     "TVA.Sports.HD.ca2", "TVA.Sports.2.HD.ca2",
     "TSN.4K.ca2", "TSN2", "TSN3", "TSN4", "TSN5",
     "Sportsnet.4K.ca2", "Sportsnet.One.HD.ca2", "Sportsnet.360.HD.ca2", 
@@ -107,10 +107,12 @@ def clean_name(t):
     t = t.upper()
     t = re.sub(r'HOCKEY|LNH|NBA|SOCCER|FOOTBALL| AT | VS |CONTRE', ' ', t)
     t = re.sub(r'[ÉÈÊË]', 'E', t); t = re.sub(r'[ÀÂÄ]', 'A', t)
-    return re.sub(r'[^\w\s]', ' ', t)
+    t = re.sub(r'[^\w\s]', ' ', t)
+    # Suppression des mots doublons (ex: ATHLETICS ATHLETICS -> ATHLETICS)
+    t = re.sub(r'\b(\w+)( \1\b)+', r'\1', t, flags=re.IGNORECASE)
+    return t
 
 def quick_ratio(s1, s2):
-    """Calcul de similarité fuzzy entre deux chaînes."""
     return SequenceMatcher(None, s1, s2).ratio()
     
 def parse_event_time(ev_date_str):
@@ -140,7 +142,6 @@ def build_search_text(prog):
     )
 
 def find_all_matches_in_bible(ev_name, bible_data, ev_date_str):
-    """Trouve les chaînes avec score de confiance fuzzy."""
     found_hits = []
     try:
         ev_time = parse_event_time(ev_date_str)
@@ -153,13 +154,11 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str):
                 
                 max_ratio = 0
                 for team in current_teams:
-                    # On compare chaque mot clé de l'événement avec les mots du guide
                     for word in full_text.split():
                         if len(word) < 3: continue
                         r = quick_ratio(team, word)
                         if r > max_ratio: max_ratio = r
                 
-                # Seuil de tolérance fuzzy (0.65 est un bon compromis)
                 if max_ratio > 0.65:
                     found_hits.append({"ch": prog['ch'], "confidence": max_ratio})
     except Exception:
@@ -198,7 +197,7 @@ class handler(BaseHTTPRequestHandler):
             for f in futures:
                 lg = futures[f]
                 for ev in f.result().get('events', []):
-                    name = ev['name'].upper()
+                    name = clean_name(ev['name'])
                     if name in seen: continue
                     
                     hits = find_all_matches_in_bible(name, bible, ev['date'])
@@ -207,9 +206,20 @@ class handler(BaseHTTPRequestHandler):
                     potential_channel_hits = []
                     for hit in hits:
                         ch_key = hit['ch']
-                        # Base Score + Bonus de confiance fuzzy
                         temp_score = PRIORITY_CONFIG["LEAGUES"].get(lg, 100)
-                        temp_score += (hit['confidence'] * 400) # Bonus jusqu'à 400 pts si match parfait
+                        temp_score += (hit['confidence'] * 400)
+
+                        # --- FILTRE DE SPORT STRICT ---
+                        full_text_epg = build_search_text(next(p for p in bible if p['ch'] == ch_key))
+                        sport_keywords = {
+                            "nhl": ["HOCKEY", "LNH"], "mlb": ["BASEBALL", "MLB"],
+                            "nba": ["BASKETBALL", "NBA"], "soccer": ["SOCCER", "FOOT", "UEFA"]
+                        }
+                        current_lg_keywords = sport_keywords.get(lg, [])
+                        if any(k in full_text_epg for k in current_lg_keywords):
+                            temp_score += 300 
+                        else:
+                            temp_score -= 500 # Pénalité si le sport ne semble pas correspondre
 
                         for team, bonus in PRIORITY_CONFIG["TEAMS"].items():
                             if team in name: temp_score += bonus
@@ -231,6 +241,7 @@ class handler(BaseHTTPRequestHandler):
                         
                         potential_channel_hits.append({"ch_key": ch_key, "score": temp_score})
 
+                    if not potential_channel_hits: continue
                     potential_channel_hits.sort(key=lambda x: x['score'], reverse=True)
                     best_hit = potential_channel_hits[0]
 
@@ -282,7 +293,7 @@ class handler(BaseHTTPRequestHandler):
             host = self.headers.get('Host')
             m3u = "#EXTM3U\n"
             for i in range(1,6):
-                m3u += f'#EXTINF:-1 tvg-id="CHOIX.{i}",CHOIX {i}\nhttp://{host}/stream/{i}\n'
+                m3u += f'#EXTINF:-1 tvg-id=\"CHOIX.{i}\",CHOIX {i}\nhttp://{host}/stream/{i}\n'
             self.wfile.write(m3u.encode('utf-8'))
         else:
             self.generate_xml_output()
@@ -290,9 +301,9 @@ class handler(BaseHTTPRequestHandler):
     def generate_xml_output(self):
         chans = self.get_organized_events()
         now = datetime.utcnow()
-        xml_out = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>'
+        xml_out = '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<tv>'
         for i in range(1, 6):
-            xml_out += f'\n<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
+            xml_out += f'\n<channel id=\"CHOIX.{i}\"><display-name>CHOIX {i}</display-name></channel>'
             cursor = now - timedelta(hours=12)
             for p in sorted(chans[i], key=lambda x: x['display_start']):
                 disp_st = p['display_start'].strftime("%Y%m%d%H%M%S") + " +0000"
@@ -303,10 +314,11 @@ class handler(BaseHTTPRequestHandler):
                 icon = SPORT_ICONS.get(p['league'], SPORT_ICONS['default'])
                 title = f'{p["title"]} | {ch_name}'
                 if p['display_start'] > cursor:
-                    xml_out += f'\n<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{disp_st}" channel="CHOIX.{i}"><title>À venir: {title}</title></programme>'
+                    xml_out += f'\n<programme start=\"{cursor.strftime("%Y%m%d%H%M%S")} +0000\" stop=\"{disp_st}\" channel=\"CHOIX.{i}\"><title>À venir: {title}</title></programme>'
                 if p['display_start'] < p['start']:
-                    xml_out += f'\n<programme start="{disp_st}" stop="{live_st}" channel="CHOIX.{i}"><title>⏳ PRE-MATCH: {icon} {title}</title><desc>Source: {ch_name}</desc></programme>'
-                xml_out += f'\n<programme start="{live_st}" stop="{live_en}" channel="CHOIX.{i}"><title>🔴 LIVE: {icon} {title}</title><desc>Diffuseur: {ch_name} | Score: {p["score"]}</desc></programme>'
+                    xml_out += f'\n<programme start=\"{disp_st}\" stop=\"{live_st}\" channel=\"CHOIX.{i}\"><title>⏳ PRE-MATCH: {icon} {title}</title><desc>Source: {ch_name}</desc></programme>'
+                # Score arrondi pour plus de propreté
+                xml_out += f'\n<programme start=\"{live_st}\" stop=\"{live_en}\" channel=\"CHOIX.{i}\"><title>🔴 LIVE: {icon} {title}</title><desc>Diffuseur: {ch_name} | Score: {round(p["score"])}</desc></programme>'
                 cursor = p['stop']
         xml_out += '\n</tv>'
         self.send_response(200); self.send_header('Content-Type', 'application/xml; charset=utf-8'); self.end_headers()
@@ -316,4 +328,4 @@ if __name__ == "__main__":
     server = HTTPServer(('0.0.0.0', 5000), handler)
     print("Serveur Hockey Proxy Actif (Port 5000)")
     server.serve_forever()
-        
+    
