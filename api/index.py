@@ -11,9 +11,9 @@ from concurrent.futures import ThreadPoolExecutor
 # ==========================================
 PRIORITY_CONFIG = {
     "LEAGUES": {
-        "nhl": 800, "nba": 400, "uefa.champions": 375,
+        "nhl": 800, "nba": 300, "uefa.champions": 375,
         "eng.1": 350, "fra.1": 350, "ita.1": 350, "esp.1": 350,
-        "uefa.europa": 350, "mlb": 300, "usa.1": 250
+        "uefa.europa": 350, "mlb": 200, "usa.1": 450
     },
     "TEAMS": {
         "CANADIENS": 3500, "RAPTORS": 1000, "BLUE JAYS": 1000, 
