@@ -14,12 +14,12 @@ PRIORITY_CONFIG = {
         "nhl": 800, "nba": 250, "uefa.champions": 375,
         "eng.1": 350, "fra.1": 350, "ita.1": 350, "esp.1": 350,
         "uefa.europa": 350, "mlb": 200, "usa.1": 450,
-        "concacaf.nations": 600, "concacaf.champions": 500 # Ajout CONCACAF
+        "concacaf.nations": 600, "concacaf.champions": 500
     },
     "TEAMS": {
         "CANADIENS": 3500, "RAPTORS": 1000, "BLUE JAYS": 1000, 
         "CF MONTREAL": 1000, "WREXHAM": 1200,
-        "SUPRA": 1500, "CanMNT": 2000, "CanWNT" : 2000 # Ajout Supra et Équipe Canada
+        "SUPRA": 1500, "CanMNT": 2000, "CanWNT" : 2000 
     },
     "CHANNELS": {
         "BONUS_HOCKEY_CANADA": 1200, 
@@ -43,7 +43,6 @@ BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
 CH_DATABASE = {
-    # --- Canada ---
     "I123.15676.schedulesdirect.org": {"name": "RDS", "id": "184813", "lang": "FR"},
     "I192.73271.schedulesdirect.org": {"name": "RDS 2", "id": "184814", "lang": "FR"},
     "I124.39080.schedulesdirect.org": {"name": "RDS Info", "id": "184815", "lang": "FR"},
@@ -61,7 +60,6 @@ CH_DATABASE = {
     "I404.90124.schedulesdirect.org": {"name": "TSN 5", "id": "71238", "lang": "EN"},
     "One.Soccer.ca2": {"name": "OneSoccer", "id": "19320", "lang": "EN"},
     "I420.57735.schedulesdirect.org": {"name": "SN World", "id": "71526", "lang": "EN"},
-    # --- France ---
     "CanalPlus.fr": {"name": "Canal+", "id": "49943", "lang": "FR"},
     "CanalPlusSport.fr": {"name": "Canal+ Sport", "id": "49951", "lang": "FR"},
     "CanalPlusSport360.fr": {"name": "Canal+ Sport 360", "id": "83038", "lang": "FR"},
@@ -79,13 +77,11 @@ CH_DATABASE = {
     "Eurosport2.fr": {"name": "Eurosport 2", "id": "50010", "lang": "FR"},
     "RMCSport1.fr": {"name": "RMC Sport 1", "id": "50145", "lang": "FR"},
     "RMCSport2.fr": {"name": "RMC Sport 2", "id": "50147", "lang": "FR"},
-    # --- UK ---
     "I1241.82450.schedulesdirect.org": {"name": "TNT Sports 1", "id": "74357", "lang": "EN"},
     "I1246.82451.schedulesdirect.org": {"name": "TNT Sports 2", "id": "74360", "lang": "EN"},
     "I1248.95772.schedulesdirect.org": {"name": "TNT Sports 3", "id": "74363", "lang": "EN"},
     "I1099.116645.schedulesdirect.org": {"name": "Sky PL", "id": "74322", "lang": "EN"},
     "I1081.87578.schedulesdirect.org": {"name": "Sky F1", "id": "74316", "lang": "EN"},
-    # --- USA ---
     "I206.32645.schedulesdirect.org": {"name": "ESPN", "id": "18345", "lang": "EN"},
     "I209.45507.schedulesdirect.org": {"name": "ESPN 2", "id": "18346", "lang": "EN"},
     "I301.25595.schedulesdirect.org": {"name": "ESPN Deportes", "id": "18356", "lang": "ES"},
@@ -122,7 +118,8 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str):
         for prog in bible_data:
             raw_start = re.sub(r'\D', '', prog['start'])[:12]
             p_start = datetime.strptime(raw_start, "%Y%m%d%H%M")
-            if abs((ev_time - p_start).total_seconds()) < 28800: # Fenêtre de 8h
+            # --- ÉTAPE : STRICT MATCH (MAX 30 MIN DE DIFFÉRENCE) ---
+            if abs((ev_time - p_start).total_seconds()) <= 1800:
                 title = clean_name(prog.get('title', ''))
                 desc = clean_name(prog.get('desc', ''))
                 if any(team in title for team in current_teams) or any(team in desc for team in current_teams):
@@ -148,7 +145,7 @@ class handler(BaseHTTPRequestHandler):
             ("hockey","nhl"), ("basketball","nba"), ("baseball","mlb"),
             ("soccer","eng.1"), ("soccer","fra.1"), ("soccer","ita.1"),
             ("soccer","esp.1"), ("soccer","usa.1"), ("soccer","uefa.champions"),
-            ("soccer","concacaf.nations") # Ajout CONCACAF Scoreboard
+            ("soccer","concacaf.nations")
         ]
 
         urls = []
@@ -206,23 +203,17 @@ class handler(BaseHTTPRequestHandler):
         chans = {i: [] for i in range(1, 6)}
         
         for e in events:
-            # --- LOGIQUE TAMPON 30 MIN ---
             buffered_start = e['start'] - timedelta(minutes=30)
-            
             for i in range(1, 6):
                 can_fit = True
                 final_start = buffered_start
-                
                 for existing in chans[i]:
-                    # Vérification de collision réelle (match contre match)
                     if not (e['stop'] <= existing['display_start'] or buffered_start >= existing['stop']):
-                        # Si le tampon empiète sur un match qui finit avant le début réel du nouveau
                         if existing['stop'] <= e['start']:
                             final_start = existing['stop']
                         else:
                             can_fit = False
                             break
-                
                 if can_fit:
                     e['display_start'] = final_start
                     chans[i].append(e)
@@ -237,7 +228,6 @@ class handler(BaseHTTPRequestHandler):
                 now = datetime.utcnow()
                 sid = "184813" 
                 for m in chans.get(idx, []):
-                    # Utilisation de display_start pour le redirect (le stream commence 30m avant)
                     if m['display_start'] <= now <= m['stop']:
                         sid = CH_DATABASE.get(m['ch_key'], {}).get("id", "184813")
                         break
@@ -262,20 +252,17 @@ class handler(BaseHTTPRequestHandler):
             xml_out += f'\n<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
             cursor = now - timedelta(hours=12)
             for p in sorted(chans[i], key=lambda x: x['display_start']):
-                st_str = p['display_start'].strftime("%Y%m%d%H%M%S") + " +0000"
-                en_str = p['stop'].strftime("%Y%m%d%H%M%S") + " +0000"
+                disp_st = p['display_start'].strftime("%Y%m%d%H%M%S") + " +0000"
+                live_st = p['start'].strftime("%Y%m%d%H%M%S") + " +0000"
+                live_en = p['stop'].strftime("%Y%m%d%H%M%S") + " +0000"
                 info = CH_DATABASE.get(p['ch_key'], {})
                 ch_name = info.get('name', "SOURCE")
                 icon = SPORT_ICONS.get(p['league'], SPORT_ICONS['default'])
-                
-                # Label pour différencier le tampon du live dans l'EPG
-                status = "🔴 LIVE" if now >= p['start'] else "⏳ PRE-MATCH"
-                safe_title = escape_xml(f"{status}: {icon} {p['title']} | {ch_name}")
-                
-                if p['display_start'] > now and p['display_start'] > cursor:
-                    xml_out += f'\n<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{st_str}" channel="CHOIX.{i}"><title>À venir: {p["title"]}</title></programme>'
-                
-                xml_out += f'\n<programme start="{st_str}" stop="{en_str}" channel="CHOIX.{i}"><title>{safe_title}</title><desc>Diffuseur: {ch_name} | Score: {p["score"]}</desc></programme>'
+                if p['display_start'] > cursor:
+                    xml_out += f'\n<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{disp_st}" channel="CHOIX.{i}"><title>À venir: {p["title"]}</title></programme>'
+                if p['display_start'] < p['start']:
+                    xml_out += f'\n<programme start="{disp_st}" stop="{live_st}" channel="CHOIX.{i}"><title>⏳ PRE-MATCH: {icon} {p["title"]}</title><desc>Source: {ch_name}</desc></programme>'
+                xml_out += f'\n<programme start="{live_st}" stop="{live_en}" channel="CHOIX.{i}"><title>🔴 LIVE: {icon} {p["title"]}</title><desc>Diffuseur: {ch_name} | Score: {p["score"]}</desc></programme>'
                 cursor = p['stop']
         xml_out += '\n</tv>'
         self.send_response(200); self.send_header('Content-Type', 'application/xml; charset=utf-8'); self.end_headers()
