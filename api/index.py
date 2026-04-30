@@ -83,56 +83,41 @@ def clean_name(t):
     t = re.sub(r'HOCKEY|LNH|NBA|SOCCER|FOOTBALL| AT | VS |CONTRE', ' ', t)
     t = re.sub(r'[ÉÈÊË]', 'E', t); t = re.sub(r'[ÀÂÄ]', 'A', t)
     return re.sub(r'[^\w\s]', ' ', t)
-
+    
 def find_match_in_bible(ev_name, bible_data, ev_date_str):
     try:
-        # 1. Parsing robuste de l'heure ESPN (UTC)
-        # On s'assure de supporter les formats Z ou +00:00
-        ev_date_clean = ev_date_str.split('.')[0].replace('Z', '')
-        ev_time = datetime.strptime(ev_date_clean, "%Y-%m-%dT%H:%M")
+        # 1. On parse l'heure ESPN : on enlève le 'Z' ou le décalage pour comparer en "naïf"
+        ev_date_clean = ev_date_str.split('T')
+        ev_time = datetime.strptime(ev_date_clean[0] + ev_date_clean[1][:5], "%Y-%m-%d%H:%M")
         
-        # 2. Nettoyage du nom pour le matching
-        clean_ev = clean_name(ev_name)
-        current_teams = [w for w in clean_ev.split() if len(w) > 3 and w not in ["MONTREAL", "TORONTO", "UNITED", "CITY"]]
+        current_teams = [w for w in clean_name(ev_name).split() if len(w) > 3 and w not in ["MONTREAL", "TORONTO", "UNITED", "CITY"]]
         
-        # Si c'est le Canadien, on force l'ajout de "CANADIENS" au cas où clean_name l'aurait mangé
+        # Sécurité pour le Canadien
         if "CANADIENS" in ev_name.upper() and "CANADIENS" not in current_teams:
             current_teams.append("CANADIENS")
 
         potential_matches = []
-        
         for prog in bible_data:
-            # 3. FIX RADICAL DU PARSING DATE BIBLE
-            # On extrait uniquement les chiffres : 20260429200000
-            raw_date = re.sub(r'\D', '', prog['start'])[:12] # On prend YYYYMMDDHHMM
-            try:
-                p_start = datetime.strptime(raw_date, "%Y%m%d%H%M")
-            except:
-                continue
-
-            # 4. COMPARAISON (Fenêtre de 12h pour être certain de capter le match peu importe l'offset)
-            diff_seconds = abs((ev_time - p_start).total_seconds())
+            # 2. On parse la Bible : on ne prend que les 12 premiers chiffres (YYYYMMDDHHMM)
+            # Ça règle le problème des espaces, des +0000 ou des tirets
+            raw_start = re.sub(r'\D', '', prog['start'])[:12]
+            p_start = datetime.strptime(raw_start, "%Y%m%d%H%M")
             
-            if diff_seconds < 43200: # 12 heures de battement
-                prog_title = clean_name(prog.get('title', ''))
-                prog_desc = clean_name(prog.get('desc', ''))
+            # 3. Fenêtre de 6h (21600 sec) pour absorber le décalage UTC/Est
+            # Si le match est à 19h et que ta bible dit 15h (heure locale), ça va matcher.
+            if abs((ev_time - p_start).total_seconds()) < 21600:
+                title = clean_name(prog.get('title', ''))
+                desc = clean_name(prog.get('desc', ''))
                 
-                # Check si une de nos teams est dans le titre ou la description
-                match_found = any(team in prog_title for team in current_teams) or \
-                              any(team in prog_desc for team in current_teams)
-                
-                if match_found:
-                    # On print dans la console pour que tu puisses debugger en direct
-                    print(f"✅ MATCH TROUVÉ : {ev_name} sur {prog['ch']} (Diff: {diff_seconds/3600:.1f}h)")
-                    potential_matches.append((prog['ch'], diff_seconds))
-
+                if any(team in title for team in current_teams) or any(team in desc for team in current_teams):
+                    potential_matches.append((prog['ch'], abs((ev_time - p_start).total_seconds())))
+        
         if potential_matches:
-            # On prend le match le plus proche chronologiquement
+            # On prend le match le plus proche dans le temps
             potential_matches.sort(key=lambda x: x[1])
             return potential_matches[0][0]
-            
     except Exception as e:
-        print(f"❌ Erreur critique find_match_in_bible: {e}")
+        print(f"Erreur Date/Bible: {e}")
     return None
     
 def fetch_espn(url):
