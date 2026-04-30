@@ -126,18 +126,30 @@ def clean_name(t):
 def find_match_in_bible(ev_name, bible_data, ev_date_str):
     try:
         ev_time = datetime.strptime(ev_date_str, "%Y-%m-%dT%H:%MZ")
-        current_teams = [w for w in clean_name(ev_name).split() if len(w) > 3 and w not in ["MONTREAL", "TORONTO", "UNITED", "CITY"]]
+        # On garde les noms de ville, on enlève juste les termes génériques
+        clean_ev = clean_name(ev_name)
+        
         potential_matches = []
         for prog in bible_data:
-            p_start = datetime.strptime(prog['start'].split(' ')[0], "%Y%m%d%H%M%S")
-            if abs((ev_time - p_start).total_seconds()) < 14400:
-                title = clean_name(prog.get('title', ''))
-                if any(team in title for team in current_teams):
-                    potential_matches.append((prog['ch'], 500))
+            # Extraction de l'heure de la bible
+            p_start = datetime.strptime(prog['start'][:14], "%Y%m%d%H%M%S")
+            
+            # Fenêtre élargie à 6h pour pallier aux erreurs de fuseaux horaires
+            if abs((ev_time - p_start).total_seconds()) < 21600:
+                prog_title = clean_name(prog.get('title', ''))
+                
+                # Score de matching textuel
+                match_count = sum(1 for word in clean_ev.split() if len(word) > 3 and word in prog_title)
+                
+                if match_count > 0:
+                    potential_matches.append((prog['ch'], match_count))
+        
         if potential_matches:
+            # On prend celui qui a le plus de mots en commun
             potential_matches.sort(key=lambda x: x[1], reverse=True)
             return potential_matches[0][0]
-    except: pass
+    except Exception as e:
+        print(f"Erreur matching: {e}")
     return None
 
 def fetch_espn(url):
