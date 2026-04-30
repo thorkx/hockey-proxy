@@ -31,7 +31,7 @@ CANADA_HOCKEY_IDS = [
     "I123.15676.schedulesdirect.org", "I192.73271.schedulesdirect.org",
     "I409.68858.schedulesdirect.org", "TSN2", "TSN3", "TSN4", "TSN5",
     "I405.62111.schedulesdirect.org", "I406.18798.schedulesdirect.org",
-    "SNOne", "SN360", "SNEast", "SNOntario", "SNWest", "SNPacific"
+    "SNOne", "SN360", "I406.18798.schedulesdirect.org", "SNOntario", "SNWest", "SNPacific"
 ]
 
 # ==========================================
@@ -48,12 +48,12 @@ CH_DATABASE = {
     "I193.73142.schedulesdirect.org": {"name": "TVA Sports", "id": "184811", "lang": "FR"},
     "I1884.90206.schedulesdirect.org": {"name": "TVA Sports 2", "id": "184812", "lang": "EN"},
     "I405.62111.schedulesdirect.org": {"name": "Sportsnet 4K", "id": "157674", "lang": "EN"},
-    "I409.68858.schedulesdirect.org": {"name": "SN One", "id": "157675", "lang": "EN"},
-    "I410.49952.schedulesdirect.org": {"name": "SN 360", "id": "71517", "lang": "EN"},
-    "I406.18798.schedulesdirect.org": {"name": "SN East", "id": "71518", "lang": "EN"},
-    "I408.18800.schedulesdirect.org": {"name": "SN West", "id": "71521", "lang": "EN"},
-    "I407.18801.schedulesdirect.org": {"name": "SN Pacific", "id": "71520", "lang": "EN"},
-    "I420.57735.schedulesdirect.org": {"name": "SN World", "id": "71526", "lang": "EN"},
+    "I409.68858.schedulesdirect.org": {"name": "Sportsnet One", "id": "157675", "lang": "EN"},
+    "I410.49952.schedulesdirect.org": {"name": "Sportsnet 360", "id": "71517", "lang": "EN"},
+    "I406.18798.schedulesdirect.org": {"name": "Sportsnet East", "id": "71518", "lang": "EN"},
+    "I408.18800.schedulesdirect.org": {"name": "Sportsnet West", "id": "71521", "lang": "EN"},
+    "I407.18801.schedulesdirect.org": {"name": "Sportsnet Pacific", "id": "71520", "lang": "EN"},
+    "I420.57735.schedulesdirect.org": {"name": "Sportsnet World", "id": "71526", "lang": "EN"},
     "I401.18990.schedulesdirect.org": {"name": "TSN 2", "id": "71235", "lang": "EN"},
     "I402.90118.schedulesdirect.org": {"name": "TSN 3", "id": "71236", "lang": "EN"},
     "I403.90122.schedulesdirect.org": {"name": "TSN 4", "id": "71237", "lang": "EN"},
