@@ -39,6 +39,7 @@ CANADA_HOCKEY_IDS = [
 # ==========================================
 #              BASE DE DONNÉES
 # ==========================================
+# Assure-toi que cette URL pointe bien vers ton fichier généré par le nouveau bot
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
@@ -111,6 +112,8 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str):
     try:
         ev_date_clean = ev_date_str.split('T')
         ev_time = datetime.strptime(ev_date_clean[0] + ev_date_clean[1][:5], "%Y-%m-%d%H:%M")
+        
+        # On prépare les mots-clés des équipes
         current_teams = [w for w in clean_name(ev_name).split() if len(w) > 3 and w not in ["MONTREAL", "TORONTO", "UNITED", "CITY"]]
         if "CANADIENS" in ev_name.upper() and "CANADIENS" not in current_teams:
             current_teams.append("CANADIENS")
@@ -118,13 +121,21 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str):
         for prog in bible_data:
             raw_start = re.sub(r'\D', '', prog['start'])[:12]
             p_start = datetime.strptime(raw_start, "%Y%m%d%H%M")
-            # --- ÉTAPE : STRICT MATCH (MAX 30 MIN DE DIFFÉRENCE) ---
-            if abs((ev_time - p_start).total_seconds()) <= 3600:
-                title = clean_name(prog.get('title', ''))
-                desc = clean_name(prog.get('desc', ''))
-                if any(team in title for team in current_teams) or any(team in desc for team in current_teams):
+            
+            # --- FENÊTRE ÉLARGIE À 90 MIN (5400s) ---
+            if abs((ev_time - p_start).total_seconds()) <= 5400:
+                # RECHERCHE MULTI-CHAMPS (Titre + Sous-titre + Desc + Catégorie)
+                full_text = (
+                    clean_name(prog.get('title', '')) + " " + 
+                    clean_name(prog.get('sub-title', '')) + " " + 
+                    clean_name(prog.get('desc', '')) + " " + 
+                    clean_name(prog.get('category', ''))
+                )
+                
+                if any(team in full_text for team in current_teams):
                     found_keys.add(prog['ch'])
-    except: pass
+    except Exception as e:
+        pass
     return list(found_keys)
     
 def fetch_espn(url):
@@ -149,6 +160,7 @@ class handler(BaseHTTPRequestHandler):
         ]
 
         urls = []
+        # On regarde aujourd'hui et demain
         for day in range(2):
             ds = (now + timedelta(days=day)).strftime("%Y%m%d")
             for sp, lg in leagues:
