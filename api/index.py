@@ -196,13 +196,12 @@ class handler(BaseHTTPRequestHandler):
                     
                     hits = find_all_matches_in_bible(display_title, bible, ev['date'])
                     
-                    # LOGIQUE SOURCE : Si pas trouvé AUJOURD'HUI -> On ignore complètement
                     if not hits:
-                        if day_offset >= 1: # Demain ou plus tard
+                        if day_offset >= 1: # Demain, on accepte le "A confirmer"
                             best_ch_key = "A_CONFIRMER"
-                            final_score = 10 # Petit score pour passer après le reste
+                            final_score = 10
                         else:
-                            continue # Ignore l'évent si pas de source aujourd'hui
+                            continue # AUJOURD'HUI SANS SOURCE = ON SUPPRIME
                     else:
                         potential_channel_hits = []
                         for hit in hits:
@@ -277,23 +276,22 @@ class handler(BaseHTTPRequestHandler):
             xml_out += f'\n<channel id=\"CHOIX.{i}\"><display-name>CHOIX {i}</display-name></channel>'
             cursor = now - timedelta(hours=12)
             for p in sorted(chans[i], key=lambda x: x['display_start']):
-                disp_st = p['display_start'].strftime("%Y%m%d%H%M%S") + " +0000"
-                live_st = p['start'].strftime("%Y%m%d%H%M%S") + " +0000"
-                live_en = p['stop'].strftime("%Y%m%d%H%M%S") + " +0000"
-                
-                # Détermination propre du nom de chaîne
+                # Sécurité ultime : On n'affiche pas si la source n'existe pas dans CH_DATABASE et n'est pas "A confirmer"
                 if p['ch_key'] == "A_CONFIRMER":
                     ch_name = "À CONFIRMER"
                 else:
-                    info = CH_DATABASE.get(p['ch_key'], {})
-                    ch_name = info.get('name', "SOURCE") # "SOURCE" ici est une sécurité si ID manquant dans CH_DATABASE
+                    info = CH_DATABASE.get(p['ch_key'])
+                    if not info: continue # SAUT DE L'ÉVÉNEMENT FANTÔME
+                    ch_name = info.get('name', "SOURCE")
                 
+                disp_st = p['display_start'].strftime("%Y%m%d%H%M%S") + " +0000"
+                live_st = p['start'].strftime("%Y%m%d%H%M%S") + " +0000"
+                live_en = p['stop'].strftime("%Y%m%d%H%M%S") + " +0000"
                 icon = SPORT_ICONS.get(p['league'], SPORT_ICONS['default'])
                 title = f'{p["title"]} | {ch_name}'
                 
                 if p['display_start'] > cursor:
                     xml_out += f'\n<programme start=\"{cursor.strftime("%Y%m%d%H%M%S")} +0000\" stop=\"{disp_st}\" channel=\"CHOIX.{i}\"><title>À venir: {title}</title></programme>'
-                
                 if p['display_start'] < p['start']:
                     xml_out += f'\n<programme start=\"{disp_st}\" stop=\"{live_st}\" channel=\"CHOIX.{i}\"><title>⏳ PRE-MATCH: {icon} {title}</title><desc>Source: {ch_name}</desc></programme>'
                 
