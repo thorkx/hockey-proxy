@@ -31,7 +31,7 @@ CANADA_HOCKEY_IDS = [
     "I123.15676.schedulesdirect.org", "I192.73271.schedulesdirect.org",
     "I409.68858.schedulesdirect.org", "TSN2", "TSN3", "TSN4", "TSN5",
     "I405.62111.schedulesdirect.org", "I406.18798.schedulesdirect.org",
-    "SNOne", "SN360", "I406.18798.schedulesdirect.org", "SNOntario", "SNWest", "SNPacific"
+    "SNOne", "SN360", "SNOntario", "SNWest", "SNPacific"
 ]
 
 # ==========================================
@@ -40,7 +40,6 @@ CANADA_HOCKEY_IDS = [
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
-# (Garder ton dictionnaire CH_DATABASE complet ici)
 CH_DATABASE = {
     "I123.15676.schedulesdirect.org": {"name": "RDS", "id": "184813", "lang": "FR"},
     "I192.73271.schedulesdirect.org": {"name": "RDS2", "id": "184814", "lang": "FR"},
@@ -84,41 +83,25 @@ def clean_name(t):
     t = re.sub(r'[ÉÈÊË]', 'E', t); t = re.sub(r'[ÀÂÄ]', 'A', t)
     return re.sub(r'[^\w\s]', ' ', t)
     
-def find_match_in_bible(ev_name, bible_data, ev_date_str):
+def find_all_matches_in_bible(ev_name, bible_data, ev_date_str):
+    found_keys = set()
     try:
-        # 1. On parse l'heure ESPN : on enlève le 'Z' ou le décalage pour comparer en "naïf"
         ev_date_clean = ev_date_str.split('T')
         ev_time = datetime.strptime(ev_date_clean[0] + ev_date_clean[1][:5], "%Y-%m-%d%H:%M")
-        
         current_teams = [w for w in clean_name(ev_name).split() if len(w) > 3 and w not in ["MONTREAL", "TORONTO", "UNITED", "CITY"]]
-        
-        # Sécurité pour le Canadien
         if "CANADIENS" in ev_name.upper() and "CANADIENS" not in current_teams:
             current_teams.append("CANADIENS")
 
-        potential_matches = []
         for prog in bible_data:
-            # 2. On parse la Bible : on ne prend que les 12 premiers chiffres (YYYYMMDDHHMM)
-            # Ça règle le problème des espaces, des +0000 ou des tirets
             raw_start = re.sub(r'\D', '', prog['start'])[:12]
             p_start = datetime.strptime(raw_start, "%Y%m%d%H%M")
-            
-            # 3. Fenêtre de 6h (21600 sec) pour absorber le décalage UTC/Est
-            # Si le match est à 19h et que ta bible dit 15h (heure locale), ça va matcher.
-            if abs((ev_time - p_start).total_seconds()) < 21600:
+            if abs((ev_time - p_start).total_seconds()) < 28800: # Fenêtre de 8h
                 title = clean_name(prog.get('title', ''))
                 desc = clean_name(prog.get('desc', ''))
-                
                 if any(team in title for team in current_teams) or any(team in desc for team in current_teams):
-                    potential_matches.append((prog['ch'], abs((ev_time - p_start).total_seconds())))
-        
-        if potential_matches:
-            # On prend le match le plus proche dans le temps
-            potential_matches.sort(key=lambda x: x[1])
-            return potential_matches[0][0]
-    except Exception as e:
-        print(f"Erreur Date/Bible: {e}")
-    return None
+                    found_keys.add(prog['ch'])
+    except: pass
+    return list(found_keys)
     
 def fetch_espn(url):
     try: return requests.get(url, timeout=5).json()
@@ -154,45 +137,52 @@ class handler(BaseHTTPRequestHandler):
                     name = ev['name'].upper()
                     if name in seen: continue
                     
-                   ch_key = find_match_in_bible(name, bible, ev['date'])
-                    score = PRIORITY_CONFIG["LEAGUES"].get(lg, 100)
-                    
-                    # Bonus d'équipe (Canadiens, Wrexham, etc.)
-                    for team, bonus in PRIORITY_CONFIG["TEAMS"].items():
-                        if team in name: score += bonus
-                    
-                    # Bonus Hockey Canada (RDS, TSN, SN) pour la NHL
-                    if lg == "nhl" and ch_key in CANADA_HOCKEY_IDS:
-                        score += PRIORITY_CONFIG["CHANNELS"]["BONUS_HOCKEY_CANADA"]
-                    
-                    info = CH_DATABASE.get(ch_key, {})
-                    
-                    # --- NOUVELLE LOGIQUE DE PRIORITÉ FRANÇAISE ---
-                    is_soccer = any(x in lg for x in ["soccer", "eng.1", "fra.1", "uefa", "usa.1"])
-                    if info.get("lang") == "FR" and is_soccer:
-                        score += PRIORITY_CONFIG["CHANNELS"]["BONUS_FRENCH"]
-                    
-                    # Bonus Anglais Premium (TSN, SN, Sky, etc.)
-                    if ch_key in PREMIUM_IDS or "Sky" in info.get("name", ""):
-                        score += PRIORITY_CONFIG["CHANNELS"]["BONUS_ENGLISH_PREMIUM"]
+                    # ÉTAPE 1 : Trouver tous les hits potentiels dans la bible
+                    all_possible_keys = find_all_matches_in_bible(name, bible, ev['date'])
+                    if not all_possible_keys: continue
 
-                    # Pénalité TVA Sports (toujours active si applicable)
-                    if ch_key and ("TVA" in str(ch_key).upper() or "184811" in str(ch_key)):
-                        score += PRIORITY_CONFIG["CHANNELS"]["PENALTY_TVA"]
-                    
+                    potential_channel_hits = []
+                    for ch_key in all_possible_keys:
+                        # Évaluation du score pour CHAQUE chaîne trouvée
+                        temp_score = PRIORITY_CONFIG["LEAGUES"].get(lg, 100)
+                        for team, bonus in PRIORITY_CONFIG["TEAMS"].items():
+                            if team in name: temp_score += bonus
+                        
+                        if lg == "nhl" and ch_key in CANADA_HOCKEY_IDS:
+                            temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_HOCKEY_CANADA"]
+                        
+                        info = CH_DATABASE.get(ch_key, {})
+                        is_soccer = any(x in lg for x in ["soccer", "eng.1", "fra.1", "uefa", "usa.1"])
+                        
+                        if info.get("lang") == "FR" and is_soccer:
+                            temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_FRENCH"]
+                        
+                        # Bonus Premium (TSN, Sportsnet, Sky...)
+                        if ch_key in CANADA_HOCKEY_IDS or "Sky" in info.get("name", ""):
+                            temp_score += PRIORITY_CONFIG["CHANNELS"]["BONUS_ENGLISH_PREMIUM"]
+
+                        if ch_key and ("TVA" in str(ch_key).upper() or "184811" in str(ch_key)):
+                            temp_score += PRIORITY_CONFIG["CHANNELS"]["PENALTY_TVA"]
+                        
+                        potential_channel_hits.append({"ch_key": ch_key, "score": temp_score})
+
+                    # ÉTAPE 2 : Garder seulement le meilleur hit pour cet événement
+                    potential_channel_hits.sort(key=lambda x: x['score'], reverse=True)
+                    best_hit = potential_channel_hits[0]
+
                     events.append({
-                        "title": name, "score": score, "league": lg,
+                        "title": name, "score": best_hit['score'], "league": lg,
                         "start": datetime.strptime(ev['date'], "%Y-%m-%dT%H:%MZ"), 
                         "stop": datetime.strptime(ev['date'], "%Y-%m-%dT%H:%MZ") + timedelta(hours=3), 
-                        "ch_key": ch_key
+                        "ch_key": best_hit['ch_key']
                     })
                     seen.add(name)
 
+        # ÉTAPE 3 : Compétition externe pour remplir la grille
         events.sort(key=lambda x: x['score'], reverse=True)
         chans = {i: [] for i in range(1, 6)}
         for e in events:
             for i in range(1, 6):
-                # Correction de la logique de collision pour accepter les matchs en cours
                 if not any(not (e['stop'] <= ex['start'] or e['start'] >= ex['stop']) for ex in chans[i]):
                     chans[i].append(e); break
         return chans
@@ -227,7 +217,6 @@ class handler(BaseHTTPRequestHandler):
         xml_out = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>'
         for i in range(1, 6):
             xml_out += f'\n<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
-            # Curseur commence au début de la journée affichée
             cursor = now - timedelta(hours=12)
             for p in sorted(chans[i], key=lambda x: x['start']):
                 st_str = p['start'].strftime("%Y%m%d%H%M%S") + " +0000"
@@ -236,11 +225,8 @@ class handler(BaseHTTPRequestHandler):
                 ch_name = info.get('name', p['ch_key'] if p['ch_key'] else "À CONFIRMER")
                 icon = SPORT_ICONS.get(p['league'], SPORT_ICONS['default'])
                 safe_title = escape_xml(f"{icon} {p['title']} | {ch_name}")
-                
-                # FIX CRITIQUE : Ne crée un bloc "Suivant" que si le match n'est pas déjà commencé
                 if p['start'] > now and p['start'] > cursor:
                     xml_out += f'\n<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{st_str}" channel="CHOIX.{i}"><title>À venir: {safe_title}</title></programme>'
-                
                 xml_out += f'\n<programme start="{st_str}" stop="{en_str}" channel="CHOIX.{i}"><title>{safe_title}</title><desc>Diffuseur: {ch_name} | Score: {p["score"]}</desc></programme>'
                 cursor = p['stop']
         xml_out += '\n</tv>'
@@ -251,3 +237,4 @@ if __name__ == "__main__":
     server = HTTPServer(('0.0.0.0', 5000), handler)
     print("Serveur Hockey Proxy Fixé sur le port 5000")
     server.serve_forever()
+    
