@@ -40,53 +40,57 @@ class EPGConfig:
 
     CHANNELS = {
         "canada": [
-            "I123.15676.schedulesdirect.org", "I192.73271.schedulesdirect.org",
-            "I124.39080.schedulesdirect.org", "I193.73142.schedulesdirect.org",
-            "I1884.90206.schedulesdirect.org", "I405.62111.schedulesdirect.org",
-            "I409.68858.schedulesdirect.org", "I410.49952.schedulesdirect.org",
-            "I406.18798.schedulesdirect.org", "I408.18800.schedulesdirect.org",
-            "I407.18801.schedulesdirect.org", "I401.18990.schedulesdirect.org",
-            "I402.90118.schedulesdirect.org", "I403.90122.schedulesdirect.org",
-            "I404.90124.schedulesdirect.org", "I420.57735.schedulesdirect.org",
-        ],
-        "france": [
-            "CanalPlus.fr", "CanalPlusSport.fr", "CanalPlusSport360.fr",
-            "beINSPORTS1.fr", "beINSPORTS2.fr", "beINSPORTS3.fr",
-            "beINSPORTSMAX4.fr", "beINSPORTSMAX5.fr", "beINSPORTSMAX6.fr",
-            "beINSPORTSMAX7.fr", "beINSPORTSMAX8.fr", "beINSPORTSMAX9.fr",
-            "beINSPORTSMAX10.fr", "Eurosport1.fr", "Eurosport2.fr",
-            "RMCSport1.fr", "RMCSport2.fr",
-        ],
-        "uk": [
-            "I1241.82450.schedulesdirect.org", "I1246.82451.schedulesdirect.org",
-            "I1248.95772.schedulesdirect.org", "I1099.116645.schedulesdirect.org",
-            "I1081.87578.schedulesdirect.org",
+            "Réseau.des.Sports.(RDS).HD.ca2", "RDS2.HD.ca2", "Réseau.des.Sports.Info.HD.ca2",
+            "TVA.Sports.HD.ca2", "TVA.Sports.2.HD.ca2", "Sportsnet.4K.ca2",
+            "Sportsnet.One.HD.ca2", "Sportsnet.360.HD.ca2", "Sportsnet.East.HD.ca2",
+            "Sportsnet.Ontario.HD.ca2", "Sportsnet.West.HD.ca2", "Sportsnet.(Pacific).HD.ca2",
+            "Sportsnet.World.HD.ca2", "TSN.4K.ca2", "TSN.2.HD.ca2",
+            "TSN.3.HD.ca2", "TSN.4.HD.ca2", "TSN.5.HD.ca2", "One.Soccer.ca2",
         ],
         "usa": [
-            "I206.32645.schedulesdirect.org", "I209.45507.schedulesdirect.org",
-            "I301.25595.schedulesdirect.org", "I219.82541.schedulesdirect.org",
-            "I221.16365.schedulesdirect.org", "I392.76942.gracenote.com",
+            "ESPN.HD.us2", "ESPN2.HD.us2", "ESPN.Deportes.HD.us2",
+            "beIN.Sports.USA.HD.us2", "BeInSports.Xtra.us2", "CBS.Sports.Network.HD.us2",
+            "Fox.Sports.1.HD.us2", "Fox.Sports.2.HD.us2", "Fox.Soccer.Plus.HD.us2",
+            "FuboSportsNetwork.us2", "GolazoSports.us2", "NBC.Sports.4K.us2",
+        ],
+        "uk": [
+            "SkySp.F1.HD.uk", "SkySp.PL.HD.uk", "TNT.Sports.1.HD.uk",
+            "TNT.Sports.2.HD.uk", "TNT.Sports.3.HD.uk", "TNT.Sports.4.HD.uk",
+        ],
+        "france": [
+            "beIN.SPORTS.1.fr", "beIN.SPORTS.2.fr", "beIN.SPORTS.3.fr",
+            "beIN.SPORTS.MAX.4.fr", "beIN.SPORTS.MAX.5.fr", "beIN.SPORTS.MAX.6.fr",
+            "beIN.SPORTS.MAX.7.fr", "beIN.SPORTS.MAX.8.fr", "beIN.SPORTS.MAX.9.fr",
+            "beIN.SPORTS.MAX.10.fr", "Canal+.fr", "Canal+.Sport.fr",
+            "Canal+.Sport.360.fr", "Eurosport.1.fr", "Eurosport.2.fr",
+            "CANAL+FOOT.fr", "RMC.Sport.1.fr",
         ],
     }
 
     SOURCES = [
         EPGSource(
-            name="Canada/USA/UK",
-            url="https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/guide.xml",
-            compressed=False,
-            allowed_channels=set(CHANNELS["canada"] + CHANNELS["usa"] + CHANNELS["uk"])
+            name="USA",
+            url="https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
+            compressed=True,
+            allowed_channels=set(CHANNELS["usa"])
+        ),
+        EPGSource(
+            name="UK",
+            url="https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
+            compressed=True,
+            allowed_channels=set(CHANNELS["uk"])
         ),
         EPGSource(
             name="France",
-            url="https://xmltvfr.fr/xmltv/xmltv_fr.xml.gz",
+            url="https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz",
             compressed=True,
             allowed_channels=set(CHANNELS["france"])
         ),
         EPGSource(
-            name="One Soccer CA2",
+            name="Canada",
             url="https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz",
             compressed=True,
-            allowed_channels={"One.Soccer.ca2"}
+            allowed_channels=set(CHANNELS["canada"])
         ),
     ]
 
@@ -139,13 +143,26 @@ class EPGFilter:
         if not date_str:
             return False
         try:
-            clean_date = date_str.split()[0]
+            parts = date_str.split()
+            clean_date = parts[0]
+            tz_offset = parts[1] if len(parts) > 1 else "+0000"
+
             fmt = "%Y%m%d%H%M%S" if len(clean_date) > 12 else "%Y%m%d%H%M"
             prog_date = datetime.strptime(clean_date, fmt)
+
+            # Parse timezone offset: "+0200" → hours=2, minutes=0
+            sign = 1 if tz_offset[0] == '+' else -1
+            hours = int(tz_offset[1:3])
+            minutes = int(tz_offset[3:5])
+            offset = timedelta(hours=sign * hours, minutes=sign * minutes)
+
+            # Convert to UTC for comparison
+            prog_date_utc = prog_date - offset
+
             now = datetime.utcnow()
             window_start = now - timedelta(hours=48)
             window_end = now + timedelta(days=4)
-            return window_start <= prog_date <= window_end
+            return window_start <= prog_date_utc <= window_end
         except Exception:
             return False
 
