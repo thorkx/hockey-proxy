@@ -113,7 +113,6 @@ def get_bible():
 def clean_name(t):
     if not t: return ""
     t = str(t).upper()
-    # On garde AT et VS ici pour la lisibilité finale
     t = re.sub(r'HOCKEY|LNH|NBA|SOCCER|FOOTBALL|CONTRE', ' ', t)
     t = re.sub(r'[ÉÈÊË]', 'E', t); t = re.sub(r'[ÀÂÄ]', 'A', t)
     t = re.sub(r'[^\w\s]', ' ', t)
@@ -127,7 +126,6 @@ def parse_event_time(ev_date_str):
     return datetime.fromisoformat(ev_date_str.replace('Z', '+00:00')).astimezone(timezone.utc).replace(tzinfo=None)
 
 def prepare_team_keywords(ev_name):
-    # Pour le matching, on ignore VS et AT
     clean_for_match = re.sub(r'\b(VS|AT)\b', '', clean_name(ev_name))
     return [w for w in clean_for_match.split() if len(w) > 3]
 
@@ -186,26 +184,25 @@ class handler(BaseHTTPRequestHandler):
                 urls.append((f"https://site.api.espn.com/apis/site/v2/sports/{sp}/{lg}/scoreboard?dates={ds}", lg, day))
 
         with ThreadPoolExecutor(max_workers=10) as exe:
-            futures = {exe.submit(fetch_espn, u): (lg, is_tomorrow) for u, lg, is_tomorrow in urls}
+            futures = {exe.submit(fetch_espn, u): (lg, day_offset) for u, lg, day_offset in urls}
             for f in futures:
-                lg, is_tomorrow = futures[f]
+                lg, day_offset = futures[f]
                 data = f.result()
                 if not data: continue
                 
                 for ev in data.get('events', []):
-                    # On garde VS/AT dans le titre pour l'affichage
                     display_title = str(ev['name']).upper()
                     if display_title in seen: continue
                     
                     hits = find_all_matches_in_bible(display_title, bible, ev['date'])
                     
-                    # LOGIQUE SOURCE : Si pas trouvé aujourd'hui -> on ignore. Si demain -> A confirmer.
+                    # LOGIQUE SOURCE : Si pas trouvé AUJOURD'HUI -> On ignore complètement
                     if not hits:
-                        if is_tomorrow:
+                        if day_offset >= 1: # Demain ou plus tard
                             best_ch_key = "A_CONFIRMER"
-                            final_score = 0
+                            final_score = 10 # Petit score pour passer après le reste
                         else:
-                            continue
+                            continue # Ignore l'évent si pas de source aujourd'hui
                     else:
                         potential_channel_hits = []
                         for hit in hits:
@@ -280,18 +277,26 @@ class handler(BaseHTTPRequestHandler):
             xml_out += f'\n<channel id=\"CHOIX.{i}\"><display-name>CHOIX {i}</display-name></channel>'
             cursor = now - timedelta(hours=12)
             for p in sorted(chans[i], key=lambda x: x['display_start']):
-                disp_st, live_st, live_en = p['display_start'].strftime("%Y%m%d%H%M%S") + " +0000", p['start'].strftime("%Y%m%d%H%M%S") + " +0000", p['stop'].strftime("%Y%m%d%H%M%S") + " +0000"
+                disp_st = p['display_start'].strftime("%Y%m%d%H%M%S") + " +0000"
+                live_st = p['start'].strftime("%Y%m%d%H%M%S") + " +0000"
+                live_en = p['stop'].strftime("%Y%m%d%H%M%S") + " +0000"
                 
-                # Gestion du nom de la source
+                # Détermination propre du nom de chaîne
                 if p['ch_key'] == "A_CONFIRMER":
                     ch_name = "À CONFIRMER"
                 else:
-                    ch_name = CH_DATABASE.get(p['ch_key'], {}).get('name', "SOURCE")
+                    info = CH_DATABASE.get(p['ch_key'], {})
+                    ch_name = info.get('name', "SOURCE") # "SOURCE" ici est une sécurité si ID manquant dans CH_DATABASE
                 
                 icon = SPORT_ICONS.get(p['league'], SPORT_ICONS['default'])
                 title = f'{p["title"]} | {ch_name}'
-                if p['display_start'] > cursor: xml_out += f'\n<programme start=\"{cursor.strftime("%Y%m%d%H%M%S")} +0000\" stop=\"{disp_st}\" channel=\"CHOIX.{i}\"><title>À venir: {title}</title></programme>'
-                if p['display_start'] < p['start']: xml_out += f'\n<programme start=\"{disp_st}\" stop=\"{live_st}\" channel=\"CHOIX.{i}\"><title>⏳ PRE-MATCH: {icon} {title}</title><desc>Source: {ch_name}</desc></programme>'
+                
+                if p['display_start'] > cursor:
+                    xml_out += f'\n<programme start=\"{cursor.strftime("%Y%m%d%H%M%S")} +0000\" stop=\"{disp_st}\" channel=\"CHOIX.{i}\"><title>À venir: {title}</title></programme>'
+                
+                if p['display_start'] < p['start']:
+                    xml_out += f'\n<programme start=\"{disp_st}\" stop=\"{live_st}\" channel=\"CHOIX.{i}\"><title>⏳ PRE-MATCH: {icon} {title}</title><desc>Source: {ch_name}</desc></programme>'
+                
                 xml_out += f'\n<programme start=\"{live_st}\" stop=\"{live_en}\" channel=\"CHOIX.{i}\"><title>🔴 LIVE: {icon} {title}</title><desc>Diffuseur: {ch_name} | Score: {round(p["score"])}</desc></programme>'
                 cursor = p['stop']
         xml_out += '\n</tv>'
