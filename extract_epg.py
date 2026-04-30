@@ -157,13 +157,13 @@ class EPGFilter:
         if not self.is_within_time_window(start):
             return False
 
-        duration = self.get_duration_minutes(start, stop)
-        if duration >= self.config.MIN_DURATION_MINUTES:
-            return True
-        if title in self.config.EXCEPTIONS_TITLES:
-            return True
+        #duration = self.get_duration_minutes(start, stop)
+        #if duration >= self.config.MIN_DURATION_MINUTES:
+        #    return True
+        #if title in self.config.EXCEPTIONS_TITLES:
+        #    return True
 
-        return False
+        return True
 
     def is_highlight(self, title: str, subtitle: str, description: str) -> bool:
         """Détecte si un programme est un highlight"""
