@@ -154,20 +154,32 @@ class handler(BaseHTTPRequestHandler):
                     name = ev['name'].upper()
                     if name in seen: continue
                     
-                    ch_key = find_match_in_bible(name, bible, ev['date'])
+                   ch_key = find_match_in_bible(name, bible, ev['date'])
                     score = PRIORITY_CONFIG["LEAGUES"].get(lg, 100)
                     
+                    # Bonus d'équipe (Canadiens, Wrexham, etc.)
                     for team, bonus in PRIORITY_CONFIG["TEAMS"].items():
                         if team in name: score += bonus
                     
+                    # Bonus Hockey Canada (RDS, TSN, SN) pour la NHL
                     if lg == "nhl" and ch_key in CANADA_HOCKEY_IDS:
                         score += PRIORITY_CONFIG["CHANNELS"]["BONUS_HOCKEY_CANADA"]
                     
                     info = CH_DATABASE.get(ch_key, {})
-                    if info.get("lang") == "FR": score += PRIORITY_CONFIG["CHANNELS"]["BONUS_FRENCH"]
+                    
+                    # --- NOUVELLE LOGIQUE DE PRIORITÉ FRANÇAISE ---
+                    is_soccer = any(x in lg for x in ["soccer", "eng.1", "fra.1", "uefa", "usa.1"])
+                    if info.get("lang") == "FR" and is_soccer:
+                        score += PRIORITY_CONFIG["CHANNELS"]["BONUS_FRENCH"]
+                    
+                    # Bonus Anglais Premium (TSN, SN, Sky, etc.)
+                    if ch_key in PREMIUM_IDS or "Sky" in info.get("name", ""):
+                        score += PRIORITY_CONFIG["CHANNELS"]["BONUS_ENGLISH_PREMIUM"]
+
+                    # Pénalité TVA Sports (toujours active si applicable)
                     if ch_key and ("TVA" in str(ch_key).upper() or "184811" in str(ch_key)):
                         score += PRIORITY_CONFIG["CHANNELS"]["PENALTY_TVA"]
-
+                    
                     events.append({
                         "title": name, "score": score, "league": lg,
                         "start": datetime.strptime(ev['date'], "%Y-%m-%dT%H:%MZ"), 
