@@ -95,7 +95,7 @@ class EPGConfig:
     ]
 
     HL_KEYWORDS = ["RÉSUMÉ", "HIGHLIGHTS", "REPRISE", "CLASSIC", "REVUE", "TOP 10", "MAGAZINE", "DEBRIEF"]
-    MIN_DURATION_MINUTES = 60
+    MIN_DURATION_MINUTES = 30
     EXCEPTIONS_TITLES = {"SC"}
 
 
@@ -173,7 +173,9 @@ class EPGFilter:
             return False
         if not self.is_within_time_window(start):
             return False
-
+        if self.get_duration_minutes(start, stop) < self.config.MIN_DURATION_MINUTES:
+            return False
+                                 
         #duration = self.get_duration_minutes(start, stop)
         #if duration >= self.config.MIN_DURATION_MINUTES:
         #    return True
