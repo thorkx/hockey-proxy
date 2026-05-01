@@ -92,71 +92,79 @@ def parse_schedule():
     return chans
 
 
-class handler(BaseHTTPRequestHandler):
-    def get_organized_events(self):
-        return parse_schedule()
+def handler(request):
+    path = request.path
 
-    def do_HEAD(self):
-        self.send_response(200)
-        self.send_header('Content-Type', 'application/x-mpegURL')
-        self.end_headers()
+    # --- STREAM ---
+    if "/stream/" in path:
+        try:
+            idx = int(path.split('/')[-1])
+            chans = parse_schedule()
+            now = datetime.utcnow()
 
-    def do_GET(self):
-        if "/stream/" in self.path:
-            try:
-                idx = int(self.path.split('/')[-1])
-                chans = self.get_organized_events()
-                now = datetime.utcnow()
-                sid = "184813"
-                for m in chans.get(idx, []):
-                    if m['display_start'] <= now <= m['stop']:
-                        sid = get_stream_id(m['ch_key'])
-                        break
-                self.send_response(302)
-                self.send_header('Location', f"{STREAM_BASE}/{sid}")
-                self.end_headers()
-            except Exception:
-                self.send_response(302)
-                self.send_header('Location', f"{STREAM_BASE}/184813")
-                self.end_headers()
+            sid = "184813"
+            for m in chans.get(idx, []):
+                if m['display_start'] <= now <= m['stop']:
+                    sid = get_stream_id(m['ch_key'])
+                    break
 
-        elif self.path.endswith('.m3u'):
-            self.send_response(200)
-            self.send_header('Content-type', 'text/plain')
-            self.end_headers()
-            host = self.headers.get('Host')
-            m3u = "#EXTM3U\n"
-            for i in range(1, 6):
-                m3u += f'#EXTINF:-1 tvg-id="CHOIX.{i}",CHOIX {i}\nhttp://{host}/stream/{i}\n'
-            self.wfile.write(m3u.encode('utf-8'))
+            return {
+                "statusCode": 302,
+                "headers": {
+                    "Location": f"{STREAM_BASE}/{sid}"
+                }
+            }
 
-        else:
-            self.generate_xml_output()
+        except Exception:
+            return {
+                "statusCode": 302,
+                "headers": {
+                    "Location": f"{STREAM_BASE}/184813"
+                }
+            }
 
-    def generate_xml_output(self):
-        chans = self.get_organized_events()
+    # --- M3U ---
+    elif path.endswith('.m3u'):
+        host = request.headers.get('host')
+
+        m3u = "#EXTM3U\n"
+        for i in range(1, 6):
+            m3u += f'#EXTINF:-1 tvg-id="CHOIX.{i}",CHOIX {i}\n'
+            m3u += f'https://{host}/api/stream/{i}\n'
+
+        return {
+            "statusCode": 200,
+            "headers": {"Content-Type": "text/plain"},
+            "body": m3u
+        }
+
+    # --- XML ---
+    else:
+        chans = parse_schedule()
         now = datetime.utcnow()
+
         xml_out = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>'
+
         for i in range(1, 6):
             xml_out += f'\n<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
             cursor = now - timedelta(hours=12)
+
             for p in sorted(chans[i], key=lambda x: x['display_start']):
                 disp_st = p['display_start'].strftime('%Y%m%d%H%M%S') + ' +0000'
                 live_en = p['stop'].strftime('%Y%m%d%H%M%S') + ' +0000'
                 ch_name = CH_DATABASE.get(p['ch_key'], {}).get('name', 'SOURCE')
                 title = f"{p['title']} | {ch_name}"
+
                 if p['display_start'] > cursor:
                     xml_out += f'\n<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{disp_st}" channel="CHOIX.{i}"><title>À venir: {escape_xml(title)}</title></programme>'
+
                 xml_out += f'\n<programme start="{disp_st}" stop="{live_en}" channel="CHOIX.{i}"><title>🔴 LIVE: {escape_xml(title)}</title></programme>'
                 cursor = p['stop']
+
         xml_out += '\n</tv>'
-        self.send_response(200)
-        self.send_header('Content-Type', 'application/xml; charset=utf-8')
-        self.end_headers()
-        self.wfile.write(xml_out.encode('utf-8'))
 
-
-if __name__ == '__main__':
-    server = HTTPServer(('0.0.0.0', 5000), handler)
-    print('Serveur Hockey Proxy Actif (Port 5000)')
-    server.serve_forever()
+        return {
+            "statusCode": 200,
+            "headers": {"Content-Type": "application/xml"},
+            "body": xml_out
+        }
