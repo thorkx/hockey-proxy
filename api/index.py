@@ -96,6 +96,11 @@ class handler(BaseHTTPRequestHandler):
     def get_organized_events(self):
         return parse_schedule()
 
+    def do_HEAD(self):
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/x-mpegURL')
+        self.end_headers()
+
     def do_GET(self):
         if "/stream/" in self.path:
             try:
