@@ -38,7 +38,7 @@ jobs:
           git fetch origin main
           
           # 2. On "staged" notre nouveau fichier
-          git add filtered_epg.json
+          git add schedule.json
           
           # 3. S'il y a des changements, on commit
           if [ -n "$(git status --porcelain)" ]; then
