@@ -107,21 +107,26 @@ def xml_route():
             cursor = p['stop']
     xml_out += '\n</tv>'
     return Response(xml_out, mimetype='application/xml')
-
+    
 @app.route('/stream/<int:idx>')
 def stream_route(idx):
-    # Logique Redirect de ton handler
     try:
         chans = parse_schedule()
         now = datetime.utcnow()
-        sid = "184813"
+        
+        # ID de secours (RDS) si rien n'est trouvé
+        sid = "184813" 
+        
         for m in chans.get(idx, []):
             if m['display_start'] <= now <= m['stop']:
+                # ICI : On passe de la clé (ex: "Réseau.des.Sports...") à l'ID (ex: "184813")
                 sid = get_stream_id(m['ch_key'])
                 break
-        return redirect(f"{STREAM_BASE}/{sid}.ts", code=302)
+        
+        # Redirection vers l'URL finale avec l'ID numérique
+        return redirect(f"{STREAM_BASE}/{sid}", code=302)
     except Exception:
-        return redirect(f"{STREAM_BASE}/184813.ts", code=302)
+        return redirect(f"{STREAM_BASE}/184813", code=302)
 
 @app.route('/playlist.m3u')
 def m3u_route():
