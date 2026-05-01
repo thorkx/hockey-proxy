@@ -108,7 +108,7 @@ def xml_route():
     xml_out += '\n</tv>'
     return Response(xml_out, mimetype='application/xml')
 
-@app.route('/api/stream/<int:idx>')
+@app.route('/stream/<int:idx>')
 def stream_route(idx):
     # Logique Redirect de ton handler
     try:
