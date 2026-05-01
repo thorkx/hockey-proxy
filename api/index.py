@@ -1,4 +1,3 @@
-from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 import json
 import html
