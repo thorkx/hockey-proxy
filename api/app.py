@@ -119,9 +119,9 @@ def stream_route(idx):
             if m['display_start'] <= now <= m['stop']:
                 sid = get_stream_id(m['ch_key'])
                 break
-        return redirect(f"{STREAM_BASE}/{sid}", code=302)
+        return redirect(f"{STREAM_BASE}/{sid}.ts", code=302)
     except Exception:
-        return redirect(f"{STREAM_BASE}/184813", code=302)
+        return redirect(f"{STREAM_BASE}/184813.ts", code=302)
 
 @app.route('/playlist.m3u')
 def m3u_route():
