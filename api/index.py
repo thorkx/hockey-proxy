@@ -200,7 +200,12 @@ class handler(BaseHTTPRequestHandler):
                         st = p['start_display'].strftime("%Y%m%d%H%M%S") + " +0000"
                         en = p['stop'].strftime("%Y%m%d%H%M%S") + " +0000"
                         ch_n = CH_DATABASE.get(p['ch_key'], {"name": "A CONFIRMER"})["name"]
-                        xml += f'<programme start="{st}" stop="{en}" channel="CHOIX.{i}"><title>{p["title"]} | {ch_n}</title></programme>'
+                        
+                        # NETTOYAGE DU TITRE POUR LE XML
+                        clean_title = p["title"].replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+                        clean_ch_n = ch_n.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+                        
+                        xml += f'<programme start="{st}" stop="{en}" channel="CHOIX.{i}"><title>{clean_title} | {clean_ch_n}</title></programme>'
                 self.wfile.write((xml + '</tv>').encode('utf-8'))
         except Exception as e:
             self.send_response(200); self.send_header('Content-Type', 'text/plain'); self.end_headers()
