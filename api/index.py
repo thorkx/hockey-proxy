@@ -148,21 +148,50 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str):
     found_hits = []
     try:
         ev_time = parse_event_time(ev_date_str)
+        # On nettoie le nom de l'événement ESPN
+        clean_ev = clean_name(ev_name) 
         current_teams = prepare_team_keywords(ev_name)
+        
         for prog in bible_data:
             p_start = parse_program_start(prog['start'])
+            # Fenêtre de 2h autour du match
             if abs((ev_time - p_start).total_seconds()) <= 7200:
                 full_text = build_search_text(prog)
-                max_ratio = 0
+                
+                score_match = 0
+                match_count = 0
+                
                 for team in current_teams:
-                    if team[:4] in full_text:
+                    # Règle 1 : Match exact (ex: "CANADIENS" dans le texte)
+                    if team in full_text:
+                        score_match += 0.85
+                        match_count += 1
+                    # Règle 2 : Match partiel/flou (le ratio que tu avais)
+                    else:
+                        max_ratio = 0
                         for word in full_text.split():
                             if len(word) < 3: continue
                             r = quick_ratio(team, word)
                             if r > max_ratio: max_ratio = r
-                if max_ratio > 0.60:
-                    found_hits.append({"ch": prog['ch'], "confidence": max_ratio, "prog_ref": prog})
-    except: pass
+                        if max_ratio > 0.70: # Un peu plus strict
+                            score_match += max_ratio
+                            match_count += 1
+
+                # On ne garde que si au moins une équipe (ou mot clé fort) matche
+                if match_count >= 1:
+                    # On normalise le score final de confiance
+                    avg_confidence = score_match / len(current_teams) if current_teams else 0
+                    
+                    # Bonus si DEUX équipes sont trouvées (Match parfait)
+                    if match_count >= 2: avg_confidence += 0.2
+                    
+                    found_hits.append({
+                        "ch": prog['ch'], 
+                        "confidence": min(avg_confidence, 1.0), 
+                        "prog_ref": prog
+                    })
+    except Exception as e:
+        pass
     return found_hits
     
 def fetch_espn(url):
