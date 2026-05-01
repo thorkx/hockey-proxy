@@ -130,7 +130,7 @@ def m3u_route():
     m3u = "#EXTM3U\n"
     for i in range(1, 6):
         m3u += f'#EXTINF:-1 tvg-id="CHOIX.{i}",CHOIX {i}\n'
-        m3u += f'https://{host}/api/stream/{i}\n'
+        m3u += f'https://{host}/stream/{i}\n'
     return Response(m3u, mimetype='text/plain')
 
 if __name__ == "__main__":
