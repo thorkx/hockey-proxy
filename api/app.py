@@ -71,7 +71,9 @@ def parse_schedule():
     for i in range(1, 6):
         for event in raw.get('channels', {}).get(str(i), []):
             try:
-                display_start = datetime.fromisoformat(event['display_start'].replace('Z', '+00:00')).astimezone(timezone.utc).replace(tzinfo=None)
+                dt = datetime.fromisoformat(event['display_start'].replace('Z', ''))
+                #display_start = datetime.fromisoformat(event['display_start'].replace('Z', '+00:00')).astimezone(timezone.utc).replace(tzinfo=None)
+                display_start = dt.replace(tzinfo=None)
                 stop = datetime.fromisoformat(event['stop'].replace('Z', '+00:00')).astimezone(timezone.utc).replace(tzinfo=None)
                 chans[i].append({
                     'title': event.get('title', ''),
