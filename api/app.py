@@ -31,7 +31,7 @@ CH_DATABASE = {
     "TSN.5.ca2": {"name": "TSN 5", "id": "71238", "lang": "EN"},
     "One.Soccer.ca2": {"name": "OneSoccer", "id": "19320", "lang": "EN"},
     "Sportsnet.World.HD.ca2": {"name": "SN World", "id": "71526", "lang": "EN"},
-    "SkySp.F1.HD.uk": {"name": "Sky F1", "id": "000000", "lang": "EN"},
+    "SkySp.F1.HD.uk": {"name": "Sky F1", "id": "74316", "lang": "EN"},
     "TNT.Sports.1.HD.uk": {"name": "TNT Sports 1", "id": "TNT.Sports.1.HD.uk", "lang": "EN"},
     "Canal+.Sport.360.fr": {"name": "Canal+ Sport 360", "id": "Canal+.Sport.360.fr", "lang": "FR"},
     "ESPN.Deportes.HD.us2": {"name": "ESPN Deportes", "id": "ESPN.Deportes.HD.us2", "lang": "ES"},
