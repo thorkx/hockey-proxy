@@ -105,16 +105,22 @@ def parse_espn_time(ev_date_str):
 
 
 def parse_program_start(prog_start_str):
-    raw_start = re.sub(r'\D', '', prog_start_str)[:12]
-    p_start = datetime.strptime(raw_start, "%Y%m%d%H%M")
+    # On capture 14 chiffres pour inclure les secondes (YYYYMMDDHHMMSS)
+    raw_start = re.sub(r'\D', '', prog_start_str)[:14]
+    # On crée l'objet et on lui dit immédiatement qu'il est en UTC
+    p_start = datetime.strptime(raw_start, "%Y%m%d%H%M%S").replace(tzinfo=timezone.utc)
+    
     tz_match = re.search(r'([+-]\d{4})$', prog_start_str.strip())
     if tz_match:
         offset = tz_match.group(1)
         sign = 1 if offset[0] == '+' else -1
         hours = int(offset[1:3])
         minutes = int(offset[3:5])
+        # Le calcul se fait maintenant sur des objets "aware", donc sans erreur
         p_start = p_start - sign * timedelta(hours=hours, minutes=minutes)
-    return p_start
+    
+    # On retire le tzinfo à la fin pour que le reste de ton bot (qui attend du naïf) ne plante pas
+    return p_start.replace(tzinfo=None)
 
 
 def build_search_text(prog):
@@ -141,6 +147,7 @@ def token_matches_event(token, source_tokens):
 
 
 def parse_iso_utc(time_str):
+    # Utilise la méthode robuste pour garantir que l'ISO est converti en vrai UTC
     return datetime.fromisoformat(time_str.replace('Z', '+00:00')).astimezone(timezone.utc).replace(tzinfo=None)
 
 
