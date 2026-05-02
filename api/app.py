@@ -122,8 +122,9 @@ def xml_route():
         for p in sorted(chans[i], key=lambda x: x['display_start']):
             disp_st = p['display_start'].strftime('%Y%m%d%H%M%S') + ' +0000'
             live_en = p['stop'].strftime('%Y%m%d%H%M%S') + ' +0000'
-            ch_name = CH_DATABASE.get(p['ch_key'], {}).get('name', 'SOURCE')
-            title = f"{p['title']} | {ch_name}"
+            ch_name = CH_DATABASE.get(p['ch_key'], {}).get('name', 'NA')
+            ch_lang = CH_DATABASE.get(p['ch_key'], {}).get('lang', 'NA')
+            title = f"{p['title']} | {ch_name} | {ch_lang}"
             if p['display_start'] > cursor:
                 xml_out += f'\n<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{disp_st}" channel="CHOIX.{i}"><title>À venir: {escape_xml(title)}</title></programme>'
             xml_out += f'\n<programme start="{disp_st}" stop="{live_en}" channel="CHOIX.{i}"><title>🔴 LIVE: {escape_xml(title)}</title></programme>'
