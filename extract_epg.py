@@ -373,6 +373,19 @@ def channel_language(ch_key):
     return info.get('lang', '').upper()
 
 
+def fetch_f1_openf1():
+    try:
+        r = requests.get("https://api.openf1.org/v1/sessions?year=2026", timeout=5)
+        if r.status_code != 200: return []
+        return [{
+            'id': f"f1-{s['session_key']}",
+            'name': f"F1 {s['location']} - {s['session_name']}".upper(),
+            'date': s['date_start'],
+            'league': 'f1'
+        } for s in r.json()]
+    except: return []
+
+
 def f1_event_type(name):
     upper_name = name.upper()
     if any(term in upper_name for term in ['PRACTICE', 'FP1', 'FP2', 'FP3', 'FREE PRACTICE']):
