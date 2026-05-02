@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T00:08:55Z",
+  "generated_at": "2026-05-02T03:24:56Z",
   "channels": {
     "1": [
       {
@@ -61,7 +61,7 @@
     ],
     "2": [
       {
-        "title": "BOSTON BRUINS AT BUFFALO SABRES",
+        "title": "UTAH MAMMOTH AT VEGAS GOLDEN KNIGHTS",
         "ch_key": "TVA.Sports.2.HD.ca2",
         "score": 2050,
         "display_start": "2026-05-03T03:30:00Z",
@@ -111,14 +111,6 @@
     ],
     "3": [
       {
-        "title": "UTAH MAMMOTH AT VEGAS GOLDEN KNIGHTS",
-        "ch_key": "TVA.Sports.2.HD.ca2",
-        "score": 2050,
-        "display_start": "2026-05-03T03:30:00Z",
-        "stop": "2026-05-03T07:00:00Z",
-        "start": "2026-05-03T04:00:00Z"
-      },
-      {
         "title": "SEATTLE SOUNDERS FC AT SPORTING KANSAS CITY",
         "ch_key": "TSN.5.HD.ca2",
         "score": 450,
@@ -149,6 +141,14 @@
         "display_start": "2026-05-03T16:00:00Z",
         "stop": "2026-05-03T19:30:00Z",
         "start": "2026-05-03T16:30:00Z"
+      },
+      {
+        "title": "NEW YORK METS AT LOS ANGELES ANGELS",
+        "ch_key": "Fox.Soccer.Plus.HD.us2",
+        "score": 200,
+        "display_start": "2026-05-03T01:08:00Z",
+        "stop": "2026-05-03T04:38:00Z",
+        "start": "2026-05-03T01:38:00Z"
       }
     ],
     "4": [
@@ -167,14 +167,6 @@
         "display_start": "2026-05-03T13:45:00Z",
         "stop": "2026-05-03T17:15:00Z",
         "start": "2026-05-03T14:15:00Z"
-      },
-      {
-        "title": "NEW YORK METS AT LOS ANGELES ANGELS",
-        "ch_key": "Fox.Soccer.Plus.HD.us2",
-        "score": 200,
-        "display_start": "2026-05-03T01:08:00Z",
-        "stop": "2026-05-03T04:38:00Z",
-        "start": "2026-05-03T01:38:00Z"
       }
     ],
     "5": [
