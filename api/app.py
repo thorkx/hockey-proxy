@@ -109,7 +109,8 @@ def xml_route():
             cursor = p['stop']
     xml_out += '\n</tv>'
     return Response(xml_out, mimetype='application/xml')
-    
+
+
 @app.route('/stream/<int:idx>')
 def stream_route(idx):
     try:
@@ -118,24 +119,45 @@ def stream_route(idx):
         
         print(f"DEBUG: Request for index {idx} at {now}")
         
-        sid = "184813" # Backup RDS
-        
-        # On récupère les événements (gestion int vs string)
+        # On récupère les événements
         events = chans.get(idx) or chans.get(str(idx)) or []
-        print(f"DEBUG: Found {len(events)} events for channel {idx}")
+        
+        if not events:
+            print(f"DEBUG: No events at all for channel {idx}")
+            return redirect(f"{STREAM_BASE.rstrip('/')}/184813", code=302)
 
+        sid = None
+        next_event = None
+
+        # 1. Recherche d'un match LIVE
         for m in events:
-            # DEBUG: afficher les fenêtres de temps pour comparer
-            print(f"DEBUG: Checking {m['title']} ({m['display_start']} TO {m['stop']})")
-            
             if m['display_start'] <= now <= m['stop']:
                 sid = get_stream_id(m['ch_key'])
-                print(f"DEBUG: MATCH! Switching to SID: {sid}")
+                print(f"DEBUG: MATCH LIVE! {m['title']} -> SID: {sid}")
                 break
         
-        # On nettoie l'URL (attention au double slash si STREAM_BASE finit déjà par /)
+        # 2. Si pas de LIVE, on cherche le PROCHAIN match
+        if not sid:
+            # On trie les événements par heure de début
+            future_events = [e for e in events if e['display_start'] > now]
+            future_events.sort(key=lambda x: x['display_start'])
+            
+            if future_events:
+                next_event = future_events[0]
+                sid = get_stream_id(next_event['ch_key'])
+                print(f"DEBUG: NO LIVE. Next event: {next_event['title']} at {next_event['display_start']} -> SID: {sid}")
+            else:
+                # 3. Vraiment rien à venir ? Backup RDS
+                sid = "184813"
+                print("DEBUG: No live or future events. Falling back to RDS.")
+
         final_url = f"{STREAM_BASE.rstrip('/')}/{sid}"
         return redirect(final_url, code=302)
+
+    except Exception as e:
+        print(f"DEBUG: Exception : {e}")
+        return redirect(f"{STREAM_BASE.rstrip('/')}/184813", code=302)
+        
 
     except Exception as e:
         print(f"DEBUG: Exception : {e}")
