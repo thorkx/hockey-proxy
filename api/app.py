@@ -113,7 +113,7 @@ def stream_route(idx):
     try:
         chans = parse_schedule()
         now = datetime.now(timezone.utc).replace(tzinfo=None)
-        
+        print("heure.now : " + now)
         # ID de secours (RDS) si rien n'est trouvé
         sid = "184813" 
 
@@ -122,6 +122,7 @@ def stream_route(idx):
         
         for m in events:
             if m['display_start'] <= now <= m['stop']:
+                print("display start : " + m['display_start'])
                 sid = get_stream_id(m['ch_key'])
                 break
         
