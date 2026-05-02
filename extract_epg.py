@@ -105,6 +105,22 @@ CH_DATABASE = {
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 
 
+SPORT_LOGOS = {
+    'nhl': '🏒',
+    'nba': '🏀',
+    'mlb': '⚾',
+    'f1': '🏎️',
+    'soccer': '⚽',
+    'eng.1': '⚽',
+    'fra.1': '⚽',
+    'ita.1': '⚽',
+    'esp.1': '⚽',
+    'usa.1': '⚽',
+    'uefa.champions': '⚽',
+    'concacaf.nations': '⚽'
+}
+
+
 def load_filtered_epg():
     if FILTERED_EPG_PATH.exists():
         try:
