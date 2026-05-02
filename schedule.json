@@ -1,14 +1,22 @@
 {
-  "generated_at": "2026-05-02T03:24:56Z",
+  "generated_at": "2026-05-02T07:51:23Z",
   "channels": {
     "1": [
       {
         "title": "MONTREAL CANADIENS AT TAMPA BAY LIGHTNING",
-        "ch_key": "TVA.Sports.2.HD.ca2",
-        "score": 5650,
-        "display_start": "2026-05-03T03:30:00Z",
-        "stop": "2026-05-03T07:00:00Z",
-        "start": "2026-05-03T04:00:00Z"
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 5750,
+        "display_start": "2026-05-03T21:30:00Z",
+        "stop": "2026-05-04T01:00:00Z",
+        "start": "2026-05-03T22:00:00Z"
+      },
+      {
+        "title": "MINNESOTA WILD AT COLORADO AVALANCHE",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 3650,
+        "display_start": "2026-05-04T01:00:00Z",
+        "stop": "2026-05-04T04:00:00Z",
+        "start": "2026-05-04T01:00:00Z"
       },
       {
         "title": "PHILADELPHIA FLYERS AT CAROLINA HURRICANES",
@@ -60,14 +68,6 @@
       }
     ],
     "2": [
-      {
-        "title": "UTAH MAMMOTH AT VEGAS GOLDEN KNIGHTS",
-        "ch_key": "TVA.Sports.2.HD.ca2",
-        "score": 2050,
-        "display_start": "2026-05-03T03:30:00Z",
-        "stop": "2026-05-03T07:00:00Z",
-        "start": "2026-05-03T04:00:00Z"
-      },
       {
         "title": "SAN JOSE EARTHQUAKES AT TORONTO FC",
         "ch_key": "TSN.3.HD.ca2",
