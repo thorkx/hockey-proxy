@@ -477,7 +477,6 @@ def calculate_score(name, ch_key, lg):
 
     return score
 
-
 def generate_schedule(days=2):
     bible = load_filtered_epg()
     now = datetime.now(timezone.utc)
@@ -487,106 +486,114 @@ def generate_schedule(days=2):
         ('soccer','esp.1'), ('soccer','usa.1'), ('soccer','uefa.champions'),
         ('soccer','concacaf.nations'), ('racing','f1')
     ]
-    events = []
+    
+    events_to_process = []
+    
+    # --- SOURCE 1: OPENF1 (Précision pour la F1) ---
+    try:
+        f1_url = f"https://api.openf1.org/v1/sessions?year={now.year}"
+        f1_resp = requests.get(f1_url, timeout=5).json()
+        for s in f1_resp:
+            events_to_process.append({
+                'id': f"f1-{s['session_key']}",
+                'name': f"F1 {s['location']} - {s['session_name']}".upper(),
+                'date': s['date_start'],
+                'lg': 'f1'
+            })
+    except:
+        pass
+
+    # --- SOURCE 2: ESPN ---
     urls = []
     for day in range(days):
         ds = (now + timedelta(days=day)).strftime('%Y%m%d')
         for sp, lg in leagues:
             urls.append((f'https://site.api.espn.com/apis/site/v2/sports/{sp}/{lg}/scoreboard?dates={ds}', lg))
 
-    seen_events = set()
     with ThreadPoolExecutor(max_workers=8) as executor:
         futures = {executor.submit(fetch_espn, url): lg for url, lg in urls}
         for future in futures:
             lg = futures[future]
             for ev in future.result().get('events', []):
-                event_id = ev.get('id') or f"{ev.get('name')}|{ev.get('date')}"
-                if event_id in seen_events:
-                    continue
-                seen_events.add(event_id)
+                events_to_process.append({
+                    'id': ev.get('id') or f"{ev.get('name')}|{ev.get('date')}",
+                    'name': ev['name'].upper(),
+                    'date': ev['date'],
+                    'lg': lg
+                })
 
-                name = ev['name'].upper()
-                matches = find_all_matches_in_bible(name, bible, ev['date'], lg)
-                if not matches:
-                    continue
-                hits = []
-                for match in matches:
-                    hits.append({
-                        'ch_key': match['ch_key'],
-                        'match_score': match['match_score'],
-                        'score': calculate_score(name, match['ch_key'], lg),
-                        'time_diff': match['time_diff']
-                    })
-                hits.sort(key=lambda item: (item['match_score'], item['score'], -item['time_diff']), reverse=True)
-                if lg == 'f1' and f1_event_type(name) == 'race':
-                    sky_hit = next((h for h in hits if is_sky_f1_channel(h['ch_key'])), None)
-                    if sky_hit:
-                        best_hit = sky_hit
-                    else:
-                        best_hit = hits[0]
-                else:
-                    best_hit = hits[0]
-                start = parse_espn_time(ev['date'])
-                if 'CANADIENS' in name:
-                    english_hit = next((h for h in hits if channel_language(h['ch_key']) == 'EN'), None)
-                    french_hit = next((h for h in hits if channel_language(h['ch_key']) == 'FR'), None)
-                    if french_hit:
-                        events.append({
-                            'title': name,
-                            'ch_key': french_hit['ch_key'],
-                            'score': french_hit['score'],
-                            'start': start,
-                            'stop': start + timedelta(hours=3)
-                        })
-                    if english_hit and english_hit['ch_key'] != (french_hit or {}).get('ch_key'):
-                        events.append({
-                            'title': name,
-                            'ch_key': english_hit['ch_key'],
-                            'score': english_hit['score'],
-                            'start': start,
-                            'stop': start + timedelta(hours=3)
-                        })
-                    if not french_hit and not english_hit:
-                        best = hits[0]
-                        events.append({
-                            'title': name,
-                            'ch_key': best['ch_key'],
-                            'score': best['score'],
-                            'start': start,
-                            'stop': start + timedelta(hours=3)
-                        })
-                else:
-                    best = hits[0]
-                    events.append({
-                        'title': name,
-                        'ch_key': best['ch_key'],
-                        'score': best['score'],
-                        'start': start,
-                        'stop': start + timedelta(hours=3)
-                    })
+    # --- TRAITEMENT DES ÉVÉNEMENTS ---
+    events = []
+    seen_events = set()
+    
+    for item in events_to_process:
+        event_id = item['id']
+        if event_id in seen_events:
+            continue
+        seen_events.add(event_id)
 
+        name = item['name']
+        lg = item['lg']
+        
+        matches = find_all_matches_in_bible(name, bible, item['date'], lg)
+        if not matches:
+            continue
+            
+        hits = []
+        for match in matches:
+            hits.append({
+                'ch_key': match['ch_key'],
+                'match_score': match['match_score'],
+                'score': calculate_score(name, match['ch_key'], lg),
+                'time_diff': match['time_diff']
+            })
+            
+        hits.sort(key=lambda x: (x['match_score'], x['score'], -x['time_diff']), reverse=True)
+        
+        if lg == 'f1' and f1_event_type(name) == 'race':
+            sky_hit = next((h for h in hits if is_sky_f1_channel(h['ch_key'])), None)
+            best_hit = sky_hit if sky_hit else hits[0]
+        else:
+            best_hit = hits[0]
+            
+        start = parse_espn_time(item['date'])
+        
+        if 'CANADIENS' in name:
+            english_hit = next((h for h in hits if channel_language(h['ch_key']) == 'EN'), None)
+            french_hit = next((h for h in hits if channel_language(h['ch_key']) == 'FR'), None)
+            
+            if french_hit:
+                events.append({'title': name, 'ch_key': french_hit['ch_key'], 'score': french_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
+            if english_hit and english_hit['ch_key'] != (french_hit or {}).get('ch_key'):
+                events.append({'title': name, 'ch_key': english_hit['ch_key'], 'score': english_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
+            if not french_hit and not english_hit:
+                events.append({'title': name, 'ch_key': hits[0]['ch_key'], 'score': hits[0]['score'], 'start': start, 'stop': start + timedelta(hours=3)})
+        else:
+            events.append({'title': name, 'ch_key': best_hit['ch_key'], 'score': best_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
+
+    # --- PACKING DANS LES CANAUX (1-5) ---
     events.sort(key=lambda e: e['score'], reverse=True)
     chans = {str(i): [] for i in range(1, 6)}
+    
     for event in events:
         display_start = event['start'] - timedelta(minutes=30)
         for slot in range(1, 6):
             channel_events = chans[str(slot)]
             can_fit = True
             final_start = display_start
+            
             for existing in channel_events:
-                existing_start = existing.get('display_start_dt')
-                existing_stop = existing.get('stop_dt')
-                if existing_start is None or existing_stop is None:
-                    existing_start = parse_espn_time(existing['display_start'])
-                    existing_stop = parse_espn_time(existing['stop'])
+                existing_start = existing['display_start_dt']
+                existing_stop = existing['stop_dt']
                 if not (event['stop'] <= existing_start or display_start >= existing_stop):
                     if existing_stop <= event['start']:
                         final_start = existing_stop
                     else:
                         can_fit = False
                         break
+            
             if can_fit:
-                packed = {
+                channel_events.append({
                     'title': event['title'],
                     'ch_key': event['ch_key'],
                     'score': event['score'],
@@ -595,10 +602,10 @@ def generate_schedule(days=2):
                     'start': event['start'].strftime('%Y-%m-%dT%H:%M:%SZ'),
                     'display_start_dt': final_start,
                     'stop_dt': event['stop']
-                }
-                channel_events.append(packed)
+                })
                 break
 
+    # Nettoyage des objets datetime avant retour
     for channel_events in chans.values():
         for item in channel_events:
             item.pop('display_start_dt', None)
@@ -608,6 +615,7 @@ def generate_schedule(days=2):
         'generated_at': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
         'channels': chans
     }
+    
 
 
 def save_schedule(schedule):
