@@ -113,30 +113,32 @@ def stream_route(idx):
     try:
         chans = parse_schedule()
         now = datetime.now(timezone.utc).replace(tzinfo=None)
-        print("heure.now : " + now)
-        # ID de secours (RDS) si rien n'est trouvé
-        sid = "184813" 
-
-        # On essaie de récupérer avec l'entier ET avec la string pour être certain
+        
+        print(f"DEBUG: Request for index {idx} at {now}")
+        
+        sid = "184813" # Backup RDS
+        
+        # On récupère les événements (gestion int vs string)
         events = chans.get(idx) or chans.get(str(idx)) or []
-        
+        print(f"DEBUG: Found {len(events)} events for channel {idx}")
+
         for m in events:
+            # DEBUG: afficher les fenêtres de temps pour comparer
+            print(f"DEBUG: Checking {m['title']} ({m['display_start']} TO {m['stop']})")
+            
             if m['display_start'] <= now <= m['stop']:
-                print("display start : " + m['display_start'])
                 sid = get_stream_id(m['ch_key'])
+                print(f"DEBUG: MATCH! Switching to SID: {sid}")
                 break
         
-        for m in chans.get(idx, []):
-            if m['display_start'] <= now <= m['stop']:
-                # ICI : On passe de la clé (ex: "Réseau.des.Sports...") à l'ID (ex: "184813")
-                sid = get_stream_id(m['ch_key'])
-                break
+        # On nettoie l'URL (attention au double slash si STREAM_BASE finit déjà par /)
+        final_url = f"{STREAM_BASE.rstrip('/')}/{sid}"
+        return redirect(final_url, code=302)
+
+    except Exception as e:
+        print(f"DEBUG: Exception : {e}")
+        return redirect(f"{STREAM_BASE.rstrip('/')}/184813", code=302)
         
-        # Redirection vers l'URL finale avec l'ID numérique
-        return redirect(f"{STREAM_BASE}/{sid}", code=302)
-    except Exception:
-        print("Exception")
-        return redirect(f"{STREAM_BASE}/184813", code=302)
 
 @app.route('/playlist.m3u')
 def m3u_route():
