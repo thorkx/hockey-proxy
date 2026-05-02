@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T11:17:47Z",
+  "generated_at": "2026-05-02T12:04:19Z",
   "channels": {
     "1": [
       {
@@ -53,7 +53,7 @@
       {
         "title": "BRIGHTON & HOVE ALBION AT NEWCASTLE UNITED",
         "ch_key": "Canal+.Sport.360.fr",
-        "score": 350,
+        "score": 550,
         "display_start": "2026-05-02T13:30:00Z",
         "stop": "2026-05-02T17:00:00Z",
         "start": "2026-05-02T14:00:00Z"
@@ -61,7 +61,7 @@
       {
         "title": "CRYSTAL PALACE AT AFC BOURNEMOUTH",
         "ch_key": "Canal+.Sport.360.fr",
-        "score": 350,
+        "score": 550,
         "display_start": "2026-05-03T12:30:00Z",
         "stop": "2026-05-03T16:00:00Z",
         "start": "2026-05-03T13:00:00Z"
@@ -69,17 +69,17 @@
     ],
     "2": [
       {
-        "title": "SAN JOSE EARTHQUAKES AT TORONTO FC",
-        "ch_key": "TSN.3.HD.ca2",
-        "score": 450,
-        "display_start": "2026-05-02T16:30:00Z",
-        "stop": "2026-05-02T20:00:00Z",
-        "start": "2026-05-02T17:00:00Z"
+        "title": "FULHAM AT ARSENAL",
+        "ch_key": "Canal+.fr",
+        "score": 550,
+        "display_start": "2026-05-02T16:00:00Z",
+        "stop": "2026-05-02T19:30:00Z",
+        "start": "2026-05-02T16:30:00Z"
       },
       {
         "title": "LEVANTE AT VILLARREAL",
         "ch_key": "beIN.SPORTS.MAX.8.fr",
-        "score": 350,
+        "score": 550,
         "display_start": "2026-05-02T11:30:00Z",
         "stop": "2026-05-02T15:00:00Z",
         "start": "2026-05-02T12:00:00Z"
@@ -87,49 +87,41 @@
       {
         "title": "LIVERPOOL AT MANCHESTER UNITED",
         "ch_key": "Canal+.fr",
-        "score": 350,
+        "score": 550,
         "display_start": "2026-05-03T14:00:00Z",
         "stop": "2026-05-03T17:30:00Z",
         "start": "2026-05-03T14:30:00Z"
       },
       {
-        "title": "MILWAUKEE BREWERS AT WASHINGTON NATIONALS",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 200,
-        "display_start": "2026-05-02T20:00:00Z",
-        "stop": "2026-05-02T23:05:00Z",
-        "start": "2026-05-02T20:05:00Z"
-      },
-      {
         "title": "LOS ANGELES DODGERS AT ST. LOUIS CARDINALS",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 200,
-        "display_start": "2026-05-02T23:05:00Z",
+        "ch_key": "beIN.SPORTS.MAX.4.fr",
+        "score": 350,
+        "display_start": "2026-05-02T22:45:00Z",
         "stop": "2026-05-03T02:15:00Z",
         "start": "2026-05-02T23:15:00Z"
       }
     ],
     "3": [
       {
-        "title": "SEATTLE SOUNDERS FC AT SPORTING KANSAS CITY",
-        "ch_key": "TSN.5.HD.ca2",
-        "score": 450,
-        "display_start": "2026-05-02T18:00:00Z",
-        "stop": "2026-05-02T21:30:00Z",
-        "start": "2026-05-02T18:30:00Z"
-      },
-      {
         "title": "ATLÉTICO MADRID AT VALENCIA",
         "ch_key": "beIN.SPORTS.MAX.8.fr",
-        "score": 350,
+        "score": 550,
         "display_start": "2026-05-02T13:45:00Z",
         "stop": "2026-05-02T17:15:00Z",
         "start": "2026-05-02T14:15:00Z"
       },
       {
+        "title": "BARCELONA AT OSASUNA",
+        "ch_key": "beIN.SPORTS.MAX.4.fr",
+        "score": 550,
+        "display_start": "2026-05-02T18:30:00Z",
+        "stop": "2026-05-02T22:00:00Z",
+        "start": "2026-05-02T19:00:00Z"
+      },
+      {
         "title": "ELCHE AT CELTA VIGO",
         "ch_key": "beIN.SPORTS.MAX.5.fr",
-        "score": 350,
+        "score": 550,
         "display_start": "2026-05-03T11:30:00Z",
         "stop": "2026-05-03T15:00:00Z",
         "start": "2026-05-03T12:00:00Z"
@@ -137,7 +129,7 @@
       {
         "title": "REAL OVIEDO AT REAL BETIS",
         "ch_key": "beIN.SPORTS.MAX.5.fr",
-        "score": 350,
+        "score": 550,
         "display_start": "2026-05-03T16:00:00Z",
         "stop": "2026-05-03T19:30:00Z",
         "start": "2026-05-03T16:30:00Z"
@@ -145,7 +137,7 @@
       {
         "title": "NEW YORK METS AT LOS ANGELES ANGELS",
         "ch_key": "Fox.Soccer.Plus.HD.us2",
-        "score": 200,
+        "score": 300,
         "display_start": "2026-05-03T01:08:00Z",
         "stop": "2026-05-03T04:38:00Z",
         "start": "2026-05-03T01:38:00Z"
@@ -153,38 +145,38 @@
     ],
     "4": [
       {
-        "title": "FULHAM AT ARSENAL",
-        "ch_key": "NBC.Sports.4K.us2",
-        "score": 350,
-        "display_start": "2026-05-02T16:00:00Z",
-        "stop": "2026-05-02T19:30:00Z",
-        "start": "2026-05-02T16:30:00Z"
-      },
-      {
         "title": "RAYO VALLECANO AT GETAFE",
         "ch_key": "beIN.SPORTS.MAX.5.fr",
-        "score": 350,
+        "score": 550,
         "display_start": "2026-05-03T13:45:00Z",
         "stop": "2026-05-03T17:15:00Z",
         "start": "2026-05-03T14:15:00Z"
-      }
-    ],
-    "5": [
+      },
       {
         "title": "NAPOLI AT COMO",
         "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 350,
+        "score": 450,
         "display_start": "2026-05-02T15:30:00Z",
         "stop": "2026-05-02T19:00:00Z",
         "start": "2026-05-02T16:00:00Z"
       },
       {
-        "title": "BARCELONA AT OSASUNA",
-        "ch_key": "beIN.SPORTS.MAX.4.fr",
-        "score": 350,
-        "display_start": "2026-05-02T19:00:00Z",
-        "stop": "2026-05-02T22:00:00Z",
-        "start": "2026-05-02T19:00:00Z"
+        "title": "MILWAUKEE BREWERS AT WASHINGTON NATIONALS",
+        "ch_key": "TNT.Sports.1.HD.uk",
+        "score": 300,
+        "display_start": "2026-05-02T19:35:00Z",
+        "stop": "2026-05-02T23:05:00Z",
+        "start": "2026-05-02T20:05:00Z"
+      }
+    ],
+    "5": [
+      {
+        "title": "SAN JOSE EARTHQUAKES AT TORONTO FC",
+        "ch_key": "TSN.3.HD.ca2",
+        "score": 450,
+        "display_start": "2026-05-02T16:30:00Z",
+        "stop": "2026-05-02T20:00:00Z",
+        "start": "2026-05-02T17:00:00Z"
       }
     ]
   }
