@@ -116,6 +116,14 @@ def stream_route(idx):
         
         # ID de secours (RDS) si rien n'est trouvé
         sid = "184813" 
+
+        # On essaie de récupérer avec l'entier ET avec la string pour être certain
+        events = chans.get(idx) or chans.get(str(idx)) or []
+        
+        for m in events:
+            if m['display_start'] <= now <= m['stop']:
+                sid = get_stream_id(m['ch_key'])
+                break
         
         for m in chans.get(idx, []):
             if m['display_start'] <= now <= m['stop']:
