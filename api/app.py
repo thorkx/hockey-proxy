@@ -10,7 +10,7 @@ ROOT_DIR = Path(__file__).resolve().parent
 # Note: J'ai retiré un .parent pour que ça cherche dans le dossier du script sur Render
 SCHEDULE_PATH = ROOT_DIR / "schedule.json"
 FALLBACK_SCHEDULE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/schedule.json"
-STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
+STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV/"
 
 CH_DATABASE = {
     "Réseau.des.Sports.(RDS).HD.ca2": {"name": "RDS", "id": "184813", "lang": "FR"},
