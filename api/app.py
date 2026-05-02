@@ -91,7 +91,7 @@ app = Flask(__name__)
 def xml_route():
     # Logique XML de ton handler
     chans = parse_schedule()
-    now = datetime.utcnow()
+    now = datetime.now(timezone.utc).replace(tzinfo=None)
     xml_out = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>'
     for i in range(1, 6):
         xml_out += f'\n<channel id="CHOIX.{i}"><display-name>CHOIX {i}</display-name></channel>'
@@ -112,7 +112,7 @@ def xml_route():
 def stream_route(idx):
     try:
         chans = parse_schedule()
-        now = datetime.utcnow()
+        now = datetime.now(timezone.utc).replace(tzinfo=None)
         
         # ID de secours (RDS) si rien n'est trouvé
         sid = "184813" 
