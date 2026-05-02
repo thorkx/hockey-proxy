@@ -135,6 +135,7 @@ def stream_route(idx):
         # Redirection vers l'URL finale avec l'ID numérique
         return redirect(f"{STREAM_BASE}/{sid}", code=302)
     except Exception:
+        print("Exception")
         return redirect(f"{STREAM_BASE}/184813", code=302)
 
 @app.route('/playlist.m3u')
