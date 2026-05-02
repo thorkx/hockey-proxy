@@ -609,8 +609,10 @@ def generate_schedule(days=2):
                         break
             
             if can_fit:
+                logo = SPORT_LOGOS.get(event['lg'], '')
+                full_title = f"{logo} {event['title']}" if logo else event['title']
                 channel_events.append({
-                    'title': event['title'],
+                    'title': full_title,
                     'ch_key': event['ch_key'],
                     'score': event['score'],
                     'display_start': final_start.strftime('%Y-%m-%dT%H:%M:%SZ'),
