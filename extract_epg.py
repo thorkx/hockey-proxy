@@ -11,9 +11,9 @@ BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered
 
 PRIORITY_CONFIG = {
     "LEAGUES": {
-        "nhl": 800, "nba": 250, "uefa.champions": 375,
-        "eng.1": 350, "fra.1": 350, "ita.1": 350, "esp.1": 350,
-        "uefa.europa": 350, "mlb": 200, "usa.1": 450,
+        "nhl": 800, "nba": 250, "wnba": 250, "uefa.champions": 375,
+        "eng.1": 350, "fra.1": 350, "ita.1": 150, "esp.1": 150,
+        "uefa.europa": 350, "mlb": 250, "usa.1": 450,
         "concacaf.nations": 600, "concacaf.champions": 500,
         "f1": 400
     },
@@ -92,11 +92,11 @@ CH_DATABASE = {
     "beIn.SPORTS.1.fr": {"name": "beIN SPORTS 1",	"id":"49895",	"lang":"FR",	"country":"FR"},
     "beIN.SPORTS.2.fr": {"name": "beIN SPORTS 2",	"id":"49896",	"lang":"FR",	"country":"FR"},
     "beIN.SPORTS.3.fr": {"name": "beIN SPORTS 3", "id": '49897', 'lang': 'FR', 'country': 'FR'},
-    "beIN.SPORTS.MAX.4.fr": {"name": 'beIN SPORTS MAX 4', 'id': '49903', 'lang': 'FR', 'country': 'FR'},
-    "beIN.SPORTS.MAX.5.fr": {"name": "beIN SPORTS MAX 5", "id": "83080", "lang": "FR", "country": "FR"},
-    "beIN.SPORTS.MAX.6.fr": {"name": "beIN SPORTS MAX 6", "id": "83081", "lang": "FR", "country": "FR"},
-    "beIN.SPORTS.MAX.7.fr": {"name": "beIN SPORTS MAX 7", "id": "83082", "lang": "FR", "country": "FR"},
-    "beIN.SPORTS.MAX.8.fr": {"name": "beIN SPORTS MAX 8", "id": "49904", "lang": "FR", "country": "FR"},
+    "beIN.SPORTS.MAX.4.fr": {"name": 'beIN SPORTS MAX 4', 'id': '49903', 'lang': 'VO', 'country': 'FR'},
+    "beIN.SPORTS.MAX.5.fr": {"name": "beIN SPORTS MAX 5", "id": "83080", "lang": "VO", "country": "FR"},
+    "beIN.SPORTS.MAX.6.fr": {"name": "beIN SPORTS MAX 6", "id": "83081", "lang": "VO", "country": "FR"},
+    "beIN.SPORTS.MAX.7.fr": {"name": "beIN SPORTS MAX 7", "id": "83082", "lang": "VO", "country": "FR"},
+    "beIN.SPORTS.MAX.8.fr": {"name": "beIN SPORTS MAX 8", "id": "49904", "lang": "VO", "country": "FR"},
     "Canal+.Sport.360.fr": {"name": "Canal+ Sport 360", "id": "83038", "lang": "FR", "country": "FR"},
     "Canal+.fr": {"name": "Canal+", "id": "49943", "lang": "FR", "country": "FR"},
     "Canal+.Sport.fr": {"name": "Canal+ Sport", "id": "49951", "lang": "FR", "country": "FR"},
@@ -108,6 +108,7 @@ STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV"
 SPORT_LOGOS = {
     'nhl': '🏒',
     'nba': '🏀',
+    'wnba': '🏀',
     'mlb': '⚾',
     'f1': '🏎️',
     'soccer': '⚽',
@@ -120,6 +121,18 @@ SPORT_LOGOS = {
     'concacaf.nations': '⚽'
 }
 
+def get_sport_icon(league):
+    if not league:
+        return ""
+
+    l = league.lower()
+
+    for key, icon in SPORT_LOGOS.items():
+        if key in l:
+            return icon + " "
+
+    return ""
+    
 
 def load_filtered_epg():
     if FILTERED_EPG_PATH.exists():
@@ -466,11 +479,7 @@ def calculate_score(name, ch_key, lg):
     if lg == 'f1':
         f1_type = f1_event_type(name)
         if f1_type == 'race':
-            score += 500
-            if is_sky_f1_channel(ch_key):
-                score += 250
-            elif is_fr or is_en:
-                score += 175
+            score += 2000
         elif f1_type == 'qualifying':
             score += 150
             if is_sky_f1_channel(ch_key):
@@ -568,24 +577,26 @@ def generate_schedule(days=2):
         
         if lg == 'f1' and f1_event_type(name) == 'race':
             sky_hit = next((h for h in hits if is_sky_f1_channel(h['ch_key'])), None)
-            best_hit = sky_hit if sky_hit else hits[0]
-        else:
-            best_hit = hits[0]
-            
-        start = parse_espn_time(item['date'])
-        
-        if 'CANADIENS' in name:
+            rds_hit = next((h for h in hits if is_rds_channel(h['ch_key'])), None)
+            if rds_hit:
+                events.append({'title': get_sport_icon(lg) + name, 'ch_key': rds_hit['ch_key'], 'score': rds_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
+            if sky_hit:
+                events.append({'title': get_sport_icon(lg) + name, 'ch_key': sky_hit['ch_key'], 'score': sky_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
+                    
+        elif 'CANADIENS' in name:
+            start = parse_espn_time(item['date'])
             english_hit = next((h for h in hits if channel_language(h['ch_key']) == 'EN'), None)
             french_hit = next((h for h in hits if channel_language(h['ch_key']) == 'FR'), None)
             
             if french_hit:
-                events.append({'title': name, 'ch_key': french_hit['ch_key'], 'score': french_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
+                events.append({'title': get_sport_icon(lg) + name, 'ch_key': french_hit['ch_key'], 'score': french_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
             if english_hit and english_hit['ch_key'] != (french_hit or {}).get('ch_key'):
-                events.append({'title': name, 'ch_key': english_hit['ch_key'], 'score': english_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
+                events.append({'title': get_sport_icon(lg) + name, 'ch_key': english_hit['ch_key'], 'score': english_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
             if not french_hit and not english_hit:
-                events.append({'title': name, 'ch_key': hits[0]['ch_key'], 'score': hits[0]['score'], 'start': start, 'stop': start + timedelta(hours=3)})
+                events.append({'title': get_sport_icon(lg) + name, 'ch_key': hits[0]['ch_key'], 'score': hits[0]['score'], 'start': start, 'stop': start + timedelta(hours=3)})
         else:
-            events.append({'title': name, 'ch_key': best_hit['ch_key'], 'score': best_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
+            start = parse_espn_time(item['date'])
+            events.append({'title': get_sport_icon(lg) + name, 'ch_key': hits[0]['ch_key'], 'score': hits[0]['score'], 'start': start, 'stop': start + timedelta(hours=3)})
 
     # --- PACKING DANS LES CANAUX (1-5) ---
     events.sort(key=lambda e: e['score'], reverse=True)

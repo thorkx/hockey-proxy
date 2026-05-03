@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-02T13:23:02Z",
+  "generated_at": "2026-05-03T12:42:37Z",
   "channels": {
     "1": [
       {
-        "title": "MONTREAL CANADIENS AT TAMPA BAY LIGHTNING",
+        "title": "🏒 MONTREAL CANADIENS AT TAMPA BAY LIGHTNING",
         "ch_key": "Sportsnet.East.HD.ca2",
         "score": 5750,
         "display_start": "2026-05-03T21:30:00Z",
@@ -11,7 +11,7 @@
         "start": "2026-05-03T22:00:00Z"
       },
       {
-        "title": "MINNESOTA WILD AT COLORADO AVALANCHE",
+        "title": "🏒 MINNESOTA WILD AT COLORADO AVALANCHE",
         "ch_key": "Sportsnet.East.HD.ca2",
         "score": 3650,
         "display_start": "2026-05-04T01:00:00Z",
@@ -19,81 +19,65 @@
         "start": "2026-05-04T01:00:00Z"
       },
       {
-        "title": "PHILADELPHIA FLYERS AT CAROLINA HURRICANES",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 2150,
-        "display_start": "2026-05-02T23:30:00Z",
-        "stop": "2026-05-03T03:00:00Z",
-        "start": "2026-05-03T00:00:00Z"
-      },
-      {
-        "title": "TORONTO BLUE JAYS AT MINNESOTA TWINS",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 1800,
-        "display_start": "2026-05-02T17:40:00Z",
-        "stop": "2026-05-02T21:10:00Z",
-        "start": "2026-05-02T18:10:00Z"
-      },
-      {
-        "title": "TORONTO BLUE JAYS AT MINNESOTA TWINS",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 1800,
-        "display_start": "2026-05-03T16:05:00Z",
-        "stop": "2026-05-03T19:35:00Z",
-        "start": "2026-05-03T16:35:00Z"
-      },
-      {
-        "title": "CRYPTO.COM MIAMI GRAND PRIX",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 1150,
-        "display_start": "2026-05-01T15:30:00Z",
-        "stop": "2026-05-01T19:00:00Z",
-        "start": "2026-05-01T16:00:00Z"
-      },
-      {
-        "title": "F1 MIAMI GARDENS - SPRINT QUALIFYING",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 675,
+        "title": "🏎️ F1 MIAMI GARDENS - SPRINT",
+        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
+        "score": 2400,
         "display_start": "2026-05-01T20:00:00Z",
         "stop": "2026-05-01T23:30:00Z",
         "start": "2026-05-01T20:30:00Z"
       },
       {
-        "title": "BRIGHTON & HOVE ALBION AT NEWCASTLE UNITED",
-        "ch_key": "Canal+.Sport.360.fr",
-        "score": 550,
-        "display_start": "2026-05-02T13:30:00Z",
-        "stop": "2026-05-02T17:00:00Z",
-        "start": "2026-05-02T14:00:00Z"
+        "title": "🏎️ F1 MIAMI GARDENS - RACE",
+        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
+        "score": 2400,
+        "display_start": "2026-05-02T19:30:00Z",
+        "stop": "2026-05-02T23:00:00Z",
+        "start": "2026-05-02T20:00:00Z"
       },
       {
-        "title": "CRYSTAL PALACE AT AFC BOURNEMOUTH",
+        "title": "🏎️ CRYPTO.COM MIAMI GRAND PRIX",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 2400,
+        "display_start": "2026-05-03T16:00:00Z",
+        "stop": "2026-05-03T19:30:00Z",
+        "start": "2026-05-03T16:30:00Z"
+      },
+      {
+        "title": "⚽ CRYSTAL PALACE AT AFC BOURNEMOUTH",
         "ch_key": "Canal+.Sport.360.fr",
         "score": 550,
         "display_start": "2026-05-03T12:30:00Z",
         "stop": "2026-05-03T16:00:00Z",
         "start": "2026-05-03T13:00:00Z"
+      },
+      {
+        "title": "🏎️ F1 MIAMI GARDENS - PRACTICE 1",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 435,
+        "display_start": "2026-05-01T15:30:00Z",
+        "stop": "2026-05-01T19:00:00Z",
+        "start": "2026-05-01T16:00:00Z"
       }
     ],
     "2": [
       {
-        "title": "F1 MIAMI GARDENS - SPRINT",
+        "title": "🏎️ F1 MIAMI GARDENS - SPRINT",
         "ch_key": "SkySp.F1.HD.uk",
-        "score": 1150,
-        "display_start": "2026-05-02T15:30:00Z",
-        "stop": "2026-05-02T19:00:00Z",
-        "start": "2026-05-02T16:00:00Z"
+        "score": 2400,
+        "display_start": "2026-05-01T20:00:00Z",
+        "stop": "2026-05-01T23:30:00Z",
+        "start": "2026-05-01T20:30:00Z"
       },
       {
-        "title": "F1 MIAMI GARDENS - RACE",
-        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
-        "score": 1075,
-        "display_start": "2026-05-03T19:30:00Z",
-        "stop": "2026-05-03T23:00:00Z",
-        "start": "2026-05-03T20:00:00Z"
+        "title": "⚾ TORONTO BLUE JAYS AT MINNESOTA TWINS",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 1850,
+        "display_start": "2026-05-03T16:15:00Z",
+        "stop": "2026-05-03T19:45:00Z",
+        "start": "2026-05-03T16:45:00Z"
       },
       {
-        "title": "F1 MIAMI GARDENS - QUALIFYING",
+        "title": "🏎️ F1 MIAMI GARDENS - QUALIFYING",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 675,
         "display_start": "2026-05-02T19:30:00Z",
@@ -101,101 +85,37 @@
         "start": "2026-05-02T20:00:00Z"
       },
       {
-        "title": "LEVANTE AT VILLARREAL",
-        "ch_key": "beIN.SPORTS.MAX.8.fr",
-        "score": 550,
-        "display_start": "2026-05-02T11:30:00Z",
-        "stop": "2026-05-02T15:00:00Z",
-        "start": "2026-05-02T12:00:00Z"
+        "title": "⚽ ELCHE AT CELTA VIGO",
+        "ch_key": "beIN.SPORTS.MAX.5.fr",
+        "score": 150,
+        "display_start": "2026-05-03T11:30:00Z",
+        "stop": "2026-05-03T15:00:00Z",
+        "start": "2026-05-03T12:00:00Z"
+      }
+    ],
+    "3": [
+      {
+        "title": "🏎️ F1 MIAMI GARDENS - SPRINT QUALIFYING",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 675,
+        "display_start": "2026-05-01T20:00:00Z",
+        "stop": "2026-05-01T23:30:00Z",
+        "start": "2026-05-01T20:30:00Z"
       },
       {
-        "title": "LIVERPOOL AT MANCHESTER UNITED",
+        "title": "⚽ LIVERPOOL AT MANCHESTER UNITED",
         "ch_key": "Canal+.fr",
         "score": 550,
         "display_start": "2026-05-03T14:00:00Z",
         "stop": "2026-05-03T17:30:00Z",
         "start": "2026-05-03T14:30:00Z"
-      },
-      {
-        "title": "F1 MIAMI GARDENS - PRACTICE 1",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 435,
-        "display_start": "2026-05-01T15:30:00Z",
-        "stop": "2026-05-01T19:00:00Z",
-        "start": "2026-05-01T16:00:00Z"
-      },
-      {
-        "title": "LOS ANGELES DODGERS AT ST. LOUIS CARDINALS",
-        "ch_key": "beIN.SPORTS.MAX.4.fr",
-        "score": 350,
-        "display_start": "2026-05-02T23:00:00Z",
-        "stop": "2026-05-03T02:15:00Z",
-        "start": "2026-05-02T23:15:00Z"
-      }
-    ],
-    "3": [
-      {
-        "title": "FULHAM AT ARSENAL",
-        "ch_key": "Canal+.fr",
-        "score": 550,
-        "display_start": "2026-05-02T16:00:00Z",
-        "stop": "2026-05-02T19:30:00Z",
-        "start": "2026-05-02T16:30:00Z"
-      },
-      {
-        "title": "ELCHE AT CELTA VIGO",
-        "ch_key": "beIN.SPORTS.MAX.5.fr",
-        "score": 550,
-        "display_start": "2026-05-03T11:30:00Z",
-        "stop": "2026-05-03T15:00:00Z",
-        "start": "2026-05-03T12:00:00Z"
-      },
-      {
-        "title": "REAL OVIEDO AT REAL BETIS",
-        "ch_key": "beIN.SPORTS.MAX.5.fr",
-        "score": 550,
-        "display_start": "2026-05-03T16:00:00Z",
-        "stop": "2026-05-03T19:30:00Z",
-        "start": "2026-05-03T16:30:00Z"
-      },
-      {
-        "title": "MILWAUKEE BREWERS AT WASHINGTON NATIONALS",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 300,
-        "display_start": "2026-05-02T19:35:00Z",
-        "stop": "2026-05-02T23:05:00Z",
-        "start": "2026-05-02T20:05:00Z"
-      },
-      {
-        "title": "NEW YORK METS AT LOS ANGELES ANGELS",
-        "ch_key": "Fox.Soccer.Plus.HD.us2",
-        "score": 300,
-        "display_start": "2026-05-03T01:08:00Z",
-        "stop": "2026-05-03T04:38:00Z",
-        "start": "2026-05-03T01:38:00Z"
       }
     ],
     "4": [
       {
-        "title": "ATLÉTICO MADRID AT VALENCIA",
-        "ch_key": "beIN.SPORTS.MAX.8.fr",
-        "score": 550,
-        "display_start": "2026-05-02T13:45:00Z",
-        "stop": "2026-05-02T17:15:00Z",
-        "start": "2026-05-02T14:15:00Z"
-      },
-      {
-        "title": "BARCELONA AT OSASUNA",
-        "ch_key": "beIN.SPORTS.MAX.4.fr",
-        "score": 550,
-        "display_start": "2026-05-02T18:30:00Z",
-        "stop": "2026-05-02T22:00:00Z",
-        "start": "2026-05-02T19:00:00Z"
-      },
-      {
-        "title": "RAYO VALLECANO AT GETAFE",
+        "title": "⚽ RAYO VALLECANO AT GETAFE",
         "ch_key": "beIN.SPORTS.MAX.5.fr",
-        "score": 550,
+        "score": 150,
         "display_start": "2026-05-03T13:45:00Z",
         "stop": "2026-05-03T17:15:00Z",
         "start": "2026-05-03T14:15:00Z"
@@ -203,12 +123,12 @@
     ],
     "5": [
       {
-        "title": "NAPOLI AT COMO",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 450,
-        "display_start": "2026-05-02T15:30:00Z",
-        "stop": "2026-05-02T19:00:00Z",
-        "start": "2026-05-02T16:00:00Z"
+        "title": "⚽ REAL OVIEDO AT REAL BETIS",
+        "ch_key": "beIN.SPORTS.MAX.5.fr",
+        "score": 150,
+        "display_start": "2026-05-03T16:00:00Z",
+        "stop": "2026-05-03T19:30:00Z",
+        "start": "2026-05-03T16:30:00Z"
       }
     ]
   }
