@@ -689,7 +689,7 @@ def  generate_filtered_epg():
                     results.append({'ch': ch, 'start': start.isoformat(), 'title': title, 'sub-title': sub_title, 'desc': desc, 'category': category})
                 except Exception:
                     continue
-    with open(SCHEDULE_PATH, 'w', encoding='utf-8') as f:
+    with open(FILTERED_EPG_PATH, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
 
 
