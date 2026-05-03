@@ -572,10 +572,9 @@ def generate_schedule(days=2):
             if not french_hit and not english_hit:
                 events.append({'title': name, 'ch_key': hits[0]['ch_key'], 'score': hits[0]['score'], 'start': start, 'stop': start + timedelta(hours=3)})
             continue 
-            
-        start = parse_espn_time(item['date'])
         
-        if 'CANADIENS' in name:
+        else if 'CANADIENS' in name:
+            start = parse_espn_time(item['date'])
             english_hit = next((h for h in hits if channel_language(h['ch_key']) == 'EN'), None)
             french_hit = next((h for h in hits if channel_language(h['ch_key']) == 'FR'), None)
             
@@ -586,6 +585,7 @@ def generate_schedule(days=2):
             if not french_hit and not english_hit:
                 events.append({'title': name, 'ch_key': hits[0]['ch_key'], 'score': hits[0]['score'], 'start': start, 'stop': start + timedelta(hours=3)})
         else:
+            start = parse_espn_time(item['date'])
             events.append({'title': name, 'ch_key': best_hit['ch_key'], 'score': best_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
 
     # --- PACKING DANS LES CANAUX (1-5) ---
