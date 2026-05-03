@@ -128,7 +128,7 @@ SPORT_LOGOS = {
     'esp.1': '⚽',
     'usa.1': '⚽',
     'uefa.champions': '⚽',
-    'concacaf.nations': '⚽'
+    'concacaf.nations': '⚽',
     'cpl': '⚽'
 }
 
