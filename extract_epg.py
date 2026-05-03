@@ -565,7 +565,7 @@ def generate_schedule(days=2):
         if lg == 'f1' and f1_event_type(name) == 'race':
             sky_hit = next((h for h in hits if is_sky_f1_channel(h['ch_key'])), None)
             rds_hit = sky_hit = next((h for h in hits if is_rds_channel(h['ch_key'])), None)
-        if french_hit:
+            if french_hit:
                 events.append({'title': name, 'ch_key': french_hit['ch_key'], 'score': french_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
             if english_hit and english_hit['ch_key'] != (french_hit or {}).get('ch_key'):
                 events.append({'title': name, 'ch_key': english_hit['ch_key'], 'score': english_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
