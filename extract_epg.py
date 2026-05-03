@@ -671,11 +671,13 @@ def  generate_filtered_epg():
     max_time = now + timedelta(days=3)
     results = []
     for country, url in EPG_SOURCE.items():
+        print(f'Fetching EPG for {country}...')
         with gzip.open(requests.get(url, stream=True).raw) as f:
             tree = ET.parse(f)
             root = tree.getroot()
             for prog in root.findall('.//programme'):
                 try:
+                    print(f'Processing program: {prog.findtext("title")} on channel {prog.get("channel")} at {prog.get("start")}')
                     start = parse_program_start(prog.get('start'))
                     if not (min_time <= start <= max_time):
                         continue
@@ -690,6 +692,7 @@ def  generate_filtered_epg():
                 except Exception:
                     continue
     with open(FILTERED_EPG_PATH, 'w', encoding='utf-8') as f:
+        print(f'Saving filtered EPG with {len(results)} programs to {FILTERED_EPG_PATH}...')
         json.dump(results, f, indent=2, ensure_ascii=False)
 
 
