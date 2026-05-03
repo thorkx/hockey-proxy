@@ -24,7 +24,7 @@ PRIORITY_CONFIG = {
         "eng.1": 350, "fra.1": 350, "ita.1": 150, "esp.1": 150,
         "uefa.europa": 350, "mlb": 250, "usa.1": 450,
         "concacaf.nations": 600, "concacaf.champions": 500,
-        "f1": 400
+        "f1": 400, "cpl": 400
     },
     "TEAMS": {
         "CANADIENS": 3500,
@@ -294,17 +294,13 @@ def verify_schedule(schedule, bible):
             invalid.append((channel, item, matches))
 
     if not invalid:
-        print(f'Verification OK: {total} événements correspondants trouvés dans l’EPG source.')
+        #print(f'Verification OK: {total} événements correspondants trouvés dans l’EPG source.')
         return
 
-    print(f'Verification: {len(invalid)}/{total} événements sans match exact sur la chaîne attribuée.')
+    #print(f'Verification: {len(invalid)}/{total} événements sans match exact sur la chaîne attribuée.')
     for channel, item, matches in invalid:
-        print(f'  - Slot {channel}: {item["title"]} @{item["start"]} -> {item["ch_key"]}')
         if matches:
             other_channels = sorted({m['program'].get('ch') for m in matches})
-            print(f'      correspondances trouvées sur d’autres chaînes: {", ".join(other_channels)}')
-        else:
-            print('      aucune correspondance trouvée dans filtered_epg.json')
 
 
 def prepare_team_keywords(ev_name):
@@ -413,6 +409,24 @@ def channel_language(ch_key):
     return info.get('lang', '').upper()
 
 
+def fetch_cpl():
+    try:
+        now = datetime.now(timezone.utc)
+        for day in range(0,2):
+            now = datetime.now(timezone.utc) + timedelta(days=day)
+            cpl_url = f"https://www.thesportsdb.com/api/v1/json/123/eventsday.php?d={now.strftime('%Y-%m-%d')}&l=4820"
+            r = requests.get(cpl_url, timeout=5)
+            if r.status_code != 200: return []
+            return [{
+                'id': f"cpl-{e['idEvent']}",
+                'name': e['strEvent'].upper(),
+                'date': e['strTimestamp'],
+                'league': 'cpl'
+            } for e in r.json().get('events', [])]
+    except:
+        return []
+
+
 def fetch_f1_openf1():
     try:
         now = datetime.now(timezone.utc)
@@ -468,7 +482,7 @@ def calculate_score(name, ch_key, lg):
         elif is_en:
             score += 100
 
-    soccer_leagues = ['soccer', 'eng.1', 'fra.1', 'ita.1', 'esp.1', 'uefa', 'concacaf']
+    soccer_leagues = ['soccer', 'eng.1', 'fra.1', 'ita.1', 'esp.1', 'uefa', 'concacaf', 'cpl']
     if any(x in lg for x in soccer_leagues):
         if is_fr:
             score += 200
@@ -522,7 +536,7 @@ def generate_schedule(days=2):
         ('hockey','nhl'), ('basketball','nba'), ('baseball','mlb'),
         ('soccer','eng.1'), ('soccer','fra.1'), ('soccer','ita.1'),
         ('soccer','esp.1'), ('soccer','usa.1'), ('soccer','uefa.champions'),
-        ('soccer','concacaf.nations'), ('racing','f1')
+        ('soccer','concacaf.nations'), ('racing','f1'), ('soccer','cpl')
     ]
     
     events_to_process = []
@@ -539,6 +553,19 @@ def generate_schedule(days=2):
                 'start': s['time_start'],
                 'lg': 'f1'
             })
+    except:
+        pass
+
+    try:
+        events = fetch_cpl()
+        for e in events_to_process:
+            if 'SUPRA' in e['name']:
+                events_to_process.append({
+                    'id': e['id'],
+                    'name': e['name'],
+                    'date': e['date'],
+                    'lg': 'cpl'
+                })
     except:
         pass
 
@@ -615,6 +642,7 @@ def generate_schedule(days=2):
 
     # --- PACKING DANS LES CANAUX (1-5) ---
     events.sort(key=lambda e: e['score'], reverse=True)
+    print(events)
     chans = {str(i): [] for i in range(1, 6)}
     
     for event in events:
@@ -685,12 +713,12 @@ def  generate_filtered_epg():
             root = tree.getroot()
             for prog in root.findall('.//programme'):
                 try:
-                    print(f'Processing program: {prog.findtext("title")} on channel {prog.get("channel")} at {prog.get("start")}')
+                    #print(f'Processing program: {prog.findtext("title")} on channel {prog.get("channel")} at {prog.get("start")}')
                     start = parse_program_start(prog.get('start'))
-                    print(f'Parsed start time: {prog.get('start')} (UTC)')
+                    #print(f'Parsed start time: {prog.get('start')} (UTC)')
                     if not (min_time <= prog.get('start') <= max_time):
                         continue
-                    print(f'Program {prog.findtext("title")} is within the time window.')
+                    #print(f'Program {prog.findtext("title")} is within the time window.')
                     ch = prog.get('channel')
                     if ch not in CH_DATABASE:
                         continue
