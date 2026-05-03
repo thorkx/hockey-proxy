@@ -466,11 +466,7 @@ def calculate_score(name, ch_key, lg):
     if lg == 'f1':
         f1_type = f1_event_type(name)
         if f1_type == 'race':
-            score += 500
-            if is_sky_f1_channel(ch_key):
-                score += 250
-            elif is_fr or is_en:
-                score += 175
+            score += 2000
         elif f1_type == 'qualifying':
             score += 150
             if is_sky_f1_channel(ch_key):
