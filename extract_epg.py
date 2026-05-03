@@ -377,7 +377,8 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str, lg=None):
             candidates.append({
                 'ch_key': prog.get('ch'),
                 'match_score': match_count,
-                'time_diff': time_diff
+                'time_diff': time_diff,
+                'start': p_start
             })
     except:
         pass
@@ -535,6 +536,7 @@ def generate_schedule(days=2):
                 'id': f"f1-{s['session_key']}",
                 'name': f"F1 {s['location']} - {s['session_name']}".upper(),
                 'date': s['date_start'],
+                'start': s['time_start'],
                 'lg': 'f1'
             })
     except:
@@ -580,6 +582,7 @@ def generate_schedule(days=2):
         for match in matches:
             hits.append({
                 'ch_key': match['ch_key'],
+                'start': match['start'],
                 'match_score': match['match_score'],
                 'score': calculate_score(name, match['ch_key'], lg),
                 'time_diff': match['time_diff']
@@ -665,11 +668,16 @@ def save_schedule(schedule):
         print(f'Erreur écriture schedule: {exc}')
 
 
+def flatten_time(time):
+    return time.strftime('%Y%m%d%H%M%S +0000')
+
+
 def  generate_filtered_epg():
     now = datetime.now(timezone.utc)
-    min_time = now - timedelta(hours=8)
-    max_time = now + timedelta(days=3)
+    min_time = flatten_time(now - timedelta(hours=8))
+    max_time = flatten_time(now + timedelta(days=3))
     results = []
+    print(f'Generating filtered EPG for programs between {min_time} and {max_time} (UTC)...')
     for country, url in EPG_SOURCE.items():
         print(f'Fetching EPG for {country}...')
         with gzip.open(requests.get(url, stream=True).raw) as f:
@@ -679,8 +687,10 @@ def  generate_filtered_epg():
                 try:
                     print(f'Processing program: {prog.findtext("title")} on channel {prog.get("channel")} at {prog.get("start")}')
                     start = parse_program_start(prog.get('start'))
-                    if not (min_time <= start <= max_time):
+                    print(f'Parsed start time: {prog.get('start')} (UTC)')
+                    if not (min_time <= prog.get('start') <= max_time):
                         continue
+                    print(f'Program {prog.findtext("title")} is within the time window.')
                     ch = prog.get('channel')
                     if ch not in CH_DATABASE:
                         continue
