@@ -571,7 +571,8 @@ def generate_schedule(days=2):
                 events.append({'title': name, 'ch_key': english_hit['ch_key'], 'score': english_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
             if not french_hit and not english_hit:
                 events.append({'title': name, 'ch_key': hits[0]['ch_key'], 'score': hits[0]['score'], 'start': start, 'stop': start + timedelta(hours=3)})
-                
+            continue 
+            
         start = parse_espn_time(item['date'])
         
         if 'CANADIENS' in name:
