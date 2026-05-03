@@ -570,8 +570,7 @@ def generate_schedule(days=2):
             if english_hit and english_hit['ch_key'] != (french_hit or {}).get('ch_key'):
                 events.append({'title': name, 'ch_key': english_hit['ch_key'], 'score': english_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
             if not french_hit and not english_hit:
-                events.append({'title': name, 'ch_key': hits[0]['ch_key'], 'score': hits[0]['score'], 'start': start, 'stop': start + timedelta(hours=3)})
-            continue 
+                events.append({'title': name, 'ch_key': hits[0]['ch_key'], 'score': hits[0]['score'], 'start': start, 'stop': start + timedelta(hours=3)}) 
         
         elif 'CANADIENS' in name:
             start = parse_espn_time(item['date'])
@@ -586,7 +585,7 @@ def generate_schedule(days=2):
                 events.append({'title': name, 'ch_key': hits[0]['ch_key'], 'score': hits[0]['score'], 'start': start, 'stop': start + timedelta(hours=3)})
         else:
             start = parse_espn_time(item['date'])
-            events.append({'title': name, 'ch_key': best_hit['ch_key'], 'score': best_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
+            events.append({'title': name, 'ch_key': hits[0]['ch_key'], 'score': hits[0]['score'], 'start': start, 'stop': start + timedelta(hours=3)})
 
     # --- PACKING DANS LES CANAUX (1-5) ---
     events.sort(key=lambda e: e['score'], reverse=True)
