@@ -422,7 +422,7 @@ def fetch_cpl():
                 'id': f"cpl-{e['idEvent']}",
                 'name': e['strEvent'].upper(),
                 'date': parse_iso_utc(e['strTimestamp']).date(),
-                'start_time': parse_iso_utc(e['strTimestamp']).timetz()
+                'start_time': parse_iso_utc(e['strTimestamp']).timetz(),
                 'league': 'cpl'
             } for e in r.json().get('events', [])]
     except:
