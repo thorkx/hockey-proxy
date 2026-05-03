@@ -3,11 +3,20 @@ from concurrent.futures import ThreadPoolExecutor
 import requests
 import json
 import re
+import gzip
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 FILTERED_EPG_PATH = Path(__file__).resolve().parent / "filtered_epg.json"
 SCHEDULE_PATH = Path(__file__).resolve().parent / "schedule.json"
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
+
+EPG_SOURCE = {
+    "CA": "https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz",
+    "USA": "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
+    "UK": "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
+    "FR": "https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz"
+}
 
 PRIORITY_CONFIG = {
     "LEAGUES": {
@@ -89,6 +98,7 @@ CH_DATABASE = {
     "Fox.Sports.2.HD.us2": {"name": "Fox Sports 2", "id": "18366", "lang": "EN", "country":"USA"},
     "Fox.Soccer.Plus.HD.us2": {"name": "Fox Soccer Plus", "id":"18364","lang":"EN","country":"USA"},
     "NBC.Sports.4K.us2": {"name": "NBC Sports 4K",	"id":"18431",	"lang":"EN",	"country":"USA"},
+    "IonTV.us": {"name": "Ion TV", "id": "16826", "lang": "EN", "country": "USA"},
     "beIn.SPORTS.1.fr": {"name": "beIN SPORTS 1",	"id":"49895",	"lang":"FR",	"country":"FR"},
     "beIN.SPORTS.2.fr": {"name": "beIN SPORTS 2",	"id":"49896",	"lang":"FR",	"country":"FR"},
     "beIN.SPORTS.3.fr": {"name": "beIN SPORTS 3", "id": '49897', 'lang': 'FR', 'country': 'FR'},
@@ -404,7 +414,9 @@ def channel_language(ch_key):
 
 def fetch_f1_openf1():
     try:
-        r = requests.get("https://api.openf1.org/v1/sessions?year=2026", timeout=5)
+        now = datetime.now(timezone.utc)
+        f1_url = f"https://api.openf1.org/v1/sessions?year={now.year}"
+        r = requests.get(f1_url, timeout=5)
         if r.status_code != 200: return []
         return [{
             'id': f"f1-{s['session_key']}",
@@ -654,7 +666,36 @@ def save_schedule(schedule):
         print(f'Erreur écriture schedule: {exc}')
 
 
+def  generate_filtered_epg():
+    now = datetime.now(timezone.utc)
+    min_time = now - timedelta(hours=8)
+    max_time = now + timedelta(days=3)
+    results = []
+    for country, url in EPG_SOURCE.items():
+        with gzip.open(requests.get(url, stream=True).raw) as f:
+            tree = ET.parse(f)
+            root = tree.getroot()
+            for prog in root.findall('.//programme'):
+                try:
+                    start = parse_program_start(prog.get('start'))
+                    if not (min_time <= start <= max_time):
+                        continue
+                    ch = prog.get('channel')
+                    if ch not in CH_DATABASE:
+                        continue
+                    title = prog.findtext('title') or ''
+                    sub_title = prog.findtext('sub-title') or ''
+                    desc = prog.findtext('desc') or ''
+                    category = prog.findtext('category') or ''
+                    results.append({'ch': ch, 'start': start.isoformat(), 'title': title, 'sub-title': sub_title, 'desc': desc, 'category': category})
+                except Exception:
+                    continue
+    with open(SCHEDULE_PATH, 'w', encoding='utf-8') as f:
+        json.dump(results, f, indent=2, ensure_ascii=False)
+
+
 def main():
+    generate_filtered_epg()
     bible = load_filtered_epg()
     schedule = generate_schedule(days=2)
     verify_schedule(schedule, bible)
