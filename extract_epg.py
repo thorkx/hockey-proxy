@@ -129,6 +129,7 @@ SPORT_LOGOS = {
     'usa.1': '⚽',
     'uefa.champions': '⚽',
     'concacaf.nations': '⚽'
+    'cpl': '⚽'
 }
 
 def get_sport_icon(league):
@@ -420,7 +421,8 @@ def fetch_cpl():
             return [{
                 'id': f"cpl-{e['idEvent']}",
                 'name': e['strEvent'].upper(),
-                'date': e['strTimestamp'],
+                'date': parse_iso_utc(e['strTimestamp']).date(),
+                'start_time': parse_iso_utc(e['strTimestamp']).timetz()
                 'league': 'cpl'
             } for e in r.json().get('events', [])]
     except:
@@ -482,7 +484,7 @@ def calculate_score(name, ch_key, lg):
         elif is_en:
             score += 100
 
-    soccer_leagues = ['soccer', 'eng.1', 'fra.1', 'ita.1', 'esp.1', 'uefa', 'concacaf', 'cpl']
+    soccer_leagues = ['soccer', 'eng.1', 'fra.1', 'ita.1', 'esp.1', 'uefa', 'concacaf']
     if any(x in lg for x in soccer_leagues):
         if is_fr:
             score += 200
@@ -490,6 +492,9 @@ def calculate_score(name, ch_key, lg):
             score += 100
         if is_tva_channel(ch_key):
             score -= 100
+            
+    if lg == 'cpl':
+        score += 400
 
     if lg == 'mlb':
         if is_fr:
@@ -558,12 +563,13 @@ def generate_schedule(days=2):
 
     try:
         events = fetch_cpl()
-        for e in events_to_process:
+        for e in events:
             if 'SUPRA' in e['name']:
                 events_to_process.append({
                     'id': e['id'],
                     'name': e['name'],
                     'date': e['date'],
+                    'start': e['start_time'],
                     'lg': 'cpl'
                 })
     except:
