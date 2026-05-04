@@ -71,6 +71,10 @@ def escape_xml(text):
 def get_stream_id(ch_key):
     return CH_DATABASE.get(ch_key, {}).get('id', ch_key)
 
+def get_clean_league(league):
+    if not league: return ""
+    return league.replace(" ", "").replace(".", "").upper()
+
 def load_schedule():
     try:
         if SCHEDULE_PATH.exists():
@@ -98,6 +102,7 @@ def parse_schedule():
                 stop = datetime.fromisoformat(event['stop'].replace('Z', '+00:00')).astimezone(timezone.utc).replace(tzinfo=None)
                 chans[i].append({
                     'title': event.get('title', ''),
+                    'league': get_clean_league(event.get('league', '')),
                     'ch_key': event.get('ch_key', ''),
                     'display_start': display_start,
                     'stop': stop,
@@ -131,7 +136,7 @@ def xml_route():
             live_en = p['stop'].strftime('%Y%m%d%H%M%S') + ' +0000'
             ch_name = CH_DATABASE.get(p['ch_key'], {}).get('name', 'NA')
             ch_lang = CH_DATABASE.get(p['ch_key'], {}).get('lang', 'NA')
-            title = f"{p['title']} | {ch_name} | {ch_lang}"
+            title = f"{p['title']} | {p['league']} | {ch_name} | {ch_lang}"
             if p['display_start'] > cursor:
                 xml_out += f'\n<programme start="{cursor.strftime("%Y%m%d%H%M%S")} +0000" stop="{disp_st}" channel="CHOIX.{i}"><title>À venir: {escape_xml(title)}</title></programme>'
             xml_out += f'\n<programme start="{disp_st}" stop="{live_en}" channel="CHOIX.{i}"><title>🔴 LIVE: {escape_xml(title)}</title></programme>'

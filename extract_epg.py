@@ -24,7 +24,7 @@ PRIORITY_CONFIG = {
         "eng.1": 350, "fra.1": 350, "ita.1": 150, "esp.1": 150,
         "uefa.europa": 350, "mlb": 250, "usa.1": 450,
         "concacaf.nations": 600, "concacaf.champions": 500,
-        "f1": 400, "cpl": 400, "nsl": 300
+        "f1": 400, "cpl": 400, "nsl": 300, "cfl": 300
     },
     "TEAMS": {
         "CANADIENS": 3500,
@@ -39,9 +39,9 @@ PRIORITY_CONFIG = {
         "SUPRA DU QUEBEC": 1500,
         "SUPRA": 1500,
         "ROSES DE MONTREAL": 1200,
-        "VICTOIRE DE MONTREAL": 1200,
-        "CANMNT": 2000,
-        "CANWNT": 2000
+        "VICTOIRE DE MONTREAL": 1200,   # no source
+        "CANMNT": 2000,                 # no source
+        "CANWNT": 2000                  # no source
     },
     "CHANNELS": {
         "BONUS_HOCKEY_CANADA": 1200,
@@ -130,7 +130,9 @@ SPORT_LOGOS = {
     'usa.1': '⚽',
     'uefa.champions': '⚽',
     'concacaf.nations': '⚽',
-    'cpl': '⚽'
+    'cpl': '⚽',
+    'nsl': '⚽',
+    'cfl': '🏈'
 }
 
 def get_sport_icon(league):
