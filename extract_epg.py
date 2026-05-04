@@ -631,7 +631,8 @@ def generate_schedule(days=2):
                 'start': match['start'],
                 'match_score': match['match_score'],
                 'score': calculate_score(name, match['ch_key'], lg),
-                'time_diff': match['time_diff']
+                'time_diff': match['time_diff'],
+                'lg': match['lg']
             })
             
         hits.sort(key=lambda x: (x['match_score'], x['score'], -x['time_diff']), reverse=True)
@@ -646,7 +647,7 @@ def generate_schedule(days=2):
                      'score': rds_hit['score'], 
                      'start': start, 
                      'stop': start + timedelta(hours=3), 
-                     'league': item['lg']})
+                     'league': rds_hit['lg']})
             if sky_hit:
                 events.append(
                     {'title': get_sport_icon(lg) + name, 
@@ -654,7 +655,7 @@ def generate_schedule(days=2):
                      'score': sky_hit['score'],
                      'start': start, 
                      'stop': start + timedelta(hours=3), 
-                     'league': item['lg']})
+                     'league': sky_hit['lg']})
 
         elif 'CANADIENS' in name:
             start = parse_espn_time(item['date'])
@@ -668,7 +669,7 @@ def generate_schedule(days=2):
                      'score': french_hit['score'], 
                      'start': start, 
                      'stop': start + timedelta(hours=3),
-                     'league': item['lg']})
+                     'league': french_hit['lg']})
             if english_hit and english_hit['ch_key'] != (french_hit or {}).get('ch_key'):
                 events.append(
                     {'title': get_sport_icon(lg) + name, 
@@ -676,7 +677,7 @@ def generate_schedule(days=2):
                      'score': english_hit['score'], 
                      'start': start, 
                      'stop': start + timedelta(hours=3), 
-                     'league': item['lg']})
+                     'league': english_hit['lg']})
             if not french_hit and not english_hit:
                 events.append(
                     {'title': get_sport_icon(lg) + name, 
@@ -684,7 +685,7 @@ def generate_schedule(days=2):
                      'score': hits[0]['score'], 
                      'start': start, 
                      'stop': start + timedelta(hours=3), 
-                     'league': item['lg']})
+                     'league': hits[0]['lg']})
         else:
             start = parse_espn_time(item['date'])
             events.append(
@@ -693,7 +694,7 @@ def generate_schedule(days=2):
                  'score': hits[0]['score'], 
                  'start': start, 
                  'stop': start + timedelta(hours=3), 
-                 'league': item['lg']})
+                 'league': hits[0]['lg']})
 
     # --- PACKING DANS LES CANAUX (1-5) ---
     events.sort(key=lambda e: e['score'], reverse=True)
@@ -721,7 +722,7 @@ def generate_schedule(days=2):
                 full_title = event['title']
                 channel_events.append({
                     'title': full_title,
-                    'league': event['lg'],
+                    'league': event['league'],
                     'ch_key': event['ch_key'],
                     'score': event['score'],
                     'display_start': final_start.strftime('%Y-%m-%dT%H:%M:%SZ'),
