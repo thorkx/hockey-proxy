@@ -1,22 +1,14 @@
 {
-  "generated_at": "2026-05-03T23:32:50Z",
+  "generated_at": "2026-05-04T03:41:23Z",
   "channels": {
     "1": [
       {
-        "title": "🏒 MONTREAL CANADIENS AT TAMPA BAY LIGHTNING",
-        "ch_key": "TVA.Sports.HD.ca2",
-        "score": 5775,
-        "display_start": "2026-05-03T21:30:00Z",
-        "stop": "2026-05-04T01:00:00Z",
-        "start": "2026-05-03T22:00:00Z"
-      },
-      {
         "title": "🏒 MINNESOTA WILD AT COLORADO AVALANCHE",
-        "ch_key": "Sportsnet.East.HD.ca2",
+        "ch_key": "Sportsnet.West.HD.ca2",
         "score": 3650,
-        "display_start": "2026-05-04T01:00:00Z",
-        "stop": "2026-05-04T04:00:00Z",
-        "start": "2026-05-04T01:00:00Z"
+        "display_start": "2026-05-05T23:30:00Z",
+        "stop": "2026-05-06T03:00:00Z",
+        "start": "2026-05-06T00:00:00Z"
       },
       {
         "title": "🏒 PHILADELPHIA FLYERS AT CAROLINA HURRICANES",
@@ -35,14 +27,6 @@
         "start": "2026-05-04T19:00:00Z"
       },
       {
-        "title": "⚾ TORONTO BLUE JAYS AT MINNESOTA TWINS",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 1850,
-        "display_start": "2026-05-03T16:15:00Z",
-        "stop": "2026-05-03T19:45:00Z",
-        "start": "2026-05-03T16:45:00Z"
-      },
-      {
         "title": "⚽ NOTTINGHAM FOREST AT CHELSEA",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 450,
@@ -53,14 +37,6 @@
     ],
     "2": [
       {
-        "title": "🏒 MONTREAL CANADIENS AT TAMPA BAY LIGHTNING",
-        "ch_key": "Sportsnet.4K.ca2",
-        "score": 5750,
-        "display_start": "2026-05-03T21:30:00Z",
-        "stop": "2026-05-04T01:00:00Z",
-        "start": "2026-05-03T22:00:00Z"
-      },
-      {
         "title": "⚾ TORONTO BLUE JAYS AT TAMPA BAY RAYS",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 1850,
@@ -69,20 +45,12 @@
         "start": "2026-05-04T22:40:00Z"
       },
       {
-        "title": "⚽ LIVERPOOL AT MANCHESTER UNITED",
-        "ch_key": "Canal+.fr",
-        "score": 550,
-        "display_start": "2026-05-03T14:00:00Z",
-        "stop": "2026-05-03T17:30:00Z",
-        "start": "2026-05-03T14:30:00Z"
-      },
-      {
-        "title": "⚽ TOTTENHAM HOTSPUR AT ASTON VILLA",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 450,
-        "display_start": "2026-05-03T17:30:00Z",
-        "stop": "2026-05-03T21:00:00Z",
-        "start": "2026-05-03T18:00:00Z"
+        "title": "⚾ TORONTO BLUE JAYS AT TAMPA BAY RAYS",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 1850,
+        "display_start": "2026-05-05T22:10:00Z",
+        "stop": "2026-05-06T01:40:00Z",
+        "start": "2026-05-05T22:40:00Z"
       },
       {
         "title": "⚾ SAN DIEGO PADRES AT SAN FRANCISCO GIANTS",
@@ -103,14 +71,6 @@
     ],
     "3": [
       {
-        "title": "🏀 TORONTO RAPTORS AT CLEVELAND CAVALIERS",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 1850,
-        "display_start": "2026-05-03T23:00:00Z",
-        "stop": "2026-05-04T02:30:00Z",
-        "start": "2026-05-03T23:30:00Z"
-      },
-      {
         "title": "🏒 ANAHEIM DUCKS AT VEGAS GOLDEN KNIGHTS",
         "ch_key": "ESPN.HD.us2",
         "score": 950,
@@ -119,31 +79,15 @@
         "start": "2026-05-05T01:30:00Z"
       },
       {
-        "title": "🏀 ORLANDO MAGIC AT DETROIT PISTONS",
-        "ch_key": "TSN.4.ca2",
+        "title": "⚾ LOS ANGELES DODGERS AT HOUSTON ASTROS",
+        "ch_key": "TNT.Sports.1.HD.uk",
         "score": 350,
-        "display_start": "2026-05-03T19:00:00Z",
-        "stop": "2026-05-03T22:30:00Z",
-        "start": "2026-05-03T19:30:00Z"
-      },
-      {
-        "title": "⚽ RAYO VALLECANO AT GETAFE",
-        "ch_key": "beIN.SPORTS.MAX.5.fr",
-        "score": 150,
-        "display_start": "2026-05-03T13:45:00Z",
-        "stop": "2026-05-03T17:15:00Z",
-        "start": "2026-05-03T14:15:00Z"
+        "display_start": "2026-05-05T23:40:00Z",
+        "stop": "2026-05-06T03:10:00Z",
+        "start": "2026-05-06T00:10:00Z"
       }
     ],
     "4": [
-      {
-        "title": "⚾ TEXAS RANGERS AT DETROIT TIGERS",
-        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
-        "score": 400,
-        "display_start": "2026-05-03T22:50:00Z",
-        "stop": "2026-05-04T02:20:00Z",
-        "start": "2026-05-03T23:20:00Z"
-      },
       {
         "title": "⚾ BALTIMORE ORIOLES AT NEW YORK YANKEES",
         "ch_key": "TNT.Sports.1.HD.uk",
@@ -153,23 +97,15 @@
         "start": "2026-05-04T23:05:00Z"
       },
       {
-        "title": "⚽ PARMA AT INTERNAZIONALE",
-        "ch_key": "TNT.Sports.2.HD.uk",
+        "title": "⚾ BOSTON RED SOX AT DETROIT TIGERS",
+        "ch_key": "beIN.SPORTS.MAX.4.fr",
         "score": 250,
-        "display_start": "2026-05-03T18:15:00Z",
-        "stop": "2026-05-03T21:45:00Z",
-        "start": "2026-05-03T18:45:00Z"
+        "display_start": "2026-05-05T22:10:00Z",
+        "stop": "2026-05-06T01:40:00Z",
+        "start": "2026-05-05T22:40:00Z"
       }
     ],
     "5": [
-      {
-        "title": "⚾ CLEVELAND GUARDIANS AT ATHLETICS ATHLETICS",
-        "ch_key": "TNT.Sports.4.HD.uk",
-        "score": 350,
-        "display_start": "2026-05-03T19:35:00Z",
-        "stop": "2026-05-03T23:05:00Z",
-        "start": "2026-05-03T20:05:00Z"
-      },
       {
         "title": "⚾ CLEVELAND GUARDIANS AT KANSAS CITY ROYALS",
         "ch_key": "SkySp.PL.HD.uk",
@@ -177,14 +113,6 @@
         "display_start": "2026-05-04T23:10:00Z",
         "stop": "2026-05-05T02:40:00Z",
         "start": "2026-05-04T23:40:00Z"
-      },
-      {
-        "title": "⚽ REAL OVIEDO AT REAL BETIS",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 150,
-        "display_start": "2026-05-03T16:00:00Z",
-        "stop": "2026-05-03T19:30:00Z",
-        "start": "2026-05-03T16:30:00Z"
       }
     ]
   }
