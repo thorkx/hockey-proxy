@@ -7,12 +7,12 @@ from datetime import datetime, timedelta, timezone
 
 GLOBAL_DATA = {'chans': None, 'last_update': None}
 ROOT_DIR = Path(__file__).resolve().parent
-# Note: J'ai retiré un .parent pour que ça cherche dans le dossier du script sur Render
 SCHEDULE_PATH = ROOT_DIR / "schedule.json"
 FALLBACK_SCHEDULE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/schedule.json"
 STREAM_BASE = "http://omegatv.live:80/tDcJnv4jMM/2khBtbUZuV/"
 
 CH_DATABASE = {
+    "ICI.Tele.HD.ca2": {"name": "ICI Télé", "id": "71110", "lang": "FR", "country": "CA"},
     "Réseau.des.Sports.(RDS).HD.ca2": {"name": "RDS", "id": "184813", "lang": "FR", "country": "CA"},
     "RDS2.HD.ca2": {"name": "RDS 2", "id": "184814", "lang": "FR", "country": "CA"},
     "Réseau.des.Sports.Info.HD.ca2": {"name": "RDS Info", "id": "184815", "lang": "FR", "country": "CA"},

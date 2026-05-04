@@ -24,7 +24,7 @@ PRIORITY_CONFIG = {
         "eng.1": 350, "fra.1": 350, "ita.1": 150, "esp.1": 150,
         "uefa.europa": 350, "mlb": 250, "usa.1": 450,
         "concacaf.nations": 600, "concacaf.champions": 500,
-        "f1": 400, "cpl": 400
+        "f1": 400, "cpl": 400, "nsl": 300
     },
     "TEAMS": {
         "CANADIENS": 3500,
@@ -62,6 +62,7 @@ CANADA_HOCKEY_IDS = [
 
 
 CH_DATABASE = {
+    "ICI.Tele.HD.ca2": {"name": "ICI Télé", "id": "71110", "lang": "FR", "country": "CA"},
     "Réseau.des.Sports.(RDS).HD.ca2": {"name": "RDS", "id": "184813", "lang": "FR", "country": "CA"},
     "RDS2.HD.ca2": {"name": "RDS 2", "id": "184814", "lang": "FR", "country": "CA"},
     "Réseau.des.Sports.Info.HD.ca2": {"name": "RDS Info", "id": "184815", "lang": "FR", "country": "CA"},
@@ -410,16 +411,23 @@ def channel_language(ch_key):
     return info.get('lang', '').upper()
 
 
-def fetch_cpl():
+def fetch_sports_db(league):
     try:
         now = datetime.now(timezone.utc)
+        if league == 'cpl':
+            league_id = 4820
+        elif league == 'nsl':
+            league_id = 5602
+        else:            
+            return []
+        
         for day in range(0,2):
+            url = "https://www.thesportsdb.com/api/v1/json/123/eventsday.php?d={now.strftime('%Y-%m-%d')}&l={league_id}"
             now = datetime.now(timezone.utc) + timedelta(days=day)
-            cpl_url = f"https://www.thesportsdb.com/api/v1/json/123/eventsday.php?d={now.strftime('%Y-%m-%d')}&l=4820"
-            r = requests.get(cpl_url, timeout=5)
+            r = requests.get(url, timeout=5)
             if r.status_code != 200: return []
             return [{
-                'id': f"cpl-{e['idEvent']}",
+                'id': f"{league}-{e['idEvent']}",
                 'name': e['strEvent'].upper(),
                 'date': parse_iso_utc(e['strTimestamp']).date(),
                 'start_time': parse_iso_utc(e['strTimestamp']).timetz(),
@@ -561,19 +569,21 @@ def generate_schedule(days=2):
     except:
         pass
 
-    try:
-        events = fetch_cpl()
-        for e in events:
-            if 'SUPRA' in e['name']:
-                events_to_process.append({
-                    'id': e['id'],
-                    'name': e['name'],
-                    'date': e['date'],
-                    'start': e['start_time'],
-                    'lg': 'cpl'
-                })
-    except:
-        pass
+    # --- SOURCE 2: THE SPORTS DB (Précision pour la CPL et la NSL) ---
+    for lg in ['cpl', 'nsl']:
+        try:
+            events = fetch_sports_db(lg)
+            for e in events_to_process:
+                if 'SUPRA' in e['name']:
+                    events_to_process.append({
+                        'id': e['id'],
+                        'name': e['name'],
+                        'date': e['date'],
+                        'start': e['start_time'],
+                        'lg': lg
+                    })
+        except:
+            pass
 
     # --- SOURCE 2: ESPN ---
     urls = []
@@ -706,7 +716,7 @@ def flatten_time(time):
     return time.strftime('%Y%m%d%H%M%S +0000')
 
 
-def  generate_filtered_epg():
+def generate_filtered_epg():
     now = datetime.now(timezone.utc)
     min_time = flatten_time(now - timedelta(hours=8))
     max_time = flatten_time(now + timedelta(days=3))
