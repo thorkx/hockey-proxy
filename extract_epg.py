@@ -551,7 +551,8 @@ def generate_schedule(days=2):
         ('hockey','nhl'), ('basketball','nba'), ('baseball','mlb'),
         ('soccer','eng.1'), ('soccer','fra.1'), ('soccer','ita.1'),
         ('soccer','esp.1'), ('soccer','usa.1'), ('soccer','uefa.champions'),
-        ('soccer','concacaf.nations'), ('racing','f1'), ('soccer','cpl')
+        ('soccer','concacaf.nations'), ('racing','f1'), ('soccer','cpl'), 
+        ('soccer','nsl'), ('football','cfl')
     ]
     
     events_to_process = []
@@ -639,24 +640,60 @@ def generate_schedule(days=2):
             sky_hit = next((h for h in hits if is_sky_f1_channel(h['ch_key'])), None)
             rds_hit = next((h for h in hits if is_rds_channel(h['ch_key'])), None)
             if rds_hit:
-                events.append({'title': get_sport_icon(lg) + name, 'ch_key': rds_hit['ch_key'], 'score': rds_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
+                events.append(
+                    {'title': get_sport_icon(lg) + name, 
+                     'ch_key': rds_hit['ch_key'], 
+                     'score': rds_hit['score'], 
+                     'start': start, 
+                     'stop': start + timedelta(hours=3), 
+                     'league': item['lg']})
             if sky_hit:
-                events.append({'title': get_sport_icon(lg) + name, 'ch_key': sky_hit['ch_key'], 'score': sky_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
-                    
+                events.append(
+                    {'title': get_sport_icon(lg) + name, 
+                     'ch_key': sky_hit['ch_key'],
+                     'score': sky_hit['score'],
+                     'start': start, 
+                     'stop': start + timedelta(hours=3), 
+                     'league': item['lg']})
+
         elif 'CANADIENS' in name:
             start = parse_espn_time(item['date'])
             english_hit = next((h for h in hits if channel_language(h['ch_key']) == 'EN'), None)
             french_hit = next((h for h in hits if channel_language(h['ch_key']) == 'FR'), None)
             
             if french_hit:
-                events.append({'title': get_sport_icon(lg) + name, 'ch_key': french_hit['ch_key'], 'score': french_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
+                events.append(
+                    {'title': get_sport_icon(lg) + name, 
+                     'ch_key': french_hit['ch_key'], 
+                     'score': french_hit['score'], 
+                     'start': start, 
+                     'stop': start + timedelta(hours=3),
+                     'league': item['lg']})
             if english_hit and english_hit['ch_key'] != (french_hit or {}).get('ch_key'):
-                events.append({'title': get_sport_icon(lg) + name, 'ch_key': english_hit['ch_key'], 'score': english_hit['score'], 'start': start, 'stop': start + timedelta(hours=3)})
+                events.append(
+                    {'title': get_sport_icon(lg) + name, 
+                     'ch_key': english_hit['ch_key'], 
+                     'score': english_hit['score'], 
+                     'start': start, 
+                     'stop': start + timedelta(hours=3), 
+                     'league': item['lg']})
             if not french_hit and not english_hit:
-                events.append({'title': get_sport_icon(lg) + name, 'ch_key': hits[0]['ch_key'], 'score': hits[0]['score'], 'start': start, 'stop': start + timedelta(hours=3)})
+                events.append(
+                    {'title': get_sport_icon(lg) + name, 
+                     'ch_key': hits[0]['ch_key'], 
+                     'score': hits[0]['score'], 
+                     'start': start, 
+                     'stop': start + timedelta(hours=3), 
+                     'league': item['lg']})
         else:
             start = parse_espn_time(item['date'])
-            events.append({'title': get_sport_icon(lg) + name, 'ch_key': hits[0]['ch_key'], 'score': hits[0]['score'], 'start': start, 'stop': start + timedelta(hours=3)})
+            events.append(
+                {'title': get_sport_icon(lg) + name, 
+                 'ch_key': hits[0]['ch_key'], 
+                 'score': hits[0]['score'], 
+                 'start': start, 
+                 'stop': start + timedelta(hours=3), 
+                 'league': item['lg']})
 
     # --- PACKING DANS LES CANAUX (1-5) ---
     events.sort(key=lambda e: e['score'], reverse=True)
@@ -684,6 +721,7 @@ def generate_schedule(days=2):
                 full_title = event['title']
                 channel_events.append({
                     'title': full_title,
+                    'league': event['lg'],
                     'ch_key': event['ch_key'],
                     'score': event['score'],
                     'display_start': final_start.strftime('%Y-%m-%dT%H:%M:%SZ'),
