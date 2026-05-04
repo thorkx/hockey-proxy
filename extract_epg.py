@@ -378,7 +378,8 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str, lg=None):
                 'ch_key': prog.get('ch'),
                 'match_score': match_count,
                 'time_diff': time_diff,
-                'start': p_start
+                'start': p_start,
+                'lg': prog.get('league', '').lower()
             })
     except:
         pass
