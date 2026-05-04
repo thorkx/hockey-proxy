@@ -5,7 +5,7 @@ import json
 import html
 from datetime import datetime, timedelta, timezone
 
-# --- TON CODE INTACT ---
+GLOBAL_DATA = {'chans': None, 'last_update': None}
 ROOT_DIR = Path(__file__).resolve().parent
 # Note: J'ai retiré un .parent pour que ça cherche dans le dossier du script sur Render
 SCHEDULE_PATH = ROOT_DIR / "schedule.json"
@@ -106,14 +106,21 @@ def parse_schedule():
             except Exception: continue
     return chans
 
-# --- ADAPTATION RENDER (FLASK) ---
+def get_cached_chans():
+    now = datetime.now(timezone.utc)
+    # On ne reparse que si les données ont plus de 5 minutes
+    if GLOBAL_DATA['chans'] is None or (now - GLOBAL_DATA['last_update']).seconds > 300:
+        GLOBAL_DATA['chans'] = parse_schedule()
+        GLOBAL_DATA['last_update'] = now
+    return GLOBAL_DATA['chans']
+
 app = Flask(__name__)
 
 @app.route('/')
 @app.route('/xmltv.xml')
 def xml_route():
     # Logique XML de ton handler
-    chans = parse_schedule()
+    chans = get_caches_chans()
     now = datetime.now(timezone.utc).replace(tzinfo=None)
     xml_out = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>'
     for i in range(1, 6):
@@ -179,12 +186,7 @@ def stream_route(idx):
     except Exception as e:
         print(f"DEBUG: Exception : {e}")
         return redirect(f"{STREAM_BASE.rstrip('/')}/184813", code=302)
-        
-
-    except Exception as e:
-        print(f"DEBUG: Exception : {e}")
-        return redirect(f"{STREAM_BASE.rstrip('/')}/184813", code=302)
-        
+    
 
 @app.route('/playlist.m3u')
 def m3u_route():
