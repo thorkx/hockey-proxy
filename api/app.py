@@ -120,7 +120,7 @@ app = Flask(__name__)
 @app.route('/xmltv.xml')
 def xml_route():
     # Logique XML de ton handler
-    chans = get_caches_chans()
+    chans = get_cached_chans()
     now = datetime.now(timezone.utc).replace(tzinfo=None)
     xml_out = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>'
     for i in range(1, 6):
