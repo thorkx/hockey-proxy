@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T19:42:02Z",
+  "generated_at": "2026-05-06T03:38:39Z",
   "channels": {
     "1": [
       {
@@ -12,13 +12,13 @@
         "start": "2026-05-06T23:00:00Z"
       },
       {
-        "title": "🏒 MINNESOTA WILD AT COLORADO AVALANCHE",
+        "title": "🏒 CAROLINA HURRICANES AT PHILADELPHIA FLYERS",
         "league": "",
         "ch_key": "Sportsnet.4K.ca2",
-        "score": 3650,
-        "display_start": "2026-05-05T23:30:00Z",
-        "stop": "2026-05-06T03:00:00Z",
-        "start": "2026-05-06T00:00:00Z"
+        "score": 2150,
+        "display_start": "2026-05-07T23:30:00Z",
+        "stop": "2026-05-08T03:00:00Z",
+        "start": "2026-05-08T00:00:00Z"
       },
       {
         "title": "⚽ PARIS SAINT-GERMAIN AT BAYERN MUNICH",
@@ -28,6 +28,15 @@
         "display_start": "2026-05-06T18:30:00Z",
         "stop": "2026-05-06T22:00:00Z",
         "start": "2026-05-06T19:00:00Z"
+      },
+      {
+        "title": "⚾ TEXAS RANGERS AT NEW YORK YANKEES",
+        "league": "",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 350,
+        "display_start": "2026-05-07T16:05:00Z",
+        "stop": "2026-05-07T19:35:00Z",
+        "start": "2026-05-07T16:35:00Z"
       }
     ],
     "2": [
@@ -43,20 +52,38 @@
       {
         "title": "⚾ TORONTO BLUE JAYS AT TAMPA BAY RAYS",
         "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 1850,
-        "display_start": "2026-05-05T22:10:00Z",
-        "stop": "2026-05-06T01:40:00Z",
-        "start": "2026-05-05T22:40:00Z"
-      },
-      {
-        "title": "⚾ TORONTO BLUE JAYS AT TAMPA BAY RAYS",
-        "league": "",
         "ch_key": "Sportsnet.East.HD.ca2",
         "score": 1850,
         "display_start": "2026-05-06T16:40:00Z",
         "stop": "2026-05-06T20:10:00Z",
         "start": "2026-05-06T17:10:00Z"
+      },
+      {
+        "title": "⚾ MINNESOTA TWINS AT WASHINGTON NATIONALS",
+        "league": "",
+        "ch_key": "TNT.Sports.4.HD.uk",
+        "score": 350,
+        "display_start": "2026-05-07T16:35:00Z",
+        "stop": "2026-05-07T20:05:00Z",
+        "start": "2026-05-07T17:05:00Z"
+      },
+      {
+        "title": "⚾ TAMPA BAY RAYS AT BOSTON RED SOX",
+        "league": "",
+        "ch_key": "TSN.2.ca2",
+        "score": 350,
+        "display_start": "2026-05-07T22:30:00Z",
+        "stop": "2026-05-08T02:00:00Z",
+        "start": "2026-05-07T23:00:00Z"
+      },
+      {
+        "title": "⚾ ST. LOUIS CARDINALS AT SAN DIEGO PADRES",
+        "league": "",
+        "ch_key": "ESPN.HD.us2",
+        "score": 350,
+        "display_start": "2026-05-08T02:00:00Z",
+        "stop": "2026-05-08T05:00:00Z",
+        "start": "2026-05-08T02:00:00Z"
       }
     ],
     "3": [
@@ -77,27 +104,9 @@
         "display_start": "2026-05-06T16:45:00Z",
         "stop": "2026-05-06T20:15:00Z",
         "start": "2026-05-06T17:15:00Z"
-      },
-      {
-        "title": "🏀 CLEVELAND CAVALIERS AT DETROIT PISTONS",
-        "league": "",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 350,
-        "display_start": "2026-05-05T22:30:00Z",
-        "stop": "2026-05-06T02:00:00Z",
-        "start": "2026-05-05T23:00:00Z"
       }
     ],
     "4": [
-      {
-        "title": "⚾ LOS ANGELES DODGERS AT HOUSTON ASTROS",
-        "league": "",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 350,
-        "display_start": "2026-05-05T23:40:00Z",
-        "stop": "2026-05-06T03:10:00Z",
-        "start": "2026-05-06T00:10:00Z"
-      },
       {
         "title": "⚾ SAN DIEGO PADRES AT SAN FRANCISCO GIANTS",
         "league": "",
@@ -117,16 +126,6 @@
         "start": "2026-05-06T23:05:00Z"
       }
     ],
-    "5": [
-      {
-        "title": "⚾ BOSTON RED SOX AT DETROIT TIGERS",
-        "league": "",
-        "ch_key": "beIN.SPORTS.MAX.4.fr",
-        "score": 250,
-        "display_start": "2026-05-05T22:10:00Z",
-        "stop": "2026-05-06T01:40:00Z",
-        "start": "2026-05-05T22:40:00Z"
-      }
-    ]
+    "5": []
   }
 }
