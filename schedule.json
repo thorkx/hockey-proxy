@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T03:32:53Z",
+  "generated_at": "2026-05-08T07:48:27Z",
   "channels": {
     "1": [
       {
@@ -108,7 +108,7 @@
       {
         "title": "🏒 VEGAS GOLDEN KNIGHTS AT ANAHEIM DUCKS",
         "league": "",
-        "ch_key": "Sportsnet.4K.ca2",
+        "ch_key": "Sportsnet.East.HD.ca2",
         "score": 2150,
         "display_start": "2026-05-09T01:00:00Z",
         "stop": "2026-05-09T04:30:00Z",
@@ -182,22 +182,22 @@
         "start": "2026-05-08T23:05:00Z"
       },
       {
-        "title": "🏀 OKLAHOMA CITY THUNDER AT LOS ANGELES LAKERS",
+        "title": "⚾ ST. LOUIS CARDINALS AT SAN DIEGO PADRES",
         "league": "",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 250,
-        "display_start": "2026-05-10T00:00:00Z",
-        "stop": "2026-05-10T03:30:00Z",
-        "start": "2026-05-10T00:30:00Z"
+        "ch_key": "TSN.2.ca2",
+        "score": 350,
+        "display_start": "2026-05-09T22:45:00Z",
+        "stop": "2026-05-10T02:15:00Z",
+        "start": "2026-05-09T23:15:00Z"
       },
       {
-        "title": "⚽ CELTA VIGO AT ATLÉTICO MADRID",
+        "title": "⚽ REAL BETIS AT REAL SOCIEDAD",
         "league": "",
         "ch_key": "ESPN.Deportes.HD.us2",
         "score": 150,
-        "display_start": "2026-05-09T16:00:00Z",
-        "stop": "2026-05-09T19:30:00Z",
-        "start": "2026-05-09T16:30:00Z"
+        "display_start": "2026-05-09T18:30:00Z",
+        "stop": "2026-05-09T22:00:00Z",
+        "start": "2026-05-09T19:00:00Z"
       }
     ]
   }
