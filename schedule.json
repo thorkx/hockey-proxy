@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T03:32:48Z",
+  "generated_at": "2026-05-09T08:02:47Z",
   "channels": {
     "1": [
       {
@@ -106,7 +106,7 @@
       {
         "title": "⚽ INTER MIAMI CF AT TORONTO FC",
         "league": "",
-        "ch_key": "TSN.3.ca2",
+        "ch_key": "RDS2.HD.ca2",
         "score": 450,
         "display_start": "2026-05-09T16:30:00Z",
         "stop": "2026-05-09T20:00:00Z",
@@ -207,13 +207,22 @@
         "start": "2026-05-10T23:20:00Z"
       },
       {
-        "title": "⚾ NEW YORK METS AT ARIZONA DIAMONDBACKS",
+        "title": "🏀 DETROIT PISTONS AT CLEVELAND CAVALIERS",
         "league": "",
-        "ch_key": "TNT.Sports.2.HD.uk",
+        "ch_key": "TSN.4.ca2",
         "score": 350,
-        "display_start": "2026-05-09T22:45:00Z",
-        "stop": "2026-05-10T02:15:00Z",
-        "start": "2026-05-09T23:15:00Z"
+        "display_start": "2026-05-09T18:30:00Z",
+        "stop": "2026-05-09T22:00:00Z",
+        "start": "2026-05-09T19:00:00Z"
+      },
+      {
+        "title": "🏀 OKLAHOMA CITY THUNDER AT LOS ANGELES LAKERS",
+        "league": "",
+        "ch_key": "TSN.4.ca2",
+        "score": 350,
+        "display_start": "2026-05-10T00:00:00Z",
+        "stop": "2026-05-10T03:30:00Z",
+        "start": "2026-05-10T00:30:00Z"
       },
       {
         "title": "⚾ WASHINGTON NATIONALS AT MIAMI MARLINS",
@@ -223,22 +232,13 @@
         "display_start": "2026-05-10T15:40:00Z",
         "stop": "2026-05-10T19:10:00Z",
         "start": "2026-05-10T16:10:00Z"
-      },
-      {
-        "title": "⚽ JUVENTUS AT LECCE",
-        "league": "",
-        "ch_key": "TNT.Sports.2.HD.uk",
-        "score": 250,
-        "display_start": "2026-05-09T18:15:00Z",
-        "stop": "2026-05-09T21:45:00Z",
-        "start": "2026-05-09T18:45:00Z"
       }
     ],
     "5": [
       {
-        "title": "⚾ ST. LOUIS CARDINALS AT SAN DIEGO PADRES",
+        "title": "⚾ NEW YORK METS AT ARIZONA DIAMONDBACKS",
         "league": "",
-        "ch_key": "TSN.2.ca2",
+        "ch_key": "TNT.Sports.2.HD.uk",
         "score": 350,
         "display_start": "2026-05-09T22:45:00Z",
         "stop": "2026-05-10T02:15:00Z",
@@ -254,13 +254,13 @@
         "start": "2026-05-10T17:35:00Z"
       },
       {
-        "title": "⚽ REAL BETIS AT REAL SOCIEDAD",
+        "title": "⚽ JUVENTUS AT LECCE",
         "league": "",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 150,
-        "display_start": "2026-05-09T18:30:00Z",
-        "stop": "2026-05-09T22:00:00Z",
-        "start": "2026-05-09T19:00:00Z"
+        "ch_key": "TNT.Sports.2.HD.uk",
+        "score": 250,
+        "display_start": "2026-05-09T18:15:00Z",
+        "stop": "2026-05-09T21:45:00Z",
+        "start": "2026-05-09T18:45:00Z"
       }
     ]
   }
