@@ -35,11 +35,11 @@ PRIORITY_CONFIG = {
         "PARIS SAINT-GERMAIN": 1500,
         "TORONTO BLUE JAYS": 1500,
         "TORONTO RAPTORS": 1500,
-        "CF MONTREAL": 1000,
-        "SUPRA DU QUEBEC": 1500,
-        "SUPRA": 1500,
-        "ROSES DE MONTREAL": 1200,
-        "VICTOIRE DE MONTREAL": 1200,   # no source
+        "CF MONTREAL": 3000,
+        "SUPRA DU QUEBEC": 2500,
+        "SUPRA": 2500,
+        "ROSES DE MONTREAL": 20000,
+        "VICTOIRE DE MONTREAL": 2000,   # no source
         "CANMNT": 2000,                 # no source
         "CANWNT": 2000                  # no source
     },
@@ -553,7 +553,7 @@ def generate_schedule(days=2):
         ('soccer','eng.1'), ('soccer','fra.1'), ('soccer','ita.1'),
         ('soccer','esp.1'), ('soccer','usa.1'), ('soccer','uefa.champions'),
         ('soccer','concacaf.nations'), ('racing','f1'), ('soccer','cpl'), 
-        ('soccer','nsl'), ('football','cfl')
+        ('soccer','nsl'), ('football','cfl'), ('basketball','wnba')
     ]
     
     events_to_process = []
