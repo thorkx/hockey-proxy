@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-10T03:47:05Z",
+  "generated_at": "2026-05-10T08:14:21Z",
   "channels": {
     "1": [
       {
@@ -61,7 +61,7 @@
       {
         "title": "🏒 BUFFALO SABRES AT MONTREAL CANADIENS",
         "league": "",
-        "ch_key": "Sportsnet.4K.ca2",
+        "ch_key": "Sportsnet.East.HD.ca2",
         "score": 5750,
         "display_start": "2026-05-10T22:30:00Z",
         "stop": "2026-05-11T02:00:00Z",
@@ -162,13 +162,13 @@
         "start": "2026-05-10T23:20:00Z"
       },
       {
-        "title": "⚾ WASHINGTON NATIONALS AT MIAMI MARLINS",
+        "title": "🏀 NEW YORK KNICKS AT PHILADELPHIA 76ERS",
         "league": "",
-        "ch_key": "TNT.Sports.3.HD.uk",
+        "ch_key": "TSN.4.ca2",
         "score": 350,
-        "display_start": "2026-05-10T15:45:00Z",
-        "stop": "2026-05-10T19:15:00Z",
-        "start": "2026-05-10T16:15:00Z"
+        "display_start": "2026-05-10T19:00:00Z",
+        "stop": "2026-05-10T22:30:00Z",
+        "start": "2026-05-10T19:30:00Z"
       },
       {
         "title": "⚾ LOS ANGELES ANGELS AT CLEVELAND GUARDIANS",
@@ -178,17 +178,35 @@
         "display_start": "2026-05-11T21:40:00Z",
         "stop": "2026-05-12T01:10:00Z",
         "start": "2026-05-11T22:10:00Z"
+      },
+      {
+        "title": "⚽ VALENCIA AT ATHLETIC CLUB",
+        "league": "",
+        "ch_key": "ESPN.Deportes.HD.us2",
+        "score": 150,
+        "display_start": "2026-05-10T13:45:00Z",
+        "stop": "2026-05-10T17:15:00Z",
+        "start": "2026-05-10T14:15:00Z"
       }
     ],
     "5": [
       {
-        "title": "⚾ ATHLETICS ATHLETICS AT BALTIMORE ORIOLES",
+        "title": "🏀 SAN ANTONIO SPURS AT MINNESOTA TIMBERWOLVES",
         "league": "",
-        "ch_key": "CBS.Sports.Network.HD.us2",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 350,
-        "display_start": "2026-05-10T17:05:00Z",
-        "stop": "2026-05-10T20:35:00Z",
-        "start": "2026-05-10T17:35:00Z"
+        "display_start": "2026-05-10T23:00:00Z",
+        "stop": "2026-05-11T02:30:00Z",
+        "start": "2026-05-10T23:30:00Z"
+      },
+      {
+        "title": "⚾ WASHINGTON NATIONALS AT MIAMI MARLINS",
+        "league": "",
+        "ch_key": "TNT.Sports.3.HD.uk",
+        "score": 350,
+        "display_start": "2026-05-10T15:45:00Z",
+        "stop": "2026-05-10T19:15:00Z",
+        "start": "2026-05-10T16:15:00Z"
       },
       {
         "title": "⚾ SEATTLE MARINERS AT HOUSTON ASTROS",
