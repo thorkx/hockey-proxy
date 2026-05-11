@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T03:58:49Z",
+  "generated_at": "2026-05-11T09:51:00Z",
   "channels": {
     "1": [
       {
@@ -68,6 +68,15 @@
         "start": "2026-05-11T23:07:00Z"
       },
       {
+        "title": "🏀 OKLAHOMA CITY THUNDER AT LOS ANGELES LAKERS",
+        "league": "",
+        "ch_key": "TSN.4.ca2",
+        "score": 350,
+        "display_start": "2026-05-12T02:07:00Z",
+        "stop": "2026-05-12T05:30:00Z",
+        "start": "2026-05-12T02:30:00Z"
+      },
+      {
         "title": "⚽ ATLÉTICO MADRID AT OSASUNA",
         "league": "",
         "ch_key": "beIN.SPORTS.2.fr",
@@ -75,15 +84,6 @@
         "display_start": "2026-05-12T19:00:00Z",
         "stop": "2026-05-12T22:30:00Z",
         "start": "2026-05-12T19:30:00Z"
-      },
-      {
-        "title": "⚾ SAN FRANCISCO GIANTS AT LOS ANGELES DODGERS",
-        "league": "",
-        "ch_key": "beIN.SPORTS.MAX.4.fr",
-        "score": 250,
-        "display_start": "2026-05-12T02:07:00Z",
-        "stop": "2026-05-12T05:10:00Z",
-        "start": "2026-05-12T02:10:00Z"
       },
       {
         "title": "⚽ GIRONA AT RAYO VALLECANO",
@@ -115,6 +115,15 @@
         "start": "2026-05-11T22:35:00Z"
       },
       {
+        "title": "⚾ SAN FRANCISCO GIANTS AT LOS ANGELES DODGERS",
+        "league": "",
+        "ch_key": "beIN.SPORTS.MAX.4.fr",
+        "score": 250,
+        "display_start": "2026-05-12T01:40:00Z",
+        "stop": "2026-05-12T05:10:00Z",
+        "start": "2026-05-12T02:10:00Z"
+      },
+      {
         "title": "⚽ ELCHE AT REAL BETIS",
         "league": "",
         "ch_key": "beIN.SPORTS.MAX.4.fr",
@@ -135,6 +144,17 @@
         "start": "2026-05-12T23:07:00Z"
       },
       {
+        "title": "🏀 DETROIT PISTONS AT CLEVELAND CAVALIERS",
+        "league": "",
+        "ch_key": "TSN.3.ca2",
+        "score": 350,
+        "display_start": "2026-05-11T23:30:00Z",
+        "stop": "2026-05-12T03:00:00Z",
+        "start": "2026-05-12T00:00:00Z"
+      }
+    ],
+    "5": [
+      {
         "title": "⚾ LOS ANGELES ANGELS AT CLEVELAND GUARDIANS",
         "league": "",
         "ch_key": "ESPN2.HD.us2",
@@ -142,17 +162,6 @@
         "display_start": "2026-05-11T21:40:00Z",
         "stop": "2026-05-12T01:10:00Z",
         "start": "2026-05-11T22:10:00Z"
-      }
-    ],
-    "5": [
-      {
-        "title": "⚾ SEATTLE MARINERS AT HOUSTON ASTROS",
-        "league": "",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 350,
-        "display_start": "2026-05-11T23:40:00Z",
-        "stop": "2026-05-12T03:10:00Z",
-        "start": "2026-05-12T00:10:00Z"
       },
       {
         "title": "⚾ CHICAGO CUBS AT ATLANTA BRAVES",
