@@ -1,14 +1,6 @@
 [
   {
     "ch": "Sportsnet.One.HD.ca2",
-    "start": "2026-05-11T05:30:00",
-    "title": "Blue Jays in 30",
-    "sub-title": "",
-    "desc": "From May 10, 2026.",
-    "category": "Sports"
-  },
-  {
-    "ch": "Sportsnet.One.HD.ca2",
     "start": "2026-05-11T06:00:00",
     "title": "NHL in 30",
     "sub-title": "2026: Buffalo at Montreal",
@@ -1048,12 +1040,12 @@
     "category": "Series"
   },
   {
-    "ch": "Sportsnet.World.HD.ca2",
-    "start": "2026-05-11T05:30:00",
-    "title": "FA Cup Classics",
-    "sub-title": "1993: Arsenal vs. Sheffield Wednesday",
-    "desc": "From May 20, 1993.",
-    "category": "Series"
+    "ch": "Sportsnet.One.HD.ca2",
+    "start": "2026-05-14T13:30:00",
+    "title": "Blue Jays in 30",
+    "sub-title": "",
+    "desc": "From May 13, 2026.",
+    "category": "Sports"
   },
   {
     "ch": "Sportsnet.World.HD.ca2",
@@ -1992,6 +1984,14 @@
     "category": "Sports"
   },
   {
+    "ch": "RDS2.HD.ca2",
+    "start": "2026-05-14T13:30:00",
+    "title": "Avant-match soccer: CF Montréal",
+    "sub-title": "",
+    "desc": "Un avant-goût du prochain match du CF Montréal.",
+    "category": "Series"
+  },
+  {
     "ch": "TVA.Sports.2.HD.ca2",
     "start": "2026-05-11T07:00:00",
     "title": "Hockey LNH",
@@ -2512,11 +2512,11 @@
     "category": "Series"
   },
   {
-    "ch": "Sportsnet.East.HD.ca2",
-    "start": "2026-05-11T05:30:00",
-    "title": "NHL in 30",
-    "sub-title": "2026: Buffalo at Montreal",
-    "desc": "Game 3 from May 10, 2026.",
+    "ch": "TVA.Sports.2.HD.ca2",
+    "start": "2026-05-14T13:30:00",
+    "title": "50 ans de sports",
+    "sub-title": "2011",
+    "desc": "On nous fait revivre les plus grands moments du sport de chaque année.",
     "category": "Series"
   },
   {
@@ -3129,14 +3129,6 @@
   },
   {
     "ch": "Sportsnet.(Pacific).HD.ca2",
-    "start": "2026-05-11T05:30:00",
-    "title": "NHL in 30",
-    "sub-title": "2026: Buffalo at Montreal",
-    "desc": "Game 3 from May 10, 2026.",
-    "category": "Series"
-  },
-  {
-    "ch": "Sportsnet.(Pacific).HD.ca2",
     "start": "2026-05-11T06:00:00",
     "title": "Blue Jays in 30",
     "sub-title": "",
@@ -3742,14 +3734,6 @@
     "sub-title": "",
     "desc": "Canada's premier destination for sports and analysis.",
     "category": "News"
-  },
-  {
-    "ch": "Sportsnet.West.HD.ca2",
-    "start": "2026-05-11T05:30:00",
-    "title": "NHL in 30",
-    "sub-title": "2026: Buffalo at Montreal",
-    "desc": "Game 3 from May 10, 2026.",
-    "category": "Series"
   },
   {
     "ch": "Sportsnet.West.HD.ca2",
@@ -5112,6 +5096,14 @@
     "category": "Sports"
   },
   {
+    "ch": "Réseau.des.Sports.(RDS).HD.ca2",
+    "start": "2026-05-14T13:30:00",
+    "title": "Baseball MLB",
+    "sub-title": "",
+    "desc": "En provenance du Fenway Park à Boston, au Massachusetts.",
+    "category": "Sports"
+  },
+  {
     "ch": "ICI.Tele.HD.ca2",
     "start": "2026-05-11T06:00:00",
     "title": "Ça va causer",
@@ -6470,14 +6462,6 @@
     "sub-title": "",
     "desc": "Émission à communiquer.",
     "category": "Special"
-  },
-  {
-    "ch": "TSN.2.ca2",
-    "start": "2026-05-11T05:30:00",
-    "title": "SC",
-    "sub-title": "April Plays of the Month",
-    "desc": "The best and worst from the world of sports.",
-    "category": "Series"
   },
   {
     "ch": "TSN.2.ca2",
@@ -8502,14 +8486,6 @@
     "sub-title": "",
     "desc": "The latest scores and highlights, with host Jay Onrait.",
     "category": "Sports talk"
-  },
-  {
-    "ch": "Sportsnet.360.HD.ca2",
-    "start": "2026-05-11T05:30:00",
-    "title": "Gotta See It",
-    "sub-title": "",
-    "desc": "Must-see moments from the world of sports.",
-    "category": "Community"
   },
   {
     "ch": "Sportsnet.360.HD.ca2",
@@ -12717,14 +12693,6 @@
     "title": "Indy 500 2025 Highlights",
     "sub-title": "",
     "desc": "500 miles stand between 33 drivers and immortality as 350,000 line Indianapolis Motor Speedway for the 109th Running of the Indy 500, led from the start by Robert Shwartzman. (25.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.PL.HD.uk",
-    "start": "2026-05-11T05:30:00",
-    "title": "SNF: Man City v Brentford Hlts",
-    "sub-title": "",
-    "desc": "Dropping points on the road earlier this week, it's another must-win contest for Pep Guardiola's title hopefuls City as Brentford arrive at the Etihad on Saturday Night Football. (09.",
     "category": "Sports"
   },
   {
@@ -17789,6 +17757,14 @@
     "title": "Fils de",
     "sub-title": "",
     "desc": "Une semaine après l'élection présidentielle, la France cherche toujours son Premier ministre. Nino, jeune attaché parlementaire carriériste, est missionné pour convaincre son père, l'ex-leader socialiste Lionel Perrin, d'accepter le poste. Mais cet éternel perdant a coupé les ponts avec la politique et avec son fils. Nino se retrouve embarqué dans une course effrénée où tous les coups sont permis. Il a 24 heures pour sauver sa carrière, son couple et, si possible, l'avenir de la France...",
+    "category": "Film"
+  },
+  {
+    "ch": "Canal+.fr",
+    "start": "2026-05-14T11:31:00",
+    "title": "Chien 51",
+    "sub-title": "",
+    "desc": "En 2045, Paris est désormais divisé en trois zones, chacune d'elle étant réservée à une classe sociale. Dans ce monde ségrégué et ultra-surveillé, Alma, une intelligence artificielle, a révolutionné le travail de la police en identifiant et en traquant les potentiels criminels. Lorsque l'inventeur controversé d'Alma est assassiné, Salia et Zem, deux policiers de zones différentes que tout oppose, sont contraints de collaborer pour retrouver son meurtrier...",
     "category": "Film"
   },
   {
