@@ -333,6 +333,10 @@ def is_generic_league_program(prog, lg):
         return 'HOCKEY' in raw_text and ('NHL' in raw_text or 'LNH' in raw_text)
     if lg == 'f1':
         return any(term in raw_text for term in ['F1', 'FORMULA', 'GRAND PRIX', 'RACE', 'AUTO', 'MOTOR', 'CIRCUIT'])
+    if lg == 'cpl':
+        return any(term in raw_text for term in ['CPL', 'Canadian Premier'])
+    if lg == 'nsl':
+        return any(term in raw_text for term in ['NSL', 'Northern'])
     return False
 
 
@@ -358,7 +362,7 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str, lg=None):
             match_count = sum(1 for term in event_terms if token_matches_event(term, source_tokens))
             generic_match = False
             if match_count == 0:
-                if lg in ['nhl', 'f1'] and is_generic_league_program(prog, lg) and time_diff <= 3600:
+                if lg in ['nhl', 'f1', 'cpl', 'nsl'] and is_generic_league_program(prog, lg) and time_diff <= 3600:
                     match_count = 1
                     generic_match = True
                 else:
