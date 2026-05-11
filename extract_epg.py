@@ -466,6 +466,13 @@ def f1_event_type(name):
     return None
 
 
+def cpl_event(name):
+    upper_name = name.upper()
+    if any(term in upper_name for term in ["Canadian Premier", "CPL"]):
+        return 'CPL'
+    return None
+
+
 def calculate_score(name, ch_key, lg):
     score = PRIORITY_CONFIG['LEAGUES'].get(lg, 100)
     for team, bonus in PRIORITY_CONFIG['TEAMS'].items():
@@ -505,7 +512,7 @@ def calculate_score(name, ch_key, lg):
             score -= 100
             
     if lg == 'cpl':
-        score += 400
+        score += 2000
 
     if lg == 'mlb':
         if is_fr:
