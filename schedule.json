@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-10T19:16:32Z",
+  "generated_at": "2026-05-11T03:58:49Z",
   "channels": {
     "1": [
       {
@@ -7,9 +7,9 @@
         "league": "",
         "ch_key": "TVA.Sports.HD.ca2",
         "score": 5775,
-        "display_start": "2026-05-10T22:30:00Z",
-        "stop": "2026-05-11T02:00:00Z",
-        "start": "2026-05-10T23:00:00Z"
+        "display_start": "2026-05-12T22:30:00Z",
+        "stop": "2026-05-13T02:00:00Z",
+        "start": "2026-05-12T23:00:00Z"
       },
       {
         "title": "🏒 COLORADO AVALANCHE AT MINNESOTA WILD",
@@ -21,24 +21,6 @@
         "start": "2026-05-12T00:00:00Z"
       },
       {
-        "title": "⚽ BREST AT PARIS SAINT-GERMAIN",
-        "league": "",
-        "ch_key": "beIN.SPORTS.2.fr",
-        "score": 2050,
-        "display_start": "2026-05-10T18:30:00Z",
-        "stop": "2026-05-10T22:00:00Z",
-        "start": "2026-05-10T19:00:00Z"
-      },
-      {
-        "title": "⚽ ARSENAL AT WEST HAM UNITED",
-        "league": "",
-        "ch_key": "Canal+.fr",
-        "score": 550,
-        "display_start": "2026-05-10T15:00:00Z",
-        "stop": "2026-05-10T18:30:00Z",
-        "start": "2026-05-10T15:30:00Z"
-      },
-      {
         "title": "⚽ LEEDS UNITED AT TOTTENHAM HOTSPUR",
         "league": "",
         "ch_key": "SkySp.PL.HD.uk",
@@ -48,33 +30,33 @@
         "start": "2026-05-11T19:00:00Z"
       },
       {
-        "title": "⚽ VILLARREAL AT MALLORCA",
+        "title": "⚽ LEVANTE AT CELTA VIGO",
         "league": "",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 150,
-        "display_start": "2026-05-10T11:30:00Z",
-        "stop": "2026-05-10T15:00:00Z",
-        "start": "2026-05-10T12:00:00Z"
+        "ch_key": "beIN.SPORTS.2.fr",
+        "score": 350,
+        "display_start": "2026-05-12T16:30:00Z",
+        "stop": "2026-05-12T20:00:00Z",
+        "start": "2026-05-12T17:00:00Z"
+      },
+      {
+        "title": "⚾ SAN FRANCISCO GIANTS AT LOS ANGELES DODGERS",
+        "league": "",
+        "ch_key": "beIN.SPORTS.MAX.4.fr",
+        "score": 250,
+        "display_start": "2026-05-13T02:00:00Z",
+        "stop": "2026-05-13T05:10:00Z",
+        "start": "2026-05-13T02:10:00Z"
       }
     ],
     "2": [
       {
         "title": "🏒 BUFFALO SABRES AT MONTREAL CANADIENS",
         "league": "",
-        "ch_key": "Sportsnet.East.HD.ca2",
+        "ch_key": "Sportsnet.4K.ca2",
         "score": 5750,
-        "display_start": "2026-05-10T22:30:00Z",
-        "stop": "2026-05-11T02:00:00Z",
-        "start": "2026-05-10T23:00:00Z"
-      },
-      {
-        "title": "⚾ LOS ANGELES ANGELS AT TORONTO BLUE JAYS",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 1850,
-        "display_start": "2026-05-10T17:07:00Z",
-        "stop": "2026-05-10T20:37:00Z",
-        "start": "2026-05-10T17:37:00Z"
+        "display_start": "2026-05-12T22:30:00Z",
+        "stop": "2026-05-13T02:00:00Z",
+        "start": "2026-05-12T23:00:00Z"
       },
       {
         "title": "⚾ TAMPA BAY RAYS AT TORONTO BLUE JAYS",
@@ -86,13 +68,13 @@
         "start": "2026-05-11T23:07:00Z"
       },
       {
-        "title": "⚽ EVERTON AT CRYSTAL PALACE",
+        "title": "⚽ ATLÉTICO MADRID AT OSASUNA",
         "league": "",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 450,
-        "display_start": "2026-05-10T12:30:00Z",
-        "stop": "2026-05-10T16:00:00Z",
-        "start": "2026-05-10T13:00:00Z"
+        "ch_key": "beIN.SPORTS.2.fr",
+        "score": 350,
+        "display_start": "2026-05-12T19:00:00Z",
+        "stop": "2026-05-12T22:30:00Z",
+        "start": "2026-05-12T19:30:00Z"
       },
       {
         "title": "⚾ SAN FRANCISCO GIANTS AT LOS ANGELES DODGERS",
@@ -115,31 +97,13 @@
     ],
     "3": [
       {
-        "title": "🏒 VEGAS GOLDEN KNIGHTS AT ANAHEIM DUCKS",
+        "title": "🏒 ANAHEIM DUCKS AT VEGAS GOLDEN KNIGHTS",
         "league": "",
         "ch_key": "Sportsnet.4K.ca2",
         "score": 2150,
-        "display_start": "2026-05-11T01:00:00Z",
-        "stop": "2026-05-11T04:30:00Z",
-        "start": "2026-05-11T01:30:00Z"
-      },
-      {
-        "title": "⚽ LILLE AT AS MONACO",
-        "league": "",
-        "ch_key": "beIN.SPORTS.2.fr",
-        "score": 550,
-        "display_start": "2026-05-10T18:30:00Z",
-        "stop": "2026-05-10T22:00:00Z",
-        "start": "2026-05-10T19:00:00Z"
-      },
-      {
-        "title": "⚽ NEWCASTLE UNITED AT NOTTINGHAM FOREST",
-        "league": "",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 450,
-        "display_start": "2026-05-10T12:30:00Z",
-        "stop": "2026-05-10T16:00:00Z",
-        "start": "2026-05-10T13:00:00Z"
+        "display_start": "2026-05-13T01:00:00Z",
+        "stop": "2026-05-13T04:30:00Z",
+        "start": "2026-05-13T01:30:00Z"
       },
       {
         "title": "⚾ NEW YORK YANKEES AT BALTIMORE ORIOLES",
@@ -149,26 +113,26 @@
         "display_start": "2026-05-11T22:05:00Z",
         "stop": "2026-05-12T01:35:00Z",
         "start": "2026-05-11T22:35:00Z"
+      },
+      {
+        "title": "⚽ ELCHE AT REAL BETIS",
+        "league": "",
+        "ch_key": "beIN.SPORTS.MAX.4.fr",
+        "score": 150,
+        "display_start": "2026-05-12T17:30:00Z",
+        "stop": "2026-05-12T21:00:00Z",
+        "start": "2026-05-12T18:00:00Z"
       }
     ],
     "4": [
       {
-        "title": "⚾ DETROIT TIGERS AT KANSAS CITY ROYALS",
+        "title": "⚾ TAMPA BAY RAYS AT TORONTO BLUE JAYS",
         "league": "",
-        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
-        "score": 400,
-        "display_start": "2026-05-10T22:50:00Z",
-        "stop": "2026-05-11T02:20:00Z",
-        "start": "2026-05-10T23:20:00Z"
-      },
-      {
-        "title": "🏀 NEW YORK KNICKS AT PHILADELPHIA 76ERS",
-        "league": "",
-        "ch_key": "TSN.4.ca2",
-        "score": 350,
-        "display_start": "2026-05-10T19:00:00Z",
-        "stop": "2026-05-10T22:30:00Z",
-        "start": "2026-05-10T19:30:00Z"
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 1850,
+        "display_start": "2026-05-12T22:37:00Z",
+        "stop": "2026-05-13T02:07:00Z",
+        "start": "2026-05-12T23:07:00Z"
       },
       {
         "title": "⚾ LOS ANGELES ANGELS AT CLEVELAND GUARDIANS",
@@ -178,36 +142,9 @@
         "display_start": "2026-05-11T21:40:00Z",
         "stop": "2026-05-12T01:10:00Z",
         "start": "2026-05-11T22:10:00Z"
-      },
-      {
-        "title": "⚽ VALENCIA AT ATHLETIC CLUB",
-        "league": "",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 150,
-        "display_start": "2026-05-10T13:45:00Z",
-        "stop": "2026-05-10T17:15:00Z",
-        "start": "2026-05-10T14:15:00Z"
       }
     ],
     "5": [
-      {
-        "title": "🏀 SAN ANTONIO SPURS AT MINNESOTA TIMBERWOLVES",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 350,
-        "display_start": "2026-05-10T23:00:00Z",
-        "stop": "2026-05-11T02:30:00Z",
-        "start": "2026-05-10T23:30:00Z"
-      },
-      {
-        "title": "⚾ WASHINGTON NATIONALS AT MIAMI MARLINS",
-        "league": "",
-        "ch_key": "TNT.Sports.3.HD.uk",
-        "score": 350,
-        "display_start": "2026-05-10T15:45:00Z",
-        "stop": "2026-05-10T19:15:00Z",
-        "start": "2026-05-10T16:15:00Z"
-      },
       {
         "title": "⚾ SEATTLE MARINERS AT HOUSTON ASTROS",
         "league": "",
@@ -216,6 +153,15 @@
         "display_start": "2026-05-11T23:40:00Z",
         "stop": "2026-05-12T03:10:00Z",
         "start": "2026-05-12T00:10:00Z"
+      },
+      {
+        "title": "⚾ CHICAGO CUBS AT ATLANTA BRAVES",
+        "league": "",
+        "ch_key": "TNT.Sports.1.HD.uk",
+        "score": 350,
+        "display_start": "2026-05-12T22:45:00Z",
+        "stop": "2026-05-13T02:15:00Z",
+        "start": "2026-05-12T23:15:00Z"
       }
     ]
   }
