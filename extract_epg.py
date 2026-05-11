@@ -365,6 +365,7 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str, lg=None):
                 if lg in ['nhl', 'f1', 'cpl', 'nsl'] and is_generic_league_program(prog, lg) and time_diff <= 3600:
                     match_count = 1
                     generic_match = True
+                    print("Generic match found for " + lg + " : " + prog)
                 else:
                     continue
             if len(event_terms) >= 2 and match_count < 2 and not generic_match:
