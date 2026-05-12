@@ -439,7 +439,7 @@ def fetch_sports_db(league):
                 'name': e['strEvent'].upper(),
                 'date': parse_iso_utc(e['strTimestamp']).date(),
                 'start_time': parse_iso_utc(e['strTimestamp']).timetz(),
-                'league': 'cpl'
+                'league': league
             } for e in r.json().get('events', [])]
     except:
         return []
@@ -503,9 +503,9 @@ def calculate_score(name, ch_key, lg):
 
     if 'CANADIENS' in name:
         if is_rds_channel(ch_key) or is_fr:
-            score += 300
+            score += 3000
         elif is_en:
-            score += 100
+            score += 2000
 
     soccer_leagues = ['soccer', 'eng.1', 'fra.1', 'ita.1', 'esp.1', 'uefa', 'concacaf']
     if any(x in lg for x in soccer_leagues):
@@ -517,7 +517,7 @@ def calculate_score(name, ch_key, lg):
             score -= 100
             
     if lg == 'cpl':
-        score += 2000
+        score += 200
 
     if lg == 'mlb':
         if is_fr:
