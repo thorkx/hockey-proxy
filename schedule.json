@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T03:51:38Z",
+  "generated_at": "2026-05-13T08:51:29Z",
   "channels": {
     "1": [
       {
@@ -41,6 +41,15 @@
     ],
     "2": [
       {
+        "title": "🏒 VEGAS GOLDEN KNIGHTS AT ANAHEIM DUCKS",
+        "league": "",
+        "ch_key": "TVA.Sports.2.HD.ca2",
+        "score": 2050,
+        "display_start": "2026-05-15T01:00:00Z",
+        "stop": "2026-05-15T04:30:00Z",
+        "start": "2026-05-15T01:30:00Z"
+      },
+      {
         "title": "⚾ TAMPA BAY RAYS AT TORONTO BLUE JAYS",
         "league": "",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -66,22 +75,13 @@
         "display_start": "2026-05-14T16:40:00Z",
         "stop": "2026-05-14T20:10:00Z",
         "start": "2026-05-14T17:10:00Z"
-      },
-      {
-        "title": "⚾ PHILADELPHIA PHILLIES AT BOSTON RED SOX",
-        "league": "",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 350,
-        "display_start": "2026-05-14T22:15:00Z",
-        "stop": "2026-05-15T01:45:00Z",
-        "start": "2026-05-14T22:45:00Z"
       }
     ],
     "3": [
       {
         "title": "⚽ PORTLAND TIMBERS AT CF MONTRÉAL",
         "league": "",
-        "ch_key": "TSN.5.ca2",
+        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
         "score": 450,
         "display_start": "2026-05-13T23:00:00Z",
         "stop": "2026-05-14T02:30:00Z",
@@ -97,13 +97,13 @@
         "start": "2026-05-13T17:00:00Z"
       },
       {
-        "title": "⚾ CHICAGO CUBS AT ATLANTA BRAVES",
+        "title": "⚾ PHILADELPHIA PHILLIES AT BOSTON RED SOX",
         "league": "",
-        "ch_key": "TSN.2.ca2",
+        "ch_key": "TNT.Sports.1.HD.uk",
         "score": 350,
-        "display_start": "2026-05-14T22:45:00Z",
-        "stop": "2026-05-15T02:15:00Z",
-        "start": "2026-05-14T23:15:00Z"
+        "display_start": "2026-05-14T22:15:00Z",
+        "stop": "2026-05-15T01:45:00Z",
+        "start": "2026-05-14T22:45:00Z"
       },
       {
         "title": "⚽ RAYO VALLECANO AT VALENCIA",
@@ -133,6 +133,15 @@
         "display_start": "2026-05-13T19:00:00Z",
         "stop": "2026-05-13T22:30:00Z",
         "start": "2026-05-13T19:30:00Z"
+      },
+      {
+        "title": "⚾ CHICAGO CUBS AT ATLANTA BRAVES",
+        "league": "",
+        "ch_key": "TSN.2.ca2",
+        "score": 350,
+        "display_start": "2026-05-14T22:45:00Z",
+        "stop": "2026-05-15T02:15:00Z",
+        "start": "2026-05-14T23:15:00Z"
       },
       {
         "title": "⚽ REAL SOCIEDAD AT GIRONA",
