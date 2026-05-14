@@ -591,7 +591,7 @@ def generate_schedule(days=2):
         try:
             events = fetch_sports_db(lg)
             for e in events_to_process:
-                if any['SUPRA', 'ROSES'] in e['name']:
+                if e['name'] in ['SUPRA', 'ROSES']:
                     events_to_process.append({
                         'id': e['id'],
                         'name': e['name'],
