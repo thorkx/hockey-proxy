@@ -27,19 +27,19 @@ PRIORITY_CONFIG = {
         "f1": 400, "cpl": 400, "nsl": 300, "cfl": 300
     },
     "TEAMS": {
-        "CANADIENS": 3500,
-        "COLORADO AVALANCHE": 1500,
-        "WREXHAM AFC": 1500,
-        "WREXHAM": 1200,
-        "MANCHESTER CITY": 1500,
-        "PARIS SAINT-GERMAIN": 1500,
-        "TORONTO BLUE JAYS": 1500,
-        "TORONTO RAPTORS": 1500,
+        "CANADIENS": 2000,
+        "COLORADO AVALANCHE": 800,
+        "WREXHAM AFC": 900,
+        "WREXHAM": 900,
+        "MANCHESTER CITY": 1200,
+        "PARIS SAINT-GERMAIN": 1200,
+        "TORONTO BLUE JAYS": 1400,
+        "TORONTO RAPTORS": 800,
         "CF MONTREAL": 3000,
         "SUPRA DU QUEBEC": 2500,
         "SUPRA": 2500,
-        "ROSES DE MONTREAL": 20000,
-        "VICTOIRE DE MONTREAL": 2000,   # no source
+        "ROSES DE MONTREAL": 1500,
+        "VICTOIRE DE MONTREAL": 1500,   # no source
         "CANMNT": 2000,                 # no source
         "CANWNT": 2000                  # no source
     },
@@ -503,9 +503,11 @@ def calculate_score(name, ch_key, lg):
 
     if 'CANADIENS' in name:
         if is_rds_channel(ch_key) or is_fr:
-            score += 3000
+            score += 1000
         elif is_en:
-            score += 2000
+            score += 500
+        elif is_fr:
+            score += 400
 
     soccer_leagues = ['soccer', 'eng.1', 'fra.1', 'ita.1', 'esp.1', 'uefa', 'concacaf']
     if any(x in lg for x in soccer_leagues):
@@ -513,8 +515,6 @@ def calculate_score(name, ch_key, lg):
             score += 200
         elif is_en:
             score += 100
-        if is_tva_channel(ch_key):
-            score -= 100
             
     if lg == 'cpl':
         score += 200
@@ -538,8 +538,6 @@ def calculate_score(name, ch_key, lg):
         elif f1_type == 'qualifying':
             score += 150
             if is_sky_f1_channel(ch_key):
-                score += 125
-            elif is_en:
                 score += 125
             elif is_fr:
                 score += 75
@@ -700,7 +698,10 @@ def generate_schedule(days=2):
                      'stop': start + timedelta(hours=3), 
                      'league': hits[0]['lg']})
         else:
-            start = parse_espn_time(item['date'])
+            if item['lg'] in ['cpl', 'nsl']:
+                start = item['start_time']
+            else:
+                start = parse_espn_time(item['date'])
             events.append(
                 {'title': get_sport_icon(lg) + name, 
                  'ch_key': hits[0]['ch_key'], 
