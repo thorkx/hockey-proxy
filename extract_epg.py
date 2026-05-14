@@ -22,9 +22,9 @@ PRIORITY_CONFIG = {
     "LEAGUES": {
         "nhl": 800, "nba": 250, "wnba": 250, "uefa.champions": 375,
         "eng.1": 350, "fra.1": 350, "ita.1": 150, "esp.1": 150,
-        "uefa.europa": 350, "mlb": 250, "usa.1": 450,
+        "uefa.europa": 350, "mlb": 250, "usa.1": 750,
         "concacaf.nations": 600, "concacaf.champions": 500,
-        "f1": 400, "cpl": 400, "nsl": 300, "cfl": 300
+        "f1": 800, "cpl": 700, "nsl": 700, "cfl": 500
     },
     "TEAMS": {
         "CANADIENS": 2000,
@@ -38,8 +38,8 @@ PRIORITY_CONFIG = {
         "CF MONTREAL": 3000,
         "SUPRA DU QUEBEC": 2500,
         "SUPRA": 2500,
-        "ROSES DE MONTREAL": 1500,
-        "VICTOIRE DE MONTREAL": 1500,   # no source
+        "ROSES": 1500,
+        "VICTOIRE": 1500,   # no source
         "CANMNT": 2000,                 # no source
         "CANWNT": 2000                  # no source
     },
@@ -344,6 +344,9 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str, lg=None):
     candidates = []
     try:
         ev_time = parse_espn_time(ev_date_str)
+        #debug
+        if lg in any['cpl', 'nsl']:
+            print(lg + ' found. Time is :' + ev_date_str + ' formatted to ' + ev_time)
         event_terms = prepare_team_keywords(ev_name)
         if not event_terms:
             event_terms = [t for t in clean_name(ev_name).split() if len(t) > 3]
@@ -588,7 +591,7 @@ def generate_schedule(days=2):
         try:
             events = fetch_sports_db(lg)
             for e in events_to_process:
-                if 'SUPRA' in e['name']:
+                if any['SUPRA', 'ROSES'] in e['name']:
                     events_to_process.append({
                         'id': e['id'],
                         'name': e['name'],
