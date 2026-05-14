@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T20:02:39Z",
+  "generated_at": "2026-05-14T03:51:20Z",
   "channels": {
     "1": [
       {
@@ -12,22 +12,13 @@
         "start": "2026-05-14T23:00:00Z"
       },
       {
-        "title": "🏒 MINNESOTA WILD AT COLORADO AVALANCHE",
+        "title": "⚽ LIVERPOOL AT ASTON VILLA",
         "league": "",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 3650,
-        "display_start": "2026-05-13T23:30:00Z",
-        "stop": "2026-05-14T03:00:00Z",
-        "start": "2026-05-14T00:00:00Z"
-      },
-      {
-        "title": "⚽ CRYSTAL PALACE AT MANCHESTER CITY",
-        "league": "",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 1950,
-        "display_start": "2026-05-13T18:30:00Z",
-        "stop": "2026-05-13T22:00:00Z",
-        "start": "2026-05-13T19:00:00Z"
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 450,
+        "display_start": "2026-05-15T18:30:00Z",
+        "stop": "2026-05-15T22:00:00Z",
+        "start": "2026-05-15T19:00:00Z"
       },
       {
         "title": "⚾ ST. LOUIS CARDINALS AT ATHLETICS ATHLETICS",
@@ -37,6 +28,15 @@
         "display_start": "2026-05-14T18:35:00Z",
         "stop": "2026-05-14T22:05:00Z",
         "start": "2026-05-14T19:05:00Z"
+      },
+      {
+        "title": "⚾ NEW YORK YANKEES AT NEW YORK METS",
+        "league": "",
+        "ch_key": "Fox.Soccer.Plus.HD.us2",
+        "score": 350,
+        "display_start": "2026-05-15T22:40:00Z",
+        "stop": "2026-05-16T02:10:00Z",
+        "start": "2026-05-15T23:10:00Z"
       }
     ],
     "2": [
@@ -50,24 +50,6 @@
         "start": "2026-05-15T01:30:00Z"
       },
       {
-        "title": "⚾ TAMPA BAY RAYS AT TORONTO BLUE JAYS",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 1850,
-        "display_start": "2026-05-13T22:37:00Z",
-        "stop": "2026-05-14T02:07:00Z",
-        "start": "2026-05-13T23:07:00Z"
-      },
-      {
-        "title": "⚾ LOS ANGELES ANGELS AT CLEVELAND GUARDIANS",
-        "league": "",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 350,
-        "display_start": "2026-05-13T16:40:00Z",
-        "stop": "2026-05-13T20:10:00Z",
-        "start": "2026-05-13T17:10:00Z"
-      },
-      {
         "title": "⚾ DETROIT TIGERS AT NEW YORK METS",
         "league": "",
         "ch_key": "TNT.Sports.2.HD.uk",
@@ -75,27 +57,18 @@
         "display_start": "2026-05-14T16:40:00Z",
         "stop": "2026-05-14T20:10:00Z",
         "start": "2026-05-14T17:10:00Z"
+      },
+      {
+        "title": "⚾ CHICAGO CUBS AT CHICAGO WHITE SOX",
+        "league": "",
+        "ch_key": "TNT.Sports.1.HD.uk",
+        "score": 350,
+        "display_start": "2026-05-15T23:10:00Z",
+        "stop": "2026-05-16T02:40:00Z",
+        "start": "2026-05-15T23:40:00Z"
       }
     ],
     "3": [
-      {
-        "title": "⚽ PORTLAND TIMBERS AT CF MONTRÉAL",
-        "league": "",
-        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
-        "score": 450,
-        "display_start": "2026-05-13T23:00:00Z",
-        "stop": "2026-05-14T02:30:00Z",
-        "start": "2026-05-13T23:30:00Z"
-      },
-      {
-        "title": "⚽ SEVILLA AT VILLARREAL",
-        "league": "",
-        "ch_key": "beIN.SPORTS.2.fr",
-        "score": 350,
-        "display_start": "2026-05-13T16:30:00Z",
-        "stop": "2026-05-13T20:00:00Z",
-        "start": "2026-05-13T17:00:00Z"
-      },
       {
         "title": "⚾ PHILADELPHIA PHILLIES AT BOSTON RED SOX",
         "league": "",
@@ -104,6 +77,15 @@
         "display_start": "2026-05-14T22:15:00Z",
         "stop": "2026-05-15T01:45:00Z",
         "start": "2026-05-14T22:45:00Z"
+      },
+      {
+        "title": "⚾ KANSAS CITY ROYALS AT ST. LOUIS CARDINALS",
+        "league": "",
+        "ch_key": "TNT.Sports.3.HD.uk",
+        "score": 350,
+        "display_start": "2026-05-15T23:45:00Z",
+        "stop": "2026-05-16T03:15:00Z",
+        "start": "2026-05-16T00:15:00Z"
       },
       {
         "title": "⚽ RAYO VALLECANO AT VALENCIA",
@@ -117,24 +99,6 @@
     ],
     "4": [
       {
-        "title": "⚽ COLORADO RAPIDS AT MINNESOTA UNITED FC",
-        "league": "",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 450,
-        "display_start": "2026-05-14T00:00:00Z",
-        "stop": "2026-05-14T03:30:00Z",
-        "start": "2026-05-14T00:30:00Z"
-      },
-      {
-        "title": "⚽ BARCELONA AT ALAVÉS",
-        "league": "",
-        "ch_key": "beIN.SPORTS.2.fr",
-        "score": 350,
-        "display_start": "2026-05-13T19:00:00Z",
-        "stop": "2026-05-13T22:30:00Z",
-        "start": "2026-05-13T19:30:00Z"
-      },
-      {
         "title": "⚾ CHICAGO CUBS AT ATLANTA BRAVES",
         "league": "",
         "ch_key": "TSN.2.ca2",
@@ -142,6 +106,15 @@
         "display_start": "2026-05-14T22:45:00Z",
         "stop": "2026-05-15T02:15:00Z",
         "start": "2026-05-14T23:15:00Z"
+      },
+      {
+        "title": "⚾ LOS ANGELES DODGERS AT LOS ANGELES ANGELS",
+        "league": "",
+        "ch_key": "TNT.Sports.2.HD.uk",
+        "score": 350,
+        "display_start": "2026-05-16T01:08:00Z",
+        "stop": "2026-05-16T04:38:00Z",
+        "start": "2026-05-16T01:38:00Z"
       },
       {
         "title": "⚽ REAL SOCIEDAD AT GIRONA",
@@ -155,22 +128,13 @@
     ],
     "5": [
       {
-        "title": "⚽ LA GALAXY AT SPORTING KANSAS CITY",
+        "title": "⚾ SAN FRANCISCO GIANTS AT ATHLETICS ATHLETICS",
         "league": "",
-        "ch_key": "CBS.Sports.Network.HD.us2",
-        "score": 450,
-        "display_start": "2026-05-14T00:00:00Z",
-        "stop": "2026-05-14T03:30:00Z",
-        "start": "2026-05-14T00:30:00Z"
-      },
-      {
-        "title": "⚽ ATHLETIC CLUB AT ESPANYOL",
-        "league": "",
-        "ch_key": "beIN.SPORTS.MAX.5.fr",
-        "score": 150,
-        "display_start": "2026-05-13T16:30:00Z",
-        "stop": "2026-05-13T20:00:00Z",
-        "start": "2026-05-13T17:00:00Z"
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 350,
+        "display_start": "2026-05-16T01:10:00Z",
+        "stop": "2026-05-16T04:40:00Z",
+        "start": "2026-05-16T01:40:00Z"
       },
       {
         "title": "⚽ REAL OVIEDO AT REAL MADRID",
