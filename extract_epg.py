@@ -430,8 +430,8 @@ def fetch_sports_db(league):
             return []
         
         for day in range(0,2):
-            url = "https://www.thesportsdb.com/api/v1/json/123/eventsday.php?d={now.strftime('%Y-%m-%d')}&l={league_id}"
             now = datetime.now(timezone.utc) + timedelta(days=day)
+            url = "https://www.thesportsdb.com/api/v1/json/123/eventsday.php?d={now.strftime('%Y-%m-%d')}&l={league_id}"
             r = requests.get(url, timeout=5)
             if r.status_code != 200: return []
             return [{
