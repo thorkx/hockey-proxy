@@ -1,30 +1,6 @@
 [
   {
     "ch": "Sportsnet.One.HD.ca2",
-    "start": "2026-05-15T05:00:00",
-    "title": "NHL in 30",
-    "sub-title": "2026: Montreal at Buffalo",
-    "desc": "Game 5 from May 14, 2026.",
-    "category": "Series"
-  },
-  {
-    "ch": "Sportsnet.One.HD.ca2",
-    "start": "2026-05-15T05:30:00",
-    "title": "NHL in 30",
-    "sub-title": "2026: Montreal at Buffalo",
-    "desc": "Game 5 from May 14, 2026.",
-    "category": "Series"
-  },
-  {
-    "ch": "Sportsnet.One.HD.ca2",
-    "start": "2026-05-15T06:00:00",
-    "title": "NHL in 30",
-    "sub-title": "2026: Vegas at Anaheim",
-    "desc": "Game 6 from May 14, 2026.",
-    "category": "Series"
-  },
-  {
-    "ch": "Sportsnet.One.HD.ca2",
     "start": "2026-05-15T06:30:00",
     "title": "NHL in 30",
     "sub-title": "2026: Montreal at Buffalo",
@@ -1008,27 +984,35 @@
     "category": "Sports"
   },
   {
-    "ch": "Sportsnet.World.HD.ca2",
-    "start": "2026-05-15T05:00:00",
-    "title": "FA Cup Classics",
-    "sub-title": "1995: Spurs vs. Everton",
-    "desc": "From April 9, 1995.",
-    "category": "Series"
-  },
-  {
-    "ch": "Sportsnet.World.HD.ca2",
-    "start": "2026-05-15T05:30:00",
-    "title": "FA Cup Classics",
-    "sub-title": "1995: Crystal Palace vs. Manchester United",
-    "desc": "From April 9, 1995.",
-    "category": "Series"
-  },
-  {
-    "ch": "Sportsnet.World.HD.ca2",
-    "start": "2026-05-15T06:00:00",
-    "title": "Women's State of Origin",
+    "ch": "Sportsnet.One.HD.ca2",
+    "start": "2026-05-18T12:30:00",
+    "title": "Blue Jays in 30",
     "sub-title": "",
-    "desc": "From Suncorp Stadium in Milton, Queensland, Australia.",
+    "desc": "From May 17, 2026.",
+    "category": "Sports"
+  },
+  {
+    "ch": "Sportsnet.One.HD.ca2",
+    "start": "2026-05-18T13:00:00",
+    "title": "Blue Jays in 30",
+    "sub-title": "",
+    "desc": "From May 17, 2026.",
+    "category": "Sports"
+  },
+  {
+    "ch": "Sportsnet.One.HD.ca2",
+    "start": "2026-05-18T13:30:00",
+    "title": "Blue Jays in 30",
+    "sub-title": "",
+    "desc": "From May 17, 2026.",
+    "category": "Sports"
+  },
+  {
+    "ch": "Sportsnet.One.HD.ca2",
+    "start": "2026-05-18T14:00:00",
+    "title": "Blue Jays in 30",
+    "sub-title": "",
+    "desc": "From May 17, 2026.",
     "category": "Sports"
   },
   {
@@ -1536,12 +1520,12 @@
     "category": "Sports"
   },
   {
-    "ch": "RDS2.HD.ca2",
-    "start": "2026-05-15T06:00:00",
-    "title": "L'antichambre",
+    "ch": "Sportsnet.World.HD.ca2",
+    "start": "2026-05-18T14:00:00",
+    "title": "By the Books",
     "sub-title": "",
-    "desc": "On propose des débats sur les sujets les plus chauds de l'actualité sportive.",
-    "category": "Series"
+    "desc": "Host Dave Ross, with the latest betting information to get you set for your day.",
+    "category": "Bus./financial"
   },
   {
     "ch": "RDS2.HD.ca2",
@@ -2136,12 +2120,28 @@
     "category": "Series"
   },
   {
-    "ch": "TVA.Sports.2.HD.ca2",
-    "start": "2026-05-15T05:00:00",
-    "title": "Tennis: Tournoi de Rome 2026",
+    "ch": "RDS2.HD.ca2",
+    "start": "2026-05-18T12:30:00",
+    "title": "Le 5 à 7 en rappel",
     "sub-title": "",
-    "desc": "En provenance du Foco Italico, à Rome.",
-    "category": "Sports"
+    "desc": "Compte-rendu des meilleurs moments de la semaine.",
+    "category": "Series"
+  },
+  {
+    "ch": "RDS2.HD.ca2",
+    "start": "2026-05-18T13:00:00",
+    "title": "Le 5 à 7 en rappel",
+    "sub-title": "",
+    "desc": "Compte-rendu des meilleurs moments de la semaine.",
+    "category": "Series"
+  },
+  {
+    "ch": "RDS2.HD.ca2",
+    "start": "2026-05-18T13:30:00",
+    "title": "La revanche des Red Sox",
+    "sub-title": "Le doute",
+    "desc": "Les admirateurs des Red Sox partagent des décennies de défaites et de désillusions jusqu'en 2004, année où leur équipe affronte les Yankees en ALCS; un seul moment change tout.",
+    "category": "Series"
   },
   {
     "ch": "TVA.Sports.2.HD.ca2",
@@ -2624,28 +2624,20 @@
     "category": "Sports"
   },
   {
-    "ch": "Sportsnet.East.HD.ca2",
-    "start": "2026-05-15T04:30:00",
-    "title": "Live: Sportsnet Central",
+    "ch": "TVA.Sports.2.HD.ca2",
+    "start": "2026-05-18T13:30:00",
+    "title": "L'académie du guide de l'auto",
+    "sub-title": "Des soeurs toujours en compétition!",
+    "desc": "Aucun compromis, Justine et Chloé Dufour-Lapointe ont l'habitude des podiums et la Polestar 3, présentée par Antoine Joubert, a tout pour combler leurs besoins de compétition; ensuite, place à l'aventure avec Anaïs Favron.",
+    "category": "Series"
+  },
+  {
+    "ch": "TVA.Sports.2.HD.ca2",
+    "start": "2026-05-18T14:00:00",
+    "title": "Infopublicité",
     "sub-title": "",
-    "desc": "Canada's premier destination for sports and analysis.",
-    "category": "News"
-  },
-  {
-    "ch": "Sportsnet.East.HD.ca2",
-    "start": "2026-05-15T05:30:00",
-    "title": "NHL in 30",
-    "sub-title": "2026: Montreal at Buffalo",
-    "desc": "Game 5 from May 14, 2026.",
-    "category": "Series"
-  },
-  {
-    "ch": "Sportsnet.East.HD.ca2",
-    "start": "2026-05-15T06:00:00",
-    "title": "NHL in 30",
-    "sub-title": "2026: Vegas at Anaheim",
-    "desc": "Game 6 from May 14, 2026.",
-    "category": "Series"
+    "desc": "Ceci est une émission publicitaire payée.",
+    "category": "Shopping"
   },
   {
     "ch": "Sportsnet.East.HD.ca2",
@@ -3360,28 +3352,20 @@
     "category": "News"
   },
   {
-    "ch": "Sportsnet.(Pacific).HD.ca2",
-    "start": "2026-05-15T04:30:00",
-    "title": "Live: Sportsnet Central",
+    "ch": "Sportsnet.East.HD.ca2",
+    "start": "2026-05-18T13:00:00",
+    "title": "Sportsnet Central",
     "sub-title": "",
     "desc": "Canada's premier destination for sports and analysis.",
     "category": "News"
   },
   {
-    "ch": "Sportsnet.(Pacific).HD.ca2",
-    "start": "2026-05-15T05:30:00",
-    "title": "NHL in 30",
-    "sub-title": "2026: Montreal at Buffalo",
-    "desc": "Game 5 from May 14, 2026.",
-    "category": "Series"
-  },
-  {
-    "ch": "Sportsnet.(Pacific).HD.ca2",
-    "start": "2026-05-15T06:00:00",
-    "title": "NHL in 30",
-    "sub-title": "2026: Vegas at Anaheim",
-    "desc": "Game 6 from May 14, 2026.",
-    "category": "Series"
+    "ch": "Sportsnet.East.HD.ca2",
+    "start": "2026-05-18T14:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
   },
   {
     "ch": "Sportsnet.(Pacific).HD.ca2",
@@ -4056,28 +4040,20 @@
     "category": "News"
   },
   {
-    "ch": "Sportsnet.West.HD.ca2",
-    "start": "2026-05-15T04:30:00",
-    "title": "Live: Sportsnet Central",
+    "ch": "Sportsnet.(Pacific).HD.ca2",
+    "start": "2026-05-18T13:00:00",
+    "title": "Sportsnet Central",
     "sub-title": "",
     "desc": "Canada's premier destination for sports and analysis.",
     "category": "News"
   },
   {
-    "ch": "Sportsnet.West.HD.ca2",
-    "start": "2026-05-15T05:30:00",
-    "title": "NHL in 30",
-    "sub-title": "2026: Montreal at Buffalo",
-    "desc": "Game 5 from May 14, 2026.",
-    "category": "Series"
-  },
-  {
-    "ch": "Sportsnet.West.HD.ca2",
-    "start": "2026-05-15T06:00:00",
-    "title": "NHL in 30",
-    "sub-title": "2026: Vegas at Anaheim",
-    "desc": "Game 6 from May 14, 2026.",
-    "category": "Series"
+    "ch": "Sportsnet.(Pacific).HD.ca2",
+    "start": "2026-05-18T14:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
   },
   {
     "ch": "Sportsnet.West.HD.ca2",
@@ -4792,20 +4768,20 @@
     "category": "News"
   },
   {
-    "ch": "Réseau.des.Sports.(RDS).HD.ca2",
-    "start": "2026-05-15T05:00:00",
-    "title": "Plongeon",
+    "ch": "Sportsnet.West.HD.ca2",
+    "start": "2026-05-18T13:00:00",
+    "title": "Sportsnet Central",
     "sub-title": "",
-    "desc": "En provenance de Windsor, en Ontario.",
-    "category": "Sports"
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
   },
   {
-    "ch": "Réseau.des.Sports.(RDS).HD.ca2",
-    "start": "2026-05-15T06:00:00",
-    "title": "Sports 30",
+    "ch": "Sportsnet.West.HD.ca2",
+    "start": "2026-05-18T14:00:00",
+    "title": "Sportsnet Central",
     "sub-title": "",
-    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
-    "category": "Sports talk"
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
   },
   {
     "ch": "Réseau.des.Sports.(RDS).HD.ca2",
@@ -5504,20 +5480,20 @@
     "category": "Sports talk"
   },
   {
-    "ch": "ICI.Tele.HD.ca2",
-    "start": "2026-05-15T05:00:00",
-    "title": "Hay Horizon",
+    "ch": "Réseau.des.Sports.(RDS).HD.ca2",
+    "start": "2026-05-18T13:00:00",
+    "title": "Sports 30",
     "sub-title": "",
-    "desc": "Hay Horizon reflète la vie de tous les jours des Arméniens à Montréal.",
-    "category": "Community"
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
+    "category": "Sports talk"
   },
   {
-    "ch": "ICI.Tele.HD.ca2",
-    "start": "2026-05-15T06:00:00",
-    "title": "Ça va causer",
+    "ch": "Réseau.des.Sports.(RDS).HD.ca2",
+    "start": "2026-05-18T14:00:00",
+    "title": "Live: Championnat mondial masculin de l'IIHF 2026",
     "sub-title": "",
-    "desc": "Tribune d'expression francophone qui offre un large éventail de l'apport culturel de la société.",
-    "category": "Community"
+    "desc": "En provenance de la BCF Arena, à Firbourg, en Suisse.",
+    "category": "Sports"
   },
   {
     "ch": "ICI.Tele.HD.ca2",
@@ -6496,6 +6472,38 @@
     "category": "Health"
   },
   {
+    "ch": "ICI.Tele.HD.ca2",
+    "start": "2026-05-18T12:30:00",
+    "title": "Ukrainian Wave",
+    "sub-title": "",
+    "desc": "Ukrainian Wave talks about the events in the Ukrainian community in Quebec, through interviews, coverage of community events, and current events.",
+    "category": "Interview"
+  },
+  {
+    "ch": "ICI.Tele.HD.ca2",
+    "start": "2026-05-18T13:00:00",
+    "title": "Padelle & Grembiuli",
+    "sub-title": "",
+    "desc": "Une émission de cuisine qui met en vedette différents chefs locaux italiens qui partagent leurs recettes à l'Institut Culinaire du Centro Leonardo Da Vinci.",
+    "category": "Cooking"
+  },
+  {
+    "ch": "ICI.Tele.HD.ca2",
+    "start": "2026-05-18T13:30:00",
+    "title": "Kalimera Patrida",
+    "sub-title": "",
+    "desc": "Interviews with various Greek local personalities and information about what is happening in all levels of government within the Greek community.",
+    "category": "News"
+  },
+  {
+    "ch": "ICI.Tele.HD.ca2",
+    "start": "2026-05-18T14:00:00",
+    "title": "Mixe-moi ça!",
+    "sub-title": "",
+    "desc": "Une émission de cuisine avec la diététiste-nutritionniste Florence Sidney qui nous présente des ingrédients hors de l'ordinaire.",
+    "category": "Cooking"
+  },
+  {
     "ch": "TVA.Sports.HD.ca2",
     "start": "2026-05-15T06:45:00",
     "title": "L'après-match LNH",
@@ -6949,14 +6957,6 @@
     "title": "Baseball MLB",
     "sub-title": "",
     "desc": "Les Blue Jays de Toronto et les Tigers de Détroit disputent le dernier match de leur série de trois rencontres. À l'approche du weekend, Détroit affiche un excellent bilan au Comerica Park.",
-    "category": "Sports"
-  },
-  {
-    "ch": "TSN.2.ca2",
-    "start": "2026-05-15T05:00:00",
-    "title": "Hockey",
-    "sub-title": "",
-    "desc": "Final. From June 6, 2021.",
     "category": "Sports"
   },
   {
@@ -7433,22 +7433,6 @@
   },
   {
     "ch": "TSN.3.ca2",
-    "start": "2026-05-15T05:00:00",
-    "title": "Live: SportsCentre",
-    "sub-title": "",
-    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
-    "category": "News"
-  },
-  {
-    "ch": "TSN.3.ca2",
-    "start": "2026-05-15T06:00:00",
-    "title": "SportsCentre",
-    "sub-title": "",
-    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
-    "category": "News"
-  },
-  {
-    "ch": "TSN.3.ca2",
     "start": "2026-05-15T07:00:00",
     "title": "SportsCentre",
     "sub-title": "",
@@ -7889,22 +7873,6 @@
   },
   {
     "ch": "TSN.4.ca2",
-    "start": "2026-05-15T05:00:00",
-    "title": "Live: SportsCentre",
-    "sub-title": "",
-    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
-    "category": "News"
-  },
-  {
-    "ch": "TSN.4.ca2",
-    "start": "2026-05-15T06:00:00",
-    "title": "SportsCentre",
-    "sub-title": "",
-    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
-    "category": "News"
-  },
-  {
-    "ch": "TSN.4.ca2",
     "start": "2026-05-15T07:00:00",
     "title": "SC With Jay Onrait",
     "sub-title": "",
@@ -8230,22 +8198,6 @@
     "sub-title": "",
     "desc": "WHL Championship Series, Game 6. (If necessary).",
     "category": "Sports"
-  },
-  {
-    "ch": "TSN.5.ca2",
-    "start": "2026-05-15T05:00:00",
-    "title": "Live: SportsCentre",
-    "sub-title": "",
-    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
-    "category": "News"
-  },
-  {
-    "ch": "TSN.5.ca2",
-    "start": "2026-05-15T06:00:00",
-    "title": "SportsCentre",
-    "sub-title": "",
-    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
-    "category": "News"
   },
   {
     "ch": "TSN.5.ca2",
@@ -8729,38 +8681,6 @@
   },
   {
     "ch": "Sportsnet.360.HD.ca2",
-    "start": "2026-05-15T04:30:00",
-    "title": "NHL's Best Goals of the Season",
-    "sub-title": "",
-    "desc": "Highlights of the league's top scoring plays.",
-    "category": "Special"
-  },
-  {
-    "ch": "Sportsnet.360.HD.ca2",
-    "start": "2026-05-15T05:00:00",
-    "title": "Gotta See It",
-    "sub-title": "",
-    "desc": "Must-see moments from the world of sports.",
-    "category": "Community"
-  },
-  {
-    "ch": "Sportsnet.360.HD.ca2",
-    "start": "2026-05-15T05:30:00",
-    "title": "NHL's Best of the Season",
-    "sub-title": "Countdown",
-    "desc": "Showcasing the most exciting plays from this season in the NHL.",
-    "category": "Series"
-  },
-  {
-    "ch": "Sportsnet.360.HD.ca2",
-    "start": "2026-05-15T06:00:00",
-    "title": "Stanley Cup Playoffs Rewind",
-    "sub-title": "2026: Montreal at Buffalo",
-    "desc": "Game 5, from May 15, 2026.",
-    "category": "Series"
-  },
-  {
-    "ch": "Sportsnet.360.HD.ca2",
     "start": "2026-05-15T08:00:00",
     "title": "Stanley Cup Playoffs Rewind",
     "sub-title": "2026: Vegas at Anaheim",
@@ -9225,14 +9145,6 @@
   },
   {
     "ch": "One.Soccer.ca2",
-    "start": "2026-05-15T09:01:00",
-    "title": "Canadian Championship",
-    "sub-title": "Supra du Québec vs. Woodbridge Strikers",
-    "desc": "Preliminary Round.",
-    "category": "Sports"
-  },
-  {
-    "ch": "One.Soccer.ca2",
     "start": "2026-05-15T11:02:00",
     "title": "Canadian Championship",
     "sub-title": "Forge FC vs. HFX Wanderers FC",
@@ -9609,14 +9521,6 @@
   },
   {
     "ch": "TSN.4K.ca2",
-    "start": "2026-05-15T10:00:00",
-    "title": "Watch 4K Coverage of Live Sports Action",
-    "sub-title": "",
-    "desc": "Tune in for live sports in 4K.",
-    "category": "Sports"
-  },
-  {
-    "ch": "TSN.4K.ca2",
     "start": "2026-05-15T14:00:00",
     "title": "Watch 4K Coverage of Live Sports Action",
     "sub-title": "",
@@ -9757,22 +9661,6 @@
     "title": "Watch 4K Coverage of Live Sports Action",
     "sub-title": "",
     "desc": "Tune in for live sports in 4K.",
-    "category": "Sports"
-  },
-  {
-    "ch": "Sportsnet.4K.ca2",
-    "start": "2026-05-15T09:00:00",
-    "title": "Sportsnet Central",
-    "sub-title": "",
-    "desc": "Canada's premier destination for sports and analysis.",
-    "category": "Sports"
-  },
-  {
-    "ch": "Sportsnet.4K.ca2",
-    "start": "2026-05-15T10:00:00",
-    "title": "Sportsnet Central",
-    "sub-title": "",
-    "desc": "Canada's premier destination for sports and analysis.",
     "category": "Sports"
   },
   {
@@ -10417,14 +10305,6 @@
   },
   {
     "ch": "Fox.Soccer.Plus.HD.us2",
-    "start": "2026-05-15T05:00:00",
-    "title": "AFL Premiership Football",
-    "sub-title": "",
-    "desc": "From Brisbane Cricket Ground in Brisbane, Queensland, Australia.",
-    "category": "Sports"
-  },
-  {
-    "ch": "Fox.Soccer.Plus.HD.us2",
     "start": "2026-05-15T07:58:00",
     "title": "Live: NRL Rugby",
     "sub-title": "",
@@ -10993,22 +10873,6 @@
   },
   {
     "ch": "ESPN.HD.us2",
-    "start": "2026-05-15T05:00:00",
-    "title": "Live: SportsCenter",
-    "sub-title": "",
-    "desc": "The latest news, highlights and inside information from every corner of the sports world is presented each day on \"SportsCenter,\" ESPN's first-ever program when the network debuted in September of 1979. The flagship series airs an evening edition and a brand new midnight show each weekday before the stage is cleared for a live \"SportsCenter\" morning block that emphasizes fast-paced, highlights-driven reports and what's new on social media platforms.",
-    "category": "News"
-  },
-  {
-    "ch": "ESPN.HD.us2",
-    "start": "2026-05-15T06:00:00",
-    "title": "SportsCenter",
-    "sub-title": "",
-    "desc": "The latest news, highlights and inside information from every corner of the sports world is presented each day on \"SportsCenter,\" ESPN's first-ever program when the network debuted in September of 1979. The flagship series airs an evening edition and a brand new midnight show each weekday before the stage is cleared for a live \"SportsCenter\" morning block that emphasizes fast-paced, highlights-driven reports and what's new on social media platforms.",
-    "category": "News"
-  },
-  {
-    "ch": "ESPN.HD.us2",
     "start": "2026-05-15T07:00:00",
     "title": "SportsCenter",
     "sub-title": "",
@@ -11374,22 +11238,6 @@
     "sub-title": "",
     "desc": "The latest news, highlights and inside information from every corner of the sports world is presented each day on \"SportsCenter,\" ESPN's first-ever program when the network debuted in September of 1979. The flagship series airs an evening edition and a brand new midnight show each weekday before the stage is cleared for a live \"SportsCenter\" morning block that emphasizes fast-paced, highlights-driven reports and what's new on social media platforms.",
     "category": "News"
-  },
-  {
-    "ch": "ESPN2.HD.us2",
-    "start": "2026-05-15T05:00:00",
-    "title": "Game On: Journey to the NCAA Championship",
-    "sub-title": "Softball",
-    "desc": "Series focused on eight different NCAA sports leading up to their respective NCAA Championships.",
-    "category": "Series"
-  },
-  {
-    "ch": "ESPN2.HD.us2",
-    "start": "2026-05-15T06:00:00",
-    "title": "E60",
-    "sub-title": "Once Upon a Time in Anaheim",
-    "desc": "The origins of The Mighty Ducks of Anaheim franchise in 1993 through the team's fairytale run at the most prized possession in hockey, The Stanley Cup.",
-    "category": "Series"
   },
   {
     "ch": "ESPN2.HD.us2",
@@ -11765,22 +11613,6 @@
     "title": "30 for 30",
     "sub-title": "This Magic Moment",
     "desc": "The Orlando Magic are considered the fairytale team of the mid-'90s whose popularity grew, in part, due to players like Shaquille O'Neal and Penny Hardaway.",
-    "category": "Series"
-  },
-  {
-    "ch": "CBS.Sports.Network.HD.us2",
-    "start": "2026-05-15T05:00:00",
-    "title": "2026 PokerGO Cup",
-    "sub-title": "Event #6 - $10K No-Limit Hold'em - Part 1",
-    "desc": "High-stakes poker games made up of the world's top players.",
-    "category": "Series"
-  },
-  {
-    "ch": "CBS.Sports.Network.HD.us2",
-    "start": "2026-05-15T06:00:00",
-    "title": "2026 PokerGO Cup",
-    "sub-title": "Event #6 - $10K No-Limit Hold'em - Part 2",
-    "desc": "High-stakes poker games made up of the world's top players.",
     "category": "Series"
   },
   {
@@ -12190,22 +12022,6 @@
     "sub-title": "",
     "desc": "The PGA Championship concludes with the final round at Aronimink Golf Club in Pennsylvania. The remaining field navigates the 7,394-yard, par-70 layout over the final 18 holes to secure a share of the $19 million tournament prize purse.",
     "category": "Sports"
-  },
-  {
-    "ch": "ESPN.Deportes.HD.us2",
-    "start": "2026-05-15T05:00:00",
-    "title": "Fútbol picante",
-    "sub-title": "",
-    "desc": "La mesa más picante discute las últimas novedades del fútbol mexicano y analiza la actuación de los futbolistas mexicanos en el exterior.",
-    "category": "Sports talk"
-  },
-  {
-    "ch": "ESPN.Deportes.HD.us2",
-    "start": "2026-05-15T06:00:00",
-    "title": "SportsCenter",
-    "sub-title": "",
-    "desc": "Las últimas noticias, momentos destacados e información de todos los rincones del mundo del deporte se presenta cada día en \"SportsCenter\", el primer programa de ESPN cuando la red se estrenó en septiembre de 1979. La serie se transmite en tres ediciones nocturnas, luego se re-transmite la última edición cuatro veces cada mañana de lunes a viernes antes de despejar el escenario para un bloque de seis horas de \"SportsCenter\" en vivo, que pone más énfasis en la interactividad de los fanáticos, noticias, análisis, comentarios y la cobertura de las conferencias de prensa.",
-    "category": "News"
   },
   {
     "ch": "ESPN.Deportes.HD.us2",
@@ -12673,30 +12489,6 @@
   },
   {
     "ch": "SkySp.F1.HD.uk",
-    "start": "2026-05-15T04:25:00",
-    "title": "The Best of China 2026",
-    "sub-title": "",
-    "desc": "A round-up of the leading stories and features with Sky's Formula 1 presenters during the 2026 Chinese Grand Prix in Shanghai.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.F1.HD.uk",
-    "start": "2026-05-15T05:00:00",
-    "title": "The Best of F1 2018",
-    "sub-title": "",
-    "desc": "The 2018 Belgian Grand Prix, held at the Circuit de Spa-Francorchamps. Lewis Hamilton starts on pole here ahead of Sebastian Vettel and Force India's Esteban Ocon.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.F1.HD.uk",
-    "start": "2026-05-15T06:00:00",
-    "title": "The Best of F1 2018",
-    "sub-title": "",
-    "desc": "The 2018 Italian Grand Prix from the iconic Monza. Kimi Raikkonen starts on pole after an excellent end to qualifying, with Sebastian Vettel in second and Lewis Hamilton in third.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.F1.HD.uk",
     "start": "2026-05-15T07:00:00",
     "title": "The Best of F1 2018",
     "sub-title": "",
@@ -13037,54 +12829,6 @@
     "title": "Live Indy 500: Qualifying",
     "sub-title": "",
     "desc": "Qualifying for the 110th Running of the Indianapolis 500 continues at Indianapolis Motor Speedway as the 2026 field of IndyCar stars battle for grid positions.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.PL.HD.uk",
-    "start": "2026-05-15T04:30:00",
-    "title": "Best PL Goals: Man Utd v Everton",
-    "sub-title": "",
-    "desc": "Enjoy some of the finest Premier League goals from past meetings between Manchester United and Everton.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.PL.HD.uk",
-    "start": "2026-05-15T05:00:00",
-    "title": "PL Greatest Games:Newc/Arsenal '11",
-    "sub-title": "",
-    "desc": "A chance to relive some classic Premier League matches. Here, Newcastle's dramatic comeback against Arsenal back in the 2010-11 season that saw the Magpies recover from four goals down.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.PL.HD.uk",
-    "start": "2026-05-15T05:15:00",
-    "title": "PL Greatest Games:Man U/L'Pool '92",
-    "sub-title": "",
-    "desc": "Classic action from the Premier League. Here, a memorable meeting of arch rivals Manchester United and Liverpool back in 1992 that saw four goals.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.PL.HD.uk",
-    "start": "2026-05-15T05:30:00",
-    "title": "PL Greatest Games:Chelsea/Wigan'10",
-    "sub-title": "",
-    "desc": "A chance to relive a classic match from the Premier League. Here, Chelsea secure the title back in the 2009-10 season in a match against Wigan that saw the Blues score eight times.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.PL.HD.uk",
-    "start": "2026-05-15T05:45:00",
-    "title": "PL Greatest: Man City/Man Utd  '13",
-    "sub-title": "",
-    "desc": "A chance to relive a classic match from the Premier League. Here, a captivating Manchester derby back in 2013 at the Etihad Stadium that saw five goals and one side run rampant.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.PL.HD.uk",
-    "start": "2026-05-15T06:00:00",
-    "title": "PL Legends: David Ginola",
-    "sub-title": "",
-    "desc": "A profile of former Newcastle United and Tottenham midfielder David Ginola. Capped 17 times for France, Ginola was famed for his Gallic flair and silky skills.",
     "category": "Sports"
   },
   {
@@ -13753,46 +13497,6 @@
   },
   {
     "ch": "TNT.Sports.1.HD.uk",
-    "start": "2026-05-15T04:30:00",
-    "title": "MotoGP Rewind",
-    "sub-title": "Grand Prix of France",
-    "desc": "A look back at the best action from the MotoGP Grand Prix of France.",
-    "category": "Motorcycling"
-  },
-  {
-    "ch": "TNT.Sports.1.HD.uk",
-    "start": "2026-05-15T04:45:00",
-    "title": "The Gallagher PREM - The Wrap Up",
-    "sub-title": "Round 15",
-    "desc": "A look back at all of the biggest stories and best action from the 15th round of fixtures, including Bristol Bears v Saracens, Exeter Chiefs v Bath Rugby, and more.",
-    "category": "Rugby Union - Domestic"
-  },
-  {
-    "ch": "TNT.Sports.1.HD.uk",
-    "start": "2026-05-15T05:00:00",
-    "title": "Premier League Stories",
-    "sub-title": "PL Stories: Andros Townsend",
-    "desc": "Andros Townsend reflects on a career that took him through some of England's biggest clubs, while navigating the setbacks and defining moments that tested him on and off the pitch.",
-    "category": "Football - Club"
-  },
-  {
-    "ch": "TNT.Sports.1.HD.uk",
-    "start": "2026-05-15T05:30:00",
-    "title": "Premier League - The Big Interview",
-    "sub-title": "",
-    "desc": "An interview with Bournemouth midfielder Tyler Adams.",
-    "category": "Football - Club"
-  },
-  {
-    "ch": "TNT.Sports.1.HD.uk",
-    "start": "2026-05-15T06:00:00",
-    "title": "Match Officials Mic'd Up",
-    "sub-title": "",
-    "desc": "PGMOL Chief Refereeing Officer Howard Webb joins Michael Owen in the studio to provide context and explanation behind refereeing decisions from the season so far.",
-    "category": "Football - Club"
-  },
-  {
-    "ch": "TNT.Sports.1.HD.uk",
     "start": "2026-05-15T06:30:00",
     "title": "The Breakdown",
     "sub-title": "FA Cup Final Preview",
@@ -14238,22 +13942,6 @@
     "sub-title": "Udinese v Cremonese",
     "desc": "Udinese v Cremonese.",
     "category": "Football - Club"
-  },
-  {
-    "ch": "TNT.Sports.2.HD.uk",
-    "start": "2026-05-15T05:00:00",
-    "title": "MotoGP Highlights",
-    "sub-title": "Grand Prix of Catalonia",
-    "desc": "The Grand Prix of Catalonia. Action from the 15th round of the season at Circuit de Barcelona-Catalunya in Spain.",
-    "category": "Motor Sport"
-  },
-  {
-    "ch": "TNT.Sports.2.HD.uk",
-    "start": "2026-05-15T06:00:00",
-    "title": "MotoGP Highlights",
-    "sub-title": "Grand Prix of France",
-    "desc": "The Grand Prix of France. Action from the fifth round of the season at Le Mans Bugatti Circuit.",
-    "category": "Motor Sport"
   },
   {
     "ch": "TNT.Sports.2.HD.uk",
@@ -14777,38 +14465,6 @@
   },
   {
     "ch": "TNT.Sports.3.HD.uk",
-    "start": "2026-05-15T05:00:00",
-    "title": "Formula E Flashback",
-    "sub-title": "Santiago 2020",
-    "desc": "A look back at the 2020 Santiago Grand Prix.",
-    "category": "Motor Sport"
-  },
-  {
-    "ch": "TNT.Sports.3.HD.uk",
-    "start": "2026-05-15T05:30:00",
-    "title": "Premier League Reload",
-    "sub-title": "Matchday 36",
-    "desc": "A unique and fast-paced look at all the best action from the top flight, including Liverpool v Chelsea, West Ham United v Arsenal, Tottenham Hotspur v Leeds, and more.",
-    "category": "Football - Club"
-  },
-  {
-    "ch": "TNT.Sports.3.HD.uk",
-    "start": "2026-05-15T05:45:00",
-    "title": "The Gruppetto",
-    "sub-title": "",
-    "desc": "Rob Hatch reviews the last week of action in the cycling world including a thrilling conclusion to La Vuelta Femenina and the start of the Giro d'Italia.",
-    "category": "Cycling"
-  },
-  {
-    "ch": "TNT.Sports.3.HD.uk",
-    "start": "2026-05-15T06:00:00",
-    "title": "Men's Cycling Pro Series",
-    "sub-title": "Tour of Hungary-Stage 2",
-    "desc": "Action from the second stage of the 2026 Tour of Hungary.",
-    "category": "Cycling"
-  },
-  {
-    "ch": "TNT.Sports.3.HD.uk",
     "start": "2026-05-15T07:00:00",
     "title": "Giro d'Italia Men Highlights",
     "sub-title": "Stage 6",
@@ -15174,22 +14830,6 @@
     "sub-title": "Round 2 Donington Park-Race 3",
     "desc": "Action from the third race of the second of the season at Donington Park.",
     "category": "Motorcycling"
-  },
-  {
-    "ch": "TNT.Sports.4.HD.uk",
-    "start": "2026-05-15T05:00:00",
-    "title": "Serie A - Full Impact",
-    "sub-title": "Matchday 36",
-    "desc": "All the best moments from matchday 36 of the Italian top flight, including Lazio v Inter Milan, AC Milan v Atalanta, Napoli v Bologna, and Parma v AS Roma.",
-    "category": "Football - Club"
-  },
-  {
-    "ch": "TNT.Sports.4.HD.uk",
-    "start": "2026-05-15T05:30:00",
-    "title": "The FA Youth Cup",
-    "sub-title": "Manchester City v Manchester United-Final",
-    "desc": "Manchester City v Manchester United in the final.",
-    "category": "Football - Club"
   },
   {
     "ch": "TNT.Sports.4.HD.uk",
@@ -15777,14 +15417,6 @@
   },
   {
     "ch": "beIN.SPORTS.MAX.6.fr",
-    "start": "2026-05-15T04:30:00",
-    "title": "beIN SPORTS, le plus grand des spectacles",
-    "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.MAX.6.fr",
     "start": "2026-05-15T07:00:00",
     "title": "beIN SPORTS, le plus grand des spectacles",
     "sub-title": "",
@@ -15958,14 +15590,6 @@
     "sub-title": "",
     "desc": "",
     "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.3.fr",
-    "start": "2026-05-15T06:00:00",
-    "title": "Handball : Qualifications du Championnat du monde",
-    "sub-title": "",
-    "desc": "Avant d'accueillir les Tchèques à Orléans, les Bleus se rendent à Brno dans le cadre des éliminatoires au prochain Mondial qui se tiendra en Allemagne en 2027.",
-    "category": "Handball"
   },
   {
     "ch": "beIN.SPORTS.3.fr",
@@ -16342,14 +15966,6 @@
     "sub-title": "",
     "desc": "Retransmission d'un match de la Ligue Butagaz Energie, la plus haute division de handball professionnel féminin en France.",
     "category": "Handball"
-  },
-  {
-    "ch": "beIN.SPORTS.2.fr",
-    "start": "2026-05-15T06:00:00",
-    "title": "Football : Championnat du Portugal",
-    "sub-title": "",
-    "desc": "Retransmission d'un match du Championnat du Portugal de football. Fondée en 1934, il s'agit de la plus haute compétition de football du Portugal.",
-    "category": "Football"
   },
   {
     "ch": "beIN.SPORTS.2.fr",
@@ -17521,30 +17137,6 @@
   },
   {
     "ch": "Canal+.fr",
-    "start": "2026-05-15T03:30:00",
-    "title": "Tout l'or du monde",
-    "sub-title": "",
-    "desc": "Un homme amoureux invite enfin sa belle à la maison. On sonne. Quand il veut ouvrir la porte, il découvre que le verrou est bloqué de l'intérieur.",
-    "category": "Film"
-  },
-  {
-    "ch": "Canal+.fr",
-    "start": "2026-05-15T03:47:00",
-    "title": "Têtàtête(s)",
-    "sub-title": "",
-    "desc": "Chaque semaine, une interview par Laurie Cholewa des talents ou cinéastes des films à l'affiche, un moment convivial et chaleureux qui raconte les coulisses des films les plus attendus en salles et des films diffusés sur Canal+.",
-    "category": "Interview"
-  },
-  {
-    "ch": "Canal+.fr",
-    "start": "2026-05-15T04:03:00",
-    "title": "En aparté",
-    "sub-title": "",
-    "desc": "Elle aurait pu danser sur la glace, elle a préféré danser avec les mots. Depuis plus de 30 ans, elle passe du plateau à la scène et ses élans nous cueillent entre rires et larmes. Léa Drucker est En Aparté.",
-    "category": "Divertissement"
-  },
-  {
-    "ch": "Canal+.fr",
     "start": "2026-05-15T04:36:00",
     "title": "Late Football Club",
     "sub-title": "",
@@ -18184,28 +17776,36 @@
     "category": "Film"
   },
   {
-    "ch": "beIN.SPORTS.2.fr",
-    "start": "2026-05-15T03:00:00",
-    "title": "Be United",
+    "ch": "Canal+.fr",
+    "start": "2026-05-18T10:16:00",
+    "title": "La boîte à questions",
     "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
+    "desc": "Sacrifiant au rituel d'une émission au format maintenant bien connu, une célébrité répond aux questions qui lui sont posées en off. C'est une interview aussi décalée que décontractée qui en découle. Les invités se révèlent souvent sous un autre angle, avec spontanéité.",
+    "category": "Divertissement"
   },
   {
-    "ch": "beIN.SPORTS.2.fr",
-    "start": "2026-05-15T03:45:00",
-    "title": "Ça se passe sur beIN SPORTS",
+    "ch": "Canal+.fr",
+    "start": "2026-05-18T10:22:00",
+    "title": "Cannes 2026",
     "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
+    "desc": "Toutes les actualités du Festival de Cannes 2026, avec les films, les réalisateurs, les stars et les dernières informations depuis la Croisette.",
+    "category": "Magazine"
   },
   {
-    "ch": "beIN.SPORTS.2.fr",
-    "start": "2026-05-15T04:00:00",
-    "title": "USM Alger / Zamalek",
+    "ch": "Canal+.fr",
+    "start": "2026-05-18T10:38:00",
+    "title": "Clique",
     "sub-title": "",
-    "desc": "",
-    "category": "Football"
+    "desc": "Mouloud Achour renouvelle son émission et c'est l'occasion pour lui de multiplier les rencontres avec les talents du moment. L'émission est ponctuée de reportages. Des humoristes qu'on ne voit nulle part ailleurs sont aussi invités. Clique est conçue...",
+    "category": "Magazine"
+  },
+  {
+    "ch": "Canal+.fr",
+    "start": "2026-05-18T11:32:00",
+    "title": "Un simple accident",
+    "sub-title": "",
+    "desc": "Alors qu'il effectue un trajet de nuit au volant de sa voiture, Eghbal percute violemment un chien. Le choc endommage le véhicule, et Eghbal se voit contraint de l'emmener au garage le plus proche. Chargé d'effectuer les réparations, Vahid, un modeste mécanicien d'origine azerbaïdjanaise, pense reconnaître en Eghbal un des tortionnaires qui l'ont malmené des années plus tôt lors d'un séjour en prison. Mais face à ce père de famille qui nie farouchement avoir été son bourreau, le doute s'installe dans l'esprit de Vahid...",
+    "category": "Film"
   },
   {
     "ch": "beIN.SPORTS.2.fr",
@@ -18680,12 +18280,12 @@
     "category": "Football"
   },
   {
-    "ch": "beIN.SPORTS.MAX.4.fr",
-    "start": "2026-05-15T03:00:00",
-    "title": "beIN SPORTS, le plus grand des spectacles",
+    "ch": "beIN.SPORTS.2.fr",
+    "start": "2026-05-18T12:00:00",
+    "title": "Football",
     "sub-title": "",
     "desc": "",
-    "category": "Magazine sportif"
+    "category": "Football"
   },
   {
     "ch": "beIN.SPORTS.MAX.4.fr",
@@ -18904,8 +18504,8 @@
     "category": "Magazine sportif"
   },
   {
-    "ch": "beIN.SPORTS.MAX.5.fr",
-    "start": "2026-05-15T03:00:00",
+    "ch": "beIN.SPORTS.MAX.4.fr",
+    "start": "2026-05-18T11:00:00",
     "title": "beIN SPORTS, le plus grand des spectacles",
     "sub-title": "",
     "desc": "",
@@ -19096,8 +18696,8 @@
     "category": "Magazine sportif"
   },
   {
-    "ch": "beIN.SPORTS.MAX.7.fr",
-    "start": "2026-05-15T03:00:00",
+    "ch": "beIN.SPORTS.MAX.5.fr",
+    "start": "2026-05-18T11:00:00",
     "title": "beIN SPORTS, le plus grand des spectacles",
     "sub-title": "",
     "desc": "",
@@ -19272,8 +18872,8 @@
     "category": "Magazine sportif"
   },
   {
-    "ch": "beIN.SPORTS.MAX.8.fr",
-    "start": "2026-05-15T03:00:00",
+    "ch": "beIN.SPORTS.MAX.7.fr",
+    "start": "2026-05-18T11:00:00",
     "title": "beIN SPORTS, le plus grand des spectacles",
     "sub-title": "",
     "desc": "",
@@ -19450,6 +19050,14 @@
   {
     "ch": "beIN.SPORTS.MAX.8.fr",
     "start": "2026-05-18T07:00:00",
+    "title": "beIN SPORTS, le plus grand des spectacles",
+    "sub-title": "",
+    "desc": "",
+    "category": "Magazine sportif"
+  },
+  {
+    "ch": "beIN.SPORTS.MAX.8.fr",
+    "start": "2026-05-18T11:00:00",
     "title": "beIN SPORTS, le plus grand des spectacles",
     "sub-title": "",
     "desc": "",
@@ -19840,20 +19448,20 @@
     "category": "Rugby"
   },
   {
-    "ch": "Canal+.Sport.360.fr",
-    "start": "2026-05-15T02:09:00",
-    "title": "Fin des programmes",
+    "ch": "Canal+.Sport.fr",
+    "start": "2026-05-18T10:20:00",
+    "title": "Canal Rugby Club - 1re édition",
     "sub-title": "",
     "desc": "",
-    "category": "Fin"
+    "category": "Magazine sportif"
   },
   {
-    "ch": "Canal+.Sport.360.fr",
-    "start": "2026-05-15T04:00:00",
-    "title": "La matinale",
+    "ch": "Canal+.Sport.fr",
+    "start": "2026-05-18T11:30:00",
+    "title": "Racing 92 / Toulon",
     "sub-title": "",
-    "desc": "En Direct.",
-    "category": "JT sport"
+    "desc": "",
+    "category": "Rugby"
   },
   {
     "ch": "Canal+.Sport.360.fr",
@@ -20374,5 +19982,21 @@
     "sub-title": "",
     "desc": "",
     "category": "Padel"
+  },
+  {
+    "ch": "Canal+.Sport.360.fr",
+    "start": "2026-05-18T10:15:00",
+    "title": "Le JT",
+    "sub-title": "",
+    "desc": "En Direct.",
+    "category": "JT sport"
+  },
+  {
+    "ch": "Canal+.Sport.360.fr",
+    "start": "2026-05-18T11:49:00",
+    "title": "Débrief Moto",
+    "sub-title": "",
+    "desc": "",
+    "category": "Magazine sportif"
   }
 ]
