@@ -21,7 +21,7 @@ EPG_SOURCE = {
 PRIORITY_CONFIG = {
     "LEAGUES": {
         "nhl": 800, "nba": 250, "wnba": 250, "uefa.champions": 375,
-        "eng.1": 350, "fra.1": 350, "ita.1": 150, "esp.1": 150,
+        "eng.1": 450, "fra.1": 450, "ita.1": 250, "esp.1": 250,
         "uefa.europa": 350, "mlb": 250, "usa.1": 750,
         "concacaf.nations": 600, "concacaf.champions": 500,
         "f1": 800, "cpl": 700, "nsl": 700, "cfl": 500
