@@ -422,6 +422,7 @@ def channel_language(ch_key):
 def fetch_sports_db(league):
     try:
         now = datetime.now(timezone.utc)
+        league_id = 0
         if league == 'cpl':
             league_id = 4820
         elif league == 'nsl':
@@ -434,6 +435,7 @@ def fetch_sports_db(league):
             url = "https://www.thesportsdb.com/api/v1/json/123/eventsday.php?d={now.strftime('%Y-%m-%d')}&l={league_id}"
             r = requests.get(url, timeout=5)
             if r.status_code != 200: return []
+            print("sportsdb query done")
             return [{
                 'id': f"{league}-{e['idEvent']}",
                 'name': e['strEvent'].upper(),
