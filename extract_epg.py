@@ -344,9 +344,6 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str, lg=None):
     candidates = []
     try:
         ev_time = parse_espn_time(ev_date_str)
-        #debug
-        if lg in ['cpl', 'nsl']:
-            print(lg + ' found. Time is :' + ev_date_str + ' formatted to ' + ev_time)
         event_terms = prepare_team_keywords(ev_name)
         if not event_terms:
             event_terms = [t for t in clean_name(ev_name).split() if len(t) > 3]
