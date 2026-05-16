@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-05-16T13:42:46Z",
+  "generated_at": "2026-05-16T15:35:09Z",
   "channels": {
     "1": [
       {
         "title": "🏒 BUFFALO SABRES AT MONTREAL CANADIENS",
-        "league": "",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 4650,
+        "league": "nhl",
+        "ch_key": "TVA.Sports.HD.ca2",
+        "score": 4975,
         "display_start": "2026-05-16T23:30:00Z",
         "stop": "2026-05-17T03:00:00Z",
         "start": "2026-05-17T00:00:00Z"
       },
       {
         "title": "⚾ TORONTO BLUE JAYS AT DETROIT TIGERS",
-        "league": "",
+        "league": "mlb",
         "ch_key": "Sportsnet.4K.ca2",
         "score": 1750,
         "display_start": "2026-05-16T16:40:00Z",
@@ -22,7 +22,7 @@
       },
       {
         "title": "⚾ TORONTO BLUE JAYS AT DETROIT TIGERS",
-        "league": "",
+        "league": "mlb",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 1750,
         "display_start": "2026-05-17T17:10:00Z",
@@ -30,8 +30,26 @@
         "start": "2026-05-17T17:40:00Z"
       },
       {
+        "title": "⚽ PACIFIC VS INTER TORONTO",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-05-17T20:40:00Z",
+        "stop": "2026-05-18T00:00:00Z",
+        "start": "2026-05-17T21:00:00Z"
+      },
+      {
+        "title": "⚽ VANCOUVER FC VS CAVALRY",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-05-18T00:30:00Z",
+        "stop": "2026-05-18T04:00:00Z",
+        "start": "2026-05-18T01:00:00Z"
+      },
+      {
         "title": "⚽ BRIGHTON & HOVE ALBION AT LEEDS UNITED",
-        "league": "",
+        "league": "eng.1",
         "ch_key": "Canal+.Sport.360.fr",
         "score": 650,
         "display_start": "2026-05-17T13:30:00Z",
@@ -39,17 +57,8 @@
         "start": "2026-05-17T14:00:00Z"
       },
       {
-        "title": "⚾ SAN DIEGO PADRES AT SEATTLE MARINERS",
-        "league": "",
-        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
-        "score": 400,
-        "display_start": "2026-05-17T22:50:00Z",
-        "stop": "2026-05-18T02:20:00Z",
-        "start": "2026-05-17T23:20:00Z"
-      },
-      {
         "title": "⚽ LAZIO AT AS ROMA",
-        "league": "",
+        "league": "ita.1",
         "ch_key": "TNT.Sports.1.HD.uk",
         "score": 350,
         "display_start": "2026-05-17T09:30:00Z",
@@ -59,17 +68,26 @@
     ],
     "2": [
       {
-        "title": "⚽ TORONTO FC AT CHARLOTTE FC",
-        "league": "",
-        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
-        "score": 750,
-        "display_start": "2026-05-16T23:00:00Z",
-        "stop": "2026-05-17T02:30:00Z",
-        "start": "2026-05-16T23:30:00Z"
+        "title": "🏒 BUFFALO SABRES AT MONTREAL CANADIENS",
+        "league": "nhl",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 4650,
+        "display_start": "2026-05-16T23:30:00Z",
+        "stop": "2026-05-17T03:00:00Z",
+        "start": "2026-05-17T00:00:00Z"
+      },
+      {
+        "title": "⚽ ATLÉTICO OTTAWA VS HFX WANDERERS",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-05-17T16:30:00Z",
+        "stop": "2026-05-17T20:00:00Z",
+        "start": "2026-05-17T17:00:00Z"
       },
       {
         "title": "⚽ NOTTINGHAM FOREST AT MANCHESTER UNITED",
-        "league": "",
+        "league": "eng.1",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 550,
         "display_start": "2026-05-17T11:00:00Z",
@@ -77,37 +95,37 @@
         "start": "2026-05-17T11:30:00Z"
       },
       {
-        "title": "⚽ WEST HAM UNITED AT NEWCASTLE UNITED",
-        "league": "",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 550,
-        "display_start": "2026-05-17T16:00:00Z",
-        "stop": "2026-05-17T19:30:00Z",
-        "start": "2026-05-17T16:30:00Z"
+        "title": "⚾ SAN DIEGO PADRES AT SEATTLE MARINERS",
+        "league": "mlb",
+        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
+        "score": 400,
+        "display_start": "2026-05-17T22:50:00Z",
+        "stop": "2026-05-18T02:20:00Z",
+        "start": "2026-05-17T23:20:00Z"
       },
       {
-        "title": "⚾ SAN FRANCISCO GIANTS AT ATHLETICS ATHLETICS",
-        "league": "",
-        "ch_key": "TNT.Sports.3.HD.uk",
+        "title": "⚾ PHILADELPHIA PHILLIES AT PITTSBURGH PIRATES",
+        "league": "mlb",
+        "ch_key": "Sportsnet.360.HD.ca2",
         "score": 350,
-        "display_start": "2026-05-17T19:35:00Z",
-        "stop": "2026-05-17T23:05:00Z",
-        "start": "2026-05-17T20:05:00Z"
+        "display_start": "2026-05-16T19:35:00Z",
+        "stop": "2026-05-16T23:05:00Z",
+        "start": "2026-05-16T20:05:00Z"
       }
     ],
     "3": [
       {
-        "title": "⚽ COLORADO RAPIDS AT REAL SALT LAKE",
-        "league": "",
-        "ch_key": "TSN.5.ca2",
+        "title": "⚽ TORONTO FC AT CHARLOTTE FC",
+        "league": "usa.1",
+        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
         "score": 750,
-        "display_start": "2026-05-17T01:00:00Z",
-        "stop": "2026-05-17T04:30:00Z",
-        "start": "2026-05-17T01:30:00Z"
+        "display_start": "2026-05-16T23:00:00Z",
+        "stop": "2026-05-17T02:30:00Z",
+        "start": "2026-05-16T23:30:00Z"
       },
       {
         "title": "⚽ SUNDERLAND AT EVERTON",
-        "league": "",
+        "league": "eng.1",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 550,
         "display_start": "2026-05-17T13:30:00Z",
@@ -116,7 +134,7 @@
       },
       {
         "title": "⚽ GIRONA AT ATLÉTICO MADRID",
-        "league": "",
+        "league": "esp.1",
         "ch_key": "beIN.SPORTS.2.fr",
         "score": 450,
         "display_start": "2026-05-17T17:00:00Z",
@@ -124,19 +142,28 @@
         "start": "2026-05-17T17:00:00Z"
       },
       {
-        "title": "🏀 TORONTO TEMPO AT LOS ANGELES SPARKS",
-        "league": "",
-        "ch_key": "TSN.3.ca2",
-        "score": 250,
-        "display_start": "2026-05-17T22:30:00Z",
-        "stop": "2026-05-18T02:00:00Z",
-        "start": "2026-05-17T23:00:00Z"
+        "title": "⚾ SAN FRANCISCO GIANTS AT ATHLETICS ATHLETICS",
+        "league": "mlb",
+        "ch_key": "TNT.Sports.3.HD.uk",
+        "score": 350,
+        "display_start": "2026-05-17T20:00:00Z",
+        "stop": "2026-05-17T23:05:00Z",
+        "start": "2026-05-17T20:05:00Z"
       }
     ],
     "4": [
       {
+        "title": "⚽ COLORADO RAPIDS AT REAL SALT LAKE",
+        "league": "usa.1",
+        "ch_key": "TSN.5.ca2",
+        "score": 750,
+        "display_start": "2026-05-17T01:00:00Z",
+        "stop": "2026-05-17T04:30:00Z",
+        "start": "2026-05-17T01:30:00Z"
+      },
+      {
         "title": "⚽ FULHAM AT WOLVERHAMPTON WANDERERS",
-        "league": "",
+        "league": "eng.1",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 550,
         "display_start": "2026-05-17T13:30:00Z",
@@ -144,42 +171,42 @@
         "start": "2026-05-17T14:00:00Z"
       },
       {
-        "title": "⚾ BOSTON RED SOX AT ATLANTA BRAVES",
-        "league": "",
-        "ch_key": "TSN.3.ca2",
-        "score": 350,
-        "display_start": "2026-05-16T22:45:00Z",
-        "stop": "2026-05-17T02:15:00Z",
-        "start": "2026-05-16T23:15:00Z"
-      },
-      {
         "title": "⚾ NEW YORK YANKEES AT NEW YORK METS",
-        "league": "",
+        "league": "mlb",
         "ch_key": "TNT.Sports.2.HD.uk",
         "score": 350,
         "display_start": "2026-05-17T17:10:00Z",
         "stop": "2026-05-17T20:40:00Z",
         "start": "2026-05-17T17:40:00Z"
+      },
+      {
+        "title": "🏀 TORONTO TEMPO AT LOS ANGELES SPARKS",
+        "league": "wnba",
+        "ch_key": "TSN.3.ca2",
+        "score": 250,
+        "display_start": "2026-05-17T22:30:00Z",
+        "stop": "2026-05-18T02:00:00Z",
+        "start": "2026-05-17T23:00:00Z"
       }
     ],
     "5": [
       {
-        "title": "⚾ SAN DIEGO PADRES AT SEATTLE MARINERS",
-        "league": "",
-        "ch_key": "TNT.Sports.2.HD.uk",
+        "title": "⚽ WEST HAM UNITED AT NEWCASTLE UNITED",
+        "league": "eng.1",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 550,
+        "display_start": "2026-05-17T16:00:00Z",
+        "stop": "2026-05-17T19:30:00Z",
+        "start": "2026-05-17T16:30:00Z"
+      },
+      {
+        "title": "⚾ BOSTON RED SOX AT ATLANTA BRAVES",
+        "league": "mlb",
+        "ch_key": "TSN.3.ca2",
         "score": 350,
         "display_start": "2026-05-16T22:45:00Z",
         "stop": "2026-05-17T02:15:00Z",
         "start": "2026-05-16T23:15:00Z"
-      },
-      {
-        "title": "⚽ CREMONESE AT UDINESE",
-        "league": "",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 350,
-        "display_start": "2026-05-17T18:15:00Z",
-        "stop": "2026-05-17T21:45:00Z",
-        "start": "2026-05-17T18:45:00Z"
       }
     ]
   }
