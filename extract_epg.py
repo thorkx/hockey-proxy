@@ -6,16 +6,20 @@ import re
 import gzip
 import xml.etree.ElementTree as ET
 from pathlib import Path
+import pprint
+from zoneinfo import ZoneInfo  # added
 
 FILTERED_EPG_PATH = Path(__file__).resolve().parent / "filtered_epg.json"
 SCHEDULE_PATH = Path(__file__).resolve().parent / "schedule.json"
 BIBLE_URL = "https://raw.githubusercontent.com/thorkx/hockey-proxy/main/filtered_epg.json"
 
+DEBUG = False
+
 EPG_SOURCE = {
     "CA": "https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz",
-    "USA": "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
-    "UK": "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
-    "FR": "https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz"
+    #"USA": "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
+    #"UK": "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
+    #"FR": "https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz"
 }
 
 PRIORITY_CONFIG = {
@@ -205,17 +209,20 @@ def build_search_text(prog):
 
 
 def token_matches_event(token, source_tokens):
-    if token in source_tokens:
-        return True
-    if len(token) < 5:
-        return False
-    prefix = token[:5]
-    for source_token in source_tokens:
-        if len(source_token) < 5:
-            continue
-        if source_token.startswith(prefix) or token.startswith(source_token[:5]):
-            return True
-    return False
+	# require a longer prefix to avoid accidental matches (e.g. PAR vs PARMA)
+	if len(token) < 4:
+		return False
+	token = token.upper()
+	if token in source_tokens:
+		return True
+	prefix = token[:4]
+	for source_token in source_tokens:
+		if len(source_token) < 4:
+			continue
+		# match when the first 4 chars align (more strict)
+		if source_token.startswith(prefix) or token.startswith(source_token[:4]):
+			return True
+	return False
 
 
 def parse_iso_utc(time_str):
@@ -277,15 +284,18 @@ def verify_schedule(schedule, bible):
                 try:
                     prog_start = parse_program_start(prog['start'])
                 except Exception:
+                    if DEBUG:
+                        print(f"Skipping program with invalid start time: {prog.get('title', '')} on channel {item['ch_key']}")
                     continue
                 if abs((schedule_start - prog_start).total_seconds()) > 5400:
                     continue
+
                 source_tokens = [t for t in build_search_text(prog).split() if t]
                 match_count = sum(1 for term in event_terms if token_matches_event(term, source_tokens))
                 if match_count > 0:
                     same_channel_matches.append({'program': prog, 'match_score': match_count})
                     break
-                if ' AT ' in event_upper and is_generic_league_program(prog, 'nhl'):
+                if ' AT ' in event_upper and is_generic_league_program(prog, item['lg']):
                     same_channel_matches.append({'program': prog, 'match_score': 1})
                     break
                 if any(term in event_upper for term in ['F1', 'GRAND PRIX', 'QUALI', 'PRACTICE', 'RACE', 'SPRINT']) and is_generic_league_program(prog, 'f1'):
@@ -334,9 +344,10 @@ def is_generic_league_program(prog, lg):
     if lg == 'f1':
         return any(term in raw_text for term in ['F1', 'FORMULA', 'GRAND PRIX', 'RACE', 'AUTO', 'MOTOR', 'CIRCUIT'])
     if lg == 'cpl':
-        return any(term in raw_text for term in ['CPL', 'Canadian Premier'])
+        return any(term in raw_text for term in ['CPL', 'Canadian Premier League', 'Première Ligue Canadienne'])
     if lg == 'nsl':
-        return any(term in raw_text for term in ['NSL', 'Northern'])
+        print(prog)
+        return any(term in raw_text for term in ['NSL', 'Northern', 'Super Ligue du Nord', 'Northern Super League'])
     return False
 
 
@@ -345,6 +356,9 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str, lg=None):
     try:
         ev_time = parse_espn_time(ev_date_str)
         event_terms = prepare_team_keywords(ev_name)
+        if lg == 'nsl':
+            print(f"*** [DEBUG] Searching for NSL event: '{ev_name}' on {ev_date_str}' at {ev_time}")
+
         if not event_terms:
             event_terms = [t for t in clean_name(ev_name).split() if len(t) > 3]
 
@@ -352,6 +366,7 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str, lg=None):
             try:
                 p_start = parse_program_start(prog['start'])
             except Exception:
+                print(f"*** [DEBUG] Error parsing start time for program: {prog.get('title', '')}")
                 continue
 
             time_diff = abs((ev_time - p_start).total_seconds())
@@ -361,24 +376,30 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str, lg=None):
             source_tokens = [t for t in build_search_text(prog).split() if t]
             match_count = sum(1 for term in event_terms if token_matches_event(term, source_tokens))
             generic_match = False
+            if lg == 'nsl' and DEBUG:
+                print(f"[DEBUG] NSL candidate: '{ev_name}' vs '{prog.get('title', '')}' with score {match_count} and time diff {time_diff} seconds")
             if match_count == 0:
+                if lg == 'nsl' and DEBUG:
+                    print(f"*** [DEBUG] No token matches for '{ev_name}' against program '{prog.get('title', '')}'")
                 if lg in ['nhl', 'f1', 'cpl', 'nsl'] and is_generic_league_program(prog, lg) and time_diff <= 3600:
                     match_count = 1
                     generic_match = True
-                    print("Generic match found for " + lg + " : " + prog)
                 else:
                     continue
-            if len(event_terms) >= 2 and match_count < 2 and not generic_match:
+            if (len(event_terms) >= 2 and match_count < 2 and not generic_match) or (generic_match and match_count >= 1):
                 continue
 
-            # Reject matches where source program is clearly a different sport
             source_text = ' '.join(source_tokens).upper()
             if any(term in source_text for term in ['F1', 'FORMULA', 'GRAND PRIX', 'RACE', 'AUTO', 'MOTOR', 'CIRCUIT']):
-                # Check if event title suggests F1/motorsport
                 event_upper = ev_name.upper()
                 if not any(term in event_upper for term in ['F1', 'FORMULA', 'GRAND PRIX', 'RACE', 'AUTO', 'MOTOR']):
                     continue
-
+            if DEBUG:
+                print(f"[DEBUG] Candidate match found: '{ev_name}' vs '{prog.get('title', '')}' with score {match_count} and time diff {time_diff} seconds")
+                print(f"[DEBUG] Event terms: {event_terms}")
+                print(f"[DEBUG] Source text: {source_text}")
+                print(f"[DEBUG] Program details: {prog}")
+                print(f"[DEBUG] Generic match? {generic_match}")
             candidates.append({
                 'ch_key': prog.get('ch'),
                 'match_score': match_count,
@@ -386,8 +407,8 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str, lg=None):
                 'start': p_start,
                 'lg': prog.get('league', '').lower()
             })
-    except:
-        pass
+    except Exception as exc:
+        print(f"[DEBUG] find_all_matches_in_bible error: {exc}")
     return candidates
 
 
@@ -420,29 +441,39 @@ def channel_language(ch_key):
 
 
 def fetch_sports_db(league):
-    try:
-        now = datetime.now(timezone.utc)
-        if league == 'cpl':
-            league_id = 4820
-        elif league == 'nsl':
-            league_id = 5602
-        else:            
-            return []
-        
-        for day in range(0,2):
-            url = "https://www.thesportsdb.com/api/v1/json/123/eventsday.php?d={now.strftime('%Y-%m-%d')}&l={league_id}"
-            now = datetime.now(timezone.utc) + timedelta(days=day)
-            r = requests.get(url, timeout=5)
-            if r.status_code != 200: return []
-            return [{
-                'id': f"{league}-{e['idEvent']}",
-                'name': e['strEvent'].upper(),
-                'date': parse_iso_utc(e['strTimestamp']).date(),
-                'start_time': parse_iso_utc(e['strTimestamp']).timetz(),
-                'league': league
-            } for e in r.json().get('events', [])]
-    except:
+    if league == 'cpl':
+        league_id = 4820
+    elif league == 'nsl':
+        league_id = 5602
+    else:
         return []
+
+    results = []
+    for offset in range(3):
+        fetch_date = datetime.now(timezone.utc) + timedelta(days=offset)
+        url = "https://www.thesportsdb.com/api/v1/json/123/eventsday.php?d=" + fetch_date.strftime('%Y-%m-%d') + "&l=" + str(league_id)
+        try:
+            r = requests.get(url, timeout=5)
+            r.raise_for_status()
+            payload = r.json()
+        except Exception as exc:
+            print(f"Skipping {league} day {fetch_date.strftime('%Y-%m-%d')} due to fetch error: {exc}")
+            continue
+
+        for e in payload.get('events') or []:
+            ts = e.get('strTimestamp')
+            if not ts:
+                continue
+            
+            formatted_ts = ts[0:-3] + 'Z'
+            results.append({
+                'id': f"{league}-{e.get('idEvent', '')}",
+                'name': e.get('strEvent', '').upper(),
+                'date': formatted_ts,
+                'league': league
+            })
+
+    return results
 
 
 def fetch_f1_openf1():
@@ -509,7 +540,7 @@ def calculate_score(name, ch_key, lg):
         elif is_fr:
             score += 400
 
-    soccer_leagues = ['soccer', 'eng.1', 'fra.1', 'ita.1', 'esp.1', 'uefa', 'concacaf']
+    soccer_leagues = ['eng.1', 'fra.1', 'ita.1', 'esp.1', 'uefa', 'concacaf']
     if any(x in lg for x in soccer_leagues):
         if is_fr:
             score += 200
@@ -517,6 +548,9 @@ def calculate_score(name, ch_key, lg):
             score += 100
             
     if lg == 'cpl':
+        score += 200
+
+    if lg == 'nsl':
         score += 200
 
     if lg == 'mlb':
@@ -585,17 +619,19 @@ def generate_schedule(days=2):
 
     # --- SOURCE 2: THE SPORTS DB (Précision pour la CPL et la NSL) ---
     for lg in ['cpl', 'nsl']:
+        print(f"Fetching events for league: {lg}")
         try:
+            print(f"Attempting to fetch {lg} events from TheSportsDB...")
             events = fetch_sports_db(lg)
-            for e in events_to_process:
-                if e['name'] in ['SUPRA', 'ROSES']:
-                    events_to_process.append({
-                        'id': e['id'],
-                        'name': e['name'],
-                        'date': e['date'],
-                        'start': e['start_time'],
-                        'lg': lg
-                    })
+            print(f"Fetched {len(events)} events for league: {lg}")
+            for e in events:
+                print(e)
+                events_to_process.append({
+                    'id': e['id'],
+                    'name': e['name'],
+                    'date': e['date'],
+                    'lg': lg
+                })
         except:
             pass
 
@@ -621,7 +657,7 @@ def generate_schedule(days=2):
     # --- TRAITEMENT DES ÉVÉNEMENTS ---
     events = []
     seen_events = set()
-    
+    #pprint.pprint(events_to_process)
     for item in events_to_process:
         event_id = item['id']
         if event_id in seen_events:
@@ -634,7 +670,10 @@ def generate_schedule(days=2):
         matches = find_all_matches_in_bible(name, bible, item['date'], lg)
         if not matches:
             continue
-            
+        if DEBUG:
+            print(f"[DEBUG] Matches for '{name}' (League: {lg}):")
+            for m in matches:
+                print(f"  - Channel: {m['ch_key']}, Score: {m['match_score']}, Time Diff: {m['time_diff']} seconds, League: {m['lg']}")
         hits = []
         for match in matches:
             hits.append({
@@ -643,11 +682,11 @@ def generate_schedule(days=2):
                 'match_score': match['match_score'],
                 'score': calculate_score(name, match['ch_key'], lg),
                 'time_diff': match['time_diff'],
-                'lg': match['lg']
+                'lg': lg
             })
             
         hits.sort(key=lambda x: (x['match_score'], x['score'], -x['time_diff']), reverse=True)
-        
+
         if lg == 'f1' and f1_event_type(name) == 'race':
             sky_hit = next((h for h in hits if is_sky_f1_channel(h['ch_key'])), None)
             rds_hit = next((h for h in hits if is_rds_channel(h['ch_key'])), None)
@@ -698,10 +737,7 @@ def generate_schedule(days=2):
                      'stop': start + timedelta(hours=3), 
                      'league': hits[0]['lg']})
         else:
-            if item['lg'] in ['cpl', 'nsl']:
-                start = item['start_time']
-            else:
-                start = parse_espn_time(item['date'])
+            start = parse_espn_time(item['date'])
             events.append(
                 {'title': get_sport_icon(lg) + name, 
                  'ch_key': hits[0]['ch_key'], 
@@ -712,7 +748,7 @@ def generate_schedule(days=2):
 
     # --- PACKING DANS LES CANAUX (1-5) ---
     events.sort(key=lambda e: e['score'], reverse=True)
-    print(events)
+    #pprint.pprint(events)
     chans = {str(i): [] for i in range(1, 6)}
     
     for event in events:
@@ -808,6 +844,9 @@ def generate_filtered_epg():
 def main():
     generate_filtered_epg()
     bible = load_filtered_epg()
+    bible = load_filtered_epg()
+    with open("bible_data.json", "w", encoding="utf-8") as f:
+        json.dump(bible, f, indent=2, ensure_ascii=False)
     schedule = generate_schedule(days=2)
     verify_schedule(schedule, bible)
     save_schedule(schedule)
@@ -816,4 +855,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
+
