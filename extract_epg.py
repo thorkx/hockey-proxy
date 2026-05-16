@@ -17,9 +17,9 @@ DEBUG = False
 
 EPG_SOURCE = {
     "CA": "https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz",
-    #"USA": "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
-    #"UK": "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
-    #"FR": "https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz"
+    "USA": "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
+    "UK": "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
+    "FR": "https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz"
 }
 
 PRIORITY_CONFIG = {
