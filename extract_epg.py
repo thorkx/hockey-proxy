@@ -17,9 +17,9 @@ DEBUG = False
 
 EPG_SOURCE = {
     "CA": "https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz",
-    #"USA": "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
-    #"UK": "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
-    #"FR": "https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz"
+    "USA": "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
+    "UK": "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
+    "FR": "https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz"
 }
 
 PRIORITY_CONFIG = {
@@ -53,6 +53,32 @@ PRIORITY_CONFIG = {
         "BONUS_FRENCH": 300,
         "PENALTY_TVA": -150
     }
+}
+
+    # Liste des titres ciblés avec leurs durées exactes (en minutes)
+targeted_titles = {
+        "PL Greatest Games": 180,  # 3 heures
+        "FA Women's Super League": 120,  # 2 heures
+        "FA Cup Classics": 120,  # 2 heures
+        "Blue Jays in 30": 30,  # 30 minutes
+        "NHL in 30": 30,  # 30 minutes
+        "Poker": 60,  # 1 heure (par défaut, ajustable)
+        "Misplays of the Month": 30,  # 30 minutes
+        "Le top LNH": 30,  # 30 minutes
+        "Plays of the Month": 30,  # 30 minutes
+        "Top 50": 30,  # 30 minutes
+        "NFL Games of the Year": 180,  # 3 heures
+        "Plays of the Year": 120,  # 2 heures
+        "SC With Jay Onrait": 30, # 30 minutes
+        "Liga MX Soccer": 120, # 2 heures
+        "CONCACAF League": 120, # 2 heures
+        "CONCACAF Champions League": 120, # 2 heures
+        "Bundesliga Soccer": 120, # 2 heures
+            "UEFA Europa League (on SkyPL)": 120
+    }
+target_titles_on_channels = {
+    "Hlts": 'SkySp.PL.HD.uk"',
+    "F1 GP Highlights": 'SkySp.F1.HD.uk"'
 }
 
 CANADA_HOCKEY_IDS = [
@@ -307,11 +333,12 @@ def verify_schedule(schedule, bible):
 
             invalid.append((channel, item, matches))
 
-    if not invalid:
-        #print(f'Verification OK: {total} événements correspondants trouvés dans l’EPG source.')
+    if not invalid and DEBUG:
+        print(f'Verification OK: {total} événements correspondants trouvés dans l’EPG source.')
         return
 
-    #print(f'Verification: {len(invalid)}/{total} événements sans match exact sur la chaîne attribuée.')
+    if DEBUG:
+        print(f'Verification partielle: {len(invalid)} événements sans correspondance parfaite sur un total de {total}. Détails:')
     for channel, item, matches in invalid:
         if matches:
             other_channels = sorted({m['program'].get('ch') for m in matches})
@@ -346,7 +373,6 @@ def is_generic_league_program(prog, lg):
     if lg == 'cpl':
         return any(term in raw_text for term in ['CPL', 'Canadian Premier League', 'Première Ligue Canadienne'])
     if lg == 'nsl':
-        print(prog)
         return any(term in raw_text for term in ['NSL', 'Northern', 'Super Ligue du Nord', 'Northern Super League'])
     return False
 
@@ -356,7 +382,7 @@ def find_all_matches_in_bible(ev_name, bible_data, ev_date_str, lg=None):
     try:
         ev_time = parse_espn_time(ev_date_str)
         event_terms = prepare_team_keywords(ev_name)
-        if lg == 'nsl':
+        if lg == 'nsl' and DEBUG:
             print(f"*** [DEBUG] Searching for NSL event: '{ev_name}' on {ev_date_str}' at {ev_time}")
 
         if not event_terms:
@@ -465,7 +491,13 @@ def fetch_sports_db(league):
             if not ts:
                 continue
             
-            formatted_ts = ts[0:-3] + 'Z'
+            # Correction du format de l'heure
+            try:
+                formatted_ts = datetime.fromisoformat(ts).isoformat() + 'Z'
+            except ValueError:
+                print(f"Skipping event due to invalid timestamp: {ts}")
+                continue
+
             results.append({
                 'id': f"{league}-{e.get('idEvent', '')}",
                 'name': e.get('strEvent', '').upper(),
@@ -507,6 +539,24 @@ def cpl_event(name):
     if any(term in upper_name for term in ["Canadian Premier", "CPL"]):
         return 'CPL'
     return None
+
+
+def is_valid_match(prog):
+    """
+    Vérifie si un programme est un match valide.
+    """
+    title = prog.get('title', '').lower()
+    category = prog.get('category', '').lower()
+
+    # Vérifiez si la catégorie est liée au sport
+    if not any(keyword in category for keyword in ['sports', 'match', 'game', 'hockey', 'soccer', 'football', 'basketball', 'baseball']):
+        return False
+
+    # Vérifiez si le titre contient des mots-clés indiquant un match
+    if not any(keyword in title for keyword in [' vs ', ' at ', ' contre ', 'match', 'game']):
+        return False
+
+    return True
 
 
 def calculate_score(name, ch_key, lg):
@@ -619,13 +669,17 @@ def generate_schedule(days=2):
 
     # --- SOURCE 2: THE SPORTS DB (Précision pour la CPL et la NSL) ---
     for lg in ['cpl', 'nsl']:
-        print(f"Fetching events for league: {lg}")
+        if DEBUG:
+            print(f"Fetching events for league: {lg}")
         try:
-            print(f"Attempting to fetch {lg} events from TheSportsDB...")
+            if DEBUG:
+                print(f"Attempting to fetch {lg} events from TheSportsDB...")
             events = fetch_sports_db(lg)
-            print(f"Fetched {len(events)} events for league: {lg}")
+            if DEBUG:
+                print(f"Fetched {len(events)} events for league: {lg}")
             for e in events:
-                print(e)
+                if DEBUG:
+                    print(e)
                 events_to_process.append({
                     'id': e['id'],
                     'name': e['name'],
@@ -748,7 +802,12 @@ def generate_schedule(days=2):
 
     # --- PACKING DANS LES CANAUX (1-5) ---
     events.sort(key=lambda e: e['score'], reverse=True)
-    #pprint.pprint(events)
+
+    if DEBUG:
+        print(f"\n[DEBUG] Total events to schedule: {len(events)}")
+        for e in events:
+            print(f"  - {e['title']} on channel {e['ch_key']} starting at {e['start']} with score {e['score']} and league {e['league']}")
+
     chans = {str(i): [] for i in range(1, 6)}
     
     for event in events:
@@ -780,6 +839,58 @@ def generate_schedule(days=2):
                     'start': event['start'].strftime('%Y-%m-%dT%H:%M:%SZ'),
                     'display_start_dt': final_start,
                     'stop_dt': event['stop']
+                })
+                break
+
+    # --- Ajout des fillers ciblés ---
+    scheduled_ids = {e['title'] for channel in chans.values() for e in channel}
+    for prog in bible:
+        prog_title = prog.get('title', '')
+        if prog_title in scheduled_ids:
+            continue
+        skip = False
+        target_list = targeted_titles
+        # Vérifier si le programme est dans la liste ciblée
+        if prog_title not in target_list:
+            skip = True
+
+        if prog_title in target_titles_on_channels and prog.get('ch') not in target_titles_on_channels[prog_title]:
+            skip = True
+        else:
+            if not skip:
+                target_list = target_titles_on_channels
+        
+        if skip:
+            continue
+
+        # Récupérer la durée exacte du programme
+        # duration_minutes = target_list[prog_title]
+        prog_start = parse_program_start(prog['start'])
+        prog_stop = parse_program_start(prog['planned_stop']) #if prog.get('end') else prog_start + timedelta(minutes=duration_minutes)
+
+        for slot in range(1, 6):
+            channel_events = chans[str(slot)]
+            can_fit = True
+
+            for existing in channel_events:
+                existing_start = existing['display_start_dt']
+                existing_stop = existing['stop_dt']
+                if not (prog_stop <= existing_start or prog_start >= existing_stop):
+                    can_fit = False
+                    break
+
+            if can_fit:
+                scheduled_ids.add(prog_title)
+                channel_events.append({
+                    'title': f"[REDIFFUSION] {prog_title}",
+                    'league': prog.get('category', '').lower(),
+                    'ch_key': prog.get('ch'),
+                    'score': 0,  # Rediffusions ont un score bas
+                    'display_start': prog_start.strftime('%Y-%m-%dT%H:%M:%SZ'),
+                    'stop': prog_stop.strftime('%Y-%m-%dT%H:%M:%SZ'),
+                    'start': prog_start.strftime('%Y-%m-%dT%H:%M:%SZ'),
+                    'display_start_dt': prog_start,
+                    'stop_dt': prog_stop
                 })
                 break
 
@@ -822,6 +933,7 @@ def generate_filtered_epg():
                 try:
                     #print(f'Processing program: {prog.findtext("title")} on channel {prog.get("channel")} at {prog.get("start")}')
                     start = parse_program_start(prog.get('start'))
+                    planned_stop = parse_program_start(prog.get('stop'))
                     #print(f'Parsed start time: {prog.get('start')} (UTC)')
                     if not (min_time <= prog.get('start') <= max_time):
                         continue
@@ -833,7 +945,7 @@ def generate_filtered_epg():
                     sub_title = prog.findtext('sub-title') or ''
                     desc = prog.findtext('desc') or ''
                     category = prog.findtext('category') or ''
-                    results.append({'ch': ch, 'start': start.isoformat(), 'title': title, 'sub-title': sub_title, 'desc': desc, 'category': category})
+                    results.append({'ch': ch, 'start': start.isoformat(), 'planned_stop': planned_stop.isoformat(), 'title': title, 'sub-title': sub_title, 'desc': desc, 'category': category})
                 except Exception:
                     continue
     with open(FILTERED_EPG_PATH, 'w', encoding='utf-8') as f:
