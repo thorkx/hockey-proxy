@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-17T14:29:06Z",
+  "generated_at": "2026-05-17T19:16:08Z",
   "channels": {
     "1": [
       {
@@ -48,31 +48,22 @@
         "start": "2026-05-17T14:00:00Z"
       },
       {
-        "title": "⚽ LAZIO AT AS ROMA",
-        "league": "ita.1",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 350,
-        "display_start": "2026-05-17T09:30:00Z",
-        "stop": "2026-05-17T13:00:00Z",
-        "start": "2026-05-17T10:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-17T06:30:00Z",
-        "stop": "2026-05-17T07:00:00Z",
-        "start": "2026-05-17T06:30:00Z"
+        "display_start": "2026-05-17T11:30:00Z",
+        "stop": "2026-05-17T12:00:00Z",
+        "start": "2026-05-17T11:30:00Z"
       },
       {
         "title": "[REDIFFUSION] NHL in 30",
         "league": "series",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-17T07:00:00Z",
-        "stop": "2026-05-17T07:30:00Z",
-        "start": "2026-05-17T07:00:00Z"
+        "display_start": "2026-05-17T12:00:00Z",
+        "stop": "2026-05-17T12:30:00Z",
+        "start": "2026-05-17T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Women's Super League",
@@ -82,15 +73,6 @@
         "display_start": "2026-05-18T06:00:00Z",
         "stop": "2026-05-18T08:00:00Z",
         "start": "2026-05-18T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Le top LNH",
-        "league": "series",
-        "ch_key": "TVA.Sports.2.HD.ca2",
-        "score": 0,
-        "display_start": "2026-05-17T09:00:00Z",
-        "stop": "2026-05-17T09:30:00Z",
-        "start": "2026-05-17T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -122,15 +104,6 @@
         "start": "2026-05-17T17:00:00Z"
       },
       {
-        "title": "⚽ NOTTINGHAM FOREST AT MANCHESTER UNITED",
-        "league": "eng.1",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 550,
-        "display_start": "2026-05-17T11:00:00Z",
-        "stop": "2026-05-17T14:30:00Z",
-        "start": "2026-05-17T11:30:00Z"
-      },
-      {
         "title": "⚾ SAN DIEGO PADRES AT SEATTLE MARINERS",
         "league": "mlb",
         "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
@@ -138,6 +111,15 @@
         "display_start": "2026-05-17T22:50:00Z",
         "stop": "2026-05-18T02:20:00Z",
         "start": "2026-05-17T23:20:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Le top LNH",
+        "league": "series",
+        "ch_key": "TVA.Sports.2.HD.ca2",
+        "score": 0,
+        "display_start": "2026-05-17T20:15:00Z",
+        "stop": "2026-05-17T20:30:00Z",
+        "start": "2026-05-17T20:15:00Z"
       },
       {
         "title": "[REDIFFUSION] Liga MX Soccer",
@@ -261,15 +243,6 @@
         "display_start": "2026-05-17T23:00:00Z",
         "stop": "2026-05-17T23:30:00Z",
         "start": "2026-05-17T23:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Bundesliga Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-05-17T13:00:00Z",
-        "stop": "2026-05-17T15:00:00Z",
-        "start": "2026-05-17T13:00:00Z"
       }
     ]
   }
