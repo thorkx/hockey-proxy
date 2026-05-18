@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-18T04:07:55Z",
+  "generated_at": "2026-05-18T10:15:07Z",
   "channels": {
     "1": [
       {
         "title": "🏒 MONTREAL CANADIENS AT BUFFALO SABRES",
         "league": "nhl",
-        "ch_key": "Sportsnet.4K.ca2",
+        "ch_key": "Sportsnet.East.HD.ca2",
         "score": 4650,
         "display_start": "2026-05-18T23:00:00Z",
         "stop": "2026-05-19T02:30:00Z",
@@ -30,22 +30,13 @@
         "start": "2026-05-19T18:30:00Z"
       },
       {
-        "title": "⚽ VANCOUVER FC VS CAVALRY",
-        "league": "cpl",
-        "ch_key": "One.Soccer.ca2",
-        "score": 900,
-        "display_start": "2026-05-18T00:30:00Z",
-        "stop": "2026-05-18T04:00:00Z",
-        "start": "2026-05-18T01:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-17T23:00:00Z",
-        "stop": "2026-05-17T23:30:00Z",
-        "start": "2026-05-17T23:00:00Z"
+        "display_start": "2026-05-18T05:00:00Z",
+        "stop": "2026-05-18T05:30:00Z",
+        "start": "2026-05-18T05:00:00Z"
       },
       {
         "title": "[REDIFFUSION] NHL in 30",
@@ -57,6 +48,15 @@
         "start": "2026-05-19T04:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-05-20T03:00:00Z",
+        "stop": "2026-05-20T03:30:00Z",
+        "start": "2026-05-20T03:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] FA Women's Super League",
         "league": "soccer",
         "ch_key": "Sportsnet.World.HD.ca2",
@@ -64,24 +64,6 @@
         "display_start": "2026-05-18T06:00:00Z",
         "stop": "2026-05-18T08:00:00Z",
         "start": "2026-05-18T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Le top LNH",
-        "league": "series",
-        "ch_key": "TVA.Sports.2.HD.ca2",
-        "score": 0,
-        "display_start": "2026-05-17T20:15:00Z",
-        "stop": "2026-05-17T20:30:00Z",
-        "start": "2026-05-17T20:15:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 0,
-        "display_start": "2026-05-17T23:30:00Z",
-        "stop": "2026-05-18T00:00:00Z",
-        "start": "2026-05-17T23:30:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -126,9 +108,18 @@
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-17T23:00:00Z",
-        "stop": "2026-05-17T23:30:00Z",
-        "start": "2026-05-17T23:00:00Z"
+        "display_start": "2026-05-18T05:00:00Z",
+        "stop": "2026-05-18T05:30:00Z",
+        "start": "2026-05-18T05:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Le top LNH",
+        "league": "series",
+        "ch_key": "TVA.Sports.2.HD.ca2",
+        "score": 0,
+        "display_start": "2026-05-18T07:00:00Z",
+        "stop": "2026-05-18T07:30:00Z",
+        "start": "2026-05-18T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Liga MX Soccer",
@@ -142,13 +133,13 @@
     ],
     "3": [
       {
-        "title": "⚾ CINCINNATI REDS AT PHILADELPHIA PHILLIES",
-        "league": "mlb",
-        "ch_key": "Sportsnet.World.HD.ca2",
+        "title": "🏀 SAN ANTONIO SPURS AT OKLAHOMA CITY THUNDER",
+        "league": "nba",
+        "ch_key": "Sportsnet.360.HD.ca2",
         "score": 350,
-        "display_start": "2026-05-18T22:10:00Z",
-        "stop": "2026-05-19T01:40:00Z",
-        "start": "2026-05-18T22:40:00Z"
+        "display_start": "2026-05-19T00:00:00Z",
+        "stop": "2026-05-19T03:30:00Z",
+        "start": "2026-05-19T00:30:00Z"
       },
       {
         "title": "⚾ ATLANTA BRAVES AT MIAMI MARLINS",
@@ -171,9 +162,9 @@
     ],
     "4": [
       {
-        "title": "⚾ CLEVELAND GUARDIANS AT DETROIT TIGERS",
+        "title": "⚾ CINCINNATI REDS AT PHILADELPHIA PHILLIES",
         "league": "mlb",
-        "ch_key": "TNT.Sports.1.HD.uk",
+        "ch_key": "Sportsnet.World.HD.ca2",
         "score": 350,
         "display_start": "2026-05-18T22:10:00Z",
         "stop": "2026-05-19T01:40:00Z",
@@ -191,13 +182,13 @@
     ],
     "5": [
       {
-        "title": "🏀 WASHINGTON MYSTICS AT DALLAS WINGS",
-        "league": "wnba",
-        "ch_key": "TSN.3.ca2",
-        "score": 250,
-        "display_start": "2026-05-18T23:30:00Z",
-        "stop": "2026-05-19T03:00:00Z",
-        "start": "2026-05-19T00:00:00Z"
+        "title": "⚾ CLEVELAND GUARDIANS AT DETROIT TIGERS",
+        "league": "mlb",
+        "ch_key": "TNT.Sports.1.HD.uk",
+        "score": 350,
+        "display_start": "2026-05-18T22:10:00Z",
+        "stop": "2026-05-19T01:40:00Z",
+        "start": "2026-05-18T22:40:00Z"
       }
     ]
   }
