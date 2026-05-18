@@ -855,7 +855,7 @@ def generate_schedule(days=2):
         if x not in prog_title for x in target_list:
             skip = True
 
-        if (x, y not in prog_title and y != prog.get('ch', '')) for x,y in target_titles_on_channels
+        if (x, y not in prog_title and y != prog.get('ch', '')) for x,y in target_titles_on_channels.items():
             skip = True
         else:
             if not skip:
