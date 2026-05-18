@@ -73,12 +73,13 @@ targeted_titles = {
         "Liga MX Soccer": 120, # 2 heures
         "CONCACAF League": 120, # 2 heures
         "CONCACAF Champions League": 120, # 2 heures
-        "Bundesliga Soccer": 120, # 2 heures
-            "UEFA Europa League (on SkyPL)": 120
+        "Bundesliga Soccer": 120 # 2 heures
+            
     }
 target_titles_on_channels = {
-    "Hlts": 'SkySp.PL.HD.uk"',
-    "F1 GP Highlights": 'SkySp.F1.HD.uk"'
+    "Hlts": 'SkySp.PL.HD.uk',
+	"UEFA Europa League": 'SkySp.PL.HD.uk',
+    "F1 GP Highlights": 'SkySp.F1.HD.uk'
 }
 
 CANADA_HOCKEY_IDS = [
@@ -851,10 +852,10 @@ def generate_schedule(days=2):
         skip = False
         target_list = targeted_titles
         # Vérifier si le programme est dans la liste ciblée
-        if prog_title not in target_list:
+        if x not in prog_title for x in target_list:
             skip = True
 
-        if prog_title in target_titles_on_channels and prog.get('ch') not in target_titles_on_channels[prog_title]:
+        if (x, y not in prog_title and y != prog.get('ch', '')) for x,y in target_titles_on_channels
             skip = True
         else:
             if not skip:
