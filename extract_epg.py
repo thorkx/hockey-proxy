@@ -856,7 +856,7 @@ def generate_schedule(days=2):
         elif any(x in prog_title and y == prog.get('ch','') for x,y in targeted_titles_on_channels.items()):
 			target_list = target_titles_on_channels
         else:
-            continue
+			continue
 
         # Récupérer la durée exacte du programme
         # duration_minutes = target_list[prog_title]
