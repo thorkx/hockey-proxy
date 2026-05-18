@@ -852,7 +852,7 @@ def generate_schedule(days=2):
         target_list = []
         # Vérifier si le programme est dans la liste ciblée
         if any(x in prog_title for x in targeted_titles):
-			target_list = targeted_titles
+		    target_list = targeted_titles
         elif any(x in prog_title and y == prog.get('ch','') for x,y in targeted_titles_on_channels.items()):
 			target_list = target_titles_on_channels
         else:
