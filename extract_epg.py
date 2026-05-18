@@ -76,7 +76,7 @@ targeted_titles = {
         "Bundesliga Soccer": 120 # 2 heures
             
     }
-target_titles_on_channels = {
+targeted_titles_on_channels = {
     "Hlts": 'SkySp.PL.HD.uk',
 	"UEFA Europa League": 'SkySp.PL.HD.uk',
     "F1 GP Highlights": 'SkySp.F1.HD.uk'
@@ -849,19 +849,13 @@ def generate_schedule(days=2):
         prog_title = prog.get('title', '')
         if prog_title in scheduled_ids:
             continue
-        skip = False
-        target_list = targeted_titles
+        target_list = []
         # Vérifier si le programme est dans la liste ciblée
-        if x not in prog_title for x in target_list:
-            skip = True
-
-        if (x, y not in prog_title and y != prog.get('ch', '')) for x,y in target_titles_on_channels.items():
-            skip = True
+        if any(x in prog_title for x in targeted_titles):
+			target_list = targeted_titles
+        elif any(x in prog_title and y == prog.get('ch','') for x,y in targeted_titles_on_channels.items()):
+			target_list = target_titles_on_channels
         else:
-            if not skip:
-                target_list = target_titles_on_channels
-        
-        if skip:
             continue
 
         # Récupérer la durée exacte du programme
