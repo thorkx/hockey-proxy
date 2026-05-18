@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T15:53:08Z",
+  "generated_at": "2026-05-18T19:50:20Z",
   "channels": {
     "1": [
       {
@@ -34,9 +34,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-18T08:00:00Z",
-        "stop": "2026-05-18T08:30:00Z",
-        "start": "2026-05-18T08:00:00Z"
+        "display_start": "2026-05-18T12:00:00Z",
+        "stop": "2026-05-18T12:30:00Z",
+        "start": "2026-05-18T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] NHL in 30",
@@ -120,13 +120,22 @@
         "start": "2026-05-20T04:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Liga MX Soccer",
+        "league": "sports",
+        "ch_key": "One.Soccer.ca2",
+        "score": 0,
+        "display_start": "2026-05-18T19:00:00Z",
+        "stop": "2026-05-18T21:00:00Z",
+        "start": "2026-05-18T19:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] CONCACAF Champions League Soccer",
         "league": "sports",
         "ch_key": "One.Soccer.ca2",
         "score": 0,
-        "display_start": "2026-05-18T12:00:00Z",
-        "stop": "2026-05-18T14:00:00Z",
-        "start": "2026-05-18T12:00:00Z"
+        "display_start": "2026-05-19T14:00:00Z",
+        "stop": "2026-05-19T16:00:00Z",
+        "start": "2026-05-19T14:00:00Z"
       },
       {
         "title": "[REDIFFUSION] CONCACAF League Soccer",
@@ -136,24 +145,6 @@
         "display_start": "2026-05-19T16:00:00Z",
         "stop": "2026-05-19T18:00:00Z",
         "start": "2026-05-19T16:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Canadian F1 GP Highlights 2014",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-18T19:00:00Z",
-        "stop": "2026-05-18T20:00:00Z",
-        "start": "2026-05-18T19:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Canadian F1 GP Highlights 2015",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-18T20:00:00Z",
-        "stop": "2026-05-18T21:00:00Z",
-        "start": "2026-05-18T20:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Canadian F1 GP Highlights 2016",
@@ -208,6 +199,33 @@
         "display_start": "2026-05-20T16:00:00Z",
         "stop": "2026-05-20T17:00:00Z",
         "start": "2026-05-20T16:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FNF: Aston Villa v Liverpool Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-18T12:30:00Z",
+        "stop": "2026-05-18T13:00:00Z",
+        "start": "2026-05-18T12:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Man Utd v Nott'm Forest Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-18T13:00:00Z",
+        "stop": "2026-05-18T13:30:00Z",
+        "start": "2026-05-18T13:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Everton v Sunderland Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-18T13:30:00Z",
+        "stop": "2026-05-18T14:00:00Z",
+        "start": "2026-05-18T13:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL Greatest Games:Newc/Leics '97",
@@ -275,49 +293,58 @@
         "start": "2026-05-20T01:38:00Z"
       },
       {
-        "title": "[REDIFFUSION] Liga MX Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-05-18T14:00:00Z",
-        "stop": "2026-05-18T16:00:00Z",
-        "start": "2026-05-18T14:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Canadian F1 GP Highlights 2017",
+        "title": "[REDIFFUSION] Canadian F1 GP Highlights 2014",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-05-18T08:00:00Z",
-        "stop": "2026-05-18T09:00:00Z",
-        "start": "2026-05-18T08:00:00Z"
+        "display_start": "2026-05-18T19:00:00Z",
+        "stop": "2026-05-18T20:00:00Z",
+        "start": "2026-05-18T19:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] FNF: Aston Villa v Liverpool Hlts",
+        "title": "[REDIFFUSION] Canadian F1 GP Highlights 2015",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-18T20:00:00Z",
+        "stop": "2026-05-18T21:00:00Z",
+        "start": "2026-05-18T20:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Leeds Utd v Brighton Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-05-18T12:30:00Z",
-        "stop": "2026-05-18T13:00:00Z",
-        "start": "2026-05-18T12:30:00Z"
+        "display_start": "2026-05-18T14:00:00Z",
+        "stop": "2026-05-18T14:30:00Z",
+        "start": "2026-05-18T14:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Man Utd v Nott'm Forest Hlts",
+        "title": "[REDIFFUSION] PL: Wolves v Fulham Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-05-18T13:00:00Z",
-        "stop": "2026-05-18T13:30:00Z",
-        "start": "2026-05-18T13:00:00Z"
+        "display_start": "2026-05-18T14:30:00Z",
+        "stop": "2026-05-18T15:00:00Z",
+        "start": "2026-05-18T14:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Everton v Sunderland Hlts",
+        "title": "[REDIFFUSION] PL: Brentford v C. Palace Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-05-18T13:30:00Z",
-        "stop": "2026-05-18T14:00:00Z",
-        "start": "2026-05-18T13:30:00Z"
+        "display_start": "2026-05-18T15:00:00Z",
+        "stop": "2026-05-18T15:30:00Z",
+        "start": "2026-05-18T15:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Newcastle v West Ham Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-18T15:30:00Z",
+        "stop": "2026-05-18T16:00:00Z",
+        "start": "2026-05-18T15:30:00Z"
       },
       {
         "title": "[REDIFFUSION] MNF: Arsenal v Burnley Hlts",
@@ -376,6 +403,15 @@
         "start": "2026-05-20T01:40:00Z"
       },
       {
+        "title": "[REDIFFUSION] Canadian F1 GP Highlights 2017",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-18T22:00:00Z",
+        "stop": "2026-05-18T23:00:00Z",
+        "start": "2026-05-18T22:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Canadian F1 GP Highlights 2018",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -383,42 +419,6 @@
         "display_start": "2026-05-18T23:00:00Z",
         "stop": "2026-05-19T00:00:00Z",
         "start": "2026-05-18T23:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Leeds Utd v Brighton Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-18T14:00:00Z",
-        "stop": "2026-05-18T14:30:00Z",
-        "start": "2026-05-18T14:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Wolves v Fulham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-18T14:30:00Z",
-        "stop": "2026-05-18T15:00:00Z",
-        "start": "2026-05-18T14:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brentford v C. Palace Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-18T15:00:00Z",
-        "stop": "2026-05-18T15:30:00Z",
-        "start": "2026-05-18T15:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Newcastle v West Ham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-18T15:30:00Z",
-        "stop": "2026-05-18T16:00:00Z",
-        "start": "2026-05-18T15:30:00Z"
       }
     ],
     "4": [
