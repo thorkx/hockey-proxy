@@ -467,6 +467,39 @@ def channel_language(ch_key):
     return info.get('lang', '').upper()
 
 
+def fetch_pwhl():
+	start = datetime.now(timezone.utc)
+	end = start + timedelta(days=3)
+	url = 'https://lscluster.hockeytech.com/feed/index.php?feed=modulekit&view=gamesperday&start_date=' + start+ '&end_date=' + end + '&key=446521baf8c38984&client_code=pwhl'
+	try:
+        r = requests.get(url, timeout=5)
+        r.raise_for_status()
+        payload = r.json()
+    except Exception as exc:
+        print(f"Skipping {league} day {fetch_date.strftime('%Y-%m-%d')} due to fetch error: {exc}")
+        continue
+
+    for e in payload.get('events') or []:
+        ts = e.get('strTimestamp')
+        if not ts:
+            continue
+            
+        # Correction du format de l'heure
+        try:
+            formatted_ts = datetime.fromisoformat(ts).isoformat() + 'Z'
+        except ValueError:
+            print(f"Skipping event due to invalid timestamp: {ts}")
+            continue
+
+        results.append({
+            'id': f"{league}-{e.get('idEvent', '')}",
+            'name': e.get('strEvent', '').upper(),
+            'date': formatted_ts,
+            'league': league
+        })
+
+    return results
+
 def fetch_sports_db(league):
     if league == 'cpl':
         league_id = 4820
