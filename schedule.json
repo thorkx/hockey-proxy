@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T10:28:23Z",
+  "generated_at": "2026-05-20T15:34:06Z",
   "channels": {
     "1": [
       {
@@ -43,9 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-20T06:00:00Z",
-        "stop": "2026-05-20T06:30:00Z",
-        "start": "2026-05-20T06:00:00Z"
+        "display_start": "2026-05-20T08:00:00Z",
+        "stop": "2026-05-20T08:30:00Z",
+        "start": "2026-05-20T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] NHL in 30",
@@ -73,6 +73,15 @@
         "display_start": "2026-05-21T06:00:00Z",
         "stop": "2026-05-21T08:00:00Z",
         "start": "2026-05-21T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Live: FA Women's Super League",
+        "league": "sports",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-05-23T11:30:00Z",
+        "stop": "2026-05-23T13:30:00Z",
+        "start": "2026-05-23T11:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Le top LNH",
@@ -120,24 +129,6 @@
         "start": "2026-05-22T08:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Canadian F1 GP Highlights 2022",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-20T07:00:00Z",
-        "stop": "2026-05-20T08:00:00Z",
-        "start": "2026-05-20T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Canadian F1 GP Highlights 2023",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-20T08:00:00Z",
-        "stop": "2026-05-20T09:00:00Z",
-        "start": "2026-05-20T08:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Canadian F1 GP Highlights 2024",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -151,9 +142,9 @@
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-05-20T06:30:00Z",
-        "stop": "2026-05-20T07:00:00Z",
-        "start": "2026-05-20T06:30:00Z"
+        "display_start": "2026-05-20T08:30:00Z",
+        "stop": "2026-05-20T09:00:00Z",
+        "start": "2026-05-20T08:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Leeds Utd v Arsenal Hlts",
@@ -230,13 +221,13 @@
         "start": "2026-05-21T06:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Canadian F1 GP Highlights 2019",
+        "title": "[REDIFFUSION] Canadian F1 GP Highlights 2023",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-05-20T06:00:00Z",
-        "stop": "2026-05-20T07:00:00Z",
-        "start": "2026-05-20T06:00:00Z"
+        "display_start": "2026-05-20T08:00:00Z",
+        "stop": "2026-05-20T09:00:00Z",
+        "start": "2026-05-20T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Canadian F1 GP Highlights 2025",
@@ -281,9 +272,9 @@
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-05-20T06:00:00Z",
-        "stop": "2026-05-20T06:30:00Z",
-        "start": "2026-05-20T06:00:00Z"
+        "display_start": "2026-05-20T08:00:00Z",
+        "stop": "2026-05-20T08:30:00Z",
+        "start": "2026-05-20T08:00:00Z"
       }
     ],
     "4": [
