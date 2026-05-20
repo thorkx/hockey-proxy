@@ -908,8 +908,10 @@ def generate_schedule(days=2):
 		# Récupérer la durée exacte du programme
 		# duration_minutes = target_list[prog_title]
 		prog_start = parse_program_start(prog['start'])
-		prog_stop = parse_program_start(prog['planned_stop']) #if prog.get('end') else prog_start + timedelta(minutes=duration_minutes)
-
+		prog_stop = parse_program_start(prog['planned_stop']) #if prog.get('end') else prog_start + timedelta(minutes=duration_minu
+		if prog_start.time() < time(6,0):
+			continue
+		
 		for slot in range(1, 6):
 			channel_events = chans[str(slot)]
 			can_fit = True
