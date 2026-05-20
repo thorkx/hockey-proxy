@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T00:56:59Z",
+  "generated_at": "2026-05-20T04:01:57Z",
   "channels": {
     "1": [
       {
@@ -43,27 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-19T17:00:00Z",
-        "stop": "2026-05-19T17:30:00Z",
-        "start": "2026-05-19T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] NHL in 30",
-        "league": "series",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-05-19T17:30:00Z",
-        "stop": "2026-05-19T18:00:00Z",
-        "start": "2026-05-19T17:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-05-19T19:00:00Z",
-        "stop": "2026-05-19T20:00:00Z",
-        "start": "2026-05-19T19:00:00Z"
+        "display_start": "2026-05-19T22:00:00Z",
+        "stop": "2026-05-19T22:30:00Z",
+        "start": "2026-05-19T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -75,6 +57,15 @@
         "start": "2026-05-20T03:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] NHL in 30",
+        "league": "hockey",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-05-20T10:30:00Z",
+        "stop": "2026-05-20T11:00:00Z",
+        "start": "2026-05-20T10:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] High Stakes Poker",
         "league": "series",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -82,6 +73,15 @@
         "display_start": "2026-05-22T19:00:00Z",
         "stop": "2026-05-22T20:00:00Z",
         "start": "2026-05-22T19:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-05-19T23:00:00Z",
+        "stop": "2026-05-19T23:30:00Z",
+        "start": "2026-05-19T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -120,15 +120,6 @@
         "start": "2026-05-21T05:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Canadian F1 GP Highlights 2018",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-19T18:00:00Z",
-        "stop": "2026-05-19T19:00:00Z",
-        "start": "2026-05-19T18:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Miami F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -136,6 +127,24 @@
         "display_start": "2026-05-19T21:00:00Z",
         "stop": "2026-05-19T22:00:00Z",
         "start": "2026-05-19T21:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Canadian F1 GP Highlights 2018",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-20T05:00:00Z",
+        "stop": "2026-05-20T06:00:00Z",
+        "start": "2026-05-20T05:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Canadian F1 GP Highlights 2019",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-20T06:00:00Z",
+        "stop": "2026-05-20T07:00:00Z",
+        "start": "2026-05-20T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Canadian F1 GP Highlights 2022",
@@ -165,15 +174,6 @@
         "start": "2026-05-20T15:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Bournemouth v Man City Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-19T23:00:00Z",
-        "stop": "2026-05-19T23:30:00Z",
-        "start": "2026-05-19T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] PL: Chelsea v Spurs Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -190,24 +190,6 @@
         "display_start": "2026-05-20T02:00:00Z",
         "stop": "2026-05-20T02:15:00Z",
         "start": "2026-05-20T02:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL Greatest Games:Wigan/WHU '11",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-20T05:00:00Z",
-        "stop": "2026-05-20T05:15:00Z",
-        "start": "2026-05-20T05:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL Greatest Games: Chelsea/Arsenal",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-20T05:30:00Z",
-        "stop": "2026-05-20T05:45:00Z",
-        "start": "2026-05-20T05:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Leeds Utd v Arsenal Hlts",
@@ -275,13 +257,13 @@
         "start": "2026-05-22T00:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-19T17:00:00Z",
-        "stop": "2026-05-19T17:30:00Z",
-        "start": "2026-05-19T17:00:00Z"
+        "display_start": "2026-05-20T19:00:00Z",
+        "stop": "2026-05-20T20:00:00Z",
+        "start": "2026-05-20T19:00:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Women's Super League",
@@ -302,15 +284,6 @@
         "start": "2026-05-20T18:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Le top LNH",
-        "league": "series",
-        "ch_key": "TVA.Sports.2.HD.ca2",
-        "score": 0,
-        "display_start": "2026-05-19T19:15:00Z",
-        "stop": "2026-05-19T19:30:00Z",
-        "start": "2026-05-19T19:15:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Liga MX Soccer",
         "league": "sports",
         "ch_key": "One.Soccer.ca2",
@@ -318,6 +291,33 @@
         "display_start": "2026-05-20T15:00:00Z",
         "stop": "2026-05-20T17:00:00Z",
         "start": "2026-05-20T15:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Bournemouth v Man City Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-19T23:00:00Z",
+        "stop": "2026-05-19T23:30:00Z",
+        "start": "2026-05-19T23:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL Greatest Games:Wigan/WHU '11",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-20T05:00:00Z",
+        "stop": "2026-05-20T05:15:00Z",
+        "start": "2026-05-20T05:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL Greatest Games: Chelsea/Arsenal",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-20T05:30:00Z",
+        "stop": "2026-05-20T05:45:00Z",
+        "start": "2026-05-20T05:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL Greatest Games:Leics/Everton'16",
@@ -356,15 +356,6 @@
         "display_start": "2026-05-22T00:00:00Z",
         "stop": "2026-05-22T02:00:00Z",
         "start": "2026-05-22T00:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Canadian F1 GP Highlights 2019",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-19T19:00:00Z",
-        "stop": "2026-05-19T20:00:00Z",
-        "start": "2026-05-19T19:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Canadian F1 GP Highlights 2025",
