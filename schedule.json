@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T15:39:14Z",
+  "generated_at": "2026-05-21T19:59:55Z",
   "channels": {
     "1": [
       {
@@ -43,18 +43,18 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-21T08:00:00Z",
-        "stop": "2026-05-21T08:30:00Z",
-        "start": "2026-05-21T08:00:00Z"
+        "display_start": "2026-05-21T12:00:00Z",
+        "stop": "2026-05-21T12:30:00Z",
+        "start": "2026-05-21T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] NHL in 30",
         "league": "series",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-21T08:30:00Z",
-        "stop": "2026-05-21T09:00:00Z",
-        "start": "2026-05-21T08:30:00Z"
+        "display_start": "2026-05-21T12:30:00Z",
+        "stop": "2026-05-21T13:00:00Z",
+        "start": "2026-05-21T12:30:00Z"
       },
       {
         "title": "[REDIFFUSION] High Stakes Poker",
@@ -102,6 +102,15 @@
         "start": "2026-05-21T14:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] 2026 PokerGO Cup",
+        "league": "series",
+        "ch_key": "CBS.Sports.Network.HD.us2",
+        "score": 0,
+        "display_start": "2026-05-22T06:00:00Z",
+        "stop": "2026-05-22T07:00:00Z",
+        "start": "2026-05-22T06:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Creator Poker Championship",
         "league": "series",
         "ch_key": "CBS.Sports.Network.HD.us2",
@@ -109,6 +118,15 @@
         "display_start": "2026-05-22T08:00:00Z",
         "stop": "2026-05-22T09:00:00Z",
         "start": "2026-05-22T08:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Canadian F1 GP Highlights 2025",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-21T13:00:00Z",
+        "stop": "2026-05-21T14:00:00Z",
+        "start": "2026-05-21T13:00:00Z"
       }
     ],
     "2": [
@@ -156,15 +174,6 @@
         "display_start": "2026-05-23T22:30:00Z",
         "stop": "2026-05-23T23:00:00Z",
         "start": "2026-05-23T22:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] 2026 PokerGO Cup",
-        "league": "series",
-        "ch_key": "CBS.Sports.Network.HD.us2",
-        "score": 0,
-        "display_start": "2026-05-21T08:00:00Z",
-        "stop": "2026-05-21T09:00:00Z",
-        "start": "2026-05-21T08:00:00Z"
       }
     ],
     "3": [
@@ -203,15 +212,6 @@
         "display_start": "2026-05-23T21:30:00Z",
         "stop": "2026-05-23T22:00:00Z",
         "start": "2026-05-23T21:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Canadian F1 GP Highlights 2025",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-21T08:00:00Z",
-        "stop": "2026-05-21T09:00:00Z",
-        "start": "2026-05-21T08:00:00Z"
       }
     ],
     "4": [
