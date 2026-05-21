@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T04:11:28Z",
+  "generated_at": "2026-05-21T09:52:14Z",
   "channels": {
     "1": [
       {
@@ -10,6 +10,15 @@
         "display_start": "2026-05-21T23:30:00Z",
         "stop": "2026-05-22T03:00:00Z",
         "start": "2026-05-22T00:00:00Z"
+      },
+      {
+        "title": "⚽ VANCOUVER FC VS SUPRA DU QUÉBEC",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 3400,
+        "display_start": "2026-05-23T21:30:00Z",
+        "stop": "2026-05-24T01:00:00Z",
+        "start": "2026-05-23T22:00:00Z"
       },
       {
         "title": "🏒 VEGAS GOLDEN KNIGHTS AT COLORADO AVALANCHE",
@@ -34,9 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-20T22:00:00Z",
-        "stop": "2026-05-20T22:30:00Z",
-        "start": "2026-05-20T22:00:00Z"
+        "display_start": "2026-05-21T06:00:00Z",
+        "stop": "2026-05-21T06:30:00Z",
+        "start": "2026-05-21T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] NHL in 30",
@@ -57,22 +66,13 @@
         "start": "2026-05-22T19:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-05-23T22:30:00Z",
-        "stop": "2026-05-23T23:00:00Z",
-        "start": "2026-05-23T22:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] FA Cup Classics",
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-20T23:00:00Z",
-        "stop": "2026-05-20T23:30:00Z",
-        "start": "2026-05-20T23:00:00Z"
+        "display_start": "2026-05-21T23:00:00Z",
+        "stop": "2026-05-21T23:30:00Z",
+        "start": "2026-05-21T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Live: FA Women's Super League",
@@ -91,15 +91,6 @@
         "display_start": "2026-05-22T17:15:00Z",
         "stop": "2026-05-22T17:30:00Z",
         "start": "2026-05-22T17:15:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 0,
-        "display_start": "2026-05-23T21:30:00Z",
-        "stop": "2026-05-23T22:00:00Z",
-        "start": "2026-05-23T21:30:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -158,6 +149,15 @@
         "start": "2026-05-23T01:40:00Z"
       },
       {
+        "title": "⚽ HFX WANDERERS VS INTER TORONTO",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-05-23T18:30:00Z",
+        "stop": "2026-05-23T22:00:00Z",
+        "start": "2026-05-23T19:00:00Z"
+      },
+      {
         "title": "⚾ PITTSBURGH PIRATES AT ST. LOUIS CARDINALS",
         "league": "mlb",
         "ch_key": "TNT.Sports.1.HD.uk",
@@ -165,6 +165,15 @@
         "display_start": "2026-05-21T16:45:00Z",
         "stop": "2026-05-21T20:15:00Z",
         "start": "2026-05-21T17:15:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-05-23T22:30:00Z",
+        "stop": "2026-05-23T23:00:00Z",
+        "start": "2026-05-23T22:30:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Women's Super League",
@@ -205,6 +214,15 @@
         "start": "2026-05-21T19:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 0,
+        "display_start": "2026-05-23T21:30:00Z",
+        "stop": "2026-05-23T22:00:00Z",
+        "start": "2026-05-23T21:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] 2026 PokerGO Cup",
         "league": "series",
         "ch_key": "CBS.Sports.Network.HD.us2",
@@ -227,8 +245,8 @@
       {
         "title": "🏀 CLEVELAND CAVALIERS AT NEW YORK KNICKS",
         "league": "nba",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 250,
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 350,
         "display_start": "2026-05-21T23:30:00Z",
         "stop": "2026-05-22T03:00:00Z",
         "start": "2026-05-22T00:00:00Z"
