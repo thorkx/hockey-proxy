@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23T13:47:23Z",
+  "generated_at": "2026-05-23T19:18:36Z",
   "channels": {
     "1": [
       {
@@ -48,22 +48,22 @@
         "start": "2026-05-24T18:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Blue Jays in 30",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-05-23T06:00:00Z",
-        "stop": "2026-05-23T06:30:00Z",
-        "start": "2026-05-23T06:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] NHL in 30",
         "league": "series",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-23T06:30:00Z",
-        "stop": "2026-05-23T07:00:00Z",
-        "start": "2026-05-23T06:30:00Z"
+        "display_start": "2026-05-23T11:30:00Z",
+        "stop": "2026-05-23T12:00:00Z",
+        "start": "2026-05-23T11:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Blue Jays in 30",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-05-23T12:00:00Z",
+        "stop": "2026-05-23T12:30:00Z",
+        "start": "2026-05-23T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -79,18 +79,9 @@
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-23T11:00:00Z",
-        "stop": "2026-05-23T11:30:00Z",
-        "start": "2026-05-23T11:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Live: FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-05-23T11:30:00Z",
-        "stop": "2026-05-23T13:30:00Z",
-        "start": "2026-05-23T11:30:00Z"
+        "display_start": "2026-05-23T13:30:00Z",
+        "stop": "2026-05-23T14:00:00Z",
+        "start": "2026-05-23T13:30:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Women's Super League",
@@ -264,6 +255,15 @@
         "display_start": "2026-05-25T00:45:00Z",
         "stop": "2026-05-25T04:15:00Z",
         "start": "2026-05-25T01:15:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Live: FA Women's Super League",
+        "league": "sports",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-05-23T11:30:00Z",
+        "stop": "2026-05-23T13:30:00Z",
+        "start": "2026-05-23T11:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Newcastle v Arsenal Hlts",
