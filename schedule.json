@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T13:45:57Z",
+  "generated_at": "2026-05-24T19:23:51Z",
   "channels": {
     "1": [
       {
@@ -48,31 +48,22 @@
         "start": "2026-05-25T17:35:00Z"
       },
       {
-        "title": "[REDIFFUSION] Blue Jays in 30",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-05-24T06:00:00Z",
-        "stop": "2026-05-24T06:30:00Z",
-        "start": "2026-05-24T06:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] NHL in 30",
         "league": "series",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-24T06:30:00Z",
-        "stop": "2026-05-24T07:00:00Z",
-        "start": "2026-05-24T06:30:00Z"
+        "display_start": "2026-05-24T11:30:00Z",
+        "stop": "2026-05-24T12:00:00Z",
+        "start": "2026-05-24T11:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
+        "title": "[REDIFFUSION] Blue Jays in 30",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-24T11:00:00Z",
-        "stop": "2026-05-24T11:30:00Z",
-        "start": "2026-05-24T11:00:00Z"
+        "display_start": "2026-05-24T12:00:00Z",
+        "stop": "2026-05-24T12:30:00Z",
+        "start": "2026-05-24T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Women's Super League",
@@ -88,9 +79,9 @@
         "league": "series",
         "ch_key": "TVA.Sports.2.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-24T09:15:00Z",
-        "stop": "2026-05-24T09:30:00Z",
-        "start": "2026-05-24T09:15:00Z"
+        "display_start": "2026-05-24T12:45:00Z",
+        "stop": "2026-05-24T13:00:00Z",
+        "start": "2026-05-24T12:45:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -264,6 +255,15 @@
         "display_start": "2026-05-25T19:10:00Z",
         "stop": "2026-05-25T22:40:00Z",
         "start": "2026-05-25T19:40:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-05-24T11:30:00Z",
+        "stop": "2026-05-24T12:00:00Z",
+        "start": "2026-05-24T11:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Man City v Aston Villa Hlts",
