@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T04:16:52Z",
+  "generated_at": "2026-05-25T10:19:26Z",
   "channels": {
     "1": [
       {
@@ -34,9 +34,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-24T21:00:00Z",
-        "stop": "2026-05-24T21:30:00Z",
-        "start": "2026-05-24T21:00:00Z"
+        "display_start": "2026-05-25T06:00:00Z",
+        "stop": "2026-05-25T06:30:00Z",
+        "start": "2026-05-25T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] NHL in 30",
@@ -55,15 +55,6 @@
         "display_start": "2026-05-27T17:00:00Z",
         "stop": "2026-05-27T17:30:00Z",
         "start": "2026-05-27T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-05-24T23:00:00Z",
-        "stop": "2026-05-24T23:30:00Z",
-        "start": "2026-05-24T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Women's Super League",
@@ -91,6 +82,15 @@
         "display_start": "2026-05-25T07:00:00Z",
         "stop": "2026-05-25T08:00:00Z",
         "start": "2026-05-25T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 0,
+        "display_start": "2026-05-27T20:00:00Z",
+        "stop": "2026-05-27T20:30:00Z",
+        "start": "2026-05-27T20:00:00Z"
       },
       {
         "title": "[REDIFFUSION] CONCACAF League Soccer",
@@ -127,51 +127,6 @@
         "display_start": "2026-05-26T06:30:00Z",
         "stop": "2026-05-26T07:00:00Z",
         "start": "2026-05-26T06:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Canadian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-24T23:30:00Z",
-        "stop": "2026-05-25T00:30:00Z",
-        "start": "2026-05-24T23:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: C. Palace v Arsenal Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-24T21:30:00Z",
-        "stop": "2026-05-24T22:00:00Z",
-        "start": "2026-05-24T21:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: West Ham Utd v Leeds Utd Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-24T22:00:00Z",
-        "stop": "2026-05-24T22:30:00Z",
-        "start": "2026-05-24T22:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Liverpool v Brentford Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-24T22:30:00Z",
-        "stop": "2026-05-24T23:00:00Z",
-        "start": "2026-05-24T22:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Sunderland v Chelsea Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-25T06:00:00Z",
-        "stop": "2026-05-25T06:30:00Z",
-        "start": "2026-05-25T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Man Utd v Arsenal Hlts",
@@ -230,22 +185,31 @@
         "start": "2026-05-25T19:40:00Z"
       },
       {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.360.HD.ca2",
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-24T23:00:00Z",
-        "stop": "2026-05-24T23:30:00Z",
-        "start": "2026-05-24T23:00:00Z"
+        "display_start": "2026-05-25T17:00:00Z",
+        "stop": "2026-05-25T17:30:00Z",
+        "start": "2026-05-25T17:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Man City v Aston Villa Hlts",
+        "title": "[REDIFFUSION] Canadian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-25T13:30:00Z",
+        "stop": "2026-05-25T14:30:00Z",
+        "start": "2026-05-25T13:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Sunderland v Chelsea Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-05-24T23:30:00Z",
-        "stop": "2026-05-25T00:00:00Z",
-        "start": "2026-05-24T23:30:00Z"
+        "display_start": "2026-05-25T06:00:00Z",
+        "stop": "2026-05-25T06:30:00Z",
+        "start": "2026-05-25T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Nott'm Forest v B'mouth Hlts",
@@ -255,6 +219,24 @@
         "display_start": "2026-05-25T06:30:00Z",
         "stop": "2026-05-25T07:00:00Z",
         "start": "2026-05-25T06:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Man City v Aston Villa Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-25T07:00:00Z",
+        "stop": "2026-05-25T07:30:00Z",
+        "start": "2026-05-25T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Brighton v Man Utd Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-25T07:30:00Z",
+        "stop": "2026-05-25T08:00:00Z",
+        "start": "2026-05-25T07:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Newcastle v Arsenal Hlts",
@@ -284,24 +266,6 @@
         "start": "2026-05-25T13:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Bournemouth v Arsenal Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-25T13:30:00Z",
-        "stop": "2026-05-25T14:00:00Z",
-        "start": "2026-05-25T13:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Spurs v Arsenal Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-25T14:00:00Z",
-        "stop": "2026-05-25T14:30:00Z",
-        "start": "2026-05-25T14:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] PL: Arsenal v Everton Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -318,6 +282,15 @@
         "display_start": "2026-05-25T15:00:00Z",
         "stop": "2026-05-25T15:30:00Z",
         "start": "2026-05-25T15:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: C. Palace v Arsenal Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-25T15:30:00Z",
+        "stop": "2026-05-25T16:00:00Z",
+        "start": "2026-05-25T15:30:00Z"
       }
     ],
     "3": [
@@ -349,24 +322,33 @@
         "start": "2026-05-25T17:35:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Brighton v Man Utd Hlts",
+        "title": "[REDIFFUSION] PL: Bournemouth v Arsenal Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-05-24T23:00:00Z",
-        "stop": "2026-05-24T23:30:00Z",
-        "start": "2026-05-24T23:00:00Z"
+        "display_start": "2026-05-25T13:30:00Z",
+        "stop": "2026-05-25T14:00:00Z",
+        "start": "2026-05-25T13:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Spurs v Arsenal Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-25T14:00:00Z",
+        "stop": "2026-05-25T14:30:00Z",
+        "start": "2026-05-25T14:00:00Z"
       }
     ],
     "4": [
       {
-        "title": "⚾ SEATTLE MARINERS AT ATHLETICS ATHLETICS",
-        "league": "mlb",
-        "ch_key": "CBS.Sports.Network.HD.us2",
+        "title": "🏀 NEW YORK KNICKS AT CLEVELAND CAVALIERS",
+        "league": "nba",
+        "ch_key": "TSN.4.ca2",
         "score": 350,
-        "display_start": "2026-05-26T01:10:00Z",
-        "stop": "2026-05-26T04:40:00Z",
-        "start": "2026-05-26T01:40:00Z"
+        "display_start": "2026-05-25T23:30:00Z",
+        "stop": "2026-05-26T03:00:00Z",
+        "start": "2026-05-26T00:00:00Z"
       },
       {
         "title": "⚾ SEATTLE MARINERS AT ATHLETICS ATHLETICS",
@@ -387,6 +369,15 @@
         "start": "2026-05-25T19:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] PL: Liverpool v Brentford Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-25T20:00:00Z",
+        "stop": "2026-05-25T20:30:00Z",
+        "start": "2026-05-25T20:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] PL: Fulham v Newcastle Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -398,13 +389,13 @@
     ],
     "5": [
       {
-        "title": "🏀 NEW YORK KNICKS AT CLEVELAND CAVALIERS",
-        "league": "nba",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 250,
-        "display_start": "2026-05-25T23:30:00Z",
-        "stop": "2026-05-26T03:00:00Z",
-        "start": "2026-05-26T00:00:00Z"
+        "title": "⚾ SEATTLE MARINERS AT ATHLETICS ATHLETICS",
+        "league": "mlb",
+        "ch_key": "CBS.Sports.Network.HD.us2",
+        "score": 350,
+        "display_start": "2026-05-26T01:10:00Z",
+        "stop": "2026-05-26T04:40:00Z",
+        "start": "2026-05-26T01:40:00Z"
       },
       {
         "title": "⚾ PHILADELPHIA PHILLIES AT SAN DIEGO PADRES",
@@ -414,6 +405,15 @@
         "display_start": "2026-05-27T01:10:00Z",
         "stop": "2026-05-27T04:40:00Z",
         "start": "2026-05-27T01:40:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: West Ham Utd v Leeds Utd Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-25T19:00:00Z",
+        "stop": "2026-05-25T19:30:00Z",
+        "start": "2026-05-25T19:00:00Z"
       }
     ]
   }
