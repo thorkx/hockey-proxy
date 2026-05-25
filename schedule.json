@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T10:19:26Z",
+  "generated_at": "2026-05-25T15:18:21Z",
   "channels": {
     "1": [
       {
@@ -30,22 +30,22 @@
         "start": "2026-05-25T17:35:00Z"
       },
       {
-        "title": "[REDIFFUSION] Blue Jays in 30",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-05-25T06:00:00Z",
-        "stop": "2026-05-25T06:30:00Z",
-        "start": "2026-05-25T06:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] NHL in 30",
         "league": "series",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-25T06:30:00Z",
-        "stop": "2026-05-25T07:00:00Z",
-        "start": "2026-05-25T06:30:00Z"
+        "display_start": "2026-05-25T07:30:00Z",
+        "stop": "2026-05-25T08:00:00Z",
+        "start": "2026-05-25T07:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Blue Jays in 30",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-05-25T08:00:00Z",
+        "stop": "2026-05-25T08:30:00Z",
+        "start": "2026-05-25T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -75,15 +75,6 @@
         "start": "2026-05-26T17:15:00Z"
       },
       {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
-        "score": 0,
-        "display_start": "2026-05-25T07:00:00Z",
-        "stop": "2026-05-25T08:00:00Z",
-        "start": "2026-05-25T07:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
         "league": "anthology",
         "ch_key": "Sportsnet.360.HD.ca2",
@@ -91,15 +82,6 @@
         "display_start": "2026-05-27T20:00:00Z",
         "stop": "2026-05-27T20:30:00Z",
         "start": "2026-05-27T20:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] CONCACAF League Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-05-25T08:00:00Z",
-        "stop": "2026-05-25T10:00:00Z",
-        "start": "2026-05-25T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] CONCACAF Champions League Soccer",
@@ -194,6 +176,24 @@
         "start": "2026-05-25T17:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
+        "score": 0,
+        "display_start": "2026-05-25T08:00:00Z",
+        "stop": "2026-05-25T09:00:00Z",
+        "start": "2026-05-25T08:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] CONCACAF League Soccer",
+        "league": "sports",
+        "ch_key": "One.Soccer.ca2",
+        "score": 0,
+        "display_start": "2026-05-26T16:00:00Z",
+        "stop": "2026-05-26T18:00:00Z",
+        "start": "2026-05-26T16:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Canadian F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -201,33 +201,6 @@
         "display_start": "2026-05-25T13:30:00Z",
         "stop": "2026-05-25T14:30:00Z",
         "start": "2026-05-25T13:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Sunderland v Chelsea Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-25T06:00:00Z",
-        "stop": "2026-05-25T06:30:00Z",
-        "start": "2026-05-25T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Nott'm Forest v B'mouth Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-25T06:30:00Z",
-        "stop": "2026-05-25T07:00:00Z",
-        "start": "2026-05-25T06:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Man City v Aston Villa Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-25T07:00:00Z",
-        "stop": "2026-05-25T07:30:00Z",
-        "start": "2026-05-25T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Brighton v Man Utd Hlts",
@@ -338,6 +311,33 @@
         "display_start": "2026-05-25T14:00:00Z",
         "stop": "2026-05-25T14:30:00Z",
         "start": "2026-05-25T14:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Man City v Aston Villa Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-25T21:00:00Z",
+        "stop": "2026-05-25T21:30:00Z",
+        "start": "2026-05-25T21:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Nott'm Forest v B'mouth Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-25T21:30:00Z",
+        "stop": "2026-05-25T22:00:00Z",
+        "start": "2026-05-25T21:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Sunderland v Chelsea Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-25T22:00:00Z",
+        "stop": "2026-05-25T22:30:00Z",
+        "start": "2026-05-25T22:00:00Z"
       }
     ],
     "4": [
