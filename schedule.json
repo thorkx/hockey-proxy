@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T10:05:41Z",
+  "generated_at": "2026-05-26T15:52:05Z",
   "channels": {
     "1": [
       {
@@ -43,18 +43,18 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-26T06:00:00Z",
-        "stop": "2026-05-26T06:30:00Z",
-        "start": "2026-05-26T06:00:00Z"
+        "display_start": "2026-05-26T08:00:00Z",
+        "stop": "2026-05-26T08:30:00Z",
+        "start": "2026-05-26T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] NHL in 30",
         "league": "series",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-26T06:30:00Z",
-        "stop": "2026-05-26T07:00:00Z",
-        "start": "2026-05-26T06:30:00Z"
+        "display_start": "2026-05-26T08:30:00Z",
+        "stop": "2026-05-26T09:00:00Z",
+        "start": "2026-05-26T08:30:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -84,15 +84,6 @@
         "start": "2026-05-27T06:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
-        "score": 0,
-        "display_start": "2026-05-26T07:00:00Z",
-        "stop": "2026-05-26T08:00:00Z",
-        "start": "2026-05-26T07:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] CONCACAF Champions League Soccer",
         "league": "sports",
         "ch_key": "One.Soccer.ca2",
@@ -109,24 +100,6 @@
         "display_start": "2026-05-26T21:00:00Z",
         "stop": "2026-05-26T22:00:00Z",
         "start": "2026-05-26T21:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Burnley v Wolves Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-26T08:00:00Z",
-        "stop": "2026-05-26T08:30:00Z",
-        "start": "2026-05-26T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Fulham v Newcastle Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-26T08:30:00Z",
-        "stop": "2026-05-26T09:00:00Z",
-        "start": "2026-05-26T08:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Sunderland v Chelsea Hlts",
@@ -239,6 +212,15 @@
         "start": "2026-05-26T17:15:00Z"
       },
       {
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
+        "score": 0,
+        "display_start": "2026-05-26T08:00:00Z",
+        "stop": "2026-05-26T09:00:00Z",
+        "start": "2026-05-26T08:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
         "league": "anthology",
         "ch_key": "Sportsnet.360.HD.ca2",
@@ -284,6 +266,24 @@
         "display_start": "2026-05-26T16:00:00Z",
         "stop": "2026-05-26T18:00:00Z",
         "start": "2026-05-26T16:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Burnley v Wolves Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-26T08:00:00Z",
+        "stop": "2026-05-26T08:30:00Z",
+        "start": "2026-05-26T08:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Fulham v Newcastle Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-26T08:30:00Z",
+        "stop": "2026-05-26T09:00:00Z",
+        "start": "2026-05-26T08:30:00Z"
       }
     ],
     "4": [
