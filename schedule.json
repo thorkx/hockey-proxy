@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T04:01:59Z",
+  "generated_at": "2026-05-26T10:05:41Z",
   "channels": {
     "1": [
       {
@@ -14,7 +14,7 @@
       {
         "title": "🏒 COLORADO AVALANCHE AT VEGAS GOLDEN KNIGHTS",
         "league": "nhl",
-        "ch_key": "Sportsnet.4K.ca2",
+        "ch_key": "Sportsnet.East.HD.ca2",
         "score": 2950,
         "display_start": "2026-05-27T00:30:00Z",
         "stop": "2026-05-27T04:00:00Z",
@@ -43,9 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-25T22:00:00Z",
-        "stop": "2026-05-25T22:30:00Z",
-        "start": "2026-05-25T22:00:00Z"
+        "display_start": "2026-05-26T06:00:00Z",
+        "stop": "2026-05-26T06:30:00Z",
+        "start": "2026-05-26T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] NHL in 30",
@@ -70,18 +70,18 @@
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-25T23:00:00Z",
-        "stop": "2026-05-25T23:30:00Z",
-        "start": "2026-05-25T23:00:00Z"
+        "display_start": "2026-05-26T17:00:00Z",
+        "stop": "2026-05-26T17:30:00Z",
+        "start": "2026-05-26T17:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Le top LNH",
-        "league": "series",
-        "ch_key": "TVA.Sports.2.HD.ca2",
+        "title": "[REDIFFUSION] FA Women's Super League",
+        "league": "sports",
+        "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-26T17:15:00Z",
-        "stop": "2026-05-26T17:30:00Z",
-        "start": "2026-05-26T17:15:00Z"
+        "display_start": "2026-05-27T06:00:00Z",
+        "stop": "2026-05-27T08:00:00Z",
+        "start": "2026-05-27T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -106,27 +106,63 @@
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-05-25T21:00:00Z",
-        "stop": "2026-05-25T22:00:00Z",
-        "start": "2026-05-25T21:00:00Z"
+        "display_start": "2026-05-26T21:00:00Z",
+        "stop": "2026-05-26T22:00:00Z",
+        "start": "2026-05-26T21:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Brighton v Man Utd Hlts",
+        "title": "[REDIFFUSION] PL: Burnley v Wolves Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-05-25T20:30:00Z",
-        "stop": "2026-05-25T21:00:00Z",
-        "start": "2026-05-25T20:30:00Z"
+        "display_start": "2026-05-26T08:00:00Z",
+        "stop": "2026-05-26T08:30:00Z",
+        "start": "2026-05-26T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Fulham v Newcastle Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-05-25T22:30:00Z",
-        "stop": "2026-05-25T23:00:00Z",
-        "start": "2026-05-25T22:30:00Z"
+        "display_start": "2026-05-26T08:30:00Z",
+        "stop": "2026-05-26T09:00:00Z",
+        "start": "2026-05-26T08:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Sunderland v Chelsea Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-26T09:00:00Z",
+        "stop": "2026-05-26T09:30:00Z",
+        "start": "2026-05-26T09:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Nott'm Forest v B'mouth Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-26T09:30:00Z",
+        "stop": "2026-05-26T10:00:00Z",
+        "start": "2026-05-26T09:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Man City v Aston Villa Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-26T10:00:00Z",
+        "stop": "2026-05-26T10:30:00Z",
+        "start": "2026-05-26T10:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Brighton v Man Utd Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-26T10:30:00Z",
+        "stop": "2026-05-26T11:00:00Z",
+        "start": "2026-05-26T10:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Liverpool v Brentford Hlts",
@@ -194,13 +230,13 @@
         "start": "2026-05-27T17:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.World.HD.ca2",
+        "title": "[REDIFFUSION] Le top LNH",
+        "league": "series",
+        "ch_key": "TVA.Sports.2.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-25T21:00:00Z",
-        "stop": "2026-05-25T23:00:00Z",
-        "start": "2026-05-25T21:00:00Z"
+        "display_start": "2026-05-26T17:15:00Z",
+        "stop": "2026-05-26T17:30:00Z",
+        "start": "2026-05-26T17:15:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -212,15 +248,6 @@
         "start": "2026-05-27T20:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] CONCACAF League Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-05-26T16:00:00Z",
-        "stop": "2026-05-26T18:00:00Z",
-        "start": "2026-05-26T16:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Liga MX Soccer",
         "league": "sports",
         "ch_key": "One.Soccer.ca2",
@@ -228,27 +255,38 @@
         "display_start": "2026-05-27T15:00:00Z",
         "stop": "2026-05-27T17:00:00Z",
         "start": "2026-05-27T15:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Poker Night in America",
-        "league": "poker",
-        "ch_key": "CBS.Sports.Network.HD.us2",
-        "score": 0,
-        "display_start": "2026-05-26T06:30:00Z",
-        "stop": "2026-05-26T07:00:00Z",
-        "start": "2026-05-26T06:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Burnley v Wolves Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-25T23:00:00Z",
-        "stop": "2026-05-25T23:30:00Z",
-        "start": "2026-05-25T23:00:00Z"
       }
     ],
     "3": [
+      {
+        "title": "⚾ ATLANTA BRAVES AT BOSTON RED SOX",
+        "league": "mlb",
+        "ch_key": "RDS2.HD.ca2",
+        "score": 400,
+        "display_start": "2026-05-27T22:15:00Z",
+        "stop": "2026-05-28T01:45:00Z",
+        "start": "2026-05-27T22:45:00Z"
+      },
+      {
+        "title": "🏀 SAN ANTONIO SPURS AT OKLAHOMA CITY THUNDER",
+        "league": "nba",
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 350,
+        "display_start": "2026-05-27T00:00:00Z",
+        "stop": "2026-05-27T03:30:00Z",
+        "start": "2026-05-27T00:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] CONCACAF League Soccer",
+        "league": "sports",
+        "ch_key": "One.Soccer.ca2",
+        "score": 0,
+        "display_start": "2026-05-26T16:00:00Z",
+        "stop": "2026-05-26T18:00:00Z",
+        "start": "2026-05-26T16:00:00Z"
+      }
+    ],
+    "4": [
       {
         "title": "⚾ ATLANTA BRAVES AT BOSTON RED SOX",
         "league": "mlb",
@@ -266,36 +304,9 @@
         "display_start": "2026-05-27T23:35:00Z",
         "stop": "2026-05-28T03:05:00Z",
         "start": "2026-05-28T00:05:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Man City v Aston Villa Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-25T21:00:00Z",
-        "stop": "2026-05-25T21:30:00Z",
-        "start": "2026-05-25T21:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Nott'm Forest v B'mouth Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-25T21:30:00Z",
-        "stop": "2026-05-25T22:00:00Z",
-        "start": "2026-05-25T21:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Sunderland v Chelsea Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-25T22:00:00Z",
-        "stop": "2026-05-25T22:30:00Z",
-        "start": "2026-05-25T22:00:00Z"
       }
     ],
-    "4": [
+    "5": [
       {
         "title": "⚾ SEATTLE MARINERS AT ATHLETICS ATHLETICS",
         "league": "mlb",
@@ -313,17 +324,6 @@
         "display_start": "2026-05-27T22:40:00Z",
         "stop": "2026-05-28T02:10:00Z",
         "start": "2026-05-27T23:10:00Z"
-      }
-    ],
-    "5": [
-      {
-        "title": "⚾ PHILADELPHIA PHILLIES AT SAN DIEGO PADRES",
-        "league": "mlb",
-        "ch_key": "beIN.SPORTS.MAX.4.fr",
-        "score": 250,
-        "display_start": "2026-05-27T01:10:00Z",
-        "stop": "2026-05-27T04:40:00Z",
-        "start": "2026-05-27T01:40:00Z"
       }
     ]
   }
