@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T10:13:29Z",
+  "generated_at": "2026-05-28T16:13:05Z",
   "channels": {
     "1": [
       {
@@ -48,22 +48,22 @@
         "start": "2026-05-28T17:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] Blue Jays in 30",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-05-28T06:00:00Z",
-        "stop": "2026-05-28T06:30:00Z",
-        "start": "2026-05-28T06:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] NHL in 30",
         "league": "series",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-28T06:30:00Z",
-        "stop": "2026-05-28T07:00:00Z",
-        "start": "2026-05-28T06:30:00Z"
+        "display_start": "2026-05-28T08:30:00Z",
+        "stop": "2026-05-28T09:00:00Z",
+        "start": "2026-05-28T08:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Blue Jays in 30",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-05-28T09:00:00Z",
+        "stop": "2026-05-28T09:30:00Z",
+        "start": "2026-05-28T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] High Stakes Poker",
@@ -73,15 +73,6 @@
         "display_start": "2026-05-29T18:00:00Z",
         "stop": "2026-05-29T19:00:00Z",
         "start": "2026-05-29T18:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
-        "score": 0,
-        "display_start": "2026-05-28T07:00:00Z",
-        "stop": "2026-05-28T08:00:00Z",
-        "start": "2026-05-28T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Canadian F1 GP Highlights",
@@ -138,6 +129,15 @@
         "display_start": "2026-05-28T17:00:00Z",
         "stop": "2026-05-28T17:30:00Z",
         "start": "2026-05-28T17:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
+        "score": 0,
+        "display_start": "2026-05-28T09:00:00Z",
+        "stop": "2026-05-28T10:00:00Z",
+        "start": "2026-05-28T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
