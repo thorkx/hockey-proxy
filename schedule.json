@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T13:49:56Z",
+  "generated_at": "2026-05-30T19:24:37Z",
   "channels": {
     "1": [
       {
@@ -57,22 +57,22 @@
         "start": "2026-05-31T23:20:00Z"
       },
       {
-        "title": "[REDIFFUSION] Blue Jays in 30",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-05-30T06:00:00Z",
-        "stop": "2026-05-30T06:30:00Z",
-        "start": "2026-05-30T06:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] NHL in 30",
         "league": "series",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-30T06:30:00Z",
-        "stop": "2026-05-30T07:00:00Z",
-        "start": "2026-05-30T06:30:00Z"
+        "display_start": "2026-05-30T11:30:00Z",
+        "stop": "2026-05-30T12:00:00Z",
+        "start": "2026-05-30T11:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Blue Jays in 30",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-05-30T12:00:00Z",
+        "stop": "2026-05-30T12:30:00Z",
+        "start": "2026-05-30T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -109,15 +109,6 @@
         "display_start": "2026-06-01T07:00:00Z",
         "stop": "2026-06-01T08:00:00Z",
         "start": "2026-06-01T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Canadian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-05-30T11:00:00Z",
-        "stop": "2026-05-30T12:00:00Z",
-        "start": "2026-05-30T11:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Monaco F1 GP Highlights 2015",
@@ -441,6 +432,15 @@
         "display_start": "2026-05-30T18:00:00Z",
         "stop": "2026-05-30T19:00:00Z",
         "start": "2026-05-30T18:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Canadian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-05-30T23:00:00Z",
+        "stop": "2026-05-31T00:00:00Z",
+        "start": "2026-05-30T23:00:00Z"
       }
     ]
   }
