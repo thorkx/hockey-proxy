@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-31T13:55:40Z",
+  "generated_at": "2026-05-31T19:24:07Z",
   "channels": {
     "1": [
       {
@@ -52,9 +52,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-05-31T06:00:00Z",
-        "stop": "2026-05-31T06:30:00Z",
-        "start": "2026-05-31T06:00:00Z"
+        "display_start": "2026-05-31T11:30:00Z",
+        "stop": "2026-05-31T12:00:00Z",
+        "start": "2026-05-31T11:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -91,6 +91,15 @@
         "display_start": "2026-06-03T06:30:00Z",
         "stop": "2026-06-03T07:00:00Z",
         "start": "2026-06-03T06:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] World Poker Tour: Season 12",
+        "league": "series",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-06-03T19:00:00Z",
+        "stop": "2026-06-03T20:00:00Z",
+        "start": "2026-06-03T19:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
