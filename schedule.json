@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T11:45:33Z",
+  "generated_at": "2026-06-01T17:51:25Z",
   "channels": {
     "1": [
       {
@@ -34,9 +34,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-01T06:00:00Z",
-        "stop": "2026-06-01T06:30:00Z",
-        "start": "2026-06-01T06:00:00Z"
+        "display_start": "2026-06-01T10:00:00Z",
+        "stop": "2026-06-01T10:30:00Z",
+        "start": "2026-06-01T10:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -111,33 +111,6 @@
         "start": "2026-06-03T22:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
-        "score": 0,
-        "display_start": "2026-06-01T07:00:00Z",
-        "stop": "2026-06-01T08:00:00Z",
-        "start": "2026-06-01T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Monaco F1 GP Highlights 2017",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-01T08:00:00Z",
-        "stop": "2026-06-01T09:00:00Z",
-        "start": "2026-06-01T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Monaco F1 GP Highlights 2018",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-01T09:00:00Z",
-        "stop": "2026-06-01T10:00:00Z",
-        "start": "2026-06-01T09:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Canadian F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -154,6 +127,15 @@
         "display_start": "2026-06-01T16:00:00Z",
         "stop": "2026-06-01T17:00:00Z",
         "start": "2026-06-01T16:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Monaco F1 GP Highlights 2018",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-02T07:00:00Z",
+        "stop": "2026-06-02T08:00:00Z",
+        "start": "2026-06-02T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Monaco F1 GP Highlights 2019",
@@ -208,15 +190,6 @@
         "display_start": "2026-06-03T17:00:00Z",
         "stop": "2026-06-03T18:00:00Z",
         "start": "2026-06-03T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Wolves v Man City Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-01T10:00:00Z",
-        "stop": "2026-06-01T10:30:00Z",
-        "start": "2026-06-01T10:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Nott'm Forest v Brentford Hlts",
@@ -581,58 +554,40 @@
         "start": "2026-06-01T22:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
+        "score": 0,
+        "display_start": "2026-06-01T10:00:00Z",
+        "stop": "2026-06-01T11:00:00Z",
+        "start": "2026-06-01T10:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Monaco F1 GP Highlights 2015",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-06-01T06:00:00Z",
-        "stop": "2026-06-01T07:00:00Z",
-        "start": "2026-06-01T06:00:00Z"
+        "display_start": "2026-06-01T17:00:00Z",
+        "stop": "2026-06-01T18:00:00Z",
+        "start": "2026-06-01T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Monaco F1 GP Highlights 2016",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-06-01T07:00:00Z",
-        "stop": "2026-06-01T08:00:00Z",
-        "start": "2026-06-01T07:00:00Z"
+        "display_start": "2026-06-01T18:00:00Z",
+        "stop": "2026-06-01T19:00:00Z",
+        "start": "2026-06-01T18:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] FNF: Liverpool v Bournemouth Hlts",
+        "title": "[REDIFFUSION] Monaco F1 GP Highlights 2017",
         "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
+        "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-06-01T08:00:00Z",
-        "stop": "2026-06-01T08:30:00Z",
-        "start": "2026-06-01T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Sunderland v West Ham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-01T08:30:00Z",
-        "stop": "2026-06-01T09:00:00Z",
-        "start": "2026-06-01T08:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brighton v Fulham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-01T09:00:00Z",
-        "stop": "2026-06-01T09:30:00Z",
-        "start": "2026-06-01T09:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Spurs v Burnley Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-01T09:30:00Z",
-        "stop": "2026-06-01T10:00:00Z",
-        "start": "2026-06-01T09:30:00Z"
+        "display_start": "2026-06-01T19:00:00Z",
+        "stop": "2026-06-01T20:00:00Z",
+        "start": "2026-06-01T19:00:00Z"
       },
       {
         "title": "[REDIFFUSION] MNF: Leeds Utd v Everton Hlts",
@@ -752,6 +707,15 @@
         "display_start": "2026-06-02T22:10:00Z",
         "stop": "2026-06-03T01:40:00Z",
         "start": "2026-06-02T22:40:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SNF: Wolves v Man City Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-01T10:00:00Z",
+        "stop": "2026-06-01T10:30:00Z",
+        "start": "2026-06-01T10:00:00Z"
       }
     ],
     "4": [
