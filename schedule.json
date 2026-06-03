@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T04:44:59Z",
+  "generated_at": "2026-06-03T11:09:31Z",
   "channels": {
     "1": [
       {
@@ -75,15 +75,6 @@
         "start": "2026-06-03T07:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Canadian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-02T21:00:00Z",
-        "stop": "2026-06-02T22:00:00Z",
-        "start": "2026-06-02T21:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Monaco F1 GP Highlights 2022",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -109,6 +100,15 @@
         "display_start": "2026-06-03T18:00:00Z",
         "stop": "2026-06-03T19:00:00Z",
         "start": "2026-06-03T18:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Canadian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-04T10:00:00Z",
+        "stop": "2026-06-04T11:00:00Z",
+        "start": "2026-06-04T10:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SNF: Man Utd v Chelsea Hlts",
@@ -271,24 +271,6 @@
         "display_start": "2026-06-04T09:30:00Z",
         "stop": "2026-06-04T10:00:00Z",
         "start": "2026-06-04T09:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Wolves v Brighton Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-04T10:00:00Z",
-        "stop": "2026-06-04T10:30:00Z",
-        "start": "2026-06-04T10:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Aston Villa v Burnley Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-04T10:30:00Z",
-        "stop": "2026-06-04T11:00:00Z",
-        "start": "2026-06-04T10:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Everton v Crystal Palace Hlts",
@@ -678,6 +660,24 @@
         "display_start": "2026-06-03T09:30:00Z",
         "stop": "2026-06-03T10:00:00Z",
         "start": "2026-06-03T09:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Wolves v Brighton Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-04T10:00:00Z",
+        "stop": "2026-06-04T10:30:00Z",
+        "start": "2026-06-04T10:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Aston Villa v Burnley Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-04T10:30:00Z",
+        "stop": "2026-06-04T11:00:00Z",
+        "start": "2026-06-04T10:30:00Z"
       },
       {
         "title": "[REDIFFUSION] MNF: West Ham v Brentford Hlts",
