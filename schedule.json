@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T11:09:31Z",
+  "generated_at": "2026-06-03T16:59:41Z",
   "channels": {
     "1": [
       {
@@ -43,9 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-03T06:00:00Z",
-        "stop": "2026-06-03T06:30:00Z",
-        "start": "2026-06-03T06:00:00Z"
+        "display_start": "2026-06-03T09:00:00Z",
+        "stop": "2026-06-03T09:30:00Z",
+        "start": "2026-06-03T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] High Stakes Poker",
@@ -70,27 +70,9 @@
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-06-03T07:00:00Z",
-        "stop": "2026-06-03T08:00:00Z",
-        "start": "2026-06-03T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Monaco F1 GP Highlights 2022",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-03T08:00:00Z",
-        "stop": "2026-06-03T09:00:00Z",
-        "start": "2026-06-03T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Monaco F1 GP Highlights 2023",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-03T09:00:00Z",
-        "stop": "2026-06-03T10:00:00Z",
-        "start": "2026-06-03T09:00:00Z"
+        "display_start": "2026-06-04T07:00:00Z",
+        "stop": "2026-06-04T08:00:00Z",
+        "start": "2026-06-04T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Monaco F1 GP Highlights 2025",
@@ -102,6 +84,15 @@
         "start": "2026-06-03T18:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Monaco F1 GP Highlights 2022",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-04T06:00:00Z",
+        "stop": "2026-06-04T07:00:00Z",
+        "start": "2026-06-04T06:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Canadian F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -109,6 +100,15 @@
         "display_start": "2026-06-04T10:00:00Z",
         "stop": "2026-06-04T11:00:00Z",
         "start": "2026-06-04T10:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Wolves v Leeds Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-03T09:30:00Z",
+        "stop": "2026-06-03T10:00:00Z",
+        "start": "2026-06-03T09:30:00Z"
       },
       {
         "title": "[REDIFFUSION] SNF: Man Utd v Chelsea Hlts",
@@ -599,22 +599,13 @@
         "start": "2026-06-04T18:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Monaco F1 GP Highlights 2019",
+        "title": "[REDIFFUSION] Monaco F1 GP Highlights 2023",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-06-03T06:00:00Z",
-        "stop": "2026-06-03T07:00:00Z",
-        "start": "2026-06-03T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Monaco F1 GP Highlights 2021",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-03T07:00:00Z",
-        "stop": "2026-06-03T08:00:00Z",
-        "start": "2026-06-03T07:00:00Z"
+        "display_start": "2026-06-03T09:00:00Z",
+        "stop": "2026-06-03T10:00:00Z",
+        "start": "2026-06-03T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Monaco F1 GP Highlights 2024",
@@ -624,42 +615,6 @@
         "display_start": "2026-06-03T17:00:00Z",
         "stop": "2026-06-03T18:00:00Z",
         "start": "2026-06-03T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brighton v Spurs Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-03T08:00:00Z",
-        "stop": "2026-06-03T08:30:00Z",
-        "start": "2026-06-03T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: West Ham v C. Palace Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-03T08:30:00Z",
-        "stop": "2026-06-03T09:00:00Z",
-        "start": "2026-06-03T08:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Burnley v Nott'm Forest Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-03T09:00:00Z",
-        "stop": "2026-06-03T09:30:00Z",
-        "start": "2026-06-03T09:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Wolves v Leeds Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-03T09:30:00Z",
-        "stop": "2026-06-03T10:00:00Z",
-        "start": "2026-06-03T09:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Wolves v Brighton Hlts",
@@ -716,6 +671,15 @@
         "display_start": "2026-06-03T22:00:00Z",
         "stop": "2026-06-03T22:30:00Z",
         "start": "2026-06-03T22:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Burnley v Nott'm Forest Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-03T09:00:00Z",
+        "stop": "2026-06-03T09:30:00Z",
+        "start": "2026-06-03T09:00:00Z"
       }
     ],
     "4": [
