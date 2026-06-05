@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T04:13:24Z",
+  "generated_at": "2026-06-05T10:00:45Z",
   "channels": {
     "1": [
       {
@@ -30,6 +30,15 @@
         "start": "2026-06-06T19:07:00Z"
       },
       {
+        "title": "⚽ INTER TORONTO VS FORGE",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-06-07T17:30:00Z",
+        "stop": "2026-06-07T21:00:00Z",
+        "start": "2026-06-07T18:00:00Z"
+      },
+      {
         "title": "⚾ SAN FRANCISCO GIANTS AT CHICAGO CUBS",
         "league": "mlb",
         "ch_key": "TNT.Sports.3.HD.uk",
@@ -43,18 +52,27 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-04T22:00:00Z",
-        "stop": "2026-06-04T22:30:00Z",
-        "start": "2026-06-04T22:00:00Z"
+        "display_start": "2026-06-05T06:30:00Z",
+        "stop": "2026-06-05T07:00:00Z",
+        "start": "2026-06-05T06:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-06-07T22:00:00Z",
+        "stop": "2026-06-07T22:30:00Z",
+        "start": "2026-06-07T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Cup Classics",
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-04T23:00:00Z",
-        "stop": "2026-06-04T23:30:00Z",
-        "start": "2026-06-04T23:00:00Z"
+        "display_start": "2026-06-05T17:00:00Z",
+        "stop": "2026-06-05T17:30:00Z",
+        "start": "2026-06-05T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Le top LNH",
@@ -282,15 +300,6 @@
         "display_start": "2026-06-05T20:00:00Z",
         "stop": "2026-06-05T21:00:00Z",
         "start": "2026-06-05T20:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Canadian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-04T21:30:00Z",
-        "stop": "2026-06-04T22:30:00Z",
-        "start": "2026-06-04T21:30:00Z"
       },
       {
         "title": "[REDIFFUSION] SNF: Man Utd v Brighton Hlts",
