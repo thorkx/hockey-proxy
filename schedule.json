@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T13:54:11Z",
+  "generated_at": "2026-06-06T19:39:17Z",
   "channels": {
     "1": [
       {
@@ -43,9 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-06T06:00:00Z",
-        "stop": "2026-06-06T06:30:00Z",
-        "start": "2026-06-06T06:00:00Z"
+        "display_start": "2026-06-06T12:00:00Z",
+        "stop": "2026-06-06T12:30:00Z",
+        "start": "2026-06-06T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -55,6 +55,15 @@
         "display_start": "2026-06-07T22:00:00Z",
         "stop": "2026-06-07T22:30:00Z",
         "start": "2026-06-07T22:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-06-09T18:00:00Z",
+        "stop": "2026-06-09T19:00:00Z",
+        "start": "2026-06-09T18:00:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Cup Classics",
@@ -73,15 +82,6 @@
         "display_start": "2026-06-07T12:45:00Z",
         "stop": "2026-06-07T13:00:00Z",
         "start": "2026-06-07T12:45:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "sports",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 0,
-        "display_start": "2026-06-08T19:00:00Z",
-        "stop": "2026-06-08T20:00:00Z",
-        "start": "2026-06-08T19:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
