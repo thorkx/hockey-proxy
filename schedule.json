@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T03:59:06Z",
+  "generated_at": "2026-06-09T09:54:41Z",
   "channels": {
     "1": [
       {
@@ -43,9 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-08T20:00:00Z",
-        "stop": "2026-06-08T20:30:00Z",
-        "start": "2026-06-08T20:00:00Z"
+        "display_start": "2026-06-09T06:00:00Z",
+        "stop": "2026-06-09T06:30:00Z",
+        "start": "2026-06-09T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -70,9 +70,9 @@
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-08T23:00:00Z",
-        "stop": "2026-06-08T23:30:00Z",
-        "start": "2026-06-08T23:00:00Z"
+        "display_start": "2026-06-09T17:00:00Z",
+        "stop": "2026-06-09T17:30:00Z",
+        "start": "2026-06-09T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Le top LNH",
@@ -93,13 +93,13 @@
         "start": "2026-06-09T07:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights 2017",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.360.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-09T06:00:00Z",
-        "stop": "2026-06-09T07:00:00Z",
-        "start": "2026-06-09T06:00:00Z"
+        "display_start": "2026-06-11T06:30:00Z",
+        "stop": "2026-06-11T07:00:00Z",
+        "start": "2026-06-11T06:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Spanish F1 GP Highlights 2020",
@@ -120,15 +120,6 @@
         "start": "2026-06-10T07:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights 2023",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-11T06:00:00Z",
-        "stop": "2026-06-11T07:00:00Z",
-        "start": "2026-06-11T06:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Spanish F1 GP Highlights 2024",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -136,6 +127,15 @@
         "display_start": "2026-06-11T07:00:00Z",
         "stop": "2026-06-11T08:00:00Z",
         "start": "2026-06-11T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Spanish F1 GP Highlights 2025",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-11T08:00:00Z",
+        "stop": "2026-06-11T09:00:00Z",
+        "start": "2026-06-11T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Sunderland v Bournemouth Hlts",
@@ -300,15 +300,6 @@
         "start": "2026-06-09T16:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Man Utd v West Ham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-09T17:00:00Z",
-        "stop": "2026-06-09T17:30:00Z",
-        "start": "2026-06-09T17:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] PL: Bournemouth v Chelsea Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -453,24 +444,6 @@
         "start": "2026-06-10T16:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Bournemouth v Burnley Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-11T08:00:00Z",
-        "stop": "2026-06-11T08:30:00Z",
-        "start": "2026-06-11T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brighton v Sunderland Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-11T08:30:00Z",
-        "stop": "2026-06-11T09:00:00Z",
-        "start": "2026-06-11T08:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] PL: Man City v West Ham Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -581,13 +554,13 @@
         "start": "2026-06-10T17:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights 2025",
+        "title": "[REDIFFUSION] Spanish F1 GP Highlights 2017",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-06-08T20:15:00Z",
-        "stop": "2026-06-08T20:45:00Z",
-        "start": "2026-06-08T20:15:00Z"
+        "display_start": "2026-06-09T06:00:00Z",
+        "stop": "2026-06-09T07:00:00Z",
+        "start": "2026-06-09T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Spanish F1 GP Highlights 2018",
@@ -608,6 +581,24 @@
         "start": "2026-06-09T18:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Spanish F1 GP Highlights 2023",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-11T06:00:00Z",
+        "stop": "2026-06-11T07:00:00Z",
+        "start": "2026-06-11T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Man Utd v West Ham Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-09T17:00:00Z",
+        "stop": "2026-06-09T17:30:00Z",
+        "start": "2026-06-09T17:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] PL: Man City v Sunderland Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -615,6 +606,24 @@
         "display_start": "2026-06-10T09:00:00Z",
         "stop": "2026-06-10T09:30:00Z",
         "start": "2026-06-10T09:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Bournemouth v Burnley Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-11T08:00:00Z",
+        "stop": "2026-06-11T08:30:00Z",
+        "start": "2026-06-11T08:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Brighton v Sunderland Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-11T08:30:00Z",
+        "stop": "2026-06-11T09:00:00Z",
+        "start": "2026-06-11T08:30:00Z"
       }
     ],
     "3": [
@@ -628,13 +637,13 @@
         "start": "2026-06-09T23:07:00Z"
       },
       {
-        "title": "🏀 SAN ANTONIO SPURS AT NEW YORK KNICKS",
-        "league": "nba",
-        "ch_key": "Sportsnet.4K.ca2",
-        "score": 350,
-        "display_start": "2026-06-11T00:00:00Z",
-        "stop": "2026-06-11T03:30:00Z",
-        "start": "2026-06-11T00:30:00Z"
+        "title": "⚾ LOS ANGELES DODGERS AT PITTSBURGH PIRATES",
+        "league": "mlb",
+        "ch_key": "RDS2.HD.ca2",
+        "score": 400,
+        "display_start": "2026-06-10T22:10:00Z",
+        "stop": "2026-06-11T01:40:00Z",
+        "start": "2026-06-10T22:40:00Z"
       },
       {
         "title": "[REDIFFUSION] MNF: Man Utd v Bournemouth Hlts",
@@ -657,13 +666,13 @@
         "start": "2026-06-09T22:40:00Z"
       },
       {
-        "title": "⚾ LOS ANGELES DODGERS AT PITTSBURGH PIRATES",
-        "league": "mlb",
-        "ch_key": "TNT.Sports.1.HD.uk",
+        "title": "🏀 SAN ANTONIO SPURS AT NEW YORK KNICKS",
+        "league": "nba",
+        "ch_key": "Sportsnet.4K.ca2",
         "score": 350,
-        "display_start": "2026-06-10T22:10:00Z",
-        "stop": "2026-06-11T01:40:00Z",
-        "start": "2026-06-10T22:40:00Z"
+        "display_start": "2026-06-11T00:00:00Z",
+        "stop": "2026-06-11T03:30:00Z",
+        "start": "2026-06-11T00:30:00Z"
       }
     ],
     "5": [
