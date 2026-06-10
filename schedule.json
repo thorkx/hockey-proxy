@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T15:49:12Z",
+  "generated_at": "2026-06-10T20:36:55Z",
   "channels": {
     "1": [
       {
@@ -43,9 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-10T08:30:00Z",
-        "stop": "2026-06-10T09:00:00Z",
-        "start": "2026-06-10T08:30:00Z"
+        "display_start": "2026-06-10T13:30:00Z",
+        "stop": "2026-06-10T14:00:00Z",
+        "start": "2026-06-10T13:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Countdown",
@@ -64,15 +64,6 @@
         "display_start": "2026-06-10T21:00:00Z",
         "stop": "2026-06-10T22:00:00Z",
         "start": "2026-06-10T21:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Le top LNH",
-        "league": "series",
-        "ch_key": "TVA.Sports.2.HD.ca2",
-        "score": 0,
-        "display_start": "2026-06-10T09:15:00Z",
-        "stop": "2026-06-10T09:30:00Z",
-        "start": "2026-06-10T09:15:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -111,78 +102,6 @@
         "start": "2026-06-11T09:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Bournemouth v Chelsea Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-10T08:00:00Z",
-        "stop": "2026-06-10T08:30:00Z",
-        "start": "2026-06-10T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Newcastle Utd v Burnley Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-10T09:30:00Z",
-        "stop": "2026-06-10T10:00:00Z",
-        "start": "2026-06-10T09:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Spurs v Brentford Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-10T10:00:00Z",
-        "stop": "2026-06-10T10:30:00Z",
-        "start": "2026-06-10T10:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Leeds v Liverpool Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-10T10:30:00Z",
-        "stop": "2026-06-10T11:00:00Z",
-        "start": "2026-06-10T10:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brighton v West Ham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-10T11:00:00Z",
-        "stop": "2026-06-10T11:30:00Z",
-        "start": "2026-06-10T11:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Fulham v Crystal Palace Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-10T11:30:00Z",
-        "stop": "2026-06-10T12:00:00Z",
-        "start": "2026-06-10T11:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] MNF: Wolves v Man Utd Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-10T12:00:00Z",
-        "stop": "2026-06-10T12:30:00Z",
-        "start": "2026-06-10T12:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Chelsea v Everton Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-10T12:30:00Z",
-        "stop": "2026-06-10T13:00:00Z",
-        "start": "2026-06-10T12:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] PL: Liverpool v Brighton Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -190,15 +109,6 @@
         "display_start": "2026-06-10T13:00:00Z",
         "stop": "2026-06-10T13:30:00Z",
         "start": "2026-06-10T13:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Burnley v Fulham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-10T13:30:00Z",
-        "stop": "2026-06-10T14:00:00Z",
-        "start": "2026-06-10T13:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: West Ham v Aston Villa Hlts",
@@ -504,9 +414,9 @@
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-06-10T08:00:00Z",
-        "stop": "2026-06-10T09:00:00Z",
-        "start": "2026-06-10T08:00:00Z"
+        "display_start": "2026-06-10T13:00:00Z",
+        "stop": "2026-06-10T14:00:00Z",
+        "start": "2026-06-10T13:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Spanish F1 GP Highlights 2023",
@@ -516,15 +426,6 @@
         "display_start": "2026-06-11T06:00:00Z",
         "stop": "2026-06-11T07:00:00Z",
         "start": "2026-06-11T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Man City v Sunderland Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-10T09:00:00Z",
-        "stop": "2026-06-10T09:30:00Z",
-        "start": "2026-06-10T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Bournemouth v Burnley Hlts",
@@ -601,13 +502,22 @@
         "start": "2026-06-10T17:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Everton v Nott'm Forest Hlts",
+        "title": "[REDIFFUSION] Le top LNH",
+        "league": "series",
+        "ch_key": "TVA.Sports.2.HD.ca2",
+        "score": 0,
+        "display_start": "2026-06-10T19:15:00Z",
+        "stop": "2026-06-10T19:30:00Z",
+        "start": "2026-06-10T19:15:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SNF: Burnley v Fulham Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-06-10T08:30:00Z",
-        "stop": "2026-06-10T09:00:00Z",
-        "start": "2026-06-10T08:30:00Z"
+        "display_start": "2026-06-10T13:30:00Z",
+        "stop": "2026-06-10T14:00:00Z",
+        "start": "2026-06-10T13:30:00Z"
       },
       {
         "title": "[REDIFFUSION] MNF: Man Utd v Bournemouth Hlts",
