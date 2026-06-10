@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T10:12:07Z",
+  "generated_at": "2026-06-10T15:49:12Z",
   "channels": {
     "1": [
       {
@@ -43,9 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-10T06:30:00Z",
-        "stop": "2026-06-10T07:00:00Z",
-        "start": "2026-06-10T06:30:00Z"
+        "display_start": "2026-06-10T08:30:00Z",
+        "stop": "2026-06-10T09:00:00Z",
+        "start": "2026-06-10T08:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Countdown",
@@ -73,15 +73,6 @@
         "display_start": "2026-06-10T09:15:00Z",
         "stop": "2026-06-10T09:30:00Z",
         "start": "2026-06-10T09:15:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
-        "score": 0,
-        "display_start": "2026-06-10T07:00:00Z",
-        "stop": "2026-06-10T08:00:00Z",
-        "start": "2026-06-10T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -127,15 +118,6 @@
         "display_start": "2026-06-10T08:00:00Z",
         "stop": "2026-06-10T08:30:00Z",
         "start": "2026-06-10T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Everton v Nott'm Forest Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-10T08:30:00Z",
-        "stop": "2026-06-10T09:00:00Z",
-        "start": "2026-06-10T08:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Newcastle Utd v Burnley Hlts",
@@ -518,22 +500,13 @@
         "start": "2026-06-11T22:40:00Z"
       },
       {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights 2020",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-06-10T06:00:00Z",
-        "stop": "2026-06-10T07:00:00Z",
-        "start": "2026-06-10T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights 2021",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-10T07:00:00Z",
-        "stop": "2026-06-10T08:00:00Z",
-        "start": "2026-06-10T07:00:00Z"
+        "display_start": "2026-06-10T08:00:00Z",
+        "stop": "2026-06-10T09:00:00Z",
+        "start": "2026-06-10T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Spanish F1 GP Highlights 2023",
@@ -626,6 +599,15 @@
         "display_start": "2026-06-10T17:00:00Z",
         "stop": "2026-06-10T17:30:00Z",
         "start": "2026-06-10T17:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Everton v Nott'm Forest Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-10T08:30:00Z",
+        "stop": "2026-06-10T09:00:00Z",
+        "start": "2026-06-10T08:30:00Z"
       },
       {
         "title": "[REDIFFUSION] MNF: Man Utd v Bournemouth Hlts",
