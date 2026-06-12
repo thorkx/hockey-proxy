@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-12T15:28:50Z",
+  "generated_at": "2026-06-12T20:16:58Z",
   "channels": {
     "1": [
       {
-        "title": "🏎️ MSC CRUISES BARCELONA-CATALUNYA GRAND PRIX",
-        "league": "f1",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 2800,
-        "display_start": "2026-06-13T01:45:00Z",
-        "stop": "2026-06-13T05:15:00Z",
-        "start": "2026-06-13T02:15:00Z"
+        "title": "⚾ NEW YORK YANKEES AT TORONTO BLUE JAYS",
+        "league": "mlb",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 1750,
+        "display_start": "2026-06-12T23:07:00Z",
+        "stop": "2026-06-13T02:37:00Z",
+        "start": "2026-06-12T23:37:00Z"
       },
       {
         "title": "⚾ NEW YORK YANKEES AT TORONTO BLUE JAYS",
@@ -57,6 +57,15 @@
         "start": "2026-06-13T22:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-06-15T19:00:00Z",
+        "stop": "2026-06-15T20:00:00Z",
+        "start": "2026-06-15T19:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] FA Cup Classics",
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
@@ -70,9 +79,9 @@
         "league": "series",
         "ch_key": "TVA.Sports.2.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-12T09:15:00Z",
-        "stop": "2026-06-12T09:30:00Z",
-        "start": "2026-06-12T09:15:00Z"
+        "display_start": "2026-06-12T19:15:00Z",
+        "stop": "2026-06-12T19:30:00Z",
+        "start": "2026-06-12T19:15:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Countdown",
@@ -84,24 +93,6 @@
         "start": "2026-06-12T18:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
-        "score": 0,
-        "display_start": "2026-06-12T08:00:00Z",
-        "stop": "2026-06-12T09:00:00Z",
-        "start": "2026-06-12T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Monaco F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-12T23:00:00Z",
-        "stop": "2026-06-13T00:00:00Z",
-        "start": "2026-06-12T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Barcelona F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -109,60 +100,6 @@
         "display_start": "2026-06-14T16:30:00Z",
         "stop": "2026-06-14T17:30:00Z",
         "start": "2026-06-14T16:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: West Ham v Brighton Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-12T09:30:00Z",
-        "stop": "2026-06-12T10:00:00Z",
-        "start": "2026-06-12T09:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Arsenal v Aston Villa Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-12T10:00:00Z",
-        "stop": "2026-06-12T10:30:00Z",
-        "start": "2026-06-12T10:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Man Utd v Wolves Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-12T10:30:00Z",
-        "stop": "2026-06-12T11:00:00Z",
-        "start": "2026-06-12T10:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Liverpool v Leeds Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-12T11:00:00Z",
-        "stop": "2026-06-12T11:30:00Z",
-        "start": "2026-06-12T11:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Crystal Palace v Fulham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-12T11:30:00Z",
-        "stop": "2026-06-12T12:00:00Z",
-        "start": "2026-06-12T11:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brentford v Spurs Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-12T12:00:00Z",
-        "stop": "2026-06-12T12:30:00Z",
-        "start": "2026-06-12T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Sunderland v Man City Hlts",
@@ -248,13 +185,13 @@
     ],
     "2": [
       {
-        "title": "⚾ NEW YORK YANKEES AT TORONTO BLUE JAYS",
+        "title": "⚾ LOS ANGELES DODGERS AT CHICAGO WHITE SOX",
         "league": "mlb",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 1750,
-        "display_start": "2026-06-12T23:07:00Z",
-        "stop": "2026-06-13T02:37:00Z",
-        "start": "2026-06-12T23:37:00Z"
+        "ch_key": "TNT.Sports.1.HD.uk",
+        "score": 350,
+        "display_start": "2026-06-12T23:10:00Z",
+        "stop": "2026-06-13T02:40:00Z",
+        "start": "2026-06-12T23:40:00Z"
       },
       {
         "title": "⚾ PHILADELPHIA PHILLIES AT MILWAUKEE BREWERS",
@@ -264,33 +201,6 @@
         "display_start": "2026-06-13T22:40:00Z",
         "stop": "2026-06-14T02:10:00Z",
         "start": "2026-06-13T23:10:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Burnley v Newcastle Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-12T08:00:00Z",
-        "stop": "2026-06-12T08:30:00Z",
-        "start": "2026-06-12T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Chelsea v Bournemouth Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-12T08:30:00Z",
-        "stop": "2026-06-12T09:00:00Z",
-        "start": "2026-06-12T08:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Nott'm Forest v Everton Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-12T09:00:00Z",
-        "stop": "2026-06-12T09:30:00Z",
-        "start": "2026-06-12T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Man City v Chelsea Hlts",
@@ -304,13 +214,13 @@
     ],
     "3": [
       {
-        "title": "⚾ LOS ANGELES DODGERS AT CHICAGO WHITE SOX",
+        "title": "⚾ TAMPA BAY RAYS AT LOS ANGELES ANGELS",
         "league": "mlb",
-        "ch_key": "TNT.Sports.1.HD.uk",
+        "ch_key": "TSN.3.ca2",
         "score": 350,
-        "display_start": "2026-06-12T23:10:00Z",
-        "stop": "2026-06-13T02:40:00Z",
-        "start": "2026-06-12T23:40:00Z"
+        "display_start": "2026-06-13T01:08:00Z",
+        "stop": "2026-06-13T04:38:00Z",
+        "start": "2026-06-13T01:38:00Z"
       },
       {
         "title": "⚾ HOUSTON ASTROS AT KANSAS CITY ROYALS",
@@ -320,20 +230,18 @@
         "display_start": "2026-06-13T22:40:00Z",
         "stop": "2026-06-14T02:10:00Z",
         "start": "2026-06-13T23:10:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Monaco F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-12T23:00:00Z",
+        "stop": "2026-06-13T00:00:00Z",
+        "start": "2026-06-12T23:00:00Z"
       }
     ],
     "4": [
-      {
-        "title": "⚾ TAMPA BAY RAYS AT LOS ANGELES ANGELS",
-        "league": "mlb",
-        "ch_key": "TSN.3.ca2",
-        "score": 350,
-        "display_start": "2026-06-13T01:08:00Z",
-        "stop": "2026-06-13T04:38:00Z",
-        "start": "2026-06-13T01:38:00Z"
-      }
-    ],
-    "5": [
       {
         "title": "⚾ COLORADO ROCKIES AT ATHLETICS ATHLETICS",
         "league": "mlb",
@@ -342,6 +250,17 @@
         "display_start": "2026-06-13T01:35:00Z",
         "stop": "2026-06-13T05:05:00Z",
         "start": "2026-06-13T02:05:00Z"
+      }
+    ],
+    "5": [
+      {
+        "title": "⚾ CHICAGO CUBS AT SAN FRANCISCO GIANTS",
+        "league": "mlb",
+        "ch_key": "beIN.SPORTS.MAX.4.fr",
+        "score": 250,
+        "display_start": "2026-06-13T01:45:00Z",
+        "stop": "2026-06-13T05:15:00Z",
+        "start": "2026-06-13T02:15:00Z"
       }
     ]
   }
