@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T10:21:39Z",
+  "generated_at": "2026-06-12T15:28:50Z",
   "channels": {
     "1": [
       {
@@ -88,9 +88,9 @@
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-06-12T07:00:00Z",
-        "stop": "2026-06-12T08:00:00Z",
-        "start": "2026-06-12T07:00:00Z"
+        "display_start": "2026-06-12T08:00:00Z",
+        "stop": "2026-06-12T09:00:00Z",
+        "start": "2026-06-12T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Monaco F1 GP Highlights",
@@ -109,24 +109,6 @@
         "display_start": "2026-06-14T16:30:00Z",
         "stop": "2026-06-14T17:30:00Z",
         "start": "2026-06-14T16:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Burnley v Newcastle Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-12T08:00:00Z",
-        "stop": "2026-06-12T08:30:00Z",
-        "start": "2026-06-12T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Chelsea v Bournemouth Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-12T08:30:00Z",
-        "stop": "2026-06-12T09:00:00Z",
-        "start": "2026-06-12T08:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: West Ham v Brighton Hlts",
@@ -282,6 +264,24 @@
         "display_start": "2026-06-13T22:40:00Z",
         "stop": "2026-06-14T02:10:00Z",
         "start": "2026-06-13T23:10:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Burnley v Newcastle Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-12T08:00:00Z",
+        "stop": "2026-06-12T08:30:00Z",
+        "start": "2026-06-12T08:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Chelsea v Bournemouth Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-12T08:30:00Z",
+        "stop": "2026-06-12T09:00:00Z",
+        "start": "2026-06-12T08:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Nott'm Forest v Everton Hlts",
