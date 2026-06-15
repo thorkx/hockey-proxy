@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T04:56:34Z",
+  "generated_at": "2026-06-15T12:26:50Z",
   "channels": {
     "1": [
       {
@@ -111,13 +111,13 @@
         "start": "2026-06-15T14:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Barcelona F1 GP Highlights",
+        "title": "[REDIFFUSION] CONCACAF League Soccer",
         "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "ch_key": "One.Soccer.ca2",
         "score": 0,
-        "display_start": "2026-06-14T23:55:00Z",
-        "stop": "2026-06-15T00:50:00Z",
-        "start": "2026-06-14T23:55:00Z"
+        "display_start": "2026-06-16T16:00:00Z",
+        "stop": "2026-06-16T18:00:00Z",
+        "start": "2026-06-16T16:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: West Ham v Nott'm Forest Hlts",
@@ -345,24 +345,6 @@
         "start": "2026-06-16T15:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Spurs v Man City Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-16T16:00:00Z",
-        "stop": "2026-06-16T16:30:00Z",
-        "start": "2026-06-16T16:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] MNF: Sunderland v Burnley Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-16T16:30:00Z",
-        "stop": "2026-06-16T17:00:00Z",
-        "start": "2026-06-16T16:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] FNF: Leeds v Nott'm Forest Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -554,15 +536,6 @@
         "start": "2026-06-16T23:45:00Z"
       },
       {
-        "title": "[REDIFFUSION] CONCACAF League Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-06-15T08:00:00Z",
-        "stop": "2026-06-15T10:00:00Z",
-        "start": "2026-06-15T08:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Poker Night in America",
         "league": "poker",
         "ch_key": "CBS.Sports.Network.HD.us2",
@@ -570,6 +543,15 @@
         "display_start": "2026-06-15T06:00:00Z",
         "stop": "2026-06-15T07:00:00Z",
         "start": "2026-06-15T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Brentford v Sunderland Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-15T09:00:00Z",
+        "stop": "2026-06-15T09:30:00Z",
+        "start": "2026-06-15T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Burnley v Man Utd Hlts",
@@ -651,6 +633,24 @@
         "display_start": "2026-06-15T17:00:00Z",
         "stop": "2026-06-15T17:30:00Z",
         "start": "2026-06-15T17:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Spurs v Man City Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-16T16:00:00Z",
+        "stop": "2026-06-16T16:30:00Z",
+        "start": "2026-06-16T16:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] MNF: Sunderland v Burnley Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-16T16:30:00Z",
+        "stop": "2026-06-16T17:00:00Z",
+        "start": "2026-06-16T16:30:00Z"
       }
     ],
     "3": [
@@ -682,13 +682,13 @@
         "start": "2026-06-16T23:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Brentford v Sunderland Hlts",
+        "title": "[REDIFFUSION] Barcelona F1 GP Highlights",
         "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
+        "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-06-15T09:00:00Z",
-        "stop": "2026-06-15T09:30:00Z",
-        "start": "2026-06-15T09:00:00Z"
+        "display_start": "2026-06-15T23:00:00Z",
+        "stop": "2026-06-16T00:00:00Z",
+        "start": "2026-06-15T23:00:00Z"
       }
     ],
     "4": [
