@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T04:25:48Z",
+  "generated_at": "2026-06-18T10:27:22Z",
   "channels": {
     "1": [
       {
@@ -57,31 +57,13 @@
         "start": "2026-06-20T02:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-06-17T21:00:00Z",
-        "stop": "2026-06-17T22:00:00Z",
-        "start": "2026-06-17T21:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-17T22:00:00Z",
-        "stop": "2026-06-17T22:30:00Z",
-        "start": "2026-06-17T22:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-06-17T23:00:00Z",
-        "stop": "2026-06-17T23:30:00Z",
-        "start": "2026-06-17T23:00:00Z"
+        "display_start": "2026-06-18T06:00:00Z",
+        "stop": "2026-06-18T06:30:00Z",
+        "start": "2026-06-18T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -91,6 +73,15 @@
         "display_start": "2026-06-18T07:00:00Z",
         "stop": "2026-06-18T08:00:00Z",
         "start": "2026-06-18T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Creator Poker Championship",
+        "league": "series",
+        "ch_key": "CBS.Sports.Network.HD.us2",
+        "score": 0,
+        "display_start": "2026-06-20T06:00:00Z",
+        "stop": "2026-06-20T07:00:00Z",
+        "start": "2026-06-20T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Barcelona F1 GP Highlights",
@@ -439,6 +430,15 @@
         "start": "2026-06-20T01:40:00Z"
       },
       {
+        "title": "⚾ SAN FRANCISCO GIANTS AT ATLANTA BRAVES",
+        "league": "mlb",
+        "ch_key": "beIN.SPORTS.MAX.4.fr",
+        "score": 250,
+        "display_start": "2026-06-18T22:45:00Z",
+        "stop": "2026-06-19T02:15:00Z",
+        "start": "2026-06-18T23:15:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -446,6 +446,15 @@
         "display_start": "2026-06-18T17:30:00Z",
         "stop": "2026-06-18T18:00:00Z",
         "start": "2026-06-18T17:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-06-18T20:00:00Z",
+        "stop": "2026-06-18T21:00:00Z",
+        "start": "2026-06-18T20:00:00Z"
       }
     ],
     "4": [
@@ -457,6 +466,15 @@
         "display_start": "2026-06-19T23:00:00Z",
         "stop": "2026-06-20T02:30:00Z",
         "start": "2026-06-19T23:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-06-18T17:00:00Z",
+        "stop": "2026-06-18T18:00:00Z",
+        "start": "2026-06-18T17:00:00Z"
       }
     ],
     "5": []
