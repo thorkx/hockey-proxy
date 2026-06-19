@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T15:30:29Z",
+  "generated_at": "2026-06-19T19:54:50Z",
   "channels": {
     "1": [
       {
@@ -52,9 +52,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-19T08:00:00Z",
-        "stop": "2026-06-19T08:30:00Z",
-        "start": "2026-06-19T08:00:00Z"
+        "display_start": "2026-06-19T12:00:00Z",
+        "stop": "2026-06-19T12:30:00Z",
+        "start": "2026-06-19T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -66,6 +66,15 @@
         "start": "2026-06-19T17:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "sports",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 0,
+        "display_start": "2026-06-22T19:00:00Z",
+        "stop": "2026-06-22T20:00:00Z",
+        "start": "2026-06-22T19:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Creator Poker Championship",
         "league": "series",
         "ch_key": "CBS.Sports.Network.HD.us2",
@@ -75,15 +84,6 @@
         "start": "2026-06-20T06:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "sports",
-        "ch_key": "CBS.Sports.Network.HD.us2",
-        "score": 0,
-        "display_start": "2026-06-20T08:00:00Z",
-        "stop": "2026-06-20T09:00:00Z",
-        "start": "2026-06-20T08:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Monaco F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -91,42 +91,6 @@
         "display_start": "2026-06-20T12:00:00Z",
         "stop": "2026-06-20T13:00:00Z",
         "start": "2026-06-20T12:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Fulham v Burnley Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-19T08:30:00Z",
-        "stop": "2026-06-19T09:00:00Z",
-        "start": "2026-06-19T08:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Everton v Chelsea Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-19T11:00:00Z",
-        "stop": "2026-06-19T11:30:00Z",
-        "start": "2026-06-19T11:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Leeds v Brentford Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-19T11:30:00Z",
-        "stop": "2026-06-19T12:00:00Z",
-        "start": "2026-06-19T11:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Newcastle v Sunderland Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-19T12:00:00Z",
-        "stop": "2026-06-19T12:30:00Z",
-        "start": "2026-06-19T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Aston Villa v West Ham Hlts",
@@ -252,9 +216,9 @@
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-06-19T08:00:00Z",
-        "stop": "2026-06-19T09:00:00Z",
-        "start": "2026-06-19T08:00:00Z"
+        "display_start": "2026-06-19T12:00:00Z",
+        "stop": "2026-06-19T13:00:00Z",
+        "start": "2026-06-19T12:00:00Z"
       }
     ],
     "3": [
@@ -293,6 +257,15 @@
         "display_start": "2026-06-19T17:00:00Z",
         "stop": "2026-06-19T18:00:00Z",
         "start": "2026-06-19T17:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Newcastle v Sunderland Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-19T12:00:00Z",
+        "stop": "2026-06-19T12:30:00Z",
+        "start": "2026-06-19T12:00:00Z"
       }
     ],
     "4": [
