@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T04:53:30Z",
+  "generated_at": "2026-06-19T10:45:34Z",
   "channels": {
     "1": [
       {
@@ -91,15 +91,6 @@
         "display_start": "2026-06-20T08:00:00Z",
         "stop": "2026-06-20T09:00:00Z",
         "start": "2026-06-20T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Barcelona F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-18T22:00:00Z",
-        "stop": "2026-06-18T23:00:00Z",
-        "start": "2026-06-18T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Monaco F1 GP Highlights",
@@ -295,22 +286,13 @@
         "start": "2026-06-20T18:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Chelsea v Man City Hlts",
+        "title": "[REDIFFUSION] Barcelona F1 GP Highlights",
         "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
+        "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
         "display_start": "2026-06-19T17:00:00Z",
-        "stop": "2026-06-19T17:30:00Z",
-        "start": "2026-06-19T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] MNF: Man Utd v Leeds Utd Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-19T17:30:00Z",
         "stop": "2026-06-19T18:00:00Z",
-        "start": "2026-06-19T17:30:00Z"
+        "start": "2026-06-19T17:00:00Z"
       }
     ],
     "4": [
@@ -331,6 +313,24 @@
         "display_start": "2026-06-19T23:00:00Z",
         "stop": "2026-06-20T02:30:00Z",
         "start": "2026-06-19T23:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Chelsea v Man City Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-19T17:00:00Z",
+        "stop": "2026-06-19T17:30:00Z",
+        "start": "2026-06-19T17:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] MNF: Man Utd v Leeds Utd Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-19T17:30:00Z",
+        "stop": "2026-06-19T18:00:00Z",
+        "start": "2026-06-19T17:30:00Z"
       }
     ],
     "5": []
