@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T10:45:34Z",
+  "generated_at": "2026-06-19T15:30:29Z",
   "channels": {
     "1": [
       {
@@ -52,9 +52,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-19T06:00:00Z",
-        "stop": "2026-06-19T06:30:00Z",
-        "start": "2026-06-19T06:00:00Z"
+        "display_start": "2026-06-19T08:00:00Z",
+        "stop": "2026-06-19T08:30:00Z",
+        "start": "2026-06-19T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -64,15 +64,6 @@
         "display_start": "2026-06-19T17:00:00Z",
         "stop": "2026-06-19T17:30:00Z",
         "start": "2026-06-19T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
-        "score": 0,
-        "display_start": "2026-06-19T07:00:00Z",
-        "stop": "2026-06-19T08:00:00Z",
-        "start": "2026-06-19T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Creator Poker Championship",
@@ -255,6 +246,15 @@
         "display_start": "2026-06-19T17:00:00Z",
         "stop": "2026-06-19T18:00:00Z",
         "start": "2026-06-19T17:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
+        "score": 0,
+        "display_start": "2026-06-19T08:00:00Z",
+        "stop": "2026-06-19T09:00:00Z",
+        "start": "2026-06-19T08:00:00Z"
       }
     ],
     "3": [
