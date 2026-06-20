@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T14:13:55Z",
+  "generated_at": "2026-06-20T19:44:22Z",
   "channels": {
     "1": [
       {
@@ -43,27 +43,18 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-20T06:30:00Z",
-        "stop": "2026-06-20T07:00:00Z",
-        "start": "2026-06-20T06:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-06-20T11:00:00Z",
-        "stop": "2026-06-20T12:00:00Z",
-        "start": "2026-06-20T11:00:00Z"
+        "display_start": "2026-06-20T12:00:00Z",
+        "stop": "2026-06-20T12:30:00Z",
+        "start": "2026-06-20T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
         "league": "sports",
-        "ch_key": "Sportsnet.East.HD.ca2",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-22T19:00:00Z",
-        "stop": "2026-06-22T20:00:00Z",
-        "start": "2026-06-22T19:00:00Z"
+        "display_start": "2026-06-23T19:00:00Z",
+        "stop": "2026-06-23T20:00:00Z",
+        "start": "2026-06-23T19:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -100,24 +91,6 @@
         "display_start": "2026-06-22T14:00:00Z",
         "stop": "2026-06-22T16:00:00Z",
         "start": "2026-06-22T14:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Creator Poker Championship",
-        "league": "series",
-        "ch_key": "CBS.Sports.Network.HD.us2",
-        "score": 0,
-        "display_start": "2026-06-20T07:00:00Z",
-        "stop": "2026-06-20T08:00:00Z",
-        "start": "2026-06-20T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Monaco F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-20T12:00:00Z",
-        "stop": "2026-06-20T13:00:00Z",
-        "start": "2026-06-20T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Barcelona F1 GP Highlights",
@@ -228,6 +201,15 @@
         "display_start": "2026-06-21T23:30:00Z",
         "stop": "2026-06-22T03:00:00Z",
         "start": "2026-06-22T00:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Monaco F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-20T12:00:00Z",
+        "stop": "2026-06-20T13:00:00Z",
+        "start": "2026-06-20T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Austrian F1 GP Highlights 2016",
@@ -383,6 +365,15 @@
         "display_start": "2026-06-20T18:30:00Z",
         "stop": "2026-06-20T19:00:00Z",
         "start": "2026-06-20T18:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-06-20T23:00:00Z",
+        "stop": "2026-06-21T00:00:00Z",
+        "start": "2026-06-20T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Aston Villa v Sunderland Hlts",
