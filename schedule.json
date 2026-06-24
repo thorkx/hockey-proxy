@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T14:41:57Z",
+  "generated_at": "2026-06-24T19:52:43Z",
   "channels": {
     "1": [
       {
@@ -52,9 +52,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-24T07:00:00Z",
-        "stop": "2026-06-24T07:30:00Z",
-        "start": "2026-06-24T07:00:00Z"
+        "display_start": "2026-06-24T12:00:00Z",
+        "stop": "2026-06-24T12:30:00Z",
+        "start": "2026-06-24T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Cup Classics",
@@ -70,72 +70,9 @@
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-06-24T08:00:00Z",
-        "stop": "2026-06-24T09:00:00Z",
-        "start": "2026-06-24T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brentford v C. Palace Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-24T09:00:00Z",
-        "stop": "2026-06-24T09:30:00Z",
-        "start": "2026-06-24T09:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Everton v Sunderland Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-24T09:30:00Z",
-        "stop": "2026-06-24T10:00:00Z",
-        "start": "2026-06-24T09:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Leeds Utd v Brighton Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-24T10:00:00Z",
-        "stop": "2026-06-24T10:30:00Z",
-        "start": "2026-06-24T10:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Wolves v Fulham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-24T10:30:00Z",
-        "stop": "2026-06-24T11:00:00Z",
-        "start": "2026-06-24T10:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Newcastle Utd v West Ham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-24T11:00:00Z",
-        "stop": "2026-06-24T11:30:00Z",
-        "start": "2026-06-24T11:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Arsenal v Burnley Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-24T11:30:00Z",
-        "stop": "2026-06-24T12:00:00Z",
-        "start": "2026-06-24T11:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Bournemouth v Man City Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-24T12:00:00Z",
-        "stop": "2026-06-24T12:30:00Z",
-        "start": "2026-06-24T12:00:00Z"
+        "display_start": "2026-06-24T16:00:00Z",
+        "stop": "2026-06-24T17:00:00Z",
+        "start": "2026-06-24T16:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Chelsea v Spurs Hlts",
@@ -199,24 +136,6 @@
         "display_start": "2026-06-24T15:30:00Z",
         "stop": "2026-06-24T16:00:00Z",
         "start": "2026-06-24T15:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Spurs v Everton Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-24T16:00:00Z",
-        "stop": "2026-06-24T16:30:00Z",
-        "start": "2026-06-24T16:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: West Ham Utd v Leeds Utd Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-24T16:30:00Z",
-        "stop": "2026-06-24T17:00:00Z",
-        "start": "2026-06-24T16:30:00Z"
       }
     ],
     "2": [
@@ -288,27 +207,9 @@
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-06-24T07:00:00Z",
-        "stop": "2026-06-24T08:00:00Z",
-        "start": "2026-06-24T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FNF: Aston Villa v Liverpool Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-24T08:00:00Z",
-        "stop": "2026-06-24T08:30:00Z",
-        "start": "2026-06-24T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Man Utd v Nott'm Forest Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-24T08:30:00Z",
-        "stop": "2026-06-24T09:00:00Z",
-        "start": "2026-06-24T08:30:00Z"
+        "display_start": "2026-06-24T12:00:00Z",
+        "stop": "2026-06-24T13:00:00Z",
+        "start": "2026-06-24T12:00:00Z"
       }
     ],
     "3": [
@@ -331,15 +232,6 @@
         "start": "2026-06-25T23:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] Austrian F1 GP Highlights 2022",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-24T07:00:00Z",
-        "stop": "2026-06-24T08:00:00Z",
-        "start": "2026-06-24T07:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Austrian F1 GP Highlights 2024",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -356,6 +248,33 @@
         "display_start": "2026-06-24T18:00:00Z",
         "stop": "2026-06-24T19:00:00Z",
         "start": "2026-06-24T18:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Bournemouth v Man City Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-24T12:00:00Z",
+        "stop": "2026-06-24T12:30:00Z",
+        "start": "2026-06-24T12:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Spurs v Everton Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-24T16:00:00Z",
+        "stop": "2026-06-24T16:30:00Z",
+        "start": "2026-06-24T16:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: West Ham Utd v Leeds Utd Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-24T16:30:00Z",
+        "stop": "2026-06-24T17:00:00Z",
+        "start": "2026-06-24T16:30:00Z"
       }
     ],
     "4": [
