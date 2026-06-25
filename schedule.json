@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T09:32:01Z",
+  "generated_at": "2026-06-25T14:41:34Z",
   "channels": {
     "1": [
       {
@@ -43,9 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-25T06:00:00Z",
-        "stop": "2026-06-25T06:30:00Z",
-        "start": "2026-06-25T06:00:00Z"
+        "display_start": "2026-06-25T07:00:00Z",
+        "stop": "2026-06-25T07:30:00Z",
+        "start": "2026-06-25T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -55,15 +55,6 @@
         "display_start": "2026-06-26T18:30:00Z",
         "stop": "2026-06-26T19:00:00Z",
         "start": "2026-06-26T18:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
-        "score": 0,
-        "display_start": "2026-06-25T07:00:00Z",
-        "stop": "2026-06-25T08:00:00Z",
-        "start": "2026-06-25T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] High Stakes Poker",
@@ -131,18 +122,9 @@
         "start": "2026-06-26T21:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] Austrian F1 GP Highlights 2023",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-25T06:00:00Z",
-        "stop": "2026-06-25T07:00:00Z",
-        "start": "2026-06-25T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Austrian F1 GP Highlights 2024",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
         "score": 0,
         "display_start": "2026-06-25T07:00:00Z",
         "stop": "2026-06-25T08:00:00Z",
@@ -194,6 +176,15 @@
         "display_start": "2026-06-25T17:00:00Z",
         "stop": "2026-06-25T17:30:00Z",
         "start": "2026-06-25T17:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Austrian F1 GP Highlights 2024",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-25T07:00:00Z",
+        "stop": "2026-06-25T08:00:00Z",
+        "start": "2026-06-25T07:00:00Z"
       }
     ],
     "4": [
