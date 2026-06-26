@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T14:34:42Z",
+  "generated_at": "2026-06-26T19:57:05Z",
   "channels": {
     "1": [
       {
@@ -12,13 +12,13 @@
         "start": "2026-06-28T23:00:00Z"
       },
       {
-        "title": "🏎️ LENOVO AUSTRIAN GRAND PRIX",
-        "league": "f1",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 2800,
-        "display_start": "2026-06-27T01:08:00Z",
-        "stop": "2026-06-27T04:38:00Z",
-        "start": "2026-06-27T01:38:00Z"
+        "title": "⚾ TEXAS RANGERS AT TORONTO BLUE JAYS",
+        "league": "mlb",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 1750,
+        "display_start": "2026-06-26T22:37:00Z",
+        "stop": "2026-06-27T02:07:00Z",
+        "start": "2026-06-26T23:07:00Z"
       },
       {
         "title": "⚾ TEXAS RANGERS AT TORONTO BLUE JAYS",
@@ -28,15 +28,6 @@
         "display_start": "2026-06-27T18:37:00Z",
         "stop": "2026-06-27T22:07:00Z",
         "start": "2026-06-27T19:07:00Z"
-      },
-      {
-        "title": "⚽ HFX WANDERERS VS PACIFIC",
-        "league": "cpl",
-        "ch_key": "One.Soccer.ca2",
-        "score": 900,
-        "display_start": "2026-06-26T21:00:00Z",
-        "stop": "2026-06-27T00:30:00Z",
-        "start": "2026-06-26T21:30:00Z"
       },
       {
         "title": "⚾ WASHINGTON NATIONALS AT BALTIMORE ORIOLES",
@@ -52,9 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-26T07:00:00Z",
-        "stop": "2026-06-26T07:30:00Z",
-        "start": "2026-06-26T07:00:00Z"
+        "display_start": "2026-06-26T12:00:00Z",
+        "stop": "2026-06-26T12:30:00Z",
+        "start": "2026-06-26T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -84,6 +75,24 @@
         "start": "2026-06-26T17:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "sports",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 0,
+        "display_start": "2026-06-29T19:00:00Z",
+        "stop": "2026-06-29T20:00:00Z",
+        "start": "2026-06-29T19:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Le top LNH",
+        "league": "series",
+        "ch_key": "TVA.Sports.HD.ca2",
+        "score": 0,
+        "display_start": "2026-06-26T21:30:00Z",
+        "stop": "2026-06-26T22:00:00Z",
+        "start": "2026-06-26T21:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Austrian F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -95,13 +104,22 @@
     ],
     "2": [
       {
-        "title": "⚾ TEXAS RANGERS AT TORONTO BLUE JAYS",
+        "title": "⚽ HFX WANDERERS VS PACIFIC",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-06-26T21:00:00Z",
+        "stop": "2026-06-27T00:30:00Z",
+        "start": "2026-06-26T21:30:00Z"
+      },
+      {
+        "title": "⚾ ATHLETICS ATHLETICS AT LOS ANGELES ANGELS",
         "league": "mlb",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 1750,
-        "display_start": "2026-06-26T22:37:00Z",
-        "stop": "2026-06-27T02:07:00Z",
-        "start": "2026-06-26T23:07:00Z"
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 350,
+        "display_start": "2026-06-27T01:08:00Z",
+        "stop": "2026-06-27T04:38:00Z",
+        "start": "2026-06-27T01:38:00Z"
       },
       {
         "title": "⚾ NEW YORK YANKEES AT BOSTON RED SOX",
@@ -131,22 +149,13 @@
         "start": "2026-06-28T00:40:00Z"
       },
       {
-        "title": "[REDIFFUSION] Le top LNH",
-        "league": "series",
-        "ch_key": "TVA.Sports.HD.ca2",
-        "score": 0,
-        "display_start": "2026-06-26T21:30:00Z",
-        "stop": "2026-06-26T22:00:00Z",
-        "start": "2026-06-26T21:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] SC With Jay Onrait",
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-06-26T07:00:00Z",
-        "stop": "2026-06-26T08:00:00Z",
-        "start": "2026-06-26T07:00:00Z"
+        "display_start": "2026-06-26T12:00:00Z",
+        "stop": "2026-06-26T13:00:00Z",
+        "start": "2026-06-26T12:00:00Z"
       }
     ],
     "3": [
@@ -200,13 +209,13 @@
     ],
     "5": [
       {
-        "title": "⚾ ATHLETICS ATHLETICS AT LOS ANGELES ANGELS",
+        "title": "⚾ HOUSTON ASTROS AT DETROIT TIGERS",
         "league": "mlb",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 350,
-        "display_start": "2026-06-27T01:08:00Z",
-        "stop": "2026-06-27T04:38:00Z",
-        "start": "2026-06-27T01:38:00Z"
+        "ch_key": "beIN.SPORTS.MAX.4.fr",
+        "score": 250,
+        "display_start": "2026-06-26T22:10:00Z",
+        "stop": "2026-06-27T01:40:00Z",
+        "start": "2026-06-26T22:40:00Z"
       }
     ]
   }
