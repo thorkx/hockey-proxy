@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T13:53:09Z",
+  "generated_at": "2026-06-27T19:27:49Z",
   "channels": {
     "1": [
       {
@@ -43,9 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-27T06:00:00Z",
-        "stop": "2026-06-27T06:30:00Z",
-        "start": "2026-06-27T06:00:00Z"
+        "display_start": "2026-06-27T11:30:00Z",
+        "stop": "2026-06-27T12:00:00Z",
+        "start": "2026-06-27T11:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -55,15 +55,6 @@
         "display_start": "2026-06-28T16:30:00Z",
         "stop": "2026-06-28T17:00:00Z",
         "start": "2026-06-28T16:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-06-27T11:00:00Z",
-        "stop": "2026-06-27T11:30:00Z",
-        "start": "2026-06-27T11:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -82,15 +73,6 @@
         "display_start": "2026-06-29T20:00:00Z",
         "stop": "2026-06-29T21:00:00Z",
         "start": "2026-06-29T20:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Le top LNH",
-        "league": "series",
-        "ch_key": "TVA.Sports.HD.ca2",
-        "score": 0,
-        "display_start": "2026-06-27T10:00:00Z",
-        "stop": "2026-06-27T10:30:00Z",
-        "start": "2026-06-27T10:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -228,6 +210,15 @@
         "display_start": "2026-06-28T00:10:00Z",
         "stop": "2026-06-28T03:40:00Z",
         "start": "2026-06-28T00:40:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-06-27T11:30:00Z",
+        "stop": "2026-06-27T12:00:00Z",
+        "start": "2026-06-27T11:30:00Z"
       },
       {
         "title": "[REDIFFUSION] FNF: Liverpool v Bournemouth Hlts",
@@ -374,6 +365,15 @@
         "display_start": "2026-06-27T22:30:00Z",
         "stop": "2026-06-27T23:00:00Z",
         "start": "2026-06-27T22:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Le top LNH",
+        "league": "series",
+        "ch_key": "TVA.Sports.HD.ca2",
+        "score": 0,
+        "display_start": "2026-06-27T22:00:00Z",
+        "stop": "2026-06-27T22:30:00Z",
+        "start": "2026-06-27T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Austrian F1 GP Highlights",
