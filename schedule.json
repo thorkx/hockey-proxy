@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T03:54:22Z",
+  "generated_at": "2026-06-27T08:42:31Z",
   "channels": {
     "1": [
       {
@@ -43,27 +43,27 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-26T21:00:00Z",
-        "stop": "2026-06-26T21:30:00Z",
-        "start": "2026-06-26T21:00:00Z"
+        "display_start": "2026-06-27T06:00:00Z",
+        "stop": "2026-06-27T06:30:00Z",
+        "start": "2026-06-27T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
         "league": "",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-26T22:00:00Z",
-        "stop": "2026-06-26T22:30:00Z",
-        "start": "2026-06-26T22:00:00Z"
+        "display_start": "2026-06-28T16:30:00Z",
+        "stop": "2026-06-28T17:00:00Z",
+        "start": "2026-06-28T16:30:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Cup Classics",
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-26T23:00:00Z",
-        "stop": "2026-06-26T23:30:00Z",
-        "start": "2026-06-26T23:00:00Z"
+        "display_start": "2026-06-27T11:00:00Z",
+        "stop": "2026-06-27T11:30:00Z",
+        "start": "2026-06-27T11:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -88,45 +88,45 @@
         "league": "series",
         "ch_key": "TVA.Sports.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-26T21:30:00Z",
-        "stop": "2026-06-26T22:00:00Z",
-        "start": "2026-06-26T21:30:00Z"
+        "display_start": "2026-06-27T10:00:00Z",
+        "stop": "2026-06-27T10:30:00Z",
+        "start": "2026-06-27T10:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] FNF: Liverpool v Bournemouth Hlts",
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
+        "score": 0,
+        "display_start": "2026-06-29T07:00:00Z",
+        "stop": "2026-06-29T08:00:00Z",
+        "start": "2026-06-29T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] CONCACAF League Soccer",
         "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
+        "ch_key": "One.Soccer.ca2",
         "score": 0,
         "display_start": "2026-06-29T08:00:00Z",
-        "stop": "2026-06-29T08:30:00Z",
+        "stop": "2026-06-29T10:00:00Z",
         "start": "2026-06-29T08:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Sunderland v West Ham Hlts",
+        "title": "[REDIFFUSION] CONCACAF Champions League Soccer",
         "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
+        "ch_key": "One.Soccer.ca2",
         "score": 0,
-        "display_start": "2026-06-29T08:30:00Z",
-        "stop": "2026-06-29T09:00:00Z",
-        "start": "2026-06-29T08:30:00Z"
+        "display_start": "2026-06-29T12:00:00Z",
+        "stop": "2026-06-29T14:00:00Z",
+        "start": "2026-06-29T12:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Brighton v Fulham Hlts",
+        "title": "[REDIFFUSION] Liga MX Soccer",
         "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
+        "ch_key": "One.Soccer.ca2",
         "score": 0,
-        "display_start": "2026-06-29T09:00:00Z",
-        "stop": "2026-06-29T09:30:00Z",
-        "start": "2026-06-29T09:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Spurs v Burnley Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-29T09:30:00Z",
-        "stop": "2026-06-29T10:00:00Z",
-        "start": "2026-06-29T09:30:00Z"
+        "display_start": "2026-06-29T14:00:00Z",
+        "stop": "2026-06-29T16:00:00Z",
+        "start": "2026-06-29T14:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SNF: Wolves v Man City Hlts",
@@ -163,69 +163,6 @@
         "display_start": "2026-06-29T11:30:00Z",
         "stop": "2026-06-29T12:00:00Z",
         "start": "2026-06-29T11:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] MNF: Leeds Utd v Everton Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-29T12:00:00Z",
-        "stop": "2026-06-29T12:30:00Z",
-        "start": "2026-06-29T12:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Burnley v Sunderland Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-29T13:00:00Z",
-        "stop": "2026-06-29T13:30:00Z",
-        "start": "2026-06-29T13:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Bournemouth v Wolves Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-29T13:30:00Z",
-        "stop": "2026-06-29T14:00:00Z",
-        "start": "2026-06-29T13:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brentford v Aston Villa Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-29T14:00:00Z",
-        "stop": "2026-06-29T14:30:00Z",
-        "start": "2026-06-29T14:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Arsenal v Leeds Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-29T14:30:00Z",
-        "stop": "2026-06-29T15:00:00Z",
-        "start": "2026-06-29T14:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Everton v Brighton Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-29T15:00:00Z",
-        "stop": "2026-06-29T15:30:00Z",
-        "start": "2026-06-29T15:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: C. Palace v Nott'm Forest Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-29T15:30:00Z",
-        "stop": "2026-06-29T16:00:00Z",
-        "start": "2026-06-29T15:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Fulham v Man Utd Hlts",
@@ -291,6 +228,105 @@
         "display_start": "2026-06-28T00:10:00Z",
         "stop": "2026-06-28T03:40:00Z",
         "start": "2026-06-28T00:40:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FNF: Liverpool v Bournemouth Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-29T08:00:00Z",
+        "stop": "2026-06-29T08:30:00Z",
+        "start": "2026-06-29T08:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Sunderland v West Ham Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-29T08:30:00Z",
+        "stop": "2026-06-29T09:00:00Z",
+        "start": "2026-06-29T08:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Brighton v Fulham Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-29T09:00:00Z",
+        "stop": "2026-06-29T09:30:00Z",
+        "start": "2026-06-29T09:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Spurs v Burnley Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-29T09:30:00Z",
+        "stop": "2026-06-29T10:00:00Z",
+        "start": "2026-06-29T09:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] MNF: Leeds Utd v Everton Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-29T12:00:00Z",
+        "stop": "2026-06-29T12:30:00Z",
+        "start": "2026-06-29T12:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Burnley v Sunderland Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-29T13:00:00Z",
+        "stop": "2026-06-29T13:30:00Z",
+        "start": "2026-06-29T13:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Bournemouth v Wolves Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-29T13:30:00Z",
+        "stop": "2026-06-29T14:00:00Z",
+        "start": "2026-06-29T13:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Brentford v Aston Villa Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-29T14:00:00Z",
+        "stop": "2026-06-29T14:30:00Z",
+        "start": "2026-06-29T14:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SNF: Arsenal v Leeds Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-29T14:30:00Z",
+        "stop": "2026-06-29T15:00:00Z",
+        "start": "2026-06-29T14:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Everton v Brighton Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-29T15:00:00Z",
+        "stop": "2026-06-29T15:30:00Z",
+        "start": "2026-06-29T15:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: C. Palace v Nott'm Forest Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-29T15:30:00Z",
+        "stop": "2026-06-29T16:00:00Z",
+        "start": "2026-06-29T15:30:00Z"
       }
     ],
     "3": [
