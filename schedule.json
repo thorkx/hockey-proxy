@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T13:58:31Z",
+  "generated_at": "2026-06-28T19:37:00Z",
   "channels": {
     "1": [
       {
@@ -30,15 +30,6 @@
         "start": "2026-06-29T23:07:00Z"
       },
       {
-        "title": "[REDIFFUSION] Blue Jays in 30",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-06-28T06:00:00Z",
-        "stop": "2026-06-28T06:30:00Z",
-        "start": "2026-06-28T06:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -46,6 +37,15 @@
         "display_start": "2026-06-28T13:00:00Z",
         "stop": "2026-06-28T13:30:00Z",
         "start": "2026-06-28T13:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Blue Jays in 30",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-06-28T13:30:00Z",
+        "stop": "2026-06-28T14:00:00Z",
+        "start": "2026-06-28T13:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
