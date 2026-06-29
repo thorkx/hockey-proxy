@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T11:09:30Z",
+  "generated_at": "2026-06-29T15:58:02Z",
   "channels": {
     "1": [
       {
@@ -43,9 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-29T06:00:00Z",
-        "stop": "2026-06-29T06:30:00Z",
-        "start": "2026-06-29T06:00:00Z"
+        "display_start": "2026-06-29T08:00:00Z",
+        "stop": "2026-06-29T08:30:00Z",
+        "start": "2026-06-29T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour: Season 12",
@@ -73,15 +73,6 @@
         "display_start": "2026-06-29T17:00:00Z",
         "stop": "2026-06-29T17:30:00Z",
         "start": "2026-06-29T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
-        "score": 0,
-        "display_start": "2026-06-29T07:00:00Z",
-        "stop": "2026-06-29T08:00:00Z",
-        "start": "2026-06-29T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] British F1 GP Highlights 2015",
@@ -136,15 +127,6 @@
         "display_start": "2026-07-01T08:00:00Z",
         "stop": "2026-07-01T09:00:00Z",
         "start": "2026-07-01T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FNF: Liverpool v Bournemouth Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-06-29T08:00:00Z",
-        "stop": "2026-06-29T08:30:00Z",
-        "start": "2026-06-29T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Sunderland v West Ham Hlts",
@@ -599,6 +581,15 @@
         "start": "2026-07-01T22:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
+        "score": 0,
+        "display_start": "2026-06-29T08:00:00Z",
+        "stop": "2026-06-29T09:00:00Z",
+        "start": "2026-06-29T08:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] PL: Sunderland v Brentford Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -689,6 +680,15 @@
         "display_start": "2026-06-29T23:00:00Z",
         "stop": "2026-06-30T00:00:00Z",
         "start": "2026-06-29T23:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FNF: Liverpool v Bournemouth Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-06-29T08:00:00Z",
+        "stop": "2026-06-29T08:30:00Z",
+        "start": "2026-06-29T08:00:00Z"
       }
     ],
     "4": [
