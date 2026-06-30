@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-30T04:03:36Z",
+  "generated_at": "2026-06-30T09:48:59Z",
   "channels": {
     "1": [
       {
         "title": "⚾ NEW YORK METS AT TORONTO BLUE JAYS",
         "league": "mlb",
-        "ch_key": "Sportsnet.4K.ca2",
+        "ch_key": "Sportsnet.East.HD.ca2",
         "score": 1750,
         "display_start": "2026-06-30T22:37:00Z",
         "stop": "2026-07-01T02:07:00Z",
@@ -14,7 +14,7 @@
       {
         "title": "⚾ NEW YORK METS AT TORONTO BLUE JAYS",
         "league": "mlb",
-        "ch_key": "Sportsnet.4K.ca2",
+        "ch_key": "Sportsnet.East.HD.ca2",
         "score": 1750,
         "display_start": "2026-07-01T18:37:00Z",
         "stop": "2026-07-01T22:07:00Z",
@@ -23,7 +23,7 @@
       {
         "title": "⚾ PITTSBURGH PIRATES AT PHILADELPHIA PHILLIES",
         "league": "mlb",
-        "ch_key": "Sportsnet.4K.ca2",
+        "ch_key": "Sportsnet.East.HD.ca2",
         "score": 350,
         "display_start": "2026-07-01T22:10:00Z",
         "stop": "2026-07-02T01:40:00Z",
@@ -32,7 +32,7 @@
       {
         "title": "⚾ LOS ANGELES DODGERS AT ATHLETICS ATHLETICS",
         "league": "mlb",
-        "ch_key": "Sportsnet.4K.ca2",
+        "ch_key": "Sportsnet.East.HD.ca2",
         "score": 350,
         "display_start": "2026-07-02T01:40:00Z",
         "stop": "2026-07-02T04:40:00Z",
@@ -43,9 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-29T20:30:00Z",
-        "stop": "2026-06-29T21:00:00Z",
-        "start": "2026-06-29T20:30:00Z"
+        "display_start": "2026-06-30T06:00:00Z",
+        "stop": "2026-06-30T06:30:00Z",
+        "start": "2026-06-30T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour: Season 12",
@@ -79,9 +79,9 @@
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-06-29T23:00:00Z",
-        "stop": "2026-06-29T23:30:00Z",
-        "start": "2026-06-29T23:00:00Z"
+        "display_start": "2026-06-30T17:00:00Z",
+        "stop": "2026-06-30T17:30:00Z",
+        "start": "2026-06-30T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -93,13 +93,22 @@
         "start": "2026-06-30T07:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] British F1 GP Highlights 2015",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "title": "[REDIFFUSION] 2026 PokerGO Cup",
+        "league": "series",
+        "ch_key": "CBS.Sports.Network.HD.us2",
         "score": 0,
-        "display_start": "2026-06-30T06:00:00Z",
-        "stop": "2026-06-30T07:00:00Z",
-        "start": "2026-06-30T06:00:00Z"
+        "display_start": "2026-07-02T06:00:00Z",
+        "stop": "2026-07-02T07:00:00Z",
+        "start": "2026-07-02T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Creator Poker Championship",
+        "league": "series",
+        "ch_key": "CBS.Sports.Network.HD.us2",
+        "score": 0,
+        "display_start": "2026-07-02T08:00:00Z",
+        "stop": "2026-07-02T09:00:00Z",
+        "start": "2026-07-02T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] British F1 GP Highlights 2017",
@@ -138,13 +147,13 @@
         "start": "2026-07-01T08:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] British F1 GP Highlights 2022",
+        "title": "[REDIFFUSION] Austrian F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-07-02T06:00:00Z",
-        "stop": "2026-07-02T07:00:00Z",
-        "start": "2026-07-02T06:00:00Z"
+        "display_start": "2026-07-01T17:00:00Z",
+        "stop": "2026-07-01T18:00:00Z",
+        "start": "2026-07-01T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] British F1 GP Highlights 2023",
@@ -154,15 +163,6 @@
         "display_start": "2026-07-02T07:00:00Z",
         "stop": "2026-07-02T08:00:00Z",
         "start": "2026-07-02T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] British F1 GP Highlights 2024",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-02T08:00:00Z",
-        "stop": "2026-07-02T09:00:00Z",
-        "start": "2026-07-02T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Wolves v Everton Hlts",
@@ -635,13 +635,13 @@
         "start": "2026-07-02T00:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Austrian F1 GP Highlights",
+        "title": "[REDIFFUSION] British F1 GP Highlights 2015",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-06-29T23:00:00Z",
-        "stop": "2026-06-30T00:00:00Z",
-        "start": "2026-06-29T23:00:00Z"
+        "display_start": "2026-06-30T06:00:00Z",
+        "stop": "2026-06-30T07:00:00Z",
+        "start": "2026-06-30T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] British F1 GP Highlights 2016",
@@ -651,6 +651,24 @@
         "display_start": "2026-06-30T07:00:00Z",
         "stop": "2026-06-30T08:00:00Z",
         "start": "2026-06-30T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] British F1 GP Highlights 2022",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-02T06:00:00Z",
+        "stop": "2026-07-02T07:00:00Z",
+        "start": "2026-07-02T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] British F1 GP Highlights 2024",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-02T08:00:00Z",
+        "stop": "2026-07-02T09:00:00Z",
+        "start": "2026-07-02T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Sunderland v Brentford Hlts",
@@ -687,24 +705,6 @@
         "display_start": "2026-07-01T08:30:00Z",
         "stop": "2026-07-01T09:00:00Z",
         "start": "2026-07-01T08:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FNF: Bournemouth v Fulham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-02T08:00:00Z",
-        "stop": "2026-07-02T08:30:00Z",
-        "start": "2026-07-02T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Arsenal v West Ham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-02T08:30:00Z",
-        "stop": "2026-07-02T09:00:00Z",
-        "start": "2026-07-02T08:30:00Z"
       }
     ],
     "3": [
@@ -752,6 +752,24 @@
         "display_start": "2026-06-30T23:00:00Z",
         "stop": "2026-07-01T00:00:00Z",
         "start": "2026-06-30T23:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FNF: Bournemouth v Fulham Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-02T08:00:00Z",
+        "stop": "2026-07-02T08:30:00Z",
+        "start": "2026-07-02T08:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Arsenal v West Ham Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-02T08:30:00Z",
+        "stop": "2026-07-02T09:00:00Z",
+        "start": "2026-07-02T08:30:00Z"
       }
     ],
     "4": [
