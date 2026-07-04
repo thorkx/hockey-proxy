@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T13:43:55Z",
+  "generated_at": "2026-07-04T19:21:25Z",
   "channels": {
     "1": [
       {
@@ -52,9 +52,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-04T07:30:00Z",
-        "stop": "2026-07-04T08:00:00Z",
-        "start": "2026-07-04T07:30:00Z"
+        "display_start": "2026-07-04T11:30:00Z",
+        "stop": "2026-07-04T12:00:00Z",
+        "start": "2026-07-04T11:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -91,15 +91,6 @@
         "display_start": "2026-07-06T07:00:00Z",
         "stop": "2026-07-06T08:00:00Z",
         "start": "2026-07-06T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] High Stakes Poker",
-        "league": "series",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-04T06:00:00Z",
-        "stop": "2026-07-04T07:00:00Z",
-        "start": "2026-07-04T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] CONCACAF League Soccer",
@@ -450,6 +441,15 @@
         "display_start": "2026-07-05T23:00:00Z",
         "stop": "2026-07-05T23:30:00Z",
         "start": "2026-07-05T23:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] High Stakes Poker",
+        "league": "series",
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-04T19:00:00Z",
+        "stop": "2026-07-04T20:00:00Z",
+        "start": "2026-07-04T19:00:00Z"
       },
       {
         "title": "[REDIFFUSION] British F1 GP Highlights",
