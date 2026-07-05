@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T03:53:58Z",
+  "generated_at": "2026-07-05T09:12:34Z",
   "channels": {
     "1": [
       {
@@ -48,22 +48,13 @@
         "start": "2026-07-06T18:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] Plays of the Month - Countdown",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-04T22:30:00Z",
-        "stop": "2026-07-04T23:00:00Z",
-        "start": "2026-07-04T22:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-05T07:30:00Z",
-        "stop": "2026-07-05T08:00:00Z",
-        "start": "2026-07-05T07:30:00Z"
+        "display_start": "2026-07-05T07:00:00Z",
+        "stop": "2026-07-05T07:30:00Z",
+        "start": "2026-07-05T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -75,13 +66,13 @@
         "start": "2026-07-06T23:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
+        "title": "[REDIFFUSION] Plays of the Month - Countdown",
+        "league": "anthology",
+        "ch_key": "Sportsnet.East.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-04T23:00:00Z",
-        "stop": "2026-07-04T23:30:00Z",
-        "start": "2026-07-04T23:00:00Z"
+        "display_start": "2026-07-07T22:30:00Z",
+        "stop": "2026-07-07T23:00:00Z",
+        "start": "2026-07-07T22:30:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -91,15 +82,6 @@
         "display_start": "2026-07-06T07:00:00Z",
         "stop": "2026-07-06T08:00:00Z",
         "start": "2026-07-06T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] High Stakes Poker",
-        "league": "series",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-04T20:00:00Z",
-        "stop": "2026-07-04T21:00:00Z",
-        "start": "2026-07-04T20:00:00Z"
       },
       {
         "title": "[REDIFFUSION] CONCACAF League Soccer",
@@ -127,6 +109,15 @@
         "display_start": "2026-07-06T14:00:00Z",
         "stop": "2026-07-06T16:00:00Z",
         "start": "2026-07-06T14:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] British F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-07T21:00:00Z",
+        "stop": "2026-07-07T22:00:00Z",
+        "start": "2026-07-07T21:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Aston Villa v Bournemouth Hlts",
@@ -560,13 +551,22 @@
         "start": "2026-07-05T23:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] British F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-05T17:35:00Z",
-        "stop": "2026-07-05T18:35:00Z",
-        "start": "2026-07-05T17:35:00Z"
+        "display_start": "2026-07-05T18:30:00Z",
+        "stop": "2026-07-05T19:00:00Z",
+        "start": "2026-07-05T18:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] High Stakes Poker",
+        "league": "series",
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-05T19:00:00Z",
+        "stop": "2026-07-05T20:00:00Z",
+        "start": "2026-07-05T19:00:00Z"
       }
     ]
   }
