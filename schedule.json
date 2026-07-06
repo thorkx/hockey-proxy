@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T04:01:00Z",
+  "generated_at": "2026-07-06T10:46:47Z",
   "channels": {
     "1": [
       {
@@ -30,15 +30,6 @@
         "start": "2026-07-06T18:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-05T23:00:00Z",
-        "stop": "2026-07-05T23:30:00Z",
-        "start": "2026-07-05T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -48,6 +39,15 @@
         "start": "2026-07-06T07:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-06T22:30:00Z",
+        "stop": "2026-07-06T23:00:00Z",
+        "start": "2026-07-06T22:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -55,6 +55,15 @@
         "display_start": "2026-07-06T23:00:00Z",
         "stop": "2026-07-06T23:30:00Z",
         "start": "2026-07-06T23:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-06T17:00:00Z",
+        "stop": "2026-07-06T17:30:00Z",
+        "start": "2026-07-06T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Countdown",
@@ -507,15 +516,6 @@
         "display_start": "2026-07-07T22:10:00Z",
         "stop": "2026-07-08T01:40:00Z",
         "start": "2026-07-07T22:40:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-05T23:00:00Z",
-        "stop": "2026-07-05T23:30:00Z",
-        "start": "2026-07-05T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
