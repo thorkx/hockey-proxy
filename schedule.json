@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T14:25:49Z",
+  "generated_at": "2026-07-08T19:39:53Z",
   "channels": {
     "1": [
       {
@@ -52,9 +52,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-08T07:30:00Z",
-        "stop": "2026-07-08T08:00:00Z",
-        "start": "2026-07-08T07:30:00Z"
+        "display_start": "2026-07-08T12:00:00Z",
+        "stop": "2026-07-08T12:30:00Z",
+        "start": "2026-07-08T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Countdown",
@@ -84,6 +84,15 @@
         "start": "2026-07-10T17:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
+        "score": 0,
+        "display_start": "2026-07-09T07:00:00Z",
+        "stop": "2026-07-09T08:00:00Z",
+        "start": "2026-07-09T07:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] British F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -91,87 +100,6 @@
         "display_start": "2026-07-08T15:00:00Z",
         "stop": "2026-07-08T16:00:00Z",
         "start": "2026-07-08T15:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Bournemouth v Chelsea Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-08T08:00:00Z",
-        "stop": "2026-07-08T08:30:00Z",
-        "start": "2026-07-08T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Everton v Nott'm Forest Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-08T08:30:00Z",
-        "stop": "2026-07-08T09:00:00Z",
-        "start": "2026-07-08T08:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Man City v Sunderland Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-08T09:00:00Z",
-        "stop": "2026-07-08T09:30:00Z",
-        "start": "2026-07-08T09:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Newcastle Utd v Burnley Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-08T09:30:00Z",
-        "stop": "2026-07-08T10:00:00Z",
-        "start": "2026-07-08T09:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Spurs v Brentford Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-08T10:00:00Z",
-        "stop": "2026-07-08T10:30:00Z",
-        "start": "2026-07-08T10:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Leeds v Liverpool Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-08T10:30:00Z",
-        "stop": "2026-07-08T11:00:00Z",
-        "start": "2026-07-08T10:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brighton v West Ham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-08T11:00:00Z",
-        "stop": "2026-07-08T11:30:00Z",
-        "start": "2026-07-08T11:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Fulham v Crystal Palace Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-08T11:30:00Z",
-        "stop": "2026-07-08T12:00:00Z",
-        "start": "2026-07-08T11:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] MNF: Wolves v Man Utd Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-08T12:00:00Z",
-        "stop": "2026-07-08T12:30:00Z",
-        "start": "2026-07-08T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Chelsea v Everton Hlts",
@@ -509,13 +437,13 @@
         "start": "2026-07-09T23:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
+        "title": "[REDIFFUSION] MNF: Wolves v Man Utd Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-07-08T07:00:00Z",
-        "stop": "2026-07-08T08:00:00Z",
-        "start": "2026-07-08T07:00:00Z"
+        "display_start": "2026-07-08T12:00:00Z",
+        "stop": "2026-07-08T12:30:00Z",
+        "start": "2026-07-08T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Crystal Palace v Man City Hlts",
