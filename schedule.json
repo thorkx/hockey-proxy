@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T03:18:55Z",
+  "generated_at": "2026-07-08T08:36:22Z",
   "channels": {
     "1": [
       {
@@ -10,6 +10,15 @@
         "display_start": "2026-07-08T19:15:00Z",
         "stop": "2026-07-08T22:45:00Z",
         "start": "2026-07-08T19:45:00Z"
+      },
+      {
+        "title": "⚾ ATLANTA BRAVES AT PITTSBURGH PIRATES",
+        "league": "mlb",
+        "ch_key": "RDS2.HD.ca2",
+        "score": 400,
+        "display_start": "2026-07-09T16:05:00Z",
+        "stop": "2026-07-09T19:35:00Z",
+        "start": "2026-07-09T16:35:00Z"
       },
       {
         "title": "⚾ PHILADELPHIA PHILLIES AT CINCINNATI REDS",
@@ -30,15 +39,6 @@
         "start": "2026-07-09T02:00:00Z"
       },
       {
-        "title": "⚾ NEW YORK YANKEES AT TAMPA BAY RAYS",
-        "league": "mlb",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 350,
-        "display_start": "2026-07-09T16:40:00Z",
-        "stop": "2026-07-09T20:10:00Z",
-        "start": "2026-07-09T17:10:00Z"
-      },
-      {
         "title": "⚾ CHICAGO CUBS AT BALTIMORE ORIOLES",
         "league": "mlb",
         "ch_key": "Sportsnet.East.HD.ca2",
@@ -46,15 +46,6 @@
         "display_start": "2026-07-09T22:05:00Z",
         "stop": "2026-07-10T01:35:00Z",
         "start": "2026-07-09T22:35:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-07T22:30:00Z",
-        "stop": "2026-07-07T23:00:00Z",
-        "start": "2026-07-07T22:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Blue Jays in 30",
@@ -79,9 +70,9 @@
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-07T23:00:00Z",
-        "stop": "2026-07-07T23:30:00Z",
-        "start": "2026-07-07T23:00:00Z"
+        "display_start": "2026-07-08T17:00:00Z",
+        "stop": "2026-07-08T17:30:00Z",
+        "start": "2026-07-08T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] High Stakes Poker",
@@ -97,9 +88,9 @@
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-07-07T21:00:00Z",
-        "stop": "2026-07-07T22:00:00Z",
-        "start": "2026-07-07T21:00:00Z"
+        "display_start": "2026-07-08T15:00:00Z",
+        "stop": "2026-07-08T16:00:00Z",
+        "start": "2026-07-08T15:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Bournemouth v Chelsea Hlts",
@@ -228,24 +219,6 @@
         "start": "2026-07-08T14:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Crystal Palace v Man City Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-08T15:00:00Z",
-        "stop": "2026-07-08T15:30:00Z",
-        "start": "2026-07-08T15:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Sunderland v Newcastle Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-08T15:30:00Z",
-        "stop": "2026-07-08T16:00:00Z",
-        "start": "2026-07-08T15:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] PL: Brentford v Leeds Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -343,15 +316,6 @@
         "display_start": "2026-07-09T15:30:00Z",
         "stop": "2026-07-09T16:00:00Z",
         "start": "2026-07-09T15:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Sunderland v Leeds Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-09T16:00:00Z",
-        "stop": "2026-07-09T16:30:00Z",
-        "start": "2026-07-09T16:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Chelsea v Bournemouth Hlts",
@@ -527,22 +491,22 @@
         "start": "2026-07-08T22:40:00Z"
       },
       {
-        "title": "⚾ MILWAUKEE BREWERS AT ST. LOUIS CARDINALS",
+        "title": "⚾ NEW YORK YANKEES AT TAMPA BAY RAYS",
         "league": "mlb",
         "ch_key": "TNT.Sports.1.HD.uk",
         "score": 350,
-        "display_start": "2026-07-09T23:15:00Z",
-        "stop": "2026-07-10T02:45:00Z",
-        "start": "2026-07-09T23:45:00Z"
+        "display_start": "2026-07-09T16:40:00Z",
+        "stop": "2026-07-09T20:10:00Z",
+        "start": "2026-07-09T17:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "sports",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-09T17:00:00Z",
-        "stop": "2026-07-09T18:00:00Z",
-        "start": "2026-07-09T17:00:00Z"
+        "title": "⚾ PHILADELPHIA PHILLIES AT CINCINNATI REDS",
+        "league": "mlb",
+        "ch_key": "TVA.Sports.HD.ca2",
+        "score": 350,
+        "display_start": "2026-07-09T22:40:00Z",
+        "stop": "2026-07-10T02:10:00Z",
+        "start": "2026-07-09T23:10:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -554,13 +518,31 @@
         "start": "2026-07-08T07:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Crystal Palace v Spurs Hlts",
+        "title": "[REDIFFUSION] PL: Crystal Palace v Man City Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-07-09T16:30:00Z",
-        "stop": "2026-07-09T17:00:00Z",
-        "start": "2026-07-09T16:30:00Z"
+        "display_start": "2026-07-08T15:00:00Z",
+        "stop": "2026-07-08T15:30:00Z",
+        "start": "2026-07-08T15:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Sunderland v Newcastle Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-08T15:30:00Z",
+        "stop": "2026-07-08T16:00:00Z",
+        "start": "2026-07-08T15:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Sunderland v Leeds Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-09T16:00:00Z",
+        "stop": "2026-07-09T16:30:00Z",
+        "start": "2026-07-09T16:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Burnley v Newcastle Hlts",
@@ -581,6 +563,42 @@
         "display_start": "2026-07-08T22:10:00Z",
         "stop": "2026-07-09T01:40:00Z",
         "start": "2026-07-08T22:40:00Z"
+      },
+      {
+        "title": "⚾ MILWAUKEE BREWERS AT ST. LOUIS CARDINALS",
+        "league": "mlb",
+        "ch_key": "TNT.Sports.1.HD.uk",
+        "score": 350,
+        "display_start": "2026-07-09T23:15:00Z",
+        "stop": "2026-07-10T02:45:00Z",
+        "start": "2026-07-09T23:45:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-09T22:30:00Z",
+        "stop": "2026-07-09T23:00:00Z",
+        "start": "2026-07-09T22:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "sports",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-09T17:00:00Z",
+        "stop": "2026-07-09T18:00:00Z",
+        "start": "2026-07-09T17:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Crystal Palace v Spurs Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-09T16:30:00Z",
+        "stop": "2026-07-09T17:00:00Z",
+        "start": "2026-07-09T16:30:00Z"
       }
     ],
     "4": [
