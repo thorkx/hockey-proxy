@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T09:48:30Z",
+  "generated_at": "2026-07-09T15:20:11Z",
   "channels": {
     "1": [
       {
@@ -66,6 +66,15 @@
         "start": "2026-07-10T17:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
+        "score": 0,
+        "display_start": "2026-07-09T08:00:00Z",
+        "stop": "2026-07-09T09:00:00Z",
+        "start": "2026-07-09T08:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] British F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -73,24 +82,6 @@
         "display_start": "2026-07-09T09:00:00Z",
         "stop": "2026-07-09T10:00:00Z",
         "start": "2026-07-09T09:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Bournemouth v Burnley Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-09T08:00:00Z",
-        "stop": "2026-07-09T08:30:00Z",
-        "start": "2026-07-09T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brighton v Sunderland Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-09T08:30:00Z",
-        "stop": "2026-07-09T09:00:00Z",
-        "start": "2026-07-09T08:30:00Z"
       },
       {
         "title": "[REDIFFUSION] SNF: Everton v Arsenal Hlts",
@@ -338,13 +329,22 @@
         "start": "2026-07-09T22:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
+        "title": "[REDIFFUSION] PL: Bournemouth v Burnley Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-07-09T07:00:00Z",
-        "stop": "2026-07-09T08:00:00Z",
-        "start": "2026-07-09T07:00:00Z"
+        "display_start": "2026-07-09T08:00:00Z",
+        "stop": "2026-07-09T08:30:00Z",
+        "start": "2026-07-09T08:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Brighton v Sunderland Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-09T08:30:00Z",
+        "stop": "2026-07-09T09:00:00Z",
+        "start": "2026-07-09T08:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Man City v West Ham Hlts",
