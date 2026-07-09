@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T03:43:21Z",
+  "generated_at": "2026-07-09T09:48:30Z",
   "channels": {
     "1": [
       {
@@ -30,24 +30,6 @@
         "start": "2026-07-09T23:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-08T22:30:00Z",
-        "stop": "2026-07-08T23:00:00Z",
-        "start": "2026-07-08T22:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-08T23:00:00Z",
-        "stop": "2026-07-08T23:30:00Z",
-        "start": "2026-07-08T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -66,6 +48,15 @@
         "start": "2026-07-10T08:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-10T23:00:00Z",
+        "stop": "2026-07-10T23:30:00Z",
+        "start": "2026-07-10T23:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] High Stakes Poker",
         "league": "series",
         "ch_key": "Sportsnet.East.HD.ca2",
@@ -73,6 +64,15 @@
         "display_start": "2026-07-10T17:30:00Z",
         "stop": "2026-07-10T18:30:00Z",
         "start": "2026-07-10T17:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] British F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-09T09:00:00Z",
+        "stop": "2026-07-09T10:00:00Z",
+        "start": "2026-07-09T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Bournemouth v Burnley Hlts",
@@ -91,24 +91,6 @@
         "display_start": "2026-07-09T08:30:00Z",
         "stop": "2026-07-09T09:00:00Z",
         "start": "2026-07-09T08:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Man City v West Ham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-09T09:00:00Z",
-        "stop": "2026-07-09T09:30:00Z",
-        "start": "2026-07-09T09:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Wolves v Brentford Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-09T09:30:00Z",
-        "stop": "2026-07-09T10:00:00Z",
-        "start": "2026-07-09T09:30:00Z"
       },
       {
         "title": "[REDIFFUSION] SNF: Everton v Arsenal Hlts",
@@ -338,22 +320,22 @@
         "start": "2026-07-09T23:45:00Z"
       },
       {
-        "title": "⚾ NEW YORK YANKEES AT WASHINGTON NATIONALS",
+        "title": "⚾ CHICAGO CUBS AT CINCINNATI REDS",
         "league": "mlb",
-        "ch_key": "TVA.Sports.HD.ca2",
+        "ch_key": "TNT.Sports.1.HD.uk",
         "score": 350,
-        "display_start": "2026-07-10T22:15:00Z",
-        "stop": "2026-07-11T01:45:00Z",
-        "start": "2026-07-10T22:45:00Z"
+        "display_start": "2026-07-10T22:40:00Z",
+        "stop": "2026-07-11T02:10:00Z",
+        "start": "2026-07-10T23:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-08T23:00:00Z",
-        "stop": "2026-07-08T23:30:00Z",
-        "start": "2026-07-08T23:00:00Z"
+        "display_start": "2026-07-09T22:30:00Z",
+        "stop": "2026-07-09T23:00:00Z",
+        "start": "2026-07-09T22:30:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -363,6 +345,24 @@
         "display_start": "2026-07-09T07:00:00Z",
         "stop": "2026-07-09T08:00:00Z",
         "start": "2026-07-09T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Man City v West Ham Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-09T09:00:00Z",
+        "stop": "2026-07-09T09:30:00Z",
+        "start": "2026-07-09T09:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Wolves v Brentford Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-09T09:30:00Z",
+        "stop": "2026-07-09T10:00:00Z",
+        "start": "2026-07-09T09:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Sunderland v Leeds Hlts",
@@ -385,31 +385,31 @@
     ],
     "3": [
       {
-        "title": "⚾ CHICAGO CUBS AT CINCINNATI REDS",
+        "title": "⚾ ATHLETICS ATHLETICS AT CHICAGO WHITE SOX",
         "league": "mlb",
-        "ch_key": "TNT.Sports.1.HD.uk",
+        "ch_key": "Sportsnet.East.HD.ca2",
         "score": 350,
-        "display_start": "2026-07-10T22:40:00Z",
-        "stop": "2026-07-11T02:10:00Z",
-        "start": "2026-07-10T23:10:00Z"
+        "display_start": "2026-07-10T23:10:00Z",
+        "stop": "2026-07-11T02:40:00Z",
+        "start": "2026-07-10T23:40:00Z"
       },
       {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "sports",
-        "ch_key": "Sportsnet.East.HD.ca2",
+        "title": "⚾ SEATTLE MARINERS AT MIAMI MARLINS",
+        "league": "mlb",
+        "ch_key": "beIN.SPORTS.MAX.5.fr",
+        "score": 250,
+        "display_start": "2026-07-09T22:10:00Z",
+        "stop": "2026-07-10T01:40:00Z",
+        "start": "2026-07-09T22:40:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
         "display_start": "2026-07-09T17:00:00Z",
-        "stop": "2026-07-09T18:00:00Z",
+        "stop": "2026-07-09T17:30:00Z",
         "start": "2026-07-09T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] British F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-08T23:00:00Z",
-        "stop": "2026-07-09T00:00:00Z",
-        "start": "2026-07-08T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Crystal Palace v Spurs Hlts",
@@ -423,13 +423,22 @@
     ],
     "4": [
       {
-        "title": "⚾ ATHLETICS ATHLETICS AT CHICAGO WHITE SOX",
+        "title": "⚾ NEW YORK YANKEES AT WASHINGTON NATIONALS",
         "league": "mlb",
+        "ch_key": "beIN.SPORTS.MAX.5.fr",
+        "score": 250,
+        "display_start": "2026-07-10T22:15:00Z",
+        "stop": "2026-07-11T01:45:00Z",
+        "start": "2026-07-10T22:45:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "sports",
         "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 350,
-        "display_start": "2026-07-10T23:10:00Z",
-        "stop": "2026-07-11T02:40:00Z",
-        "start": "2026-07-10T23:40:00Z"
+        "score": 0,
+        "display_start": "2026-07-09T17:00:00Z",
+        "stop": "2026-07-09T18:00:00Z",
+        "start": "2026-07-09T17:00:00Z"
       }
     ],
     "5": [
