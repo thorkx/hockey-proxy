@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T03:46:33Z",
+  "generated_at": "2026-07-10T09:43:37Z",
   "channels": {
     "1": [
       {
@@ -30,15 +30,6 @@
         "start": "2026-07-11T18:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-09T22:30:00Z",
-        "stop": "2026-07-09T23:00:00Z",
-        "start": "2026-07-09T22:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Plays of the Month - Countdown",
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -66,13 +57,22 @@
         "start": "2026-07-11T07:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-11T23:00:00Z",
+        "stop": "2026-07-11T23:30:00Z",
+        "start": "2026-07-11T23:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] FA Cup Classics",
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-09T23:00:00Z",
-        "stop": "2026-07-09T23:30:00Z",
-        "start": "2026-07-09T23:00:00Z"
+        "display_start": "2026-07-10T17:00:00Z",
+        "stop": "2026-07-10T17:30:00Z",
+        "start": "2026-07-10T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] High Stakes Poker",
@@ -244,15 +244,6 @@
         "display_start": "2026-07-10T16:30:00Z",
         "stop": "2026-07-10T17:00:00Z",
         "start": "2026-07-10T16:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Man City v Chelsea Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-10T17:00:00Z",
-        "stop": "2026-07-10T17:30:00Z",
-        "start": "2026-07-10T17:00:00Z"
       }
     ],
     "2": [
@@ -288,9 +279,9 @@
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-07-09T23:00:00Z",
-        "stop": "2026-07-10T00:00:00Z",
-        "start": "2026-07-09T23:00:00Z"
+        "display_start": "2026-07-10T06:15:00Z",
+        "stop": "2026-07-10T07:15:00Z",
+        "start": "2026-07-10T06:15:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Burnley v Newcastle Hlts",
@@ -300,6 +291,15 @@
         "display_start": "2026-07-10T08:00:00Z",
         "stop": "2026-07-10T08:30:00Z",
         "start": "2026-07-10T08:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Man City v Chelsea Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-10T17:00:00Z",
+        "stop": "2026-07-10T17:30:00Z",
+        "start": "2026-07-10T17:00:00Z"
       }
     ],
     "3": [
