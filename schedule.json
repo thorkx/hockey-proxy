@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T09:43:37Z",
+  "generated_at": "2026-07-10T14:38:11Z",
   "channels": {
     "1": [
       {
@@ -91,6 +91,15 @@
         "display_start": "2026-07-10T07:00:00Z",
         "stop": "2026-07-10T08:00:00Z",
         "start": "2026-07-10T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] British F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-10T21:30:00Z",
+        "stop": "2026-07-10T22:30:00Z",
+        "start": "2026-07-10T21:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Chelsea v Bournemouth Hlts",
@@ -273,15 +282,6 @@
         "display_start": "2026-07-11T22:45:00Z",
         "stop": "2026-07-12T02:15:00Z",
         "start": "2026-07-11T23:15:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] British F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-10T06:15:00Z",
-        "stop": "2026-07-10T07:15:00Z",
-        "start": "2026-07-10T06:15:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Burnley v Newcastle Hlts",
