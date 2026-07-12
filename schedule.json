@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T03:24:52Z",
+  "generated_at": "2026-07-12T08:24:19Z",
   "channels": {
     "1": [
       {
@@ -12,24 +12,6 @@
         "start": "2026-07-12T20:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-11T22:30:00Z",
-        "stop": "2026-07-11T23:00:00Z",
-        "start": "2026-07-11T22:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-11T23:00:00Z",
-        "stop": "2026-07-11T23:30:00Z",
-        "start": "2026-07-11T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -37,6 +19,15 @@
         "display_start": "2026-07-12T07:30:00Z",
         "stop": "2026-07-12T08:00:00Z",
         "start": "2026-07-12T07:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-12T13:00:00Z",
+        "stop": "2026-07-12T13:30:00Z",
+        "start": "2026-07-12T13:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -57,13 +48,13 @@
         "start": "2026-07-13T07:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] High Stakes Poker",
-        "league": "series",
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
         "ch_key": "Sportsnet.360.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-11T20:00:00Z",
-        "stop": "2026-07-11T21:00:00Z",
-        "start": "2026-07-11T20:00:00Z"
+        "display_start": "2026-07-12T09:30:00Z",
+        "stop": "2026-07-12T10:00:00Z",
+        "start": "2026-07-12T09:30:00Z"
       },
       {
         "title": "[REDIFFUSION] CONCACAF League Soccer",
@@ -356,13 +347,13 @@
         "start": "2026-07-12T23:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
+        "title": "[REDIFFUSION] High Stakes Poker",
         "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
+        "ch_key": "Sportsnet.360.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-11T23:00:00Z",
-        "stop": "2026-07-11T23:30:00Z",
-        "start": "2026-07-11T23:00:00Z"
+        "display_start": "2026-07-12T21:00:00Z",
+        "stop": "2026-07-12T22:00:00Z",
+        "start": "2026-07-12T21:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Belgian F1 GP Highlights 2016",
@@ -493,13 +484,13 @@
         "start": "2026-07-12T18:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] British F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-12T22:30:00Z",
+        "display_start": "2026-07-12T23:00:00Z",
         "stop": "2026-07-12T23:30:00Z",
-        "start": "2026-07-12T22:30:00Z"
+        "start": "2026-07-12T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: West Ham v Nott'm Forest Hlts",
@@ -547,6 +538,15 @@
         "display_start": "2026-07-12T17:40:00Z",
         "stop": "2026-07-12T21:10:00Z",
         "start": "2026-07-12T18:10:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] British F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-12T22:30:00Z",
+        "stop": "2026-07-12T23:30:00Z",
+        "start": "2026-07-12T22:30:00Z"
       }
     ],
     "5": [
