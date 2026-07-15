@@ -1,22 +1,31 @@
 {
-  "generated_at": "2026-07-15T02:49:12Z",
+  "generated_at": "2026-07-15T08:22:13Z",
   "channels": {
     "1": [
       {
-        "title": "⚽ TORONTO FC AT CF MONTRÉAL",
-        "league": "usa.1",
-        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
-        "score": 750,
-        "display_start": "2026-07-16T23:00:00Z",
-        "stop": "2026-07-17T02:30:00Z",
-        "start": "2026-07-16T23:30:00Z"
+        "title": "⚽ FORGE VS PACIFIC",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-07-16T22:30:00Z",
+        "stop": "2026-07-17T02:00:00Z",
+        "start": "2026-07-16T23:00:00Z"
+      },
+      {
+        "title": "⚽ ATLÉTICO OTTAWA VS INTER TORONTO",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-07-17T22:30:00Z",
+        "stop": "2026-07-18T02:00:00Z",
+        "start": "2026-07-17T23:00:00Z"
       },
       {
         "title": "⚽ PORTLAND TIMBERS AT SEATTLE SOUNDERS FC",
         "league": "usa.1",
         "ch_key": "TSN.5.ca2",
         "score": 750,
-        "display_start": "2026-07-17T02:30:00Z",
+        "display_start": "2026-07-17T02:00:00Z",
         "stop": "2026-07-17T05:30:00Z",
         "start": "2026-07-17T02:30:00Z"
       },
@@ -34,18 +43,18 @@
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-17T06:30:00Z",
-        "stop": "2026-07-17T07:00:00Z",
-        "start": "2026-07-17T06:30:00Z"
+        "display_start": "2026-07-17T18:30:00Z",
+        "stop": "2026-07-17T19:00:00Z",
+        "start": "2026-07-17T18:30:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Cup Classics",
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-14T23:00:00Z",
-        "stop": "2026-07-14T23:30:00Z",
-        "start": "2026-07-14T23:00:00Z"
+        "display_start": "2026-07-15T17:00:00Z",
+        "stop": "2026-07-15T17:30:00Z",
+        "start": "2026-07-15T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -66,24 +75,6 @@
         "start": "2026-07-15T07:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Liga MX Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-07-15T15:00:00Z",
-        "stop": "2026-07-15T17:00:00Z",
-        "start": "2026-07-15T15:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] CONCACAF League Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-07-16T12:00:00Z",
-        "stop": "2026-07-16T14:00:00Z",
-        "start": "2026-07-16T12:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Belgian F1 GP Highlights 2021",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -100,15 +91,6 @@
         "display_start": "2026-07-15T11:30:00Z",
         "stop": "2026-07-15T12:25:00Z",
         "start": "2026-07-15T11:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Belgian F1 GP Highlights 2024",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-15T17:00:00Z",
-        "stop": "2026-07-15T18:00:00Z",
-        "start": "2026-07-15T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Belgian F1 GP Highlights 2025",
@@ -228,6 +210,42 @@
         "start": "2026-07-15T14:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] PL: Sunderland v Fulham Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-15T15:00:00Z",
+        "stop": "2026-07-15T15:30:00Z",
+        "start": "2026-07-15T15:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Crystal Palace v Wolves Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-15T15:30:00Z",
+        "stop": "2026-07-15T16:00:00Z",
+        "start": "2026-07-15T15:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Nott'm Forest v Liverpool Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-15T16:00:00Z",
+        "stop": "2026-07-15T16:30:00Z",
+        "start": "2026-07-15T16:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Spurs v Arsenal Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-15T16:30:00Z",
+        "stop": "2026-07-15T17:00:00Z",
+        "start": "2026-07-15T16:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] FNF: Wolves v Aston Villa Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -298,6 +316,24 @@
         "display_start": "2026-07-16T11:30:00Z",
         "stop": "2026-07-16T12:00:00Z",
         "start": "2026-07-16T11:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Arsenal v Chelsea Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-16T12:00:00Z",
+        "stop": "2026-07-16T12:30:00Z",
+        "start": "2026-07-16T12:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SNF: Arsenal v Everton Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-16T13:30:00Z",
+        "stop": "2026-07-16T14:00:00Z",
+        "start": "2026-07-16T13:30:00Z"
       },
       {
         "title": "[REDIFFUSION] SNF: Chelsea v Newcastle Hlts",
@@ -491,13 +527,13 @@
     ],
     "2": [
       {
-        "title": "⚽ SPORTING KANSAS CITY AT ST. LOUIS CITY SC",
+        "title": "⚽ TORONTO FC AT CF MONTRÉAL",
         "league": "usa.1",
-        "ch_key": "Fox.Soccer.Plus.HD.us2",
+        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
         "score": 750,
-        "display_start": "2026-07-17T00:00:00Z",
-        "stop": "2026-07-17T03:30:00Z",
-        "start": "2026-07-17T00:30:00Z"
+        "display_start": "2026-07-16T23:00:00Z",
+        "stop": "2026-07-17T02:30:00Z",
+        "start": "2026-07-16T23:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Belgian F1 GP Highlights 2022",
@@ -518,6 +554,15 @@
         "start": "2026-07-15T07:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] Belgian F1 GP Highlights 2024",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-15T17:00:00Z",
+        "stop": "2026-07-15T18:00:00Z",
+        "start": "2026-07-15T17:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] PL: Brighton v Crystal Palace Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -534,42 +579,17 @@
         "display_start": "2026-07-15T12:00:00Z",
         "stop": "2026-07-15T12:30:00Z",
         "start": "2026-07-15T12:00:00Z"
-      },
+      }
+    ],
+    "3": [
       {
-        "title": "[REDIFFUSION] PL: Sunderland v Fulham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-15T15:00:00Z",
-        "stop": "2026-07-15T15:30:00Z",
-        "start": "2026-07-15T15:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Crystal Palace v Wolves Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-15T15:30:00Z",
-        "stop": "2026-07-15T16:00:00Z",
-        "start": "2026-07-15T15:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Nott'm Forest v Liverpool Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-15T16:00:00Z",
-        "stop": "2026-07-15T16:30:00Z",
-        "start": "2026-07-15T16:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Spurs v Arsenal Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-15T16:30:00Z",
-        "stop": "2026-07-15T17:00:00Z",
-        "start": "2026-07-15T16:30:00Z"
+        "title": "⚽ SPORTING KANSAS CITY AT ST. LOUIS CITY SC",
+        "league": "usa.1",
+        "ch_key": "Fox.Soccer.Plus.HD.us2",
+        "score": 750,
+        "display_start": "2026-07-17T00:00:00Z",
+        "stop": "2026-07-17T03:30:00Z",
+        "start": "2026-07-17T00:30:00Z"
       },
       {
         "title": "[REDIFFUSION] MNF: Everton v Man Utd Hlts",
@@ -579,27 +599,9 @@
         "display_start": "2026-07-15T17:00:00Z",
         "stop": "2026-07-15T17:30:00Z",
         "start": "2026-07-15T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Arsenal v Chelsea Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-16T12:00:00Z",
-        "stop": "2026-07-16T12:30:00Z",
-        "start": "2026-07-16T12:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Arsenal v Everton Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-16T13:30:00Z",
-        "stop": "2026-07-16T14:00:00Z",
-        "start": "2026-07-16T13:30:00Z"
       }
     ],
-    "3": [
+    "4": [
       {
         "title": "⚾ NEW YORK METS AT PHILADELPHIA PHILLIES",
         "league": "mlb",
@@ -610,7 +612,6 @@
         "start": "2026-07-16T23:00:00Z"
       }
     ],
-    "4": [],
     "5": []
   }
 }
