@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-17T13:48:00Z",
+  "generated_at": "2026-07-17T19:17:10Z",
   "channels": {
     "1": [
       {
-        "title": "🏎️ MOËT & CHANDON BELGIAN GRAND PRIX",
-        "league": "f1",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 2800,
-        "display_start": "2026-07-18T01:55:00Z",
-        "stop": "2026-07-18T05:25:00Z",
-        "start": "2026-07-18T02:25:00Z"
+        "title": "⚾ CHICAGO WHITE SOX AT TORONTO BLUE JAYS",
+        "league": "mlb",
+        "ch_key": "TVA.Sports.HD.ca2",
+        "score": 1750,
+        "display_start": "2026-07-17T22:45:00Z",
+        "stop": "2026-07-18T02:15:00Z",
+        "start": "2026-07-17T23:15:00Z"
       },
       {
         "title": "⚾ CHICAGO WHITE SOX AT TORONTO BLUE JAYS",
@@ -19,6 +19,15 @@
         "display_start": "2026-07-18T18:37:00Z",
         "stop": "2026-07-18T22:07:00Z",
         "start": "2026-07-18T19:07:00Z"
+      },
+      {
+        "title": "⚽ LAFC AT LA GALAXY",
+        "league": "usa.1",
+        "ch_key": "TSN.2.ca2",
+        "score": 750,
+        "display_start": "2026-07-18T02:15:00Z",
+        "stop": "2026-07-18T05:25:00Z",
+        "start": "2026-07-18T02:25:00Z"
       },
       {
         "title": "⚾ TAMPA BAY RAYS AT BOSTON RED SOX",
@@ -57,67 +66,22 @@
         "start": "2026-07-19T16:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "sports",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-20T19:00:00Z",
+        "stop": "2026-07-20T20:00:00Z",
+        "start": "2026-07-20T19:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] SC With Jay Onrait",
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-07-17T07:00:00Z",
-        "stop": "2026-07-17T08:00:00Z",
-        "start": "2026-07-17T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Fulham v Burnley Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-17T08:30:00Z",
-        "stop": "2026-07-17T09:00:00Z",
-        "start": "2026-07-17T08:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Everton v Chelsea Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-17T09:00:00Z",
-        "stop": "2026-07-17T09:30:00Z",
-        "start": "2026-07-17T09:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Leeds v Brentford Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-17T09:30:00Z",
-        "stop": "2026-07-17T10:00:00Z",
-        "start": "2026-07-17T09:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Newcastle v Sunderland Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-17T10:00:00Z",
-        "stop": "2026-07-17T10:30:00Z",
-        "start": "2026-07-17T10:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Aston Villa v West Ham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-17T10:30:00Z",
-        "stop": "2026-07-17T11:00:00Z",
-        "start": "2026-07-17T10:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Spurs v Nott'm Forest Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-17T11:00:00Z",
-        "stop": "2026-07-17T11:30:00Z",
-        "start": "2026-07-17T11:00:00Z"
+        "display_start": "2026-07-17T12:00:00Z",
+        "stop": "2026-07-17T13:00:00Z",
+        "start": "2026-07-17T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] FNF: West Ham v Wolves Hlts",
@@ -127,24 +91,6 @@
         "display_start": "2026-07-17T11:30:00Z",
         "stop": "2026-07-17T12:00:00Z",
         "start": "2026-07-17T11:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brentford v Everton Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-17T12:00:00Z",
-        "stop": "2026-07-17T12:30:00Z",
-        "start": "2026-07-17T12:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Burnley v Brighton Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-17T12:30:00Z",
-        "stop": "2026-07-17T13:00:00Z",
-        "start": "2026-07-17T12:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: C. Palace v Newcastle Hlts",
@@ -203,13 +149,13 @@
     ],
     "2": [
       {
-        "title": "⚾ CHICAGO WHITE SOX AT TORONTO BLUE JAYS",
-        "league": "mlb",
-        "ch_key": "TVA.Sports.HD.ca2",
-        "score": 1750,
-        "display_start": "2026-07-17T22:45:00Z",
-        "stop": "2026-07-18T02:15:00Z",
-        "start": "2026-07-17T23:15:00Z"
+        "title": "⚽ ATLÉTICO OTTAWA VS INTER TORONTO",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-07-17T22:30:00Z",
+        "stop": "2026-07-18T02:00:00Z",
+        "start": "2026-07-17T23:00:00Z"
       },
       {
         "title": "⚽ CAVALRY VS HFX WANDERERS",
@@ -219,15 +165,6 @@
         "display_start": "2026-07-18T18:30:00Z",
         "stop": "2026-07-18T22:00:00Z",
         "start": "2026-07-18T19:00:00Z"
-      },
-      {
-        "title": "⚽ LAFC AT LA GALAXY",
-        "league": "usa.1",
-        "ch_key": "TSN.2.ca2",
-        "score": 750,
-        "display_start": "2026-07-18T02:15:00Z",
-        "stop": "2026-07-18T05:25:00Z",
-        "start": "2026-07-18T02:25:00Z"
       },
       {
         "title": "⚾ WASHINGTON NATIONALS AT ATHLETICS ATHLETICS",
@@ -273,17 +210,35 @@
         "display_start": "2026-07-19T16:00:00Z",
         "stop": "2026-07-19T17:00:00Z",
         "start": "2026-07-19T16:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Brentford v Everton Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-17T12:00:00Z",
+        "stop": "2026-07-17T12:30:00Z",
+        "start": "2026-07-17T12:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Burnley v Brighton Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-17T12:30:00Z",
+        "stop": "2026-07-17T13:00:00Z",
+        "start": "2026-07-17T12:30:00Z"
       }
     ],
     "3": [
       {
-        "title": "⚽ ATLÉTICO OTTAWA VS INTER TORONTO",
-        "league": "cpl",
-        "ch_key": "One.Soccer.ca2",
-        "score": 900,
-        "display_start": "2026-07-17T22:30:00Z",
-        "stop": "2026-07-18T02:00:00Z",
-        "start": "2026-07-17T23:00:00Z"
+        "title": "⚽ ATLANTA UNITED FC AT NASHVILLE SC",
+        "league": "usa.1",
+        "ch_key": "TSN.2.ca2",
+        "score": 750,
+        "display_start": "2026-07-17T23:40:00Z",
+        "stop": "2026-07-18T03:10:00Z",
+        "start": "2026-07-18T00:10:00Z"
       },
       {
         "title": "⚾ MINNESOTA TWINS AT CHICAGO CUBS",
@@ -306,13 +261,13 @@
     ],
     "4": [
       {
-        "title": "⚽ ATLANTA UNITED FC AT NASHVILLE SC",
-        "league": "usa.1",
-        "ch_key": "TSN.2.ca2",
-        "score": 750,
-        "display_start": "2026-07-17T23:40:00Z",
-        "stop": "2026-07-18T03:10:00Z",
-        "start": "2026-07-18T00:10:00Z"
+        "title": "⚾ LOS ANGELES DODGERS AT NEW YORK YANKEES",
+        "league": "mlb",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 350,
+        "display_start": "2026-07-17T22:35:00Z",
+        "stop": "2026-07-18T02:05:00Z",
+        "start": "2026-07-17T23:05:00Z"
       },
       {
         "title": "⚾ NEW YORK METS AT PHILADELPHIA PHILLIES",
@@ -326,13 +281,13 @@
     ],
     "5": [
       {
-        "title": "⚾ LOS ANGELES DODGERS AT NEW YORK YANKEES",
+        "title": "⚾ BALTIMORE ORIOLES AT HOUSTON ASTROS",
         "league": "mlb",
-        "ch_key": "Sportsnet.East.HD.ca2",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 350,
-        "display_start": "2026-07-17T22:35:00Z",
-        "stop": "2026-07-18T02:05:00Z",
-        "start": "2026-07-17T23:05:00Z"
+        "display_start": "2026-07-17T23:40:00Z",
+        "stop": "2026-07-18T03:10:00Z",
+        "start": "2026-07-18T00:10:00Z"
       }
     ]
   }
