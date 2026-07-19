@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T03:21:14Z",
+  "generated_at": "2026-07-19T08:26:00Z",
   "channels": {
     "1": [
       {
@@ -30,24 +30,6 @@
         "start": "2026-07-19T23:20:00Z"
       },
       {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-18T19:30:00Z",
-        "stop": "2026-07-18T20:00:00Z",
-        "start": "2026-07-18T19:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-18T22:00:00Z",
-        "stop": "2026-07-18T22:30:00Z",
-        "start": "2026-07-18T22:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -57,6 +39,15 @@
         "start": "2026-07-19T06:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-19T15:00:00Z",
+        "stop": "2026-07-19T15:30:00Z",
+        "start": "2026-07-19T15:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] World Poker Tour: Season 12",
         "league": "series",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -64,15 +55,6 @@
         "display_start": "2026-07-21T19:00:00Z",
         "stop": "2026-07-21T20:00:00Z",
         "start": "2026-07-21T19:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-18T23:00:00Z",
-        "stop": "2026-07-18T23:30:00Z",
-        "start": "2026-07-18T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -365,6 +347,15 @@
         "start": "2026-07-19T23:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-19T15:30:00Z",
+        "stop": "2026-07-19T16:00:00Z",
+        "start": "2026-07-19T15:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Plays of the Month - Countdown",
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -527,6 +518,15 @@
         "display_start": "2026-07-21T02:00:00Z",
         "stop": "2026-07-21T05:00:00Z",
         "start": "2026-07-21T02:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-19T23:30:00Z",
+        "stop": "2026-07-20T00:00:00Z",
+        "start": "2026-07-19T23:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Belgian F1 GP Highlights",
