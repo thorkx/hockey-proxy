@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T03:35:01Z",
+  "generated_at": "2026-07-20T09:23:16Z",
   "channels": {
     "1": [
       {
@@ -25,9 +25,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-19T23:00:00Z",
-        "stop": "2026-07-19T23:30:00Z",
-        "start": "2026-07-19T23:00:00Z"
+        "display_start": "2026-07-20T06:00:00Z",
+        "stop": "2026-07-20T06:30:00Z",
+        "start": "2026-07-20T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour: Season 12",
@@ -48,13 +48,22 @@
         "start": "2026-07-22T19:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-20T17:00:00Z",
+        "stop": "2026-07-20T17:30:00Z",
+        "start": "2026-07-20T17:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] SC With Jay Onrait",
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-07-20T07:00:00Z",
-        "stop": "2026-07-20T08:00:00Z",
-        "start": "2026-07-20T07:00:00Z"
+        "display_start": "2026-07-20T10:00:00Z",
+        "stop": "2026-07-20T11:00:00Z",
+        "start": "2026-07-20T10:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -154,24 +163,6 @@
         "display_start": "2026-07-22T08:00:00Z",
         "stop": "2026-07-22T09:00:00Z",
         "start": "2026-07-22T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Spurs v Brighton Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-20T10:00:00Z",
-        "stop": "2026-07-20T10:30:00Z",
-        "start": "2026-07-20T10:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Everton v Liverpool Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-20T10:30:00Z",
-        "stop": "2026-07-20T11:00:00Z",
-        "start": "2026-07-20T10:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Man City v Arsenal Hlts",
@@ -536,15 +527,6 @@
         "start": "2026-07-22T01:40:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-19T23:00:00Z",
-        "stop": "2026-07-19T23:30:00Z",
-        "start": "2026-07-19T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Hungarian F1 GP Highlights 2019",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -588,6 +570,24 @@
         "display_start": "2026-07-20T09:30:00Z",
         "stop": "2026-07-20T10:00:00Z",
         "start": "2026-07-20T09:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SNF: Spurs v Brighton Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-20T10:00:00Z",
+        "stop": "2026-07-20T10:30:00Z",
+        "start": "2026-07-20T10:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Everton v Liverpool Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-20T10:30:00Z",
+        "stop": "2026-07-20T11:00:00Z",
+        "start": "2026-07-20T10:30:00Z"
       },
       {
         "title": "[REDIFFUSION] FNF: Sunderland v N. Forest Hlts",
