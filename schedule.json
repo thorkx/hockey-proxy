@@ -1,7 +1,16 @@
 {
-  "generated_at": "2026-07-22T03:13:38Z",
+  "generated_at": "2026-07-22T08:35:27Z",
   "channels": {
     "1": [
+      {
+        "title": "⚽ HFX WANDERERS VS SUPRA DU QUÉBEC",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 3400,
+        "display_start": "2026-07-24T21:30:00Z",
+        "stop": "2026-07-25T01:00:00Z",
+        "start": "2026-07-24T22:00:00Z"
+      },
       {
         "title": "⚾ TAMPA BAY RAYS AT TORONTO BLUE JAYS",
         "league": "mlb",
@@ -48,40 +57,13 @@
         "start": "2026-07-23T22:40:00Z"
       },
       {
-        "title": "[REDIFFUSION] World Poker Tour: Season 12",
-        "league": "series",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-21T20:00:00Z",
-        "stop": "2026-07-21T21:00:00Z",
-        "start": "2026-07-21T20:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-21T21:00:00Z",
-        "stop": "2026-07-21T21:30:00Z",
-        "start": "2026-07-21T21:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-21T22:30:00Z",
-        "stop": "2026-07-21T23:00:00Z",
-        "start": "2026-07-21T22:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-21T23:00:00Z",
-        "stop": "2026-07-21T23:30:00Z",
-        "start": "2026-07-21T23:00:00Z"
+        "display_start": "2026-07-22T06:00:00Z",
+        "stop": "2026-07-22T06:30:00Z",
+        "start": "2026-07-22T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -91,24 +73,6 @@
         "display_start": "2026-07-22T07:00:00Z",
         "stop": "2026-07-22T08:00:00Z",
         "start": "2026-07-22T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] CONCACAF League Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-07-23T12:00:00Z",
-        "stop": "2026-07-23T14:00:00Z",
-        "start": "2026-07-23T12:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] 2026 World Series of Poker",
-        "league": "poker",
-        "ch_key": "ESPN2.HD.us2",
-        "score": 0,
-        "display_start": "2026-07-22T06:00:00Z",
-        "stop": "2026-07-22T07:00:00Z",
-        "start": "2026-07-22T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Hungarian F1 GP Highlights 2021",
@@ -320,31 +284,40 @@
         "start": "2026-07-23T21:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Liga MX Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-22T15:00:00Z",
-        "stop": "2026-07-22T17:00:00Z",
-        "start": "2026-07-22T15:00:00Z"
+        "display_start": "2026-07-22T17:00:00Z",
+        "stop": "2026-07-22T17:30:00Z",
+        "start": "2026-07-22T17:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Belgian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-21T21:00:00Z",
-        "stop": "2026-07-21T22:00:00Z",
-        "start": "2026-07-21T21:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Hungarian F1 GP Highlights 2019",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "title": "[REDIFFUSION] 2026 World Series of Poker",
+        "league": "poker",
+        "ch_key": "ESPN2.HD.us2",
         "score": 0,
         "display_start": "2026-07-22T06:00:00Z",
         "stop": "2026-07-22T07:00:00Z",
         "start": "2026-07-22T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Poker Night in America",
+        "league": "poker",
+        "ch_key": "CBS.Sports.Network.HD.us2",
+        "score": 0,
+        "display_start": "2026-07-24T22:00:00Z",
+        "stop": "2026-07-24T23:00:00Z",
+        "start": "2026-07-24T22:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Poker",
+        "league": "sports",
+        "ch_key": "CBS.Sports.Network.HD.us2",
+        "score": 0,
+        "display_start": "2026-07-24T23:00:00Z",
+        "stop": "2026-07-25T00:00:00Z",
+        "start": "2026-07-24T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Hungarian F1 GP Highlights 2020",
@@ -354,6 +327,15 @@
         "display_start": "2026-07-22T07:00:00Z",
         "stop": "2026-07-22T08:00:00Z",
         "start": "2026-07-22T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Belgian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-22T18:00:00Z",
+        "stop": "2026-07-22T19:00:00Z",
+        "start": "2026-07-22T18:00:00Z"
       },
       {
         "title": "[REDIFFUSION] FNF: Aston Villa v Liverpool Hlts",
@@ -374,13 +356,13 @@
         "start": "2026-07-22T08:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Spurs v Everton Hlts",
+        "title": "[REDIFFUSION] PL: West Ham Utd v Leeds Utd Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-07-22T17:00:00Z",
-        "stop": "2026-07-22T17:30:00Z",
-        "start": "2026-07-22T17:00:00Z"
+        "display_start": "2026-07-22T16:30:00Z",
+        "stop": "2026-07-22T17:00:00Z",
+        "start": "2026-07-22T16:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: C. Palace v Arsenal Hlts",
@@ -412,13 +394,31 @@
         "start": "2026-07-22T19:40:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: West Ham Utd v Leeds Utd Hlts",
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-23T18:30:00Z",
+        "stop": "2026-07-23T19:00:00Z",
+        "start": "2026-07-23T18:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Hungarian F1 GP Highlights 2019",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-22T06:00:00Z",
+        "stop": "2026-07-22T07:00:00Z",
+        "start": "2026-07-22T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Spurs v Everton Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-07-22T16:30:00Z",
-        "stop": "2026-07-22T17:00:00Z",
-        "start": "2026-07-22T16:30:00Z"
+        "display_start": "2026-07-22T17:00:00Z",
+        "stop": "2026-07-22T17:30:00Z",
+        "start": "2026-07-22T17:00:00Z"
       }
     ],
     "4": [
