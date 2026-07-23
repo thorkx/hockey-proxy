@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T08:36:53Z",
+  "generated_at": "2026-07-23T14:12:09Z",
   "channels": {
     "1": [
       {
@@ -43,9 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-23T06:00:00Z",
-        "stop": "2026-07-23T06:30:00Z",
-        "start": "2026-07-23T06:00:00Z"
+        "display_start": "2026-07-23T06:30:00Z",
+        "stop": "2026-07-23T07:00:00Z",
+        "start": "2026-07-23T06:30:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Cup Classics",
@@ -55,6 +55,15 @@
         "display_start": "2026-07-23T17:00:00Z",
         "stop": "2026-07-23T17:30:00Z",
         "start": "2026-07-23T17:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Le top LNH",
+        "league": "series",
+        "ch_key": "TVA.Sports.2.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-26T09:45:00Z",
+        "stop": "2026-07-26T10:00:00Z",
+        "start": "2026-07-26T09:45:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -129,15 +138,6 @@
         "display_start": "2026-07-23T21:00:00Z",
         "stop": "2026-07-23T21:30:00Z",
         "start": "2026-07-23T21:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Hungarian F1 GP Highlights 2023",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-23T06:00:00Z",
-        "stop": "2026-07-23T07:00:00Z",
-        "start": "2026-07-23T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Hungarian F1 GP Highlights 2024",
