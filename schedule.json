@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T03:20:39Z",
+  "generated_at": "2026-07-23T08:36:53Z",
   "channels": {
     "1": [
       {
@@ -39,31 +39,22 @@
         "start": "2026-07-23T22:40:00Z"
       },
       {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-22T20:00:00Z",
-        "stop": "2026-07-22T21:00:00Z",
-        "start": "2026-07-22T20:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-22T21:00:00Z",
-        "stop": "2026-07-22T21:30:00Z",
-        "start": "2026-07-22T21:00:00Z"
+        "display_start": "2026-07-23T06:00:00Z",
+        "stop": "2026-07-23T06:30:00Z",
+        "start": "2026-07-23T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Cup Classics",
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-22T23:00:00Z",
-        "stop": "2026-07-22T23:30:00Z",
-        "start": "2026-07-22T23:00:00Z"
+        "display_start": "2026-07-23T17:00:00Z",
+        "stop": "2026-07-23T17:30:00Z",
+        "start": "2026-07-23T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -75,13 +66,13 @@
         "start": "2026-07-23T07:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Hungarian F1 GP Highlights 2023",
+        "title": "[REDIFFUSION] Poker",
         "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "ch_key": "CBS.Sports.Network.HD.us2",
         "score": 0,
-        "display_start": "2026-07-23T06:00:00Z",
-        "stop": "2026-07-23T07:00:00Z",
-        "start": "2026-07-23T06:00:00Z"
+        "display_start": "2026-07-25T06:00:00Z",
+        "stop": "2026-07-25T07:00:00Z",
+        "start": "2026-07-25T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Hungarian F1 GP Highlights 2025",
@@ -140,6 +131,15 @@
         "start": "2026-07-23T21:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Hungarian F1 GP Highlights 2023",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-23T06:00:00Z",
+        "stop": "2026-07-23T07:00:00Z",
+        "start": "2026-07-23T06:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Hungarian F1 GP Highlights 2024",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -167,17 +167,35 @@
         "display_start": "2026-07-23T18:30:00Z",
         "stop": "2026-07-23T19:00:00Z",
         "start": "2026-07-23T18:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-23T19:00:00Z",
+        "stop": "2026-07-23T20:00:00Z",
+        "start": "2026-07-23T19:00:00Z"
       }
     ],
     "4": [
       {
-        "title": "⚾ ATLANTA BRAVES AT BALTIMORE ORIOLES",
+        "title": "⚾ ATHLETICS ATHLETICS AT MINNESOTA TWINS",
         "league": "mlb",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 350,
-        "display_start": "2026-07-24T22:35:00Z",
-        "stop": "2026-07-25T02:05:00Z",
-        "start": "2026-07-24T23:05:00Z"
+        "ch_key": "beIN.SPORTS.2.fr",
+        "score": 400,
+        "display_start": "2026-07-24T23:40:00Z",
+        "stop": "2026-07-25T03:10:00Z",
+        "start": "2026-07-25T00:10:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Poker Night in America",
+        "league": "poker",
+        "ch_key": "CBS.Sports.Network.HD.us2",
+        "score": 0,
+        "display_start": "2026-07-24T22:00:00Z",
+        "stop": "2026-07-24T23:00:00Z",
+        "start": "2026-07-24T22:00:00Z"
       }
     ],
     "5": [
