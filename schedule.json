@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T03:14:16Z",
+  "generated_at": "2026-07-24T08:33:24Z",
   "channels": {
     "1": [
       {
@@ -30,6 +30,24 @@
         "start": "2026-07-25T02:00:00Z"
       },
       {
+        "title": "⚽ ATLÉTICO OTTAWA VS PACIFIC",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-07-26T17:30:00Z",
+        "stop": "2026-07-26T21:00:00Z",
+        "start": "2026-07-26T18:00:00Z"
+      },
+      {
+        "title": "⚽ INTER TORONTO VS FORGE",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-07-26T21:00:00Z",
+        "stop": "2026-07-27T00:00:00Z",
+        "start": "2026-07-26T21:00:00Z"
+      },
+      {
         "title": "⚽ INTER MIAMI CF AT CF MONTRÉAL",
         "league": "usa.1",
         "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
@@ -48,33 +66,6 @@
         "start": "2026-07-26T02:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-23T20:00:00Z",
-        "stop": "2026-07-23T21:00:00Z",
-        "start": "2026-07-23T20:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-23T21:00:00Z",
-        "stop": "2026-07-23T21:30:00Z",
-        "start": "2026-07-23T21:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-23T21:30:00Z",
-        "stop": "2026-07-23T22:00:00Z",
-        "start": "2026-07-23T21:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -84,13 +75,31 @@
         "start": "2026-07-24T06:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-25T06:30:00Z",
+        "stop": "2026-07-25T07:00:00Z",
+        "start": "2026-07-25T06:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-25T07:00:00Z",
+        "stop": "2026-07-25T07:30:00Z",
+        "start": "2026-07-25T07:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] FA Cup Classics",
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-23T23:00:00Z",
-        "stop": "2026-07-23T23:30:00Z",
-        "start": "2026-07-23T23:00:00Z"
+        "display_start": "2026-07-24T17:00:00Z",
+        "stop": "2026-07-24T17:30:00Z",
+        "start": "2026-07-24T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Le top LNH",
@@ -109,15 +118,6 @@
         "display_start": "2026-07-24T07:00:00Z",
         "stop": "2026-07-24T08:00:00Z",
         "start": "2026-07-24T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Poker",
-        "league": "sports",
-        "ch_key": "CBS.Sports.Network.HD.us2",
-        "score": 0,
-        "display_start": "2026-07-25T06:00:00Z",
-        "stop": "2026-07-25T07:00:00Z",
-        "start": "2026-07-25T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
@@ -167,22 +167,13 @@
         "start": "2026-07-25T17:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] Hungarian F1 GP Highlights 2025",
+        "title": "[REDIFFUSION] Poker",
         "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "ch_key": "CBS.Sports.Network.HD.us2",
         "score": 0,
-        "display_start": "2026-07-23T21:00:00Z",
-        "stop": "2026-07-23T22:00:00Z",
-        "start": "2026-07-23T21:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Belgian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-23T23:15:00Z",
-        "stop": "2026-07-24T00:15:00Z",
-        "start": "2026-07-23T23:15:00Z"
+        "display_start": "2026-07-25T06:00:00Z",
+        "stop": "2026-07-25T07:00:00Z",
+        "start": "2026-07-25T06:00:00Z"
       }
     ],
     "3": [
@@ -245,13 +236,13 @@
     ],
     "5": [
       {
-        "title": "⚾ CLEVELAND GUARDIANS AT TAMPA BAY RAYS",
+        "title": "⚾ KANSAS CITY ROYALS AT DETROIT TIGERS",
         "league": "mlb",
-        "ch_key": "TNT.Sports.1.HD.uk",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 350,
-        "display_start": "2026-07-24T22:40:00Z",
-        "stop": "2026-07-25T02:10:00Z",
-        "start": "2026-07-24T23:10:00Z"
+        "display_start": "2026-07-24T22:10:00Z",
+        "stop": "2026-07-25T01:40:00Z",
+        "start": "2026-07-24T22:40:00Z"
       },
       {
         "title": "⚾ LOS ANGELES DODGERS AT NEW YORK METS",
