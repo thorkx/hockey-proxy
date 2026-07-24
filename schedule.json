@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T13:54:02Z",
+  "generated_at": "2026-07-24T19:35:55Z",
   "channels": {
     "1": [
       {
@@ -70,9 +70,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-24T06:00:00Z",
-        "stop": "2026-07-24T06:30:00Z",
-        "start": "2026-07-24T06:00:00Z"
+        "display_start": "2026-07-24T12:00:00Z",
+        "stop": "2026-07-24T12:30:00Z",
+        "start": "2026-07-24T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -111,13 +111,13 @@
         "start": "2026-07-26T09:45:00Z"
       },
       {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "sports",
+        "ch_key": "Sportsnet.East.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-24T07:00:00Z",
-        "stop": "2026-07-24T08:00:00Z",
-        "start": "2026-07-24T07:00:00Z"
+        "display_start": "2026-07-27T19:00:00Z",
+        "stop": "2026-07-27T20:00:00Z",
+        "start": "2026-07-27T19:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
@@ -131,13 +131,13 @@
     ],
     "2": [
       {
-        "title": "🏎️ AWS HUNGARIAN GRAND PRIX",
-        "league": "f1",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 2800,
-        "display_start": "2026-07-24T23:40:00Z",
-        "stop": "2026-07-25T03:10:00Z",
-        "start": "2026-07-25T00:10:00Z"
+        "title": "⚾ TORONTO BLUE JAYS AT BOSTON RED SOX",
+        "league": "mlb",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 1750,
+        "display_start": "2026-07-24T22:45:00Z",
+        "stop": "2026-07-25T02:15:00Z",
+        "start": "2026-07-24T23:15:00Z"
       },
       {
         "title": "⚽ ATLANTA UNITED FC AT NEW ENGLAND REVOLUTION",
@@ -149,15 +149,6 @@
         "start": "2026-07-25T23:30:00Z"
       },
       {
-        "title": "⚾ COLORADO ROCKIES AT MILWAUKEE BREWERS",
-        "league": "mlb",
-        "ch_key": "beIN.SPORTS.MAX.4.fr",
-        "score": 250,
-        "display_start": "2026-07-24T19:40:00Z",
-        "stop": "2026-07-24T23:10:00Z",
-        "start": "2026-07-24T20:10:00Z"
-      },
-      {
         "title": "⚾ KANSAS CITY ROYALS AT DETROIT TIGERS",
         "league": "mlb",
         "ch_key": "beIN.SPORTS.MAX.4.fr",
@@ -165,6 +156,15 @@
         "display_start": "2026-07-25T16:40:00Z",
         "stop": "2026-07-25T20:10:00Z",
         "start": "2026-07-25T17:10:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
+        "score": 0,
+        "display_start": "2026-07-24T12:00:00Z",
+        "stop": "2026-07-24T13:00:00Z",
+        "start": "2026-07-24T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Poker",
@@ -178,15 +178,6 @@
     ],
     "3": [
       {
-        "title": "⚾ TORONTO BLUE JAYS AT BOSTON RED SOX",
-        "league": "mlb",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 1750,
-        "display_start": "2026-07-24T22:45:00Z",
-        "stop": "2026-07-25T02:15:00Z",
-        "start": "2026-07-24T23:15:00Z"
-      },
-      {
         "title": "⚽ FC DALLAS AT SAN DIEGO FC",
         "league": "usa.1",
         "ch_key": "TSN.5.ca2",
@@ -195,17 +186,6 @@
         "stop": "2026-07-26T04:30:00Z",
         "start": "2026-07-26T01:30:00Z"
       },
-      {
-        "title": "⚾ LOS ANGELES ANGELS AT SAN FRANCISCO GIANTS",
-        "league": "mlb",
-        "ch_key": "Canal+.fr",
-        "score": 400,
-        "display_start": "2026-07-25T19:35:00Z",
-        "stop": "2026-07-25T23:05:00Z",
-        "start": "2026-07-25T20:05:00Z"
-      }
-    ],
-    "4": [
       {
         "title": "⚾ ATHLETICS ATHLETICS AT MINNESOTA TWINS",
         "league": "mlb",
@@ -216,25 +196,25 @@
         "start": "2026-07-25T00:10:00Z"
       },
       {
-        "title": "⚾ ATHLETICS ATHLETICS AT MINNESOTA TWINS",
+        "title": "⚾ LOS ANGELES ANGELS AT SAN FRANCISCO GIANTS",
         "league": "mlb",
-        "ch_key": "TSN.2.ca2",
-        "score": 350,
-        "display_start": "2026-07-25T22:40:00Z",
-        "stop": "2026-07-26T02:10:00Z",
-        "start": "2026-07-25T23:10:00Z"
+        "ch_key": "Canal+.fr",
+        "score": 400,
+        "display_start": "2026-07-25T19:35:00Z",
+        "stop": "2026-07-25T23:05:00Z",
+        "start": "2026-07-25T20:05:00Z"
       },
       {
-        "title": "[REDIFFUSION] Poker Night in America",
-        "league": "poker",
-        "ch_key": "CBS.Sports.Network.HD.us2",
-        "score": 0,
-        "display_start": "2026-07-24T22:00:00Z",
-        "stop": "2026-07-24T23:00:00Z",
-        "start": "2026-07-24T22:00:00Z"
+        "title": "⚾ COLORADO ROCKIES AT MILWAUKEE BREWERS",
+        "league": "mlb",
+        "ch_key": "beIN.SPORTS.MAX.4.fr",
+        "score": 250,
+        "display_start": "2026-07-24T19:40:00Z",
+        "stop": "2026-07-24T23:10:00Z",
+        "start": "2026-07-24T20:10:00Z"
       }
     ],
-    "5": [
+    "4": [
       {
         "title": "⚾ KANSAS CITY ROYALS AT DETROIT TIGERS",
         "league": "mlb",
@@ -243,6 +223,26 @@
         "display_start": "2026-07-24T22:10:00Z",
         "stop": "2026-07-25T01:40:00Z",
         "start": "2026-07-24T22:40:00Z"
+      },
+      {
+        "title": "⚾ ATHLETICS ATHLETICS AT MINNESOTA TWINS",
+        "league": "mlb",
+        "ch_key": "TSN.2.ca2",
+        "score": 350,
+        "display_start": "2026-07-25T22:40:00Z",
+        "stop": "2026-07-26T02:10:00Z",
+        "start": "2026-07-25T23:10:00Z"
+      }
+    ],
+    "5": [
+      {
+        "title": "⚾ CLEVELAND GUARDIANS AT TAMPA BAY RAYS",
+        "league": "mlb",
+        "ch_key": "TNT.Sports.1.HD.uk",
+        "score": 350,
+        "display_start": "2026-07-24T22:40:00Z",
+        "stop": "2026-07-25T02:10:00Z",
+        "start": "2026-07-24T23:10:00Z"
       },
       {
         "title": "⚾ LOS ANGELES DODGERS AT NEW YORK METS",
