@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-24T19:35:55Z",
+  "generated_at": "2026-07-25T03:12:51Z",
   "channels": {
     "1": [
-      {
-        "title": "⚽ HFX WANDERERS VS SUPRA DU QUÉBEC",
-        "league": "cpl",
-        "ch_key": "One.Soccer.ca2",
-        "score": 3400,
-        "display_start": "2026-07-24T21:30:00Z",
-        "stop": "2026-07-25T01:00:00Z",
-        "start": "2026-07-24T22:00:00Z"
-      },
       {
         "title": "⚾ TORONTO BLUE JAYS AT BOSTON RED SOX",
         "league": "mlb",
@@ -19,6 +10,15 @@
         "display_start": "2026-07-25T19:40:00Z",
         "stop": "2026-07-25T23:10:00Z",
         "start": "2026-07-25T20:10:00Z"
+      },
+      {
+        "title": "⚾ TORONTO BLUE JAYS AT BOSTON RED SOX",
+        "league": "mlb",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 1750,
+        "display_start": "2026-07-26T17:05:00Z",
+        "stop": "2026-07-26T20:35:00Z",
+        "start": "2026-07-26T17:35:00Z"
       },
       {
         "title": "⚽ VANCOUVER FC VS CAVALRY",
@@ -30,20 +30,11 @@
         "start": "2026-07-25T02:00:00Z"
       },
       {
-        "title": "⚽ ATLÉTICO OTTAWA VS PACIFIC",
-        "league": "cpl",
-        "ch_key": "One.Soccer.ca2",
-        "score": 900,
-        "display_start": "2026-07-26T17:30:00Z",
-        "stop": "2026-07-26T21:00:00Z",
-        "start": "2026-07-26T18:00:00Z"
-      },
-      {
         "title": "⚽ INTER TORONTO VS FORGE",
         "league": "cpl",
         "ch_key": "One.Soccer.ca2",
         "score": 900,
-        "display_start": "2026-07-26T21:00:00Z",
+        "display_start": "2026-07-26T20:35:00Z",
         "stop": "2026-07-27T00:00:00Z",
         "start": "2026-07-26T21:00:00Z"
       },
@@ -70,9 +61,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-24T12:00:00Z",
-        "stop": "2026-07-24T12:30:00Z",
-        "start": "2026-07-24T12:00:00Z"
+        "display_start": "2026-07-24T19:30:00Z",
+        "stop": "2026-07-24T20:00:00Z",
+        "start": "2026-07-24T19:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -97,9 +88,9 @@
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-24T17:00:00Z",
-        "stop": "2026-07-24T17:30:00Z",
-        "start": "2026-07-24T17:00:00Z"
+        "display_start": "2026-07-24T23:00:00Z",
+        "stop": "2026-07-24T23:30:00Z",
+        "start": "2026-07-24T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Le top LNH",
@@ -120,24 +111,24 @@
         "start": "2026-07-27T19:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "title": "[REDIFFUSION] Poker Night in America",
+        "league": "poker",
+        "ch_key": "CBS.Sports.Network.HD.us2",
         "score": 0,
-        "display_start": "2026-07-26T16:30:00Z",
-        "stop": "2026-07-26T17:30:00Z",
-        "start": "2026-07-26T16:30:00Z"
+        "display_start": "2026-07-24T22:00:00Z",
+        "stop": "2026-07-24T23:00:00Z",
+        "start": "2026-07-24T22:00:00Z"
       }
     ],
     "2": [
       {
-        "title": "⚾ TORONTO BLUE JAYS AT BOSTON RED SOX",
-        "league": "mlb",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 1750,
-        "display_start": "2026-07-24T22:45:00Z",
-        "stop": "2026-07-25T02:15:00Z",
-        "start": "2026-07-24T23:15:00Z"
+        "title": "⚽ ATLÉTICO OTTAWA VS PACIFIC",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-07-26T17:30:00Z",
+        "stop": "2026-07-26T21:00:00Z",
+        "start": "2026-07-26T18:00:00Z"
       },
       {
         "title": "⚽ ATLANTA UNITED FC AT NEW ENGLAND REVOLUTION",
@@ -149,6 +140,15 @@
         "start": "2026-07-25T23:30:00Z"
       },
       {
+        "title": "⚾ NEW YORK YANKEES AT PHILADELPHIA PHILLIES",
+        "league": "mlb",
+        "ch_key": "RDS2.HD.ca2",
+        "score": 400,
+        "display_start": "2026-07-26T22:50:00Z",
+        "stop": "2026-07-27T02:20:00Z",
+        "start": "2026-07-26T23:20:00Z"
+      },
+      {
         "title": "⚾ KANSAS CITY ROYALS AT DETROIT TIGERS",
         "league": "mlb",
         "ch_key": "beIN.SPORTS.MAX.4.fr",
@@ -158,22 +158,22 @@
         "start": "2026-07-25T17:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
-        "score": 0,
-        "display_start": "2026-07-24T12:00:00Z",
-        "stop": "2026-07-24T13:00:00Z",
-        "start": "2026-07-24T12:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Poker",
         "league": "sports",
         "ch_key": "CBS.Sports.Network.HD.us2",
         "score": 0,
-        "display_start": "2026-07-25T06:00:00Z",
-        "stop": "2026-07-25T07:00:00Z",
-        "start": "2026-07-25T06:00:00Z"
+        "display_start": "2026-07-24T23:00:00Z",
+        "stop": "2026-07-25T00:00:00Z",
+        "start": "2026-07-24T23:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-26T16:30:00Z",
+        "stop": "2026-07-26T17:30:00Z",
+        "start": "2026-07-26T16:30:00Z"
       }
     ],
     "3": [
@@ -187,15 +187,6 @@
         "start": "2026-07-26T01:30:00Z"
       },
       {
-        "title": "⚾ ATHLETICS ATHLETICS AT MINNESOTA TWINS",
-        "league": "mlb",
-        "ch_key": "beIN.SPORTS.2.fr",
-        "score": 400,
-        "display_start": "2026-07-24T23:40:00Z",
-        "stop": "2026-07-25T03:10:00Z",
-        "start": "2026-07-25T00:10:00Z"
-      },
-      {
         "title": "⚾ LOS ANGELES ANGELS AT SAN FRANCISCO GIANTS",
         "league": "mlb",
         "ch_key": "Canal+.fr",
@@ -205,24 +196,24 @@
         "start": "2026-07-25T20:05:00Z"
       },
       {
-        "title": "⚾ COLORADO ROCKIES AT MILWAUKEE BREWERS",
+        "title": "⚾ ATLANTA BRAVES AT BALTIMORE ORIOLES",
         "league": "mlb",
-        "ch_key": "beIN.SPORTS.MAX.4.fr",
-        "score": 250,
-        "display_start": "2026-07-24T19:40:00Z",
-        "stop": "2026-07-24T23:10:00Z",
-        "start": "2026-07-24T20:10:00Z"
+        "ch_key": "beIN.SPORTS.3.fr",
+        "score": 400,
+        "display_start": "2026-07-26T17:05:00Z",
+        "stop": "2026-07-26T20:35:00Z",
+        "start": "2026-07-26T17:35:00Z"
       }
     ],
     "4": [
       {
-        "title": "⚾ KANSAS CITY ROYALS AT DETROIT TIGERS",
+        "title": "⚾ SAN DIEGO PADRES AT MIAMI MARLINS",
         "league": "mlb",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 350,
-        "display_start": "2026-07-24T22:10:00Z",
-        "stop": "2026-07-25T01:40:00Z",
-        "start": "2026-07-24T22:40:00Z"
+        "ch_key": "beIN.SPORTS.3.fr",
+        "score": 400,
+        "display_start": "2026-07-26T17:10:00Z",
+        "stop": "2026-07-26T20:40:00Z",
+        "start": "2026-07-26T17:40:00Z"
       },
       {
         "title": "⚾ ATHLETICS ATHLETICS AT MINNESOTA TWINS",
@@ -236,13 +227,13 @@
     ],
     "5": [
       {
-        "title": "⚾ CLEVELAND GUARDIANS AT TAMPA BAY RAYS",
+        "title": "⚾ ATHLETICS ATHLETICS AT MINNESOTA TWINS",
         "league": "mlb",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 350,
-        "display_start": "2026-07-24T22:40:00Z",
-        "stop": "2026-07-25T02:10:00Z",
-        "start": "2026-07-24T23:10:00Z"
+        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
+        "score": 400,
+        "display_start": "2026-07-26T17:40:00Z",
+        "stop": "2026-07-26T21:10:00Z",
+        "start": "2026-07-26T18:10:00Z"
       },
       {
         "title": "⚾ LOS ANGELES DODGERS AT NEW YORK METS",
