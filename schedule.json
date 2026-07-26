@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-25T19:14:43Z",
+  "generated_at": "2026-07-26T03:26:05Z",
   "channels": {
     "1": [
-      {
-        "title": "⚾ TORONTO BLUE JAYS AT BOSTON RED SOX",
-        "league": "mlb",
-        "ch_key": "Sportsnet.4K.ca2",
-        "score": 1750,
-        "display_start": "2026-07-25T19:40:00Z",
-        "stop": "2026-07-25T23:10:00Z",
-        "start": "2026-07-25T20:10:00Z"
-      },
       {
         "title": "⚾ TORONTO BLUE JAYS AT BOSTON RED SOX",
         "league": "mlb",
@@ -19,6 +10,15 @@
         "display_start": "2026-07-26T17:05:00Z",
         "stop": "2026-07-26T20:35:00Z",
         "start": "2026-07-26T17:35:00Z"
+      },
+      {
+        "title": "⚾ TORONTO BLUE JAYS AT WASHINGTON NATIONALS",
+        "league": "mlb",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 1750,
+        "display_start": "2026-07-27T22:15:00Z",
+        "stop": "2026-07-28T01:45:00Z",
+        "start": "2026-07-27T22:45:00Z"
       },
       {
         "title": "⚽ INTER TORONTO VS FORGE",
@@ -30,40 +30,31 @@
         "start": "2026-07-26T21:00:00Z"
       },
       {
-        "title": "⚽ INTER MIAMI CF AT CF MONTRÉAL",
-        "league": "usa.1",
-        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
-        "score": 750,
-        "display_start": "2026-07-25T23:10:00Z",
-        "stop": "2026-07-26T02:30:00Z",
-        "start": "2026-07-25T23:30:00Z"
-      },
-      {
-        "title": "⚽ SPORTING KANSAS CITY AT LAFC",
-        "league": "usa.1",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 750,
-        "display_start": "2026-07-26T02:30:00Z",
-        "stop": "2026-07-26T05:30:00Z",
-        "start": "2026-07-26T02:30:00Z"
+        "title": "⚾ SEATTLE MARINERS AT TEXAS RANGERS",
+        "league": "mlb",
+        "ch_key": "TNT.Sports.1.HD.uk",
+        "score": 350,
+        "display_start": "2026-07-27T18:05:00Z",
+        "stop": "2026-07-27T21:35:00Z",
+        "start": "2026-07-27T18:35:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-25T12:30:00Z",
-        "stop": "2026-07-25T13:00:00Z",
-        "start": "2026-07-25T12:30:00Z"
+        "display_start": "2026-07-25T22:30:00Z",
+        "stop": "2026-07-25T23:00:00Z",
+        "start": "2026-07-25T22:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
         "league": "",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-25T13:00:00Z",
-        "stop": "2026-07-25T13:30:00Z",
-        "start": "2026-07-25T13:00:00Z"
+        "display_start": "2026-07-25T23:00:00Z",
+        "stop": "2026-07-25T23:30:00Z",
+        "start": "2026-07-25T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Blue Jays in 30",
@@ -82,15 +73,6 @@
         "display_start": "2026-07-28T19:00:00Z",
         "stop": "2026-07-28T20:00:00Z",
         "start": "2026-07-28T19:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-25T18:30:00Z",
-        "stop": "2026-07-25T19:00:00Z",
-        "start": "2026-07-25T18:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Le top LNH",
@@ -140,15 +122,6 @@
         "start": "2026-07-26T18:00:00Z"
       },
       {
-        "title": "⚽ ATLANTA UNITED FC AT NEW ENGLAND REVOLUTION",
-        "league": "usa.1",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 750,
-        "display_start": "2026-07-25T23:00:00Z",
-        "stop": "2026-07-26T02:30:00Z",
-        "start": "2026-07-25T23:30:00Z"
-      },
-      {
         "title": "⚾ NEW YORK YANKEES AT PHILADELPHIA PHILLIES",
         "league": "mlb",
         "ch_key": "RDS2.HD.ca2",
@@ -158,13 +131,22 @@
         "start": "2026-07-26T23:20:00Z"
       },
       {
-        "title": "⚾ KANSAS CITY ROYALS AT DETROIT TIGERS",
+        "title": "⚾ NEW YORK YANKEES AT CHICAGO WHITE SOX",
         "league": "mlb",
-        "ch_key": "beIN.SPORTS.MAX.4.fr",
-        "score": 250,
-        "display_start": "2026-07-25T16:40:00Z",
-        "stop": "2026-07-25T20:10:00Z",
-        "start": "2026-07-25T17:10:00Z"
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 350,
+        "display_start": "2026-07-27T23:10:00Z",
+        "stop": "2026-07-28T02:40:00Z",
+        "start": "2026-07-27T23:40:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-25T23:00:00Z",
+        "stop": "2026-07-25T23:30:00Z",
+        "start": "2026-07-25T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
@@ -178,24 +160,6 @@
     ],
     "3": [
       {
-        "title": "⚽ FC DALLAS AT SAN DIEGO FC",
-        "league": "usa.1",
-        "ch_key": "TSN.5.ca2",
-        "score": 750,
-        "display_start": "2026-07-26T01:00:00Z",
-        "stop": "2026-07-26T04:30:00Z",
-        "start": "2026-07-26T01:30:00Z"
-      },
-      {
-        "title": "⚾ LOS ANGELES ANGELS AT SAN FRANCISCO GIANTS",
-        "league": "mlb",
-        "ch_key": "Canal+.fr",
-        "score": 400,
-        "display_start": "2026-07-25T19:35:00Z",
-        "stop": "2026-07-25T23:05:00Z",
-        "start": "2026-07-25T20:05:00Z"
-      },
-      {
         "title": "⚾ ATLANTA BRAVES AT BALTIMORE ORIOLES",
         "league": "mlb",
         "ch_key": "beIN.SPORTS.3.fr",
@@ -203,6 +167,15 @@
         "display_start": "2026-07-26T17:05:00Z",
         "stop": "2026-07-26T20:35:00Z",
         "start": "2026-07-26T17:35:00Z"
+      },
+      {
+        "title": "⚾ CHICAGO CUBS AT ST. LOUIS CARDINALS",
+        "league": "mlb",
+        "ch_key": "TSN.4.ca2",
+        "score": 350,
+        "display_start": "2026-07-27T23:15:00Z",
+        "stop": "2026-07-28T02:45:00Z",
+        "start": "2026-07-27T23:45:00Z"
       }
     ],
     "4": [
@@ -216,13 +189,13 @@
         "start": "2026-07-26T17:40:00Z"
       },
       {
-        "title": "⚾ ATHLETICS ATHLETICS AT MINNESOTA TWINS",
+        "title": "⚾ BOSTON RED SOX AT ATHLETICS ATHLETICS",
         "league": "mlb",
-        "ch_key": "TSN.2.ca2",
+        "ch_key": "Sportsnet.World.HD.ca2",
         "score": 350,
-        "display_start": "2026-07-25T22:40:00Z",
-        "stop": "2026-07-26T02:10:00Z",
-        "start": "2026-07-25T23:10:00Z"
+        "display_start": "2026-07-28T01:10:00Z",
+        "stop": "2026-07-28T04:40:00Z",
+        "start": "2026-07-28T01:40:00Z"
       }
     ],
     "5": [
@@ -234,15 +207,6 @@
         "display_start": "2026-07-26T17:40:00Z",
         "stop": "2026-07-26T21:10:00Z",
         "start": "2026-07-26T18:10:00Z"
-      },
-      {
-        "title": "⚾ LOS ANGELES DODGERS AT NEW YORK METS",
-        "league": "mlb",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 350,
-        "display_start": "2026-07-25T22:45:00Z",
-        "stop": "2026-07-26T02:15:00Z",
-        "start": "2026-07-25T23:15:00Z"
       }
     ]
   }
