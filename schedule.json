@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T03:26:05Z",
+  "generated_at": "2026-07-26T08:32:55Z",
   "channels": {
     "1": [
       {
@@ -39,24 +39,6 @@
         "start": "2026-07-27T18:35:00Z"
       },
       {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-25T22:30:00Z",
-        "stop": "2026-07-25T23:00:00Z",
-        "start": "2026-07-25T22:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-25T23:00:00Z",
-        "stop": "2026-07-25T23:30:00Z",
-        "start": "2026-07-25T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -66,6 +48,15 @@
         "start": "2026-07-26T06:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-26T16:30:00Z",
+        "stop": "2026-07-26T17:00:00Z",
+        "start": "2026-07-26T16:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] World Poker Tour",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -73,6 +64,15 @@
         "display_start": "2026-07-28T19:00:00Z",
         "stop": "2026-07-28T20:00:00Z",
         "start": "2026-07-28T19:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-28T22:30:00Z",
+        "stop": "2026-07-28T23:00:00Z",
+        "start": "2026-07-28T22:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Le top LNH",
@@ -131,22 +131,13 @@
         "start": "2026-07-26T23:20:00Z"
       },
       {
-        "title": "⚾ NEW YORK YANKEES AT CHICAGO WHITE SOX",
+        "title": "⚾ CLEVELAND GUARDIANS AT CINCINNATI REDS",
         "league": "mlb",
-        "ch_key": "Sportsnet.One.HD.ca2",
+        "ch_key": "ESPN.HD.us2",
         "score": 350,
-        "display_start": "2026-07-27T23:10:00Z",
-        "stop": "2026-07-28T02:40:00Z",
-        "start": "2026-07-27T23:40:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-25T23:00:00Z",
-        "stop": "2026-07-25T23:30:00Z",
-        "start": "2026-07-25T23:00:00Z"
+        "display_start": "2026-07-27T22:30:00Z",
+        "stop": "2026-07-28T02:00:00Z",
+        "start": "2026-07-27T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
@@ -169,13 +160,22 @@
         "start": "2026-07-26T17:35:00Z"
       },
       {
-        "title": "⚾ CHICAGO CUBS AT ST. LOUIS CARDINALS",
+        "title": "⚾ NEW YORK YANKEES AT CHICAGO WHITE SOX",
         "league": "mlb",
-        "ch_key": "TSN.4.ca2",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 350,
-        "display_start": "2026-07-27T23:15:00Z",
-        "stop": "2026-07-28T02:45:00Z",
-        "start": "2026-07-27T23:45:00Z"
+        "display_start": "2026-07-27T23:10:00Z",
+        "stop": "2026-07-28T02:40:00Z",
+        "start": "2026-07-27T23:40:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-26T23:00:00Z",
+        "stop": "2026-07-26T23:30:00Z",
+        "start": "2026-07-26T23:00:00Z"
       }
     ],
     "4": [
@@ -189,13 +189,13 @@
         "start": "2026-07-26T17:40:00Z"
       },
       {
-        "title": "⚾ BOSTON RED SOX AT ATHLETICS ATHLETICS",
+        "title": "⚾ CHICAGO CUBS AT ST. LOUIS CARDINALS",
         "league": "mlb",
-        "ch_key": "Sportsnet.World.HD.ca2",
+        "ch_key": "TSN.4.ca2",
         "score": 350,
-        "display_start": "2026-07-28T01:10:00Z",
-        "stop": "2026-07-28T04:40:00Z",
-        "start": "2026-07-28T01:40:00Z"
+        "display_start": "2026-07-27T23:15:00Z",
+        "stop": "2026-07-28T02:45:00Z",
+        "start": "2026-07-27T23:45:00Z"
       }
     ],
     "5": [
@@ -207,6 +207,15 @@
         "display_start": "2026-07-26T17:40:00Z",
         "stop": "2026-07-26T21:10:00Z",
         "start": "2026-07-26T18:10:00Z"
+      },
+      {
+        "title": "⚾ BOSTON RED SOX AT ATHLETICS ATHLETICS",
+        "league": "mlb",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 350,
+        "display_start": "2026-07-28T01:10:00Z",
+        "stop": "2026-07-28T04:40:00Z",
+        "start": "2026-07-28T01:40:00Z"
       }
     ]
   }
