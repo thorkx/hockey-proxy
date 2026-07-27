@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-26T19:18:10Z",
+  "generated_at": "2026-07-27T03:35:31Z",
   "channels": {
     "1": [
-      {
-        "title": "⚾ TORONTO BLUE JAYS AT BOSTON RED SOX",
-        "league": "mlb",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 1750,
-        "display_start": "2026-07-26T17:05:00Z",
-        "stop": "2026-07-26T20:35:00Z",
-        "start": "2026-07-26T17:35:00Z"
-      },
       {
         "title": "⚾ TORONTO BLUE JAYS AT WASHINGTON NATIONALS",
         "league": "mlb",
@@ -21,13 +12,13 @@
         "start": "2026-07-27T22:45:00Z"
       },
       {
-        "title": "⚽ INTER TORONTO VS FORGE",
-        "league": "cpl",
-        "ch_key": "One.Soccer.ca2",
-        "score": 900,
-        "display_start": "2026-07-26T20:35:00Z",
-        "stop": "2026-07-27T00:00:00Z",
-        "start": "2026-07-26T21:00:00Z"
+        "title": "⚾ TORONTO BLUE JAYS AT WASHINGTON NATIONALS",
+        "league": "mlb",
+        "ch_key": "Sportsnet.4K.ca2",
+        "score": 1750,
+        "display_start": "2026-07-28T22:15:00Z",
+        "stop": "2026-07-29T01:45:00Z",
+        "start": "2026-07-28T22:45:00Z"
       },
       {
         "title": "⚾ SEATTLE MARINERS AT TEXAS RANGERS",
@@ -43,18 +34,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-26T11:30:00Z",
-        "stop": "2026-07-26T12:00:00Z",
-        "start": "2026-07-26T11:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-26T16:30:00Z",
-        "stop": "2026-07-26T17:00:00Z",
-        "start": "2026-07-26T16:30:00Z"
+        "display_start": "2026-07-26T23:00:00Z",
+        "stop": "2026-07-26T23:30:00Z",
+        "start": "2026-07-26T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -66,13 +48,13 @@
         "start": "2026-07-28T19:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
+        "title": "[REDIFFUSION] Le top LNH",
+        "league": "series",
+        "ch_key": "TVA.Sports.2.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-28T22:30:00Z",
-        "stop": "2026-07-28T23:00:00Z",
-        "start": "2026-07-28T22:30:00Z"
+        "display_start": "2026-07-29T22:30:00Z",
+        "stop": "2026-07-29T22:45:00Z",
+        "start": "2026-07-29T22:30:00Z"
       },
       {
         "title": "[REDIFFUSION] CONCACAF League Soccer",
@@ -100,27 +82,18 @@
         "display_start": "2026-07-27T14:00:00Z",
         "stop": "2026-07-27T16:00:00Z",
         "start": "2026-07-27T14:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-26T20:15:00Z",
+        "stop": "2026-07-26T21:15:00Z",
+        "start": "2026-07-26T20:15:00Z"
       }
     ],
     "2": [
-      {
-        "title": "⚽ ATLÉTICO OTTAWA VS PACIFIC",
-        "league": "cpl",
-        "ch_key": "One.Soccer.ca2",
-        "score": 900,
-        "display_start": "2026-07-26T17:30:00Z",
-        "stop": "2026-07-26T21:00:00Z",
-        "start": "2026-07-26T18:00:00Z"
-      },
-      {
-        "title": "⚾ NEW YORK YANKEES AT PHILADELPHIA PHILLIES",
-        "league": "mlb",
-        "ch_key": "RDS2.HD.ca2",
-        "score": 400,
-        "display_start": "2026-07-26T22:50:00Z",
-        "stop": "2026-07-27T02:20:00Z",
-        "start": "2026-07-26T23:20:00Z"
-      },
       {
         "title": "⚾ CLEVELAND GUARDIANS AT CINCINNATI REDS",
         "league": "mlb",
@@ -131,33 +104,22 @@
         "start": "2026-07-27T23:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-26T16:30:00Z",
-        "stop": "2026-07-26T17:30:00Z",
-        "start": "2026-07-26T16:30:00Z"
-      }
-    ],
-    "3": [
-      {
-        "title": "⚾ ATLANTA BRAVES AT BALTIMORE ORIOLES",
-        "league": "mlb",
-        "ch_key": "beIN.SPORTS.3.fr",
-        "score": 400,
-        "display_start": "2026-07-26T17:05:00Z",
-        "stop": "2026-07-26T20:35:00Z",
-        "start": "2026-07-26T17:35:00Z"
-      },
-      {
         "title": "⚾ NEW YORK YANKEES AT CHICAGO WHITE SOX",
         "league": "mlb",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 350,
-        "display_start": "2026-07-27T23:10:00Z",
-        "stop": "2026-07-28T02:40:00Z",
-        "start": "2026-07-27T23:40:00Z"
+        "display_start": "2026-07-28T23:10:00Z",
+        "stop": "2026-07-29T02:40:00Z",
+        "start": "2026-07-28T23:40:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-28T22:30:00Z",
+        "stop": "2026-07-28T23:00:00Z",
+        "start": "2026-07-28T22:30:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Cup Classics",
@@ -169,16 +131,36 @@
         "start": "2026-07-26T23:00:00Z"
       }
     ],
-    "4": [
+    "3": [
       {
-        "title": "⚾ SAN DIEGO PADRES AT MIAMI MARLINS",
+        "title": "⚾ NEW YORK YANKEES AT CHICAGO WHITE SOX",
         "league": "mlb",
-        "ch_key": "beIN.SPORTS.3.fr",
-        "score": 400,
-        "display_start": "2026-07-26T17:10:00Z",
-        "stop": "2026-07-26T20:40:00Z",
-        "start": "2026-07-26T17:40:00Z"
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 350,
+        "display_start": "2026-07-27T23:10:00Z",
+        "stop": "2026-07-28T02:40:00Z",
+        "start": "2026-07-27T23:40:00Z"
       },
+      {
+        "title": "⚾ CHICAGO CUBS AT ST. LOUIS CARDINALS",
+        "league": "mlb",
+        "ch_key": "TNT.Sports.1.HD.uk",
+        "score": 350,
+        "display_start": "2026-07-28T23:15:00Z",
+        "stop": "2026-07-29T02:45:00Z",
+        "start": "2026-07-28T23:45:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-27T22:30:00Z",
+        "stop": "2026-07-27T23:00:00Z",
+        "start": "2026-07-27T22:30:00Z"
+      }
+    ],
+    "4": [
       {
         "title": "⚾ CHICAGO CUBS AT ST. LOUIS CARDINALS",
         "league": "mlb",
@@ -187,18 +169,18 @@
         "display_start": "2026-07-27T23:15:00Z",
         "stop": "2026-07-28T02:45:00Z",
         "start": "2026-07-27T23:45:00Z"
+      },
+      {
+        "title": "⚾ BOSTON RED SOX AT ATHLETICS ATHLETICS",
+        "league": "mlb",
+        "ch_key": "TNT.Sports.2.HD.uk",
+        "score": 350,
+        "display_start": "2026-07-29T01:10:00Z",
+        "stop": "2026-07-29T04:40:00Z",
+        "start": "2026-07-29T01:40:00Z"
       }
     ],
     "5": [
-      {
-        "title": "⚾ ATHLETICS ATHLETICS AT MINNESOTA TWINS",
-        "league": "mlb",
-        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
-        "score": 400,
-        "display_start": "2026-07-26T17:40:00Z",
-        "stop": "2026-07-26T21:10:00Z",
-        "start": "2026-07-26T18:10:00Z"
-      },
       {
         "title": "⚾ BOSTON RED SOX AT ATHLETICS ATHLETICS",
         "league": "mlb",
@@ -207,6 +189,15 @@
         "display_start": "2026-07-28T01:10:00Z",
         "stop": "2026-07-28T04:40:00Z",
         "start": "2026-07-28T01:40:00Z"
+      },
+      {
+        "title": "🏀 TORONTO TEMPO AT MINNESOTA LYNX",
+        "league": "wnba",
+        "ch_key": "TSN.4.ca2",
+        "score": 250,
+        "display_start": "2026-07-28T23:30:00Z",
+        "stop": "2026-07-29T03:00:00Z",
+        "start": "2026-07-29T00:00:00Z"
       }
     ]
   }
