@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T08:47:49Z",
+  "generated_at": "2026-07-29T14:20:28Z",
   "channels": {
     "1": [
       {
@@ -52,9 +52,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-29T06:00:00Z",
-        "stop": "2026-07-29T06:30:00Z",
-        "start": "2026-07-29T06:00:00Z"
+        "display_start": "2026-07-29T06:30:00Z",
+        "stop": "2026-07-29T07:00:00Z",
+        "start": "2026-07-29T06:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -73,6 +73,15 @@
         "display_start": "2026-07-29T22:30:00Z",
         "stop": "2026-07-29T22:45:00Z",
         "start": "2026-07-29T22:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-29T07:00:00Z",
+        "stop": "2026-07-29T07:30:00Z",
+        "start": "2026-07-29T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Poker",
@@ -138,15 +147,6 @@
         "display_start": "2026-07-30T22:40:00Z",
         "stop": "2026-07-31T02:10:00Z",
         "start": "2026-07-30T23:10:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-29T06:00:00Z",
-        "stop": "2026-07-29T06:30:00Z",
-        "start": "2026-07-29T06:00:00Z"
       }
     ],
     "3": [
@@ -176,15 +176,6 @@
         "display_start": "2026-07-31T01:10:00Z",
         "stop": "2026-07-31T04:40:00Z",
         "start": "2026-07-31T01:40:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] 2026 World Series of Poker",
-        "league": "sports",
-        "ch_key": "ESPN2.HD.us2",
-        "score": 0,
-        "display_start": "2026-07-29T06:00:00Z",
-        "stop": "2026-07-29T07:00:00Z",
-        "start": "2026-07-29T06:00:00Z"
       }
     ],
     "4": [
