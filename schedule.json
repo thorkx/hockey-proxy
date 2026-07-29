@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T19:39:04Z",
+  "generated_at": "2026-07-29T03:11:12Z",
   "channels": {
     "1": [
       {
@@ -30,22 +30,49 @@
         "start": "2026-07-30T00:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Blue Jays in 30",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-28T12:00:00Z",
-        "stop": "2026-07-28T12:30:00Z",
-        "start": "2026-07-28T12:00:00Z"
+        "title": "⚾ NEW YORK YANKEES AT CHICAGO WHITE SOX",
+        "league": "mlb",
+        "ch_key": "Sportsnet.4K.ca2",
+        "score": 350,
+        "display_start": "2026-07-30T17:40:00Z",
+        "stop": "2026-07-30T21:10:00Z",
+        "start": "2026-07-30T18:10:00Z"
+      },
+      {
+        "title": "⚾ WASHINGTON NATIONALS AT ATLANTA BRAVES",
+        "league": "mlb",
+        "ch_key": "ESPN.HD.us2",
+        "score": 350,
+        "display_start": "2026-07-30T22:30:00Z",
+        "stop": "2026-07-31T02:00:00Z",
+        "start": "2026-07-30T23:00:00Z"
+      },
+      {
+        "title": "⚾ SEATTLE MARINERS AT LOS ANGELES DODGERS",
+        "league": "mlb",
+        "ch_key": "Sportsnet.4K.ca2",
+        "score": 350,
+        "display_start": "2026-07-31T02:00:00Z",
+        "stop": "2026-07-31T05:10:00Z",
+        "start": "2026-07-31T02:10:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-28T19:00:00Z",
-        "stop": "2026-07-28T20:00:00Z",
-        "start": "2026-07-28T19:00:00Z"
+        "display_start": "2026-07-28T20:00:00Z",
+        "stop": "2026-07-28T21:00:00Z",
+        "start": "2026-07-28T20:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Blue Jays in 30",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-28T21:00:00Z",
+        "stop": "2026-07-28T21:30:00Z",
+        "start": "2026-07-28T21:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -70,9 +97,9 @@
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-28T17:00:00Z",
-        "stop": "2026-07-28T17:30:00Z",
-        "start": "2026-07-28T17:00:00Z"
+        "display_start": "2026-07-28T23:00:00Z",
+        "stop": "2026-07-28T23:30:00Z",
+        "start": "2026-07-28T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Le top LNH",
@@ -91,18 +118,27 @@
         "display_start": "2026-07-29T06:00:00Z",
         "stop": "2026-07-29T07:00:00Z",
         "start": "2026-07-29T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Poker",
+        "league": "sports",
+        "ch_key": "CBS.Sports.Network.HD.us2",
+        "score": 0,
+        "display_start": "2026-07-31T06:00:00Z",
+        "stop": "2026-07-31T07:00:00Z",
+        "start": "2026-07-31T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-07-30T09:00:00Z",
+        "stop": "2026-07-30T10:00:00Z",
+        "start": "2026-07-30T09:00:00Z"
       }
     ],
     "2": [
-      {
-        "title": "⚾ TORONTO BLUE JAYS AT WASHINGTON NATIONALS",
-        "league": "mlb",
-        "ch_key": "Sportsnet.4K.ca2",
-        "score": 1750,
-        "display_start": "2026-07-28T22:15:00Z",
-        "stop": "2026-07-29T01:45:00Z",
-        "start": "2026-07-28T22:45:00Z"
-      },
       {
         "title": "⚾ PHILADELPHIA PHILLIES AT MIAMI MARLINS",
         "league": "mlb",
@@ -131,25 +167,25 @@
         "start": "2026-07-30T01:40:00Z"
       },
       {
-        "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-07-28T18:30:00Z",
-        "stop": "2026-07-28T19:30:00Z",
-        "start": "2026-07-28T18:30:00Z"
+        "title": "⚾ CHICAGO CUBS AT ST. LOUIS CARDINALS",
+        "league": "mlb",
+        "ch_key": "TNT.Sports.1.HD.uk",
+        "score": 350,
+        "display_start": "2026-07-30T17:45:00Z",
+        "stop": "2026-07-30T21:15:00Z",
+        "start": "2026-07-30T18:15:00Z"
+      },
+      {
+        "title": "⚾ MIAMI MARLINS AT NEW YORK METS",
+        "league": "mlb",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 350,
+        "display_start": "2026-07-30T22:40:00Z",
+        "stop": "2026-07-31T02:10:00Z",
+        "start": "2026-07-30T23:10:00Z"
       }
     ],
     "3": [
-      {
-        "title": "⚾ NEW YORK YANKEES AT CHICAGO WHITE SOX",
-        "league": "mlb",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 350,
-        "display_start": "2026-07-28T23:10:00Z",
-        "stop": "2026-07-29T02:40:00Z",
-        "start": "2026-07-28T23:40:00Z"
-      },
       {
         "title": "⚾ ATLANTA BRAVES AT NEW YORK METS",
         "league": "mlb",
@@ -167,18 +203,18 @@
         "display_start": "2026-07-29T23:10:00Z",
         "stop": "2026-07-30T02:40:00Z",
         "start": "2026-07-29T23:40:00Z"
+      },
+      {
+        "title": "⚾ BOSTON RED SOX AT ATHLETICS ATHLETICS",
+        "league": "mlb",
+        "ch_key": "TNT.Sports.2.HD.uk",
+        "score": 350,
+        "display_start": "2026-07-31T01:10:00Z",
+        "stop": "2026-07-31T04:40:00Z",
+        "start": "2026-07-31T01:40:00Z"
       }
     ],
     "4": [
-      {
-        "title": "⚾ CHICAGO CUBS AT ST. LOUIS CARDINALS",
-        "league": "mlb",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 350,
-        "display_start": "2026-07-28T23:15:00Z",
-        "stop": "2026-07-29T02:45:00Z",
-        "start": "2026-07-28T23:45:00Z"
-      },
       {
         "title": "⚾ NEW YORK YANKEES AT CHICAGO WHITE SOX",
         "league": "mlb",
@@ -190,15 +226,6 @@
       }
     ],
     "5": [
-      {
-        "title": "⚾ BOSTON RED SOX AT ATHLETICS ATHLETICS",
-        "league": "mlb",
-        "ch_key": "TNT.Sports.2.HD.uk",
-        "score": 350,
-        "display_start": "2026-07-29T01:10:00Z",
-        "stop": "2026-07-29T04:40:00Z",
-        "start": "2026-07-29T01:40:00Z"
-      },
       {
         "title": "⚾ CHICAGO CUBS AT ST. LOUIS CARDINALS",
         "league": "mlb",
