@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T03:25:50Z",
+  "generated_at": "2026-07-31T08:55:56Z",
   "channels": {
     "1": [
       {
@@ -19,6 +19,15 @@
         "display_start": "2026-08-01T18:37:00Z",
         "stop": "2026-08-01T22:07:00Z",
         "start": "2026-08-01T19:07:00Z"
+      },
+      {
+        "title": "⚽ HFX WANDERERS VS FORGE",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-08-02T21:30:00Z",
+        "stop": "2026-08-03T01:00:00Z",
+        "start": "2026-08-02T22:00:00Z"
       },
       {
         "title": "⚽ LAFC AT VANCOUVER WHITECAPS",
@@ -48,24 +57,6 @@
         "start": "2026-07-31T18:20:00Z"
       },
       {
-        "title": "[REDIFFUSION] Blue Jays in 30",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-30T19:30:00Z",
-        "stop": "2026-07-30T20:00:00Z",
-        "start": "2026-07-30T19:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-07-30T20:00:00Z",
-        "stop": "2026-07-30T21:00:00Z",
-        "start": "2026-07-30T20:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -75,13 +66,13 @@
         "start": "2026-07-31T06:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
+        "title": "[REDIFFUSION] Blue Jays in 30",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-07-30T23:00:00Z",
-        "stop": "2026-07-30T23:30:00Z",
-        "start": "2026-07-30T23:00:00Z"
+        "display_start": "2026-08-01T06:00:00Z",
+        "stop": "2026-08-01T06:30:00Z",
+        "start": "2026-08-01T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Liga MX Soccer",
@@ -136,15 +127,6 @@
         "display_start": "2026-08-01T14:30:00Z",
         "stop": "2026-08-01T15:30:00Z",
         "start": "2026-08-01T14:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] World Series of Poker (?)",
-        "league": "",
-        "ch_key": "TNT.Sports.3.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-02T23:00:00Z",
-        "stop": "2026-08-03T00:00:00Z",
-        "start": "2026-08-02T23:00:00Z"
       }
     ],
     "2": [
@@ -194,6 +176,15 @@
         "start": "2026-08-01T19:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-07-31T17:00:00Z",
+        "stop": "2026-07-31T18:00:00Z",
+        "start": "2026-07-31T17:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Poker",
         "league": "sports",
         "ch_key": "CBS.Sports.Network.HD.us2",
@@ -237,6 +228,15 @@
         "display_start": "2026-08-01T16:30:00Z",
         "stop": "2026-08-01T17:30:00Z",
         "start": "2026-08-01T16:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] World Series of Poker (?)",
+        "league": "",
+        "ch_key": "TNT.Sports.3.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-02T23:00:00Z",
+        "stop": "2026-08-03T00:00:00Z",
+        "start": "2026-08-02T23:00:00Z"
       }
     ],
     "3": [
