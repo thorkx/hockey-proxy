@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T08:55:56Z",
+  "generated_at": "2026-07-31T14:19:23Z",
   "channels": {
     "1": [
       {
@@ -93,6 +93,15 @@
         "start": "2026-08-01T16:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Poker",
+        "league": "sports",
+        "ch_key": "CBS.Sports.Network.HD.us2",
+        "score": 0,
+        "display_start": "2026-07-31T07:00:00Z",
+        "stop": "2026-07-31T08:00:00Z",
+        "start": "2026-07-31T07:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Australian F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -183,15 +192,6 @@
         "display_start": "2026-07-31T17:00:00Z",
         "stop": "2026-07-31T18:00:00Z",
         "start": "2026-07-31T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Poker",
-        "league": "sports",
-        "ch_key": "CBS.Sports.Network.HD.us2",
-        "score": 0,
-        "display_start": "2026-07-31T06:00:00Z",
-        "stop": "2026-07-31T07:00:00Z",
-        "start": "2026-07-31T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Japanese F1 GP Highlights",
