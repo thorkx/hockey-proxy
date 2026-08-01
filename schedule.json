@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-01T13:37:27Z",
+  "generated_at": "2026-08-01T19:15:30Z",
   "channels": {
     "1": [
       {
@@ -52,9 +52,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-01T06:00:00Z",
-        "stop": "2026-08-01T06:30:00Z",
-        "start": "2026-08-01T06:00:00Z"
+        "display_start": "2026-08-01T11:30:00Z",
+        "stop": "2026-08-01T12:00:00Z",
+        "start": "2026-08-01T11:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -66,15 +66,6 @@
         "start": "2026-08-03T21:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-01T11:00:00Z",
-        "stop": "2026-08-01T11:30:00Z",
-        "start": "2026-08-01T11:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] 2026 World Series of Poker",
         "league": "sports",
         "ch_key": "ESPN2.HD.us2",
@@ -82,24 +73,6 @@
         "display_start": "2026-08-01T16:00:00Z",
         "stop": "2026-08-01T17:00:00Z",
         "start": "2026-08-01T16:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Australian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-01T09:30:00Z",
-        "stop": "2026-08-01T10:30:00Z",
-        "start": "2026-08-01T09:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Japanese F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-01T11:30:00Z",
-        "stop": "2026-08-01T12:30:00Z",
-        "start": "2026-08-01T11:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Miami F1 GP Highlights",
@@ -127,6 +100,24 @@
         "display_start": "2026-08-01T14:30:00Z",
         "stop": "2026-08-01T15:30:00Z",
         "start": "2026-08-01T14:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Australian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-03T15:00:00Z",
+        "stop": "2026-08-03T16:00:00Z",
+        "start": "2026-08-03T15:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Chinese F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-03T16:00:00Z",
+        "stop": "2026-08-03T17:00:00Z",
+        "start": "2026-08-03T16:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Burnley v Brentford Hlts",
@@ -203,13 +194,22 @@
         "start": "2026-08-01T19:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Chinese F1 GP Highlights",
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-01T18:30:00Z",
+        "stop": "2026-08-01T19:00:00Z",
+        "start": "2026-08-01T18:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Japanese F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-08-01T10:30:00Z",
-        "stop": "2026-08-01T11:30:00Z",
-        "start": "2026-08-01T10:30:00Z"
+        "display_start": "2026-08-01T11:30:00Z",
+        "stop": "2026-08-01T12:30:00Z",
+        "start": "2026-08-01T11:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Barcelona F1 GP Highlights",
