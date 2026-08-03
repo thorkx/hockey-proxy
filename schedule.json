@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T03:26:10Z",
+  "generated_at": "2026-08-03T09:54:31Z",
   "channels": {
     "1": [
       {
@@ -21,22 +21,13 @@
         "start": "2026-08-05T00:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] Plays of the Month - Countdown",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-02T21:30:00Z",
-        "stop": "2026-08-02T22:00:00Z",
-        "start": "2026-08-02T21:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-02T22:30:00Z",
-        "stop": "2026-08-02T23:00:00Z",
-        "start": "2026-08-02T22:30:00Z"
+        "display_start": "2026-08-03T06:00:00Z",
+        "stop": "2026-08-03T06:30:00Z",
+        "start": "2026-08-03T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -57,13 +48,22 @@
         "start": "2026-08-03T22:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] Plays of the Month - Countdown",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-04T22:30:00Z",
+        "stop": "2026-08-04T23:00:00Z",
+        "start": "2026-08-04T22:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] FA Cup Classics",
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-02T23:00:00Z",
-        "stop": "2026-08-03T00:00:00Z",
-        "start": "2026-08-02T23:00:00Z"
+        "display_start": "2026-08-03T17:00:00Z",
+        "stop": "2026-08-03T18:00:00Z",
+        "start": "2026-08-03T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -73,15 +73,6 @@
         "display_start": "2026-08-04T18:00:00Z",
         "stop": "2026-08-04T19:00:00Z",
         "start": "2026-08-04T18:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] 2026 World Series of Poker",
-        "league": "sports",
-        "ch_key": "ESPN2.HD.us2",
-        "score": 0,
-        "display_start": "2026-08-03T06:00:00Z",
-        "stop": "2026-08-03T07:00:00Z",
-        "start": "2026-08-03T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Australian F1 GP Highlights",
@@ -100,15 +91,6 @@
         "display_start": "2026-08-03T16:00:00Z",
         "stop": "2026-08-03T17:00:00Z",
         "start": "2026-08-03T16:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Japanese F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-03T17:00:00Z",
-        "stop": "2026-08-03T18:00:00Z",
-        "start": "2026-08-03T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Miami F1 GP Highlights",
@@ -194,22 +176,22 @@
         "start": "2026-08-05T01:40:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Burnley v Brentford Hlts",
+        "title": "[REDIFFUSION] 2026 World Series of Poker",
         "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
+        "ch_key": "ESPN2.HD.us2",
         "score": 0,
-        "display_start": "2026-08-03T17:00:00Z",
-        "stop": "2026-08-03T17:30:00Z",
-        "start": "2026-08-03T17:00:00Z"
+        "display_start": "2026-08-03T06:00:00Z",
+        "stop": "2026-08-03T07:00:00Z",
+        "start": "2026-08-03T06:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Brentford v West Ham Hlts",
+        "title": "[REDIFFUSION] Japanese F1 GP Highlights",
         "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
+        "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-08-03T17:30:00Z",
+        "display_start": "2026-08-03T17:00:00Z",
         "stop": "2026-08-03T18:00:00Z",
-        "start": "2026-08-03T17:30:00Z"
+        "start": "2026-08-03T17:00:00Z"
       }
     ],
     "3": [
@@ -230,6 +212,24 @@
         "display_start": "2026-08-05T01:30:00Z",
         "stop": "2026-08-05T05:00:00Z",
         "start": "2026-08-05T02:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Burnley v Brentford Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-03T17:00:00Z",
+        "stop": "2026-08-03T17:30:00Z",
+        "start": "2026-08-03T17:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Brentford v West Ham Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-03T17:30:00Z",
+        "stop": "2026-08-03T18:00:00Z",
+        "start": "2026-08-03T17:30:00Z"
       }
     ],
     "4": [
