@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-08-02T19:17:15Z",
+  "generated_at": "2026-08-03T03:26:10Z",
   "channels": {
     "1": [
-      {
-        "title": "⚾ ST. LOUIS CARDINALS AT TORONTO BLUE JAYS",
-        "league": "mlb",
-        "ch_key": "Sportsnet.4K.ca2",
-        "score": 1750,
-        "display_start": "2026-08-02T17:07:00Z",
-        "stop": "2026-08-02T20:37:00Z",
-        "start": "2026-08-02T17:37:00Z"
-      },
       {
         "title": "⚾ TORONTO BLUE JAYS AT HOUSTON ASTROS",
         "league": "mlb",
@@ -21,22 +12,31 @@
         "start": "2026-08-04T00:10:00Z"
       },
       {
-        "title": "⚽ HFX WANDERERS VS FORGE",
-        "league": "cpl",
-        "ch_key": "One.Soccer.ca2",
-        "score": 900,
+        "title": "⚾ TORONTO BLUE JAYS AT HOUSTON ASTROS",
+        "league": "mlb",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 1750,
+        "display_start": "2026-08-04T23:40:00Z",
+        "stop": "2026-08-05T03:10:00Z",
+        "start": "2026-08-05T00:10:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Plays of the Month - Countdown",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
         "display_start": "2026-08-02T21:30:00Z",
-        "stop": "2026-08-03T01:00:00Z",
-        "start": "2026-08-02T22:00:00Z"
+        "stop": "2026-08-02T22:00:00Z",
+        "start": "2026-08-02T21:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-02T11:30:00Z",
-        "stop": "2026-08-02T12:00:00Z",
-        "start": "2026-08-02T11:30:00Z"
+        "display_start": "2026-08-02T22:30:00Z",
+        "stop": "2026-08-02T23:00:00Z",
+        "start": "2026-08-02T22:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -55,6 +55,15 @@
         "display_start": "2026-08-03T22:30:00Z",
         "stop": "2026-08-03T23:00:00Z",
         "start": "2026-08-03T22:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-02T23:00:00Z",
+        "stop": "2026-08-03T00:00:00Z",
+        "start": "2026-08-02T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -111,6 +120,15 @@
         "start": "2026-08-04T17:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Canadian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-05T17:00:00Z",
+        "stop": "2026-08-05T18:00:00Z",
+        "start": "2026-08-05T17:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] PL: Sunderland v Brentford Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -136,6 +154,24 @@
         "display_start": "2026-08-04T13:30:00Z",
         "stop": "2026-08-04T14:00:00Z",
         "start": "2026-08-04T13:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Newcastle v Bournemouth Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-05T12:30:00Z",
+        "stop": "2026-08-05T13:00:00Z",
+        "start": "2026-08-05T12:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Liverpool v West Ham Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-05T15:30:00Z",
+        "stop": "2026-08-05T16:00:00Z",
+        "start": "2026-08-05T15:30:00Z"
       }
     ],
     "2": [
@@ -149,31 +185,13 @@
         "start": "2026-08-04T00:00:00Z"
       },
       {
-        "title": "⚾ BOSTON RED SOX AT LOS ANGELES DODGERS",
+        "title": "⚾ DETROIT TIGERS AT SEATTLE MARINERS",
         "league": "mlb",
-        "ch_key": "beIN.SPORTS.MAX.4.fr",
+        "ch_key": "beIN.SPORTS.MAX.5.fr",
         "score": 250,
-        "display_start": "2026-08-02T22:50:00Z",
-        "stop": "2026-08-03T02:20:00Z",
-        "start": "2026-08-02T23:20:00Z"
-      },
-      {
-        "title": "🏀 INDIANA FEVER AT MINNESOTA LYNX",
-        "league": "wnba",
-        "ch_key": "TSN.5.ca2",
-        "score": 250,
-        "display_start": "2026-08-02T16:30:00Z",
-        "stop": "2026-08-02T20:00:00Z",
-        "start": "2026-08-02T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Plays of the Month - Countdown",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-02T21:30:00Z",
-        "stop": "2026-08-02T22:00:00Z",
-        "start": "2026-08-02T21:30:00Z"
+        "display_start": "2026-08-05T01:10:00Z",
+        "stop": "2026-08-05T04:40:00Z",
+        "start": "2026-08-05T01:40:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Burnley v Brentford Hlts",
@@ -196,15 +214,6 @@
     ],
     "3": [
       {
-        "title": "🏀 CONNECTICUT SUN AT DALLAS WINGS",
-        "league": "wnba",
-        "ch_key": "ESPN.HD.us2",
-        "score": 250,
-        "display_start": "2026-08-02T22:30:00Z",
-        "stop": "2026-08-03T02:00:00Z",
-        "start": "2026-08-02T23:00:00Z"
-      },
-      {
         "title": "⚾ WASHINGTON NATIONALS AT PHILADELPHIA PHILLIES",
         "league": "mlb",
         "ch_key": "beIN.SPORTS.MAX.5.fr",
@@ -212,27 +221,18 @@
         "display_start": "2026-08-03T22:10:00Z",
         "stop": "2026-08-04T01:40:00Z",
         "start": "2026-08-03T22:40:00Z"
-      }
-    ],
-    "4": [
+      },
       {
         "title": "🏀 TORONTO TEMPO AT GOLDEN STATE VALKYRIES",
         "league": "wnba",
         "ch_key": "TSN.4.ca2",
         "score": 250,
-        "display_start": "2026-08-03T00:00:00Z",
-        "stop": "2026-08-03T03:30:00Z",
-        "start": "2026-08-03T00:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-02T23:00:00Z",
-        "stop": "2026-08-03T00:00:00Z",
-        "start": "2026-08-02T23:00:00Z"
-      },
+        "display_start": "2026-08-05T01:30:00Z",
+        "stop": "2026-08-05T05:00:00Z",
+        "start": "2026-08-05T02:00:00Z"
+      }
+    ],
+    "4": [
       {
         "title": "[REDIFFUSION] World Series of Poker (?)",
         "league": "",
