@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T02:54:52Z",
+  "generated_at": "2026-08-04T08:45:07Z",
   "channels": {
     "1": [
       {
@@ -30,24 +30,6 @@
         "start": "2026-08-05T22:40:00Z"
       },
       {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-03T21:30:00Z",
-        "stop": "2026-08-03T22:00:00Z",
-        "start": "2026-08-03T21:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-03T22:30:00Z",
-        "stop": "2026-08-03T23:00:00Z",
-        "start": "2026-08-03T22:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -55,6 +37,15 @@
         "display_start": "2026-08-04T06:00:00Z",
         "stop": "2026-08-04T06:30:00Z",
         "start": "2026-08-04T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-04T21:30:00Z",
+        "stop": "2026-08-04T22:00:00Z",
+        "start": "2026-08-04T21:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Countdown",
@@ -66,13 +57,22 @@
         "start": "2026-08-04T22:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-05T21:30:00Z",
+        "stop": "2026-08-05T22:00:00Z",
+        "start": "2026-08-05T21:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] FA Cup Classics",
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-03T23:00:00Z",
-        "stop": "2026-08-04T00:00:00Z",
-        "start": "2026-08-03T23:00:00Z"
+        "display_start": "2026-08-04T17:00:00Z",
+        "stop": "2026-08-04T17:30:00Z",
+        "start": "2026-08-04T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -93,13 +93,22 @@
         "start": "2026-08-06T22:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Miami F1 GP Highlights",
+        "title": "[REDIFFUSION] Chinese F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-08-04T17:00:00Z",
-        "stop": "2026-08-04T18:00:00Z",
-        "start": "2026-08-04T17:00:00Z"
+        "display_start": "2026-08-04T15:00:00Z",
+        "stop": "2026-08-04T16:00:00Z",
+        "start": "2026-08-04T15:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Japanese F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-04T16:00:00Z",
+        "stop": "2026-08-04T17:00:00Z",
+        "start": "2026-08-04T16:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Monaco F1 GP Highlights",
@@ -185,31 +194,13 @@
         "start": "2026-08-05T01:40:00Z"
       },
       {
-        "title": "[REDIFFUSION] Australian F1 GP Highlights",
+        "title": "[REDIFFUSION] Miami F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-08-03T21:00:00Z",
-        "stop": "2026-08-03T22:00:00Z",
-        "start": "2026-08-03T21:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Chinese F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-03T22:00:00Z",
-        "stop": "2026-08-03T23:00:00Z",
-        "start": "2026-08-03T22:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Japanese F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-03T23:00:00Z",
-        "stop": "2026-08-04T00:00:00Z",
-        "start": "2026-08-03T23:00:00Z"
+        "display_start": "2026-08-04T17:00:00Z",
+        "stop": "2026-08-04T18:00:00Z",
+        "start": "2026-08-04T17:00:00Z"
       }
     ],
     "3": [
@@ -239,15 +230,6 @@
         "display_start": "2026-08-05T17:00:00Z",
         "stop": "2026-08-05T18:00:00Z",
         "start": "2026-08-05T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] World Series of Poker (?)",
-        "league": "",
-        "ch_key": "TNT.Sports.2.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-03T23:00:00Z",
-        "stop": "2026-08-04T00:00:00Z",
-        "start": "2026-08-03T23:00:00Z"
       }
     ],
     "4": [
@@ -261,6 +243,16 @@
         "start": "2026-08-05T23:00:00Z"
       }
     ],
-    "5": []
+    "5": [
+      {
+        "title": "[REDIFFUSION] World Series of Poker (?)",
+        "league": "",
+        "ch_key": "TNT.Sports.2.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-05T23:00:00Z",
+        "stop": "2026-08-06T01:00:00Z",
+        "start": "2026-08-05T23:00:00Z"
+      }
+    ]
   }
 }
