@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T02:54:36Z",
+  "generated_at": "2026-08-06T08:44:16Z",
   "channels": {
     "1": [
       {
@@ -21,9 +21,18 @@
         "start": "2026-08-07T22:40:00Z"
       },
       {
+        "title": "⚽ ATLÉTICO OTTAWA VS HFX WANDERERS",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-08-08T16:30:00Z",
+        "stop": "2026-08-08T20:00:00Z",
+        "start": "2026-08-08T17:00:00Z"
+      },
+      {
         "title": "⚽ PACIFIC VS INTER TORONTO",
         "league": "cpl",
-        "ch_key": "Sportsnet.East.HD.ca2",
+        "ch_key": "One.Soccer.ca2",
         "score": 900,
         "display_start": "2026-08-08T20:30:00Z",
         "stop": "2026-08-09T00:00:00Z",
@@ -48,24 +57,6 @@
         "start": "2026-08-07T02:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-05T21:30:00Z",
-        "stop": "2026-08-05T22:00:00Z",
-        "start": "2026-08-05T21:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Plays of the Month - Countdown",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-05T22:30:00Z",
-        "stop": "2026-08-05T23:00:00Z",
-        "start": "2026-08-05T22:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -73,6 +64,15 @@
         "display_start": "2026-08-06T06:00:00Z",
         "stop": "2026-08-06T06:30:00Z",
         "start": "2026-08-06T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Plays of the Month - Countdown",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-07T21:30:00Z",
+        "stop": "2026-08-07T22:00:00Z",
+        "start": "2026-08-07T21:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month",
@@ -88,9 +88,9 @@
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-05T23:00:00Z",
-        "stop": "2026-08-05T23:30:00Z",
-        "start": "2026-08-05T23:00:00Z"
+        "display_start": "2026-08-06T17:00:00Z",
+        "stop": "2026-08-06T17:30:00Z",
+        "start": "2026-08-06T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Miami F1 GP Highlights",
@@ -102,15 +102,6 @@
         "start": "2026-08-06T15:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] Canadian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-06T16:30:00Z",
-        "stop": "2026-08-06T17:30:00Z",
-        "start": "2026-08-06T16:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Barcelona F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -118,15 +109,6 @@
         "display_start": "2026-08-07T17:00:00Z",
         "stop": "2026-08-07T18:00:00Z",
         "start": "2026-08-07T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Belgian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-08T19:00:00Z",
-        "stop": "2026-08-08T20:00:00Z",
-        "start": "2026-08-08T19:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Leeds Utd v Arsenal Hlts",
@@ -176,6 +158,24 @@
         "start": "2026-08-06T22:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-08T21:30:00Z",
+        "stop": "2026-08-08T22:00:00Z",
+        "start": "2026-08-08T21:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Belgian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-08T19:00:00Z",
+        "stop": "2026-08-08T20:00:00Z",
+        "start": "2026-08-08T19:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -183,15 +183,6 @@
         "display_start": "2026-08-08T20:00:00Z",
         "stop": "2026-08-08T21:00:00Z",
         "start": "2026-08-08T20:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] World Series of Poker (?)",
-        "league": "",
-        "ch_key": "TNT.Sports.2.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-05T23:00:00Z",
-        "stop": "2026-08-06T01:00:00Z",
-        "start": "2026-08-05T23:00:00Z"
       }
     ],
     "3": [
@@ -214,6 +205,15 @@
         "start": "2026-08-06T22:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Canadian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-06T16:30:00Z",
+        "stop": "2026-08-06T17:30:00Z",
+        "start": "2026-08-06T16:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Monaco F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -221,6 +221,15 @@
         "display_start": "2026-08-06T17:30:00Z",
         "stop": "2026-08-06T18:30:00Z",
         "start": "2026-08-06T17:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] World Series of Poker (?)",
+        "league": "",
+        "ch_key": "TNT.Sports.2.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-06T23:00:00Z",
+        "stop": "2026-08-07T01:00:00Z",
+        "start": "2026-08-06T23:00:00Z"
       }
     ],
     "4": [],
