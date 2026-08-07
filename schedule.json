@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-06T14:22:49Z",
+  "generated_at": "2026-08-07T00:05:59Z",
   "channels": {
     "1": [
       {
-        "title": "⚾ TORONTO BLUE JAYS AT CHICAGO CUBS",
-        "league": "mlb",
-        "ch_key": "Sportsnet.4K.ca2",
-        "score": 1750,
-        "display_start": "2026-08-06T17:50:00Z",
-        "stop": "2026-08-06T21:20:00Z",
-        "start": "2026-08-06T18:20:00Z"
+        "title": "⚽ SUPRA DU QUÉBEC VS CAVALRY",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 3400,
+        "display_start": "2026-08-08T23:30:00Z",
+        "stop": "2026-08-09T03:00:00Z",
+        "start": "2026-08-09T00:00:00Z"
       },
       {
         "title": "⚾ TORONTO BLUE JAYS AT PHILADELPHIA PHILLIES",
@@ -30,40 +30,22 @@
         "start": "2026-08-08T17:00:00Z"
       },
       {
-        "title": "⚽ PACIFIC VS INTER TORONTO",
-        "league": "cpl",
-        "ch_key": "One.Soccer.ca2",
-        "score": 900,
-        "display_start": "2026-08-08T20:30:00Z",
-        "stop": "2026-08-09T00:00:00Z",
-        "start": "2026-08-08T21:00:00Z"
-      },
-      {
-        "title": "⚾ WASHINGTON NATIONALS AT PHILADELPHIA PHILLIES",
-        "league": "mlb",
-        "ch_key": "beIN.SPORTS.MAX.5.fr",
-        "score": 250,
-        "display_start": "2026-08-06T21:35:00Z",
-        "stop": "2026-08-07T01:05:00Z",
-        "start": "2026-08-06T22:05:00Z"
-      },
-      {
-        "title": "🏀 TORONTO TEMPO AT PORTLAND FIRE",
-        "league": "wnba",
-        "ch_key": "TSN.4.ca2",
-        "score": 250,
-        "display_start": "2026-08-07T01:30:00Z",
-        "stop": "2026-08-07T05:00:00Z",
-        "start": "2026-08-07T02:00:00Z"
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-06T22:30:00Z",
+        "stop": "2026-08-06T23:00:00Z",
+        "start": "2026-08-06T22:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-06T06:30:00Z",
-        "stop": "2026-08-06T07:00:00Z",
-        "start": "2026-08-06T06:30:00Z"
+        "display_start": "2026-08-07T06:00:00Z",
+        "stop": "2026-08-07T06:30:00Z",
+        "start": "2026-08-07T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Countdown",
@@ -84,6 +66,15 @@
         "start": "2026-08-08T16:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-08T21:30:00Z",
+        "stop": "2026-08-08T22:00:00Z",
+        "start": "2026-08-08T21:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] FA Cup Classics",
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
@@ -93,13 +84,31 @@
         "start": "2026-08-06T17:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "sports",
+        "ch_key": "CBS.Sports.Network.HD.us2",
+        "score": 0,
+        "display_start": "2026-08-09T23:00:00Z",
+        "stop": "2026-08-10T00:00:00Z",
+        "start": "2026-08-09T23:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Monaco F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-06T17:30:00Z",
+        "stop": "2026-08-06T18:30:00Z",
+        "start": "2026-08-06T17:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Miami F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-08-06T15:30:00Z",
-        "stop": "2026-08-06T16:30:00Z",
-        "start": "2026-08-06T15:30:00Z"
+        "display_start": "2026-08-06T21:00:00Z",
+        "stop": "2026-08-06T22:00:00Z",
+        "start": "2026-08-06T21:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Barcelona F1 GP Highlights",
@@ -111,6 +120,24 @@
         "start": "2026-08-07T17:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-08T20:00:00Z",
+        "stop": "2026-08-08T21:00:00Z",
+        "start": "2026-08-08T20:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] British F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-09T11:30:00Z",
+        "stop": "2026-08-09T12:30:00Z",
+        "start": "2026-08-09T11:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] PL: Leeds Utd v Arsenal Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -118,9 +145,27 @@
         "display_start": "2026-08-07T15:30:00Z",
         "stop": "2026-08-07T16:00:00Z",
         "start": "2026-08-07T15:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] World Series of Poker (?)",
+        "league": "",
+        "ch_key": "TNT.Sports.2.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-06T23:00:00Z",
+        "stop": "2026-08-07T01:00:00Z",
+        "start": "2026-08-06T23:00:00Z"
       }
     ],
     "2": [
+      {
+        "title": "⚾ TORONTO BLUE JAYS AT PHILADELPHIA PHILLIES",
+        "league": "mlb",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 1750,
+        "display_start": "2026-08-08T21:35:00Z",
+        "stop": "2026-08-09T01:05:00Z",
+        "start": "2026-08-08T22:05:00Z"
+      },
       {
         "title": "⚽ FORGE VS VANCOUVER FC",
         "league": "cpl",
@@ -129,71 +174,6 @@
         "display_start": "2026-08-07T22:30:00Z",
         "stop": "2026-08-08T02:00:00Z",
         "start": "2026-08-07T23:00:00Z"
-      },
-      {
-        "title": "⚾ ATHLETICS ATHLETICS AT CINCINNATI REDS",
-        "league": "mlb",
-        "ch_key": "RDS2.HD.ca2",
-        "score": 400,
-        "display_start": "2026-08-06T16:10:00Z",
-        "stop": "2026-08-06T19:40:00Z",
-        "start": "2026-08-06T16:40:00Z"
-      },
-      {
-        "title": "⚾ MINNESOTA TWINS AT KANSAS CITY ROYALS",
-        "league": "mlb",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 250,
-        "display_start": "2026-08-06T23:00:00Z",
-        "stop": "2026-08-07T02:30:00Z",
-        "start": "2026-08-06T23:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-06T22:30:00Z",
-        "stop": "2026-08-06T23:00:00Z",
-        "start": "2026-08-06T22:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-08T21:30:00Z",
-        "stop": "2026-08-08T22:00:00Z",
-        "start": "2026-08-08T21:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Belgian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-08T19:00:00Z",
-        "stop": "2026-08-08T20:00:00Z",
-        "start": "2026-08-08T19:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-08T20:00:00Z",
-        "stop": "2026-08-08T21:00:00Z",
-        "start": "2026-08-08T20:00:00Z"
-      }
-    ],
-    "3": [
-      {
-        "title": "⚾ NEW YORK METS AT PITTSBURGH PIRATES",
-        "league": "mlb",
-        "ch_key": "beIN.SPORTS.MAX.5.fr",
-        "score": 250,
-        "display_start": "2026-08-07T22:10:00Z",
-        "stop": "2026-08-08T01:40:00Z",
-        "start": "2026-08-07T22:40:00Z"
       },
       {
         "title": "[REDIFFUSION] Poker",
@@ -214,25 +194,74 @@
         "start": "2026-08-06T16:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] Monaco F1 GP Highlights",
+        "title": "[REDIFFUSION] Belgian F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-08-06T17:30:00Z",
-        "stop": "2026-08-06T18:30:00Z",
-        "start": "2026-08-06T17:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] World Series of Poker (?)",
-        "league": "",
-        "ch_key": "TNT.Sports.2.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-06T23:00:00Z",
-        "stop": "2026-08-07T01:00:00Z",
-        "start": "2026-08-06T23:00:00Z"
+        "display_start": "2026-08-08T19:00:00Z",
+        "stop": "2026-08-08T20:00:00Z",
+        "start": "2026-08-08T19:00:00Z"
       }
     ],
-    "4": [],
-    "5": []
+    "3": [
+      {
+        "title": "⚽ PACIFIC VS INTER TORONTO",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-08-08T20:30:00Z",
+        "stop": "2026-08-09T00:00:00Z",
+        "start": "2026-08-08T21:00:00Z"
+      },
+      {
+        "title": "⚾ LOS ANGELES DODGERS AT ARIZONA DIAMONDBACKS",
+        "league": "mlb",
+        "ch_key": "TSN.2.ca2",
+        "score": 350,
+        "display_start": "2026-08-09T00:00:00Z",
+        "stop": "2026-08-09T03:10:00Z",
+        "start": "2026-08-09T00:10:00Z"
+      },
+      {
+        "title": "⚾ NEW YORK METS AT PITTSBURGH PIRATES",
+        "league": "mlb",
+        "ch_key": "beIN.SPORTS.MAX.5.fr",
+        "score": 250,
+        "display_start": "2026-08-07T22:10:00Z",
+        "stop": "2026-08-08T01:40:00Z",
+        "start": "2026-08-07T22:40:00Z"
+      }
+    ],
+    "4": [
+      {
+        "title": "⚾ DETROIT TIGERS AT SAN FRANCISCO GIANTS",
+        "league": "mlb",
+        "ch_key": "beIN.SPORTS.MAX.4.fr",
+        "score": 250,
+        "display_start": "2026-08-08T22:45:00Z",
+        "stop": "2026-08-09T02:15:00Z",
+        "start": "2026-08-08T23:15:00Z"
+      },
+      {
+        "title": "🏀 INDIANA FEVER AT CHICAGO SKY",
+        "league": "wnba",
+        "ch_key": "ESPN.Deportes.HD.us2",
+        "score": 250,
+        "display_start": "2026-08-08T19:00:00Z",
+        "stop": "2026-08-08T22:30:00Z",
+        "start": "2026-08-08T19:30:00Z"
+      }
+    ],
+    "5": [
+      {
+        "title": "🏀 SEATTLE STORM AT PORTLAND FIRE",
+        "league": "wnba",
+        "ch_key": "beIN.SPORTS.2.fr",
+        "score": 250,
+        "display_start": "2026-08-09T00:00:00Z",
+        "stop": "2026-08-09T03:30:00Z",
+        "start": "2026-08-09T00:30:00Z"
+      }
+    ]
   }
 }
