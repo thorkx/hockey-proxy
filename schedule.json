@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T07:00:32Z",
+  "generated_at": "2026-08-08T12:56:50Z",
   "channels": {
     "1": [
       {
@@ -64,6 +64,15 @@
         "display_start": "2026-08-08T16:00:00Z",
         "stop": "2026-08-08T16:30:00Z",
         "start": "2026-08-08T16:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-09T13:00:00Z",
+        "stop": "2026-08-09T13:30:00Z",
+        "start": "2026-08-09T13:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -147,7 +156,7 @@
         "start": "2026-08-10T13:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] World Series of Poker (?)",
+        "title": "[REDIFFUSION] World Series of Poker",
         "league": "",
         "ch_key": "TNT.Sports.2.HD.uk",
         "score": 0,
@@ -167,13 +176,13 @@
         "start": "2026-08-08T22:05:00Z"
       },
       {
-        "title": "🏀 LAS VEGAS ACES AT NEW YORK LIBERTY",
-        "league": "wnba",
-        "ch_key": "TSN.3.ca2",
-        "score": 250,
-        "display_start": "2026-08-09T16:00:00Z",
-        "stop": "2026-08-09T19:30:00Z",
-        "start": "2026-08-09T16:30:00Z"
+        "title": "⚾ ATLANTA BRAVES AT NEW YORK YANKEES",
+        "league": "mlb",
+        "ch_key": "TNT.Sports.3.HD.uk",
+        "score": 350,
+        "display_start": "2026-08-09T17:05:00Z",
+        "stop": "2026-08-09T20:35:00Z",
+        "start": "2026-08-09T17:35:00Z"
       },
       {
         "title": "🏀 GOLDEN STATE VALKYRIES AT LOS ANGELES SPARKS",
@@ -230,9 +239,47 @@
         "display_start": "2026-08-09T00:00:00Z",
         "stop": "2026-08-09T03:10:00Z",
         "start": "2026-08-09T00:10:00Z"
+      },
+      {
+        "title": "⚾ LOS ANGELES DODGERS AT ARIZONA DIAMONDBACKS",
+        "league": "mlb",
+        "ch_key": "TNT.Sports.1.HD.uk",
+        "score": 350,
+        "display_start": "2026-08-09T19:40:00Z",
+        "stop": "2026-08-09T23:10:00Z",
+        "start": "2026-08-09T20:10:00Z"
+      },
+      {
+        "title": "🏀 LAS VEGAS ACES AT NEW YORK LIBERTY",
+        "league": "wnba",
+        "ch_key": "TSN.3.ca2",
+        "score": 250,
+        "display_start": "2026-08-09T16:00:00Z",
+        "stop": "2026-08-09T19:30:00Z",
+        "start": "2026-08-09T16:30:00Z"
       }
     ],
     "4": [
+      {
+        "title": "⚾ ATLANTA BRAVES AT NEW YORK YANKEES",
+        "league": "mlb",
+        "ch_key": "TNT.Sports.1.HD.uk",
+        "score": 350,
+        "display_start": "2026-08-08T18:35:00Z",
+        "stop": "2026-08-08T22:05:00Z",
+        "start": "2026-08-08T19:05:00Z"
+      },
+      {
+        "title": "⚾ HOUSTON ASTROS AT SAN DIEGO PADRES",
+        "league": "mlb",
+        "ch_key": "TNT.Sports.2.HD.uk",
+        "score": 350,
+        "display_start": "2026-08-08T22:45:00Z",
+        "stop": "2026-08-09T02:15:00Z",
+        "start": "2026-08-08T23:15:00Z"
+      }
+    ],
+    "5": [
       {
         "title": "⚾ DETROIT TIGERS AT SAN FRANCISCO GIANTS",
         "league": "mlb",
@@ -250,26 +297,6 @@
         "display_start": "2026-08-08T19:00:00Z",
         "stop": "2026-08-08T22:30:00Z",
         "start": "2026-08-08T19:30:00Z"
-      }
-    ],
-    "5": [
-      {
-        "title": "🏀 SEATTLE STORM AT PORTLAND FIRE",
-        "league": "wnba",
-        "ch_key": "beIN.SPORTS.2.fr",
-        "score": 250,
-        "display_start": "2026-08-09T00:00:00Z",
-        "stop": "2026-08-09T03:30:00Z",
-        "start": "2026-08-09T00:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-08T21:30:00Z",
-        "stop": "2026-08-08T22:00:00Z",
-        "start": "2026-08-08T21:30:00Z"
       }
     ]
   }
