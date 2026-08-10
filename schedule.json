@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T13:18:14Z",
+  "generated_at": "2026-08-10T19:02:55Z",
   "channels": {
     "1": [
       {
@@ -25,9 +25,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-10T06:00:00Z",
-        "stop": "2026-08-10T06:30:00Z",
-        "start": "2026-08-10T06:00:00Z"
+        "display_start": "2026-08-10T11:30:00Z",
+        "stop": "2026-08-10T12:00:00Z",
+        "start": "2026-08-10T11:30:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -48,6 +48,15 @@
         "start": "2026-08-12T21:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-13T18:00:00Z",
+        "stop": "2026-08-13T18:30:00Z",
+        "start": "2026-08-13T18:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] FA Cup Classics",
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
@@ -55,6 +64,15 @@
         "display_start": "2026-08-10T17:00:00Z",
         "stop": "2026-08-10T17:30:00Z",
         "start": "2026-08-10T17:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-10T17:30:00Z",
+        "stop": "2026-08-10T18:00:00Z",
+        "start": "2026-08-10T17:30:00Z"
       },
       {
         "title": "[REDIFFUSION] 2026 World Series of Poker",
@@ -156,15 +174,6 @@
         "display_start": "2026-08-10T17:00:00Z",
         "stop": "2026-08-10T17:30:00Z",
         "start": "2026-08-10T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-10T06:00:00Z",
-        "stop": "2026-08-10T06:30:00Z",
-        "start": "2026-08-10T06:00:00Z"
       }
     ],
     "3": [
@@ -187,12 +196,12 @@
         "start": "2026-08-12T01:40:00Z"
       },
       {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.360.HD.ca2",
+        "title": "[REDIFFUSION] Austrian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
         "display_start": "2026-08-10T17:00:00Z",
-        "stop": "2026-08-10T17:30:00Z",
+        "stop": "2026-08-10T18:00:00Z",
         "start": "2026-08-10T17:00:00Z"
       }
     ],
@@ -214,15 +223,6 @@
         "display_start": "2026-08-12T01:10:00Z",
         "stop": "2026-08-12T04:40:00Z",
         "start": "2026-08-12T01:40:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Austrian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-10T17:00:00Z",
-        "stop": "2026-08-10T18:00:00Z",
-        "start": "2026-08-10T17:00:00Z"
       }
     ],
     "5": [
