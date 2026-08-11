@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T02:02:22Z",
+  "generated_at": "2026-08-11T07:14:56Z",
   "channels": {
     "1": [
       {
@@ -14,7 +14,7 @@
       {
         "title": "⚾ BOSTON RED SOX AT TORONTO BLUE JAYS",
         "league": "mlb",
-        "ch_key": "Sportsnet.4K.ca2",
+        "ch_key": "Sportsnet.East.HD.ca2",
         "score": 1750,
         "display_start": "2026-08-12T22:37:00Z",
         "stop": "2026-08-13T02:07:00Z",
@@ -34,9 +34,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-10T18:30:00Z",
-        "stop": "2026-08-10T19:00:00Z",
-        "start": "2026-08-10T18:30:00Z"
+        "display_start": "2026-08-11T06:00:00Z",
+        "stop": "2026-08-11T06:30:00Z",
+        "start": "2026-08-11T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -70,9 +70,18 @@
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-10T23:00:00Z",
-        "stop": "2026-08-10T23:30:00Z",
-        "start": "2026-08-10T23:00:00Z"
+        "display_start": "2026-08-11T17:00:00Z",
+        "stop": "2026-08-11T17:30:00Z",
+        "start": "2026-08-11T17:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-11T16:30:00Z",
+        "stop": "2026-08-11T17:00:00Z",
+        "start": "2026-08-11T16:30:00Z"
       },
       {
         "title": "[REDIFFUSION] 2026 World Series of Poker",
@@ -84,31 +93,22 @@
         "start": "2026-08-11T08:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Monaco F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-10T21:00:00Z",
-        "stop": "2026-08-10T22:00:00Z",
-        "start": "2026-08-10T21:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Barcelona F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-08-10T22:00:00Z",
-        "stop": "2026-08-10T23:00:00Z",
-        "start": "2026-08-10T22:00:00Z"
+        "display_start": "2026-08-11T14:30:00Z",
+        "stop": "2026-08-11T15:30:00Z",
+        "start": "2026-08-11T14:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] British F1 GP Highlights",
+        "title": "[REDIFFUSION] Austrian F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-08-11T16:30:00Z",
-        "stop": "2026-08-11T17:30:00Z",
-        "start": "2026-08-11T16:30:00Z"
+        "display_start": "2026-08-11T15:30:00Z",
+        "stop": "2026-08-11T16:30:00Z",
+        "start": "2026-08-11T15:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
@@ -133,6 +133,15 @@
       {
         "title": "⚾ SEATTLE MARINERS AT NEW YORK YANKEES",
         "league": "mlb",
+        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
+        "score": 400,
+        "display_start": "2026-08-12T22:30:00Z",
+        "stop": "2026-08-13T02:00:00Z",
+        "start": "2026-08-12T23:00:00Z"
+      },
+      {
+        "title": "⚾ SEATTLE MARINERS AT NEW YORK YANKEES",
+        "league": "mlb",
         "ch_key": "TNT.Sports.1.HD.uk",
         "score": 350,
         "display_start": "2026-08-11T22:35:00Z",
@@ -149,15 +158,6 @@
         "start": "2026-08-12T19:05:00Z"
       },
       {
-        "title": "⚾ SEATTLE MARINERS AT NEW YORK YANKEES",
-        "league": "mlb",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 350,
-        "display_start": "2026-08-12T22:30:00Z",
-        "stop": "2026-08-13T02:00:00Z",
-        "start": "2026-08-12T23:00:00Z"
-      },
-      {
         "title": "⚾ TEXAS RANGERS AT LOS ANGELES ANGELS",
         "league": "mlb",
         "ch_key": "ESPN.Deportes.HD.us2",
@@ -167,22 +167,22 @@
         "start": "2026-08-13T02:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-10T18:30:00Z",
-        "stop": "2026-08-10T19:00:00Z",
-        "start": "2026-08-10T18:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Austrian F1 GP Highlights",
+        "title": "[REDIFFUSION] Monaco F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-08-10T23:00:00Z",
-        "stop": "2026-08-11T00:00:00Z",
-        "start": "2026-08-10T23:00:00Z"
+        "display_start": "2026-08-11T08:00:00Z",
+        "stop": "2026-08-11T09:00:00Z",
+        "start": "2026-08-11T08:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] British F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-11T16:30:00Z",
+        "stop": "2026-08-11T17:30:00Z",
+        "start": "2026-08-11T16:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Belgian F1 GP Highlights",
@@ -225,11 +225,11 @@
       {
         "title": "[REDIFFUSION] World Series of Poker",
         "league": "",
-        "ch_key": "TNT.Sports.2.HD.uk",
+        "ch_key": "TNT.Sports.3.HD.uk",
         "score": 0,
-        "display_start": "2026-08-10T23:00:00Z",
-        "stop": "2026-08-11T00:00:00Z",
-        "start": "2026-08-10T23:00:00Z"
+        "display_start": "2026-08-11T23:00:00Z",
+        "stop": "2026-08-12T00:00:00Z",
+        "start": "2026-08-11T23:00:00Z"
       }
     ],
     "4": [
