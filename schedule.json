@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-12T02:19:18Z",
+  "generated_at": "2026-08-12T07:38:57Z",
   "channels": {
     "1": [
       {
@@ -14,7 +14,7 @@
       {
         "title": "⚾ BOSTON RED SOX AT TORONTO BLUE JAYS",
         "league": "mlb",
-        "ch_key": "Sportsnet.4K.ca2",
+        "ch_key": "Sportsnet.East.HD.ca2",
         "score": 1750,
         "display_start": "2026-08-13T18:37:00Z",
         "stop": "2026-08-13T22:07:00Z",
@@ -43,18 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-11T18:30:00Z",
-        "stop": "2026-08-11T19:00:00Z",
-        "start": "2026-08-11T18:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-11T20:00:00Z",
-        "stop": "2026-08-11T21:00:00Z",
-        "start": "2026-08-11T20:00:00Z"
+        "display_start": "2026-08-12T06:00:00Z",
+        "stop": "2026-08-12T06:30:00Z",
+        "start": "2026-08-12T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -75,22 +66,31 @@
         "start": "2026-08-14T22:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-15T07:00:00Z",
+        "stop": "2026-08-15T07:30:00Z",
+        "start": "2026-08-15T07:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] FA Cup Classics",
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-11T23:00:00Z",
-        "stop": "2026-08-11T23:30:00Z",
-        "start": "2026-08-11T23:00:00Z"
+        "display_start": "2026-08-12T17:00:00Z",
+        "stop": "2026-08-12T17:30:00Z",
+        "start": "2026-08-12T17:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Barcelona F1 GP Highlights",
+        "title": "[REDIFFUSION] Austrian F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-08-11T21:00:00Z",
-        "stop": "2026-08-11T22:00:00Z",
-        "start": "2026-08-11T21:00:00Z"
+        "display_start": "2026-08-12T08:00:00Z",
+        "stop": "2026-08-12T09:00:00Z",
+        "start": "2026-08-12T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] British F1 GP Highlights",
@@ -167,24 +167,6 @@
         "start": "2026-08-13T23:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-11T18:30:00Z",
-        "stop": "2026-08-11T19:00:00Z",
-        "start": "2026-08-11T18:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Austrian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-11T23:00:00Z",
-        "stop": "2026-08-12T00:00:00Z",
-        "start": "2026-08-11T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Belgian F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -205,6 +187,15 @@
         "start": "2026-08-13T00:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-12T20:00:00Z",
+        "stop": "2026-08-12T21:00:00Z",
+        "start": "2026-08-12T20:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] World Poker Tour: Season 12",
         "league": "series",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -212,18 +203,19 @@
         "display_start": "2026-08-12T21:00:00Z",
         "stop": "2026-08-12T22:00:00Z",
         "start": "2026-08-12T21:00:00Z"
-      },
+      }
+    ],
+    "4": [
       {
         "title": "[REDIFFUSION] World Series of Poker",
         "league": "",
         "ch_key": "TNT.Sports.3.HD.uk",
         "score": 0,
-        "display_start": "2026-08-11T23:00:00Z",
-        "stop": "2026-08-12T00:00:00Z",
-        "start": "2026-08-11T23:00:00Z"
+        "display_start": "2026-08-12T23:00:00Z",
+        "stop": "2026-08-13T00:00:00Z",
+        "start": "2026-08-12T23:00:00Z"
       }
     ],
-    "4": [],
     "5": []
   }
 }
