@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T19:00:13Z",
+  "generated_at": "2026-08-15T01:26:58Z",
   "channels": {
     "1": [
       {
@@ -48,13 +48,22 @@
         "start": "2026-08-15T23:30:00Z"
       },
       {
+        "title": "⚾ SEATTLE MARINERS AT HOUSTON ASTROS",
+        "league": "mlb",
+        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
+        "score": 400,
+        "display_start": "2026-08-16T23:00:00Z",
+        "stop": "2026-08-17T02:20:00Z",
+        "start": "2026-08-16T23:20:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-14T11:00:00Z",
-        "stop": "2026-08-14T11:30:00Z",
-        "start": "2026-08-14T11:00:00Z"
+        "display_start": "2026-08-14T17:30:00Z",
+        "stop": "2026-08-14T18:00:00Z",
+        "start": "2026-08-14T17:30:00Z"
       },
       {
         "title": "[REDIFFUSION] High Stakes Poker",
@@ -84,13 +93,13 @@
         "start": "2026-08-15T07:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-14T17:00:00Z",
-        "stop": "2026-08-14T17:30:00Z",
-        "start": "2026-08-14T17:00:00Z"
+        "display_start": "2026-08-17T22:00:00Z",
+        "stop": "2026-08-17T23:00:00Z",
+        "start": "2026-08-17T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Poker",
@@ -106,9 +115,9 @@
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-08-14T16:00:00Z",
-        "stop": "2026-08-14T17:00:00Z",
-        "start": "2026-08-14T16:00:00Z"
+        "display_start": "2026-08-14T21:00:00Z",
+        "stop": "2026-08-14T22:00:00Z",
+        "start": "2026-08-14T21:00:00Z"
       },
       {
         "title": "[REDIFFUSION] British F1 GP Highlights",
@@ -118,6 +127,33 @@
         "display_start": "2026-08-15T06:00:00Z",
         "stop": "2026-08-15T07:00:00Z",
         "start": "2026-08-15T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Dutch F1 GP Highlights 2022",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-17T06:00:00Z",
+        "stop": "2026-08-17T07:00:00Z",
+        "start": "2026-08-17T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Dutch F1 GP Highlights 2023",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-17T07:00:00Z",
+        "stop": "2026-08-17T08:00:00Z",
+        "start": "2026-08-17T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Dutch F1 GP Highlights 2024",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-17T08:00:00Z",
+        "stop": "2026-08-17T09:00:00Z",
+        "start": "2026-08-17T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Leeds Utd v Arsenal Hlts",
@@ -140,6 +176,15 @@
     ],
     "2": [
       {
+        "title": "⚾ NEW YORK YANKEES AT TORONTO BLUE JAYS",
+        "league": "mlb",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 1750,
+        "display_start": "2026-08-16T17:07:00Z",
+        "stop": "2026-08-16T20:37:00Z",
+        "start": "2026-08-16T17:37:00Z"
+      },
+      {
         "title": "⚽ CAVALRY VS FORGE",
         "league": "cpl",
         "ch_key": "One.Soccer.ca2",
@@ -158,22 +203,13 @@
         "start": "2026-08-16T01:30:00Z"
       },
       {
-        "title": "⚾ BALTIMORE ORIOLES AT TAMPA BAY RAYS",
-        "league": "mlb",
-        "ch_key": "Sportsnet.4K.ca2",
-        "score": 350,
-        "display_start": "2026-08-14T22:40:00Z",
-        "stop": "2026-08-15T02:10:00Z",
-        "start": "2026-08-14T23:10:00Z"
-      },
-      {
-        "title": "⚾ MILWAUKEE BREWERS AT LOS ANGELES DODGERS",
-        "league": "mlb",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 350,
-        "display_start": "2026-08-15T02:10:00Z",
-        "stop": "2026-08-15T05:10:00Z",
-        "start": "2026-08-15T02:10:00Z"
+        "title": "⚽ PORTLAND TIMBERS AT CHICAGO FIRE FC",
+        "league": "usa.1",
+        "ch_key": "TSN.3.ca2",
+        "score": 750,
+        "display_start": "2026-08-16T21:30:00Z",
+        "stop": "2026-08-17T01:00:00Z",
+        "start": "2026-08-16T22:00:00Z"
       },
       {
         "title": "⚽ GETAFE AT ALAVÉS",
@@ -185,24 +221,33 @@
         "start": "2026-08-15T17:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-14T17:30:00Z",
+        "stop": "2026-08-14T18:00:00Z",
+        "start": "2026-08-14T17:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-08-14T17:00:00Z",
-        "stop": "2026-08-14T18:00:00Z",
-        "start": "2026-08-14T17:00:00Z"
+        "display_start": "2026-08-14T22:00:00Z",
+        "stop": "2026-08-14T23:00:00Z",
+        "start": "2026-08-14T22:00:00Z"
       }
     ],
     "3": [
       {
-        "title": "⚾ ARIZONA DIAMONDBACKS AT ATLANTA BRAVES",
-        "league": "mlb",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 350,
-        "display_start": "2026-08-14T22:45:00Z",
-        "stop": "2026-08-15T02:15:00Z",
-        "start": "2026-08-14T23:15:00Z"
+        "title": "⚽ PHILADELPHIA UNION AT NEW YORK CITY FC",
+        "league": "usa.1",
+        "ch_key": "TSN.5.ca2",
+        "score": 750,
+        "display_start": "2026-08-16T21:30:00Z",
+        "stop": "2026-08-17T01:00:00Z",
+        "start": "2026-08-16T22:00:00Z"
       },
       {
         "title": "⚾ ST. LOUIS CARDINALS AT CHICAGO CUBS",
@@ -221,18 +266,18 @@
         "display_start": "2026-08-15T22:40:00Z",
         "stop": "2026-08-16T02:10:00Z",
         "start": "2026-08-15T23:10:00Z"
+      },
+      {
+        "title": "⚾ ARIZONA DIAMONDBACKS AT ATLANTA BRAVES",
+        "league": "mlb",
+        "ch_key": "TNT.Sports.2.HD.uk",
+        "score": 350,
+        "display_start": "2026-08-16T17:05:00Z",
+        "stop": "2026-08-16T20:35:00Z",
+        "start": "2026-08-16T17:35:00Z"
       }
     ],
     "4": [
-      {
-        "title": "⚾ SEATTLE MARINERS AT HOUSTON ASTROS",
-        "league": "mlb",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 350,
-        "display_start": "2026-08-14T23:40:00Z",
-        "stop": "2026-08-15T03:10:00Z",
-        "start": "2026-08-15T00:10:00Z"
-      },
       {
         "title": "⚾ MILWAUKEE BREWERS AT LOS ANGELES DODGERS",
         "league": "mlb",
@@ -243,6 +288,15 @@
         "start": "2026-08-15T23:15:00Z"
       },
       {
+        "title": "⚾ PHILADELPHIA PHILLIES AT MINNESOTA TWINS",
+        "league": "mlb",
+        "ch_key": "Fox.Soccer.Plus.HD.us2",
+        "score": 350,
+        "display_start": "2026-08-16T17:40:00Z",
+        "stop": "2026-08-16T21:10:00Z",
+        "start": "2026-08-16T18:10:00Z"
+      },
+      {
         "title": "⚽ RAYO VALLECANO AT SEVILLA",
         "league": "esp.1",
         "ch_key": "ESPN.Deportes.HD.us2",
@@ -250,18 +304,18 @@
         "display_start": "2026-08-15T19:00:00Z",
         "stop": "2026-08-15T22:30:00Z",
         "start": "2026-08-15T19:30:00Z"
+      },
+      {
+        "title": "🏀 PORTLAND FIRE AT PHOENIX MERCURY",
+        "league": "wnba",
+        "ch_key": "TSN.3.ca2",
+        "score": 250,
+        "display_start": "2026-08-16T22:30:00Z",
+        "stop": "2026-08-17T02:00:00Z",
+        "start": "2026-08-16T23:00:00Z"
       }
     ],
     "5": [
-      {
-        "title": "⚾ KANSAS CITY ROYALS AT LOS ANGELES ANGELS",
-        "league": "mlb",
-        "ch_key": "Fox.Soccer.Plus.HD.us2",
-        "score": 350,
-        "display_start": "2026-08-15T01:08:00Z",
-        "stop": "2026-08-15T04:38:00Z",
-        "start": "2026-08-15T01:38:00Z"
-      },
       {
         "title": "⚾ TEXAS RANGERS AT ATHLETICS ATHLETICS",
         "league": "mlb",
@@ -270,6 +324,15 @@
         "display_start": "2026-08-16T01:10:00Z",
         "stop": "2026-08-16T04:40:00Z",
         "start": "2026-08-16T01:40:00Z"
+      },
+      {
+        "title": "⚾ KANSAS CITY ROYALS AT LOS ANGELES ANGELS",
+        "league": "mlb",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 350,
+        "display_start": "2026-08-16T19:37:00Z",
+        "stop": "2026-08-16T23:07:00Z",
+        "start": "2026-08-16T20:07:00Z"
       }
     ]
   }
