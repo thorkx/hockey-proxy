@@ -1,33 +1,15 @@
 {
-  "generated_at": "2026-08-16T18:35:00Z",
+  "generated_at": "2026-08-17T01:36:33Z",
   "channels": {
     "1": [
       {
-        "title": "⚽ SUPRA DU QUÉBEC VS ATLÉTICO OTTAWA",
-        "league": "cpl",
-        "ch_key": "One.Soccer.ca2",
-        "score": 3400,
-        "display_start": "2026-08-16T15:30:00Z",
-        "stop": "2026-08-16T19:00:00Z",
-        "start": "2026-08-16T16:00:00Z"
-      },
-      {
-        "title": "⚽ INTER TORONTO VS HFX WANDERERS",
-        "league": "cpl",
-        "ch_key": "One.Soccer.ca2",
-        "score": 900,
-        "display_start": "2026-08-16T19:30:00Z",
-        "stop": "2026-08-16T23:00:00Z",
-        "start": "2026-08-16T20:00:00Z"
-      },
-      {
-        "title": "⚾ SEATTLE MARINERS AT HOUSTON ASTROS",
+        "title": "⚾ TORONTO BLUE JAYS AT TAMPA BAY RAYS",
         "league": "mlb",
-        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
-        "score": 400,
-        "display_start": "2026-08-16T23:00:00Z",
-        "stop": "2026-08-17T02:20:00Z",
-        "start": "2026-08-16T23:20:00Z"
+        "ch_key": "Sportsnet.4K.ca2",
+        "score": 1750,
+        "display_start": "2026-08-18T22:10:00Z",
+        "stop": "2026-08-19T01:40:00Z",
+        "start": "2026-08-18T22:40:00Z"
       },
       {
         "title": "⚾ ST. LOUIS CARDINALS AT CINCINNATI REDS",
@@ -48,31 +30,49 @@
         "start": "2026-08-17T22:05:00Z"
       },
       {
+        "title": "[REDIFFUSION] High Stakes Poker",
+        "league": "series",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-16T18:00:00Z",
+        "stop": "2026-08-16T19:00:00Z",
+        "start": "2026-08-16T18:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-16T11:00:00Z",
-        "stop": "2026-08-16T11:30:00Z",
-        "start": "2026-08-16T11:00:00Z"
+        "display_start": "2026-08-16T23:00:00Z",
+        "stop": "2026-08-16T23:30:00Z",
+        "start": "2026-08-16T23:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-16T13:30:00Z",
-        "stop": "2026-08-16T14:00:00Z",
-        "start": "2026-08-16T13:30:00Z"
+        "display_start": "2026-08-18T06:30:00Z",
+        "stop": "2026-08-18T07:00:00Z",
+        "start": "2026-08-18T06:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] Le top LNH",
-        "league": "series",
-        "ch_key": "TVA.Sports.2.HD.ca2",
+        "title": "[REDIFFUSION] British F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-08-18T22:30:00Z",
-        "stop": "2026-08-18T22:45:00Z",
-        "start": "2026-08-18T22:30:00Z"
+        "display_start": "2026-08-16T20:30:00Z",
+        "stop": "2026-08-16T21:30:00Z",
+        "start": "2026-08-16T20:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Belgian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-16T21:30:00Z",
+        "stop": "2026-08-16T22:30:00Z",
+        "start": "2026-08-16T21:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Dutch F1 GP Highlights 2022",
@@ -111,43 +111,16 @@
         "start": "2026-08-18T08:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] British F1 GP Highlights",
+        "title": "[REDIFFUSION] Dutch F1 GP Highlights 2021",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-08-18T17:00:00Z",
-        "stop": "2026-08-18T18:00:00Z",
-        "start": "2026-08-18T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Leeds Utd v Arsenal Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-16T14:00:00Z",
-        "stop": "2026-08-16T14:30:00Z",
-        "start": "2026-08-16T14:00:00Z"
+        "display_start": "2026-08-19T10:00:00Z",
+        "stop": "2026-08-19T11:00:00Z",
+        "start": "2026-08-19T10:00:00Z"
       }
     ],
     "2": [
-      {
-        "title": "⚾ NEW YORK YANKEES AT TORONTO BLUE JAYS",
-        "league": "mlb",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 1750,
-        "display_start": "2026-08-16T17:07:00Z",
-        "stop": "2026-08-16T20:37:00Z",
-        "start": "2026-08-16T17:37:00Z"
-      },
-      {
-        "title": "⚽ PORTLAND TIMBERS AT CHICAGO FIRE FC",
-        "league": "usa.1",
-        "ch_key": "TSN.3.ca2",
-        "score": 750,
-        "display_start": "2026-08-16T21:30:00Z",
-        "stop": "2026-08-17T01:00:00Z",
-        "start": "2026-08-16T22:00:00Z"
-      },
       {
         "title": "⚾ MIAMI MARLINS AT PHILADELPHIA PHILLIES",
         "league": "mlb",
@@ -156,6 +129,15 @@
         "display_start": "2026-08-17T22:10:00Z",
         "stop": "2026-08-18T01:40:00Z",
         "start": "2026-08-17T22:40:00Z"
+      },
+      {
+        "title": "⚾ CHICAGO WHITE SOX AT CHICAGO CUBS",
+        "league": "mlb",
+        "ch_key": "TNT.Sports.1.HD.uk",
+        "score": 350,
+        "display_start": "2026-08-18T23:35:00Z",
+        "stop": "2026-08-19T03:05:00Z",
+        "start": "2026-08-19T00:05:00Z"
       },
       {
         "title": "⚽ ELCHE AT DEPORTIVO",
@@ -167,43 +149,34 @@
         "start": "2026-08-17T19:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-16T16:00:00Z",
-        "stop": "2026-08-16T16:30:00Z",
-        "start": "2026-08-16T16:00:00Z"
+        "display_start": "2026-08-18T23:00:00Z",
+        "stop": "2026-08-18T23:30:00Z",
+        "start": "2026-08-18T23:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-16T13:30:00Z",
-        "stop": "2026-08-16T14:30:00Z",
-        "start": "2026-08-16T13:30:00Z"
+        "display_start": "2026-08-16T23:00:00Z",
+        "stop": "2026-08-16T23:30:00Z",
+        "start": "2026-08-16T23:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Le top LNH",
+        "league": "series",
+        "ch_key": "TVA.Sports.2.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-18T22:30:00Z",
+        "stop": "2026-08-18T22:45:00Z",
+        "start": "2026-08-18T22:30:00Z"
       }
     ],
     "3": [
-      {
-        "title": "⚽ PHILADELPHIA UNION AT NEW YORK CITY FC",
-        "league": "usa.1",
-        "ch_key": "TSN.5.ca2",
-        "score": 750,
-        "display_start": "2026-08-16T21:30:00Z",
-        "stop": "2026-08-17T01:00:00Z",
-        "start": "2026-08-16T22:00:00Z"
-      },
-      {
-        "title": "⚾ ARIZONA DIAMONDBACKS AT ATLANTA BRAVES",
-        "league": "mlb",
-        "ch_key": "TNT.Sports.2.HD.uk",
-        "score": 350,
-        "display_start": "2026-08-16T17:05:00Z",
-        "stop": "2026-08-16T20:35:00Z",
-        "start": "2026-08-16T17:35:00Z"
-      },
       {
         "title": "⚾ CHICAGO WHITE SOX AT CHICAGO CUBS",
         "league": "mlb",
@@ -214,6 +187,15 @@
         "start": "2026-08-18T00:05:00Z"
       },
       {
+        "title": "⚾ SAN FRANCISCO GIANTS AT CLEVELAND GUARDIANS",
+        "league": "mlb",
+        "ch_key": "beIN.SPORTS.MAX.4.fr",
+        "score": 250,
+        "display_start": "2026-08-18T22:10:00Z",
+        "stop": "2026-08-19T01:40:00Z",
+        "start": "2026-08-18T22:40:00Z"
+      },
+      {
         "title": "[REDIFFUSION] World Poker Tour",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -221,27 +203,18 @@
         "display_start": "2026-08-17T22:00:00Z",
         "stop": "2026-08-17T23:00:00Z",
         "start": "2026-08-17T22:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-16T22:30:00Z",
+        "stop": "2026-08-16T23:30:00Z",
+        "start": "2026-08-16T22:30:00Z"
       }
     ],
     "4": [
-      {
-        "title": "⚾ PHILADELPHIA PHILLIES AT MINNESOTA TWINS",
-        "league": "mlb",
-        "ch_key": "Fox.Soccer.Plus.HD.us2",
-        "score": 350,
-        "display_start": "2026-08-16T17:40:00Z",
-        "stop": "2026-08-16T21:10:00Z",
-        "start": "2026-08-16T18:10:00Z"
-      },
-      {
-        "title": "🏀 PORTLAND FIRE AT PHOENIX MERCURY",
-        "league": "wnba",
-        "ch_key": "TSN.3.ca2",
-        "score": 250,
-        "display_start": "2026-08-16T22:30:00Z",
-        "stop": "2026-08-17T02:00:00Z",
-        "start": "2026-08-16T23:00:00Z"
-      },
       {
         "title": "⚾ DETROIT TIGERS AT PITTSBURGH PIRATES",
         "league": "mlb",
@@ -252,25 +225,16 @@
         "start": "2026-08-17T23:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Belgian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-16T21:30:00Z",
-        "stop": "2026-08-16T22:30:00Z",
-        "start": "2026-08-16T21:30:00Z"
+        "title": "🏀 INDIANA FEVER AT TORONTO TEMPO",
+        "league": "wnba",
+        "ch_key": "TSN.4.ca2",
+        "score": 250,
+        "display_start": "2026-08-18T22:30:00Z",
+        "stop": "2026-08-19T02:00:00Z",
+        "start": "2026-08-18T23:00:00Z"
       }
     ],
     "5": [
-      {
-        "title": "⚾ KANSAS CITY ROYALS AT LOS ANGELES ANGELS",
-        "league": "mlb",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 350,
-        "display_start": "2026-08-16T19:37:00Z",
-        "stop": "2026-08-16T23:07:00Z",
-        "start": "2026-08-16T20:07:00Z"
-      },
       {
         "title": "⚾ ATHLETICS ATHLETICS AT KANSAS CITY ROYALS",
         "league": "mlb",
@@ -281,22 +245,13 @@
         "start": "2026-08-17T23:40:00Z"
       },
       {
-        "title": "[REDIFFUSION] High Stakes Poker",
-        "league": "series",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-16T18:00:00Z",
-        "stop": "2026-08-16T19:00:00Z",
-        "start": "2026-08-16T18:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-16T23:30:00Z",
-        "stop": "2026-08-17T00:00:00Z",
-        "start": "2026-08-16T23:30:00Z"
+        "title": "🏀 ATLANTA DREAM AT LAS VEGAS ACES",
+        "league": "wnba",
+        "ch_key": "ESPN.HD.us2",
+        "score": 250,
+        "display_start": "2026-08-19T00:30:00Z",
+        "stop": "2026-08-19T04:00:00Z",
+        "start": "2026-08-19T01:00:00Z"
       }
     ]
   }
