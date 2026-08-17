@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T01:36:33Z",
+  "generated_at": "2026-08-17T07:03:47Z",
   "channels": {
     "1": [
       {
@@ -30,22 +30,13 @@
         "start": "2026-08-17T22:05:00Z"
       },
       {
-        "title": "[REDIFFUSION] High Stakes Poker",
-        "league": "series",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-16T18:00:00Z",
-        "stop": "2026-08-16T19:00:00Z",
-        "start": "2026-08-16T18:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-16T23:00:00Z",
-        "stop": "2026-08-16T23:30:00Z",
-        "start": "2026-08-16T23:00:00Z"
+        "display_start": "2026-08-17T06:00:00Z",
+        "stop": "2026-08-17T06:30:00Z",
+        "start": "2026-08-17T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -55,33 +46,6 @@
         "display_start": "2026-08-18T06:30:00Z",
         "stop": "2026-08-18T07:00:00Z",
         "start": "2026-08-18T06:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] British F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-16T20:30:00Z",
-        "stop": "2026-08-16T21:30:00Z",
-        "start": "2026-08-16T20:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Belgian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-16T21:30:00Z",
-        "stop": "2026-08-16T22:30:00Z",
-        "start": "2026-08-16T21:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Dutch F1 GP Highlights 2022",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-17T06:00:00Z",
-        "stop": "2026-08-17T07:00:00Z",
-        "start": "2026-08-17T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Dutch F1 GP Highlights 2023",
@@ -109,6 +73,24 @@
         "display_start": "2026-08-18T08:00:00Z",
         "stop": "2026-08-18T09:00:00Z",
         "start": "2026-08-18T08:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] British F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-18T17:00:00Z",
+        "stop": "2026-08-18T18:00:00Z",
+        "start": "2026-08-18T17:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Belgian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-18T18:00:00Z",
+        "stop": "2026-08-18T19:00:00Z",
+        "start": "2026-08-18T18:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Dutch F1 GP Highlights 2021",
@@ -162,9 +144,9 @@
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-16T23:00:00Z",
-        "stop": "2026-08-16T23:30:00Z",
-        "start": "2026-08-16T23:00:00Z"
+        "display_start": "2026-08-17T17:00:00Z",
+        "stop": "2026-08-17T17:30:00Z",
+        "start": "2026-08-17T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Le top LNH",
@@ -174,6 +156,15 @@
         "display_start": "2026-08-18T22:30:00Z",
         "stop": "2026-08-18T22:45:00Z",
         "start": "2026-08-18T22:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Dutch F1 GP Highlights 2022",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-17T06:00:00Z",
+        "stop": "2026-08-17T07:00:00Z",
+        "start": "2026-08-17T06:00:00Z"
       }
     ],
     "3": [
@@ -209,9 +200,9 @@
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-08-16T22:30:00Z",
-        "stop": "2026-08-16T23:30:00Z",
-        "start": "2026-08-16T22:30:00Z"
+        "display_start": "2026-08-17T20:30:00Z",
+        "stop": "2026-08-17T21:30:00Z",
+        "start": "2026-08-17T20:30:00Z"
       }
     ],
     "4": [
