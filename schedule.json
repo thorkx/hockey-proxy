@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T12:54:19Z",
+  "generated_at": "2026-08-18T18:43:25Z",
   "channels": {
     "1": [
       {
@@ -43,9 +43,9 @@
         "league": "",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-18T06:30:00Z",
-        "stop": "2026-08-18T07:00:00Z",
-        "start": "2026-08-18T06:30:00Z"
+        "display_start": "2026-08-18T11:30:00Z",
+        "stop": "2026-08-18T12:00:00Z",
+        "start": "2026-08-18T11:30:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -75,24 +75,6 @@
         "start": "2026-08-18T17:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Dutch F1 GP Highlights 2024",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-18T07:00:00Z",
-        "stop": "2026-08-18T08:00:00Z",
-        "start": "2026-08-18T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Dutch F1 GP Highlights 2025",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-18T08:00:00Z",
-        "stop": "2026-08-18T09:00:00Z",
-        "start": "2026-08-18T08:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Belgian F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -111,6 +93,15 @@
         "start": "2026-08-18T19:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Dutch F1 GP Highlights 2025",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-19T07:00:00Z",
+        "stop": "2026-08-19T08:00:00Z",
+        "start": "2026-08-19T07:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Dutch F1 GP Highlights 2021",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -127,6 +118,15 @@
         "display_start": "2026-08-19T11:00:00Z",
         "stop": "2026-08-19T12:00:00Z",
         "start": "2026-08-19T11:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Dutch F1 GP Highlights 2023",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-19T12:00:00Z",
+        "stop": "2026-08-19T13:00:00Z",
+        "start": "2026-08-19T12:00:00Z"
       }
     ],
     "2": [
@@ -176,15 +176,6 @@
         "start": "2026-08-18T22:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] Dutch F1 GP Highlights 2023",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-18T06:00:00Z",
-        "stop": "2026-08-18T07:00:00Z",
-        "start": "2026-08-18T06:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] British F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -192,6 +183,15 @@
         "display_start": "2026-08-18T17:00:00Z",
         "stop": "2026-08-18T18:00:00Z",
         "start": "2026-08-18T17:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Dutch F1 GP Highlights 2024",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-19T06:00:00Z",
+        "stop": "2026-08-19T07:00:00Z",
+        "start": "2026-08-19T06:00:00Z"
       }
     ],
     "3": [
