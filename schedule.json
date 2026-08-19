@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T06:51:36Z",
+  "generated_at": "2026-08-19T12:54:59Z",
   "channels": {
     "1": [
       {
@@ -84,15 +84,6 @@
         "start": "2026-08-20T07:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-18T23:00:00Z",
-        "stop": "2026-08-19T00:00:00Z",
-        "start": "2026-08-18T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Dutch F1 GP Highlights 2025",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -100,6 +91,15 @@
         "display_start": "2026-08-19T07:00:00Z",
         "stop": "2026-08-19T08:00:00Z",
         "start": "2026-08-19T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-19T08:00:00Z",
+        "stop": "2026-08-19T09:00:00Z",
+        "start": "2026-08-19T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Dutch F1 GP Highlights 2021",
