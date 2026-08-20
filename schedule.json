@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T01:26:56Z",
+  "generated_at": "2026-08-20T06:52:47Z",
   "channels": {
     "1": [
       {
@@ -30,6 +30,15 @@
         "start": "2026-08-21T23:05:00Z"
       },
       {
+        "title": "⚽ HFX WANDERERS VS VANCOUVER FC",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-08-22T17:30:00Z",
+        "stop": "2026-08-22T21:00:00Z",
+        "start": "2026-08-22T18:00:00Z"
+      },
+      {
         "title": "⚾ NEW YORK YANKEES AT BALTIMORE ORIOLES",
         "league": "mlb",
         "ch_key": "Sportsnet.East.HD.ca2",
@@ -52,18 +61,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-19T17:30:00Z",
-        "stop": "2026-08-19T18:00:00Z",
-        "start": "2026-08-19T17:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-19T20:00:00Z",
-        "stop": "2026-08-19T21:00:00Z",
-        "start": "2026-08-19T20:00:00Z"
+        "display_start": "2026-08-20T06:00:00Z",
+        "stop": "2026-08-20T06:30:00Z",
+        "start": "2026-08-20T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -73,24 +73,6 @@
         "display_start": "2026-08-22T17:00:00Z",
         "stop": "2026-08-22T17:30:00Z",
         "start": "2026-08-22T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] High Stakes Poker",
-        "league": "series",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-22T20:00:00Z",
-        "stop": "2026-08-22T21:00:00Z",
-        "start": "2026-08-22T20:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Dutch F1 GP Highlights 2025",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-20T06:00:00Z",
-        "stop": "2026-08-20T07:00:00Z",
-        "start": "2026-08-20T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Dutch F1 GP Highlights 2024",
@@ -149,6 +131,15 @@
     ],
     "2": [
       {
+        "title": "⚽ CAVALRY VS ATLÉTICO OTTAWA",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-08-22T20:00:00Z",
+        "stop": "2026-08-22T23:30:00Z",
+        "start": "2026-08-22T20:30:00Z"
+      },
+      {
         "title": "⚽ COVENTRY CITY AT ARSENAL",
         "league": "eng.1",
         "ch_key": "Canal+.fr",
@@ -194,13 +185,13 @@
         "start": "2026-08-20T17:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
+        "title": "[REDIFFUSION] Dutch F1 GP Highlights 2025",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-08-19T17:30:00Z",
-        "stop": "2026-08-19T18:00:00Z",
-        "start": "2026-08-19T17:30:00Z"
+        "display_start": "2026-08-20T06:00:00Z",
+        "stop": "2026-08-20T07:00:00Z",
+        "start": "2026-08-20T06:00:00Z"
       }
     ],
     "3": [
@@ -230,6 +221,24 @@
         "display_start": "2026-08-20T18:30:00Z",
         "stop": "2026-08-20T22:00:00Z",
         "start": "2026-08-20T19:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] High Stakes Poker",
+        "league": "series",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-22T20:00:00Z",
+        "stop": "2026-08-22T21:00:00Z",
+        "start": "2026-08-22T20:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-20T17:00:00Z",
+        "stop": "2026-08-20T17:30:00Z",
+        "start": "2026-08-20T17:00:00Z"
       }
     ],
     "4": [
@@ -250,6 +259,15 @@
         "display_start": "2026-08-21T18:30:00Z",
         "stop": "2026-08-21T22:00:00Z",
         "start": "2026-08-21T19:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-20T20:00:00Z",
+        "stop": "2026-08-20T21:00:00Z",
+        "start": "2026-08-20T20:00:00Z"
       }
     ],
     "5": []
