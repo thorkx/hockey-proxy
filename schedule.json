@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T12:48:29Z",
+  "generated_at": "2026-08-23T18:35:10Z",
   "channels": {
     "1": [
       {
@@ -52,9 +52,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-23T06:00:00Z",
-        "stop": "2026-08-23T06:30:00Z",
-        "start": "2026-08-23T06:00:00Z"
+        "display_start": "2026-08-23T11:00:00Z",
+        "stop": "2026-08-23T11:30:00Z",
+        "start": "2026-08-23T11:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -93,33 +93,6 @@
         "start": "2026-08-24T06:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Ipswich v Sunderland Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-23T06:30:00Z",
-        "stop": "2026-08-23T07:00:00Z",
-        "start": "2026-08-23T06:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Nott'm Forest v Leeds Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-23T07:00:00Z",
-        "stop": "2026-08-23T07:30:00Z",
-        "start": "2026-08-23T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Brentford v Spurs Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-23T07:30:00Z",
-        "stop": "2026-08-23T08:00:00Z",
-        "start": "2026-08-23T07:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] FNF: Arsenal v Coventry Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -127,6 +100,33 @@
         "display_start": "2026-08-24T12:00:00Z",
         "stop": "2026-08-24T12:30:00Z",
         "start": "2026-08-24T12:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Everton v C. Palace Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-24T12:30:00Z",
+        "stop": "2026-08-24T13:00:00Z",
+        "start": "2026-08-24T12:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Ipswich v Sunderland Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-24T13:00:00Z",
+        "stop": "2026-08-24T13:30:00Z",
+        "start": "2026-08-24T13:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Nott'm Forest v Leeds Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-24T13:30:00Z",
+        "stop": "2026-08-24T14:00:00Z",
+        "start": "2026-08-24T13:30:00Z"
       },
       {
         "title": "[REDIFFUSION] MNF: Fulham v Chelsea Hlts",
@@ -203,15 +203,6 @@
         "start": "2026-08-23T17:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Poker",
-        "league": "sports",
-        "ch_key": "CBS.Sports.Network.HD.us2",
-        "score": 0,
-        "display_start": "2026-08-23T06:00:00Z",
-        "stop": "2026-08-23T07:00:00Z",
-        "start": "2026-08-23T06:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Dutch F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -228,6 +219,15 @@
         "display_start": "2026-08-23T22:00:00Z",
         "stop": "2026-08-23T22:30:00Z",
         "start": "2026-08-23T22:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SNF: Brentford v Spurs Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-24T06:00:00Z",
+        "stop": "2026-08-24T06:30:00Z",
+        "start": "2026-08-24T06:00:00Z"
       }
     ],
     "3": [
@@ -275,15 +275,6 @@
         "display_start": "2026-08-24T19:00:00Z",
         "stop": "2026-08-24T20:00:00Z",
         "start": "2026-08-24T19:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Everton v C. Palace Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-23T06:00:00Z",
-        "stop": "2026-08-23T06:30:00Z",
-        "start": "2026-08-23T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Man City v Bournemouth Hlts",
