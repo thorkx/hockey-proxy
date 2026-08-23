@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T01:40:28Z",
+  "generated_at": "2026-08-23T06:48:37Z",
   "channels": {
     "1": [
       {
@@ -48,24 +48,6 @@
         "start": "2026-08-25T01:40:00Z"
       },
       {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-22T18:00:00Z",
-        "stop": "2026-08-22T18:30:00Z",
-        "start": "2026-08-22T18:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] High Stakes Poker",
-        "league": "series",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-22T20:00:00Z",
-        "stop": "2026-08-22T21:00:00Z",
-        "start": "2026-08-22T20:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -75,6 +57,15 @@
         "start": "2026-08-23T06:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-23T19:00:00Z",
+        "stop": "2026-08-23T19:30:00Z",
+        "start": "2026-08-23T19:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -82,15 +73,6 @@
         "display_start": "2026-08-25T06:00:00Z",
         "stop": "2026-08-25T06:30:00Z",
         "start": "2026-08-25T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-22T18:30:00Z",
-        "stop": "2026-08-22T19:00:00Z",
-        "start": "2026-08-22T18:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Le top LNH",
@@ -111,33 +93,6 @@
         "start": "2026-08-24T06:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Everton v C. Palace Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-22T21:30:00Z",
-        "stop": "2026-08-22T22:00:00Z",
-        "start": "2026-08-22T21:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Ipswich v Sunderland Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-22T22:00:00Z",
-        "stop": "2026-08-22T22:30:00Z",
-        "start": "2026-08-22T22:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Nott'm Forest v Leeds Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-22T22:30:00Z",
-        "stop": "2026-08-22T23:00:00Z",
-        "start": "2026-08-22T22:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] SNF: Brentford v Spurs Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -145,6 +100,33 @@
         "display_start": "2026-08-22T23:00:00Z",
         "stop": "2026-08-22T23:30:00Z",
         "start": "2026-08-22T23:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Everton v C. Palace Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-22T23:30:00Z",
+        "stop": "2026-08-23T00:00:00Z",
+        "start": "2026-08-22T23:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Ipswich v Sunderland Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-23T06:30:00Z",
+        "stop": "2026-08-23T07:00:00Z",
+        "start": "2026-08-23T06:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Nott'm Forest v Leeds Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-23T07:00:00Z",
+        "stop": "2026-08-23T07:30:00Z",
+        "start": "2026-08-23T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] FNF: Arsenal v Coventry Hlts",
@@ -219,6 +201,15 @@
         "display_start": "2026-08-24T17:00:00Z",
         "stop": "2026-08-24T20:30:00Z",
         "start": "2026-08-24T17:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] High Stakes Poker",
+        "league": "series",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-23T17:00:00Z",
+        "stop": "2026-08-23T18:00:00Z",
+        "start": "2026-08-23T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Poker",
@@ -340,6 +331,15 @@
         "display_start": "2026-08-24T19:00:00Z",
         "stop": "2026-08-24T22:30:00Z",
         "start": "2026-08-24T19:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-23T23:00:00Z",
+        "stop": "2026-08-23T23:30:00Z",
+        "start": "2026-08-23T23:00:00Z"
       }
     ],
     "5": [
