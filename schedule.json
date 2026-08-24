@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T07:06:07Z",
+  "generated_at": "2026-08-24T12:57:59Z",
   "channels": {
     "1": [
       {
@@ -93,15 +93,6 @@
         "start": "2026-08-24T22:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Newcastle v Liverpool Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-23T23:30:00Z",
-        "stop": "2026-08-24T00:00:00Z",
-        "start": "2026-08-23T23:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] PL: Man City v Bournemouth Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -118,6 +109,15 @@
         "display_start": "2026-08-24T07:00:00Z",
         "stop": "2026-08-24T07:30:00Z",
         "start": "2026-08-24T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Newcastle v Liverpool Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-24T07:30:00Z",
+        "stop": "2026-08-24T08:00:00Z",
+        "start": "2026-08-24T07:30:00Z"
       },
       {
         "title": "[REDIFFUSION] FNF: Arsenal v Coventry Hlts",
