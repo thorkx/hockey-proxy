@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T12:54:37Z",
+  "generated_at": "2026-08-25T18:44:26Z",
   "channels": {
     "1": [
       {
@@ -43,18 +43,18 @@
         "league": "",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-25T07:00:00Z",
-        "stop": "2026-08-25T07:30:00Z",
-        "start": "2026-08-25T07:00:00Z"
+        "display_start": "2026-08-25T11:30:00Z",
+        "stop": "2026-08-25T12:00:00Z",
+        "start": "2026-08-25T11:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-25T07:30:00Z",
-        "stop": "2026-08-25T08:00:00Z",
-        "start": "2026-08-25T07:30:00Z"
+        "display_start": "2026-08-25T12:00:00Z",
+        "stop": "2026-08-25T12:30:00Z",
+        "start": "2026-08-25T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Blue Jays in 30",
@@ -93,33 +93,6 @@
         "start": "2026-08-28T08:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Man City v Bournemouth Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-25T06:00:00Z",
-        "stop": "2026-08-25T06:30:00Z",
-        "start": "2026-08-25T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brighton v Aston Villa Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-25T06:30:00Z",
-        "stop": "2026-08-25T07:00:00Z",
-        "start": "2026-08-25T06:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Everton v C. Palace Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-25T12:00:00Z",
-        "stop": "2026-08-25T12:30:00Z",
-        "start": "2026-08-25T12:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] PL: Ipswich v Sunderland Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -138,6 +111,24 @@
         "start": "2026-08-25T13:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] PL: Man City v Bournemouth Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-25T14:00:00Z",
+        "stop": "2026-08-25T14:30:00Z",
+        "start": "2026-08-25T14:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Brighton v Aston Villa Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-25T14:30:00Z",
+        "stop": "2026-08-25T15:00:00Z",
+        "start": "2026-08-25T14:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] PL: Newcastle v Liverpool Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -145,6 +136,15 @@
         "display_start": "2026-08-25T15:00:00Z",
         "stop": "2026-08-25T15:30:00Z",
         "start": "2026-08-25T15:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] MNF: Fulham v Chelsea Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-25T15:30:00Z",
+        "stop": "2026-08-25T16:00:00Z",
+        "start": "2026-08-25T15:30:00Z"
       }
     ],
     "2": [
@@ -185,13 +185,13 @@
         "start": "2026-08-25T19:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] MNF: Fulham v Chelsea Hlts",
+        "title": "[REDIFFUSION] PL: Everton v C. Palace Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-08-25T07:00:00Z",
-        "stop": "2026-08-25T07:30:00Z",
-        "start": "2026-08-25T07:00:00Z"
+        "display_start": "2026-08-25T12:00:00Z",
+        "stop": "2026-08-25T12:30:00Z",
+        "start": "2026-08-25T12:00:00Z"
       }
     ],
     "3": [
