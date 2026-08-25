@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T06:55:17Z",
+  "generated_at": "2026-08-25T12:54:37Z",
   "channels": {
     "1": [
       {
@@ -93,15 +93,6 @@
         "start": "2026-08-28T08:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] MNF: Fulham v Chelsea Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-24T23:00:00Z",
-        "stop": "2026-08-24T23:30:00Z",
-        "start": "2026-08-24T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] PL: Man City v Bournemouth Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -192,6 +183,15 @@
         "display_start": "2026-08-25T19:00:00Z",
         "stop": "2026-08-25T20:00:00Z",
         "start": "2026-08-25T19:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] MNF: Fulham v Chelsea Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-25T07:00:00Z",
+        "stop": "2026-08-25T07:30:00Z",
+        "start": "2026-08-25T07:00:00Z"
       }
     ],
     "3": [
