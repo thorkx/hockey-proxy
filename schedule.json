@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T06:56:13Z",
+  "generated_at": "2026-08-26T13:00:18Z",
   "channels": {
     "1": [
       {
@@ -75,6 +75,15 @@
         "start": "2026-08-28T20:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-29T07:00:00Z",
+        "stop": "2026-08-29T07:30:00Z",
+        "start": "2026-08-29T07:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Bundesliga Soccer",
         "league": "sports",
         "ch_key": "One.Soccer.ca2",
@@ -97,9 +106,9 @@
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-08-25T23:00:00Z",
-        "stop": "2026-08-26T00:00:00Z",
-        "start": "2026-08-25T23:00:00Z"
+        "display_start": "2026-08-27T09:00:00Z",
+        "stop": "2026-08-27T10:00:00Z",
+        "start": "2026-08-27T09:00:00Z"
       }
     ],
     "2": [
@@ -147,15 +156,6 @@
         "display_start": "2026-08-26T17:00:00Z",
         "stop": "2026-08-26T17:30:00Z",
         "start": "2026-08-26T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-26T06:00:00Z",
-        "stop": "2026-08-26T06:30:00Z",
-        "start": "2026-08-26T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Live: Bundesliga Soccer",
