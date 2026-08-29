@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T06:30:01Z",
+  "generated_at": "2026-08-29T16:29:53Z",
   "channels": {
     "1": [
       {
@@ -66,22 +66,22 @@
         "start": "2026-08-29T15:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-08-29T06:30:00Z",
-        "stop": "2026-08-29T07:00:00Z",
-        "start": "2026-08-29T06:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-29T07:00:00Z",
-        "stop": "2026-08-29T07:30:00Z",
-        "start": "2026-08-29T07:00:00Z"
+        "display_start": "2026-08-29T08:30:00Z",
+        "stop": "2026-08-29T09:00:00Z",
+        "start": "2026-08-29T08:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-08-29T09:30:00Z",
+        "stop": "2026-08-29T10:00:00Z",
+        "start": "2026-08-29T09:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Blue Jays in 30",
@@ -109,15 +109,6 @@
         "display_start": "2026-08-31T19:00:00Z",
         "stop": "2026-08-31T20:00:00Z",
         "start": "2026-08-31T19:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] CONCACAF League Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-08-29T08:30:00Z",
-        "stop": "2026-08-29T10:30:00Z",
-        "start": "2026-08-29T08:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Poker Night in America",
@@ -192,22 +183,13 @@
         "start": "2026-08-31T12:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL Greatest Games: Chelsea/Arsenal",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-28T22:45:00Z",
-        "stop": "2026-08-28T23:00:00Z",
-        "start": "2026-08-28T22:45:00Z"
-      },
-      {
         "title": "[REDIFFUSION] FNF: C. Palace v Man City Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-08-28T23:00:00Z",
-        "stop": "2026-08-28T23:30:00Z",
-        "start": "2026-08-28T23:00:00Z"
+        "display_start": "2026-08-29T10:30:00Z",
+        "stop": "2026-08-29T11:00:00Z",
+        "start": "2026-08-29T10:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Bournemouth v Everton Hlts",
