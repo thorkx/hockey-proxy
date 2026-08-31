@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T13:11:55Z",
+  "generated_at": "2026-08-31T22:40:22Z",
   "channels": {
     "1": [
       {
@@ -52,9 +52,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-08-31T06:00:00Z",
-        "stop": "2026-08-31T06:30:00Z",
-        "start": "2026-08-31T06:00:00Z"
+        "display_start": "2026-08-31T15:00:00Z",
+        "stop": "2026-08-31T15:30:00Z",
+        "start": "2026-08-31T15:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -102,58 +102,13 @@
         "start": "2026-09-01T11:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] Poker",
-        "league": "sports",
+        "title": "[REDIFFUSION] Poker Night in America",
+        "league": "poker",
         "ch_key": "CBS.Sports.Network.HD.us2",
         "score": 0,
-        "display_start": "2026-08-31T07:00:00Z",
-        "stop": "2026-08-31T08:00:00Z",
-        "start": "2026-08-31T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Italian F1 GP Highlights 2017",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-31T08:00:00Z",
-        "stop": "2026-08-31T09:00:00Z",
-        "start": "2026-08-31T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Austrian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-31T09:00:00Z",
-        "stop": "2026-08-31T10:00:00Z",
-        "start": "2026-08-31T09:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] British F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-31T10:00:00Z",
-        "stop": "2026-08-31T11:00:00Z",
-        "start": "2026-08-31T10:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Belgian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-31T11:00:00Z",
-        "stop": "2026-08-31T12:00:00Z",
-        "start": "2026-08-31T11:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Hungarian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-31T12:00:00Z",
-        "stop": "2026-08-31T13:00:00Z",
-        "start": "2026-08-31T12:00:00Z"
+        "display_start": "2026-09-03T22:00:00Z",
+        "stop": "2026-09-03T23:00:00Z",
+        "start": "2026-09-03T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Dutch F1 GP Highlights",
@@ -172,6 +127,15 @@
         "display_start": "2026-09-01T07:00:00Z",
         "stop": "2026-09-01T08:00:00Z",
         "start": "2026-09-01T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Italian F1 GP Highlights 2017",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-01T14:00:00Z",
+        "stop": "2026-09-01T15:00:00Z",
+        "start": "2026-09-01T14:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Italian F1 GP Highlights 2021",
@@ -223,9 +187,9 @@
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-08-31T14:30:00Z",
-        "stop": "2026-08-31T15:00:00Z",
-        "start": "2026-08-31T14:30:00Z"
+        "display_start": "2026-09-02T11:00:00Z",
+        "stop": "2026-09-02T11:30:00Z",
+        "start": "2026-09-02T11:00:00Z"
       }
     ],
     "2": [
@@ -266,24 +230,6 @@
         "start": "2026-08-31T21:15:00Z"
       },
       {
-        "title": "[REDIFFUSION] Italian F1 GP Highlights 2015",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-31T06:00:00Z",
-        "stop": "2026-08-31T07:00:00Z",
-        "start": "2026-08-31T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Italian F1 GP Highlights 2016",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-31T07:00:00Z",
-        "stop": "2026-08-31T08:00:00Z",
-        "start": "2026-08-31T07:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Italian F1 GP Highlights 2018",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -309,6 +255,42 @@
         "display_start": "2026-09-01T11:00:00Z",
         "stop": "2026-09-01T12:00:00Z",
         "start": "2026-09-01T11:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Italian F1 GP Highlights 2015",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-01T12:00:00Z",
+        "stop": "2026-09-01T13:00:00Z",
+        "start": "2026-09-01T12:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Italian F1 GP Highlights 2016",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-01T13:00:00Z",
+        "stop": "2026-09-01T14:00:00Z",
+        "start": "2026-09-01T13:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Leeds United v Brentford Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-08-31T15:30:00Z",
+        "stop": "2026-08-31T16:00:00Z",
+        "start": "2026-08-31T15:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Manchester Utd v Ipswich Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-02T07:30:00Z",
+        "stop": "2026-09-02T08:00:00Z",
+        "start": "2026-09-02T07:30:00Z"
       }
     ],
     "3": [
@@ -329,24 +311,6 @@
         "display_start": "2026-09-01T23:10:00Z",
         "stop": "2026-09-02T02:40:00Z",
         "start": "2026-09-01T23:40:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Leeds United v Brentford Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-31T06:00:00Z",
-        "stop": "2026-08-31T06:30:00Z",
-        "start": "2026-08-31T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Manchester Utd v Ipswich Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-08-31T07:00:00Z",
-        "stop": "2026-08-31T07:30:00Z",
-        "start": "2026-08-31T07:00:00Z"
       }
     ],
     "4": [
