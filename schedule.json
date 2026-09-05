@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T03:48:23Z",
+  "generated_at": "2026-09-05T10:17:33Z",
   "channels": {
     "1": [
       {
@@ -79,9 +79,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-04T20:00:00Z",
-        "stop": "2026-09-04T20:30:00Z",
-        "start": "2026-09-04T20:00:00Z"
+        "display_start": "2026-09-05T06:00:00Z",
+        "stop": "2026-09-05T06:30:00Z",
+        "start": "2026-09-05T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -120,15 +120,6 @@
         "start": "2026-09-07T20:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-04T23:00:00Z",
-        "stop": "2026-09-04T23:30:00Z",
-        "start": "2026-09-04T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] FA Women's Super League Matchweek Highlights",
         "league": "soccer",
         "ch_key": "Sportsnet.World.HD.ca2",
@@ -156,13 +147,22 @@
         "start": "2026-09-05T06:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL Greatest Games:L'Pool/Man U '97",
+        "title": "[REDIFFUSION] Bundesliga Soccer",
+        "league": "sports",
+        "ch_key": "One.Soccer.ca2",
+        "score": 0,
+        "display_start": "2026-09-06T07:00:00Z",
+        "stop": "2026-09-06T09:00:00Z",
+        "start": "2026-09-06T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FNF: Ipswich v Liverpool Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-09-04T22:45:00Z",
-        "stop": "2026-09-04T23:00:00Z",
-        "start": "2026-09-04T22:45:00Z"
+        "display_start": "2026-09-05T07:00:00Z",
+        "stop": "2026-09-05T07:30:00Z",
+        "start": "2026-09-05T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Man City v Coventry City Hlts",
@@ -181,15 +181,6 @@
         "display_start": "2026-09-06T06:30:00Z",
         "stop": "2026-09-06T07:00:00Z",
         "start": "2026-09-06T06:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brentford v Sunderland Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-06T07:30:00Z",
-        "stop": "2026-09-06T08:00:00Z",
-        "start": "2026-09-06T07:30:00Z"
       }
     ],
     "2": [
@@ -248,20 +239,20 @@
         "start": "2026-09-06T20:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] FNF: Ipswich v Liverpool Hlts",
+        "title": "[REDIFFUSION] PL: Brentford v Sunderland Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-09-04T23:00:00Z",
-        "stop": "2026-09-04T23:30:00Z",
-        "start": "2026-09-04T23:00:00Z"
+        "display_start": "2026-09-06T07:30:00Z",
+        "stop": "2026-09-06T08:00:00Z",
+        "start": "2026-09-06T07:30:00Z"
       }
     ],
     "3": [
       {
         "title": "⚽ CF MONTRÉAL AT PHILADELPHIA UNION",
         "league": "usa.1",
-        "ch_key": "TSN.5.ca2",
+        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
         "score": 750,
         "display_start": "2026-09-05T23:00:00Z",
         "stop": "2026-09-06T02:30:00Z",
@@ -308,18 +299,9 @@
         "league": "sports",
         "ch_key": "One.Soccer.ca2",
         "score": 0,
-        "display_start": "2026-09-05T13:30:00Z",
-        "stop": "2026-09-05T15:30:00Z",
-        "start": "2026-09-05T13:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Bundesliga Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-09-05T19:14:00Z",
-        "stop": "2026-09-05T19:29:00Z",
-        "start": "2026-09-05T19:14:00Z"
+        "display_start": "2026-09-05T13:20:00Z",
+        "stop": "2026-09-05T15:21:00Z",
+        "start": "2026-09-05T13:20:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Nott'm Forest v Spurs Hlts",
@@ -394,14 +376,23 @@
         "display_start": "2026-09-06T13:45:00Z",
         "stop": "2026-09-06T17:15:00Z",
         "start": "2026-09-06T14:15:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-05T23:30:00Z",
+        "stop": "2026-09-06T00:00:00Z",
+        "start": "2026-09-05T23:30:00Z"
       }
     ],
     "5": [
       {
         "title": "⚾ ATLANTA BRAVES AT PHILADELPHIA PHILLIES",
         "league": "mlb",
-        "ch_key": "TSN.5.ca2",
-        "score": 350,
+        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
+        "score": 400,
         "display_start": "2026-09-05T21:35:00Z",
         "stop": "2026-09-06T01:05:00Z",
         "start": "2026-09-05T22:05:00Z"
