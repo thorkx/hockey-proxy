@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T10:17:33Z",
+  "generated_at": "2026-09-05T14:53:40Z",
   "channels": {
     "1": [
       {
@@ -79,9 +79,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-05T06:00:00Z",
-        "stop": "2026-09-05T06:30:00Z",
-        "start": "2026-09-05T06:00:00Z"
+        "display_start": "2026-09-05T07:00:00Z",
+        "stop": "2026-09-05T07:30:00Z",
+        "start": "2026-09-05T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -142,9 +142,9 @@
         "league": "",
         "ch_key": "Sportsnet.360.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-05T06:30:00Z",
-        "stop": "2026-09-05T07:00:00Z",
-        "start": "2026-09-05T06:30:00Z"
+        "display_start": "2026-09-05T07:30:00Z",
+        "stop": "2026-09-05T08:00:00Z",
+        "start": "2026-09-05T07:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Bundesliga Soccer",
@@ -154,15 +154,6 @@
         "display_start": "2026-09-06T07:00:00Z",
         "stop": "2026-09-06T09:00:00Z",
         "start": "2026-09-06T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FNF: Ipswich v Liverpool Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-05T07:00:00Z",
-        "stop": "2026-09-05T07:30:00Z",
-        "start": "2026-09-05T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Man City v Coventry City Hlts",
@@ -237,6 +228,15 @@
         "display_start": "2026-09-06T19:40:00Z",
         "stop": "2026-09-06T23:10:00Z",
         "start": "2026-09-06T20:10:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FNF: Ipswich v Liverpool Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-05T07:00:00Z",
+        "stop": "2026-09-05T07:30:00Z",
+        "start": "2026-09-05T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Brentford v Sunderland Hlts",
