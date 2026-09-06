@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T03:51:52Z",
+  "generated_at": "2026-09-06T10:37:04Z",
   "channels": {
     "1": [
       {
@@ -70,18 +70,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-05T20:00:00Z",
-        "stop": "2026-09-05T20:30:00Z",
-        "start": "2026-09-05T20:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-05T23:00:00Z",
-        "stop": "2026-09-05T23:30:00Z",
-        "start": "2026-09-05T23:00:00Z"
+        "display_start": "2026-09-06T06:00:00Z",
+        "stop": "2026-09-06T06:30:00Z",
+        "start": "2026-09-06T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -138,31 +129,31 @@
         "start": "2026-09-08T08:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] SNF: Hull City v Aston Villa Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-06T06:30:00Z",
+        "stop": "2026-09-06T07:00:00Z",
+        "start": "2026-09-06T06:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] PL: Nott'm Forest v Spurs Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-09-05T21:30:00Z",
-        "stop": "2026-09-05T22:00:00Z",
-        "start": "2026-09-05T21:30:00Z"
+        "display_start": "2026-09-07T12:00:00Z",
+        "stop": "2026-09-07T12:30:00Z",
+        "start": "2026-09-07T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Man City v Coventry City Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-09-05T22:00:00Z",
-        "stop": "2026-09-05T22:30:00Z",
-        "start": "2026-09-05T22:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brighton v Leeds United Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-05T22:30:00Z",
-        "stop": "2026-09-05T23:00:00Z",
-        "start": "2026-09-05T22:30:00Z"
+        "display_start": "2026-09-07T12:30:00Z",
+        "stop": "2026-09-07T13:00:00Z",
+        "start": "2026-09-07T12:30:00Z"
       }
     ],
     "2": [
@@ -212,15 +203,6 @@
         "start": "2026-09-06T11:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-05T23:00:00Z",
-        "stop": "2026-09-05T23:30:00Z",
-        "start": "2026-09-05T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] FA Women's Super League",
         "league": "sports",
         "ch_key": "Sportsnet.World.HD.ca2",
@@ -228,6 +210,15 @@
         "display_start": "2026-09-07T21:00:00Z",
         "stop": "2026-09-07T23:00:00Z",
         "start": "2026-09-07T21:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Brighton v Leeds United Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-06T06:00:00Z",
+        "stop": "2026-09-06T06:30:00Z",
+        "start": "2026-09-06T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Brentford v Sunderland Hlts",
@@ -286,15 +277,6 @@
         "start": "2026-09-06T13:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] SNF: Hull City v Aston Villa Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-05T23:00:00Z",
-        "stop": "2026-09-05T23:30:00Z",
-        "start": "2026-09-05T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] PL: Everton v Manchester Utd Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -333,6 +315,15 @@
         "start": "2026-09-07T20:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-06T23:00:00Z",
+        "stop": "2026-09-06T23:30:00Z",
+        "start": "2026-09-06T23:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] FA Women's Super League Matchweek Highlights",
         "league": "soccer",
         "ch_key": "Sportsnet.World.HD.ca2",
@@ -340,6 +331,15 @@
         "display_start": "2026-09-07T18:00:00Z",
         "stop": "2026-09-07T19:00:00Z",
         "start": "2026-09-07T18:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-06T22:30:00Z",
+        "stop": "2026-09-06T23:00:00Z",
+        "start": "2026-09-06T22:30:00Z"
       }
     ],
     "5": [
