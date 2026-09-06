@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T15:13:43Z",
+  "generated_at": "2026-09-06T20:13:18Z",
   "channels": {
     "1": [
       {
@@ -32,7 +32,7 @@
       {
         "title": "⚽ MANCHESTER UNITED AT EVERTON",
         "league": "eng.1",
-        "ch_key": "SkySp.PL.HD.uk",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 550,
         "display_start": "2026-09-06T12:30:00Z",
         "stop": "2026-09-06T16:00:00Z",
@@ -64,24 +64,6 @@
         "display_start": "2026-09-07T20:40:00Z",
         "stop": "2026-09-08T00:10:00Z",
         "start": "2026-09-07T21:10:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Blue Jays in 30",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-06T07:30:00Z",
-        "stop": "2026-09-06T08:00:00Z",
-        "start": "2026-09-06T07:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-06T10:30:00Z",
-        "stop": "2026-09-06T11:00:00Z",
-        "start": "2026-09-06T10:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Countdown",
@@ -136,6 +118,15 @@
         "display_start": "2026-09-07T12:30:00Z",
         "stop": "2026-09-07T13:00:00Z",
         "start": "2026-09-07T12:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Brentford v Sunderland Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-07T14:30:00Z",
+        "stop": "2026-09-07T15:00:00Z",
+        "start": "2026-09-07T14:30:00Z"
       }
     ],
     "2": [
@@ -176,13 +167,13 @@
         "start": "2026-09-08T00:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] Live: FA Women's Super League",
-        "league": "sports",
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-06T11:00:00Z",
-        "stop": "2026-09-06T13:00:00Z",
-        "start": "2026-09-06T11:00:00Z"
+        "display_start": "2026-09-06T13:00:00Z",
+        "stop": "2026-09-06T13:30:00Z",
+        "start": "2026-09-06T13:00:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Women's Super League",
@@ -192,15 +183,6 @@
         "display_start": "2026-09-07T21:00:00Z",
         "stop": "2026-09-07T23:00:00Z",
         "start": "2026-09-07T21:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brentford v Sunderland Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-06T07:30:00Z",
-        "stop": "2026-09-06T08:00:00Z",
-        "start": "2026-09-06T07:30:00Z"
       }
     ],
     "3": [
@@ -232,6 +214,24 @@
         "start": "2026-09-07T18:10:00Z"
       },
       {
+        "title": "[REDIFFUSION] Live: FA Women's Super League",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-06T13:30:00Z",
+        "stop": "2026-09-06T15:30:00Z",
+        "start": "2026-09-06T13:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Blue Jays in 30",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-06T15:30:00Z",
+        "stop": "2026-09-06T16:00:00Z",
+        "start": "2026-09-06T15:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Le top LNH",
         "league": "series",
         "ch_key": "TVA.Sports.2.HD.ca2",
@@ -239,24 +239,6 @@
         "display_start": "2026-09-06T20:15:00Z",
         "stop": "2026-09-06T20:30:00Z",
         "start": "2026-09-06T20:15:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Bundesliga Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-09-06T11:30:00Z",
-        "stop": "2026-09-06T13:30:00Z",
-        "start": "2026-09-06T11:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Live: Bundesliga Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-09-06T13:30:00Z",
-        "stop": "2026-09-06T15:30:00Z",
-        "start": "2026-09-06T13:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Brighton v Leeds United Hlts",
@@ -331,6 +313,15 @@
         "display_start": "2026-09-06T22:30:00Z",
         "stop": "2026-09-06T23:00:00Z",
         "start": "2026-09-06T22:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Bundesliga Soccer",
+        "league": "sports",
+        "ch_key": "One.Soccer.ca2",
+        "score": 0,
+        "display_start": "2026-09-06T17:30:00Z",
+        "stop": "2026-09-06T17:44:00Z",
+        "start": "2026-09-06T17:30:00Z"
       },
       {
         "title": "[REDIFFUSION] SNF: Hull City v Aston Villa Hlts",
