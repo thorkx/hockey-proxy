@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T10:37:04Z",
+  "generated_at": "2026-09-06T15:13:43Z",
   "channels": {
     "1": [
       {
@@ -70,9 +70,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-06T06:00:00Z",
-        "stop": "2026-09-06T06:30:00Z",
-        "start": "2026-09-06T06:00:00Z"
+        "display_start": "2026-09-06T07:30:00Z",
+        "stop": "2026-09-06T08:00:00Z",
+        "start": "2026-09-06T07:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
@@ -91,15 +91,6 @@
         "display_start": "2026-09-06T17:00:00Z",
         "stop": "2026-09-06T17:30:00Z",
         "start": "2026-09-06T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Bundesliga Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-09-06T07:00:00Z",
-        "stop": "2026-09-06T09:00:00Z",
-        "start": "2026-09-06T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Spanish F1 GP Highlights 2015",
@@ -127,15 +118,6 @@
         "display_start": "2026-09-08T08:00:00Z",
         "stop": "2026-09-08T09:00:00Z",
         "start": "2026-09-08T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Hull City v Aston Villa Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-06T06:30:00Z",
-        "stop": "2026-09-06T07:00:00Z",
-        "start": "2026-09-06T06:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Nott'm Forest v Spurs Hlts",
@@ -212,15 +194,6 @@
         "start": "2026-09-07T21:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Brighton v Leeds United Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-06T06:00:00Z",
-        "stop": "2026-09-06T06:30:00Z",
-        "start": "2026-09-06T06:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] PL: Brentford v Sunderland Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -268,6 +241,15 @@
         "start": "2026-09-06T20:15:00Z"
       },
       {
+        "title": "[REDIFFUSION] Bundesliga Soccer",
+        "league": "sports",
+        "ch_key": "One.Soccer.ca2",
+        "score": 0,
+        "display_start": "2026-09-06T11:30:00Z",
+        "stop": "2026-09-06T13:30:00Z",
+        "start": "2026-09-06T11:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Live: Bundesliga Soccer",
         "league": "sports",
         "ch_key": "One.Soccer.ca2",
@@ -275,6 +257,15 @@
         "display_start": "2026-09-06T13:30:00Z",
         "stop": "2026-09-06T15:30:00Z",
         "start": "2026-09-06T13:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Brighton v Leeds United Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-06T20:30:00Z",
+        "stop": "2026-09-06T21:00:00Z",
+        "start": "2026-09-06T20:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Everton v Manchester Utd Hlts",
@@ -340,6 +331,15 @@
         "display_start": "2026-09-06T22:30:00Z",
         "stop": "2026-09-06T23:00:00Z",
         "start": "2026-09-06T22:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SNF: Hull City v Aston Villa Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-06T22:00:00Z",
+        "stop": "2026-09-06T22:30:00Z",
+        "start": "2026-09-06T22:00:00Z"
       }
     ],
     "5": [
