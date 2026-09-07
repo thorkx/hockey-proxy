@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T12:02:29Z",
+  "generated_at": "2026-09-07T21:20:56Z",
   "channels": {
     "1": [
       {
@@ -52,9 +52,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-07T06:00:00Z",
-        "stop": "2026-09-07T06:30:00Z",
-        "start": "2026-09-07T06:00:00Z"
+        "display_start": "2026-09-07T13:30:00Z",
+        "stop": "2026-09-07T14:00:00Z",
+        "start": "2026-09-07T13:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Countdown",
@@ -79,9 +79,9 @@
         "league": "series",
         "ch_key": "TVA.Sports.2.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-07T12:15:00Z",
-        "stop": "2026-09-07T12:30:00Z",
-        "start": "2026-09-07T12:15:00Z"
+        "display_start": "2026-09-08T23:00:00Z",
+        "stop": "2026-09-08T23:15:00Z",
+        "start": "2026-09-08T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -91,15 +91,6 @@
         "display_start": "2026-09-09T07:00:00Z",
         "stop": "2026-09-09T08:00:00Z",
         "start": "2026-09-09T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-07T06:30:00Z",
-        "stop": "2026-09-07T07:00:00Z",
-        "start": "2026-09-07T06:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Spanish F1 GP Highlights 2016",
@@ -138,24 +129,6 @@
         "start": "2026-09-09T08:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Man City v Coventry City Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-07T12:30:00Z",
-        "stop": "2026-09-07T13:00:00Z",
-        "start": "2026-09-07T12:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brighton v Leeds United Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-07T13:00:00Z",
-        "stop": "2026-09-07T13:30:00Z",
-        "start": "2026-09-07T13:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] PL: Brentford v Sunderland Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -163,6 +136,24 @@
         "display_start": "2026-09-07T14:30:00Z",
         "stop": "2026-09-07T15:00:00Z",
         "start": "2026-09-07T14:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Everton v Manchester Utd Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-07T15:00:00Z",
+        "stop": "2026-09-07T15:30:00Z",
+        "start": "2026-09-07T15:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Brighton v Leeds United Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-08T06:00:00Z",
+        "stop": "2026-09-08T06:30:00Z",
+        "start": "2026-09-08T06:00:00Z"
       }
     ],
     "2": [
@@ -212,6 +203,15 @@
         "start": "2026-09-07T21:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-07T16:30:00Z",
+        "stop": "2026-09-07T17:00:00Z",
+        "start": "2026-09-07T16:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Spanish F1 GP Highlights 2015",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -234,27 +234,9 @@
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-09-07T06:00:00Z",
-        "stop": "2026-09-07T06:30:00Z",
-        "start": "2026-09-07T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Everton v Manchester Utd Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-07T06:30:00Z",
-        "stop": "2026-09-07T07:00:00Z",
-        "start": "2026-09-07T06:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Nott'm Forest v Spurs Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-07T12:00:00Z",
-        "stop": "2026-09-07T12:30:00Z",
-        "start": "2026-09-07T12:00:00Z"
+        "display_start": "2026-09-07T13:30:00Z",
+        "stop": "2026-09-07T14:00:00Z",
+        "start": "2026-09-07T13:30:00Z"
       }
     ],
     "3": [
