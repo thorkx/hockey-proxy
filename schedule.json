@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T10:56:51Z",
+  "generated_at": "2026-09-08T16:21:22Z",
   "channels": {
     "1": [
       {
@@ -48,22 +48,13 @@
         "start": "2026-09-10T02:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] Plays of the Month - Countdown",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-08T06:30:00Z",
-        "stop": "2026-09-08T07:00:00Z",
-        "start": "2026-09-08T06:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-08T07:00:00Z",
-        "stop": "2026-09-08T07:30:00Z",
-        "start": "2026-09-08T07:00:00Z"
+        "display_start": "2026-09-08T08:30:00Z",
+        "stop": "2026-09-08T09:00:00Z",
+        "start": "2026-09-08T08:30:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -73,6 +64,15 @@
         "display_start": "2026-09-08T20:30:00Z",
         "stop": "2026-09-08T21:30:00Z",
         "start": "2026-09-08T20:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Plays of the Month - Countdown",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-10T23:00:00Z",
+        "stop": "2026-09-10T23:30:00Z",
+        "start": "2026-09-10T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -109,15 +109,6 @@
         "display_start": "2026-09-10T11:00:00Z",
         "stop": "2026-09-10T12:00:00Z",
         "start": "2026-09-10T11:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights 2017",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-08T08:00:00Z",
-        "stop": "2026-09-08T09:00:00Z",
-        "start": "2026-09-08T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Spanish F1 GP Highlights 2019",
@@ -165,24 +156,6 @@
         "start": "2026-09-10T08:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Brighton v Leeds United Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-08T06:00:00Z",
-        "stop": "2026-09-08T06:30:00Z",
-        "start": "2026-09-08T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brentford v Sunderland Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-08T07:30:00Z",
-        "stop": "2026-09-08T08:00:00Z",
-        "start": "2026-09-08T07:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] PL: Everton v Manchester Utd Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -190,6 +163,15 @@
         "display_start": "2026-09-08T12:00:00Z",
         "stop": "2026-09-08T12:30:00Z",
         "start": "2026-09-08T12:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SNF: Hull City v Aston Villa Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-08T13:00:00Z",
+        "stop": "2026-09-08T13:30:00Z",
+        "start": "2026-09-08T13:00:00Z"
       }
     ],
     "2": [
@@ -228,24 +210,6 @@
         "display_start": "2026-09-09T22:05:00Z",
         "stop": "2026-09-10T01:35:00Z",
         "start": "2026-09-09T22:35:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights 2015",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-08T06:00:00Z",
-        "stop": "2026-09-08T07:00:00Z",
-        "start": "2026-09-08T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights 2016",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-08T07:00:00Z",
-        "stop": "2026-09-08T08:00:00Z",
-        "start": "2026-09-08T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Italian F1 GP Highlights",
@@ -320,15 +284,6 @@
         "display_start": "2026-09-08T17:01:00Z",
         "stop": "2026-09-08T17:30:00Z",
         "start": "2026-09-08T17:01:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Hull City v Aston Villa Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-08T06:30:00Z",
-        "stop": "2026-09-08T07:00:00Z",
-        "start": "2026-09-08T06:30:00Z"
       }
     ],
     "4": [
