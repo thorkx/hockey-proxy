@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T11:01:34Z",
+  "generated_at": "2026-09-09T16:16:33Z",
   "channels": {
     "1": [
       {
@@ -61,9 +61,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-09T06:00:00Z",
-        "stop": "2026-09-09T06:30:00Z",
-        "start": "2026-09-09T06:00:00Z"
+        "display_start": "2026-09-09T08:30:00Z",
+        "stop": "2026-09-09T09:00:00Z",
+        "start": "2026-09-09T08:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -73,6 +73,15 @@
         "display_start": "2026-09-11T07:30:00Z",
         "stop": "2026-09-11T08:00:00Z",
         "start": "2026-09-11T07:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Live: FA Women's Super League",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-12T11:30:00Z",
+        "stop": "2026-09-12T13:30:00Z",
+        "start": "2026-09-12T11:30:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Cup Classics",
@@ -88,9 +97,9 @@
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-09-09T07:00:00Z",
-        "stop": "2026-09-09T08:00:00Z",
-        "start": "2026-09-09T07:00:00Z"
+        "display_start": "2026-09-09T09:00:00Z",
+        "stop": "2026-09-09T10:00:00Z",
+        "start": "2026-09-09T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Live: SC With Jay Onrait",
@@ -109,15 +118,6 @@
         "display_start": "2026-09-11T18:30:00Z",
         "stop": "2026-09-11T20:30:00Z",
         "start": "2026-09-11T18:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights 2021",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-09T08:00:00Z",
-        "stop": "2026-09-09T09:00:00Z",
-        "start": "2026-09-09T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Italian F1 GP Highlights",
@@ -210,24 +210,6 @@
         "display_start": "2026-09-10T20:00:00Z",
         "stop": "2026-09-10T21:00:00Z",
         "start": "2026-09-10T20:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights 2019",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-09T06:00:00Z",
-        "stop": "2026-09-09T07:00:00Z",
-        "start": "2026-09-09T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights 2020",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-09T07:00:00Z",
-        "stop": "2026-09-09T08:00:00Z",
-        "start": "2026-09-09T07:00:00Z"
       }
     ],
     "3": [
