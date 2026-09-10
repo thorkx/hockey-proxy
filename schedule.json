@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T16:07:49Z",
+  "generated_at": "2026-09-10T20:39:31Z",
   "channels": {
     "1": [
       {
@@ -70,9 +70,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-10T08:30:00Z",
-        "stop": "2026-09-10T09:00:00Z",
-        "start": "2026-09-10T08:30:00Z"
+        "display_start": "2026-09-10T13:00:00Z",
+        "stop": "2026-09-10T13:30:00Z",
+        "start": "2026-09-10T13:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -93,31 +93,13 @@
         "start": "2026-09-12T11:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
-        "score": 0,
-        "display_start": "2026-09-10T09:00:00Z",
-        "stop": "2026-09-10T10:00:00Z",
-        "start": "2026-09-10T09:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Live: SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.5.ca2",
-        "score": 0,
-        "display_start": "2026-09-10T11:00:00Z",
-        "stop": "2026-09-10T12:00:00Z",
-        "start": "2026-09-10T11:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights 2025",
+        "title": "[REDIFFUSION] Italian F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-09-10T12:00:00Z",
-        "stop": "2026-09-10T13:00:00Z",
-        "start": "2026-09-10T12:00:00Z"
+        "display_start": "2026-09-10T13:45:00Z",
+        "stop": "2026-09-10T14:45:00Z",
+        "start": "2026-09-10T13:45:00Z"
       }
     ],
     "2": [
@@ -167,6 +149,15 @@
         "start": "2026-09-10T22:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
+        "score": 0,
+        "display_start": "2026-09-10T13:00:00Z",
+        "stop": "2026-09-10T14:00:00Z",
+        "start": "2026-09-10T13:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Live: Bundesliga Soccer",
         "league": "sports",
         "ch_key": "One.Soccer.ca2",
@@ -174,15 +165,6 @@
         "display_start": "2026-09-11T18:30:00Z",
         "stop": "2026-09-11T20:30:00Z",
         "start": "2026-09-11T18:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Italian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-10T09:00:00Z",
-        "stop": "2026-09-10T10:00:00Z",
-        "start": "2026-09-10T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: A. Villa v Nott'm Forest Hlts",
@@ -250,6 +232,15 @@
         "display_start": "2026-09-11T22:40:00Z",
         "stop": "2026-09-12T02:10:00Z",
         "start": "2026-09-11T23:10:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Spanish F1 GP Highlights 2025",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-10T23:15:00Z",
+        "stop": "2026-09-11T00:15:00Z",
+        "start": "2026-09-10T23:15:00Z"
       }
     ],
     "5": [
