@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T03:55:11Z",
+  "generated_at": "2026-09-11T10:56:12Z",
   "channels": {
     "1": [
       {
@@ -30,6 +30,24 @@
         "start": "2026-09-12T23:00:00Z"
       },
       {
+        "title": "⚽ INTER TORONTO VS VANCOUVER FC",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-09-13T18:30:00Z",
+        "stop": "2026-09-13T22:00:00Z",
+        "start": "2026-09-13T19:00:00Z"
+      },
+      {
+        "title": "⚽ PACIFIC VS CAVALRY",
+        "league": "cpl",
+        "ch_key": "One.Soccer.ca2",
+        "score": 900,
+        "display_start": "2026-09-13T22:00:00Z",
+        "stop": "2026-09-14T01:00:00Z",
+        "start": "2026-09-13T22:00:00Z"
+      },
+      {
         "title": "⚽ EVERTON AT TOTTENHAM HOTSPUR",
         "league": "eng.1",
         "ch_key": "NBC.Sports.4K.us2",
@@ -57,31 +75,13 @@
         "start": "2026-09-12T12:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "series",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-10T20:00:00Z",
-        "stop": "2026-09-10T21:00:00Z",
-        "start": "2026-09-10T20:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Plays of the Month - Highlights",
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-10T22:00:00Z",
-        "stop": "2026-09-10T22:30:00Z",
-        "start": "2026-09-10T22:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Plays of the Month - Countdown",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-10T23:00:00Z",
-        "stop": "2026-09-10T23:30:00Z",
-        "start": "2026-09-10T23:00:00Z"
+        "display_start": "2026-09-11T06:00:00Z",
+        "stop": "2026-09-11T06:30:00Z",
+        "start": "2026-09-11T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -102,13 +102,22 @@
         "start": "2026-09-12T06:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Italian F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-10T21:00:00Z",
-        "stop": "2026-09-10T22:00:00Z",
-        "start": "2026-09-10T21:00:00Z"
+        "display_start": "2026-09-11T17:00:00Z",
+        "stop": "2026-09-11T17:30:00Z",
+        "start": "2026-09-11T17:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Bundesliga Soccer",
+        "league": "sports",
+        "ch_key": "One.Soccer.ca2",
+        "score": 0,
+        "display_start": "2026-09-13T15:00:00Z",
+        "stop": "2026-09-13T15:14:00Z",
+        "start": "2026-09-13T15:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Spanish F1 GP Highlights",
@@ -127,24 +136,6 @@
         "display_start": "2026-09-13T07:30:00Z",
         "stop": "2026-09-13T08:00:00Z",
         "start": "2026-09-13T07:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Coventry City v Brighton Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-13T21:00:00Z",
-        "stop": "2026-09-13T21:30:00Z",
-        "start": "2026-09-13T21:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Man United v Man City Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-13T21:30:00Z",
-        "stop": "2026-09-13T22:00:00Z",
-        "start": "2026-09-13T21:30:00Z"
       }
     ],
     "2": [
@@ -194,15 +185,6 @@
         "start": "2026-09-12T11:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-10T23:00:00Z",
-        "stop": "2026-09-10T23:30:00Z",
-        "start": "2026-09-10T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] SC With Jay Onrait",
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
@@ -216,20 +198,47 @@
         "league": "sports",
         "ch_key": "One.Soccer.ca2",
         "score": 0,
-        "display_start": "2026-09-11T18:30:00Z",
+        "display_start": "2026-09-11T18:20:00Z",
         "stop": "2026-09-11T20:30:00Z",
-        "start": "2026-09-11T18:30:00Z"
+        "start": "2026-09-11T18:20:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "sports",
+        "ch_key": "CBS.Sports.Network.HD.us2",
+        "score": 0,
+        "display_start": "2026-09-11T06:00:00Z",
+        "stop": "2026-09-11T07:00:00Z",
+        "start": "2026-09-11T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Coventry City v Brighton Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-13T21:00:00Z",
+        "stop": "2026-09-13T21:30:00Z",
+        "start": "2026-09-13T21:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Man United v Man City Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-13T21:30:00Z",
+        "stop": "2026-09-13T22:00:00Z",
+        "start": "2026-09-13T21:30:00Z"
       }
     ],
     "3": [
       {
-        "title": "⚽ LAFC AT SPORTING KANSAS CITY",
+        "title": "⚽ TORONTO FC AT ORLANDO CITY SC",
         "league": "usa.1",
-        "ch_key": "NBC.Sports.4K.us2",
+        "ch_key": "RDS2.HD.ca2",
         "score": 750,
-        "display_start": "2026-09-13T00:00:00Z",
-        "stop": "2026-09-13T03:30:00Z",
-        "start": "2026-09-13T00:30:00Z"
+        "display_start": "2026-09-12T23:00:00Z",
+        "stop": "2026-09-13T02:30:00Z",
+        "start": "2026-09-12T23:30:00Z"
       },
       {
         "title": "⚽ ARSENAL AT SUNDERLAND",
@@ -250,25 +259,25 @@
         "start": "2026-09-11T23:05:00Z"
       },
       {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights 2025",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "title": "[REDIFFUSION] Plays of the Month - Countdown",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-10T23:15:00Z",
-        "stop": "2026-09-11T00:15:00Z",
-        "start": "2026-09-10T23:15:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Bournemouth v Brentford Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-12T23:30:00Z",
-        "stop": "2026-09-13T00:00:00Z",
-        "start": "2026-09-12T23:30:00Z"
+        "display_start": "2026-09-12T22:00:00Z",
+        "stop": "2026-09-12T22:30:00Z",
+        "start": "2026-09-12T22:00:00Z"
       }
     ],
     "4": [
+      {
+        "title": "⚽ LAFC AT SPORTING KANSAS CITY",
+        "league": "usa.1",
+        "ch_key": "RDS2.HD.ca2",
+        "score": 750,
+        "display_start": "2026-09-13T00:00:00Z",
+        "stop": "2026-09-13T03:30:00Z",
+        "start": "2026-09-13T00:30:00Z"
+      },
       {
         "title": "⚾ KANSAS CITY ROYALS AT BOSTON RED SOX",
         "league": "mlb",
@@ -288,15 +297,6 @@
         "start": "2026-09-12T20:05:00Z"
       },
       {
-        "title": "⚾ PHILADELPHIA PHILLIES AT ATLANTA BRAVES",
-        "league": "mlb",
-        "ch_key": "TNT.Sports.3.HD.uk",
-        "score": 350,
-        "display_start": "2026-09-12T23:05:00Z",
-        "stop": "2026-09-13T02:15:00Z",
-        "start": "2026-09-12T23:15:00Z"
-      },
-      {
         "title": "⚽ ELCHE AT ATHLETIC CLUB",
         "league": "esp.1",
         "ch_key": "ESPN.Deportes.HD.us2",
@@ -304,6 +304,15 @@
         "display_start": "2026-09-12T16:00:00Z",
         "stop": "2026-09-12T19:30:00Z",
         "start": "2026-09-12T16:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Bournemouth v Brentford Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-12T23:30:00Z",
+        "stop": "2026-09-13T00:00:00Z",
+        "start": "2026-09-12T23:30:00Z"
       }
     ],
     "5": [
@@ -324,6 +333,15 @@
         "display_start": "2026-09-12T19:40:00Z",
         "stop": "2026-09-12T23:10:00Z",
         "start": "2026-09-12T20:10:00Z"
+      },
+      {
+        "title": "⚾ PHILADELPHIA PHILLIES AT ATLANTA BRAVES",
+        "league": "mlb",
+        "ch_key": "TNT.Sports.3.HD.uk",
+        "score": 350,
+        "display_start": "2026-09-12T23:10:00Z",
+        "stop": "2026-09-13T02:15:00Z",
+        "start": "2026-09-12T23:15:00Z"
       }
     ]
   }
