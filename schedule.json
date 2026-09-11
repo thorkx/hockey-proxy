@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T10:56:12Z",
+  "generated_at": "2026-09-11T16:11:33Z",
   "channels": {
     "1": [
       {
@@ -75,22 +75,22 @@
         "start": "2026-09-12T12:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Plays of the Month - Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-11T06:00:00Z",
-        "stop": "2026-09-11T06:30:00Z",
-        "start": "2026-09-11T06:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Misplays of the Month",
         "league": "",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-11T07:30:00Z",
-        "stop": "2026-09-11T08:00:00Z",
-        "start": "2026-09-11T07:30:00Z"
+        "display_start": "2026-09-11T09:30:00Z",
+        "stop": "2026-09-11T10:00:00Z",
+        "start": "2026-09-11T09:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Plays of the Month - Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-11T10:00:00Z",
+        "stop": "2026-09-11T10:30:00Z",
+        "start": "2026-09-11T10:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Blue Jays in 30",
@@ -189,9 +189,9 @@
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-09-11T07:00:00Z",
-        "stop": "2026-09-11T08:00:00Z",
-        "start": "2026-09-11T07:00:00Z"
+        "display_start": "2026-09-11T09:00:00Z",
+        "stop": "2026-09-11T10:00:00Z",
+        "start": "2026-09-11T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Live: Bundesliga Soccer",
@@ -201,15 +201,6 @@
         "display_start": "2026-09-11T18:20:00Z",
         "stop": "2026-09-11T20:30:00Z",
         "start": "2026-09-11T18:20:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "sports",
-        "ch_key": "CBS.Sports.Network.HD.us2",
-        "score": 0,
-        "display_start": "2026-09-11T06:00:00Z",
-        "stop": "2026-09-11T07:00:00Z",
-        "start": "2026-09-11T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Coventry City v Brighton Hlts",
@@ -266,6 +257,15 @@
         "display_start": "2026-09-12T22:00:00Z",
         "stop": "2026-09-12T22:30:00Z",
         "start": "2026-09-12T22:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "sports",
+        "ch_key": "CBS.Sports.Network.HD.us2",
+        "score": 0,
+        "display_start": "2026-09-11T09:00:00Z",
+        "stop": "2026-09-11T10:00:00Z",
+        "start": "2026-09-11T09:00:00Z"
       }
     ],
     "4": [
