@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T15:55:33Z",
+  "generated_at": "2026-09-13T20:33:08Z",
   "channels": {
     "1": [
       {
@@ -48,22 +48,13 @@
         "start": "2026-09-14T19:00:00Z"
       },
       {
-        "title": "⚽ MÁLAGA AT CELTA VIGO",
-        "league": "esp.1",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 250,
-        "display_start": "2026-09-13T11:30:00Z",
-        "stop": "2026-09-13T15:00:00Z",
-        "start": "2026-09-13T12:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Blue Jays in 30",
-        "league": "sports",
+        "title": "[REDIFFUSION] Plays of the Month -- Highlights",
+        "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-13T08:00:00Z",
-        "stop": "2026-09-13T08:30:00Z",
-        "start": "2026-09-13T08:00:00Z"
+        "display_start": "2026-09-13T13:00:00Z",
+        "stop": "2026-09-13T13:30:00Z",
+        "start": "2026-09-13T13:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -158,15 +149,6 @@
         "start": "2026-09-13T21:30:00Z"
       },
       {
-        "title": "⚽ BRIGHTON & HOVE ALBION AT COVENTRY CITY",
-        "league": "eng.1",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 550,
-        "display_start": "2026-09-13T12:30:00Z",
-        "stop": "2026-09-13T16:00:00Z",
-        "start": "2026-09-13T13:00:00Z"
-      },
-      {
         "title": "⚾ CHICAGO WHITE SOX AT CLEVELAND GUARDIANS",
         "league": "mlb",
         "ch_key": "TNT.Sports.1.HD.uk",
@@ -183,6 +165,24 @@
         "display_start": "2026-09-14T18:15:00Z",
         "stop": "2026-09-14T21:45:00Z",
         "start": "2026-09-14T18:45:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Live: FA Women's Super League",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-13T13:30:00Z",
+        "stop": "2026-09-13T15:30:00Z",
+        "start": "2026-09-13T13:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Blue Jays in 30",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-13T16:00:00Z",
+        "stop": "2026-09-13T16:30:00Z",
+        "start": "2026-09-13T16:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Countdown",
@@ -232,24 +232,6 @@
         "start": "2026-09-14T19:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Plays of the Month -- Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-13T13:00:00Z",
-        "stop": "2026-09-13T13:30:00Z",
-        "start": "2026-09-13T13:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Live: FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-13T13:30:00Z",
-        "stop": "2026-09-13T15:30:00Z",
-        "start": "2026-09-13T13:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] PL: Coventry City v Brighton Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -286,15 +268,6 @@
         "display_start": "2026-09-14T22:00:00Z",
         "stop": "2026-09-14T23:00:00Z",
         "start": "2026-09-14T22:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Bundesliga Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-09-13T15:00:00Z",
-        "stop": "2026-09-13T15:14:00Z",
-        "start": "2026-09-13T15:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Spanish F1 GP Highlights",
