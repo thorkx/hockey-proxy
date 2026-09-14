@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T04:14:12Z",
+  "generated_at": "2026-09-14T12:18:22Z",
   "channels": {
     "1": [
       {
@@ -43,9 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-13T23:00:00Z",
-        "stop": "2026-09-13T23:30:00Z",
-        "start": "2026-09-13T23:00:00Z"
+        "display_start": "2026-09-14T06:00:00Z",
+        "stop": "2026-09-14T06:30:00Z",
+        "start": "2026-09-14T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month -- Highlights",
@@ -55,6 +55,15 @@
         "display_start": "2026-09-16T18:00:00Z",
         "stop": "2026-09-16T18:30:00Z",
         "start": "2026-09-16T18:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-14T17:00:00Z",
+        "stop": "2026-09-14T18:00:00Z",
+        "start": "2026-09-14T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Women's Super League Matchweek Highlights",
@@ -84,15 +93,6 @@
         "start": "2026-09-15T07:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Plays of the Month - Countdown",
-        "league": "series",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-14T06:00:00Z",
-        "stop": "2026-09-14T06:30:00Z",
-        "start": "2026-09-14T06:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Poker Night in America",
         "league": "poker",
         "ch_key": "CBS.Sports.Network.HD.us2",
@@ -106,18 +106,9 @@
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-09-13T21:00:00Z",
-        "stop": "2026-09-13T21:30:00Z",
-        "start": "2026-09-13T21:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Man United v Man City Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-13T21:30:00Z",
-        "stop": "2026-09-13T22:00:00Z",
-        "start": "2026-09-13T21:30:00Z"
+        "display_start": "2026-09-14T06:30:00Z",
+        "stop": "2026-09-14T07:00:00Z",
+        "start": "2026-09-14T06:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: A. Villa v Nott'm Forest Hlts",
@@ -185,13 +176,22 @@
         "start": "2026-09-15T19:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
+        "title": "[REDIFFUSION] Plays of the Month - Countdown",
         "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
+        "ch_key": "Sportsnet.360.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-13T23:00:00Z",
-        "stop": "2026-09-14T00:00:00Z",
-        "start": "2026-09-13T23:00:00Z"
+        "display_start": "2026-09-14T06:00:00Z",
+        "stop": "2026-09-14T06:30:00Z",
+        "start": "2026-09-14T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Man United v Man City Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-14T07:00:00Z",
+        "stop": "2026-09-14T07:30:00Z",
+        "start": "2026-09-14T07:00:00Z"
       }
     ],
     "3": [
@@ -230,15 +230,6 @@
         "display_start": "2026-09-15T23:00:00Z",
         "stop": "2026-09-15T23:30:00Z",
         "start": "2026-09-15T23:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-13T22:15:00Z",
-        "stop": "2026-09-13T23:15:00Z",
-        "start": "2026-09-13T22:15:00Z"
       }
     ],
     "4": [
@@ -259,6 +250,15 @@
         "display_start": "2026-09-14T22:00:00Z",
         "stop": "2026-09-14T23:00:00Z",
         "start": "2026-09-14T22:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Spanish F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-14T23:00:00Z",
+        "stop": "2026-09-15T00:00:00Z",
+        "start": "2026-09-14T23:00:00Z"
       }
     ],
     "5": [
