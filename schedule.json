@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T11:19:37Z",
+  "generated_at": "2026-09-17T16:36:40Z",
   "channels": {
     "1": [
       {
@@ -43,9 +43,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-17T06:00:00Z",
-        "stop": "2026-09-17T06:30:00Z",
-        "start": "2026-09-17T06:00:00Z"
+        "display_start": "2026-09-17T09:00:00Z",
+        "stop": "2026-09-17T09:30:00Z",
+        "start": "2026-09-17T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month -- Highlights",
@@ -70,18 +70,9 @@
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-09-17T07:00:00Z",
-        "stop": "2026-09-17T08:00:00Z",
-        "start": "2026-09-17T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
-        "score": 0,
-        "display_start": "2026-09-17T08:00:00Z",
-        "stop": "2026-09-17T09:00:00Z",
-        "start": "2026-09-17T08:00:00Z"
+        "display_start": "2026-09-18T07:00:00Z",
+        "stop": "2026-09-18T08:00:00Z",
+        "start": "2026-09-18T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] TSN Hockey Top 50 Players Special",
@@ -91,24 +82,6 @@
         "display_start": "2026-09-18T15:30:00Z",
         "stop": "2026-09-18T16:00:00Z",
         "start": "2026-09-18T15:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Bundesliga Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-09-18T06:00:00Z",
-        "stop": "2026-09-18T08:00:00Z",
-        "start": "2026-09-18T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-17T09:00:00Z",
-        "stop": "2026-09-17T10:00:00Z",
-        "start": "2026-09-17T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL Greatest Games:M City/L'Pool 15",
@@ -192,6 +165,24 @@
         "display_start": "2026-09-17T23:00:00Z",
         "stop": "2026-09-17T23:30:00Z",
         "start": "2026-09-17T23:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
+        "score": 0,
+        "display_start": "2026-09-17T09:00:00Z",
+        "stop": "2026-09-17T10:00:00Z",
+        "start": "2026-09-17T09:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Bundesliga Soccer",
+        "league": "sports",
+        "ch_key": "One.Soccer.ca2",
+        "score": 0,
+        "display_start": "2026-09-18T06:00:00Z",
+        "stop": "2026-09-18T08:00:00Z",
+        "start": "2026-09-18T06:00:00Z"
       }
     ],
     "3": [
@@ -239,6 +230,15 @@
         "display_start": "2026-09-17T17:00:00Z",
         "stop": "2026-09-17T17:30:00Z",
         "start": "2026-09-17T17:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Spanish F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-17T09:00:00Z",
+        "stop": "2026-09-17T10:00:00Z",
+        "start": "2026-09-17T09:00:00Z"
       }
     ],
     "4": [
