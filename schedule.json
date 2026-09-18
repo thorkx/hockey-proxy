@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T10:54:05Z",
+  "generated_at": "2026-09-18T16:08:29Z",
   "channels": {
     "1": [
       {
@@ -70,9 +70,9 @@
         "league": "",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-18T06:00:00Z",
-        "stop": "2026-09-18T06:30:00Z",
-        "start": "2026-09-18T06:00:00Z"
+        "display_start": "2026-09-18T09:00:00Z",
+        "stop": "2026-09-18T09:30:00Z",
+        "start": "2026-09-18T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month -- Highlights",
@@ -109,24 +109,6 @@
         "display_start": "2026-09-19T20:00:00Z",
         "stop": "2026-09-19T22:00:00Z",
         "start": "2026-09-19T20:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Live: SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
-        "score": 0,
-        "display_start": "2026-09-18T07:00:00Z",
-        "stop": "2026-09-18T08:00:00Z",
-        "start": "2026-09-18T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
-        "score": 0,
-        "display_start": "2026-09-18T08:00:00Z",
-        "stop": "2026-09-18T09:00:00Z",
-        "start": "2026-09-18T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] TSN Hockey Top 50 Players Special",
@@ -257,6 +239,15 @@
         "start": "2026-09-20T19:45:00Z"
       },
       {
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
+        "score": 0,
+        "display_start": "2026-09-18T09:00:00Z",
+        "stop": "2026-09-18T10:00:00Z",
+        "start": "2026-09-18T09:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Bundesliga Soccer",
         "league": "sports",
         "ch_key": "One.Soccer.ca2",
@@ -264,15 +255,6 @@
         "display_start": "2026-09-18T15:02:00Z",
         "stop": "2026-09-18T17:00:00Z",
         "start": "2026-09-18T15:02:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-18T06:30:00Z",
-        "stop": "2026-09-18T07:30:00Z",
-        "start": "2026-09-18T06:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Man City v Sunderland Hlts",
@@ -376,6 +358,15 @@
         "display_start": "2026-09-18T19:00:00Z",
         "stop": "2026-09-18T20:00:00Z",
         "start": "2026-09-18T19:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Spanish F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-18T23:00:00Z",
+        "stop": "2026-09-19T00:00:00Z",
+        "start": "2026-09-18T23:00:00Z"
       }
     ],
     "5": [
