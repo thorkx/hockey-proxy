@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T10:59:49Z",
+  "generated_at": "2026-09-20T15:45:52Z",
   "channels": {
     "1": [
       {
@@ -52,9 +52,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-20T06:00:00Z",
-        "stop": "2026-09-20T06:30:00Z",
-        "start": "2026-09-20T06:00:00Z"
+        "display_start": "2026-09-20T08:00:00Z",
+        "stop": "2026-09-20T08:30:00Z",
+        "start": "2026-09-20T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month -- Highlights",
@@ -109,15 +109,6 @@
         "display_start": "2026-09-21T07:00:00Z",
         "stop": "2026-09-21T08:00:00Z",
         "start": "2026-09-21T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Bundesliga Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-09-20T08:28:00Z",
-        "stop": "2026-09-20T10:30:00Z",
-        "start": "2026-09-20T08:28:00Z"
       },
       {
         "title": "[REDIFFUSION] Poker Night in America",
@@ -181,15 +172,6 @@
         "display_start": "2026-09-22T22:00:00Z",
         "stop": "2026-09-22T23:00:00Z",
         "start": "2026-09-22T22:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Nott'm Forest v Coventry Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-20T06:30:00Z",
-        "stop": "2026-09-20T07:00:00Z",
-        "start": "2026-09-20T06:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Bournemouth v Liverpool Hlts",
@@ -282,15 +264,6 @@
         "display_start": "2026-09-22T21:00:00Z",
         "stop": "2026-09-22T22:00:00Z",
         "start": "2026-09-22T21:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Newcastle v Hull City Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-20T06:00:00Z",
-        "stop": "2026-09-20T06:30:00Z",
-        "start": "2026-09-20T06:00:00Z"
       }
     ],
     "3": [
@@ -365,6 +338,24 @@
         "display_start": "2026-09-21T07:00:00Z",
         "stop": "2026-09-21T07:30:00Z",
         "start": "2026-09-21T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Newcastle v Hull City Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-21T12:00:00Z",
+        "stop": "2026-09-21T12:30:00Z",
+        "start": "2026-09-21T12:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SNF: Nott'm Forest v Coventry Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-21T12:30:00Z",
+        "stop": "2026-09-21T13:00:00Z",
+        "start": "2026-09-21T12:30:00Z"
       }
     ],
     "4": [
