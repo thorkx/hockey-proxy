@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-19T20:19:47Z",
+  "generated_at": "2026-09-20T04:16:33Z",
   "channels": {
     "1": [
       {
-        "title": "🏒 MONTREAL CANADIENS AT TORONTO MAPLE LEAFS",
+        "title": "🏒 OTTAWA SENATORS AT MONTREAL CANADIENS",
         "league": "nhl",
-        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
-        "score": 5300,
-        "display_start": "2026-09-19T22:30:00Z",
-        "stop": "2026-09-20T02:00:00Z",
-        "start": "2026-09-19T23:00:00Z"
+        "ch_key": "TNT.Sports.2.HD.uk",
+        "score": 3450,
+        "display_start": "2026-09-21T22:30:00Z",
+        "stop": "2026-09-22T02:00:00Z",
+        "start": "2026-09-21T23:00:00Z"
       },
       {
         "title": "⚽ ATLÉTICO OTTAWA VS SUPRA DU QUÉBEC",
@@ -39,22 +39,13 @@
         "start": "2026-09-20T19:00:00Z"
       },
       {
-        "title": "⚽ ASTON VILLA AT TOTTENHAM HOTSPUR",
-        "league": "eng.1",
-        "ch_key": "Canal+.fr",
-        "score": 650,
-        "display_start": "2026-09-19T11:00:00Z",
-        "stop": "2026-09-19T14:30:00Z",
-        "start": "2026-09-19T11:30:00Z"
-      },
-      {
-        "title": "⚽ COVENTRY CITY AT NOTTINGHAM FOREST",
-        "league": "eng.1",
-        "ch_key": "NBC.Sports.4K.us2",
-        "score": 550,
-        "display_start": "2026-09-19T16:00:00Z",
-        "stop": "2026-09-19T19:30:00Z",
-        "start": "2026-09-19T16:30:00Z"
+        "title": "🏀 DALLAS WINGS AT PHOENIX MERCURY",
+        "league": "wnba",
+        "ch_key": "TSN.2.ca2",
+        "score": 250,
+        "display_start": "2026-09-22T02:00:00Z",
+        "stop": "2026-09-22T05:00:00Z",
+        "start": "2026-09-22T02:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -66,22 +57,49 @@
         "start": "2026-09-19T22:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Blue Jays in 30",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-20T06:00:00Z",
+        "stop": "2026-09-20T06:30:00Z",
+        "start": "2026-09-20T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Plays of the Month -- Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-20T13:00:00Z",
+        "stop": "2026-09-20T13:30:00Z",
+        "start": "2026-09-20T13:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "series",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-22T21:00:00Z",
+        "stop": "2026-09-22T22:00:00Z",
+        "start": "2026-09-22T21:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-19T23:00:00Z",
+        "stop": "2026-09-19T23:30:00Z",
+        "start": "2026-09-19T23:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] FA Women's Super League",
         "league": "sports",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-19T20:00:00Z",
-        "stop": "2026-09-19T22:00:00Z",
-        "start": "2026-09-19T20:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "sports",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-21T19:00:00Z",
-        "stop": "2026-09-21T20:00:00Z",
-        "start": "2026-09-21T19:00:00Z"
+        "display_start": "2026-09-21T12:00:00Z",
+        "stop": "2026-09-21T14:00:00Z",
+        "start": "2026-09-21T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Le top LNH",
@@ -91,15 +109,6 @@
         "display_start": "2026-09-21T14:00:00Z",
         "stop": "2026-09-21T14:15:00Z",
         "start": "2026-09-21T14:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] TSN Hockey Top 50 Players Special",
-        "league": "special",
-        "ch_key": "TSN.2.ca2",
-        "score": 0,
-        "display_start": "2026-09-21T23:00:00Z",
-        "stop": "2026-09-21T23:30:00Z",
-        "start": "2026-09-21T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -129,6 +138,24 @@
         "start": "2026-09-20T13:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] Poker Night in America",
+        "league": "poker",
+        "ch_key": "CBS.Sports.Network.HD.us2",
+        "score": 0,
+        "display_start": "2026-09-22T07:00:00Z",
+        "stop": "2026-09-22T08:00:00Z",
+        "start": "2026-09-22T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Spanish F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-19T21:00:00Z",
+        "stop": "2026-09-19T22:00:00Z",
+        "start": "2026-09-19T21:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights 2018",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -147,31 +174,49 @@
         "start": "2026-09-21T08:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights 2017",
+        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights 2023",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-09-21T12:00:00Z",
-        "stop": "2026-09-21T13:00:00Z",
-        "start": "2026-09-21T12:00:00Z"
+        "display_start": "2026-09-22T08:00:00Z",
+        "stop": "2026-09-22T09:00:00Z",
+        "start": "2026-09-22T08:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights 2024",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-22T09:00:00Z",
+        "stop": "2026-09-22T10:00:00Z",
+        "start": "2026-09-22T09:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights 2025",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-22T10:00:00Z",
+        "stop": "2026-09-22T11:00:00Z",
+        "start": "2026-09-22T10:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Italian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-22T22:00:00Z",
+        "stop": "2026-09-22T23:00:00Z",
+        "start": "2026-09-22T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Newcastle v Hull City Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-09-20T06:00:00Z",
-        "stop": "2026-09-20T06:30:00Z",
-        "start": "2026-09-20T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Nott'm Forest v Coventry Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-20T06:30:00Z",
-        "stop": "2026-09-20T07:00:00Z",
-        "start": "2026-09-20T06:30:00Z"
+        "display_start": "2026-09-19T22:30:00Z",
+        "stop": "2026-09-19T23:00:00Z",
+        "start": "2026-09-19T22:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Bournemouth v Liverpool Hlts",
@@ -184,15 +229,6 @@
       }
     ],
     "2": [
-      {
-        "title": "🏒 TORONTO MAPLE LEAFS AT MONTREAL CANADIENS",
-        "league": "nhl",
-        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
-        "score": 5300,
-        "display_start": "2026-09-19T22:30:00Z",
-        "stop": "2026-09-20T02:00:00Z",
-        "start": "2026-09-19T23:00:00Z"
-      },
       {
         "title": "⚽ SUNDERLAND AT MANCHESTER CITY",
         "league": "eng.1",
@@ -212,6 +248,15 @@
         "start": "2026-09-20T18:35:00Z"
       },
       {
+        "title": "⚾ TORONTO BLUE JAYS AT BALTIMORE ORIOLES",
+        "league": "mlb",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 1750,
+        "display_start": "2026-09-21T22:05:00Z",
+        "stop": "2026-09-22T01:35:00Z",
+        "start": "2026-09-21T22:35:00Z"
+      },
+      {
         "title": "⚾ MILWAUKEE BREWERS AT BALTIMORE ORIOLES",
         "league": "mlb",
         "ch_key": "RDS2.HD.ca2",
@@ -221,22 +266,13 @@
         "start": "2026-09-20T23:20:00Z"
       },
       {
-        "title": "⚽ ALAVÉS AT ATHLETIC CLUB",
-        "league": "esp.1",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 250,
-        "display_start": "2026-09-19T13:45:00Z",
-        "stop": "2026-09-19T17:15:00Z",
-        "start": "2026-09-19T14:15:00Z"
-      },
-      {
-        "title": "⚽ BARCELONA AT SEVILLA",
-        "league": "esp.1",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 250,
-        "display_start": "2026-09-19T18:30:00Z",
-        "stop": "2026-09-19T22:00:00Z",
-        "start": "2026-09-19T19:00:00Z"
+        "title": "⚾ MINNESOTA TWINS AT SAN FRANCISCO GIANTS",
+        "league": "mlb",
+        "ch_key": "TSN.3.ca2",
+        "score": 350,
+        "display_start": "2026-09-22T01:35:00Z",
+        "stop": "2026-09-22T04:45:00Z",
+        "start": "2026-09-22T01:45:00Z"
       },
       {
         "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights 2019",
@@ -246,17 +282,53 @@
         "display_start": "2026-09-21T07:00:00Z",
         "stop": "2026-09-21T08:00:00Z",
         "start": "2026-09-21T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights 2017",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-21T12:00:00Z",
+        "stop": "2026-09-21T13:00:00Z",
+        "start": "2026-09-21T12:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights 2022",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-22T07:00:00Z",
+        "stop": "2026-09-22T08:00:00Z",
+        "start": "2026-09-22T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Dutch F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-22T21:00:00Z",
+        "stop": "2026-09-22T22:00:00Z",
+        "start": "2026-09-22T21:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SNF: Nott'm Forest v Coventry Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-19T23:00:00Z",
+        "stop": "2026-09-19T23:30:00Z",
+        "start": "2026-09-19T23:00:00Z"
       }
     ],
     "3": [
       {
-        "title": "🏒 DALLAS STARS AT ST. LOUIS BLUES",
+        "title": "🏒 ST. LOUIS BLUES AT DALLAS STARS",
         "league": "nhl",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 2150,
-        "display_start": "2026-09-19T22:30:00Z",
-        "stop": "2026-09-20T02:00:00Z",
-        "start": "2026-09-19T23:00:00Z"
+        "ch_key": "TNT.Sports.1.HD.uk",
+        "score": 950,
+        "display_start": "2026-09-21T23:30:00Z",
+        "stop": "2026-09-22T03:00:00Z",
+        "start": "2026-09-22T00:00:00Z"
       },
       {
         "title": "⚽ MANCHESTER UNITED AT FULHAM",
@@ -277,15 +349,6 @@
         "start": "2026-09-20T20:07:00Z"
       },
       {
-        "title": "⚽ RACING SANTANDER AT CELTA VIGO",
-        "league": "esp.1",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 250,
-        "display_start": "2026-09-19T16:00:00Z",
-        "stop": "2026-09-19T19:30:00Z",
-        "start": "2026-09-19T16:30:00Z"
-      },
-      {
         "title": "🏀 SEATTLE STORM AT LAS VEGAS ACES",
         "league": "wnba",
         "ch_key": "TSN.5.ca2",
@@ -295,31 +358,13 @@
         "start": "2026-09-21T01:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Plays of the Month -- Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
+        "title": "[REDIFFUSION] TSN Hockey Top 50 Players Special",
+        "league": "special",
+        "ch_key": "TSN.2.ca2",
         "score": 0,
-        "display_start": "2026-09-19T13:30:00Z",
-        "stop": "2026-09-19T14:00:00Z",
-        "start": "2026-09-19T13:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Blue Jays in 30",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-19T14:00:00Z",
-        "stop": "2026-09-19T14:30:00Z",
-        "start": "2026-09-19T14:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-19T21:00:00Z",
-        "stop": "2026-09-19T22:00:00Z",
-        "start": "2026-09-19T21:00:00Z"
+        "display_start": "2026-09-21T23:00:00Z",
+        "stop": "2026-09-21T23:30:00Z",
+        "start": "2026-09-21T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Leeds v Crystal Palace Hlts",
@@ -329,27 +374,9 @@
         "display_start": "2026-09-20T23:30:00Z",
         "stop": "2026-09-21T00:00:00Z",
         "start": "2026-09-20T23:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Man City v Sunderland Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-21T07:00:00Z",
-        "stop": "2026-09-21T07:30:00Z",
-        "start": "2026-09-21T07:00:00Z"
       }
     ],
     "4": [
-      {
-        "title": "⚾ TORONTO BLUE JAYS AT TEXAS RANGERS",
-        "league": "mlb",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 1750,
-        "display_start": "2026-09-19T22:35:00Z",
-        "stop": "2026-09-20T02:05:00Z",
-        "start": "2026-09-19T23:05:00Z"
-      },
       {
         "title": "⚾ PHILADELPHIA PHILLIES AT NEW YORK METS",
         "league": "mlb",
@@ -369,34 +396,16 @@
         "start": "2026-09-20T20:10:00Z"
       },
       {
-        "title": "🏀 PHOENIX MERCURY AT DALLAS WINGS",
-        "league": "wnba",
-        "ch_key": "TSN.3.ca2",
+        "title": "⚾ WASHINGTON NATIONALS AT DETROIT TIGERS",
+        "league": "mlb",
+        "ch_key": "beIN.SPORTS.MAX.4.fr",
         "score": 250,
-        "display_start": "2026-09-19T16:30:00Z",
-        "stop": "2026-09-19T20:00:00Z",
-        "start": "2026-09-19T17:00:00Z"
+        "display_start": "2026-09-21T22:10:00Z",
+        "stop": "2026-09-22T01:40:00Z",
+        "start": "2026-09-21T22:40:00Z"
       }
     ],
     "5": [
-      {
-        "title": "⚽ PACIFIC VS VANCOUVER FC",
-        "league": "cpl",
-        "ch_key": "One.Soccer.ca2",
-        "score": 900,
-        "display_start": "2026-09-19T23:30:00Z",
-        "stop": "2026-09-20T03:00:00Z",
-        "start": "2026-09-20T00:00:00Z"
-      },
-      {
-        "title": "⚾ BOSTON RED SOX AT TAMPA BAY RAYS",
-        "league": "mlb",
-        "ch_key": "TNT.Sports.3.HD.uk",
-        "score": 350,
-        "display_start": "2026-09-19T19:40:00Z",
-        "stop": "2026-09-19T23:10:00Z",
-        "start": "2026-09-19T20:10:00Z"
-      },
       {
         "title": "⚽ ATALANTA AT JUVENTUS",
         "league": "ita.1",
@@ -416,31 +425,13 @@
         "start": "2026-09-20T19:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Live: FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-19T16:30:00Z",
-        "stop": "2026-09-19T18:30:00Z",
-        "start": "2026-09-19T16:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-20T23:00:00Z",
-        "stop": "2026-09-20T23:30:00Z",
-        "start": "2026-09-20T23:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FNF: Brentford v Chelsea Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-19T19:00:00Z",
-        "stop": "2026-09-19T19:30:00Z",
-        "start": "2026-09-19T19:00:00Z"
+        "title": "🏀 ATLANTA DREAM AT NEW YORK LIBERTY",
+        "league": "wnba",
+        "ch_key": "TSN.2.ca2",
+        "score": 250,
+        "display_start": "2026-09-21T23:30:00Z",
+        "stop": "2026-09-22T03:00:00Z",
+        "start": "2026-09-22T00:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Fulham v Manchester Utd Hlts",
@@ -450,6 +441,15 @@
         "display_start": "2026-09-20T22:30:00Z",
         "stop": "2026-09-20T23:00:00Z",
         "start": "2026-09-20T22:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Man City v Sunderland Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-20T23:00:00Z",
+        "stop": "2026-09-20T23:30:00Z",
+        "start": "2026-09-20T23:00:00Z"
       }
     ]
   }
