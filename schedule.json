@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T04:07:01Z",
+  "generated_at": "2026-09-23T11:08:49Z",
   "channels": {
     "1": [
       {
@@ -48,24 +48,6 @@
         "start": "2026-09-24T16:35:00Z"
       },
       {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-22T20:30:00Z",
-        "stop": "2026-09-22T21:00:00Z",
-        "start": "2026-09-22T20:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "series",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-22T21:00:00Z",
-        "stop": "2026-09-22T22:00:00Z",
-        "start": "2026-09-22T21:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Blue Jays in 30",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -84,22 +66,13 @@
         "start": "2026-09-24T23:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
+        "title": "[REDIFFUSION] FA Women's Super League",
+        "league": "sports",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-22T23:00:00Z",
-        "stop": "2026-09-22T23:30:00Z",
-        "start": "2026-09-22T23:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] TSN Hockey Top 50 Players Special",
-        "league": "special",
-        "ch_key": "TSN.3.ca2",
-        "score": 0,
-        "display_start": "2026-09-22T23:30:00Z",
-        "stop": "2026-09-23T00:00:00Z",
-        "start": "2026-09-22T23:30:00Z"
+        "display_start": "2026-09-23T12:00:00Z",
+        "stop": "2026-09-23T14:00:00Z",
+        "start": "2026-09-23T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -120,13 +93,13 @@
         "start": "2026-09-25T06:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Italian F1 GP Highlights",
+        "title": "[REDIFFUSION] Spanish F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-09-22T22:00:00Z",
-        "stop": "2026-09-22T23:00:00Z",
-        "start": "2026-09-22T22:00:00Z"
+        "display_start": "2026-09-23T08:00:00Z",
+        "stop": "2026-09-23T09:00:00Z",
+        "start": "2026-09-23T08:00:00Z"
       }
     ],
     "2": [
@@ -176,13 +149,13 @@
         "start": "2026-09-25T02:10:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.World.HD.ca2",
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-22T21:00:00Z",
-        "stop": "2026-09-22T23:00:00Z",
-        "start": "2026-09-22T21:00:00Z"
+        "display_start": "2026-09-23T22:00:00Z",
+        "stop": "2026-09-23T22:30:00Z",
+        "start": "2026-09-23T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Poker Night in America",
@@ -194,15 +167,6 @@
         "start": "2026-09-23T07:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Spanish F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-22T23:00:00Z",
-        "stop": "2026-09-23T00:00:00Z",
-        "start": "2026-09-22T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights 2024",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -210,15 +174,6 @@
         "display_start": "2026-09-23T06:00:00Z",
         "stop": "2026-09-23T07:00:00Z",
         "start": "2026-09-23T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights 2021",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-23T22:00:00Z",
-        "stop": "2026-09-23T23:00:00Z",
-        "start": "2026-09-23T22:00:00Z"
       }
     ],
     "3": [
@@ -259,6 +214,24 @@
         "start": "2026-09-24T18:20:00Z"
       },
       {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "series",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-23T20:00:00Z",
+        "stop": "2026-09-23T21:00:00Z",
+        "start": "2026-09-23T20:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-23T17:00:00Z",
+        "stop": "2026-09-23T17:30:00Z",
+        "start": "2026-09-23T17:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] FA Women's Super League Matchweek Highlights",
         "league": "soccer",
         "ch_key": "Sportsnet.World.HD.ca2",
@@ -266,15 +239,6 @@
         "display_start": "2026-09-23T18:00:00Z",
         "stop": "2026-09-23T19:00:00Z",
         "start": "2026-09-23T18:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Dutch F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-22T21:00:00Z",
-        "stop": "2026-09-22T22:00:00Z",
-        "start": "2026-09-22T21:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights 2025",
