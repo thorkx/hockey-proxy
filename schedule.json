@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T16:06:19Z",
+  "generated_at": "2026-09-26T20:51:46Z",
   "channels": {
     "1": [
       {
@@ -43,36 +43,36 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-26T08:30:00Z",
-        "stop": "2026-09-26T09:00:00Z",
-        "start": "2026-09-26T08:30:00Z"
+        "display_start": "2026-09-26T14:30:00Z",
+        "stop": "2026-09-26T15:00:00Z",
+        "start": "2026-09-26T14:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month -- Highlights",
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-26T12:00:00Z",
-        "stop": "2026-09-26T12:30:00Z",
-        "start": "2026-09-26T12:00:00Z"
+        "display_start": "2026-09-26T18:00:00Z",
+        "stop": "2026-09-26T18:30:00Z",
+        "start": "2026-09-26T18:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Live: FA Women's Super League",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-26T12:30:00Z",
-        "stop": "2026-09-26T14:30:00Z",
-        "start": "2026-09-26T12:30:00Z"
+        "display_start": "2026-09-27T12:00:00Z",
+        "stop": "2026-09-27T14:00:00Z",
+        "start": "2026-09-27T12:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
-        "league": "sports",
-        "ch_key": "Sportsnet.East.HD.ca2",
+        "league": "series",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-28T19:00:00Z",
-        "stop": "2026-09-28T20:00:00Z",
-        "start": "2026-09-28T19:00:00Z"
+        "display_start": "2026-09-29T18:00:00Z",
+        "stop": "2026-09-29T19:00:00Z",
+        "start": "2026-09-29T18:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -82,15 +82,6 @@
         "display_start": "2026-09-28T07:00:00Z",
         "stop": "2026-09-28T08:00:00Z",
         "start": "2026-09-28T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-26T14:30:00Z",
-        "stop": "2026-09-26T15:30:00Z",
-        "start": "2026-09-26T14:30:00Z"
       },
       {
         "title": "[REDIFFUSION] FNF: Arsenal v Coventry Hlts",
@@ -225,9 +216,18 @@
         "league": "series",
         "ch_key": "TVA.Sports.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-26T12:30:00Z",
-        "stop": "2026-09-26T12:45:00Z",
-        "start": "2026-09-26T12:30:00Z"
+        "display_start": "2026-09-26T18:45:00Z",
+        "stop": "2026-09-26T19:00:00Z",
+        "start": "2026-09-26T18:45:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-26T14:30:00Z",
+        "stop": "2026-09-26T15:30:00Z",
+        "start": "2026-09-26T14:30:00Z"
       }
     ],
     "3": [
