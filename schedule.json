@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T16:42:48Z",
+  "generated_at": "2026-09-27T21:08:21Z",
   "channels": {
     "1": [
       {
@@ -25,27 +25,18 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-27T09:00:00Z",
-        "stop": "2026-09-27T09:30:00Z",
-        "start": "2026-09-27T09:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Plays of the Month -- Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-27T11:30:00Z",
-        "stop": "2026-09-27T12:00:00Z",
-        "start": "2026-09-27T11:30:00Z"
+        "display_start": "2026-09-27T14:00:00Z",
+        "stop": "2026-09-27T14:30:00Z",
+        "start": "2026-09-27T14:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Live: FA Women's Super League",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-27T12:00:00Z",
-        "stop": "2026-09-27T14:00:00Z",
-        "start": "2026-09-27T12:00:00Z"
+        "display_start": "2026-09-27T15:30:00Z",
+        "stop": "2026-09-27T17:30:00Z",
+        "start": "2026-09-27T15:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -66,15 +57,6 @@
         "start": "2026-09-29T18:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-09-27T16:00:00Z",
-        "stop": "2026-09-27T17:30:00Z",
-        "start": "2026-09-27T16:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] FA Cup Classics",
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
@@ -84,6 +66,15 @@
         "start": "2026-09-27T23:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] FA Women's Super League Matchweek Highlights",
+        "league": "soccer",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-30T18:00:00Z",
+        "stop": "2026-09-30T19:00:00Z",
+        "start": "2026-09-30T18:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Le top LNH",
         "league": "series",
         "ch_key": "TVA.Sports.2.HD.ca2",
@@ -91,6 +82,15 @@
         "display_start": "2026-09-30T09:15:00Z",
         "stop": "2026-09-30T09:30:00Z",
         "start": "2026-09-30T09:15:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Plays of the Month -- Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-30T20:30:00Z",
+        "stop": "2026-09-30T21:00:00Z",
+        "start": "2026-09-30T20:30:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -109,15 +109,6 @@
         "display_start": "2026-09-29T06:00:00Z",
         "stop": "2026-09-29T07:00:00Z",
         "start": "2026-09-29T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-27T10:00:00Z",
-        "stop": "2026-09-27T11:00:00Z",
-        "start": "2026-09-27T10:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Bahrain F1 GP Highlights 2016",
@@ -300,6 +291,24 @@
         "display_start": "2026-09-27T17:30:00Z",
         "stop": "2026-09-27T21:00:00Z",
         "start": "2026-09-27T18:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Women's Super League",
+        "league": "sports",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-27T16:00:00Z",
+        "stop": "2026-09-27T17:30:00Z",
+        "start": "2026-09-27T16:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-27T22:30:00Z",
+        "stop": "2026-09-27T23:30:00Z",
+        "start": "2026-09-27T22:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Bahrain F1 GP Highlights 2015",
