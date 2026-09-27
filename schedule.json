@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T11:44:44Z",
+  "generated_at": "2026-09-27T16:42:48Z",
   "channels": {
     "1": [
       {
@@ -25,9 +25,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-27T06:00:00Z",
-        "stop": "2026-09-27T06:30:00Z",
-        "start": "2026-09-27T06:00:00Z"
+        "display_start": "2026-09-27T09:00:00Z",
+        "stop": "2026-09-27T09:30:00Z",
+        "start": "2026-09-27T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month -- Highlights",
@@ -109,6 +109,15 @@
         "display_start": "2026-09-29T06:00:00Z",
         "stop": "2026-09-29T07:00:00Z",
         "start": "2026-09-29T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-09-27T10:00:00Z",
+        "stop": "2026-09-27T11:00:00Z",
+        "start": "2026-09-27T10:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Bahrain F1 GP Highlights 2016",
@@ -291,15 +300,6 @@
         "display_start": "2026-09-27T17:30:00Z",
         "stop": "2026-09-27T21:00:00Z",
         "start": "2026-09-27T18:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-27T06:00:00Z",
-        "stop": "2026-09-27T07:00:00Z",
-        "start": "2026-09-27T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Bahrain F1 GP Highlights 2015",
