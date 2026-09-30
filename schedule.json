@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T12:13:36Z",
+  "generated_at": "2026-09-30T22:02:47Z",
   "channels": {
     "1": [
       {
@@ -66,13 +66,13 @@
         "start": "2026-10-03T12:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Women's Super League",
+        "title": "[REDIFFUSION] Live: FA Women's Super League",
         "league": "sports",
-        "ch_key": "Sportsnet.World.HD.ca2",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-30T06:00:00Z",
-        "stop": "2026-09-30T08:00:00Z",
-        "start": "2026-09-30T06:00:00Z"
+        "display_start": "2026-10-03T12:30:00Z",
+        "stop": "2026-10-03T14:30:00Z",
+        "start": "2026-10-03T12:30:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Cup Classics",
@@ -84,13 +84,13 @@
         "start": "2026-09-30T17:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Le top LNH",
-        "league": "series",
-        "ch_key": "TVA.Sports.2.HD.ca2",
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-09-30T09:15:00Z",
-        "stop": "2026-09-30T09:30:00Z",
-        "start": "2026-09-30T09:15:00Z"
+        "display_start": "2026-09-30T15:00:00Z",
+        "stop": "2026-09-30T16:00:00Z",
+        "start": "2026-09-30T15:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Bundesliga Soccer",
@@ -102,13 +102,13 @@
         "start": "2026-10-01T16:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights",
+        "title": "[REDIFFUSION] Malaysian F1 GP Highlights 2015",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-09-30T08:00:00Z",
-        "stop": "2026-09-30T09:00:00Z",
-        "start": "2026-09-30T08:00:00Z"
+        "display_start": "2026-10-01T09:45:00Z",
+        "stop": "2026-10-01T10:45:00Z",
+        "start": "2026-10-01T09:45:00Z"
       },
       {
         "title": "[REDIFFUSION] Bahrain F1 GP Highlights 2019",
@@ -136,60 +136,6 @@
         "display_start": "2026-10-01T23:30:00Z",
         "stop": "2026-10-02T00:30:00Z",
         "start": "2026-10-01T23:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FNF: Ipswich v Liverpool Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-30T11:00:00Z",
-        "stop": "2026-09-30T11:30:00Z",
-        "start": "2026-09-30T11:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Nott'm Forest v Spurs Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-30T11:30:00Z",
-        "stop": "2026-09-30T12:00:00Z",
-        "start": "2026-09-30T11:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Man City v Coventry City Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-30T12:00:00Z",
-        "stop": "2026-09-30T12:30:00Z",
-        "start": "2026-09-30T12:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brighton v Leeds United Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-30T12:30:00Z",
-        "stop": "2026-09-30T13:00:00Z",
-        "start": "2026-09-30T12:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Hull City v Aston Villa Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-30T13:00:00Z",
-        "stop": "2026-09-30T13:30:00Z",
-        "start": "2026-09-30T13:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brentford v Sunderland Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-09-30T14:00:00Z",
-        "stop": "2026-09-30T14:30:00Z",
-        "start": "2026-09-30T14:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Everton v Manchester Utd Hlts",
@@ -293,22 +239,31 @@
         "start": "2026-09-30T18:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
+        "title": "[REDIFFUSION] FA Women's Super League",
+        "league": "sports",
+        "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-09-30T07:00:00Z",
-        "stop": "2026-09-30T08:00:00Z",
-        "start": "2026-09-30T07:00:00Z"
+        "display_start": "2026-09-30T21:00:00Z",
+        "stop": "2026-09-30T23:00:00Z",
+        "start": "2026-09-30T21:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Malaysian F1 GP Highlights 2015",
+        "title": "[REDIFFUSION] Le top LNH",
+        "league": "series",
+        "ch_key": "TVA.Sports.2.HD.ca2",
+        "score": 0,
+        "display_start": "2026-09-30T19:15:00Z",
+        "stop": "2026-09-30T19:30:00Z",
+        "start": "2026-09-30T19:15:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-09-30T06:00:00Z",
-        "stop": "2026-09-30T07:00:00Z",
-        "start": "2026-09-30T06:00:00Z"
+        "display_start": "2026-09-30T14:30:00Z",
+        "stop": "2026-09-30T15:30:00Z",
+        "start": "2026-09-30T14:30:00Z"
       }
     ],
     "3": [
@@ -344,9 +299,9 @@
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-09-30T07:00:00Z",
-        "stop": "2026-09-30T08:00:00Z",
-        "start": "2026-09-30T07:00:00Z"
+        "display_start": "2026-10-01T18:45:00Z",
+        "stop": "2026-10-01T19:45:00Z",
+        "start": "2026-10-01T18:45:00Z"
       }
     ],
     "4": [
