@@ -801,6 +801,60 @@
     "category": "Anthology"
   },
   {
+    "ch": "Sportsnet.One.HD.ca2",
+    "start": "2026-10-03T05:00:00",
+    "planned_stop": "2026-10-03T07:00:00",
+    "title": "NHL Hockey",
+    "sub-title": "",
+    "desc": "The Carolina Hurricanes and coach Rod Brind'Amour host the Washington Capitals at Lenovo Center to open the 2026-27 NHL regular-season. Washington has 113 wins compared to Carolina's 81 wins and holds the edge in their all-time head-to-head record.",
+    "category": "Sports"
+  },
+  {
+    "ch": "Sportsnet.One.HD.ca2",
+    "start": "2026-10-03T07:00:00",
+    "planned_stop": "2026-10-03T09:00:00",
+    "title": "NHL Hockey",
+    "sub-title": "",
+    "desc": "The Vegas Golden Knights face the Anaheim Ducks at T-Mobile Arena to open a regular-season series. Anaheim beat Vegas 4-3 when the teams previously met in February during the regular-season. Anaheim's Ian Moore is out of this game due to an injury.",
+    "category": "Sports"
+  },
+  {
+    "ch": "Sportsnet.One.HD.ca2",
+    "start": "2026-10-03T09:00:00",
+    "planned_stop": "2026-10-03T09:30:00",
+    "title": "NHL's Best Saves of the Season",
+    "sub-title": "",
+    "desc": "Recap of the top saves of the NHL season.",
+    "category": "Special"
+  },
+  {
+    "ch": "Sportsnet.One.HD.ca2",
+    "start": "2026-10-03T09:30:00",
+    "planned_stop": "2026-10-03T10:00:00",
+    "title": "NHL's Best Goals of the Season",
+    "sub-title": "",
+    "desc": "Highlights of the league's top scoring plays.",
+    "category": "Special"
+  },
+  {
+    "ch": "Sportsnet.One.HD.ca2",
+    "start": "2026-10-03T10:00:00",
+    "planned_stop": "2026-10-03T12:00:00",
+    "title": "NHL Hockey",
+    "sub-title": "",
+    "desc": "The Detroit Red Wings host the New York Rangers at Little Caesars Arena in Detroit, Michigan. New York earned a 4-1 victory over Detroit in April 2026. These Original Six rivals square off to open a Metropolitan and Atlantic division clash.",
+    "category": "Sports"
+  },
+  {
+    "ch": "Sportsnet.One.HD.ca2",
+    "start": "2026-10-03T12:00:00",
+    "planned_stop": "2026-10-03T12:30:00",
+    "title": "Plays of the Month -- Highlights",
+    "sub-title": "",
+    "desc": "Highlighting the past month's best in daily sports moments.",
+    "category": "Anthology"
+  },
+  {
     "ch": "Sportsnet.World.HD.ca2",
     "start": "2026-09-30T05:00:00",
     "planned_stop": "2026-09-30T05:30:00",
@@ -1332,13 +1386,76 @@
     "category": "Sports"
   },
   {
-    "ch": "RDS2.HD.ca2",
-    "start": "2026-09-30T04:00:00",
-    "planned_stop": "2026-09-30T06:00:00",
-    "title": "Le 5 à 7",
-    "sub-title": "",
-    "desc": "Frédéric Plante et Yanick Bouchard donnent vie à cette version magazine de Sports 30.",
+    "ch": "Sportsnet.World.HD.ca2",
+    "start": "2026-10-03T05:00:00",
+    "planned_stop": "2026-10-03T05:30:00",
+    "title": "FA Cup Classics",
+    "sub-title": "1999: Newcastle vs. Spurs",
+    "desc": "From Dec. 22, 1999.",
     "category": "Series"
+  },
+  {
+    "ch": "Sportsnet.World.HD.ca2",
+    "start": "2026-10-03T05:30:00",
+    "planned_stop": "2026-10-03T06:00:00",
+    "title": "FA Cup Classics",
+    "sub-title": "2000: Manchester City vs. Leeds",
+    "desc": "From Jan. 9, 2000.",
+    "category": "Series"
+  },
+  {
+    "ch": "Sportsnet.World.HD.ca2",
+    "start": "2026-10-03T06:00:00",
+    "planned_stop": "2026-10-03T08:00:00",
+    "title": "PREM Rugby",
+    "sub-title": "",
+    "desc": "From Recreation Ground in Bath, Bath and North East Somerset, United Kingdom.",
+    "category": "Sports"
+  },
+  {
+    "ch": "Sportsnet.World.HD.ca2",
+    "start": "2026-10-03T08:00:00",
+    "planned_stop": "2026-10-03T09:00:00",
+    "title": "Sportsnet World Highlights",
+    "sub-title": "",
+    "desc": "A look at the best stories from around the world of sports.",
+    "category": "Anthology"
+  },
+  {
+    "ch": "Sportsnet.World.HD.ca2",
+    "start": "2026-10-03T09:00:00",
+    "planned_stop": "2026-10-03T10:00:00",
+    "title": "Sportsnet World Highlights",
+    "sub-title": "",
+    "desc": "A look at the best stories from around the world of sports.",
+    "category": "Anthology"
+  },
+  {
+    "ch": "Sportsnet.World.HD.ca2",
+    "start": "2026-10-03T10:00:00",
+    "planned_stop": "2026-10-03T11:00:00",
+    "title": "Sportsnet World Highlights",
+    "sub-title": "",
+    "desc": "A look at the best stories from around the world of sports.",
+    "category": "Anthology"
+  },
+  {
+    "ch": "Sportsnet.World.HD.ca2",
+    "start": "2026-10-03T11:00:00",
+    "planned_stop": "2026-10-03T11:30:00",
+    "title": "FA Cup Classics",
+    "sub-title": "2000: Aston Villa vs. Leeds",
+    "desc": "5th Round from Jan. 30, 2000.",
+    "category": "Series"
+  },
+  {
+    "ch": "Sportsnet.World.HD.ca2",
+    "start": "2026-10-03T11:30:00",
+    "planned_stop": "2026-10-03T13:30:00",
+    "title": "Live: United Rugby Championship",
+    "sub-title": "",
+    "desc": "From 10bet Ellis Park in Johannesburg, South Africa.",
+    "category": "Sports"
   },
   {
     "ch": "RDS2.HD.ca2",
@@ -1917,12 +2034,39 @@
     "category": "Series"
   },
   {
-    "ch": "TVA.Sports.2.HD.ca2",
-    "start": "2026-09-30T02:00:00",
-    "planned_stop": "2026-09-30T05:30:00",
-    "title": "Live: Baseball MLB",
+    "ch": "RDS2.HD.ca2",
+    "start": "2026-10-03T06:00:00",
+    "planned_stop": "2026-10-03T07:00:00",
+    "title": "L'antichambre",
     "sub-title": "",
-    "desc": "Les Padres de San Diego accueillent les Cubs de Chicago pour le premier match de la série Wild Card de la Ligue nationale.",
+    "desc": "On propose des débats sur les sujets les plus chauds de l'actualité sportive.",
+    "category": "Series"
+  },
+  {
+    "ch": "RDS2.HD.ca2",
+    "start": "2026-10-03T07:00:00",
+    "planned_stop": "2026-10-03T09:00:00",
+    "title": "Le 5 à 7",
+    "sub-title": "",
+    "desc": "Frédéric Plante et Yanick Bouchard donnent vie à cette version magazine de Sports 30.",
+    "category": "Series"
+  },
+  {
+    "ch": "RDS2.HD.ca2",
+    "start": "2026-10-03T09:00:00",
+    "planned_stop": "2026-10-03T11:00:00",
+    "title": "Le 5 à 7",
+    "sub-title": "",
+    "desc": "Frédéric Plante et Yanick Bouchard donnent vie à cette version magazine de Sports 30.",
+    "category": "Series"
+  },
+  {
+    "ch": "RDS2.HD.ca2",
+    "start": "2026-10-03T11:00:00",
+    "planned_stop": "2026-10-03T15:00:00",
+    "title": "Live: Tennis: China Open 2026",
+    "sub-title": "",
+    "desc": "",
     "category": "Sports"
   },
   {
@@ -2473,6 +2617,42 @@
     "sub-title": "Gala de Boxe, Eye of the tiger, Casino de Montréal, 3 septembre 2026",
     "desc": "Présentation d'un combat de boxe professionnelle.",
     "category": "Series"
+  },
+  {
+    "ch": "TVA.Sports.2.HD.ca2",
+    "start": "2026-10-03T07:00:00",
+    "planned_stop": "2026-10-03T07:30:00",
+    "title": "50 ans de sports",
+    "sub-title": "2018",
+    "desc": "On nous fait revivre les plus grands moments du sport de chaque année.",
+    "category": "Series"
+  },
+  {
+    "ch": "TVA.Sports.2.HD.ca2",
+    "start": "2026-10-03T07:30:00",
+    "planned_stop": "2026-10-03T10:00:00",
+    "title": "Red Bull Cliff Diving",
+    "sub-title": "Italie",
+    "desc": "Compétition de plongeon.",
+    "category": "Series"
+  },
+  {
+    "ch": "TVA.Sports.2.HD.ca2",
+    "start": "2026-10-03T10:00:00",
+    "planned_stop": "2026-10-03T10:30:00",
+    "title": "Avant-match LNH",
+    "sub-title": "",
+    "desc": "Présentation des points à surveiller avant la présentation du match de hockey.",
+    "category": "Sports talk"
+  },
+  {
+    "ch": "TVA.Sports.2.HD.ca2",
+    "start": "2026-10-03T10:30:00",
+    "planned_stop": "2026-10-03T13:00:00",
+    "title": "Hockey LNH",
+    "sub-title": "",
+    "desc": "Les Hurricanes de la Caroline et l'entraîneur Rod Brind'Amour accueillent les Capitals de Washington au Lenovo Center.",
+    "category": "Sports"
   },
   {
     "ch": "Sportsnet.East.HD.ca2",
@@ -3139,6 +3319,87 @@
     "sub-title": "",
     "desc": "Highlights of the league's top scoring plays.",
     "category": "Special"
+  },
+  {
+    "ch": "Sportsnet.East.HD.ca2",
+    "start": "2026-10-03T05:00:00",
+    "planned_stop": "2026-10-03T05:30:00",
+    "title": "Live: Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.East.HD.ca2",
+    "start": "2026-10-03T05:30:00",
+    "planned_stop": "2026-10-03T06:00:00",
+    "title": "Live: Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.East.HD.ca2",
+    "start": "2026-10-03T06:00:00",
+    "planned_stop": "2026-10-03T07:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.East.HD.ca2",
+    "start": "2026-10-03T07:00:00",
+    "planned_stop": "2026-10-03T08:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.East.HD.ca2",
+    "start": "2026-10-03T08:00:00",
+    "planned_stop": "2026-10-03T09:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.East.HD.ca2",
+    "start": "2026-10-03T09:00:00",
+    "planned_stop": "2026-10-03T10:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.East.HD.ca2",
+    "start": "2026-10-03T10:00:00",
+    "planned_stop": "2026-10-03T11:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.East.HD.ca2",
+    "start": "2026-10-03T11:00:00",
+    "planned_stop": "2026-10-03T12:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.East.HD.ca2",
+    "start": "2026-10-03T12:00:00",
+    "planned_stop": "2026-10-03T13:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
   },
   {
     "ch": "Sportsnet.(Pacific).HD.ca2",
@@ -3834,6 +4095,87 @@
     "category": "Special"
   },
   {
+    "ch": "Sportsnet.(Pacific).HD.ca2",
+    "start": "2026-10-03T05:00:00",
+    "planned_stop": "2026-10-03T05:30:00",
+    "title": "Live: Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.(Pacific).HD.ca2",
+    "start": "2026-10-03T05:30:00",
+    "planned_stop": "2026-10-03T06:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.(Pacific).HD.ca2",
+    "start": "2026-10-03T06:00:00",
+    "planned_stop": "2026-10-03T07:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.(Pacific).HD.ca2",
+    "start": "2026-10-03T07:00:00",
+    "planned_stop": "2026-10-03T08:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.(Pacific).HD.ca2",
+    "start": "2026-10-03T08:00:00",
+    "planned_stop": "2026-10-03T09:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.(Pacific).HD.ca2",
+    "start": "2026-10-03T09:00:00",
+    "planned_stop": "2026-10-03T10:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.(Pacific).HD.ca2",
+    "start": "2026-10-03T10:00:00",
+    "planned_stop": "2026-10-03T11:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.(Pacific).HD.ca2",
+    "start": "2026-10-03T11:00:00",
+    "planned_stop": "2026-10-03T12:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.(Pacific).HD.ca2",
+    "start": "2026-10-03T12:00:00",
+    "planned_stop": "2026-10-03T13:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
     "ch": "Sportsnet.West.HD.ca2",
     "start": "2026-09-30T04:30:00",
     "planned_stop": "2026-09-30T06:00:00",
@@ -4516,6 +4858,87 @@
     "sub-title": "",
     "desc": "Highlights of the league's top scoring plays.",
     "category": "Special"
+  },
+  {
+    "ch": "Sportsnet.West.HD.ca2",
+    "start": "2026-10-03T05:00:00",
+    "planned_stop": "2026-10-03T05:30:00",
+    "title": "Live: Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.West.HD.ca2",
+    "start": "2026-10-03T05:30:00",
+    "planned_stop": "2026-10-03T06:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.West.HD.ca2",
+    "start": "2026-10-03T06:00:00",
+    "planned_stop": "2026-10-03T07:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.West.HD.ca2",
+    "start": "2026-10-03T07:00:00",
+    "planned_stop": "2026-10-03T08:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.West.HD.ca2",
+    "start": "2026-10-03T08:00:00",
+    "planned_stop": "2026-10-03T09:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.West.HD.ca2",
+    "start": "2026-10-03T09:00:00",
+    "planned_stop": "2026-10-03T10:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.West.HD.ca2",
+    "start": "2026-10-03T10:00:00",
+    "planned_stop": "2026-10-03T11:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.West.HD.ca2",
+    "start": "2026-10-03T11:00:00",
+    "planned_stop": "2026-10-03T12:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
+  },
+  {
+    "ch": "Sportsnet.West.HD.ca2",
+    "start": "2026-10-03T12:00:00",
+    "planned_stop": "2026-10-03T13:00:00",
+    "title": "Sportsnet Central",
+    "sub-title": "",
+    "desc": "Canada's premier destination for sports and analysis.",
+    "category": "News"
   },
   {
     "ch": "Réseau.des.Sports.(RDS).HD.ca2",
@@ -5280,6 +5703,78 @@
     "title": "Soccer: Super Ligue du Nord",
     "sub-title": "",
     "desc": "En provenance du Centre Sportif Bois-de-Boulogne, à Laval, au Québec, au Canada.",
+    "category": "Sports"
+  },
+  {
+    "ch": "Réseau.des.Sports.(RDS).HD.ca2",
+    "start": "2026-10-03T06:00:00",
+    "planned_stop": "2026-10-03T06:30:00",
+    "title": "Sports 30",
+    "sub-title": "",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
+    "category": "Sports talk"
+  },
+  {
+    "ch": "Réseau.des.Sports.(RDS).HD.ca2",
+    "start": "2026-10-03T06:30:00",
+    "planned_stop": "2026-10-03T07:00:00",
+    "title": "Sports 30",
+    "sub-title": "",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
+    "category": "Sports talk"
+  },
+  {
+    "ch": "Réseau.des.Sports.(RDS).HD.ca2",
+    "start": "2026-10-03T07:00:00",
+    "planned_stop": "2026-10-03T07:30:00",
+    "title": "Sports 30",
+    "sub-title": "",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
+    "category": "Sports talk"
+  },
+  {
+    "ch": "Réseau.des.Sports.(RDS).HD.ca2",
+    "start": "2026-10-03T07:30:00",
+    "planned_stop": "2026-10-03T09:30:00",
+    "title": "Live: Formule 1",
+    "sub-title": "",
+    "desc": "Le meilleur de la Formule 1.",
+    "category": "Sports"
+  },
+  {
+    "ch": "Réseau.des.Sports.(RDS).HD.ca2",
+    "start": "2026-10-03T09:30:00",
+    "planned_stop": "2026-10-03T10:00:00",
+    "title": "Sports 30",
+    "sub-title": "",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
+    "category": "Sports talk"
+  },
+  {
+    "ch": "Réseau.des.Sports.(RDS).HD.ca2",
+    "start": "2026-10-03T10:00:00",
+    "planned_stop": "2026-10-03T10:30:00",
+    "title": "Sports 30",
+    "sub-title": "",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
+    "category": "Sports talk"
+  },
+  {
+    "ch": "Réseau.des.Sports.(RDS).HD.ca2",
+    "start": "2026-10-03T10:30:00",
+    "planned_stop": "2026-10-03T11:00:00",
+    "title": "Sports 30",
+    "sub-title": "",
+    "desc": "Les plus récents dénouements dans le monde du sport. On analyse en profondeur les résultats des dernières 24 heures dans toutes les disciplines. Hockey, football, baseball, Formule 1, rien n'échappe à nos animateurs qui discutent également des dossiers chauds tels les rumeurs d'échange, le repêchage des futurs espoirs, les scandales reliés au dopage sans oublier une dose d'humour avec quelques gags bien placés par des collaborateurs de longue date et la fameuse compilation des plus beaux jeux du jour. De l'action en toute saison.",
+    "category": "Sports talk"
+  },
+  {
+    "ch": "Réseau.des.Sports.(RDS).HD.ca2",
+    "start": "2026-10-03T11:00:00",
+    "planned_stop": "2026-10-03T13:00:00",
+    "title": "Formule 1",
+    "sub-title": "",
+    "desc": "Le meilleur de la Formule 1.",
     "category": "Sports"
   },
   {
@@ -6318,49 +6813,94 @@
     "category": "Community"
   },
   {
-    "ch": "TVA.Sports.HD.ca2",
-    "start": "2026-09-29T21:30:00",
-    "planned_stop": "2026-09-29T22:00:00",
-    "title": "Live: JiC",
+    "ch": "ICI.Tele.HD.ca2",
+    "start": "2026-10-03T05:30:00",
+    "planned_stop": "2026-10-03T06:30:00",
+    "title": "Lusaq TV",
     "sub-title": "",
-    "desc": "Avec une liste impressionnante de collaborateurs, Jean-Charles Lajoie aborde le sport sous tous ses angles à sa manière, dans un univers télévisuel éclaté.",
-    "category": "Series"
+    "desc": "Une variété de chroniques sur les événements de la communauté portugaise de Montréal.",
+    "category": "Newsmagazine"
   },
   {
-    "ch": "TVA.Sports.HD.ca2",
-    "start": "2026-09-29T22:00:00",
-    "planned_stop": "2026-09-29T23:00:00",
-    "title": "Live: Avant-match LNH",
+    "ch": "ICI.Tele.HD.ca2",
+    "start": "2026-10-03T06:30:00",
+    "planned_stop": "2026-10-03T07:00:00",
+    "title": "Pinoy Pa Rin With Tenne & Michael",
     "sub-title": "",
-    "desc": "Présentation des points à surveiller avant la présentation du match de hockey.",
-    "category": "Sports talk"
+    "desc": "Featuring the local Filipino Canadian community.",
+    "category": "Community"
   },
   {
-    "ch": "TVA.Sports.HD.ca2",
-    "start": "2026-09-29T23:00:00",
-    "planned_stop": "2026-09-30T01:45:00",
-    "title": "Live: Hockey LNH",
+    "ch": "ICI.Tele.HD.ca2",
+    "start": "2026-10-03T07:00:00",
+    "planned_stop": "2026-10-03T08:00:00",
+    "title": "The Bossbens Show",
     "sub-title": "",
-    "desc": "Les Maple Leafs de Toronto accueillent les Canadiens de Montréal à la Scotiabank Arena pour un match de la saison régulière.",
-    "category": "Sports"
+    "desc": "Goûtez à la bonne musique et vivez les meilleures performances de vos artistes préférés.",
+    "category": "Religious"
   },
   {
-    "ch": "TVA.Sports.HD.ca2",
-    "start": "2026-09-30T01:45:00",
-    "planned_stop": "2026-09-30T02:45:00",
-    "title": "Live: L'après-match LNH",
+    "ch": "ICI.Tele.HD.ca2",
+    "start": "2026-10-03T08:00:00",
+    "planned_stop": "2026-10-03T09:00:00",
+    "title": "Ava TV",
     "sub-title": "",
-    "desc": "Dave Morissette et ses collaborateurs propulsent les amateurs de hockey au cœur de l'action de la LNH avec des analyses, faits saillants et opinions des matchs de la soirée.",
-    "category": "Sports talk"
+    "desc": "A directory to matters affecting the Iranian community of Montreal; this variety show has music segments, comedy sketches, interviews and Persian main events.",
+    "category": "Community"
   },
   {
-    "ch": "TVA.Sports.HD.ca2",
-    "start": "2026-09-30T02:45:00",
-    "planned_stop": "2026-09-30T05:00:00",
-    "title": "Live: Hockey LNH",
+    "ch": "ICI.Tele.HD.ca2",
+    "start": "2026-10-03T09:00:00",
+    "planned_stop": "2026-10-03T09:30:00",
+    "title": "Vivere Bene",
     "sub-title": "",
-    "desc": "Les Golden Knights de Vegas vont accueillir les Blackhawks de Chicago à la T-Mobile Arena à Las Vegas.",
-    "category": "Sports"
+    "desc": "On présente divers professionnels de la santé avec le but ultime de partager des conseils utiles sur la façon de bien vivre.",
+    "category": "Health"
+  },
+  {
+    "ch": "ICI.Tele.HD.ca2",
+    "start": "2026-10-03T09:30:00",
+    "planned_stop": "2026-10-03T10:00:00",
+    "title": "Kalimera Patrida",
+    "sub-title": "",
+    "desc": "Interviews with various Greek local personalities and information about what is happening in all levels of government within the Greek community.",
+    "category": "News"
+  },
+  {
+    "ch": "ICI.Tele.HD.ca2",
+    "start": "2026-10-03T10:00:00",
+    "planned_stop": "2026-10-03T10:30:00",
+    "title": "Yoga Passion",
+    "sub-title": "",
+    "desc": "Sharing the philosophy and benefits of yoga to awaken spiritual consciousness.",
+    "category": "Health"
+  },
+  {
+    "ch": "ICI.Tele.HD.ca2",
+    "start": "2026-10-03T10:30:00",
+    "planned_stop": "2026-10-03T11:00:00",
+    "title": "La table de Maria",
+    "sub-title": "",
+    "desc": "Le partage d'astuces et de recettes de cuisine gourmandes avec Maria Sanz.",
+    "category": "Cooking"
+  },
+  {
+    "ch": "ICI.Tele.HD.ca2",
+    "start": "2026-10-03T11:00:00",
+    "planned_stop": "2026-10-03T12:00:00",
+    "title": "Hay Horizon",
+    "sub-title": "",
+    "desc": "Hay Horizon reflète la vie de tous les jours des Arméniens à Montréal.",
+    "category": "Community"
+  },
+  {
+    "ch": "ICI.Tele.HD.ca2",
+    "start": "2026-10-03T12:00:00",
+    "planned_stop": "2026-10-03T12:30:00",
+    "title": "Vivere Bene",
+    "sub-title": "",
+    "desc": "On présente divers professionnels de la santé avec le but ultime de partager des conseils utiles sur la façon de bien vivre.",
+    "category": "Health"
   },
   {
     "ch": "TVA.Sports.HD.ca2",
@@ -6847,78 +7387,6 @@
     "sub-title": "",
     "desc": "Les Hurricanes de la Caroline et l'entraîneur Rod Brind'Amour accueillent les Capitals de Washington au Lenovo Center.",
     "category": "Sports"
-  },
-  {
-    "ch": "TSN.2.ca2",
-    "start": "2026-09-29T21:00:00",
-    "planned_stop": "2026-09-29T22:00:00",
-    "title": "PGA Tour Highlight Show",
-    "sub-title": "2026 Presidents Cup",
-    "desc": "Featuring round recaps and highlights from tournament events.",
-    "category": "Series"
-  },
-  {
-    "ch": "TSN.2.ca2",
-    "start": "2026-09-29T22:00:00",
-    "planned_stop": "2026-09-29T22:30:00",
-    "title": "SC",
-    "sub-title": "Top Bloopers of All-Time",
-    "desc": "The best and worst from the world of sports.",
-    "category": "Series"
-  },
-  {
-    "ch": "TSN.2.ca2",
-    "start": "2026-09-29T22:30:00",
-    "planned_stop": "2026-09-29T23:00:00",
-    "title": "SC",
-    "sub-title": "Top Moments of the FIFA World Cup",
-    "desc": "The best and worst from the world of sports.",
-    "category": "Series"
-  },
-  {
-    "ch": "TSN.2.ca2",
-    "start": "2026-09-29T23:00:00",
-    "planned_stop": "2026-09-29T23:30:00",
-    "title": "SC",
-    "sub-title": "August Plays of the Month",
-    "desc": "The best and worst from the world of sports.",
-    "category": "Series"
-  },
-  {
-    "ch": "TSN.2.ca2",
-    "start": "2026-09-29T23:30:00",
-    "planned_stop": "2026-09-30T00:00:00",
-    "title": "SC",
-    "sub-title": "Top 40 Hail Marys",
-    "desc": "The best and worst from the world of sports.",
-    "category": "Series"
-  },
-  {
-    "ch": "TSN.2.ca2",
-    "start": "2026-09-30T00:00:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "CFL Football",
-    "sub-title": "",
-    "desc": "The Edmonton Elks host the Hamilton Tiger-Cats in a regular-season CFL game. Edmonton sits first in the West despite a 24-19 road loss to Toronto last week, while Hamilton arrives having lost four straight, including a 37-25 home defeat to Montreal.",
-    "category": "Sports"
-  },
-  {
-    "ch": "TSN.2.ca2",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T03:30:00",
-    "title": "Film Never Lies with Luke Willson",
-    "sub-title": "",
-    "desc": "Hosted by former NFL player and current TSN analyst Luke Willson.",
-    "category": "Sports talk"
-  },
-  {
-    "ch": "TSN.2.ca2",
-    "start": "2026-09-30T03:30:00",
-    "planned_stop": "2026-09-30T04:30:00",
-    "title": "Golf Talk Canada",
-    "sub-title": "",
-    "desc": "TSN's Mark Zecchino and Bob Weeks discuss the latest news in the world of golf.",
-    "category": "Golf"
   },
   {
     "ch": "TSN.2.ca2",
@@ -7804,78 +8272,6 @@
   },
   {
     "ch": "TSN.3.ca2",
-    "start": "2026-09-29T21:00:00",
-    "planned_stop": "2026-09-29T21:30:00",
-    "title": "College Football Live",
-    "sub-title": "",
-    "desc": "Want to know up-to-the-minute reports about your favorite college football team? ESPN has it covered with this weekday studio show, a roundtable format that emphasizes discussion and opinions on the sport's biggest stories and newsmakers. The half-hour program features a rotating roster of analysts that includes coaches, former players, and media personalities.",
-    "category": "Football"
-  },
-  {
-    "ch": "TSN.3.ca2",
-    "start": "2026-09-29T21:30:00",
-    "planned_stop": "2026-09-29T22:00:00",
-    "title": "Live: Pardon the Interruption",
-    "sub-title": "",
-    "desc": "The debate is the story in this fast-paced, half-hour series hosted by former Washington Post sportswriters Tony Kornheiser and Michael Wilbon. The pair engage in high-energy discussions, conduct interviews and often argue over topics not even related to sports. Other sports reporters appear as guests and offer opinions on the top stories of the day.",
-    "category": "Sports talk"
-  },
-  {
-    "ch": "TSN.3.ca2",
-    "start": "2026-09-29T22:00:00",
-    "planned_stop": "2026-09-29T23:30:00",
-    "title": "Live: SportsCentre",
-    "sub-title": "",
-    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
-    "category": "News"
-  },
-  {
-    "ch": "TSN.3.ca2",
-    "start": "2026-09-29T23:30:00",
-    "planned_stop": "2026-09-30T00:00:00",
-    "title": "SC",
-    "sub-title": "Top Controversial Plays",
-    "desc": "The best and worst from the world of sports.",
-    "category": "Series"
-  },
-  {
-    "ch": "TSN.3.ca2",
-    "start": "2026-09-30T00:00:00",
-    "planned_stop": "2026-09-30T00:30:00",
-    "title": "Live: WNBA Playoffs Pregame",
-    "sub-title": "",
-    "desc": "Pregame coverage for the upcoming WNBA playoff game.",
-    "category": "Basketball"
-  },
-  {
-    "ch": "TSN.3.ca2",
-    "start": "2026-09-30T00:30:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "Live: WNBA Basketball",
-    "sub-title": "",
-    "desc": "The New York Liberty hosts the Minnesota Lynx at Barclays Center in Game 2 postseason action. New York looks to build on a 91-75 victory from their Game 1 win, while Minnesota relies on All-Star Natasha Howard to defend their top-seeded position.",
-    "category": "Sports"
-  },
-  {
-    "ch": "TSN.3.ca2",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T04:00:00",
-    "title": "Live: SportsCentre",
-    "sub-title": "",
-    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
-    "category": "News"
-  },
-  {
-    "ch": "TSN.3.ca2",
-    "start": "2026-09-30T04:00:00",
-    "planned_stop": "2026-09-30T05:00:00",
-    "title": "Live: SC With Jay Onrait",
-    "sub-title": "",
-    "desc": "The latest scores and highlights, with host Jay Onrait.",
-    "category": "Sports talk"
-  },
-  {
-    "ch": "TSN.3.ca2",
     "start": "2026-09-30T05:00:00",
     "planned_stop": "2026-09-30T06:00:00",
     "title": "Live: SportsCentre",
@@ -8560,60 +8956,6 @@
   },
   {
     "ch": "TSN.4.ca2",
-    "start": "2026-09-29T22:00:00",
-    "planned_stop": "2026-09-29T23:30:00",
-    "title": "Live: SportsCentre",
-    "sub-title": "",
-    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
-    "category": "News"
-  },
-  {
-    "ch": "TSN.4.ca2",
-    "start": "2026-09-29T23:30:00",
-    "planned_stop": "2026-09-30T00:00:00",
-    "title": "SC",
-    "sub-title": "NBA Plays of the Year",
-    "desc": "The best and worst from the world of sports.",
-    "category": "Series"
-  },
-  {
-    "ch": "TSN.4.ca2",
-    "start": "2026-09-30T00:00:00",
-    "planned_stop": "2026-09-30T00:30:00",
-    "title": "Live: WNBA Playoffs Pregame",
-    "sub-title": "",
-    "desc": "Pregame coverage for the upcoming WNBA playoff game.",
-    "category": "Basketball"
-  },
-  {
-    "ch": "TSN.4.ca2",
-    "start": "2026-09-30T00:30:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "Live: WNBA Basketball",
-    "sub-title": "",
-    "desc": "The New York Liberty hosts the Minnesota Lynx at Barclays Center in Game 2 postseason action. New York looks to build on a 91-75 victory from their Game 1 win, while Minnesota relies on All-Star Natasha Howard to defend their top-seeded position.",
-    "category": "Sports"
-  },
-  {
-    "ch": "TSN.4.ca2",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T04:00:00",
-    "title": "Live: SportsCentre",
-    "sub-title": "",
-    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
-    "category": "News"
-  },
-  {
-    "ch": "TSN.4.ca2",
-    "start": "2026-09-30T04:00:00",
-    "planned_stop": "2026-09-30T05:00:00",
-    "title": "Live: SC With Jay Onrait",
-    "sub-title": "",
-    "desc": "The latest scores and highlights, with host Jay Onrait.",
-    "category": "Sports talk"
-  },
-  {
-    "ch": "TSN.4.ca2",
     "start": "2026-09-30T05:00:00",
     "planned_stop": "2026-09-30T06:00:00",
     "title": "Live: SportsCentre",
@@ -9160,60 +9502,6 @@
     "sub-title": "",
     "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
     "category": "News"
-  },
-  {
-    "ch": "TSN.5.ca2",
-    "start": "2026-09-29T22:00:00",
-    "planned_stop": "2026-09-29T23:30:00",
-    "title": "Live: SportsCentre",
-    "sub-title": "",
-    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
-    "category": "News"
-  },
-  {
-    "ch": "TSN.5.ca2",
-    "start": "2026-09-29T23:30:00",
-    "planned_stop": "2026-09-30T00:00:00",
-    "title": "SC",
-    "sub-title": "Top Controversial Plays",
-    "desc": "The best and worst from the world of sports.",
-    "category": "Series"
-  },
-  {
-    "ch": "TSN.5.ca2",
-    "start": "2026-09-30T00:00:00",
-    "planned_stop": "2026-09-30T00:30:00",
-    "title": "Live: WNBA Playoffs Pregame",
-    "sub-title": "",
-    "desc": "Pregame coverage for the upcoming WNBA playoff game.",
-    "category": "Basketball"
-  },
-  {
-    "ch": "TSN.5.ca2",
-    "start": "2026-09-30T00:30:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "Live: WNBA Basketball",
-    "sub-title": "",
-    "desc": "The New York Liberty hosts the Minnesota Lynx at Barclays Center in Game 2 postseason action. New York looks to build on a 91-75 victory from their Game 1 win, while Minnesota relies on All-Star Natasha Howard to defend their top-seeded position.",
-    "category": "Sports"
-  },
-  {
-    "ch": "TSN.5.ca2",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T04:00:00",
-    "title": "Live: SportsCentre",
-    "sub-title": "",
-    "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
-    "category": "News"
-  },
-  {
-    "ch": "TSN.5.ca2",
-    "start": "2026-09-30T04:00:00",
-    "planned_stop": "2026-09-30T05:00:00",
-    "title": "Live: SC With Jay Onrait",
-    "sub-title": "",
-    "desc": "The latest scores and highlights, with host Jay Onrait.",
-    "category": "Sports talk"
   },
   {
     "ch": "TSN.5.ca2",
@@ -9826,60 +10114,6 @@
     "sub-title": "",
     "desc": "TSN's flagship show providing news, highlights, analysis and interviews from the world of sports.",
     "category": "News"
-  },
-  {
-    "ch": "Sportsnet.360.HD.ca2",
-    "start": "2026-09-29T21:00:00",
-    "planned_stop": "2026-09-30T00:00:00",
-    "title": "Live: MLB Baseball",
-    "sub-title": "",
-    "desc": "The Chicago White Sox and the Houston Astros meet for Game 1 of the American League Wild Card Series. Munetaka Murakami leads the White Sox with 35 home runs, while Yordan Alvarez leads the Astros with 42 home runs, .316 batting average and 106 RBIs.",
-    "category": "Sports"
-  },
-  {
-    "ch": "Sportsnet.360.HD.ca2",
-    "start": "2026-09-30T00:00:00",
-    "planned_stop": "2026-09-30T00:30:00",
-    "title": "NL Wildcard in 30",
-    "sub-title": "Philadelphia Phillies at Atlanta Braves",
-    "desc": "Game 1 from Sept. 29, 2026.",
-    "category": "Series"
-  },
-  {
-    "ch": "Sportsnet.360.HD.ca2",
-    "start": "2026-09-30T00:30:00",
-    "planned_stop": "2026-09-30T01:00:00",
-    "title": "MLB's Top 100",
-    "sub-title": "",
-    "desc": "Counting down the top 100 plays from the past year in the MLB.",
-    "category": "Special"
-  },
-  {
-    "ch": "Sportsnet.360.HD.ca2",
-    "start": "2026-09-30T01:00:00",
-    "planned_stop": "2026-09-30T01:30:00",
-    "title": "MLB Plays of the Week",
-    "sub-title": "",
-    "desc": "A look at the top plays and moments from the past week in baseball.",
-    "category": "Special"
-  },
-  {
-    "ch": "Sportsnet.360.HD.ca2",
-    "start": "2026-09-30T01:30:00",
-    "planned_stop": "2026-09-30T02:00:00",
-    "title": "NL Wildcard in 30",
-    "sub-title": "Philadelphia Phillies at Atlanta Braves",
-    "desc": "Game 1 from Sept. 29, 2026.",
-    "category": "Series"
-  },
-  {
-    "ch": "Sportsnet.360.HD.ca2",
-    "start": "2026-09-30T02:00:00",
-    "planned_stop": "2026-09-30T05:00:00",
-    "title": "Live: MLB Baseball",
-    "sub-title": "",
-    "desc": "The Padres host the Cubs in Game 1 of the National League Wild Card Series. San Diego relies on Manny Machado and Fernando Tatis Jr. in the lineup, while visiting Chicago counters behind Pete Crow-Armstrong to open the best-of-three series.",
-    "category": "Sports"
   },
   {
     "ch": "Sportsnet.360.HD.ca2",
@@ -10549,51 +10783,6 @@
   },
   {
     "ch": "One.Soccer.ca2",
-    "start": "2026-09-30T01:21:00",
-    "planned_stop": "2026-09-30T01:50:00",
-    "title": "Bundesliga",
-    "sub-title": "",
-    "desc": "",
-    "category": "Performing Arts"
-  },
-  {
-    "ch": "One.Soccer.ca2",
-    "start": "2026-09-30T01:50:00",
-    "planned_stop": "2026-09-30T04:02:00",
-    "title": "Live: CONCACAF Nations League Soccer",
-    "sub-title": "Belize vs. St Vincent and the Grenadines",
-    "desc": "From FFB Field in Belize.",
-    "category": "Sports"
-  },
-  {
-    "ch": "One.Soccer.ca2",
-    "start": "2026-09-30T04:02:00",
-    "planned_stop": "2026-09-30T06:02:00",
-    "title": "NWSL Soccer",
-    "sub-title": "San Diego Wave FC at Racing Louisville FC",
-    "desc": "From Lynn Family Stadium in Louisville, Ky.",
-    "category": "Sports"
-  },
-  {
-    "ch": "One.Soccer.ca2",
-    "start": "2026-09-30T06:02:00",
-    "planned_stop": "2026-09-30T08:02:00",
-    "title": "Canadian Premier League Soccer",
-    "sub-title": "Inter Toronto at Vancouver FC",
-    "desc": "From Willoughby Community Park in Langley, British Columbia.",
-    "category": "Sports"
-  },
-  {
-    "ch": "One.Soccer.ca2",
-    "start": "2026-09-30T08:02:00",
-    "planned_stop": "2026-09-30T10:02:00",
-    "title": "Canadian Premier League Soccer",
-    "sub-title": "Supra du Québec at Cavalry FC",
-    "desc": "From ATCO Field in Calgary, Alberta.",
-    "category": "Sports"
-  },
-  {
-    "ch": "One.Soccer.ca2",
     "start": "2026-09-30T10:02:00",
     "planned_stop": "2026-09-30T11:59:00",
     "title": "Canadian Premier League Soccer",
@@ -10999,24 +11188,6 @@
   },
   {
     "ch": "TSN.4K.ca2",
-    "start": "2026-09-30T02:30:00",
-    "planned_stop": "2026-09-30T07:00:00",
-    "title": "Watch 4K Coverage of Live Sports Action",
-    "sub-title": "",
-    "desc": "Tune in for live sports in 4K.",
-    "category": "Sports"
-  },
-  {
-    "ch": "TSN.4K.ca2",
-    "start": "2026-09-30T07:00:00",
-    "planned_stop": "2026-09-30T10:00:00",
-    "title": "Watch 4K Coverage of Live Sports Action",
-    "sub-title": "",
-    "desc": "Tune in for live sports in 4K.",
-    "category": "Sports"
-  },
-  {
-    "ch": "TSN.4K.ca2",
     "start": "2026-09-30T10:00:00",
     "planned_stop": "2026-09-30T14:00:00",
     "title": "Watch 4K Coverage of Live Sports Action",
@@ -11184,69 +11355,6 @@
     "title": "Watch 4K Coverage of Live Sports Action",
     "sub-title": "",
     "desc": "Tune in for live sports in 4K.",
-    "category": "Sports"
-  },
-  {
-    "ch": "Sportsnet.4K.ca2",
-    "start": "2026-09-30T02:00:00",
-    "planned_stop": "2026-09-30T04:30:00",
-    "title": "Live: NHL Hockey",
-    "sub-title": "Vancouver Canucks at Edmonton Oilers",
-    "desc": "The Edmonton Oilers host the Vancouver Canucks at Rogers Place in a Pacific Division game. Defenseman Evan Bouchard leads the Oilers offensive blue line, while center Elias Pettersson paces the Canucks offense on the road in this regular-season game.",
-    "category": "Sports"
-  },
-  {
-    "ch": "Sportsnet.4K.ca2",
-    "start": "2026-09-30T04:30:00",
-    "planned_stop": "2026-09-30T06:00:00",
-    "title": "Live: Sportsnet Central",
-    "sub-title": "",
-    "desc": "Canada's premier destination for sports and analysis.",
-    "category": "Sports"
-  },
-  {
-    "ch": "Sportsnet.4K.ca2",
-    "start": "2026-09-30T06:00:00",
-    "planned_stop": "2026-09-30T06:30:00",
-    "title": "AL Wildcard in 30",
-    "sub-title": "Boston Red Sox at New York Yankees",
-    "desc": "Game 1 from Sept. 29, 2026.",
-    "category": "Sports"
-  },
-  {
-    "ch": "Sportsnet.4K.ca2",
-    "start": "2026-09-30T06:30:00",
-    "planned_stop": "2026-09-30T07:00:00",
-    "title": "NL Wildcard in 30",
-    "sub-title": "Philadelphia Phillies at Atlanta Braves",
-    "desc": "Game 1 from Sept. 29, 2026.",
-    "category": "Sports"
-  },
-  {
-    "ch": "Sportsnet.4K.ca2",
-    "start": "2026-09-30T07:00:00",
-    "planned_stop": "2026-09-30T07:30:00",
-    "title": "Live: Sportsnet Central",
-    "sub-title": "",
-    "desc": "Canada's premier destination for sports and analysis.",
-    "category": "Sports"
-  },
-  {
-    "ch": "Sportsnet.4K.ca2",
-    "start": "2026-09-30T07:30:00",
-    "planned_stop": "2026-09-30T08:00:00",
-    "title": "Sportsnet Central",
-    "sub-title": "",
-    "desc": "Canada's premier destination for sports and analysis.",
-    "category": "Sports"
-  },
-  {
-    "ch": "Sportsnet.4K.ca2",
-    "start": "2026-09-30T08:00:00",
-    "planned_stop": "2026-09-30T09:00:00",
-    "title": "Sportsnet Central",
-    "sub-title": "",
-    "desc": "Canada's premier destination for sports and analysis.",
     "category": "Sports"
   },
   {
@@ -11908,42 +12016,6 @@
   },
   {
     "ch": "Fox.Soccer.Plus.HD.us2",
-    "start": "2026-09-29T21:00:00",
-    "planned_stop": "2026-09-29T23:00:00",
-    "title": "Women's Italian Serie A Soccer",
-    "sub-title": "",
-    "desc": "From Arena Civica in Milan, Italy.",
-    "category": "Sports"
-  },
-  {
-    "ch": "Fox.Soccer.Plus.HD.us2",
-    "start": "2026-09-29T23:00:00",
-    "planned_stop": "2026-09-30T01:00:00",
-    "title": "Women's Italian Serie A Soccer",
-    "sub-title": "",
-    "desc": "From Stadio Enzo Ricci in Sassuolo, Italy.",
-    "category": "Sports"
-  },
-  {
-    "ch": "Fox.Soccer.Plus.HD.us2",
-    "start": "2026-09-30T01:00:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "Women's Italian Serie A Soccer",
-    "sub-title": "",
-    "desc": "From Stadio La Marmora-Pozzo in Biella, Italy.",
-    "category": "Sports"
-  },
-  {
-    "ch": "Fox.Soccer.Plus.HD.us2",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T05:00:00",
-    "title": "AFL Women's Premiership Football",
-    "sub-title": "",
-    "desc": "From IKON Park in Melbourne, Victoria, Australia.",
-    "category": "Sports"
-  },
-  {
-    "ch": "Fox.Soccer.Plus.HD.us2",
     "start": "2026-09-30T05:00:00",
     "planned_stop": "2026-09-30T06:00:00",
     "title": "UEFA Nations League Matchnight Highlights",
@@ -12376,24 +12448,6 @@
   },
   {
     "ch": "NBC.Sports.4K.us2",
-    "start": "2026-09-29T22:00:00",
-    "planned_stop": "2026-09-30T02:00:00",
-    "title": "SIGN OFF",
-    "sub-title": "",
-    "desc": "Sign off.",
-    "category": "Special"
-  },
-  {
-    "ch": "NBC.Sports.4K.us2",
-    "start": "2026-09-30T02:00:00",
-    "planned_stop": "2026-09-30T06:00:00",
-    "title": "SIGN OFF",
-    "sub-title": "",
-    "desc": "Sign off.",
-    "category": "Special"
-  },
-  {
-    "ch": "NBC.Sports.4K.us2",
     "start": "2026-09-30T06:00:00",
     "planned_stop": "2026-09-30T10:00:00",
     "title": "SIGN OFF",
@@ -12553,33 +12607,6 @@
     "sub-title": "",
     "desc": "Sign off.",
     "category": "Special"
-  },
-  {
-    "ch": "ESPN.HD.us2",
-    "start": "2026-09-29T21:00:00",
-    "planned_stop": "2026-09-30T00:00:00",
-    "title": "Live: NHL Hockey",
-    "sub-title": "",
-    "desc": "The Carolina Hurricanes host the Florida Panthers in an Eastern Conference game at Lenovo Center. Left wing Brady Tkachuk leads the Panthers attack, while center Justin Robidas paces the Hurricanes offense in this regular-season game.",
-    "category": "Sports"
-  },
-  {
-    "ch": "ESPN.HD.us2",
-    "start": "2026-09-30T00:00:00",
-    "planned_stop": "2026-09-30T02:30:00",
-    "title": "Live: NHL Hockey",
-    "sub-title": "",
-    "desc": "The Boston Bruins host the New York Rangers at TD Garden on opening night. Boston seeks revenge after dropping a 4-3 overtime decision in their previous meeting in January, while visiting New York looks for another regular-season road win.",
-    "category": "Sports"
-  },
-  {
-    "ch": "ESPN.HD.us2",
-    "start": "2026-09-30T02:30:00",
-    "planned_stop": "2026-09-30T05:00:00",
-    "title": "Live: NHL Hockey",
-    "sub-title": "",
-    "desc": "The Vegas Golden Knights host the Chicago Blackhawks at T-Mobile Arena in Las Vegas. Center Jack Eichel paces the offense for Vegas. Chicago relies on center Teuvo Teräväinen while captain Connor Bedard recovers from shoulder surgery.",
-    "category": "Sports"
   },
   {
     "ch": "ESPN.HD.us2",
@@ -13111,78 +13138,6 @@
     "sub-title": "",
     "desc": "Montana State visits Idaho at Kibbie Dome in Big Sky play. Unbeaten Montana State enters following a 28-14 win over Northern Arizona behind a Patrick Duchien touchdown. Idaho seeks to break a four-game skid after a 41-39 loss to Abilene Christian.",
     "category": "Sports"
-  },
-  {
-    "ch": "ESPN2.HD.us2",
-    "start": "2026-09-29T21:00:00",
-    "planned_stop": "2026-09-29T21:30:00",
-    "title": "Live: SportsCenter",
-    "sub-title": "",
-    "desc": "The latest news, highlights and inside information from every corner of the sports world is presented each day on \"SportsCenter,\" ESPN's first-ever program when the network debuted in September of 1979. The flagship series airs an evening edition and a brand new midnight show each weekday before the stage is cleared for a live \"SportsCenter\" morning block that emphasizes fast-paced, highlights-driven reports and what's new on social media platforms.",
-    "category": "News"
-  },
-  {
-    "ch": "ESPN2.HD.us2",
-    "start": "2026-09-29T21:30:00",
-    "planned_stop": "2026-09-29T22:00:00",
-    "title": "Live: Pardon the Interruption",
-    "sub-title": "",
-    "desc": "The debate is the story in this fast-paced, half-hour series hosted by former Washington Post sportswriters Tony Kornheiser and Michael Wilbon. The pair engage in high-energy discussions, conduct interviews and often argue over topics not even related to sports. Other sports reporters appear as guests and offer opinions on the top stories of the day.",
-    "category": "Sports talk"
-  },
-  {
-    "ch": "ESPN2.HD.us2",
-    "start": "2026-09-29T22:00:00",
-    "planned_stop": "2026-09-29T23:00:00",
-    "title": "Live: SportsCenter",
-    "sub-title": "",
-    "desc": "The latest news, highlights and inside information from every corner of the sports world is presented each day on \"SportsCenter,\" ESPN's first-ever program when the network debuted in September of 1979. The flagship series airs an evening edition and a brand new midnight show each weekday before the stage is cleared for a live \"SportsCenter\" morning block that emphasizes fast-paced, highlights-driven reports and what's new on social media platforms.",
-    "category": "News"
-  },
-  {
-    "ch": "ESPN2.HD.us2",
-    "start": "2026-09-29T23:00:00",
-    "planned_stop": "2026-09-30T00:00:00",
-    "title": "Best in Dog Sports: AKC Celebrates USA 250",
-    "sub-title": "",
-    "desc": "Celebrate the best in dog sports with highlights from AKC Celebrates USA 250, featuring top canine athletes competing in agility and diving dogs. From Philadelphia.",
-    "category": "Special"
-  },
-  {
-    "ch": "ESPN2.HD.us2",
-    "start": "2026-09-30T00:00:00",
-    "planned_stop": "2026-09-30T01:00:00",
-    "title": "NFL Live",
-    "sub-title": "",
-    "desc": "Host Laura Rutledge takes the helm of this weekday show featuring the likes of Marcus Spears, Dan Orlovsky, Mina Kimes, and Adam Schefter. The \"NFL Live\" crew entertains fans while offering all the latest news and analysis from across the NFL.",
-    "category": "Football"
-  },
-  {
-    "ch": "ESPN2.HD.us2",
-    "start": "2026-09-30T01:00:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "30 for 30",
-    "sub-title": "Bullies of Baltimore",
-    "desc": "The players of the 2000 Baltimore Ravens come together to reflect on their legendary year of winning the Super Bowl.",
-    "category": "Series"
-  },
-  {
-    "ch": "ESPN2.HD.us2",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T04:00:00",
-    "title": "SEC Storied",
-    "sub-title": "Becoming Hines Ward",
-    "desc": "From Super Bowl MVP to a man searching for peace, this is the untold story of Hines Ward, whose journey is defined not by touchdowns, but by identity; the son of a Korean mother and an American soldier, Ward grew up caught between worlds, never fully accepted by either.",
-    "category": "Series"
-  },
-  {
-    "ch": "ESPN2.HD.us2",
-    "start": "2026-09-30T04:00:00",
-    "planned_stop": "2026-09-30T05:00:00",
-    "title": "NFL Live",
-    "sub-title": "",
-    "desc": "Host Laura Rutledge takes the helm of this weekday show featuring the likes of Marcus Spears, Dan Orlovsky, Mina Kimes, and Adam Schefter. The \"NFL Live\" crew entertains fans while offering all the latest news and analysis from across the NFL.",
-    "category": "Football"
   },
   {
     "ch": "ESPN2.HD.us2",
@@ -13789,33 +13744,6 @@
   },
   {
     "ch": "CBS.Sports.Network.HD.us2",
-    "start": "2026-09-29T22:00:00",
-    "planned_stop": "2026-09-30T01:00:00",
-    "title": "UFC Reloaded",
-    "sub-title": "",
-    "desc": "Featuring a heavyweight bout between reigning champion Francis Ngannou and interim champion Cyril Gane. Also, Brandon Moreno and Deivesion Figueiredo face off for a third time for the flyweight title.",
-    "category": "Sports"
-  },
-  {
-    "ch": "CBS.Sports.Network.HD.us2",
-    "start": "2026-09-30T01:00:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "Inside College Football",
-    "sub-title": "",
-    "desc": "Adam Zucker, Rick Neuheisel and Brian Jones discuss college football news and preview the SEC game of the week.",
-    "category": "Football"
-  },
-  {
-    "ch": "CBS.Sports.Network.HD.us2",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T06:00:00",
-    "title": "UFC Reloaded",
-    "sub-title": "",
-    "desc": "Featuring a heavyweight bout between reigning champion Francis Ngannou and interim champion Cyril Gane. Also, Brandon Moreno and Deivesion Figueiredo face off for a third time for the flyweight title.",
-    "category": "Sports"
-  },
-  {
-    "ch": "CBS.Sports.Network.HD.us2",
     "start": "2026-09-30T06:00:00",
     "planned_stop": "2026-09-30T08:00:00",
     "title": "Inside College Football",
@@ -14308,69 +14236,6 @@
     "sub-title": "",
     "desc": "Adam Zucker, Rick Neuheisel and Brian Jones discuss college football news and preview the SEC game of the week.",
     "category": "Football"
-  },
-  {
-    "ch": "ESPN.Deportes.HD.us2",
-    "start": "2026-09-29T21:00:00",
-    "planned_stop": "2026-09-29T22:00:00",
-    "title": "Live: Enfocados",
-    "sub-title": "",
-    "desc": "Se ofrece una visión global de múltiples deportes, con la conducción de expertos reconocidos que combinan respeto y experiencia.",
-    "category": "Sports talk"
-  },
-  {
-    "ch": "ESPN.Deportes.HD.us2",
-    "start": "2026-09-29T22:00:00",
-    "planned_stop": "2026-09-29T23:00:00",
-    "title": "Live: Generación F",
-    "sub-title": "",
-    "desc": "Se mezcla el debate e irreverencia con rigor periodístico, creando una atmósfera única.",
-    "category": "Sports talk"
-  },
-  {
-    "ch": "ESPN.Deportes.HD.us2",
-    "start": "2026-09-29T23:00:00",
-    "planned_stop": "2026-09-30T00:00:00",
-    "title": "Live: SportsCenter",
-    "sub-title": "",
-    "desc": "Las últimas noticias, momentos destacados e información de todos los rincones del mundo del deporte se presenta cada día en \"SportsCenter\", el primer programa de ESPN cuando la red se estrenó en septiembre de 1979. La serie se transmite en tres ediciones nocturnas, luego se re-transmite la última edición cuatro veces cada mañana de lunes a viernes antes de despejar el escenario para un bloque de seis horas de \"SportsCenter\" en vivo, que pone más énfasis en la interactividad de los fanáticos, noticias, análisis, comentarios y la cobertura de las conferencias de prensa.",
-    "category": "News"
-  },
-  {
-    "ch": "ESPN.Deportes.HD.us2",
-    "start": "2026-09-30T00:00:00",
-    "planned_stop": "2026-09-30T01:00:00",
-    "title": "Es así y punto",
-    "sub-title": "",
-    "desc": "Se discuten los temas más controvertidos del momento, y se analizan y desvelan todos los ángulos de esas noticias que importan a los fanáticos del deporte.",
-    "category": "Sports talk"
-  },
-  {
-    "ch": "ESPN.Deportes.HD.us2",
-    "start": "2026-09-30T01:00:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "Ahora o nunca",
-    "sub-title": "",
-    "desc": "Show que mezcla la cultura y el deporte. Un repaso por los más recientes titulares deportivos, lo último en películas, música, esports, el mundo de las celebridades y mucho más.",
-    "category": "Sports talk"
-  },
-  {
-    "ch": "ESPN.Deportes.HD.us2",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T04:00:00",
-    "title": "Live: Fútbol picante",
-    "sub-title": "",
-    "desc": "La mesa más picante discute las últimas novedades del fútbol mexicano y analiza la actuación de los futbolistas mexicanos en el exterior.",
-    "category": "Sports talk"
-  },
-  {
-    "ch": "ESPN.Deportes.HD.us2",
-    "start": "2026-09-30T04:00:00",
-    "planned_stop": "2026-09-30T05:00:00",
-    "title": "Live: SportsCenter",
-    "sub-title": "",
-    "desc": "Las últimas noticias, momentos destacados e información de todos los rincones del mundo del deporte se presenta cada día en \"SportsCenter\", el primer programa de ESPN cuando la red se estrenó en septiembre de 1979. La serie se transmite en tres ediciones nocturnas, luego se re-transmite la última edición cuatro veces cada mañana de lunes a viernes antes de despejar el escenario para un bloque de seis horas de \"SportsCenter\" en vivo, que pone más énfasis en la interactividad de los fanáticos, noticias, análisis, comentarios y la cobertura de las conferencias de prensa.",
-    "category": "News"
   },
   {
     "ch": "ESPN.Deportes.HD.us2",
@@ -15001,114 +14866,6 @@
     "sub-title": "",
     "desc": "La mesa más picante discute las últimas novedades del fútbol mexicano y analiza la actuación de los futbolistas mexicanos en el exterior.",
     "category": "Sports talk"
-  },
-  {
-    "ch": "SkySp.F1.HD.uk",
-    "start": "2026-09-29T21:00:00",
-    "planned_stop": "2026-09-29T22:00:00",
-    "title": "Italian F1 GP Highlights",
-    "sub-title": "",
-    "desc": "It's lights out at Monza with a shock name on pole as Pierre Gasly leads the way from George Russell. The Ferraris take the second row, while Kimi Antonelli starts at the back. (06.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.F1.HD.uk",
-    "start": "2026-09-29T22:00:00",
-    "planned_stop": "2026-09-29T23:00:00",
-    "title": "Spanish F1 GP Highlights",
-    "sub-title": "",
-    "desc": "It's lights out for the Spanish Grand Prix, taking place at the brand-new Madring. Lando Norris starts from pole with Kimi Antonelli joining the Brit on the front row. (13.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.F1.HD.uk",
-    "start": "2026-09-29T23:00:00",
-    "planned_stop": "2026-09-30T00:00:00",
-    "title": "Azerbaijan F1 GP Highlights",
-    "sub-title": "It's lights out in Baku",
-    "desc": "George Russell starts in P1 for the 12th time in his career as Charles Leclerc and Oscar Piastri complete the top three. Kimi Antonelli begins down in 16th. (26.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.F1.HD.uk",
-    "start": "2026-09-30T00:00:00",
-    "planned_stop": "2026-09-30T00:30:00",
-    "title": "The Best of Canada 2026",
-    "sub-title": "",
-    "desc": "A round-up of the leading stories and features with Sky's Formula 1 presenters during the 2026 Canadian Grand Prix.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.F1.HD.uk",
-    "start": "2026-09-30T00:30:00",
-    "planned_stop": "2026-09-30T01:00:00",
-    "title": "The Best of Monaco 2026",
-    "sub-title": "",
-    "desc": "A round-up of the leading stories and features with Sky's Formula 1 presenters during the 2026 Monaco Grand Prix.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.F1.HD.uk",
-    "start": "2026-09-30T01:00:00",
-    "planned_stop": "2026-09-30T01:30:00",
-    "title": "The Best of Barcelona 2026",
-    "sub-title": "",
-    "desc": "A round-up of the leading stories and features with Sky's Formula 1 presenters during the 2026 Barcelona-Catalunya Grand Prix.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.F1.HD.uk",
-    "start": "2026-09-30T01:30:00",
-    "planned_stop": "2026-09-30T02:00:00",
-    "title": "The Best of Austria 2026",
-    "sub-title": "",
-    "desc": "A round-up of the leading stories and features with Sky's Formula 1 presenters during the 2026 Austrian Grand Prix.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.F1.HD.uk",
-    "start": "2026-09-30T02:00:00",
-    "planned_stop": "2026-09-30T02:15:00",
-    "title": "The Best of Japan 2026",
-    "sub-title": "",
-    "desc": "A round-up of the leading stories and features with Sky's Formula 1 presenters during the 2026 Japanese Grand Prix.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.F1.HD.uk",
-    "start": "2026-09-30T02:15:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "The Best of Miami 2026",
-    "sub-title": "",
-    "desc": "A round-up of the leading stories and features with Sky's Formula 1 presenters during the 2026 Miami Grand Prix.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.F1.HD.uk",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T03:25:00",
-    "title": "The Best of The Dutch GP 2026",
-    "sub-title": "",
-    "desc": "A round-up of the leading stories and features with Sky's Formula 1 presenters during the 2026 Dutch Grand Prix in Zandvoort.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.F1.HD.uk",
-    "start": "2026-09-30T03:25:00",
-    "planned_stop": "2026-09-30T04:00:00",
-    "title": "The Best of Italy 2026",
-    "sub-title": "",
-    "desc": "A round-up of the leading stories and features with Sky's Formula 1 presenters during the 2026 Italian Grand Prix at Monza.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.F1.HD.uk",
-    "start": "2026-09-30T04:00:00",
-    "planned_stop": "2026-09-30T04:30:00",
-    "title": "The Best of Canada 2026",
-    "sub-title": "",
-    "desc": "A round-up of the leading stories and features with Sky's Formula 1 presenters during the 2026 Canadian Grand Prix.",
-    "category": "Sports"
   },
   {
     "ch": "SkySp.F1.HD.uk",
@@ -15810,96 +15567,6 @@
     "title": "Bahrain F1 GP: Practice 2",
     "sub-title": "",
     "desc": "Formula 1 practice continues at Sepang International Circuit as the lights go green for FP2 in the build-up to the Bahrain Grand Prix in Malaysia. (02.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.PL.HD.uk",
-    "start": "2026-09-29T21:00:00",
-    "planned_stop": "2026-09-29T21:30:00",
-    "title": "Premier League Netbusters",
-    "sub-title": "",
-    "desc": "Relive the action from the Premier League in a unique way with fast-paced highlights using alternative angles, featuring every goal from every game.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.PL.HD.uk",
-    "start": "2026-09-29T21:30:00",
-    "planned_stop": "2026-09-29T22:00:00",
-    "title": "The Big Interview: Lewie Coyle",
-    "sub-title": "",
-    "desc": "From a fruit-and-veg stall to leading his hometown club to the Premier League, Hull City captain Lewie Coyle reflects on a journey built on hard work and an unbreakable bond.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.PL.HD.uk",
-    "start": "2026-09-29T22:00:00",
-    "planned_stop": "2026-09-30T00:00:00",
-    "title": "Premier League Years 1993/94",
-    "sub-title": "",
-    "desc": "Take a look at all the memorable moments from the 1993-94 Premier League season. Manchester United were targeting their second successive title after winning the league in its first season.",
-    "category": ""
-  },
-  {
-    "ch": "SkySp.PL.HD.uk",
-    "start": "2026-09-30T00:00:00",
-    "planned_stop": "2026-09-30T02:00:00",
-    "title": "PL Retro: Arsenal v Tottenham 2008",
-    "sub-title": "",
-    "desc": "Relive on the greatest north London derbies of all time as Arsenal take on Tottenham Hotspur at the Emirates Stadium back in the 2008-09 season in a game with a remarkable conclusion.",
-    "category": ""
-  },
-  {
-    "ch": "SkySp.PL.HD.uk",
-    "start": "2026-09-30T02:00:00",
-    "planned_stop": "2026-09-30T02:15:00",
-    "title": "PL Greatest: Man Utd/Norwich 2015",
-    "sub-title": "Norwich",
-    "desc": "Enjoy the greatest Premier League game for each of the league's 47 clubs, as voted for by fans. Here, for Norwich City, the 2-1 win over Manchester United in December 2015.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.PL.HD.uk",
-    "start": "2026-09-30T02:15:00",
-    "planned_stop": "2026-09-30T02:30:00",
-    "title": "PL Greatest: Oldham/So'ton 1993",
-    "sub-title": "Oldham",
-    "desc": "Enjoy the greatest Premier League game for the league's 47 clubs, as voted for by fans. For Oldham Athletic, the 4-3 win over Southampton in 1993 that secured the Latics' survival.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.PL.HD.uk",
-    "start": "2026-09-30T02:30:00",
-    "planned_stop": "2026-09-30T02:45:00",
-    "title": "PL Greatest: P'mouth/So'ton 2005",
-    "sub-title": "",
-    "desc": "Portsmouth: Enjoy the greatest Premier League game for each of the league's 47 clubs, as voted for by fans. For Portsmouth, the 4-1 win over local rivals Southampton back in April 2005.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.PL.HD.uk",
-    "start": "2026-09-30T02:45:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "PL Greatest: QPR/Liverpool 2012",
-    "sub-title": "",
-    "desc": "QPR: Enjoy the greatest Premier League game for each of the league's 47 clubs, as voted for by fans. For QPR, the 3-2 win over Liverpool that saw Rangers score three in the last 13 minutes.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.PL.HD.uk",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T04:00:00",
-    "title": "Best Premier League Goals 06/07",
-    "sub-title": "",
-    "desc": "Enjoy some of the best goals scored in years gone by in the Premier League. Here, the best strikes from the dramatic 2006-07 season.",
-    "category": "Sports"
-  },
-  {
-    "ch": "SkySp.PL.HD.uk",
-    "start": "2026-09-30T04:00:00",
-    "planned_stop": "2026-09-30T04:30:00",
-    "title": "PL Legends: Tony Adams",
-    "sub-title": "",
-    "desc": "Series profiling some of the greatest players to have graced the Premier League. Here the focus is on former Arsenal captain Tony Adams.",
     "category": "Sports"
   },
   {
@@ -16822,33 +16489,6 @@
   },
   {
     "ch": "TNT.Sports.1.HD.uk",
-    "start": "2026-09-29T21:00:00",
-    "planned_stop": "2026-09-30T00:00:00",
-    "title": "Live MLB",
-    "sub-title": "Houston Astros v Chicago White Sox (Start-time 10.00pm)",
-    "desc": "Houston Astros v Chicago White Sox (Start-time 10.00pm). Coverage of game one of the American League Wild Card Series, which takes place at Daikin Park.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.1.HD.uk",
-    "start": "2026-09-30T00:00:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "Live MLB",
-    "sub-title": "New York Yankees v Boston Red Sox (Start-time 1.00am)",
-    "desc": "New York Yankees v Boston Red Sox (Start-time 1.00am). Coverage of game one of the American League Wild Card Series, which takes place at Yankee Stadium.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.1.HD.uk",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T05:00:00",
-    "title": "Live MLB",
-    "sub-title": "San Diego Padres v Chicago Cubs (Start-time 3.00am)",
-    "desc": "San Diego Padres v Chicago Cubs (Start-time 3.00am). Coverage of game one of the National League Wild Card Series, which takes place at Petco Park.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.1.HD.uk",
     "start": "2026-09-30T05:00:00",
     "planned_stop": "2026-09-30T05:15:00",
     "title": "The Gruppetto",
@@ -17334,30 +16974,12 @@
     "category": ""
   },
   {
-    "ch": "TNT.Sports.2.HD.uk",
-    "start": "2026-09-29T21:00:00",
-    "planned_stop": "2026-09-30T00:00:00",
-    "title": "Live MLB",
-    "sub-title": "Houston Astros v Chicago White Sox (Start-time 10.00pm)",
-    "desc": "Houston Astros v Chicago White Sox (Start-time 10.00pm). Coverage of game one of the American League Wild Card Series, which takes place at Daikin Park.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.2.HD.uk",
-    "start": "2026-09-30T00:00:00",
-    "planned_stop": "2026-09-30T02:00:00",
-    "title": "Laver Cup",
-    "sub-title": "Action from the third day of the tournament at The O2 Arena in London",
-    "desc": "Action from the third day of the tournament at The O2 Arena in London.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.2.HD.uk",
-    "start": "2026-09-30T02:00:00",
-    "planned_stop": "2026-09-30T05:00:00",
-    "title": "Live MLB",
-    "sub-title": "San Diego Padres v Chicago Cubs (Start-time 3.00am)",
-    "desc": "San Diego Padres v Chicago Cubs (Start-time 3.00am). Coverage of game one of the National League Wild Card Series, which takes place at Petco Park.",
+    "ch": "TNT.Sports.1.HD.uk",
+    "start": "2026-10-03T05:00:00",
+    "planned_stop": "2026-10-03T05:30:00",
+    "title": "UEFA Champions League Magazine",
+    "sub-title": "The latest news and updates from Europe's premier club football competition",
+    "desc": "The latest news and updates from Europe's premier club football competition.",
     "category": ""
   },
   {
@@ -17916,42 +17538,6 @@
     "title": "Live MotoGP",
     "sub-title": "The Grand Prix of Japan Moto3 and Moto2 qualifying sessions",
     "desc": "The Grand Prix of Japan Moto3 and Moto2 qualifying sessions. Coverage from the 16th round of the season at Mobility Resort Motegi in Motegi, Japan.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.3.HD.uk",
-    "start": "2026-09-29T22:30:00",
-    "planned_stop": "2026-09-29T23:30:00",
-    "title": "Fishing: On the Bank",
-    "sub-title": "Including action from round four of the UK Angling Championships",
-    "desc": "Including action from round four of the UK Angling Championships.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.3.HD.uk",
-    "start": "2026-09-29T23:30:00",
-    "planned_stop": "2026-09-30T00:30:00",
-    "title": "Premier League Stories",
-    "sub-title": "An interview with former Manchester City manager Roberto Mancini",
-    "desc": "An interview with former Manchester City manager Roberto Mancini.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.3.HD.uk",
-    "start": "2026-09-30T00:30:00",
-    "planned_stop": "2026-09-30T03:30:00",
-    "title": "UFC",
-    "sub-title": "Raul Rosas Jr v Raoni Barcelos",
-    "desc": "Raul Rosas Jr v Raoni Barcelos.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.3.HD.uk",
-    "start": "2026-09-30T03:30:00",
-    "planned_stop": "2026-09-30T04:30:00",
-    "title": "One Day International Cricket",
-    "sub-title": "India v West Indies",
-    "desc": "India v West Indies. Action from the first ODI in the three-match series from Greenfield International Stadium in Thiruvananthapuram.",
     "category": ""
   },
   {
@@ -18612,102 +18198,12 @@
     "category": ""
   },
   {
-    "ch": "TNT.Sports.4.HD.uk",
-    "start": "2026-09-29T21:00:00",
-    "planned_stop": "2026-09-29T21:30:00",
-    "title": "CPL Highlights",
-    "sub-title": "Trinbago Knight Riders v Barbados Tridents",
-    "desc": "Trinbago Knight Riders v Barbados Tridents.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.4.HD.uk",
-    "start": "2026-09-29T21:30:00",
-    "planned_stop": "2026-09-29T22:00:00",
-    "title": "CPL Highlights",
-    "sub-title": "Trinbago Knight Riders v Guyana Amazon Warriors",
-    "desc": "Trinbago Knight Riders v Guyana Amazon Warriors.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.4.HD.uk",
-    "start": "2026-09-29T22:00:00",
-    "planned_stop": "2026-09-29T22:30:00",
-    "title": "CPL Highlights",
-    "sub-title": "Trinbago Knight Riders v Jamaica Kingsmen",
-    "desc": "Trinbago Knight Riders v Jamaica Kingsmen.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.4.HD.uk",
-    "start": "2026-09-29T22:30:00",
-    "planned_stop": "2026-09-29T23:00:00",
-    "title": "CPL Highlights",
-    "sub-title": "St Kitts & Nevis Patriots v Barbados Royals",
-    "desc": "St Kitts & Nevis Patriots v Barbados Royals.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.4.HD.uk",
-    "start": "2026-09-29T23:00:00",
-    "planned_stop": "2026-09-29T23:30:00",
-    "title": "CPL Highlights",
-    "sub-title": "Trinbago Knight Riders v Antigua & Barbuda Falcons",
-    "desc": "Trinbago Knight Riders v Antigua & Barbuda Falcons.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.4.HD.uk",
-    "start": "2026-09-29T23:30:00",
-    "planned_stop": "2026-09-30T00:00:00",
-    "title": "The WRC Magazine",
-    "sub-title": "Action from the 2026 Rally Italy",
-    "desc": "Action from the 2026 Rally Italy.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.4.HD.uk",
-    "start": "2026-09-30T00:00:00",
-    "planned_stop": "2026-09-30T01:00:00",
-    "title": "ABB FIA Formula E World Championship Highlights",
-    "sub-title": "Action from the first race of the Berlin e-Prix",
-    "desc": "Action from the first race of the Berlin e-Prix.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.4.HD.uk",
-    "start": "2026-09-30T01:00:00",
-    "planned_stop": "2026-09-30T02:00:00",
-    "title": "ABB FIA Formula E World Championship Highlights",
-    "sub-title": "Action from the second race of the Berlin e-Prix",
-    "desc": "Action from the second race of the Berlin e-Prix.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.4.HD.uk",
-    "start": "2026-09-30T02:00:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "ABB FIA Formula E World Championship Highlights",
-    "sub-title": "Action from the first race of the Monaco e-Prix",
-    "desc": "Action from the first race of the Monaco e-Prix.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.4.HD.uk",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T04:00:00",
-    "title": "ABB FIA Formula E World Championship Highlights",
-    "sub-title": "Action from the second race of the Monaco e-Prix",
-    "desc": "Action from the second race of the Monaco e-Prix.",
-    "category": ""
-  },
-  {
-    "ch": "TNT.Sports.4.HD.uk",
-    "start": "2026-09-30T04:00:00",
-    "planned_stop": "2026-09-30T05:00:00",
-    "title": "ABB FIA Formula E World Championship Highlights",
-    "sub-title": "Action from the Sanya e-Prix",
-    "desc": "Action from the Sanya e-Prix.",
+    "ch": "TNT.Sports.3.HD.uk",
+    "start": "2026-10-03T05:00:00",
+    "planned_stop": "2026-10-03T05:30:00",
+    "title": "UCI Mountain Bike World Series Women",
+    "sub-title": "Action from the cross country short track elite race at Lake Placid",
+    "desc": "Action from the cross country short track elite race at Lake Placid.",
     "category": ""
   },
   {
@@ -19513,33 +19009,6 @@
   },
   {
     "ch": "beIN.SPORTS.MAX.6.fr",
-    "start": "2026-09-29T21:00:00",
-    "planned_stop": "2026-09-29T23:00:00",
-    "title": "beIN SPORTS, le plus grand des spectacles",
-    "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.MAX.6.fr",
-    "start": "2026-09-29T23:00:00",
-    "planned_stop": "2026-09-30T02:00:00",
-    "title": "beIN SPORTS, le plus grand des spectacles",
-    "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.MAX.6.fr",
-    "start": "2026-09-30T02:00:00",
-    "planned_stop": "2026-09-30T05:00:00",
-    "title": "Baseball : MLB",
-    "sub-title": "",
-    "desc": "Découvrez les épreuves de la Major League Baseball (MLB).",
-    "category": "Base-ball"
-  },
-  {
-    "ch": "beIN.SPORTS.MAX.6.fr",
     "start": "2026-09-30T05:00:00",
     "planned_stop": "2026-09-30T07:00:00",
     "title": "beIN SPORTS, le plus grand des spectacles",
@@ -19717,42 +19186,6 @@
     "sub-title": "",
     "desc": "",
     "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.3.fr",
-    "start": "2026-09-29T21:00:00",
-    "planned_stop": "2026-09-29T23:00:00",
-    "title": "Rugby à XIII : NRL",
-    "sub-title": "",
-    "desc": "La NRL, National Rugby League, est le championnat national australien et néo-zélandais de rugby à XIII, dans une compétition très populaire en Océanie.",
-    "category": "Rugby à XIII"
-  },
-  {
-    "ch": "beIN.SPORTS.3.fr",
-    "start": "2026-09-29T23:00:00",
-    "planned_stop": "2026-09-30T00:45:00",
-    "title": "Tennis : Billie Jean King Cup",
-    "sub-title": "",
-    "desc": "Diffusion de matchs de la Billie Jean King Cup, une compétition opposant des sélections nationales féminines de tennis.",
-    "category": "Tennis"
-  },
-  {
-    "ch": "beIN.SPORTS.3.fr",
-    "start": "2026-09-30T00:45:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "Ça se passe sur beIN SPORTS",
-    "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.3.fr",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T07:00:00",
-    "title": "Tennis : Tournoi WTA de Pékin",
-    "sub-title": "",
-    "desc": "Le tournoi WTA de Pékin ou China Open se dispute sur surface dure en extérieur. Il fait partie de la catégorie WTA 1000 sur le circuit féminin.",
-    "category": "Tennis"
   },
   {
     "ch": "beIN.SPORTS.3.fr",
@@ -20041,78 +19474,6 @@
     "sub-title": "",
     "desc": "",
     "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.2.fr",
-    "start": "2026-09-29T21:00:00",
-    "planned_stop": "2026-09-29T21:45:00",
-    "title": "NFL Extra",
-    "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.2.fr",
-    "start": "2026-09-29T21:45:00",
-    "planned_stop": "2026-09-29T22:00:00",
-    "title": "Ça se passe sur beIN SPORTS",
-    "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.2.fr",
-    "start": "2026-09-29T22:00:00",
-    "planned_stop": "2026-09-30T00:00:00",
-    "title": "Football : Championnat du Portugal",
-    "sub-title": "",
-    "desc": "Retransmission d'un match du Championnat du Portugal de football. Fondée en 1934, il s'agit de la plus haute compétition de football du Portugal.",
-    "category": "Football"
-  },
-  {
-    "ch": "beIN.SPORTS.2.fr",
-    "start": "2026-09-30T00:00:00",
-    "planned_stop": "2026-09-30T02:00:00",
-    "title": "Football : Ligue 2 BKT",
-    "sub-title": "",
-    "desc": "L'affiche de la 7e journée de Ligue 2 BKT sent bon la Ligue 1 avec ce duel entre Metz et Saint-Etienne. Avec un début parfait et quatre victoires en autant de rencontres, les Stéphanois se rendent en Moselle pour affronter Teji Savanier et ses coéquipiers, concurrents directs à la montée.",
-    "category": "Football"
-  },
-  {
-    "ch": "beIN.SPORTS.2.fr",
-    "start": "2026-09-30T02:00:00",
-    "planned_stop": "2026-09-30T02:30:00",
-    "title": "Salon VIP",
-    "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.2.fr",
-    "start": "2026-09-30T02:30:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "Made in England",
-    "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.2.fr",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T04:00:00",
-    "title": "Grand Zap Coupe du monde",
-    "sub-title": "",
-    "desc": "Un moment dédié aux meilleurs moments et aux actions les plus spectaculaires de l'évènement.",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.2.fr",
-    "start": "2026-09-30T04:00:00",
-    "planned_stop": "2026-09-30T06:00:00",
-    "title": "Football : Ligue 2 BKT",
-    "sub-title": "",
-    "desc": "Retransmission d'une rencontre disputée dans le cadre de la Ligue 2, la deuxième division du championnat de football professionnel en France.",
-    "category": "Football"
   },
   {
     "ch": "beIN.SPORTS.2.fr",
@@ -20512,33 +19873,6 @@
   },
   {
     "ch": "beIN.SPORTS.MAX.7.fr",
-    "start": "2026-09-29T21:00:00",
-    "planned_stop": "2026-09-30T00:00:00",
-    "title": "Baseball : MLB",
-    "sub-title": "",
-    "desc": "Découvrez les épreuves de la Major League Baseball (MLB).",
-    "category": "Base-ball"
-  },
-  {
-    "ch": "beIN.SPORTS.MAX.7.fr",
-    "start": "2026-09-30T00:00:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "beIN SPORTS, le plus grand des spectacles",
-    "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.MAX.7.fr",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T07:00:00",
-    "title": "beIN SPORTS, le plus grand des spectacles",
-    "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.MAX.7.fr",
     "start": "2026-09-30T07:00:00",
     "planned_stop": "2026-09-30T11:00:00",
     "title": "beIN SPORTS, le plus grand des spectacles",
@@ -20694,33 +20028,6 @@
     "ch": "beIN.SPORTS.MAX.7.fr",
     "start": "2026-10-02T23:00:00",
     "planned_stop": "2026-10-03T03:00:00",
-    "title": "beIN SPORTS, le plus grand des spectacles",
-    "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.MAX.4.fr",
-    "start": "2026-09-30T00:30:00",
-    "planned_stop": "2026-09-30T02:30:00",
-    "title": "WNBA",
-    "sub-title": "",
-    "desc": "Diffusion d'un match de la WNBA (Women's National Basketball Association), la prestigieuse ligue américaine féminine de basketball.",
-    "category": "Basket-ball"
-  },
-  {
-    "ch": "beIN.SPORTS.MAX.4.fr",
-    "start": "2026-09-30T02:30:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "beIN SPORTS, le plus grand des spectacles",
-    "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.MAX.4.fr",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T07:00:00",
     "title": "beIN SPORTS, le plus grand des spectacles",
     "sub-title": "",
     "desc": "",
@@ -20908,42 +20215,6 @@
   },
   {
     "ch": "beIN.SPORTS.MAX.5.fr",
-    "start": "2026-09-29T21:00:00",
-    "planned_stop": "2026-09-29T23:00:00",
-    "title": "beIN SPORTS, le plus grand des spectacles",
-    "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.MAX.5.fr",
-    "start": "2026-09-29T23:00:00",
-    "planned_stop": "2026-09-30T00:00:00",
-    "title": "beIN SPORTS, le plus grand des spectacles",
-    "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.MAX.5.fr",
-    "start": "2026-09-30T00:00:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "Baseball : MLB",
-    "sub-title": "",
-    "desc": "Découvrez les épreuves de la Major League Baseball (MLB).",
-    "category": "Base-ball"
-  },
-  {
-    "ch": "beIN.SPORTS.MAX.5.fr",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T07:00:00",
-    "title": "beIN SPORTS, le plus grand des spectacles",
-    "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.MAX.5.fr",
     "start": "2026-09-30T07:00:00",
     "planned_stop": "2026-09-30T11:00:00",
     "title": "beIN SPORTS, le plus grand des spectacles",
@@ -21115,24 +20386,6 @@
   },
   {
     "ch": "beIN.SPORTS.MAX.8.fr",
-    "start": "2026-09-29T23:00:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "beIN SPORTS, le plus grand des spectacles",
-    "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.MAX.8.fr",
-    "start": "2026-09-30T03:00:00",
-    "planned_stop": "2026-09-30T07:00:00",
-    "title": "beIN SPORTS, le plus grand des spectacles",
-    "sub-title": "",
-    "desc": "",
-    "category": "Magazine sportif"
-  },
-  {
-    "ch": "beIN.SPORTS.MAX.8.fr",
     "start": "2026-09-30T07:00:00",
     "planned_stop": "2026-09-30T11:00:00",
     "title": "beIN SPORTS, le plus grand des spectacles",
@@ -21283,33 +20536,6 @@
     "sub-title": "",
     "desc": "",
     "category": "Magazine sportif"
-  },
-  {
-    "ch": "Canal+.fr",
-    "start": "2026-09-29T22:05:00",
-    "planned_stop": "2026-09-29T23:46:00",
-    "title": "La bonne étoile",
-    "sub-title": "",
-    "desc": "Les Vosges, en 1940. Jean Chevalin et sa famille vivent dans la misère depuis que ce dernier a jugé bon de déserter l'armée. Convaincu que \"certains\" s'en sortent mieux, Jean a l'idée de se faire passer pour juif afin de bénéficier de l'aide des passeurs pour accéder à la zone libre et échapper ainsi à ses supérieurs. Sa femme Paulette et son jeune fils Marcel ne sont pas vraiment emballés par l'idée. Mais Jean est tenace et cherche à se procurer de faux papiers. De malentendus en révélations, il va entraîner sa famille dans un long et dangereux périple qui déconstruira ses préjugés un à un….",
-    "category": "<a Href=\"https://www.telerama.fr/liste/films/comedie Dramatique/\">comédie Dramatique</a>"
-  },
-  {
-    "ch": "Canal+.fr",
-    "start": "2026-09-29T23:46:00",
-    "planned_stop": "2026-09-30T01:44:00",
-    "title": "Touch - Nos étreintes passées",
-    "sub-title": "",
-    "desc": "Lorsqu'il apprend qu'il est atteint d'une maladie grave et que ses jours sont comptés, Kristofer, un Islandais âgé de 73 ans, se met en tête de retrouver la trace de Miko, son amour de jeunesse dont il a perdu la trace cinq décennies plus tôt. Il s'envole alors pour Londres, à la recherche de ce petit restaurant japonais où il était employé. Alors qu'il rêvait de devenir un grand cuisinier, c'est là qu'il a rencontré Miko, la fille de son patron, avec laquelle il a vécu un amour secret. Kristofer l'ignore, mais sa quête, à mesure que les souvenirs refont surface, va le mener jusqu'au bout du monde...",
-    "category": "Film"
-  },
-  {
-    "ch": "Canal+.fr",
-    "start": "2026-09-30T01:44:00",
-    "planned_stop": "2026-09-30T03:27:00",
-    "title": "Rembrandt",
-    "sub-title": "",
-    "desc": "Claire et Yves, physiciens de formation, sont ingénieurs dans le nucléaire civil. Lors d'une visite à la National Gallery de Londres avec leur fille, Claire va être bouleversée par trois toiles de Rembrandt. Cette rencontre avec ces oeuvres magistrales, qui agit comme une révélation, change Claire à jamais. Cette dernière remet toute sa vie et ses choix en question et s'engage comme lanceuse d'alerte. Dépassé, Yves ne comprend pas ce qui arrive à son épouse...",
-    "category": "Film"
   },
   {
     "ch": "Canal+.fr",
@@ -21951,22 +21177,85 @@
     "category": "Film"
   },
   {
-    "ch": "beIN.SPORTS.2.fr",
-    "start": "2026-09-30T00:00:00",
-    "planned_stop": "2026-09-30T02:00:00",
-    "title": "Football",
+    "ch": "Canal+.fr",
+    "start": "2026-10-03T03:41:00",
+    "planned_stop": "2026-10-03T04:03:00",
+    "title": "Red Flag",
     "sub-title": "",
-    "desc": "",
-    "category": "Football"
+    "desc": "La plage. Tout est là pour que chacun profite. Seul l'océan n'est pas de cet avis.",
+    "category": "Film"
   },
   {
-    "ch": "beIN.SPORTS.2.fr",
-    "start": "2026-09-30T02:00:00",
-    "planned_stop": "2026-09-30T04:00:00",
-    "title": "Football",
+    "ch": "Canal+.fr",
+    "start": "2026-10-03T04:03:00",
+    "planned_stop": "2026-10-03T04:34:00",
+    "title": "Super plan",
     "sub-title": "",
-    "desc": "",
-    "category": "Football"
+    "desc": "Antoine de Caunes, Mina Soundiram, Renan Cros, Bertrand Goncalves et Rébecca Balestra, proposent un super plan ciné. Ensemble, ils reçoivent celles et ceux qui font l'actualité du 7e art, et abordent le cinéma avec expertise, passion et enthousiasme.",
+    "category": "Magazine"
+  },
+  {
+    "ch": "Canal+.fr",
+    "start": "2026-10-03T04:34:00",
+    "planned_stop": "2026-10-03T05:30:00",
+    "title": "Jérôme, les yeux dans le bleu",
+    "sub-title": "",
+    "desc": "Direction le lac Victoria, immense mer intérieure partagée entre la Tanzanie, l'Ouganda et le Kenya, qui fait vivre plus de quarante millions de personnes. L'exploration débute sur Migingo, l'ile de métal, de la taille d'un terrain de foot, surpeuplée par des pêcheurs de perche du Nil. Jérôme rejoint ensuite l'île de Musambwa, où une communauté humaine cohabite avec près de deux mille cobras sacrés. Les marais de Mabamba abrite des oiseaux les plus étonnants d'Afrique, le bec-en-sabot, symbole fragile d'un milieu humide menacé. Jérôme se rend ensuite sur île de Ngamba, refuge de chimpanzés rescapés du braconnage et des conflits armés.",
+    "category": "Documentaire"
+  },
+  {
+    "ch": "Canal+.fr",
+    "start": "2026-10-03T05:30:00",
+    "planned_stop": "2026-10-03T06:02:00",
+    "title": "En aparté",
+    "sub-title": "",
+    "desc": "Que feriez-vous si vous gagniez 150 millions au loto ? Et seriez-vous vraiment plus heureux ? C'est à cette question universelle que s'attaque la comédie qu'ils viennent présenter. On y verra que si le jackpot fait rêver, il peut aussi apporter le chaos. Pour nous en parler...André Dussollier et Thomas Solivérès, père et fils à l'écran, sont en aparté.",
+    "category": "Divertissement"
+  },
+  {
+    "ch": "Canal+.fr",
+    "start": "2026-10-03T06:02:00",
+    "planned_stop": "2026-10-03T06:48:00",
+    "title": "Apollo Has Fallen",
+    "sub-title": "",
+    "desc": "Une femme agent du MI6 retrouve un homologue français avec qui elle a déjà collaboré, lors d'un détournement d'avion, le début d'une conspiration ourdie par un mercenaire russe.",
+    "category": "Série"
+  },
+  {
+    "ch": "Canal+.fr",
+    "start": "2026-10-03T06:48:00",
+    "planned_stop": "2026-10-03T08:29:00",
+    "title": "La bonne étoile",
+    "sub-title": "",
+    "desc": "Les Vosges, en 1940. Jean Chevalin et sa famille vivent dans la misère depuis que ce dernier a jugé bon de déserter l'armée. Convaincu que \"certains\" s'en sortent mieux, Jean a l'idée de se faire passer pour juif afin de bénéficier de l'aide des passeurs pour accéder à la zone libre et échapper ainsi à ses supérieurs. Sa femme Paulette et son jeune fils Marcel ne sont pas vraiment emballés par l'idée. Mais Jean est tenace et cherche à se procurer de faux papiers. De malentendus en révélations, il va entraîner sa famille dans un long et dangereux périple qui déconstruira ses préjugés un à un….",
+    "category": "Film"
+  },
+  {
+    "ch": "Canal+.fr",
+    "start": "2026-10-03T08:29:00",
+    "planned_stop": "2026-10-03T09:54:00",
+    "title": "Chers parents",
+    "sub-title": "",
+    "desc": "Quand Alice et Vincent Gauthier, tous deux retraités, convoquent en urgence leurs trois enfants, Louise, Pierre et Jules, la fratrie, craignant le pire, se présente immédiatement au domicile de ses parents. Mais ils découvrent qu'ils ont en réalité été appelés pour être informés d'une très bonne nouvelle : Alice et Vincent ont en fait touché le jackpot à la loterie. Pourtant, les enfants ne tardent pas à tomber des nues car il y a un petit problème : ils ne comptent pas leur donner un centime...",
+    "category": "Film"
+  },
+  {
+    "ch": "Canal+.fr",
+    "start": "2026-10-03T09:54:00",
+    "planned_stop": "2026-10-03T10:11:00",
+    "title": "L'hebd'Hollywood",
+    "sub-title": "",
+    "desc": "Le magazine trace la chronique de la vie à Hollywood, des grands studios aux indépendants, des stars aux étoiles montantes. Entre événements, indiscrétions et exclusivités, le journaliste Didier Allouch propose depuis Los Angeles un décryptage très personnel de l'actualité du cinéma américain. News sur les tournages, tendances, films en salles, stars : la cité des Anges livre tous ses secrets.",
+    "category": "Magazine"
+  },
+  {
+    "ch": "Canal+.fr",
+    "start": "2026-10-03T10:11:00",
+    "planned_stop": "2026-10-03T10:25:00",
+    "title": "Têtàtête(s)",
+    "sub-title": "",
+    "desc": "Chaque semaine, une interview par Laurie Cholewa des talents ou cinéastes des films à l'affiche, un moment convivial et chaleureux qui raconte les coulisses des films les plus attendus en salles et des films diffusés sur Canal+.",
+    "category": "Interview"
   },
   {
     "ch": "beIN.SPORTS.2.fr",
@@ -22356,13 +21645,40 @@
     "category": "Football"
   },
   {
-    "ch": "beIN.SPORTS.MAX.4.fr",
-    "start": "2026-09-29T23:00:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "beIN SPORTS, le plus grand des spectacles",
+    "ch": "beIN.SPORTS.2.fr",
+    "start": "2026-10-03T04:00:00",
+    "planned_stop": "2026-10-03T06:00:00",
+    "title": "Football",
     "sub-title": "",
     "desc": "",
-    "category": ""
+    "category": "Football"
+  },
+  {
+    "ch": "beIN.SPORTS.2.fr",
+    "start": "2026-10-03T06:00:00",
+    "planned_stop": "2026-10-03T08:00:00",
+    "title": "Football",
+    "sub-title": "",
+    "desc": "",
+    "category": "Football"
+  },
+  {
+    "ch": "beIN.SPORTS.2.fr",
+    "start": "2026-10-03T08:00:00",
+    "planned_stop": "2026-10-03T10:00:00",
+    "title": "Football",
+    "sub-title": "",
+    "desc": "",
+    "category": "Football"
+  },
+  {
+    "ch": "beIN.SPORTS.2.fr",
+    "start": "2026-10-03T10:00:00",
+    "planned_stop": "2026-10-03T12:00:00",
+    "title": "Football",
+    "sub-title": "",
+    "desc": "",
+    "category": "Football"
   },
   {
     "ch": "beIN.SPORTS.MAX.4.fr",
@@ -22527,13 +21843,31 @@
     "category": "Magazine sportif"
   },
   {
-    "ch": "beIN.SPORTS.MAX.5.fr",
-    "start": "2026-09-29T23:00:00",
-    "planned_stop": "2026-09-30T03:00:00",
+    "ch": "beIN.SPORTS.MAX.4.fr",
+    "start": "2026-10-03T03:00:00",
+    "planned_stop": "2026-10-03T04:00:00",
+    "title": "Tennis : Tournoi WTA de Pékin",
+    "sub-title": "",
+    "desc": "En Direct.",
+    "category": "Tennis"
+  },
+  {
+    "ch": "beIN.SPORTS.MAX.4.fr",
+    "start": "2026-10-03T04:00:00",
+    "planned_stop": "2026-10-03T09:00:00",
     "title": "beIN SPORTS, le plus grand des spectacles",
     "sub-title": "",
     "desc": "",
-    "category": ""
+    "category": "Magazine sportif"
+  },
+  {
+    "ch": "beIN.SPORTS.MAX.4.fr",
+    "start": "2026-10-03T09:00:00",
+    "planned_stop": "2026-10-03T15:00:00",
+    "title": "beIN SPORTS, le plus grand des spectacles",
+    "sub-title": "",
+    "desc": "",
+    "category": "Magazine sportif"
   },
   {
     "ch": "beIN.SPORTS.MAX.5.fr",
@@ -22698,13 +22032,22 @@
     "category": "Magazine sportif"
   },
   {
-    "ch": "beIN.SPORTS.MAX.7.fr",
-    "start": "2026-09-29T23:00:00",
-    "planned_stop": "2026-09-30T03:00:00",
-    "title": "beIN SPORTS, le plus grand des spectacles",
+    "ch": "beIN.SPORTS.MAX.5.fr",
+    "start": "2026-10-03T04:00:00",
+    "planned_stop": "2026-10-03T08:00:00",
+    "title": "Tennis : Tournoi WTA de Pékin",
     "sub-title": "",
-    "desc": "",
-    "category": ""
+    "desc": "En Direct.",
+    "category": "Tennis"
+  },
+  {
+    "ch": "beIN.SPORTS.MAX.5.fr",
+    "start": "2026-10-03T08:00:00",
+    "planned_stop": "2026-10-03T13:00:00",
+    "title": "Tennis : Tournoi WTA de Pékin",
+    "sub-title": "",
+    "desc": "En Direct.",
+    "category": "Tennis"
   },
   {
     "ch": "beIN.SPORTS.MAX.7.fr",
@@ -22869,13 +22212,22 @@
     "category": "Magazine sportif"
   },
   {
-    "ch": "beIN.SPORTS.MAX.8.fr",
-    "start": "2026-09-29T23:00:00",
-    "planned_stop": "2026-09-30T03:00:00",
+    "ch": "beIN.SPORTS.MAX.7.fr",
+    "start": "2026-10-03T03:00:00",
+    "planned_stop": "2026-10-03T07:00:00",
     "title": "beIN SPORTS, le plus grand des spectacles",
     "sub-title": "",
     "desc": "",
-    "category": ""
+    "category": "Magazine sportif"
+  },
+  {
+    "ch": "beIN.SPORTS.MAX.7.fr",
+    "start": "2026-10-03T07:00:00",
+    "planned_stop": "2026-10-03T11:00:00",
+    "title": "beIN SPORTS, le plus grand des spectacles",
+    "sub-title": "",
+    "desc": "",
+    "category": "Magazine sportif"
   },
   {
     "ch": "beIN.SPORTS.MAX.8.fr",
@@ -23040,49 +22392,22 @@
     "category": "Magazine sportif"
   },
   {
-    "ch": "Canal+.Sport.fr",
-    "start": "2026-09-29T22:11:00",
-    "planned_stop": "2026-09-29T23:54:00",
-    "title": "Racing 92 / Bayonne",
+    "ch": "beIN.SPORTS.MAX.8.fr",
+    "start": "2026-10-03T03:00:00",
+    "planned_stop": "2026-10-03T07:00:00",
+    "title": "beIN SPORTS, le plus grand des spectacles",
     "sub-title": "",
     "desc": "",
-    "category": "Rugby"
+    "category": "Magazine sportif"
   },
   {
-    "ch": "Canal+.Sport.fr",
-    "start": "2026-09-29T23:54:00",
-    "planned_stop": "2026-09-30T00:35:00",
-    "title": "Au micro ! Une nouvelle voix pour le foot",
-    "sub-title": "",
-    "desc": "Des candidats s'essaient à tous les exercices du journalisme de sport : commentaires, résumé et débrief de match, ou encore décryptage technique. A la clé pour le ou la lauréate : un contrat au sein de la rédaction des Sports de Canal+ pour la saison...",
-    "category": "Divertissement"
-  },
-  {
-    "ch": "Canal+.Sport.fr",
-    "start": "2026-09-30T00:35:00",
-    "planned_stop": "2026-09-30T01:07:00",
-    "title": "Au micro ! Une nouvelle voix pour le foot",
-    "sub-title": "",
-    "desc": "Après deux premières sessions de multiplex, Alexandre ; Khadim, François et Christophe sont les derniers concurrents à passer aux côtés de nos consultants : Jessica Houara, Alain Roche, Samuel Lobé et Christophe Jallet. Redouane Bougheraba en profite pour offrir une surprise aux premiers qualifiés….",
-    "category": "Divertissement"
-  },
-  {
-    "ch": "Canal+.Sport.fr",
-    "start": "2026-09-30T01:07:00",
-    "planned_stop": "2026-09-30T01:42:00",
-    "title": "Au micro ! Une nouvelle voix pour le foot",
-    "sub-title": "",
-    "desc": "Place aux quarts de finale avec les huit derniers concurrents. Mélanie, Edouard, Jean, Alexandre, Francois, Bastien, Steven et Arnaud vont cette fois s'affronter dans une épreuve tactique. Les aspirants commentateurs vont devoir construire une séquence d'analyse avec la célèbre \\\" Palette \\\" de CANAL+. Ils auront la surprise d'être accompagnés par deux spécialistes de la rédaction des sports.",
-    "category": "Divertissement"
-  },
-  {
-    "ch": "Canal+.Sport.fr",
-    "start": "2026-09-30T01:42:00",
-    "planned_stop": "2026-09-30T05:20:00",
-    "title": "Fin des programmes",
+    "ch": "beIN.SPORTS.MAX.8.fr",
+    "start": "2026-10-03T07:00:00",
+    "planned_stop": "2026-10-03T11:00:00",
+    "title": "beIN SPORTS, le plus grand des spectacles",
     "sub-title": "",
     "desc": "",
-    "category": "Fin"
+    "category": "Magazine sportif"
   },
   {
     "ch": "Canal+.Sport.fr",
@@ -23571,40 +22896,76 @@
     "category": "Fin"
   },
   {
-    "ch": "Canal+.Sport.360.fr",
-    "start": "2026-09-29T22:30:00",
-    "planned_stop": "2026-09-29T23:15:00",
-    "title": "Le JT",
+    "ch": "Canal+.Sport.fr",
+    "start": "2026-10-03T04:15:00",
+    "planned_stop": "2026-10-03T05:41:00",
+    "title": "Grand Prix de Bahreïn",
     "sub-title": "",
     "desc": "En Direct.",
-    "category": "JT sport"
+    "category": "Formule 1"
   },
   {
-    "ch": "Canal+.Sport.360.fr",
-    "start": "2026-09-29T23:15:00",
-    "planned_stop": "2026-09-30T01:46:00",
-    "title": "Rallye du Chili",
-    "sub-title": "",
-    "desc": "",
-    "category": ""
-  },
-  {
-    "ch": "Canal+.Sport.360.fr",
-    "start": "2026-09-30T01:46:00",
-    "planned_stop": "2026-09-30T02:06:00",
-    "title": "On Board moto",
+    "ch": "Canal+.Sport.fr",
+    "start": "2026-10-03T05:41:00",
+    "planned_stop": "2026-10-03T05:54:00",
+    "title": "Fractionné F1",
     "sub-title": "",
     "desc": "",
     "category": "Magazine sportif"
   },
   {
-    "ch": "Canal+.Sport.360.fr",
-    "start": "2026-09-30T02:06:00",
-    "planned_stop": "2026-09-30T04:00:00",
-    "title": "Fin des programmes",
+    "ch": "Canal+.Sport.fr",
+    "start": "2026-10-03T05:54:00",
+    "planned_stop": "2026-10-03T06:00:00",
+    "title": "Zapsport 360",
     "sub-title": "",
     "desc": "",
-    "category": "Fin"
+    "category": "Magazine sportif"
+  },
+  {
+    "ch": "Canal+.Sport.fr",
+    "start": "2026-10-03T06:00:00",
+    "planned_stop": "2026-10-03T07:01:00",
+    "title": "Rallye Italie Sardaigne",
+    "sub-title": "",
+    "desc": "En Direct.",
+    "category": "Rallye"
+  },
+  {
+    "ch": "Canal+.Sport.fr",
+    "start": "2026-10-03T07:01:00",
+    "planned_stop": "2026-10-03T07:40:00",
+    "title": "Docs Sports",
+    "sub-title": "",
+    "desc": "Un documentaire sportif qui peut être le portrait précis d'un champion, d'une équipe, ou un focus sur un sport en particulier. Des images d'archives peuvent être présentées.",
+    "category": "Documentaire"
+  },
+  {
+    "ch": "Canal+.Sport.fr",
+    "start": "2026-10-03T07:40:00",
+    "planned_stop": "2026-10-03T09:22:00",
+    "title": "Grand Prix de Bahreïn",
+    "sub-title": "",
+    "desc": "En Direct.",
+    "category": "Formule 1"
+  },
+  {
+    "ch": "Canal+.Sport.fr",
+    "start": "2026-10-03T09:22:00",
+    "planned_stop": "2026-10-03T09:34:00",
+    "title": "Fractionné F1",
+    "sub-title": "",
+    "desc": "",
+    "category": "Magazine sportif"
+  },
+  {
+    "ch": "Canal+.Sport.fr",
+    "start": "2026-10-03T09:34:00",
+    "planned_stop": "2026-10-03T10:29:00",
+    "title": "Rallye Italie Sardaigne",
+    "sub-title": "",
+    "desc": "",
+    "category": "Rallye"
   },
   {
     "ch": "Canal+.Sport.360.fr",
@@ -24280,5 +23641,77 @@
     "sub-title": "",
     "desc": "",
     "category": "Magazine sportif"
+  },
+  {
+    "ch": "Canal+.Sport.360.fr",
+    "start": "2026-10-03T04:32:00",
+    "planned_stop": "2026-10-03T05:26:00",
+    "title": "Fin des programmes",
+    "sub-title": "",
+    "desc": "",
+    "category": "Fin"
+  },
+  {
+    "ch": "Canal+.Sport.360.fr",
+    "start": "2026-10-03T05:26:00",
+    "planned_stop": "2026-10-03T06:26:00",
+    "title": "La Grille Moto",
+    "sub-title": "",
+    "desc": "En Direct.",
+    "category": "Magazine sportif"
+  },
+  {
+    "ch": "Canal+.Sport.360.fr",
+    "start": "2026-10-03T06:26:00",
+    "planned_stop": "2026-10-03T06:57:00",
+    "title": "Débrief Moto",
+    "sub-title": "",
+    "desc": "En Direct.",
+    "category": "Magazine sportif"
+  },
+  {
+    "ch": "Canal+.Sport.360.fr",
+    "start": "2026-10-03T06:57:00",
+    "planned_stop": "2026-10-03T07:10:00",
+    "title": "La compile Zapsport 360",
+    "sub-title": "",
+    "desc": "",
+    "category": "Magazine sportif"
+  },
+  {
+    "ch": "Canal+.Sport.360.fr",
+    "start": "2026-10-03T07:10:00",
+    "planned_stop": "2026-10-03T08:05:00",
+    "title": "Rallye Italie Sardaigne",
+    "sub-title": "",
+    "desc": "En Direct.",
+    "category": "Rallye"
+  },
+  {
+    "ch": "Canal+.Sport.360.fr",
+    "start": "2026-10-03T08:05:00",
+    "planned_stop": "2026-10-03T09:29:00",
+    "title": "Rallye Italie Sardaigne",
+    "sub-title": "",
+    "desc": "En Direct.",
+    "category": "Rallye"
+  },
+  {
+    "ch": "Canal+.Sport.360.fr",
+    "start": "2026-10-03T09:29:00",
+    "planned_stop": "2026-10-03T10:00:00",
+    "title": "Débrief Moto",
+    "sub-title": "",
+    "desc": "",
+    "category": "Magazine sportif"
+  },
+  {
+    "ch": "Canal+.Sport.360.fr",
+    "start": "2026-10-03T10:00:00",
+    "planned_stop": "2026-10-03T10:30:00",
+    "title": "Sports Week-end",
+    "sub-title": "",
+    "desc": "En Direct.",
+    "category": "JT sport"
   }
 ]
