@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T13:04:38Z",
+  "generated_at": "2026-10-06T22:31:44Z",
   "channels": {
     "1": [
       {
@@ -66,13 +66,13 @@
         "start": "2026-10-08T22:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.World.HD.ca2",
+        "title": "[REDIFFUSION] High Stakes Poker",
+        "league": "poker",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-10-06T06:00:00Z",
-        "stop": "2026-10-06T08:00:00Z",
-        "start": "2026-10-06T06:00:00Z"
+        "display_start": "2026-10-09T22:00:00Z",
+        "stop": "2026-10-09T23:00:00Z",
+        "start": "2026-10-09T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Cup Classics",
@@ -109,6 +109,15 @@
         "display_start": "2026-10-08T18:30:00Z",
         "stop": "2026-10-08T19:00:00Z",
         "start": "2026-10-08T18:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
+        "score": 0,
+        "display_start": "2026-10-06T15:00:00Z",
+        "stop": "2026-10-06T16:00:00Z",
+        "start": "2026-10-06T15:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Bahrain F1 GP Highlights",
@@ -194,24 +203,6 @@
         "start": "2026-10-08T02:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
-        "score": 0,
-        "display_start": "2026-10-06T07:00:00Z",
-        "stop": "2026-10-06T08:00:00Z",
-        "start": "2026-10-06T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Poker Night in America",
-        "league": "poker",
-        "ch_key": "CBS.Sports.Network.HD.us2",
-        "score": 0,
-        "display_start": "2026-10-06T06:00:00Z",
-        "stop": "2026-10-06T07:00:00Z",
-        "start": "2026-10-06T06:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Singapore F1 GP Highlights 2017",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -275,24 +266,6 @@
         "display_start": "2026-10-08T01:30:00Z",
         "stop": "2026-10-08T05:00:00Z",
         "start": "2026-10-08T02:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Singapore F1 GP Highlights 2015",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-06T06:00:00Z",
-        "stop": "2026-10-06T07:00:00Z",
-        "start": "2026-10-06T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Singapore F1 GP Highlights 2016",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-06T07:00:00Z",
-        "stop": "2026-10-06T08:00:00Z",
-        "start": "2026-10-06T07:00:00Z"
       }
     ],
     "4": [
@@ -335,13 +308,13 @@
         "start": "2026-10-08T00:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights",
+        "title": "[REDIFFUSION] FA Women's Super League",
         "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-10-06T22:00:00Z",
+        "display_start": "2026-10-06T21:00:00Z",
         "stop": "2026-10-06T23:00:00Z",
-        "start": "2026-10-06T22:00:00Z"
+        "start": "2026-10-06T21:00:00Z"
       }
     ]
   }
