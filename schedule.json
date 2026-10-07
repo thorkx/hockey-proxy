@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T05:14:18Z",
+  "generated_at": "2026-10-07T12:59:10Z",
   "channels": {
     "1": [
       {
@@ -118,24 +118,6 @@
         "display_start": "2026-10-09T18:30:00Z",
         "stop": "2026-10-09T20:30:00Z",
         "start": "2026-10-09T18:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-06T22:00:00Z",
-        "stop": "2026-10-06T23:00:00Z",
-        "start": "2026-10-06T22:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Bahrain F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-06T23:00:00Z",
-        "stop": "2026-10-07T00:00:00Z",
-        "start": "2026-10-06T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Singapore F1 GP Highlights 2023",
@@ -284,6 +266,15 @@
         "display_start": "2026-10-08T20:30:00Z",
         "stop": "2026-10-09T00:00:00Z",
         "start": "2026-10-08T21:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Bahrain F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-10-07T16:30:00Z",
+        "stop": "2026-10-07T17:30:00Z",
+        "start": "2026-10-07T16:30:00Z"
       }
     ],
     "4": [
