@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T05:27:23Z",
+  "generated_at": "2026-10-09T12:53:29Z",
   "channels": {
     "1": [
       {
@@ -120,15 +120,6 @@
         "start": "2026-10-09T09:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Singapore F1 GP Highlights 2025",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-08T22:30:00Z",
-        "stop": "2026-10-08T23:30:00Z",
-        "start": "2026-10-08T22:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Singapore F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -246,6 +237,15 @@
         "display_start": "2026-10-10T11:30:00Z",
         "stop": "2026-10-10T15:00:00Z",
         "start": "2026-10-10T12:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Singapore F1 GP Highlights 2025",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-10-09T11:00:00Z",
+        "stop": "2026-10-09T12:00:00Z",
+        "start": "2026-10-09T11:00:00Z"
       }
     ],
     "3": [
