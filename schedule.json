@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T12:11:32Z",
+  "generated_at": "2026-10-10T21:23:17Z",
   "channels": {
     "1": [
       {
@@ -50,8 +50,8 @@
       {
         "title": "⚽ LEEDS UNITED AT ARSENAL",
         "league": "eng.1",
-        "ch_key": "TNT.Sports.1.HD.uk",
-        "score": 550,
+        "ch_key": "Canal+.fr",
+        "score": 650,
         "display_start": "2026-10-10T11:00:00Z",
         "stop": "2026-10-10T14:30:00Z",
         "start": "2026-10-10T11:30:00Z"
@@ -203,13 +203,13 @@
         "start": "2026-10-12T00:00:00Z"
       },
       {
-        "title": "⚽ ATHLETIC CLUB AT RAYO VALLECANO",
+        "title": "⚽ ATLÉTICO MADRID AT ALAVÉS",
         "league": "esp.1",
         "ch_key": "ESPN.Deportes.HD.us2",
         "score": 250,
-        "display_start": "2026-10-10T11:30:00Z",
-        "stop": "2026-10-10T15:00:00Z",
-        "start": "2026-10-10T12:00:00Z"
+        "display_start": "2026-10-10T13:45:00Z",
+        "stop": "2026-10-10T17:15:00Z",
+        "start": "2026-10-10T14:15:00Z"
       },
       {
         "title": "⚽ OSASUNA AT REAL BETIS",
@@ -225,18 +225,9 @@
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-10-10T11:00:00Z",
-        "stop": "2026-10-10T11:30:00Z",
-        "start": "2026-10-10T11:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] High Stakes Poker",
-        "league": "series",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 0,
-        "display_start": "2026-10-10T17:00:00Z",
-        "stop": "2026-10-10T18:00:00Z",
-        "start": "2026-10-10T17:00:00Z"
+        "display_start": "2026-10-10T18:30:00Z",
+        "stop": "2026-10-10T19:00:00Z",
+        "start": "2026-10-10T18:30:00Z"
       }
     ],
     "3": [
@@ -299,9 +290,9 @@
         "league": "sports",
         "ch_key": "One.Soccer.ca2",
         "score": 0,
-        "display_start": "2026-10-10T13:30:00Z",
-        "stop": "2026-10-10T15:30:00Z",
-        "start": "2026-10-10T13:30:00Z"
+        "display_start": "2026-10-11T13:30:00Z",
+        "stop": "2026-10-11T15:30:00Z",
+        "start": "2026-10-11T13:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Singapore F1 GP Highlights",
@@ -351,13 +342,13 @@
         "start": "2026-10-11T23:00:00Z"
       },
       {
-        "title": "⚽ ATLÉTICO MADRID AT ALAVÉS",
+        "title": "⚽ GETAFE AT BARCELONA",
         "league": "esp.1",
         "ch_key": "ESPN.Deportes.HD.us2",
         "score": 250,
-        "display_start": "2026-10-10T13:45:00Z",
-        "stop": "2026-10-10T17:15:00Z",
-        "start": "2026-10-10T14:15:00Z"
+        "display_start": "2026-10-10T16:00:00Z",
+        "stop": "2026-10-10T19:30:00Z",
+        "start": "2026-10-10T16:30:00Z"
       },
       {
         "title": "⚽ VALENCIA AT RACING SANTANDER",
@@ -396,6 +387,15 @@
         "display_start": "2026-10-11T22:00:00Z",
         "stop": "2026-10-12T01:30:00Z",
         "start": "2026-10-11T22:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] High Stakes Poker",
+        "league": "series",
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 0,
+        "display_start": "2026-10-10T17:00:00Z",
+        "stop": "2026-10-10T18:00:00Z",
+        "start": "2026-10-10T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Chelsea v Bournemouth Hlts",
