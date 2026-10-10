@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T05:11:02Z",
+  "generated_at": "2026-10-10T12:11:32Z",
   "channels": {
     "1": [
       {
@@ -120,15 +120,6 @@
         "start": "2026-10-12T07:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] High Stakes Poker",
-        "league": "series",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 0,
-        "display_start": "2026-10-09T23:00:00Z",
-        "stop": "2026-10-10T00:00:00Z",
-        "start": "2026-10-09T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] PL: Ipswich Town v Fulham Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -237,6 +228,15 @@
         "display_start": "2026-10-10T11:00:00Z",
         "stop": "2026-10-10T11:30:00Z",
         "start": "2026-10-10T11:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] High Stakes Poker",
+        "league": "series",
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 0,
+        "display_start": "2026-10-10T17:00:00Z",
+        "stop": "2026-10-10T18:00:00Z",
+        "start": "2026-10-10T17:00:00Z"
       }
     ],
     "3": [
