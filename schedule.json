@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T00:23:27Z",
+  "generated_at": "2026-10-13T13:53:24Z",
   "channels": {
     "1": [
       {
@@ -48,33 +48,6 @@
         "start": "2026-10-13T16:45:00Z"
       },
       {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-10-12T18:00:00Z",
-        "stop": "2026-10-12T19:00:00Z",
-        "start": "2026-10-12T18:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Plays of the Month -- Highlights",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-10-12T23:00:00Z",
-        "stop": "2026-10-12T23:30:00Z",
-        "start": "2026-10-12T23:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-10-12T17:00:00Z",
-        "stop": "2026-10-12T17:30:00Z",
-        "start": "2026-10-12T17:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Plays of the Month - Countdown",
         "league": "anthology",
         "ch_key": "Sportsnet.East.HD.ca2",
@@ -118,6 +91,15 @@
         "display_start": "2026-10-13T20:00:00Z",
         "stop": "2026-10-13T21:00:00Z",
         "start": "2026-10-13T20:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] MNF: Coventry v Newcastle Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-10-13T08:00:00Z",
+        "stop": "2026-10-13T08:30:00Z",
+        "start": "2026-10-13T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: C. Palace v Nott'm Forest Hlts",
@@ -194,13 +176,13 @@
         "start": "2026-10-14T16:45:00Z"
       },
       {
-        "title": "[REDIFFUSION] High Stakes Poker",
+        "title": "[REDIFFUSION] FA Cup Classics",
         "league": "series",
-        "ch_key": "Sportsnet.360.HD.ca2",
+        "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-10-12T23:00:00Z",
-        "stop": "2026-10-13T00:00:00Z",
-        "start": "2026-10-12T23:00:00Z"
+        "display_start": "2026-10-13T17:00:00Z",
+        "stop": "2026-10-13T17:30:00Z",
+        "start": "2026-10-13T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Aston Villa v Brentford Hlts",
@@ -234,8 +216,8 @@
       {
         "title": "🏒 COLORADO AVALANCHE AT DALLAS STARS",
         "league": "nhl",
-        "ch_key": "ESPN.HD.us2",
-        "score": 1750,
+        "ch_key": "TVA.Sports.HD.ca2",
+        "score": 2775,
         "display_start": "2026-10-14T00:00:00Z",
         "stop": "2026-10-14T03:30:00Z",
         "start": "2026-10-14T00:30:00Z"
@@ -268,13 +250,13 @@
         "start": "2026-10-13T16:45:00Z"
       },
       {
-        "title": "[REDIFFUSION] Singapore F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "title": "[REDIFFUSION] Plays of the Month -- Highlights",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-10-12T22:30:00Z",
-        "stop": "2026-10-12T23:30:00Z",
-        "start": "2026-10-12T22:30:00Z"
+        "display_start": "2026-10-13T22:30:00Z",
+        "stop": "2026-10-13T23:00:00Z",
+        "start": "2026-10-13T22:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights",
@@ -286,13 +268,13 @@
         "start": "2026-10-13T21:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Bahrain F1 GP Highlights",
+        "title": "[REDIFFUSION] Singapore F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-10-13T22:00:00Z",
-        "stop": "2026-10-13T23:00:00Z",
-        "start": "2026-10-13T22:00:00Z"
+        "display_start": "2026-10-13T23:00:00Z",
+        "stop": "2026-10-14T00:00:00Z",
+        "start": "2026-10-13T23:00:00Z"
       }
     ],
     "4": [
@@ -333,6 +315,15 @@
         "start": "2026-10-14T16:45:00Z"
       },
       {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "series",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-10-13T18:00:00Z",
+        "stop": "2026-10-13T19:00:00Z",
+        "start": "2026-10-13T18:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Italian F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -340,15 +331,6 @@
         "display_start": "2026-10-13T19:00:00Z",
         "stop": "2026-10-13T20:00:00Z",
         "start": "2026-10-13T19:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] MNF: Coventry v Newcastle Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-12T23:00:00Z",
-        "stop": "2026-10-12T23:30:00Z",
-        "start": "2026-10-12T23:00:00Z"
       }
     ],
     "5": [
@@ -396,6 +378,15 @@
         "display_start": "2026-10-14T23:30:00Z",
         "stop": "2026-10-15T03:00:00Z",
         "start": "2026-10-15T00:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Bahrain F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-10-13T22:00:00Z",
+        "stop": "2026-10-13T23:00:00Z",
+        "start": "2026-10-13T22:00:00Z"
       }
     ]
   }
