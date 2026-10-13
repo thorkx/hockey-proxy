@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T13:53:24Z",
+  "generated_at": "2026-10-13T22:27:12Z",
   "channels": {
     "1": [
       {
@@ -48,6 +48,24 @@
         "start": "2026-10-13T16:45:00Z"
       },
       {
+        "title": "[REDIFFUSION] High Stakes Poker",
+        "league": "poker",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-10-16T18:00:00Z",
+        "stop": "2026-10-16T19:00:00Z",
+        "start": "2026-10-16T18:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-10-16T22:00:00Z",
+        "stop": "2026-10-16T22:30:00Z",
+        "start": "2026-10-16T22:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Plays of the Month - Countdown",
         "league": "anthology",
         "ch_key": "Sportsnet.East.HD.ca2",
@@ -57,31 +75,13 @@
         "start": "2026-10-13T21:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 0,
-        "display_start": "2026-10-15T23:00:00Z",
-        "stop": "2026-10-15T23:30:00Z",
-        "start": "2026-10-15T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] SC With Jay Onrait",
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-10-13T07:00:00Z",
-        "stop": "2026-10-13T08:00:00Z",
-        "start": "2026-10-13T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Poker Night in America",
-        "league": "poker",
-        "ch_key": "CBS.Sports.Network.HD.us2",
-        "score": 0,
-        "display_start": "2026-10-13T06:00:00Z",
-        "stop": "2026-10-13T07:00:00Z",
-        "start": "2026-10-13T06:00:00Z"
+        "display_start": "2026-10-13T15:00:00Z",
+        "stop": "2026-10-13T16:00:00Z",
+        "start": "2026-10-13T15:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Spanish F1 GP Highlights",
@@ -93,40 +93,13 @@
         "start": "2026-10-13T20:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] MNF: Coventry v Newcastle Hlts",
+        "title": "[REDIFFUSION] PL: Chelsea v Bournemouth Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-10-13T08:00:00Z",
-        "stop": "2026-10-13T08:30:00Z",
-        "start": "2026-10-13T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: C. Palace v Nott'm Forest Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-13T12:00:00Z",
-        "stop": "2026-10-13T12:30:00Z",
-        "start": "2026-10-13T12:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Liverpool v Man City Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-13T12:30:00Z",
-        "stop": "2026-10-13T13:00:00Z",
-        "start": "2026-10-13T12:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Ipswich Town v Fulham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-13T14:00:00Z",
-        "stop": "2026-10-13T14:30:00Z",
-        "start": "2026-10-13T14:00:00Z"
+        "display_start": "2026-10-13T14:30:00Z",
+        "stop": "2026-10-13T15:00:00Z",
+        "start": "2026-10-13T14:30:00Z"
       }
     ],
     "2": [
@@ -189,27 +162,18 @@
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-10-13T06:00:00Z",
-        "stop": "2026-10-13T06:30:00Z",
-        "start": "2026-10-13T06:00:00Z"
+        "display_start": "2026-10-13T15:00:00Z",
+        "stop": "2026-10-13T15:30:00Z",
+        "start": "2026-10-13T15:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Sunderland v Brighton Hlts",
+        "title": "[REDIFFUSION] MNF: Coventry v Newcastle Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-10-13T07:00:00Z",
-        "stop": "2026-10-13T07:30:00Z",
-        "start": "2026-10-13T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Chelsea v Bournemouth Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-13T07:30:00Z",
-        "stop": "2026-10-13T08:00:00Z",
-        "start": "2026-10-13T07:30:00Z"
+        "display_start": "2026-10-13T15:30:00Z",
+        "stop": "2026-10-13T16:00:00Z",
+        "start": "2026-10-13T15:30:00Z"
       }
     ],
     "3": [
