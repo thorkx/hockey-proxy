@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T15:16:53Z",
+  "generated_at": "2026-10-17T20:21:35Z",
   "channels": {
     "1": [
       {
@@ -75,6 +75,15 @@
         "start": "2026-10-17T22:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Live: FA Women's Super League",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-10-18T11:00:00Z",
+        "stop": "2026-10-18T13:00:00Z",
+        "start": "2026-10-18T11:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] World Poker Tour",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -102,6 +111,15 @@
         "start": "2026-10-18T23:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] FA Women's Super League Matchweek Highlights",
+        "league": "soccer",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-10-20T18:00:00Z",
+        "stop": "2026-10-20T19:00:00Z",
+        "start": "2026-10-20T18:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Le top LNH",
         "league": "series",
         "ch_key": "TVA.Sports.2.HD.ca2",
@@ -118,15 +136,6 @@
         "display_start": "2026-10-19T07:00:00Z",
         "stop": "2026-10-19T08:00:00Z",
         "start": "2026-10-19T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Singapore F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-17T09:00:00Z",
-        "stop": "2026-10-17T10:00:00Z",
-        "start": "2026-10-17T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] U.S. F1 GP Highlights 2015",
@@ -230,22 +239,22 @@
         "start": "2026-10-18T16:00:00Z"
       },
       {
-        "title": "⚽ ATLÉTICO MADRID AT ESPANYOL",
+        "title": "⚽ ELCHE AT VILLARREAL",
         "league": "esp.1",
         "ch_key": "ESPN.Deportes.HD.us2",
         "score": 250,
-        "display_start": "2026-10-17T11:30:00Z",
-        "stop": "2026-10-17T15:00:00Z",
-        "start": "2026-10-17T12:00:00Z"
+        "display_start": "2026-10-17T13:45:00Z",
+        "stop": "2026-10-17T17:15:00Z",
+        "start": "2026-10-17T14:15:00Z"
       },
       {
-        "title": "⚽ BARCELONA AT REAL BETIS",
-        "league": "esp.1",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 250,
-        "display_start": "2026-10-17T15:30:00Z",
+        "title": "[REDIFFUSION] High Stakes Poker",
+        "league": "series",
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 0,
+        "display_start": "2026-10-17T18:00:00Z",
         "stop": "2026-10-17T19:00:00Z",
-        "start": "2026-10-17T16:00:00Z"
+        "start": "2026-10-17T18:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Poker Night in America",
@@ -322,15 +331,6 @@
         "start": "2026-10-18T19:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Live: FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-10-17T11:30:00Z",
-        "stop": "2026-10-17T13:30:00Z",
-        "start": "2026-10-17T11:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Plays of the Month -- Highlights",
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -391,9 +391,18 @@
         "league": "sports",
         "ch_key": "One.Soccer.ca2",
         "score": 0,
-        "display_start": "2026-10-17T13:30:00Z",
-        "stop": "2026-10-17T15:30:00Z",
-        "start": "2026-10-17T13:30:00Z"
+        "display_start": "2026-10-18T13:30:00Z",
+        "stop": "2026-10-18T15:30:00Z",
+        "start": "2026-10-18T13:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL Greatest Games:Chelsea/Wigan'10",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-10-17T13:45:00Z",
+        "stop": "2026-10-17T14:00:00Z",
+        "start": "2026-10-17T13:45:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Brighton v Crystal Palace Hlts",
@@ -434,22 +443,22 @@
         "start": "2026-10-17T23:30:00Z"
       },
       {
-        "title": "⚽ ELCHE AT VILLARREAL",
+        "title": "⚽ BARCELONA AT REAL BETIS",
         "league": "esp.1",
         "ch_key": "ESPN.Deportes.HD.us2",
         "score": 250,
-        "display_start": "2026-10-17T13:45:00Z",
-        "stop": "2026-10-17T17:15:00Z",
-        "start": "2026-10-17T14:15:00Z"
+        "display_start": "2026-10-17T16:00:00Z",
+        "stop": "2026-10-17T19:30:00Z",
+        "start": "2026-10-17T16:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] High Stakes Poker",
-        "league": "series",
-        "ch_key": "Sportsnet.360.HD.ca2",
+        "title": "[REDIFFUSION] Singapore F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-10-17T18:00:00Z",
-        "stop": "2026-10-17T19:00:00Z",
-        "start": "2026-10-17T18:00:00Z"
+        "display_start": "2026-10-18T15:30:00Z",
+        "stop": "2026-10-18T16:30:00Z",
+        "start": "2026-10-18T15:30:00Z"
       }
     ]
   }
