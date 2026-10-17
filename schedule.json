@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T03:45:46Z",
+  "generated_at": "2026-10-17T10:23:44Z",
   "channels": {
     "1": [
       {
@@ -39,15 +39,6 @@
         "start": "2026-10-19T00:00:00Z"
       },
       {
-        "title": "⚽ VANCOUVER FC VS HFX WANDERERS",
-        "league": "cpl",
-        "ch_key": "One.Soccer.ca2",
-        "score": 900,
-        "display_start": "2026-10-17T01:30:00Z",
-        "stop": "2026-10-17T05:00:00Z",
-        "start": "2026-10-17T02:00:00Z"
-      },
-      {
         "title": "⚽ CHELSEA AT EVERTON",
         "league": "eng.1",
         "ch_key": "Canal+.fr",
@@ -79,9 +70,9 @@
         "league": "",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-10-16T22:00:00Z",
-        "stop": "2026-10-16T22:30:00Z",
-        "start": "2026-10-16T22:00:00Z"
+        "display_start": "2026-10-17T22:00:00Z",
+        "stop": "2026-10-17T22:30:00Z",
+        "start": "2026-10-17T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -93,15 +84,6 @@
         "start": "2026-10-19T18:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-10-16T23:00:00Z",
-        "stop": "2026-10-16T23:30:00Z",
-        "start": "2026-10-16T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] FA Women's Super League",
         "league": "sports",
         "ch_key": "Sportsnet.World.HD.ca2",
@@ -111,6 +93,15 @@
         "start": "2026-10-18T06:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-10-18T23:00:00Z",
+        "stop": "2026-10-18T23:30:00Z",
+        "start": "2026-10-18T23:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Le top LNH",
         "league": "series",
         "ch_key": "TVA.Sports.2.HD.ca2",
@@ -118,6 +109,15 @@
         "display_start": "2026-10-18T09:45:00Z",
         "stop": "2026-10-18T10:00:00Z",
         "start": "2026-10-18T09:45:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
+        "score": 0,
+        "display_start": "2026-10-19T07:00:00Z",
+        "stop": "2026-10-19T08:00:00Z",
+        "start": "2026-10-19T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Singapore F1 GP Highlights",
@@ -138,15 +138,6 @@
         "start": "2026-10-19T06:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] U.S. F1 GP Highlights 2016",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-19T07:00:00Z",
-        "stop": "2026-10-19T08:00:00Z",
-        "start": "2026-10-19T07:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] U.S. F1 GP Highlights 2017",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -163,15 +154,6 @@
         "display_start": "2026-10-19T15:00:00Z",
         "stop": "2026-10-19T16:00:00Z",
         "start": "2026-10-19T15:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brentford v Liverpool Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-17T22:00:00Z",
-        "stop": "2026-10-17T22:30:00Z",
-        "start": "2026-10-17T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Leeds v Manchester United Hlts",
@@ -210,6 +192,15 @@
         "display_start": "2026-10-17T19:00:00Z",
         "stop": "2026-10-17T22:30:00Z",
         "start": "2026-10-17T19:30:00Z"
+      },
+      {
+        "title": "⚽ CF MONTRÉAL AT SEATTLE SOUNDERS FC",
+        "league": "usa.1",
+        "ch_key": "TSN.4.ca2",
+        "score": 750,
+        "display_start": "2026-10-18T02:00:00Z",
+        "stop": "2026-10-18T05:30:00Z",
+        "start": "2026-10-18T02:30:00Z"
       },
       {
         "title": "⚽ CRYSTAL PALACE AT BRIGHTON & HOVE ALBION",
@@ -266,6 +257,15 @@
         "start": "2026-10-18T07:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] U.S. F1 GP Highlights 2016",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-10-19T07:00:00Z",
+        "stop": "2026-10-19T08:00:00Z",
+        "start": "2026-10-19T07:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] PL: Man City v Ipswich Town Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -313,13 +313,13 @@
         "start": "2026-10-18T13:00:00Z"
       },
       {
-        "title": "⚽ REAL SOCIEDAD AT MÁLAGA",
+        "title": "⚽ SEVILLA AT REAL MADRID",
         "league": "esp.1",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 250,
-        "display_start": "2026-10-18T16:00:00Z",
-        "stop": "2026-10-18T19:30:00Z",
-        "start": "2026-10-18T16:30:00Z"
+        "ch_key": "TSN.2.ca2",
+        "score": 350,
+        "display_start": "2026-10-18T18:30:00Z",
+        "stop": "2026-10-18T22:00:00Z",
+        "start": "2026-10-18T19:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Live: FA Women's Super League",
@@ -340,22 +340,13 @@
         "start": "2026-10-17T13:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Brighton v Crystal Palace Hlts",
+        "title": "[REDIFFUSION] PL: Brentford v Liverpool Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-10-18T21:00:00Z",
-        "stop": "2026-10-18T21:30:00Z",
-        "start": "2026-10-18T21:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Bournemouth v Sunderland Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-18T21:30:00Z",
-        "stop": "2026-10-18T22:00:00Z",
-        "start": "2026-10-18T21:30:00Z"
+        "display_start": "2026-10-17T22:00:00Z",
+        "stop": "2026-10-17T22:30:00Z",
+        "start": "2026-10-17T22:00:00Z"
       }
     ],
     "4": [
@@ -387,13 +378,13 @@
         "start": "2026-10-17T19:30:00Z"
       },
       {
-        "title": "⚽ SEVILLA AT REAL MADRID",
+        "title": "⚽ REAL SOCIEDAD AT MÁLAGA",
         "league": "esp.1",
         "ch_key": "ESPN.Deportes.HD.us2",
         "score": 250,
-        "display_start": "2026-10-18T18:30:00Z",
-        "stop": "2026-10-18T22:00:00Z",
-        "start": "2026-10-18T19:00:00Z"
+        "display_start": "2026-10-18T16:00:00Z",
+        "stop": "2026-10-18T19:30:00Z",
+        "start": "2026-10-18T16:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Live: Bundesliga Soccer",
@@ -403,6 +394,24 @@
         "display_start": "2026-10-17T13:30:00Z",
         "stop": "2026-10-17T15:30:00Z",
         "start": "2026-10-17T13:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Brighton v Crystal Palace Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-10-18T21:00:00Z",
+        "stop": "2026-10-18T21:30:00Z",
+        "start": "2026-10-18T21:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Bournemouth v Sunderland Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-10-18T21:30:00Z",
+        "stop": "2026-10-18T22:00:00Z",
+        "start": "2026-10-18T21:30:00Z"
       }
     ],
     "5": [
