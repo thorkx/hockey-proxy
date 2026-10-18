@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T15:38:12Z",
+  "generated_at": "2026-10-18T20:21:40Z",
   "channels": {
     "1": [
       {
@@ -52,18 +52,9 @@
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-10-18T10:30:00Z",
-        "stop": "2026-10-18T11:00:00Z",
-        "start": "2026-10-18T10:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Live: FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-10-18T11:00:00Z",
-        "stop": "2026-10-18T13:00:00Z",
-        "start": "2026-10-18T11:00:00Z"
+        "display_start": "2026-10-18T13:00:00Z",
+        "stop": "2026-10-18T13:30:00Z",
+        "start": "2026-10-18T13:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -93,15 +84,6 @@
         "start": "2026-10-20T18:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Le top LNH",
-        "league": "series",
-        "ch_key": "TVA.Sports.2.HD.ca2",
-        "score": 0,
-        "display_start": "2026-10-18T09:45:00Z",
-        "stop": "2026-10-18T10:00:00Z",
-        "start": "2026-10-18T09:45:00Z"
-      },
-      {
         "title": "[REDIFFUSION] SC With Jay Onrait",
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
@@ -115,9 +97,9 @@
         "league": "poker",
         "ch_key": "CBS.Sports.Network.HD.us2",
         "score": 0,
-        "display_start": "2026-10-18T08:00:00Z",
-        "stop": "2026-10-18T09:00:00Z",
-        "start": "2026-10-18T08:00:00Z"
+        "display_start": "2026-10-20T09:00:00Z",
+        "stop": "2026-10-20T10:00:00Z",
+        "start": "2026-10-20T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] U.S. F1 GP Highlights 2015",
@@ -230,9 +212,9 @@
     ],
     "2": [
       {
-        "title": "⚽ CRYSTAL PALACE AT BRIGHTON & HOVE ALBION",
+        "title": "⚽ MANCHESTER UNITED AT LEEDS UNITED",
         "league": "eng.1",
-        "ch_key": "SkySp.PL.HD.uk",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 550,
         "display_start": "2026-10-18T12:30:00Z",
         "stop": "2026-10-18T16:00:00Z",
@@ -304,15 +286,6 @@
     ],
     "3": [
       {
-        "title": "⚽ MANCHESTER UNITED AT LEEDS UNITED",
-        "league": "eng.1",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 550,
-        "display_start": "2026-10-18T12:30:00Z",
-        "stop": "2026-10-18T16:00:00Z",
-        "start": "2026-10-18T13:00:00Z"
-      },
-      {
         "title": "⚽ SEVILLA AT REAL MADRID",
         "league": "esp.1",
         "ch_key": "TSN.2.ca2",
@@ -322,6 +295,15 @@
         "start": "2026-10-18T19:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Live: FA Women's Super League",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-10-18T13:30:00Z",
+        "stop": "2026-10-18T15:30:00Z",
+        "start": "2026-10-18T13:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] World Poker Tour",
         "league": "sports",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -329,6 +311,15 @@
         "display_start": "2026-10-19T18:00:00Z",
         "stop": "2026-10-19T19:00:00Z",
         "start": "2026-10-19T18:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Le top LNH",
+        "league": "series",
+        "ch_key": "TVA.Sports.HD.ca2",
+        "score": 0,
+        "display_start": "2026-10-18T16:15:00Z",
+        "stop": "2026-10-18T16:30:00Z",
+        "start": "2026-10-18T16:15:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Nott'm Forest v Arsenal Hlts",
@@ -349,15 +340,6 @@
         "display_start": "2026-10-18T16:00:00Z",
         "stop": "2026-10-18T19:30:00Z",
         "start": "2026-10-18T16:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Live: Bundesliga Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-10-18T13:30:00Z",
-        "stop": "2026-10-18T15:30:00Z",
-        "start": "2026-10-18T13:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Brighton v Crystal Palace Hlts",
