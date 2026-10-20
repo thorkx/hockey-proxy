@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T04:14:22Z",
+  "generated_at": "2026-10-20T11:11:53Z",
   "channels": {
     "1": [
       {
@@ -48,24 +48,6 @@
         "start": "2026-10-21T19:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "series",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-10-19T22:00:00Z",
-        "stop": "2026-10-19T23:00:00Z",
-        "start": "2026-10-19T22:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-10-19T23:00:00Z",
-        "stop": "2026-10-19T23:30:00Z",
-        "start": "2026-10-19T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Plays of the Month -- Highlights",
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -73,6 +55,15 @@
         "display_start": "2026-10-21T22:00:00Z",
         "stop": "2026-10-21T22:30:00Z",
         "start": "2026-10-21T22:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-10-21T22:30:00Z",
+        "stop": "2026-10-21T23:00:00Z",
+        "start": "2026-10-21T22:30:00Z"
       },
       {
         "title": "[REDIFFUSION] High Stakes Poker",
@@ -91,6 +82,15 @@
         "display_start": "2026-10-20T06:00:00Z",
         "stop": "2026-10-20T08:00:00Z",
         "start": "2026-10-20T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-10-20T17:00:00Z",
+        "stop": "2026-10-20T17:30:00Z",
+        "start": "2026-10-20T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Poker Night in America",
@@ -266,15 +266,6 @@
         "start": "2026-10-21T23:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-10-19T23:00:00Z",
-        "stop": "2026-10-19T23:30:00Z",
-        "start": "2026-10-19T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] SC With Jay Onrait",
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
@@ -371,9 +362,9 @@
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-10-19T23:00:00Z",
-        "stop": "2026-10-19T23:30:00Z",
-        "start": "2026-10-19T23:00:00Z"
+        "display_start": "2026-10-20T06:00:00Z",
+        "stop": "2026-10-20T06:30:00Z",
+        "start": "2026-10-20T06:00:00Z"
       }
     ],
     "4": [
@@ -403,6 +394,15 @@
         "display_start": "2026-10-21T16:15:00Z",
         "stop": "2026-10-21T19:45:00Z",
         "start": "2026-10-21T16:45:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "series",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-10-20T22:00:00Z",
+        "stop": "2026-10-20T23:00:00Z",
+        "start": "2026-10-20T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Singapore F1 GP Highlights",
