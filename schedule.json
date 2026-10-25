@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T11:01:31Z",
+  "generated_at": "2026-10-25T15:50:17Z",
   "channels": {
     "1": [
       {
@@ -174,15 +174,6 @@
         "start": "2026-10-27T23:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Coventry City v Fulham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-25T06:00:00Z",
-        "stop": "2026-10-25T06:30:00Z",
-        "start": "2026-10-25T06:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] PL: Liverpool v Brighton Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -199,6 +190,15 @@
         "display_start": "2026-10-26T08:00:00Z",
         "stop": "2026-10-26T08:30:00Z",
         "start": "2026-10-26T08:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Coventry City v Fulham Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-10-26T12:00:00Z",
+        "stop": "2026-10-26T12:30:00Z",
+        "start": "2026-10-26T12:00:00Z"
       }
     ],
     "2": [
