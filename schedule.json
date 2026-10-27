@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-27T04:24:34Z",
+  "generated_at": "2026-10-27T11:51:41Z",
   "channels": {
     "1": [
       {
         "title": "🏒 MONTREAL CANADIENS AT ST. LOUIS BLUES",
         "league": "nhl",
-        "ch_key": "TSN.2.ca2",
-        "score": 3450,
+        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
+        "score": 5300,
         "display_start": "2026-10-27T23:30:00Z",
         "stop": "2026-10-28T03:00:00Z",
         "start": "2026-10-28T00:00:00Z"
@@ -34,18 +34,27 @@
         "league": "series",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-10-26T22:00:00Z",
-        "stop": "2026-10-26T23:00:00Z",
-        "start": "2026-10-26T22:00:00Z"
+        "display_start": "2026-10-27T22:00:00Z",
+        "stop": "2026-10-27T23:00:00Z",
+        "start": "2026-10-27T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month -- Highlights",
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-10-26T23:00:00Z",
-        "stop": "2026-10-26T23:30:00Z",
-        "start": "2026-10-26T23:00:00Z"
+        "display_start": "2026-10-30T09:30:00Z",
+        "stop": "2026-10-30T10:00:00Z",
+        "start": "2026-10-30T09:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-10-27T17:00:00Z",
+        "stop": "2026-10-27T18:00:00Z",
+        "start": "2026-10-27T17:00:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Women's Super League Matchweek Highlights",
@@ -57,15 +66,6 @@
         "start": "2026-10-27T18:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Le top LNH",
-        "league": "series",
-        "ch_key": "TVA.Sports.2.HD.ca2",
-        "score": 0,
-        "display_start": "2026-10-26T21:15:00Z",
-        "stop": "2026-10-26T21:30:00Z",
-        "start": "2026-10-26T21:15:00Z"
-      },
-      {
         "title": "[REDIFFUSION] SC With Jay Onrait",
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
@@ -73,6 +73,15 @@
         "display_start": "2026-10-27T07:00:00Z",
         "stop": "2026-10-27T08:00:00Z",
         "start": "2026-10-27T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] High Stakes Poker",
+        "league": "series",
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 0,
+        "display_start": "2026-10-28T23:00:00Z",
+        "stop": "2026-10-29T00:00:00Z",
+        "start": "2026-10-28T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Poker Night in America",
@@ -118,15 +127,6 @@
         "display_start": "2026-10-27T21:00:00Z",
         "stop": "2026-10-27T22:00:00Z",
         "start": "2026-10-27T21:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Bahrain F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-27T22:00:00Z",
-        "stop": "2026-10-27T23:00:00Z",
-        "start": "2026-10-27T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Mexico City F1 GP Highlights 2019",
@@ -203,10 +203,10 @@
     ],
     "2": [
       {
-        "title": "🏒 BOSTON BRUINS AT CAROLINA HURRICANES",
+        "title": "🏒 MONTREAL CANADIENS AT ST. LOUIS BLUES",
         "league": "nhl",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 2150,
+        "ch_key": "TSN.2.ca2",
+        "score": 3450,
         "display_start": "2026-10-27T23:30:00Z",
         "stop": "2026-10-28T03:00:00Z",
         "start": "2026-10-28T00:00:00Z"
@@ -219,6 +219,15 @@
         "display_start": "2026-10-28T23:00:00Z",
         "stop": "2026-10-29T02:30:00Z",
         "start": "2026-10-28T23:30:00Z"
+      },
+      {
+        "title": "⚽ SAN DIEGO FC AT VANCOUVER WHITECAPS",
+        "league": "usa.1",
+        "ch_key": "TSN.3.ca2",
+        "score": 750,
+        "display_start": "2026-10-29T02:30:00Z",
+        "stop": "2026-10-29T05:30:00Z",
+        "start": "2026-10-29T02:30:00Z"
       },
       {
         "title": "⚽ NAPOLI AT MONZA",
@@ -234,18 +243,9 @@
         "league": "sports",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-10-26T21:00:00Z",
-        "stop": "2026-10-26T23:00:00Z",
-        "start": "2026-10-26T21:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-10-26T23:00:00Z",
-        "stop": "2026-10-27T00:00:00Z",
-        "start": "2026-10-26T23:00:00Z"
+        "display_start": "2026-10-27T21:00:00Z",
+        "stop": "2026-10-27T23:00:00Z",
+        "start": "2026-10-27T21:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Misplays of the Month",
@@ -255,6 +255,15 @@
         "display_start": "2026-10-27T18:30:00Z",
         "stop": "2026-10-27T19:00:00Z",
         "start": "2026-10-27T18:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Bundesliga Soccer",
+        "league": "sports",
+        "ch_key": "One.Soccer.ca2",
+        "score": 0,
+        "display_start": "2026-10-28T15:40:00Z",
+        "stop": "2026-10-28T17:35:00Z",
+        "start": "2026-10-28T15:40:00Z"
       },
       {
         "title": "[REDIFFUSION] Mexican F1 GP Highlights 2015",
@@ -313,22 +322,13 @@
     ],
     "3": [
       {
-        "title": "🏒 BUFFALO SABRES AT SAN JOSE SHARKS",
+        "title": "🏒 OTTAWA SENATORS AT VEGAS GOLDEN KNIGHTS",
         "league": "nhl",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 2150,
-        "display_start": "2026-10-28T02:00:00Z",
-        "stop": "2026-10-28T05:30:00Z",
-        "start": "2026-10-28T02:30:00Z"
-      },
-      {
-        "title": "🏒 COLUMBUS BLUE JACKETS AT PHILADELPHIA FLYERS",
-        "league": "nhl",
-        "ch_key": "Sportsnet.(Pacific).HD.ca2",
-        "score": 950,
-        "display_start": "2026-10-27T22:30:00Z",
-        "stop": "2026-10-28T02:00:00Z",
-        "start": "2026-10-27T23:00:00Z"
+        "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
+        "score": 2300,
+        "display_start": "2026-10-28T01:30:00Z",
+        "stop": "2026-10-28T05:00:00Z",
+        "start": "2026-10-28T02:00:00Z"
       },
       {
         "title": "⚽ ATLANTA UNITED FC AT NEW YORK CITY FC",
@@ -340,22 +340,31 @@
         "start": "2026-10-28T23:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] High Stakes Poker",
-        "league": "series",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 0,
-        "display_start": "2026-10-26T23:00:00Z",
-        "stop": "2026-10-27T00:00:00Z",
-        "start": "2026-10-26T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] US F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-10-26T22:00:00Z",
-        "stop": "2026-10-26T23:00:00Z",
-        "start": "2026-10-26T22:00:00Z"
+        "display_start": "2026-10-27T18:05:00Z",
+        "stop": "2026-10-27T19:00:00Z",
+        "start": "2026-10-27T18:05:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Bahrain F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-10-27T22:00:00Z",
+        "stop": "2026-10-27T23:00:00Z",
+        "start": "2026-10-27T22:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Singapore F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-10-27T23:00:00Z",
+        "stop": "2026-10-28T00:00:00Z",
+        "start": "2026-10-27T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Coventry City v Fulham Hlts",
@@ -378,13 +387,42 @@
     ],
     "4": [
       {
-        "title": "🏒 FLORIDA PANTHERS AT WINNIPEG JETS",
+        "title": "🏒 BOSTON BRUINS AT CAROLINA HURRICANES",
         "league": "nhl",
-        "ch_key": "TSN.3.ca2",
-        "score": 950,
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 2150,
         "display_start": "2026-10-27T23:30:00Z",
         "stop": "2026-10-28T03:00:00Z",
         "start": "2026-10-28T00:00:00Z"
+      },
+      {
+        "title": "⚽ D.C. UNITED AT TORONTO FC",
+        "league": "usa.1",
+        "ch_key": "TSN.3.ca2",
+        "score": 750,
+        "display_start": "2026-10-28T23:00:00Z",
+        "stop": "2026-10-29T02:30:00Z",
+        "start": "2026-10-28T23:30:00Z"
+      }
+    ],
+    "5": [
+      {
+        "title": "🏒 BUFFALO SABRES AT SAN JOSE SHARKS",
+        "league": "nhl",
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 2150,
+        "display_start": "2026-10-28T02:00:00Z",
+        "stop": "2026-10-28T05:30:00Z",
+        "start": "2026-10-28T02:30:00Z"
+      },
+      {
+        "title": "🏒 COLUMBUS BLUE JACKETS AT PHILADELPHIA FLYERS",
+        "league": "nhl",
+        "ch_key": "Sportsnet.(Pacific).HD.ca2",
+        "score": 950,
+        "display_start": "2026-10-27T22:30:00Z",
+        "stop": "2026-10-28T02:00:00Z",
+        "start": "2026-10-27T23:00:00Z"
       },
       {
         "title": "⚽ SPORTING KANSAS CITY AT MINNESOTA UNITED FC",
@@ -394,35 +432,6 @@
         "display_start": "2026-10-29T00:00:00Z",
         "stop": "2026-10-29T03:30:00Z",
         "start": "2026-10-29T00:30:00Z"
-      }
-    ],
-    "5": [
-      {
-        "title": "🏒 OTTAWA SENATORS AT VEGAS GOLDEN KNIGHTS",
-        "league": "nhl",
-        "ch_key": "TSN.5.ca2",
-        "score": 950,
-        "display_start": "2026-10-28T01:30:00Z",
-        "stop": "2026-10-28T05:00:00Z",
-        "start": "2026-10-28T02:00:00Z"
-      },
-      {
-        "title": "🏀 OKLAHOMA CITY THUNDER AT DALLAS MAVERICKS",
-        "league": "nba",
-        "ch_key": "beIN.SPORTS.2.fr",
-        "score": 400,
-        "display_start": "2026-10-29T01:00:00Z",
-        "stop": "2026-10-29T04:30:00Z",
-        "start": "2026-10-29T01:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Singapore F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-27T23:00:00Z",
-        "stop": "2026-10-28T00:00:00Z",
-        "start": "2026-10-27T23:00:00Z"
       }
     ]
   }
