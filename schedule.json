@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T12:27:01Z",
+  "generated_at": "2026-10-28T22:23:13Z",
   "channels": {
     "1": [
       {
@@ -66,6 +66,15 @@
         "start": "2026-10-30T22:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] Live: FA Women's Super League",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-10-31T12:30:00Z",
+        "stop": "2026-10-31T14:30:00Z",
+        "start": "2026-10-31T12:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] High Stakes Poker",
         "league": "poker",
         "ch_key": "Sportsnet.East.HD.ca2",
@@ -79,36 +88,18 @@
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-10-28T07:00:00Z",
-        "stop": "2026-10-28T08:00:00Z",
-        "start": "2026-10-28T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Mexican F1 GP Highlights 2017",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-28T06:00:00Z",
-        "stop": "2026-10-28T07:00:00Z",
-        "start": "2026-10-28T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Mexico City F1 GP Highlights 2019",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-28T08:00:00Z",
-        "stop": "2026-10-28T09:00:00Z",
-        "start": "2026-10-28T08:00:00Z"
+        "display_start": "2026-10-29T07:00:00Z",
+        "stop": "2026-10-29T08:00:00Z",
+        "start": "2026-10-29T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Mexico City F1 GP Highlights 2021",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-10-28T09:00:00Z",
-        "stop": "2026-10-28T10:00:00Z",
-        "start": "2026-10-28T09:00:00Z"
+        "display_start": "2026-10-28T23:30:00Z",
+        "stop": "2026-10-29T00:30:00Z",
+        "start": "2026-10-28T23:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Mexico City F1 GP Highlights 2022",
@@ -221,6 +212,15 @@
         "start": "2026-10-28T17:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Bundesliga Soccer",
+        "league": "sports",
+        "ch_key": "One.Soccer.ca2",
+        "score": 0,
+        "display_start": "2026-10-29T17:30:00Z",
+        "stop": "2026-10-29T17:44:00Z",
+        "start": "2026-10-29T17:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Live: Bundesliga Soccer",
         "league": "sports",
         "ch_key": "One.Soccer.ca2",
@@ -228,15 +228,6 @@
         "display_start": "2026-10-30T19:30:00Z",
         "stop": "2026-10-30T21:30:00Z",
         "start": "2026-10-30T19:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Mexican F1 GP Highlights 2018",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-28T07:00:00Z",
-        "stop": "2026-10-28T08:00:00Z",
-        "start": "2026-10-28T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Mexico City F1 GP Highlights 2024",
@@ -255,24 +246,6 @@
         "display_start": "2026-10-29T16:15:00Z",
         "stop": "2026-10-29T17:15:00Z",
         "start": "2026-10-29T16:15:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL Greatest Games:WHU/Man Utd '16",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-28T06:15:00Z",
-        "stop": "2026-10-28T06:30:00Z",
-        "start": "2026-10-28T06:15:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL Greatest Games:Wigan/Arsenal'10",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-28T06:30:00Z",
-        "stop": "2026-10-28T06:45:00Z",
-        "start": "2026-10-28T06:30:00Z"
       }
     ],
     "3": [
@@ -311,15 +284,6 @@
         "display_start": "2026-10-28T21:00:00Z",
         "stop": "2026-10-28T23:00:00Z",
         "start": "2026-10-28T21:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Bundesliga Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-10-28T15:41:00Z",
-        "stop": "2026-10-28T17:35:00Z",
-        "start": "2026-10-28T15:41:00Z"
       }
     ],
     "4": [
@@ -378,6 +342,15 @@
         "display_start": "2026-10-29T23:30:00Z",
         "stop": "2026-10-30T03:00:00Z",
         "start": "2026-10-30T00:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Mexico City F1 GP Highlights 2019",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-10-28T22:30:00Z",
+        "stop": "2026-10-28T23:30:00Z",
+        "start": "2026-10-28T22:30:00Z"
       }
     ]
   }
