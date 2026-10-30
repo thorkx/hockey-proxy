@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T05:05:56Z",
+  "generated_at": "2026-10-30T12:28:04Z",
   "channels": {
     "1": [
       {
@@ -109,15 +109,6 @@
         "display_start": "2026-11-01T08:00:00Z",
         "stop": "2026-11-01T10:00:00Z",
         "start": "2026-11-01T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Mexico City F1 GP Highlights 2025",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-10-29T23:30:00Z",
-        "stop": "2026-10-30T00:30:00Z",
-        "start": "2026-10-29T23:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Mexico City F1 GP Highlights 2024",
@@ -246,6 +237,15 @@
         "display_start": "2026-10-30T06:00:00Z",
         "stop": "2026-10-30T07:00:00Z",
         "start": "2026-10-30T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Mexico City F1 GP Highlights 2025",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-10-30T09:00:00Z",
+        "stop": "2026-10-30T10:00:00Z",
+        "start": "2026-10-30T09:00:00Z"
       }
     ],
     "3": [
