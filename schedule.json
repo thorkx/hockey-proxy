@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T04:52:45Z",
+  "generated_at": "2026-10-31T11:56:51Z",
   "channels": {
     "1": [
       {
@@ -84,6 +84,15 @@
         "start": "2026-11-02T23:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-11-03T10:30:00Z",
+        "stop": "2026-11-03T11:00:00Z",
+        "start": "2026-11-03T10:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] FA Cup Classics",
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
@@ -100,15 +109,6 @@
         "display_start": "2026-11-02T07:00:00Z",
         "stop": "2026-11-02T09:00:00Z",
         "start": "2026-11-02T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 0,
-        "display_start": "2026-10-31T21:00:00Z",
-        "stop": "2026-10-31T21:30:00Z",
-        "start": "2026-10-31T21:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Le top LNH",
