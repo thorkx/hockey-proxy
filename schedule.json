@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T12:56:45Z",
+  "generated_at": "2026-11-01T21:52:05Z",
   "channels": {
     "1": [
       {
@@ -48,22 +48,13 @@
         "start": "2026-11-02T20:00:00Z"
       },
       {
-        "title": "⚽ SEVILLA AT GETAFE",
-        "league": "esp.1",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 250,
-        "display_start": "2026-11-01T12:30:00Z",
-        "stop": "2026-11-01T16:00:00Z",
-        "start": "2026-11-01T13:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Plays of the Month -- Highlights",
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-11-01T11:30:00Z",
-        "stop": "2026-11-01T12:00:00Z",
-        "start": "2026-11-01T11:30:00Z"
+        "display_start": "2026-11-01T14:00:00Z",
+        "stop": "2026-11-01T14:30:00Z",
+        "start": "2026-11-01T14:00:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -93,22 +84,22 @@
         "start": "2026-11-02T06:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] FA Women's Super League",
+        "league": "sports",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-11-02T07:00:00Z",
+        "stop": "2026-11-02T09:00:00Z",
+        "start": "2026-11-02T07:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Le top LNH",
         "league": "series",
         "ch_key": "TVA.Sports.HD.ca2",
         "score": 0,
-        "display_start": "2026-11-01T10:45:00Z",
-        "stop": "2026-11-01T11:00:00Z",
-        "start": "2026-11-01T10:45:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
-        "score": 0,
-        "display_start": "2026-11-02T08:00:00Z",
-        "stop": "2026-11-02T09:00:00Z",
-        "start": "2026-11-02T08:00:00Z"
+        "display_start": "2026-11-01T15:45:00Z",
+        "stop": "2026-11-01T16:00:00Z",
+        "start": "2026-11-01T15:45:00Z"
       },
       {
         "title": "[REDIFFUSION] Poker Night in America",
@@ -183,58 +174,22 @@
         "start": "2026-11-03T23:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Bournemouth v Leeds Utd Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-01T06:00:00Z",
-        "stop": "2026-11-01T06:30:00Z",
-        "start": "2026-11-01T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brentford v Nott'm Forest Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-01T06:30:00Z",
-        "stop": "2026-11-01T07:00:00Z",
-        "start": "2026-11-01T06:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL:Manchester City v Brighton Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-01T07:00:00Z",
-        "stop": "2026-11-01T07:30:00Z",
-        "start": "2026-11-01T07:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] SNF: Spurs v Crystal Palace Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-11-01T07:30:00Z",
-        "stop": "2026-11-01T08:00:00Z",
-        "start": "2026-11-01T07:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SNF: Aston Villa v Fulham Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-01T08:00:00Z",
-        "stop": "2026-11-01T08:30:00Z",
-        "start": "2026-11-01T08:00:00Z"
+        "display_start": "2026-11-02T06:30:00Z",
+        "stop": "2026-11-02T07:00:00Z",
+        "start": "2026-11-02T06:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL:Coventry City v Sunderland Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-11-01T08:30:00Z",
-        "stop": "2026-11-01T09:00:00Z",
-        "start": "2026-11-01T08:30:00Z"
+        "display_start": "2026-11-02T16:00:00Z",
+        "stop": "2026-11-02T16:30:00Z",
+        "start": "2026-11-02T16:00:00Z"
       }
     ],
     "2": [
@@ -293,22 +248,13 @@
         "start": "2026-11-01T15:15:00Z"
       },
       {
-        "title": "[REDIFFUSION] Live: FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-11-01T12:00:00Z",
-        "stop": "2026-11-01T14:00:00Z",
-        "start": "2026-11-01T12:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Bundesliga Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-11-01T09:00:00Z",
-        "stop": "2026-11-01T11:00:00Z",
-        "start": "2026-11-01T09:00:00Z"
+        "display_start": "2026-11-02T08:00:00Z",
+        "stop": "2026-11-02T09:00:00Z",
+        "start": "2026-11-02T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Mexico City F1 GP Highlights",
@@ -327,6 +273,24 @@
         "display_start": "2026-11-03T08:00:00Z",
         "stop": "2026-11-03T09:00:00Z",
         "start": "2026-11-03T08:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SNF: Aston Villa v Fulham Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-02T07:00:00Z",
+        "stop": "2026-11-02T07:30:00Z",
+        "start": "2026-11-02T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Bournemouth v Leeds Utd Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-02T07:30:00Z",
+        "stop": "2026-11-02T08:00:00Z",
+        "start": "2026-11-02T07:30:00Z"
       },
       {
         "title": "[REDIFFUSION] MNF: Newcastle v Everton Hlts",
@@ -385,13 +349,31 @@
         "start": "2026-11-02T20:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Live: Bundesliga Soccer",
+        "title": "[REDIFFUSION] Live: FA Women's Super League",
         "league": "sports",
-        "ch_key": "One.Soccer.ca2",
+        "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-11-01T13:30:00Z",
-        "stop": "2026-11-01T15:30:00Z",
-        "start": "2026-11-01T13:30:00Z"
+        "display_start": "2026-11-01T14:30:00Z",
+        "stop": "2026-11-01T16:30:00Z",
+        "start": "2026-11-01T14:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Brentford v Nott'm Forest Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-02T08:00:00Z",
+        "stop": "2026-11-02T08:30:00Z",
+        "start": "2026-11-02T08:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL:Manchester City v Brighton Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-02T08:30:00Z",
+        "stop": "2026-11-02T09:00:00Z",
+        "start": "2026-11-02T08:30:00Z"
       }
     ],
     "4": [
@@ -452,13 +434,13 @@
     ],
     "5": [
       {
-        "title": "⚽ ATLÉTICO OTTAWA VS FORGE",
-        "league": "cpl",
-        "ch_key": "One.Soccer.ca2",
-        "score": 900,
-        "display_start": "2026-11-01T18:30:00Z",
-        "stop": "2026-11-01T22:00:00Z",
-        "start": "2026-11-01T19:00:00Z"
+        "title": "⚽ TORONTO FC AT ATLANTA UNITED FC",
+        "league": "usa.1",
+        "ch_key": "TSN.3.ca2",
+        "score": 750,
+        "display_start": "2026-11-01T21:00:00Z",
+        "stop": "2026-11-02T00:30:00Z",
+        "start": "2026-11-01T21:30:00Z"
       },
       {
         "title": "🏀 MIAMI HEAT AT LOS ANGELES LAKERS",
@@ -468,15 +450,6 @@
         "display_start": "2026-11-03T02:30:00Z",
         "stop": "2026-11-03T06:00:00Z",
         "start": "2026-11-03T03:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-11-01T22:00:00Z",
-        "stop": "2026-11-02T00:00:00Z",
-        "start": "2026-11-01T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Sao Paulo F1 GP Highlights 2025",
