@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-11-01T21:52:05Z",
+  "generated_at": "2026-11-02T05:17:59Z",
   "channels": {
     "1": [
       {
-        "title": "⚽ SUPRA DU QUÉBEC VS CAVALRY",
-        "league": "cpl",
-        "ch_key": "One.Soccer.ca2",
-        "score": 3400,
-        "display_start": "2026-11-01T20:30:00Z",
-        "stop": "2026-11-02T00:00:00Z",
-        "start": "2026-11-01T21:00:00Z"
-      },
-      {
-        "title": "🏒 OTTAWA SENATORS AT ANAHEIM DUCKS",
+        "title": "🏒 WINNIPEG JETS AT MONTREAL CANADIENS",
         "league": "nhl",
         "ch_key": "Réseau.des.Sports.(RDS).HD.ca2",
-        "score": 2300,
-        "display_start": "2026-11-02T00:30:00Z",
-        "stop": "2026-11-02T04:00:00Z",
-        "start": "2026-11-02T01:00:00Z"
+        "score": 5300,
+        "display_start": "2026-11-03T23:30:00Z",
+        "stop": "2026-11-04T03:00:00Z",
+        "start": "2026-11-04T00:00:00Z"
+      },
+      {
+        "title": "⚽ PARIS SAINT-GERMAIN AT VILLARREAL",
+        "league": "uefa.champions",
+        "ch_key": "TNT.Sports.4.HD.uk",
+        "score": 1675,
+        "display_start": "2026-11-03T19:30:00Z",
+        "stop": "2026-11-03T23:00:00Z",
+        "start": "2026-11-03T20:00:00Z"
       },
       {
         "title": "🏀 TORONTO RAPTORS AT LA CLIPPERS",
@@ -28,15 +28,6 @@
         "display_start": "2026-11-03T02:30:00Z",
         "stop": "2026-11-03T06:00:00Z",
         "start": "2026-11-03T03:00:00Z"
-      },
-      {
-        "title": "⚽ ARSENAL AT LIVERPOOL",
-        "league": "eng.1",
-        "ch_key": "Canal+.fr",
-        "score": 650,
-        "display_start": "2026-11-01T16:00:00Z",
-        "stop": "2026-11-01T19:30:00Z",
-        "start": "2026-11-01T16:30:00Z"
       },
       {
         "title": "⚽ EVERTON AT NEWCASTLE UNITED",
@@ -52,9 +43,9 @@
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-11-01T14:00:00Z",
-        "stop": "2026-11-01T14:30:00Z",
-        "start": "2026-11-01T14:00:00Z"
+        "display_start": "2026-11-01T23:30:00Z",
+        "stop": "2026-11-02T00:00:00Z",
+        "start": "2026-11-01T23:30:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -84,22 +75,31 @@
         "start": "2026-11-02T06:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.World.HD.ca2",
+        "title": "[REDIFFUSION] Plays of the Month - Countdown",
+        "league": "anthology",
+        "ch_key": "Sportsnet.(Pacific).HD.ca2",
         "score": 0,
-        "display_start": "2026-11-02T07:00:00Z",
-        "stop": "2026-11-02T09:00:00Z",
-        "start": "2026-11-02T07:00:00Z"
+        "display_start": "2026-11-02T06:30:00Z",
+        "stop": "2026-11-02T07:00:00Z",
+        "start": "2026-11-02T06:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] Le top LNH",
-        "league": "series",
-        "ch_key": "TVA.Sports.HD.ca2",
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-11-01T15:45:00Z",
-        "stop": "2026-11-01T16:00:00Z",
-        "start": "2026-11-01T15:45:00Z"
+        "display_start": "2026-11-02T08:00:00Z",
+        "stop": "2026-11-02T09:00:00Z",
+        "start": "2026-11-02T08:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] High Stakes Poker",
+        "league": "series",
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 0,
+        "display_start": "2026-11-01T22:00:00Z",
+        "stop": "2026-11-01T23:00:00Z",
+        "start": "2026-11-01T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Poker Night in America",
@@ -138,49 +138,58 @@
         "start": "2026-11-03T09:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Azerbaijan F1 GP Highlights",
+        "title": "[REDIFFUSION] Brazilian F1 GP Highlights 2018",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-11-03T20:00:00Z",
-        "stop": "2026-11-03T21:00:00Z",
-        "start": "2026-11-03T20:00:00Z"
+        "display_start": "2026-11-04T06:00:00Z",
+        "stop": "2026-11-04T07:00:00Z",
+        "start": "2026-11-04T06:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Bahrain F1 GP Highlights",
+        "title": "[REDIFFUSION] Brazilian F1 GP Highlights 2019",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-11-03T21:00:00Z",
-        "stop": "2026-11-03T22:00:00Z",
-        "start": "2026-11-03T21:00:00Z"
+        "display_start": "2026-11-04T07:00:00Z",
+        "stop": "2026-11-04T08:00:00Z",
+        "start": "2026-11-04T07:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Singapore F1 GP Highlights",
+        "title": "[REDIFFUSION] Sao Paulo F1 GP Highlights 2021",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-11-03T22:00:00Z",
-        "stop": "2026-11-03T23:00:00Z",
-        "start": "2026-11-03T22:00:00Z"
+        "display_start": "2026-11-04T08:00:00Z",
+        "stop": "2026-11-04T09:00:00Z",
+        "start": "2026-11-04T08:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] US F1 GP Highlights",
+        "title": "[REDIFFUSION] Sao Paulo F1 GP Highlights 2022",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-11-03T23:00:00Z",
-        "stop": "2026-11-04T00:00:00Z",
-        "start": "2026-11-03T23:00:00Z"
+        "display_start": "2026-11-04T09:00:00Z",
+        "stop": "2026-11-04T10:00:00Z",
+        "start": "2026-11-04T09:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] SNF: Spurs v Crystal Palace Hlts",
+        "title": "[REDIFFUSION] SNF: Aston Villa v Fulham Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-11-02T06:30:00Z",
-        "stop": "2026-11-02T07:00:00Z",
-        "start": "2026-11-02T06:30:00Z"
+        "display_start": "2026-11-01T23:00:00Z",
+        "stop": "2026-11-01T23:30:00Z",
+        "start": "2026-11-01T23:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Bournemouth v Leeds Utd Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-02T07:30:00Z",
+        "stop": "2026-11-02T08:00:00Z",
+        "start": "2026-11-02T07:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL:Coventry City v Sunderland Hlts",
@@ -194,22 +203,22 @@
     ],
     "2": [
       {
-        "title": "🏒 MINNESOTA WILD AT WASHINGTON CAPITALS",
+        "title": "🏒 WINNIPEG JETS AT MONTREAL CANADIENS",
         "league": "nhl",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 2150,
-        "display_start": "2026-11-01T20:00:00Z",
-        "stop": "2026-11-01T23:30:00Z",
-        "start": "2026-11-01T20:30:00Z"
+        "ch_key": "TSN.3.ca2",
+        "score": 3450,
+        "display_start": "2026-11-03T23:30:00Z",
+        "stop": "2026-11-04T03:00:00Z",
+        "start": "2026-11-04T00:00:00Z"
       },
       {
-        "title": "🏀 TORONTO RAPTORS AT LOS ANGELES LAKERS",
-        "league": "nba",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 1150,
-        "display_start": "2026-11-02T01:30:00Z",
-        "stop": "2026-11-02T05:00:00Z",
-        "start": "2026-11-02T02:00:00Z"
+        "title": "⚽ VFB STUTTGART AT GALATASARAY",
+        "league": "uefa.champions",
+        "ch_key": "Canal+.Sport.fr",
+        "score": 575,
+        "display_start": "2026-11-03T17:15:00Z",
+        "stop": "2026-11-03T20:45:00Z",
+        "start": "2026-11-03T17:45:00Z"
       },
       {
         "title": "🏀 OKLAHOMA CITY THUNDER AT CLEVELAND CAVALIERS",
@@ -239,31 +248,13 @@
         "start": "2026-11-02T19:45:00Z"
       },
       {
-        "title": "⚽ REAL MADRID AT RACING SANTANDER",
-        "league": "esp.1",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 250,
-        "display_start": "2026-11-01T14:45:00Z",
-        "stop": "2026-11-01T18:15:00Z",
-        "start": "2026-11-01T15:15:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.4.ca2",
-        "score": 0,
-        "display_start": "2026-11-02T08:00:00Z",
-        "stop": "2026-11-02T09:00:00Z",
-        "start": "2026-11-02T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Mexico City F1 GP Highlights",
+        "title": "[REDIFFUSION] FA Women's Super League",
         "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-11-01T23:30:00Z",
-        "stop": "2026-11-02T00:30:00Z",
-        "start": "2026-11-01T23:30:00Z"
+        "display_start": "2026-11-01T22:00:00Z",
+        "stop": "2026-11-02T00:00:00Z",
+        "start": "2026-11-01T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Brazilian F1 GP Highlights 2016",
@@ -275,87 +266,22 @@
         "start": "2026-11-03T08:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] SNF: Aston Villa v Fulham Hlts",
+        "title": "[REDIFFUSION] Bahrain F1 GP Highlights",
         "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
+        "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-11-02T07:00:00Z",
-        "stop": "2026-11-02T07:30:00Z",
-        "start": "2026-11-02T07:00:00Z"
+        "display_start": "2026-11-03T21:00:00Z",
+        "stop": "2026-11-03T22:00:00Z",
+        "start": "2026-11-03T21:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Bournemouth v Leeds Utd Hlts",
+        "title": "[REDIFFUSION] Singapore F1 GP Highlights",
         "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
+        "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-11-02T07:30:00Z",
-        "stop": "2026-11-02T08:00:00Z",
-        "start": "2026-11-02T07:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] MNF: Newcastle v Everton Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-03T07:00:00Z",
-        "stop": "2026-11-03T07:30:00Z",
-        "start": "2026-11-03T07:00:00Z"
-      }
-    ],
-    "3": [
-      {
-        "title": "🏒 UTAH MAMMOTH AT PHILADELPHIA FLYERS",
-        "league": "nhl",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 2150,
-        "display_start": "2026-11-01T20:30:00Z",
-        "stop": "2026-11-02T00:00:00Z",
-        "start": "2026-11-01T21:00:00Z"
-      },
-      {
-        "title": "⚽ INTER MIAMI CF AT NEW ENGLAND REVOLUTION",
-        "league": "usa.1",
-        "ch_key": "TSN.4.ca2",
-        "score": 750,
-        "display_start": "2026-11-02T00:00:00Z",
-        "stop": "2026-11-02T03:00:00Z",
-        "start": "2026-11-02T00:00:00Z"
-      },
-      {
-        "title": "🏀 BROOKLYN NETS AT NEW YORK KNICKS",
-        "league": "nba",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 350,
-        "display_start": "2026-11-03T00:00:00Z",
-        "stop": "2026-11-03T03:30:00Z",
-        "start": "2026-11-03T00:30:00Z"
-      },
-      {
-        "title": "⚽ VALENCIA AT ELCHE",
-        "league": "esp.1",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 250,
-        "display_start": "2026-11-01T17:00:00Z",
-        "stop": "2026-11-01T20:30:00Z",
-        "start": "2026-11-01T17:30:00Z"
-      },
-      {
-        "title": "⚽ OSASUNA AT DEPORTIVO",
-        "league": "esp.1",
-        "ch_key": "ESPN.Deportes.HD.us2",
-        "score": 250,
-        "display_start": "2026-11-02T19:30:00Z",
-        "stop": "2026-11-02T23:00:00Z",
-        "start": "2026-11-02T20:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Live: FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-11-01T14:30:00Z",
-        "stop": "2026-11-01T16:30:00Z",
-        "start": "2026-11-01T14:30:00Z"
+        "display_start": "2026-11-03T22:00:00Z",
+        "stop": "2026-11-03T23:00:00Z",
+        "start": "2026-11-03T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Brentford v Nott'm Forest Hlts",
@@ -374,35 +300,100 @@
         "display_start": "2026-11-02T08:30:00Z",
         "stop": "2026-11-02T09:00:00Z",
         "start": "2026-11-02T08:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] MNF: Newcastle v Everton Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-03T07:00:00Z",
+        "stop": "2026-11-03T07:30:00Z",
+        "start": "2026-11-03T07:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL Greatest Games: B'ming/A.Villa",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-04T06:00:00Z",
+        "stop": "2026-11-04T06:15:00Z",
+        "start": "2026-11-04T06:00:00Z"
+      }
+    ],
+    "3": [
+      {
+        "title": "🏒 UTAH MAMMOTH AT TORONTO MAPLE LEAFS",
+        "league": "nhl",
+        "ch_key": "TSN.4K.ca2",
+        "score": 2150,
+        "display_start": "2026-11-03T23:30:00Z",
+        "stop": "2026-11-04T03:00:00Z",
+        "start": "2026-11-04T00:00:00Z"
+      },
+      {
+        "title": "⚽ LILLE AT BODO/GLIMT",
+        "league": "uefa.champions",
+        "ch_key": "Canal+.Sport.fr",
+        "score": 575,
+        "display_start": "2026-11-03T19:30:00Z",
+        "stop": "2026-11-03T23:00:00Z",
+        "start": "2026-11-03T20:00:00Z"
+      },
+      {
+        "title": "🏀 BROOKLYN NETS AT NEW YORK KNICKS",
+        "league": "nba",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 350,
+        "display_start": "2026-11-03T00:00:00Z",
+        "stop": "2026-11-03T03:30:00Z",
+        "start": "2026-11-03T00:30:00Z"
+      },
+      {
+        "title": "⚽ OSASUNA AT DEPORTIVO",
+        "league": "esp.1",
+        "ch_key": "ESPN.Deportes.HD.us2",
+        "score": 250,
+        "display_start": "2026-11-02T19:30:00Z",
+        "stop": "2026-11-02T23:00:00Z",
+        "start": "2026-11-02T20:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Mexico City F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-01T23:30:00Z",
+        "stop": "2026-11-02T00:30:00Z",
+        "start": "2026-11-01T23:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SNF: Spurs v Crystal Palace Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-01T22:30:00Z",
+        "stop": "2026-11-01T23:00:00Z",
+        "start": "2026-11-01T22:30:00Z"
       }
     ],
     "4": [
       {
-        "title": "🏒 EDMONTON OILERS AT NEW YORK RANGERS",
+        "title": "🏒 EDMONTON OILERS AT NEW JERSEY DEVILS",
         "league": "nhl",
         "ch_key": "Sportsnet.East.HD.ca2",
         "score": 2150,
-        "display_start": "2026-11-01T22:30:00Z",
-        "stop": "2026-11-02T02:00:00Z",
-        "start": "2026-11-01T23:00:00Z"
+        "display_start": "2026-11-04T00:00:00Z",
+        "stop": "2026-11-04T03:30:00Z",
+        "start": "2026-11-04T00:30:00Z"
       },
       {
-        "title": "🏒 WINNIPEG JETS AT CAROLINA HURRICANES",
-        "league": "nhl",
-        "ch_key": "TVA.Sports.HD.ca2",
-        "score": 1975,
-        "display_start": "2026-11-01T17:30:00Z",
-        "stop": "2026-11-01T21:00:00Z",
-        "start": "2026-11-01T18:00:00Z"
-      },
-      {
-        "title": "⚽ HOUSTON DYNAMO FC AT PORTLAND TIMBERS",
-        "league": "usa.1",
-        "ch_key": "TSN.2.ca2",
-        "score": 750,
-        "display_start": "2026-11-02T02:15:00Z",
-        "stop": "2026-11-02T05:45:00Z",
-        "start": "2026-11-02T02:45:00Z"
+        "title": "⚽ SPORTING CP AT SHAKHTAR DONETSK",
+        "league": "uefa.champions",
+        "ch_key": "TNT.Sports.4.HD.uk",
+        "score": 475,
+        "display_start": "2026-11-03T17:15:00Z",
+        "stop": "2026-11-03T20:45:00Z",
+        "start": "2026-11-03T17:45:00Z"
       },
       {
         "title": "🏀 CHICAGO BULLS AT PHILADELPHIA 76ERS",
@@ -414,33 +405,33 @@
         "start": "2026-11-03T00:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] Plays of the Month - Countdown",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
+        "title": "[REDIFFUSION] US F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-11-01T17:00:00Z",
-        "stop": "2026-11-01T17:30:00Z",
-        "start": "2026-11-01T17:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] High Stakes Poker",
-        "league": "series",
-        "ch_key": "Sportsnet.360.HD.ca2",
-        "score": 0,
-        "display_start": "2026-11-01T21:00:00Z",
-        "stop": "2026-11-01T22:00:00Z",
-        "start": "2026-11-01T21:00:00Z"
+        "display_start": "2026-11-03T23:00:00Z",
+        "stop": "2026-11-04T00:00:00Z",
+        "start": "2026-11-03T23:00:00Z"
       }
     ],
     "5": [
       {
-        "title": "⚽ TORONTO FC AT ATLANTA UNITED FC",
-        "league": "usa.1",
-        "ch_key": "TSN.3.ca2",
-        "score": 750,
-        "display_start": "2026-11-01T21:00:00Z",
-        "stop": "2026-11-02T00:30:00Z",
-        "start": "2026-11-01T21:30:00Z"
+        "title": "🏒 ANAHEIM DUCKS AT VANCOUVER CANUCKS",
+        "league": "nhl",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 2150,
+        "display_start": "2026-11-04T01:30:00Z",
+        "stop": "2026-11-04T05:00:00Z",
+        "start": "2026-11-04T02:00:00Z"
+      },
+      {
+        "title": "⚽ BAYERN MUNICH AT ATLÉTICO MADRID",
+        "league": "uefa.champions",
+        "ch_key": "TNT.Sports.2.HD.uk",
+        "score": 475,
+        "display_start": "2026-11-03T19:30:00Z",
+        "stop": "2026-11-03T23:00:00Z",
+        "start": "2026-11-03T20:00:00Z"
       },
       {
         "title": "🏀 MIAMI HEAT AT LOS ANGELES LAKERS",
