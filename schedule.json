@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T00:46:57Z",
+  "generated_at": "2026-11-03T13:53:55Z",
   "channels": {
     "1": [
       {
@@ -39,15 +39,6 @@
         "start": "2026-11-05T02:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] World Poker Tour",
-        "league": "series",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-11-02T23:00:00Z",
-        "stop": "2026-11-03T00:00:00Z",
-        "start": "2026-11-02T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Misplays of the Month",
         "league": "",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -79,9 +70,9 @@
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-11-02T18:00:00Z",
-        "stop": "2026-11-02T18:30:00Z",
-        "start": "2026-11-02T18:00:00Z"
+        "display_start": "2026-11-03T06:00:00Z",
+        "stop": "2026-11-03T06:30:00Z",
+        "start": "2026-11-03T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Women's Super League Matchweek Highlights",
@@ -109,15 +100,6 @@
         "display_start": "2026-11-03T08:00:00Z",
         "stop": "2026-11-03T09:00:00Z",
         "start": "2026-11-03T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Brazilian F1 GP Highlights 2014",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-03T06:00:00Z",
-        "stop": "2026-11-03T07:00:00Z",
-        "start": "2026-11-03T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Brazilian F1 GP Highlights 2015",
@@ -210,6 +192,15 @@
         "start": "2026-11-05T08:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] PL: Brentford v Nott'm Forest Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-03T06:30:00Z",
+        "stop": "2026-11-03T07:00:00Z",
+        "start": "2026-11-03T06:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] PL:Manchester City v Brighton Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
@@ -284,22 +275,13 @@
         "start": "2026-11-03T08:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL: Bournemouth v Leeds Utd Hlts",
+        "title": "[REDIFFUSION] Brazilian F1 GP Highlights 2014",
         "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
+        "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
         "display_start": "2026-11-03T06:00:00Z",
-        "stop": "2026-11-03T06:30:00Z",
-        "start": "2026-11-03T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Brentford v Nott'm Forest Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-03T06:30:00Z",
         "stop": "2026-11-03T07:00:00Z",
-        "start": "2026-11-03T06:30:00Z"
+        "start": "2026-11-03T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] MNF: Newcastle v Everton Hlts",
@@ -365,6 +347,15 @@
         "display_start": "2026-11-03T08:00:00Z",
         "stop": "2026-11-03T09:00:00Z",
         "start": "2026-11-03T08:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Bournemouth v Leeds Utd Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-03T06:00:00Z",
+        "stop": "2026-11-03T06:30:00Z",
+        "start": "2026-11-03T06:00:00Z"
       }
     ],
     "4": [
@@ -394,6 +385,15 @@
         "display_start": "2026-11-04T17:15:00Z",
         "stop": "2026-11-04T20:45:00Z",
         "start": "2026-11-04T17:45:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "series",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-11-03T23:00:00Z",
+        "stop": "2026-11-04T00:00:00Z",
+        "start": "2026-11-03T23:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SNF: Aston Villa v Fulham Hlts",
