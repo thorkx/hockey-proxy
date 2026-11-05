@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T14:25:52Z",
+  "generated_at": "2026-11-05T23:28:22Z",
   "channels": {
     "1": [
       {
@@ -39,15 +39,6 @@
         "start": "2026-11-07T01:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Plays of the Month - Countdown",
-        "league": "anthology",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-11-05T10:00:00Z",
-        "stop": "2026-11-05T10:30:00Z",
-        "start": "2026-11-05T10:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] World Poker Tour",
         "league": "series",
         "ch_key": "Sportsnet.One.HD.ca2",
@@ -75,13 +66,22 @@
         "start": "2026-11-07T14:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] Plays of the Month - Countdown",
+        "league": "anthology",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-11-08T17:00:00Z",
+        "stop": "2026-11-08T17:30:00Z",
+        "start": "2026-11-08T17:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] FA Cup Classics",
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-11-05T06:30:00Z",
-        "stop": "2026-11-05T07:00:00Z",
-        "start": "2026-11-05T06:30:00Z"
+        "display_start": "2026-11-05T18:00:00Z",
+        "stop": "2026-11-05T18:30:00Z",
+        "start": "2026-11-05T18:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Le top LNH",
@@ -102,33 +102,6 @@
         "start": "2026-11-06T14:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Sao Paulo F1 GP Highlights 2023",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-05T07:00:00Z",
-        "stop": "2026-11-05T08:00:00Z",
-        "start": "2026-11-05T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Sao Paulo F1 GP Highlights 2024",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-05T08:00:00Z",
-        "stop": "2026-11-05T09:00:00Z",
-        "start": "2026-11-05T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Sao Paulo F1 GP Highlights 2025",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-05T09:00:00Z",
-        "stop": "2026-11-05T10:00:00Z",
-        "start": "2026-11-05T09:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Brazilian F1 GP Highlights 2016",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -136,15 +109,6 @@
         "display_start": "2026-11-05T16:00:00Z",
         "stop": "2026-11-05T17:00:00Z",
         "start": "2026-11-05T16:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Mexico City F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-05T17:45:00Z",
-        "stop": "2026-11-05T18:45:00Z",
-        "start": "2026-11-05T17:45:00Z"
       },
       {
         "title": "[REDIFFUSION] Sao Paulo F1 GP Highlights 2021",
@@ -156,6 +120,15 @@
         "start": "2026-11-05T20:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] Sao Paulo F1 GP Highlights 2025",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-06T06:00:00Z",
+        "stop": "2026-11-06T07:00:00Z",
+        "start": "2026-11-06T06:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Brazilian F1 GP Highlights 2018",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -163,15 +136,6 @@
         "display_start": "2026-11-06T10:30:00Z",
         "stop": "2026-11-06T11:30:00Z",
         "start": "2026-11-06T10:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL Greatest Games: Chelsea/Arsenal",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-06T06:00:00Z",
-        "stop": "2026-11-06T06:15:00Z",
-        "start": "2026-11-06T06:00:00Z"
       }
     ],
     "2": [
@@ -221,15 +185,6 @@
         "start": "2026-11-05T19:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 0,
-        "display_start": "2026-11-05T06:30:00Z",
-        "stop": "2026-11-05T07:00:00Z",
-        "start": "2026-11-05T06:30:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Bundesliga Soccer",
         "league": "sports",
         "ch_key": "One.Soccer.ca2",
@@ -246,6 +201,24 @@
         "display_start": "2026-11-07T14:30:00Z",
         "stop": "2026-11-07T16:30:00Z",
         "start": "2026-11-07T14:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Mexico City F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-05T17:45:00Z",
+        "stop": "2026-11-05T18:45:00Z",
+        "start": "2026-11-05T17:45:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL Greatest Games: Chelsea/Arsenal",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-06T06:00:00Z",
+        "stop": "2026-11-06T06:15:00Z",
+        "start": "2026-11-06T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Fulham v Newcastle Utd Hlts",
@@ -286,13 +259,13 @@
         "start": "2026-11-06T20:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL Greatest Games:Charlton/WHU '01",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.East.HD.ca2",
         "score": 0,
-        "display_start": "2026-11-05T06:30:00Z",
-        "stop": "2026-11-05T06:45:00Z",
-        "start": "2026-11-05T06:30:00Z"
+        "display_start": "2026-11-05T19:30:00Z",
+        "stop": "2026-11-05T20:00:00Z",
+        "start": "2026-11-05T19:30:00Z"
       }
     ],
     "4": [
