@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T05:56:04Z",
+  "generated_at": "2026-11-05T14:25:52Z",
   "channels": {
     "1": [
       {
@@ -79,9 +79,9 @@
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-11-05T06:00:00Z",
-        "stop": "2026-11-05T06:30:00Z",
-        "start": "2026-11-05T06:00:00Z"
+        "display_start": "2026-11-05T06:30:00Z",
+        "stop": "2026-11-05T07:00:00Z",
+        "start": "2026-11-05T06:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Le top LNH",
@@ -91,15 +91,6 @@
         "display_start": "2026-11-07T09:30:00Z",
         "stop": "2026-11-07T10:00:00Z",
         "start": "2026-11-07T09:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Misplays of the Month",
-        "league": "",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 0,
-        "display_start": "2026-11-05T06:30:00Z",
-        "stop": "2026-11-05T07:00:00Z",
-        "start": "2026-11-05T06:30:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -230,6 +221,15 @@
         "start": "2026-11-05T19:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Misplays of the Month",
+        "league": "",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 0,
+        "display_start": "2026-11-05T06:30:00Z",
+        "stop": "2026-11-05T07:00:00Z",
+        "start": "2026-11-05T06:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Bundesliga Soccer",
         "league": "sports",
         "ch_key": "One.Soccer.ca2",
@@ -246,15 +246,6 @@
         "display_start": "2026-11-07T14:30:00Z",
         "stop": "2026-11-07T16:30:00Z",
         "start": "2026-11-07T14:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Sao Paulo F1 GP Highlights 2022",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-05T06:00:00Z",
-        "stop": "2026-11-05T07:00:00Z",
-        "start": "2026-11-05T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Fulham v Newcastle Utd Hlts",
@@ -293,15 +284,6 @@
         "display_start": "2026-11-06T19:30:00Z",
         "stop": "2026-11-06T23:00:00Z",
         "start": "2026-11-06T20:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL Greatest Games:L'Pool/Man U '94",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-05T06:00:00Z",
-        "stop": "2026-11-05T06:15:00Z",
-        "start": "2026-11-05T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL Greatest Games:Charlton/WHU '01",
