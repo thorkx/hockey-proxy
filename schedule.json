@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T13:59:15Z",
+  "generated_at": "2026-11-06T22:54:00Z",
   "channels": {
     "1": [
       {
@@ -79,18 +79,9 @@
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-11-06T06:00:00Z",
-        "stop": "2026-11-06T06:30:00Z",
-        "start": "2026-11-06T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-11-06T13:00:00Z",
-        "stop": "2026-11-06T15:00:00Z",
-        "start": "2026-11-06T13:00:00Z"
+        "display_start": "2026-11-06T18:00:00Z",
+        "stop": "2026-11-06T18:30:00Z",
+        "start": "2026-11-06T18:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Le top LNH",
@@ -102,22 +93,40 @@
         "start": "2026-11-07T09:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] World Poker Tour",
+        "league": "poker",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 0,
+        "display_start": "2026-11-09T20:00:00Z",
+        "stop": "2026-11-09T21:00:00Z",
+        "start": "2026-11-09T20:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] SC With Jay Onrait",
+        "league": "sports talk",
+        "ch_key": "TSN.2.ca2",
+        "score": 0,
+        "display_start": "2026-11-06T15:00:00Z",
+        "stop": "2026-11-06T16:00:00Z",
+        "start": "2026-11-06T15:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Bundesliga Soccer",
+        "league": "sports",
+        "ch_key": "One.Soccer.ca2",
+        "score": 0,
+        "display_start": "2026-11-08T11:30:00Z",
+        "stop": "2026-11-08T13:30:00Z",
+        "start": "2026-11-08T11:30:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Mexico City F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-11-06T08:15:00Z",
-        "stop": "2026-11-06T09:15:00Z",
-        "start": "2026-11-06T08:15:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Brazilian F1 GP Highlights 2018",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-06T10:30:00Z",
-        "stop": "2026-11-06T11:30:00Z",
-        "start": "2026-11-06T10:30:00Z"
+        "display_start": "2026-11-07T10:00:00Z",
+        "stop": "2026-11-07T11:00:00Z",
+        "start": "2026-11-07T10:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Sao Paulo F1 GP Highlights",
@@ -203,31 +212,13 @@
         "start": "2026-11-07T13:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] SC With Jay Onrait",
-        "league": "sports talk",
-        "ch_key": "TSN.2.ca2",
-        "score": 0,
-        "display_start": "2026-11-06T14:00:00Z",
-        "stop": "2026-11-06T15:00:00Z",
-        "start": "2026-11-06T14:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Sao Paulo F1 GP Highlights 2025",
+        "title": "[REDIFFUSION] FA Women's Super League",
         "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-11-06T06:00:00Z",
-        "stop": "2026-11-06T07:00:00Z",
-        "start": "2026-11-06T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: C. Palace v Liverpool Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-08T23:30:00Z",
+        "display_start": "2026-11-08T22:00:00Z",
         "stop": "2026-11-09T00:00:00Z",
-        "start": "2026-11-08T23:30:00Z"
+        "start": "2026-11-08T22:00:00Z"
       }
     ],
     "3": [
@@ -295,22 +286,13 @@
         "start": "2026-11-07T14:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] Bundesliga Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-11-06T13:30:00Z",
-        "stop": "2026-11-06T15:30:00Z",
-        "start": "2026-11-06T13:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL Greatest Games: Chelsea/Arsenal",
+        "title": "[REDIFFUSION] PL: C. Palace v Liverpool Hlts",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-11-06T06:00:00Z",
-        "stop": "2026-11-06T06:15:00Z",
-        "start": "2026-11-06T06:00:00Z"
+        "display_start": "2026-11-08T23:30:00Z",
+        "stop": "2026-11-09T00:00:00Z",
+        "start": "2026-11-08T23:30:00Z"
       }
     ],
     "4": [
