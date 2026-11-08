@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T13:00:35Z",
+  "generated_at": "2026-11-08T21:51:46Z",
   "channels": {
     "1": [
       {
@@ -30,22 +30,22 @@
         "start": "2026-11-10T00:30:00Z"
       },
       {
-        "title": "⚽ CHELSEA AT SUNDERLAND",
-        "league": "eng.1",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 550,
-        "display_start": "2026-11-08T13:30:00Z",
-        "stop": "2026-11-08T17:00:00Z",
-        "start": "2026-11-08T14:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Plays of the Month -- Highlights",
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-11-08T11:30:00Z",
-        "stop": "2026-11-08T12:00:00Z",
-        "start": "2026-11-08T11:30:00Z"
+        "display_start": "2026-11-08T14:00:00Z",
+        "stop": "2026-11-08T14:30:00Z",
+        "start": "2026-11-08T14:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Live: FA Women's Super League",
+        "league": "sports",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 0,
+        "display_start": "2026-11-08T14:30:00Z",
+        "stop": "2026-11-08T16:30:00Z",
+        "start": "2026-11-08T14:30:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month - Countdown",
@@ -70,9 +70,9 @@
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-11-08T06:00:00Z",
-        "stop": "2026-11-08T06:30:00Z",
-        "start": "2026-11-08T06:00:00Z"
+        "display_start": "2026-11-09T06:00:00Z",
+        "stop": "2026-11-09T06:30:00Z",
+        "start": "2026-11-09T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] FA Women's Super League",
@@ -82,15 +82,6 @@
         "display_start": "2026-11-09T07:00:00Z",
         "stop": "2026-11-09T09:00:00Z",
         "start": "2026-11-09T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Le top LNH",
-        "league": "series",
-        "ch_key": "TVA.Sports.2.HD.ca2",
-        "score": 0,
-        "display_start": "2026-11-08T11:00:00Z",
-        "stop": "2026-11-08T11:30:00Z",
-        "start": "2026-11-08T11:00:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -169,9 +160,9 @@
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-11-08T07:30:00Z",
-        "stop": "2026-11-08T08:00:00Z",
-        "start": "2026-11-08T07:30:00Z"
+        "display_start": "2026-11-08T21:30:00Z",
+        "stop": "2026-11-08T22:00:00Z",
+        "start": "2026-11-08T21:30:00Z"
       },
       {
         "title": "[REDIFFUSION] PL: Ipswich v Bournemouth Hlts",
@@ -181,6 +172,15 @@
         "display_start": "2026-11-08T23:00:00Z",
         "stop": "2026-11-08T23:30:00Z",
         "start": "2026-11-08T23:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL: Fulham v Newcastle Utd Hlts",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-09T12:00:00Z",
+        "stop": "2026-11-09T12:30:00Z",
+        "start": "2026-11-09T12:00:00Z"
       }
     ],
     "2": [
@@ -221,22 +221,13 @@
         "start": "2026-11-08T16:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] Live: FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-11-08T12:00:00Z",
-        "stop": "2026-11-08T14:00:00Z",
-        "start": "2026-11-08T12:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] High Stakes Poker",
+        "title": "[REDIFFUSION] Le top LNH",
         "league": "series",
-        "ch_key": "Sportsnet.360.HD.ca2",
+        "ch_key": "TVA.Sports.HD.ca2",
         "score": 0,
-        "display_start": "2026-11-08T06:00:00Z",
-        "stop": "2026-11-08T07:00:00Z",
-        "start": "2026-11-08T06:00:00Z"
+        "display_start": "2026-11-08T15:45:00Z",
+        "stop": "2026-11-08T16:00:00Z",
+        "start": "2026-11-08T15:45:00Z"
       },
       {
         "title": "[REDIFFUSION] Japanese F1 GP Highlights",
@@ -313,24 +304,6 @@
         "start": "2026-11-08T23:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] Bundesliga Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-11-08T11:19:00Z",
-        "stop": "2026-11-08T13:17:00Z",
-        "start": "2026-11-08T11:19:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Live: Bundesliga Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
-        "score": 0,
-        "display_start": "2026-11-08T14:20:00Z",
-        "stop": "2026-11-08T16:20:00Z",
-        "start": "2026-11-08T14:20:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Sao Paulo F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -338,15 +311,6 @@
         "display_start": "2026-11-08T20:30:00Z",
         "stop": "2026-11-08T21:30:00Z",
         "start": "2026-11-08T20:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL: Fulham v Newcastle Utd Hlts",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-08T06:00:00Z",
-        "stop": "2026-11-08T06:30:00Z",
-        "start": "2026-11-08T06:00:00Z"
       }
     ],
     "4": [
@@ -358,6 +322,15 @@
         "display_start": "2026-11-08T22:30:00Z",
         "stop": "2026-11-09T02:00:00Z",
         "start": "2026-11-08T23:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] High Stakes Poker",
+        "league": "series",
+        "ch_key": "Sportsnet.360.HD.ca2",
+        "score": 0,
+        "display_start": "2026-11-08T19:00:00Z",
+        "stop": "2026-11-08T20:00:00Z",
+        "start": "2026-11-08T19:00:00Z"
       }
     ],
     "5": [
