@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T23:24:36Z",
+  "generated_at": "2026-11-14T05:43:04Z",
   "channels": {
     "1": [
       {
@@ -10,15 +10,6 @@
         "display_start": "2026-11-14T23:30:00Z",
         "stop": "2026-11-15T03:00:00Z",
         "start": "2026-11-15T00:00:00Z"
-      },
-      {
-        "title": "🏒 NEW YORK RANGERS AT VANCOUVER CANUCKS",
-        "league": "nhl",
-        "ch_key": "Sportsnet.East.HD.ca2",
-        "score": 2150,
-        "display_start": "2026-11-14T01:30:00Z",
-        "stop": "2026-11-14T05:00:00Z",
-        "start": "2026-11-14T02:00:00Z"
       },
       {
         "title": "🏒 SEATTLE KRAKEN AT CAROLINA HURRICANES",
@@ -37,6 +28,33 @@
         "display_start": "2026-11-15T03:00:00Z",
         "stop": "2026-11-15T06:00:00Z",
         "start": "2026-11-15T03:00:00Z"
+      },
+      {
+        "title": "🏒 EDMONTON OILERS AT PHILADELPHIA FLYERS",
+        "league": "nhl",
+        "ch_key": "Sportsnet.East.HD.ca2",
+        "score": 2150,
+        "display_start": "2026-11-16T00:00:00Z",
+        "stop": "2026-11-16T03:30:00Z",
+        "start": "2026-11-16T00:30:00Z"
+      },
+      {
+        "title": "🏀 INDIANA PACERS AT PHILADELPHIA 76ERS",
+        "league": "nba",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 350,
+        "display_start": "2026-11-15T17:30:00Z",
+        "stop": "2026-11-15T21:00:00Z",
+        "start": "2026-11-15T18:00:00Z"
+      },
+      {
+        "title": "🏀 LOS ANGELES LAKERS AT PHOENIX SUNS",
+        "league": "nba",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 350,
+        "display_start": "2026-11-15T21:00:00Z",
+        "stop": "2026-11-16T00:00:00Z",
+        "start": "2026-11-15T21:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Plays of the Month -- Highlights",
@@ -66,24 +84,6 @@
         "start": "2026-11-14T23:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] FA Cup Classics",
-        "league": "series",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-11-13T18:00:00Z",
-        "stop": "2026-11-13T18:30:00Z",
-        "start": "2026-11-13T18:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-11-13T22:00:00Z",
-        "stop": "2026-11-14T00:00:00Z",
-        "start": "2026-11-13T22:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Le top LNH",
         "league": "series",
         "ch_key": "TVA.Sports.2.HD.ca2",
@@ -106,9 +106,9 @@
         "league": "sports talk",
         "ch_key": "TSN.4.ca2",
         "score": 0,
-        "display_start": "2026-11-13T16:30:00Z",
-        "stop": "2026-11-13T17:00:00Z",
-        "start": "2026-11-13T16:30:00Z"
+        "display_start": "2026-11-16T08:00:00Z",
+        "stop": "2026-11-16T09:00:00Z",
+        "start": "2026-11-16T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Bundesliga Soccer",
@@ -118,33 +118,6 @@
         "display_start": "2026-11-15T07:00:00Z",
         "stop": "2026-11-15T09:00:00Z",
         "start": "2026-11-15T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Singapore F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-13T19:00:00Z",
-        "stop": "2026-11-13T20:00:00Z",
-        "start": "2026-11-13T19:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] US F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-13T20:00:00Z",
-        "stop": "2026-11-13T21:00:00Z",
-        "start": "2026-11-13T20:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Mexico City F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-13T21:00:00Z",
-        "stop": "2026-11-13T22:00:00Z",
-        "start": "2026-11-13T21:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Spanish F1 GP Highlights",
@@ -165,6 +138,24 @@
         "start": "2026-11-14T08:00:00Z"
       },
       {
+        "title": "[REDIFFUSION] Bahrain F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-14T09:00:00Z",
+        "stop": "2026-11-14T10:00:00Z",
+        "start": "2026-11-14T09:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Mexico City F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-14T16:00:00Z",
+        "stop": "2026-11-14T17:00:00Z",
+        "start": "2026-11-14T16:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] Las Vegas F1 GP Highlights 2023",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -172,6 +163,15 @@
         "display_start": "2026-11-14T22:00:00Z",
         "stop": "2026-11-14T23:00:00Z",
         "start": "2026-11-14T22:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Las Vegas F1 GP Highlights 2025",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-16T09:00:00Z",
+        "stop": "2026-11-16T10:00:00Z",
+        "start": "2026-11-16T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL Greatest Games:M City/L'Pool 15",
@@ -199,6 +199,33 @@
         "display_start": "2026-11-15T06:15:00Z",
         "stop": "2026-11-15T06:30:00Z",
         "start": "2026-11-15T06:15:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL Greatest Games:ManU v Spurs '09",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-16T06:15:00Z",
+        "stop": "2026-11-16T06:30:00Z",
+        "start": "2026-11-16T06:15:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL Greatest Games:Spurs v ManU '98",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-16T06:30:00Z",
+        "stop": "2026-11-16T06:45:00Z",
+        "start": "2026-11-16T06:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL Greatest Games:ManU v Spurs 99'",
+        "league": "sports",
+        "ch_key": "SkySp.PL.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-16T06:45:00Z",
+        "stop": "2026-11-16T07:00:00Z",
+        "start": "2026-11-16T06:45:00Z"
       }
     ],
     "2": [
@@ -221,13 +248,22 @@
         "start": "2026-11-14T20:30:00Z"
       },
       {
-        "title": "🏀 CLEVELAND CAVALIERS AT MIAMI HEAT",
-        "league": "nba",
+        "title": "🏒 CALGARY FLAMES AT ANAHEIM DUCKS",
+        "league": "nhl",
         "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 350,
-        "display_start": "2026-11-14T00:30:00Z",
-        "stop": "2026-11-14T04:00:00Z",
-        "start": "2026-11-14T01:00:00Z"
+        "score": 2150,
+        "display_start": "2026-11-16T00:30:00Z",
+        "stop": "2026-11-16T04:00:00Z",
+        "start": "2026-11-16T01:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Cup Classics",
+        "league": "series",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-11-14T06:00:00Z",
+        "stop": "2026-11-14T06:30:00Z",
+        "start": "2026-11-14T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Poker Night in America",
@@ -239,22 +275,22 @@
         "start": "2026-11-15T08:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Bahrain F1 GP Highlights",
+        "title": "[REDIFFUSION] Singapore F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-11-13T18:00:00Z",
-        "stop": "2026-11-13T19:00:00Z",
-        "start": "2026-11-13T18:00:00Z"
+        "display_start": "2026-11-14T14:00:00Z",
+        "stop": "2026-11-14T15:00:00Z",
+        "start": "2026-11-14T14:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Italian F1 GP Highlights",
+        "title": "[REDIFFUSION] US F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-11-14T06:00:00Z",
-        "stop": "2026-11-14T07:00:00Z",
-        "start": "2026-11-14T06:00:00Z"
+        "display_start": "2026-11-14T15:00:00Z",
+        "stop": "2026-11-14T16:00:00Z",
+        "start": "2026-11-14T15:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Sao Paulo F1 GP Highlights",
@@ -286,13 +322,40 @@
         "start": "2026-11-15T00:00:00Z"
       },
       {
-        "title": "🏀 UTAH JAZZ AT HOUSTON ROCKETS",
+        "title": "🏀 NEW YORK KNICKS AT TORONTO RAPTORS",
         "league": "nba",
-        "ch_key": "TSN.4.ca2",
-        "score": 350,
-        "display_start": "2026-11-14T01:00:00Z",
-        "stop": "2026-11-14T04:30:00Z",
-        "start": "2026-11-14T01:30:00Z"
+        "ch_key": "TSN.5.ca2",
+        "score": 1150,
+        "display_start": "2026-11-15T22:30:00Z",
+        "stop": "2026-11-16T02:00:00Z",
+        "start": "2026-11-15T23:00:00Z"
+      },
+      {
+        "title": "🏒 VANCOUVER CANUCKS AT VEGAS GOLDEN KNIGHTS",
+        "league": "nhl",
+        "ch_key": "Sportsnet.(Pacific).HD.ca2",
+        "score": 950,
+        "display_start": "2026-11-16T02:00:00Z",
+        "stop": "2026-11-16T05:00:00Z",
+        "start": "2026-11-16T02:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] FA Women's Super League",
+        "league": "sports",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-11-14T20:00:00Z",
+        "stop": "2026-11-14T22:00:00Z",
+        "start": "2026-11-14T20:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Italian F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-14T06:00:00Z",
+        "stop": "2026-11-14T07:00:00Z",
+        "start": "2026-11-14T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Mexico CityF1 GP Highlights",
@@ -302,6 +365,26 @@
         "display_start": "2026-11-15T08:00:00Z",
         "stop": "2026-11-15T09:00:00Z",
         "start": "2026-11-15T08:00:00Z"
+      }
+    ],
+    "4": [
+      {
+        "title": "🏒 OTTAWA SENATORS AT PITTSBURGH PENGUINS",
+        "league": "nhl",
+        "ch_key": "Sportsnet.One.HD.ca2",
+        "score": 2150,
+        "display_start": "2026-11-14T23:30:00Z",
+        "stop": "2026-11-15T03:00:00Z",
+        "start": "2026-11-15T00:00:00Z"
+      },
+      {
+        "title": "🏀 HOUSTON ROCKETS AT WASHINGTON WIZARDS",
+        "league": "nba",
+        "ch_key": "ESPN.HD.us2",
+        "score": 350,
+        "display_start": "2026-11-15T23:30:00Z",
+        "stop": "2026-11-16T03:00:00Z",
+        "start": "2026-11-16T00:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL Greatest Games:Spurs/Arsenal'04",
@@ -320,26 +403,6 @@
         "display_start": "2026-11-14T19:29:00Z",
         "stop": "2026-11-14T20:05:00Z",
         "start": "2026-11-14T19:29:00Z"
-      }
-    ],
-    "4": [
-      {
-        "title": "🏒 OTTAWA SENATORS AT PITTSBURGH PENGUINS",
-        "league": "nhl",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 2150,
-        "display_start": "2026-11-14T23:30:00Z",
-        "stop": "2026-11-15T03:00:00Z",
-        "start": "2026-11-15T00:00:00Z"
-      },
-      {
-        "title": "🏀 OKLAHOMA CITY THUNDER AT LA CLIPPERS",
-        "league": "nba",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 350,
-        "display_start": "2026-11-14T03:00:00Z",
-        "stop": "2026-11-14T06:30:00Z",
-        "start": "2026-11-14T03:30:00Z"
       }
     ],
     "5": [
