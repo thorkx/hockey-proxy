@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T05:42:56Z",
+  "generated_at": "2026-11-15T13:43:03Z",
   "channels": {
     "1": [
       {
@@ -102,24 +102,6 @@
         "start": "2026-11-16T08:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Las Vegas F1 GP Highlights 2023",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-14T22:00:00Z",
-        "stop": "2026-11-14T23:00:00Z",
-        "start": "2026-11-14T22:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Las Vegas F1 GP Highlights 2024",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-14T23:00:00Z",
-        "stop": "2026-11-15T00:00:00Z",
-        "start": "2026-11-14T23:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] Sao Paulo F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
@@ -127,6 +109,15 @@
         "display_start": "2026-11-15T09:00:00Z",
         "stop": "2026-11-15T10:00:00Z",
         "start": "2026-11-15T09:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Las Vegas F1 GP Highlights 2023",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-16T07:00:00Z",
+        "stop": "2026-11-16T08:00:00Z",
+        "start": "2026-11-16T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Las Vegas F1 GP Highlights 2025",
@@ -239,13 +230,13 @@
         "start": "2026-11-17T19:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Bundesliga Soccer",
-        "league": "sports",
-        "ch_key": "One.Soccer.ca2",
+        "title": "[REDIFFUSION] Poker Night in America",
+        "league": "poker",
+        "ch_key": "CBS.Sports.Network.HD.us2",
         "score": 0,
-        "display_start": "2026-11-15T07:00:00Z",
+        "display_start": "2026-11-15T08:00:00Z",
         "stop": "2026-11-15T09:00:00Z",
-        "start": "2026-11-15T07:00:00Z"
+        "start": "2026-11-15T08:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Singapore F1 GP Highlights",
@@ -255,6 +246,15 @@
         "display_start": "2026-11-15T06:00:00Z",
         "stop": "2026-11-15T07:00:00Z",
         "start": "2026-11-15T06:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] US F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-15T07:00:00Z",
+        "stop": "2026-11-15T08:00:00Z",
+        "start": "2026-11-15T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Bahrain F1 GP Highlights",
@@ -273,6 +273,15 @@
         "display_start": "2026-11-15T23:00:00Z",
         "stop": "2026-11-16T00:00:00Z",
         "start": "2026-11-15T23:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Las Vegas F1 GP Highlights 2024",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-16T08:00:00Z",
+        "stop": "2026-11-16T09:00:00Z",
+        "start": "2026-11-16T08:00:00Z"
       }
     ],
     "3": [
@@ -304,22 +313,13 @@
         "start": "2026-11-17T00:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] Poker Night in America",
-        "league": "poker",
-        "ch_key": "CBS.Sports.Network.HD.us2",
+        "title": "[REDIFFUSION] Mexico CityF1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
         "display_start": "2026-11-15T08:00:00Z",
         "stop": "2026-11-15T09:00:00Z",
         "start": "2026-11-15T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] US F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-15T07:00:00Z",
-        "stop": "2026-11-15T08:00:00Z",
-        "start": "2026-11-15T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL Greatest Games:Man U/L'Pool '10",
@@ -358,15 +358,6 @@
         "display_start": "2026-11-17T00:30:00Z",
         "stop": "2026-11-17T04:00:00Z",
         "start": "2026-11-17T01:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Mexico CityF1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-15T08:00:00Z",
-        "stop": "2026-11-15T09:00:00Z",
-        "start": "2026-11-15T08:00:00Z"
       }
     ],
     "5": []
