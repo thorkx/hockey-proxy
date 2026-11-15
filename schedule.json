@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T13:43:03Z",
+  "generated_at": "2026-11-15T22:39:07Z",
   "channels": {
     "1": [
       {
@@ -43,18 +43,9 @@
         "league": "anthology",
         "ch_key": "Sportsnet.One.HD.ca2",
         "score": 0,
-        "display_start": "2026-11-15T13:30:00Z",
-        "stop": "2026-11-15T14:00:00Z",
-        "start": "2026-11-15T13:30:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Live: FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.One.HD.ca2",
-        "score": 0,
-        "display_start": "2026-11-15T14:00:00Z",
-        "stop": "2026-11-15T16:00:00Z",
-        "start": "2026-11-15T14:00:00Z"
+        "display_start": "2026-11-15T16:30:00Z",
+        "stop": "2026-11-15T17:00:00Z",
+        "start": "2026-11-15T16:30:00Z"
       },
       {
         "title": "[REDIFFUSION] World Poker Tour",
@@ -70,27 +61,18 @@
         "league": "series",
         "ch_key": "Sportsnet.World.HD.ca2",
         "score": 0,
-        "display_start": "2026-11-15T06:00:00Z",
-        "stop": "2026-11-15T06:30:00Z",
-        "start": "2026-11-15T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] FA Women's Super League",
-        "league": "sports",
-        "ch_key": "Sportsnet.World.HD.ca2",
-        "score": 0,
-        "display_start": "2026-11-15T07:00:00Z",
-        "stop": "2026-11-15T09:00:00Z",
-        "start": "2026-11-15T07:00:00Z"
+        "display_start": "2026-11-16T06:00:00Z",
+        "stop": "2026-11-16T06:30:00Z",
+        "start": "2026-11-16T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Le top LNH",
         "league": "series",
         "ch_key": "TVA.Sports.2.HD.ca2",
         "score": 0,
-        "display_start": "2026-11-15T10:15:00Z",
-        "stop": "2026-11-15T10:30:00Z",
-        "start": "2026-11-15T10:15:00Z"
+        "display_start": "2026-11-17T10:15:00Z",
+        "stop": "2026-11-17T10:30:00Z",
+        "start": "2026-11-17T10:15:00Z"
       },
       {
         "title": "[REDIFFUSION] SC With Jay Onrait",
@@ -102,13 +84,13 @@
         "start": "2026-11-16T08:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Sao Paulo F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
+        "title": "[REDIFFUSION] Poker Night in America",
+        "league": "poker",
+        "ch_key": "CBS.Sports.Network.HD.us2",
         "score": 0,
-        "display_start": "2026-11-15T09:00:00Z",
-        "stop": "2026-11-15T10:00:00Z",
-        "start": "2026-11-15T09:00:00Z"
+        "display_start": "2026-11-17T09:00:00Z",
+        "stop": "2026-11-17T10:00:00Z",
+        "start": "2026-11-17T09:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Las Vegas F1 GP Highlights 2023",
@@ -129,13 +111,13 @@
         "start": "2026-11-16T09:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL Greatest Games:ManU v Spurs '09",
+        "title": "[REDIFFUSION] Mexico CityF1 GP Highlights",
         "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
+        "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-11-16T06:15:00Z",
-        "stop": "2026-11-16T06:30:00Z",
-        "start": "2026-11-16T06:15:00Z"
+        "display_start": "2026-11-17T07:00:00Z",
+        "stop": "2026-11-17T08:00:00Z",
+        "start": "2026-11-17T07:00:00Z"
       },
       {
         "title": "[REDIFFUSION] PL Greatest Games:Spurs v ManU '98",
@@ -221,6 +203,15 @@
         "start": "2026-11-15T17:30:00Z"
       },
       {
+        "title": "[REDIFFUSION] FA Women's Super League",
+        "league": "sports",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-11-15T20:00:00Z",
+        "stop": "2026-11-15T22:00:00Z",
+        "start": "2026-11-15T20:00:00Z"
+      },
+      {
         "title": "[REDIFFUSION] FA Women's Super League Matchweek Highlights",
         "league": "soccer",
         "ch_key": "Sportsnet.World.HD.ca2",
@@ -230,40 +221,13 @@
         "start": "2026-11-17T19:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] Poker Night in America",
-        "league": "poker",
-        "ch_key": "CBS.Sports.Network.HD.us2",
-        "score": 0,
-        "display_start": "2026-11-15T08:00:00Z",
-        "stop": "2026-11-15T09:00:00Z",
-        "start": "2026-11-15T08:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Singapore F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-15T06:00:00Z",
-        "stop": "2026-11-15T07:00:00Z",
-        "start": "2026-11-15T06:00:00Z"
-      },
-      {
         "title": "[REDIFFUSION] US F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-11-15T07:00:00Z",
-        "stop": "2026-11-15T08:00:00Z",
-        "start": "2026-11-15T07:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] Bahrain F1 GP Highlights",
-        "league": "sports",
-        "ch_key": "SkySp.F1.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-15T20:00:00Z",
-        "stop": "2026-11-15T21:00:00Z",
-        "start": "2026-11-15T20:00:00Z"
+        "display_start": "2026-11-15T22:00:00Z",
+        "stop": "2026-11-15T23:00:00Z",
+        "start": "2026-11-15T22:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Mexico City F1 GP Highlights",
@@ -273,6 +237,15 @@
         "display_start": "2026-11-15T23:00:00Z",
         "stop": "2026-11-16T00:00:00Z",
         "start": "2026-11-15T23:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Sao Paulo F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-16T06:00:00Z",
+        "stop": "2026-11-16T07:00:00Z",
+        "start": "2026-11-16T06:00:00Z"
       },
       {
         "title": "[REDIFFUSION] Las Vegas F1 GP Highlights 2024",
@@ -313,31 +286,40 @@
         "start": "2026-11-17T00:30:00Z"
       },
       {
-        "title": "[REDIFFUSION] Mexico CityF1 GP Highlights",
+        "title": "[REDIFFUSION] Live: FA Women's Super League",
+        "league": "sports",
+        "ch_key": "Sportsnet.World.HD.ca2",
+        "score": 0,
+        "display_start": "2026-11-15T16:30:00Z",
+        "stop": "2026-11-15T18:30:00Z",
+        "start": "2026-11-15T16:30:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] Bahrain F1 GP Highlights",
         "league": "sports",
         "ch_key": "SkySp.F1.HD.uk",
         "score": 0,
-        "display_start": "2026-11-15T08:00:00Z",
-        "stop": "2026-11-15T09:00:00Z",
-        "start": "2026-11-15T08:00:00Z"
+        "display_start": "2026-11-15T20:00:00Z",
+        "stop": "2026-11-15T21:00:00Z",
+        "start": "2026-11-15T20:00:00Z"
       },
       {
-        "title": "[REDIFFUSION] PL Greatest Games:Man U/L'Pool '10",
+        "title": "[REDIFFUSION] Singapore F1 GP Highlights",
+        "league": "sports",
+        "ch_key": "SkySp.F1.HD.uk",
+        "score": 0,
+        "display_start": "2026-11-15T21:00:00Z",
+        "stop": "2026-11-15T22:00:00Z",
+        "start": "2026-11-15T21:00:00Z"
+      },
+      {
+        "title": "[REDIFFUSION] PL Greatest Games:ManU v Spurs '09",
         "league": "sports",
         "ch_key": "SkySp.PL.HD.uk",
         "score": 0,
-        "display_start": "2026-11-15T06:00:00Z",
-        "stop": "2026-11-15T06:15:00Z",
-        "start": "2026-11-15T06:00:00Z"
-      },
-      {
-        "title": "[REDIFFUSION] PL Greatest Games:Man U/L'Pool '14",
-        "league": "sports",
-        "ch_key": "SkySp.PL.HD.uk",
-        "score": 0,
-        "display_start": "2026-11-15T06:15:00Z",
-        "stop": "2026-11-15T06:30:00Z",
-        "start": "2026-11-15T06:15:00Z"
+        "display_start": "2026-11-16T06:15:00Z",
+        "stop": "2026-11-16T06:30:00Z",
+        "start": "2026-11-16T06:15:00Z"
       }
     ],
     "4": [
